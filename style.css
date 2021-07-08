@@ -1,0 +1,13 @@
+:root {
+  --primary-color: #fff;
+  --secondary-color: #0a860a;
+  --accent-color: #881214;
+}
+
+body {
+  margin: 0;
+}
+
+.nav ul li {
+  display: inline;
+}
