@@ -1,0 +1,73 @@
+:root {
+  --color-primary: #ff5a5a;
+  --color-secondary: #0a860a;
+  --color-accent: #881214;
+  --color-headings: #818181;
+  --color-body: #6d6d6d;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Typography */
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 2rem;
+  line-height: 1.5;
+  color: var(--color-body);
+}
+/* 
+.container {
+  width: 100vh;
+  height: auto;
+  overflow-y: scroll;
+  transform: rotate(-90deg);
+}
+
+.content {
+  width: 50%;
+  height: auto;
+  margin: 2rem;
+
+  background-color: #0a860a;
+  transform: rotate(90deg);
+} */
+
+.horizontal-scroll-wrapper {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  max-width: 90vh;
+  margin: 0;
+  background-color: #abc;
+
+  width: 100px;
+  height: 300px;
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  transform: rotate(-90deg) translate(-100px);
+  transform-origin: right top;
+}
+
+.horizontal-scroll-wrapper > div {
+  display: block;
+  background: #000;
+  width: 100px;
+  height: 200px;
+
+  transform: rotate(90deg);
+  transform-origin: right top;
+}
+
+.squares {
+  padding: 60px 0 0;
+}

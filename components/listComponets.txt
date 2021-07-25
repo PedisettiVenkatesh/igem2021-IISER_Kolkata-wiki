@@ -1,0 +1,59 @@
+Nav{
+    -logo
+    -navLi
+}
+
+Hero{
+    -1/2 Headings{
+        -preTag
+        -highlightedHeading
+        -tag
+        -findMoreButton
+    }
+}
+
+Main Sections {
+    -Project Description{
+        -Heading with line------------
+        -1/2 para {
+            -Heading {
+                -grey Text
+                -red highlighted text
+                -underlined
+            }
+            -para{
+                -abstract line
+                -content
+            }
+        }
+        -1/2 image
+    }
+
+    -OurSolution{
+        -Heading with line------------
+        -1/4 image
+        -3/4 para{
+            -abstract line
+            -content
+        }
+    }
+
+    -Our Team {
+        -Heading with line------------
+        -3x3 image grid
+    }
+
+    -Our Sponsors {
+        -Heading with line------------
+        -1x5 grid images
+    }
+}
+
+footer {
+    -brandLogo
+    -navItems
+    -line-----
+    -para2lines
+    -contacts
+    -socialMedia
+}
