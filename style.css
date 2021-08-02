@@ -84,3 +84,72 @@ a {
   background: var(--color-headings);
   color: #fff;
 }
+
+img {
+  width: 50%;
+}
+
+/* Navigation Bar */
+.nav {
+  background: linear-gradient(to right, #000 10%, red, purple);
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0 4rem;
+  align-items: center;
+  border-radius: 4rem;
+  margin: 1.6rem 1rem;
+}
+
+/* .nav__BG{
+  background: black;
+  height: 100vh;
+} */
+
+.nav img {
+  height: 40px;
+  width: auto;
+}
+
+.nav__brand {
+  transform: translateY(4px);
+  transition: scale 0.3s;
+}
+.nav__brand:hover {
+  scale: 1.2;
+}
+
+.nav__list {
+  width: 100%;
+  list-style: none;
+  margin: 0;
+}
+
+.nav__item {
+  padding: 0.5rem 2rem;
+  border-bottom: 1px solid #222;
+}
+
+.nav__item > a {
+  color: #ccc;
+  text-transform: uppercase;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.nav__item > a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+@media screen and (min-width: 768px) {
+  .nav__list {
+    width: auto;
+    display: flex;
+    font-size: 1.2rem;
+  }
+
+  .nav__item {
+    border: 0;
+  }
+}
