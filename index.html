@@ -12,5 +12,36 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <!-- ################################### Main Body content ######################################## -->
-  <body></body>
+  <body>
+    <div class="collapsible collapsible--expanded">
+      <header class="collapsible__header">
+        <h2 class="collapsible__heading">Item 1</h2>
+        <svg class="icon icon--primary collapsible__chevron">
+          <use xlink:href="images/sprite.svg#chevronDown"></use>
+        </svg>
+      </header>
+      <div class="collapsible__content">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, adipisci.
+      </div>
+    </div>
+    <div class="collapsible collapsible--expanded">
+      <header class="collapsible__header">
+        <h2 class="collapsible__heading">Item 1</h2>
+        <svg class="icon icon--primary collapsible__chevron">
+          <use xlink:href="images/sprite.svg#chevronDown"></use>
+        </svg>
+      </header>
+      <div class="collapsible__content">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, adipisci.
+      </div>
+    </div>
+    <script>
+      const collapse = document.querySelectorAll(".collapsible");
+      collapse.forEach((item) =>
+        item.addEventListener("click", function () {
+          this.classList.toggle("collapsible--expanded");
+        })
+      );
+    </script>
+  </body>
 </html>
