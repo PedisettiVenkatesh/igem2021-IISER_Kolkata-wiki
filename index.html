@@ -13,31 +13,56 @@
   </head>
   <!-- ################################### Main Body content ######################################## -->
   <body>
-    <div class="collapsible collapsible--expanded">
-      <header class="collapsible__header">
-        <h2 class="collapsible__heading">Item 1</h2>
-        <svg class="icon icon--primary collapsible__chevron">
-          <use xlink:href="images/sprite.svg#chevronDown"></use>
-        </svg>
-      </header>
-      <div class="collapsible__content">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, adipisci.
-      </div>
-    </div>
-    <div class="collapsible collapsible--expanded">
-      <header class="collapsible__header">
-        <h2 class="collapsible__heading">Item 1</h2>
-        <svg class="icon icon--primary collapsible__chevron">
-          <use xlink:href="images/sprite.svg#chevronDown"></use>
-        </svg>
-      </header>
-      <div class="collapsible__content">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, adipisci.
-      </div>
-    </div>
+    <nav class="nav collapsible">
+      <a class="nav__brand" href="/"><img src="images/logoMini.svg" alt="brand_logo" /></a>
+      <svg class="icon icon--white nav__toggler">
+        <use xlink:href="images/sprite.svg#pipetteMono"></use>
+      </svg>
+      <ul class="list nav__list collapsible__content">
+        <li class="nav__item"><a href="#">Home</a></li>
+        <li class="nav__item dropdown">
+          <a class="dropbtn" href="#">Project</a>
+          <ul class="list dropdown__content">
+            <li class="dropdown__item"><a href="#">Description</a></li>
+            <li class="dropdown__item"><a href="#">Design</a></li>
+            <li class="dropdown__item"><a href="#">Results</a></li>
+            <li class="dropdown__item"><a href="#">Proof Of Concept</a></li>
+            <li class="dropdown__item"><a href="#">Engineering</a></li>
+            <li class="dropdown__item"><a href="#">Models</a></li>
+            <li class="dropdown__item"><a href="#">Hardware</a></li>
+            <li class="dropdown__item"><a href="#">Endowments</a></li>
+          </ul>
+        </li>
+        <li class="nav__item dropdown">
+          <a class="" href="#">Lab Work</a>
+          <ul class="list dropdown__content">
+            <li class="dropdown__item"><a href="">Experiments and protocols</a></li>
+            <li class="dropdown__item"><a href="">Parts</a></li>
+            <li class="dropdown__item"><a href="">Notebook</a></li>
+            <li class="dropdown__item"><a href="">Safety</a></li>
+          </ul>
+        </li>
+        <li class="nav__item"><a href="#">Human Practices</a></li>
+        <li class="nav__item dropdown">
+          <a class="dropbtn activePage" href="#">Team</a>
+          <ul class="list dropdown__content">
+            <li class="dropdown__item"><a href="">Members</a></li>
+            <li class="dropdown__item"><a href="">attributions</a></li>
+            <li class="dropdown__item"><a href="">collaborations</a></li>
+          </ul>
+        </li>
+        <li class="nav__item"><a href="#">Graphics</a></li>
+        <li class="nav__item dropdown">
+          <a class="dropbtn" href="#">Awards</a>
+          <ul class="list dropdown__content">
+            <li class="dropdown__item"><a href="">media criteria</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
     <script>
-      const collapse = document.querySelectorAll(".collapsible");
-      collapse.forEach((item) =>
+      const collapsibles = document.querySelectorAll(".collapsible");
+      collapsibles.forEach((item) =>
         item.addEventListener("click", function () {
           this.classList.toggle("collapsible--expanded");
         })

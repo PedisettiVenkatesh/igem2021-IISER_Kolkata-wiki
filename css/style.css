@@ -151,9 +151,11 @@ a {
 }
 
 .icon--primary {
-  /*FIXME: Currently class not working on svgs we have, never used this class*/
-  /* fill: black; */
   fill: var(--color-primary); /* TODO: can change the icon colors here */
+}
+
+.icon--white {
+  fill: #fff;
 }
 
 .icon-container {
@@ -376,4 +378,158 @@ a {
   /* display: block; */
   max-height: 100vh;
   opacity: 1;
+}
+
+/* Navigation Bar */
+.nav {
+  background: linear-gradient(to right, #6a73ff, #ff0982);
+  display: flex;
+  font-size: 3rem;
+  /* height: 5rem; */
+  overflow: hidden;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+  flex-wrap: wrap;
+  margin: 1rem;
+  border-radius: 5rem;
+  transition: all 0.3s;
+}
+
+.nav__list {
+  width: 100%;
+  margin: 0;
+}
+
+.nav__brand {
+  height: 5rem;
+  padding: 1rem;
+}
+
+.nav__brand img {
+  height: 3rem;
+  padding: 0 1rem;
+}
+
+.nav__item {
+  padding: 0.5rem 2rem;
+  border-bottom: 1px solid #333;
+}
+
+.nav__item > a {
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1.8rem;
+  transition: all 0.3s;
+}
+
+.nav__item > a:hover {
+  color: #fff;
+  /* text-decoration: underline; */
+  border-bottom: 5px solid #ffe600;
+}
+
+.nav__toggler {
+  margin-right: 2rem;
+  opacity: 0.5;
+  transition: box-shadow 0.15s;
+  transform: translateY(-3px); /* FIXME: needed to remove when changed to new icon */
+}
+
+.nav.collapsible--expanded .nav__toggler {
+  opacity: 1;
+  /* box-shadow: 0 0 10px 3px #666; */ /* FIXME: need to uncomment when new icon applied */
+}
+
+.nav.collapsible--expanded {
+  border-radius: 20px 20px 5px 5px;
+  background: linear-gradient(to right bottom, #6a73ff, #ff0982);
+}
+
+@media screen and (min-width: 1024px) {
+  .nav {
+    margin: 1rem 5rem;
+  }
+
+  .nav__item > a {
+    color: #ddd;
+    font-weight: 700;
+    font-size: 1.3rem;
+  }
+
+  .nav__toggler {
+    display: none;
+  }
+
+  .nav__list {
+    width: auto;
+    display: flex;
+    font-size: 1.6rem;
+    max-height: 100%;
+    opacity: 1;
+  }
+
+  .nav__item {
+    border: 0;
+  }
+
+  .nav__brand img {
+    padding-left: 2rem;
+  }
+}
+
+/* Dropdown */
+/* .dropdown {
+  position: absolute;
+  top: 10%;
+} */
+
+/* .dropbtn::after {
+  content: url(../images/sprite.svg#chevronDown);
+} */
+
+.dropdown__content {
+  background: #f53131;
+  border-radius: 0 0 20px 20px;
+  width: auto;
+  max-width: 80%;
+  word-wrap: normal;
+  padding: 1rem 2rem;
+  display: none;
+  position: absolute;
+  min-width: 160px;
+  /* FIXME: to be determined absolute postion */
+  transform: translate(-2rem, 0.5rem);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown__content {
+  display: block;
+}
+
+.dropdown__item {
+  padding: 1rem;
+}
+
+.dropdown__item > a {
+  color: #ddd;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+
+.dropdown__item > a:hover {
+  color: #fff;
+  border-bottom: 1px solid #ffe600;
+}
+
+@media screen and (min-width: 1024px) {
+  .dropdown__content {
+    max-width: 20rem;
+  }
+}
+
+.activePage {
+  border-bottom: 2px solid #ffe600;
 }
