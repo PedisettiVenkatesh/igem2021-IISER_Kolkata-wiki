@@ -13,9 +13,9 @@
   </head>
   <!-- ################################### Main Body content ######################################## -->
   <body>
-    <nav class="nav collapsible">
+    <nav class="nav collapsible" id="navBar">
       <a class="nav__brand" href="/"><img src="images/logoMini.svg" alt="brand_logo" /></a>
-      <svg class="icon icon--white nav__toggler">
+      <svg class="icon icon--white nav__toggler" onclick="navToggle()">
         <use xlink:href="images/sprite.svg#pipetteMono"></use>
       </svg>
       <ul class="list nav__list collapsible__content">
@@ -70,14 +70,10 @@
         </li>
       </ul>
     </nav>
-
     <script>
-      const collapsibles = document.querySelectorAll(".collapsible");
-      collapsibles.forEach((item) =>
-        item.addEventListener("click", function () {
-          this.classList.toggle("collapsible--expanded");
-        })
-      );
+      function navToggle() {
+        document.getElementById("navBar").classList.toggle("collapsible--expanded");
+      }
     </script>
   </body>
 </html>

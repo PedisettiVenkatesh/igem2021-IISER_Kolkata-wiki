@@ -515,6 +515,10 @@ a {
   display: block;
 }
 
+.dropdown--expanded .dropdown__content {
+  display: block;
+}
+
 .dropdown__item {
   padding: 1rem;
 }
