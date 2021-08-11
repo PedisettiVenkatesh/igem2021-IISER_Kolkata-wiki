@@ -159,7 +159,7 @@ a {
 }
 
 .icon-container {
-  background: #fff; /* TODO: change the background color for icons*/
+  /*background: #fff;*/ /* TODO: change the background color for icons*/
   width: auto;
   height: 35px;
   border-radius: 20px;
@@ -479,6 +479,11 @@ a {
   }
 }
 
+.nav__sticky {
+  position: fixed;
+  top: 0;
+}
+
 /* Dropdown */
 /* .dropdown {
   position: absolute;
@@ -499,7 +504,6 @@ a {
   padding: 1rem 2rem;
   display: none;
   position: absolute;
-  min-width: 160px;
   /* FIXME: to be determined absolute postion */
   transform: translate(5rem, 0.5rem);
   line-height: 0.6;
