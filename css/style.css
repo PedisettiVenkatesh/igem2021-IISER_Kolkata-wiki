@@ -530,7 +530,7 @@ a {
 }
 
 .nav__item .activePage {
-  border-bottom: 2px solid #ffe600;
+  /* border-bottom: 2px solid #ffe600; */
   color: #fff;
 }
 
