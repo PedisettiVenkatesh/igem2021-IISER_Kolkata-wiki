@@ -14,7 +14,104 @@
   <!-- ################################### Main Body content ######################################## -->
 
   <body>
-    <section class="grid grid--1x2x2">
+    <nav class="nav collapsible nav__sticky" id="navBar">
+      <a class="nav__brand" href="/"><img src="https://2021.igem.org/wiki/images/c/ce/T--IISER_Kolkata--namoosteCapsule.svg" alt="brand_logo" /></a>
+      <svg class="icon icon--white nav__toggler" onclick="navToggle('navBar'),removeClassDropExpand()">
+        <use xlink:href="https://2021.igem.org/wiki/images/3/38/T--IISER_Kolkata--icons-sprit.svg#pipetteMono"></use>
+      </svg>
+      <ul class="list nav__list collapsible__content">
+        <li class="nav__item"><a href="javascript:void()">Home</a></li>
+        <li class="nav__item dropdown">
+          <a class="dropbtn" href="javascript:void()">Project</a>
+          <ul class="list dropdown__content">
+            <li class="dropdown__item"><a href="javascript:void()">Description</a></li>
+            <li class="dropdown__item"><a href="javascript:void()">Design</a></li>
+            <li class="dropdown__item"><a href="javascript:void()">Results</a></li>
+            <li class="dropdown__item"><a href="javascript:void()">Proof Of Concept</a></li>
+            <li class="dropdown__item"><a href="javascript:void()">Engineering</a></li>
+            <li class="dropdown__item"><a href="javascript:void()">Models</a></li>
+            <li class="dropdown__item"><a href="javascript:void()">Hardware</a></li>
+            <li class="dropdown__item"><a href="javascript:void()">Endowments</a></li>
+          </ul>
+        </li>
+        <li class="nav__item dropdown">
+          <a class="dropbtn" href="javascript:void()">Lab Work</a>
+          <ul class="list dropdown__content">
+            <li class="dropdown__item"><a href="">Experiments and protocols</a></li>
+            <li class="dropdown__item"><a href="">Parts</a></li>
+            <li class="dropdown__item"><a href="">Notebook</a></li>
+            <li class="dropdown__item"><a href="">Safety</a></li>
+          </ul>
+        </li>
+        <li class="nav__item dropdown">
+          <a class="dropbtn" href="javascript:void()">Human Practices</a>
+          <ul class="list dropdown__content">
+            <li class="dropdown__item"><a href="">timeline</a></li>
+            <li class="dropdown__item"><a href="">integrated human practices</a></li>
+            <li class="dropdown__item"><a href="">education and public engagements</a></li>
+            <li class="dropdown__item"><a href="">proposed implementation</a></li>
+            <li class="dropdown__item"><a href="">entrepreneurship</a></li>
+            <li class="dropdown__item"><a href="">diversity and inclusivity</a></li>
+          </ul>
+        </li>
+        <li class="nav__item dropdown">
+          <a class="dropbtn activePage" href="javascript:void()">Team</a>
+          <ul class="list dropdown__content">
+            <li class="dropdown__item"><a href="">Members</a></li>
+            <li class="dropdown__item"><a href="">attributions</a></li>
+            <li class="dropdown__item"><a href="">collaborations</a></li>
+          </ul>
+        </li>
+        <li class="nav__item"><a href="javascript:void()">Graphics</a></li>
+        <li class="nav__item dropdown">
+          <a class="dropbtn" href="javascript:void()">Awards</a>
+          <ul class="list dropdown__content">
+            <li class="dropdown__item"><a href="">media criteria</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+    <script>
+      function navToggle(id) {
+        document.getElementById(id).classList.toggle("collapsible--expanded");
+      }
+
+      const drop = document.querySelectorAll(".dropdown");
+
+      drop.forEach((item) =>
+        item.addEventListener("click", function () {
+          removeClassDropExpand();
+          this.classList.toggle("dropdown--expanded");
+        })
+      );
+
+      function removeClassDropExpand() {
+        drop.forEach((item) => item.classList.remove("dropdown--expanded"));
+      }
+
+      window.onclick = function (e) {
+        if (!e.target.matches(".dropbtn")) {
+          drop.forEach((item) => item.classList.remove("dropdown--expanded"));
+        }
+      };
+    </script>
+
+    <section class="block block--dark block--skewed-left hero">
+      <div class="container grid grid--1x2">
+        <header class="block__header hero__content">
+          <h1 class="block__heading">
+            To The <br />
+            People Who Make This Happen
+          </h1>
+          <p class="hero__tagline">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum autem repudiandae nesciunt enim suscipit, architecto laborum. A numquam quae tenetur!</p>
+        </header>
+        <picture>
+          <source type="image/webp" />
+          <img class="hero__image" src="images/exampleTeam.png" alt=""
+        /></picture>
+      </div>
+    </section>
+    <section class="page grid grid--1x2x2">
       <div class="sideNav">
         <ul class="list">
           <li><a class="btn btn--pageNav btn--block btn--active" href="#teamLeaders">Team leader</a></li>
@@ -30,35 +127,35 @@
           <h2 class="block__heading" id="teamLeaders">Team Leaders</h2>
           <div class="profile">
             <div class="profile__image">
-              <img src="images/IGA1.png" alt="" />
+              <img src="https://2021.igem.org/wiki/images/2/22/T--IISER_Kolkata--image-namooste.png" alt="" />
               <div class="textOnImage">
-                <h3 class="profile__heading">Debdeep Chatterjee</h3>
+                <h3 class="profile__heading">Lakshmi Prakash</h3>
                 <a href="javascript:void();" class="btn btn--profile">View</a>
               </div>
             </div>
             <div class="profile__modal">
               <header class="profile__header">
-                <span class="bckToggle" onclick="removeClassProExpand()"><img src="images/profileBackBtn.svg" alt="" /></span>
+                <span class="bckToggle" onclick="removeClassProExpand()"><img src="images/profileBackBtn.svg" alt="" title="Close Profile" /></span>
                 <div class="profile--flex">
-                  <h3 class="profile__name">Debdeep Chatterjee</h3>
+                  <h3 class="profile__name">Lakshmi Prakash</h3>
                   <span class="profile__social">
                     <div class="icon-container">
-                      <a href="#">
+                      <a href="javascript:void()">
                         <svg class="icon icon--primary">
                           <use xlink:href="images/sprite.svg#instagram"></use>
                         </svg>
                       </a>
-                      <a href="#">
+                      <a href="javascript:void()">
                         <svg class="icon icon--primary">
                           <use xlink:href="images/sprite.svg#linkedin"></use>
                         </svg>
                       </a>
-                      <a href="#">
+                      <a href="javascript:void()">
                         <svg class="icon icon--primary">
                           <use xlink:href="images/sprite.svg#twitter"></use>
                         </svg>
                       </a>
-                      <a href="#">
+                      <a href="javascript:void()">
                         <svg class="icon icon--primary">
                           <use xlink:href="images/sprite.svg#facebook"></use>
                         </svg>
@@ -69,13 +166,13 @@
                 <span class="profile__engagement">Engagement - Wet Lab</span>
               </header>
               <div class="profile__body">
-                Hi! I am Debdeep, currently a fifth-year Biology major student at IISER Kolkata. I am fond of molecular biology and protein engineering. Other than managing and leading this wonderful team I work as a bio-modeler. I mostly spend my free time listening to music, reading or watching web series. The journey of iGEM2021 has been a roller coaster ride which I have enjoyed every bit with my team members.
+                Hi! I am Lakshmi, currently a fifth-year Biology major student at IISER Kolkata. I am interested in cognition and developmental biology. I believe that iGEM forms a huge part of exposure that any budding scientist needs to grow. Science is meant for fun and that is what this competition stands for. I love dogs and mostly spend my free time travelling, reading and listening to music.
               </div>
             </div>
           </div>
           <div class="profile rightProfile">
             <div class="profile__image">
-              <img src="images/IGA1.png" alt="" />
+              <img src="https://2021.igem.org/wiki/images/2/22/T--IISER_Kolkata--image-namooste.png" alt="" />
               <div class="textOnImage">
                 <h3 class="profile__heading">Debdeep Chatterjee</h3>
                 <a href="javascript:void();" class="btn btn--profile" onclick="profileToggle()">View</a>
@@ -83,27 +180,27 @@
             </div>
             <div class="profile__modal">
               <header class="profile__header">
-                <span class="bckToggle" onclick="removeClassProExpand()"><img src="images/profileBackBtn.svg" alt="" /></span>
+                <span class="bckToggle" onclick="removeClassProExpand()"><img src="images/profileBackBtn.svg" alt="" title="Close Profile" /></span>
                 <div class="profile--flex">
                   <h3 class="profile__name">Debdeep Chatterjee</h3>
                   <span class="profile__social">
                     <div class="icon-container">
-                      <a href="#">
+                      <a href="javascript:void()">
                         <svg class="icon icon--primary">
                           <use xlink:href="images/sprite.svg#instagram"></use>
                         </svg>
                       </a>
-                      <a href="#">
+                      <a href="javascript:void()">
                         <svg class="icon icon--primary">
                           <use xlink:href="images/sprite.svg#linkedin"></use>
                         </svg>
                       </a>
-                      <a href="#">
+                      <a href="javascript:void()">
                         <svg class="icon icon--primary">
                           <use xlink:href="images/sprite.svg#twitter"></use>
                         </svg>
                       </a>
-                      <a href="#">
+                      <a href="javascript:void()">
                         <svg class="icon icon--primary">
                           <use xlink:href="images/sprite.svg#facebook"></use>
                         </svg>
@@ -124,35 +221,35 @@
           <h2 class="block__heading" id="wetLab">wet lab</h2>
           <div class="profile">
             <div class="profile__image">
-              <img src="images/IGA1.png" alt="" />
+              <img src="https://2021.igem.org/wiki/images/2/22/T--IISER_Kolkata--image-namooste.png" alt="" />
               <div class="textOnImage">
-                <h3 class="profile__heading">Debdeep Chatterjee</h3>
+                <h3 class="profile__heading">Soumi Bhattacharyya</h3>
                 <a href="javascript:void();" class="btn btn--profile" onclick="profileToggle()">View</a>
               </div>
             </div>
             <div class="profile__modal">
               <header class="profile__header">
-                <span class="bckToggle" onclick="removeClassProExpand()"><img src="images/profileBackBtn.svg" alt="" /></span>
+                <span class="bckToggle" onclick="removeClassProExpand()"><img src="images/profileBackBtn.svg" alt="" title="Close Profile" /></span>
                 <div class="profile--flex">
-                  <h3 class="profile__name">Debdeep Chatterjee</h3>
+                  <h3 class="profile__name">Soumi Bhattacharyya</h3>
                   <span class="profile__social">
                     <div class="icon-container">
-                      <a href="#">
+                      <a href="javascript:void()">
                         <svg class="icon icon--primary">
                           <use xlink:href="images/sprite.svg#instagram"></use>
                         </svg>
                       </a>
-                      <a href="#">
+                      <a href="javascript:void()">
                         <svg class="icon icon--primary">
                           <use xlink:href="images/sprite.svg#linkedin"></use>
                         </svg>
                       </a>
-                      <a href="#">
+                      <a href="javascript:void()">
                         <svg class="icon icon--primary">
                           <use xlink:href="images/sprite.svg#twitter"></use>
                         </svg>
                       </a>
-                      <a href="#">
+                      <a href="javascript:void()">
                         <svg class="icon icon--primary">
                           <use xlink:href="images/sprite.svg#facebook"></use>
                         </svg>
@@ -160,44 +257,44 @@
                     </div>
                   </span>
                 </div>
-                <span class="profile__engagement">Engagement - Wet Lab</span>
+                <span class="profile__engagement">Engagement - Wet Lab & Human Practices</span>
               </header>
               <div class="profile__body">
-                Hi! I am Debdeep, currently a fifth-year Biology major student at IISER Kolkata. I am fond of molecular biology and protein engineering. Other than managing and leading this wonderful team I work as a bio-modeler. I mostly spend my free time listening to music, reading or watching web series. The journey of iGEM2021 has been a roller coaster ride which I have enjoyed every bit with my team members.
+                Hi there! I am Soumi Bhattacharyya, a fourth-year BS-MS student at IISER Kolkata majoring in Biology. I am interested in evolutionary and behavioral biology and have a weird fascination with Drosophila! Thanks to iGEM, I got the golden opportunity of exploring other fields in biology, gaining the experience of building a project from scratch, and interacting with so many people out there in the world of academia to exchange some crazy ideas. When I am stressed, I find solace in music and my piano.
               </div>
             </div>
           </div>
           <div class="profile rightProfile">
             <div class="profile__image">
-              <img src="images/IGA1.png" alt="" />
+              <img src="https://2021.igem.org/wiki/images/2/22/T--IISER_Kolkata--image-namooste.png" alt="" />
               <div class="textOnImage">
-                <h3 class="profile__heading">Debdeep Chatterjee</h3>
+                <h3 class="profile__heading">Shubhamay Das</h3>
                 <a href="javascript:void();" class="btn btn--profile" onclick="profileToggle()">View</a>
               </div>
             </div>
             <div class="profile__modal">
               <header class="profile__header">
-                <span class="bckToggle" onClick="removeClassProExpand()"><img src="images/profileBackBtn.svg" alt="" /></span>
+                <span class="bckToggle" onClick="removeClassProExpand()"><img src="images/profileBackBtn.svg" alt="" title="Close Profile" /></span>
                 <div class="profile--flex">
-                  <h3 class="profile__name">Debdeep Chatterjee</h3>
+                  <h3 class="profile__name">Shubhamay Das</h3>
                   <span class="profile__social">
                     <div class="icon-container">
-                      <a href="#">
+                      <a href="javascript:void()">
                         <svg class="icon icon--primary">
                           <use xlink:href="images/sprite.svg#instagram"></use>
                         </svg>
                       </a>
-                      <a href="#">
+                      <a href="javascript:void()">
                         <svg class="icon icon--primary">
                           <use xlink:href="images/sprite.svg#linkedin"></use>
                         </svg>
                       </a>
-                      <a href="#">
+                      <a href="javascript:void()">
                         <svg class="icon icon--primary">
                           <use xlink:href="images/sprite.svg#twitter"></use>
                         </svg>
                       </a>
-                      <a href="#">
+                      <a href="javascript:void()">
                         <svg class="icon icon--primary">
                           <use xlink:href="images/sprite.svg#facebook"></use>
                         </svg>
@@ -205,44 +302,44 @@
                     </div>
                   </span>
                 </div>
-                <span class="profile__engagement">Engagement - Wet Lab</span>
+                <span class="profile__engagement">Engagement - Wet Lab & Dry Lab</span>
               </header>
               <div class="profile__body">
-                Hi! I am Debdeep, currently a fifth-year Biology major student at IISER Kolkata. I am fond of molecular biology and protein engineering. Other than managing and leading this wonderful team I work as a bio-modeler. I mostly spend my free time listening to music, reading or watching web series. The journey of iGEM2021 has been a roller coaster ride which I have enjoyed every bit with my team members.
+                Hi! I am Shubhamay, currently a fourth-year Biology major student at IISER Kolkata. My love for genetics and molecular biology attracted me to join the iGEM team. It is an honor to work as a bio-modeler as well as a dry-lab member with such a beautiful team. Apart from watching horror films, playing drums and painting are my stress-busters.
               </div>
             </div>
           </div>
           <div class="profile">
             <div class="profile__image">
-              <img src="images/IGA1.png" alt="" />
+              <img src="https://2021.igem.org/wiki/images/2/22/T--IISER_Kolkata--image-namooste.png" alt="" />
               <div class="textOnImage">
-                <h3 class="profile__heading">Debdeep Chatterjee</h3>
+                <h3 class="profile__heading">Debshruti Biswas</h3>
                 <a href="javascript:void();" class="btn btn--profile" onclick="profileToggle()">View</a>
               </div>
             </div>
             <div class="profile__modal">
               <header class="profile__header">
-                <span class="bckToggle" onClick="removeClassProExpand()"><img src="images/profileBackBtn.svg" alt="" /></span>
+                <span class="bckToggle" onClick="removeClassProExpand()"><img src="images/profileBackBtn.svg" alt="" title="Close Profile" /></span>
                 <div class="profile--flex">
-                  <h3 class="profile__name">Debdeep Chatterjee</h3>
+                  <h3 class="profile__name">Debshruti Biswas</h3>
                   <span class="profile__social">
                     <div class="icon-container">
-                      <a href="#">
+                      <a href="javascript:void()">
                         <svg class="icon icon--primary">
                           <use xlink:href="images/sprite.svg#instagram"></use>
                         </svg>
                       </a>
-                      <a href="#">
+                      <a href="javascript:void()">
                         <svg class="icon icon--primary">
                           <use xlink:href="images/sprite.svg#linkedin"></use>
                         </svg>
                       </a>
-                      <a href="#">
+                      <a href="javascript:void()">
                         <svg class="icon icon--primary">
                           <use xlink:href="images/sprite.svg#twitter"></use>
                         </svg>
                       </a>
-                      <a href="#">
+                      <a href="javascript:void()">
                         <svg class="icon icon--primary">
                           <use xlink:href="images/sprite.svg#facebook"></use>
                         </svg>
@@ -250,44 +347,44 @@
                     </div>
                   </span>
                 </div>
-                <span class="profile__engagement">Engagement - Wet Lab</span>
+                <span class="profile__engagement">Engagement - Wet Lab & Human Practices</span>
               </header>
               <div class="profile__body">
-                Hi! I am Debdeep, currently a fifth-year Biology major student at IISER Kolkata. I am fond of molecular biology and protein engineering. Other than managing and leading this wonderful team I work as a bio-modeler. I mostly spend my free time listening to music, reading or watching web series. The journey of iGEM2021 has been a roller coaster ride which I have enjoyed every bit with my team members.
+                Hello, I am Debshruti, a biology major student. I am attracted to molecular biology along with more than usual interests in disease biology! I have always been amazed by the ‘power of change’ that synthetic biology possesses. iGEM 2021 competition has allowed me to explore the interdisciplinary facets of synthetic biology. Other than academia I like watching web series, reading, painting, making memes, and spending time with my fellow iGEM team members.
               </div>
             </div>
           </div>
           <div class="profile rightProfile">
             <div class="profile__image">
-              <img src="images/IGA1.png" alt="" />
+              <img src="https://2021.igem.org/wiki/images/2/22/T--IISER_Kolkata--image-namooste.png" alt="" />
               <div class="textOnImage">
-                <h3 class="profile__heading">Debdeep Chatterjee</h3>
+                <h3 class="profile__heading">Shreyash Borkar</h3>
                 <a href="javascript:void();" class="btn btn--profile" onclick="profileToggle()">View</a>
               </div>
             </div>
             <div class="profile__modal">
               <header class="profile__header">
-                <span class="bckToggle" onClick="removeClassProExpand()"><img src="images/profileBackBtn.svg" alt="" /></span>
+                <span class="bckToggle" onClick="removeClassProExpand()"><img src="images/profileBackBtn.svg" alt="" title="Close Profile" /></span>
                 <div class="profile--flex">
-                  <h3 class="profile__name">Debdeep Chatterjee</h3>
+                  <h3 class="profile__name">Shreyash Borkar</h3>
                   <span class="profile__social">
                     <div class="icon-container">
-                      <a href="#">
+                      <a href="javascript:void()">
                         <svg class="icon icon--primary">
                           <use xlink:href="images/sprite.svg#instagram"></use>
                         </svg>
                       </a>
-                      <a href="#">
+                      <a href="javascript:void()">
                         <svg class="icon icon--primary">
                           <use xlink:href="images/sprite.svg#linkedin"></use>
                         </svg>
                       </a>
-                      <a href="#">
+                      <a href="javascript:void()">
                         <svg class="icon icon--primary">
                           <use xlink:href="images/sprite.svg#twitter"></use>
                         </svg>
                       </a>
-                      <a href="#">
+                      <a href="javascript:void()">
                         <svg class="icon icon--primary">
                           <use xlink:href="images/sprite.svg#facebook"></use>
                         </svg>
@@ -295,44 +392,44 @@
                     </div>
                   </span>
                 </div>
-                <span class="profile__engagement">Engagement - Wet Lab</span>
+                <span class="profile__engagement">Engagement - Wet Lab & Graphics Design</span>
               </header>
               <div class="profile__body">
-                Hi! I am Debdeep, currently a fifth-year Biology major student at IISER Kolkata. I am fond of molecular biology and protein engineering. Other than managing and leading this wonderful team I work as a bio-modeler. I mostly spend my free time listening to music, reading or watching web series. The journey of iGEM2021 has been a roller coaster ride which I have enjoyed every bit with my team members.
+                Hello, I am Shreyash, a fourth year Biology major. My curiosity about gene engineering paved my way in iGEM. I mainly work in wet lab and love to design and sketch. Apart from this you can find me laughing at my phone enjoying comedy shows.
               </div>
             </div>
           </div>
           <div class="profile">
             <div class="profile__image">
-              <img src="images/IGA1.png" alt="" />
+              <img src="https://2021.igem.org/wiki/images/2/22/T--IISER_Kolkata--image-namooste.png" alt="" />
               <div class="textOnImage">
-                <h3 class="profile__heading">Debdeep Chatterjee</h3>
+                <h3 class="profile__heading">Sourin Chatterjee</h3>
                 <a href="javascript:void();" class="btn btn--profile" onclick="profileToggle()">View</a>
               </div>
             </div>
             <div class="profile__modal">
               <header class="profile__header">
-                <span class="bckToggle" onClick="removeClassProExpand()"><img src="images/profileBackBtn.svg" alt="" /></span>
+                <span class="bckToggle" onClick="removeClassProExpand()"><img src="images/profileBackBtn.svg" alt="" title="Close Profile" /></span>
                 <div class="profile--flex">
-                  <h3 class="profile__name">Debdeep Chatterjee</h3>
+                  <h3 class="profile__name">Sourin Chatterjee</h3>
                   <span class="profile__social">
                     <div class="icon-container">
-                      <a href="#">
+                      <a href="javascript:void()">
                         <svg class="icon icon--primary">
                           <use xlink:href="images/sprite.svg#instagram"></use>
                         </svg>
                       </a>
-                      <a href="#">
+                      <a href="javascript:void()">
                         <svg class="icon icon--primary">
                           <use xlink:href="images/sprite.svg#linkedin"></use>
                         </svg>
                       </a>
-                      <a href="#">
+                      <a href="javascript:void()">
                         <svg class="icon icon--primary">
                           <use xlink:href="images/sprite.svg#twitter"></use>
                         </svg>
                       </a>
-                      <a href="#">
+                      <a href="javascript:void()">
                         <svg class="icon icon--primary">
                           <use xlink:href="images/sprite.svg#facebook"></use>
                         </svg>
@@ -340,10 +437,145 @@
                     </div>
                   </span>
                 </div>
-                <span class="profile__engagement">Engagement - Wet Lab</span>
+                <span class="profile__engagement">Engagement - Wet Lab, Dry Lab & Human Practices</span>
               </header>
               <div class="profile__body">
-                Hi! I am Debdeep, currently a fifth-year Biology major student at IISER Kolkata. I am fond of molecular biology and protein engineering. Other than managing and leading this wonderful team I work as a bio-modeler. I mostly spend my free time listening to music, reading or watching web series. The journey of iGEM2021 has been a roller coaster ride which I have enjoyed every bit with my team members.
+                Hi! I am Sourin, currently a third-year Mathematics major and Biology minor student at IISER Kolkata. My passion for mathematical biology has landed me in the iGEM team. Though I mainly work in Dry Lab, I have been associated with Human Practice and Wet lab too, which enables me to work with each one of my talented teammates. Watching movies and web series, writing poems, paintings and last but not the least making memes are my favorite pastime.
+              </div>
+            </div>
+          </div>
+          <div class="profile rightProfile">
+            <div class="profile__image">
+              <img src="https://2021.igem.org/wiki/images/2/22/T--IISER_Kolkata--image-namooste.png" alt="" />
+              <div class="textOnImage">
+                <h3 class="profile__heading">Adrija Adhikary</h3>
+                <a href="javascript:void();" class="btn btn--profile" onclick="profileToggle()">View</a>
+              </div>
+            </div>
+            <div class="profile__modal">
+              <header class="profile__header">
+                <span class="bckToggle" onClick="removeClassProExpand()"><img src="images/profileBackBtn.svg" alt="" title="Close Profile" /></span>
+                <div class="profile--flex">
+                  <h3 class="profile__name">Adrija Adhikary</h3>
+                  <span class="profile__social">
+                    <div class="icon-container">
+                      <a href="javascript:void()">
+                        <svg class="icon icon--primary">
+                          <use xlink:href="images/sprite.svg#instagram"></use>
+                        </svg>
+                      </a>
+                      <a href="javascript:void()">
+                        <svg class="icon icon--primary">
+                          <use xlink:href="images/sprite.svg#linkedin"></use>
+                        </svg>
+                      </a>
+                      <a href="javascript:void()">
+                        <svg class="icon icon--primary">
+                          <use xlink:href="images/sprite.svg#twitter"></use>
+                        </svg>
+                      </a>
+                      <a href="javascript:void()">
+                        <svg class="icon icon--primary">
+                          <use xlink:href="images/sprite.svg#facebook"></use>
+                        </svg>
+                      </a>
+                    </div>
+                  </span>
+                </div>
+                <span class="profile__engagement">Engagement - Wet Lab & Human practices</span>
+              </header>
+              <div class="profile__body">
+                Hello! I am Adrija, currently a third-year Biology major and Chemistry minor student at IISER Kolkata. I love molecular biology and currently am delving into studying more about how molecular biology works in embryogenesis and disease progression. I mainly work in the Wet Lab as a bio modeller. Wasting time reading useless trivia, cuddling plushies and semi-serious gymming are my favourite all times.
+              </div>
+            </div>
+          </div>
+          <div class="profile">
+            <div class="profile__image">
+              <img src="https://2021.igem.org/wiki/images/2/22/T--IISER_Kolkata--image-namooste.png" alt="" />
+              <div class="textOnImage">
+                <h3 class="profile__heading">Udit Ghosh</h3>
+                <a href="javascript:void();" class="btn btn--profile" onclick="profileToggle()">View</a>
+              </div>
+            </div>
+            <div class="profile__modal">
+              <header class="profile__header">
+                <span class="bckToggle" onClick="removeClassProExpand()"><img src="images/profileBackBtn.svg" alt="" title="Close Profile" /></span>
+                <div class="profile--flex">
+                  <h3 class="profile__name">Udit Ghosh</h3>
+                  <span class="profile__social">
+                    <div class="icon-container">
+                      <a href="javascript:void()">
+                        <svg class="icon icon--primary">
+                          <use xlink:href="images/sprite.svg#instagram"></use>
+                        </svg>
+                      </a>
+                      <a href="javascript:void()">
+                        <svg class="icon icon--primary">
+                          <use xlink:href="images/sprite.svg#linkedin"></use>
+                        </svg>
+                      </a>
+                      <a href="javascript:void()">
+                        <svg class="icon icon--primary">
+                          <use xlink:href="images/sprite.svg#twitter"></use>
+                        </svg>
+                      </a>
+                      <a href="javascript:void()">
+                        <svg class="icon icon--primary">
+                          <use xlink:href="images/sprite.svg#facebook"></use>
+                        </svg>
+                      </a>
+                    </div>
+                  </span>
+                </div>
+                <span class="profile__engagement">Engagement - Wet Lab & Human Practices</span>
+              </header>
+              <div class="profile__body">
+                Hello! Udit here, a third year undergraduate from IISER Kolkata with Biology as majors. I like writing stories, mostly incomplete. Indie music, coffee and poetry can surely make my day. Having a slight inclination towards biomedicine and virology, I like brainstorming theories on therapeutic approaches to several diseases (most of which successfully fail). Currently, I am working with the Wet Lab as well as the Human Practices team, and it has been a great experience so far. Also, on good days I click pictures of nature and win a badminton match.
+              </div>
+            </div>
+          </div>
+          <div class="profile rightProfile">
+            <div class="profile__image">
+              <img src="https://2021.igem.org/wiki/images/2/22/T--IISER_Kolkata--image-namooste.png" alt="" />
+              <div class="textOnImage">
+                <h3 class="profile__heading">Abeg Dutta</h3>
+                <a href="javascript:void();" class="btn btn--profile" onclick="profileToggle()">View</a>
+              </div>
+            </div>
+            <div class="profile__modal">
+              <header class="profile__header">
+                <span class="bckToggle" onClick="removeClassProExpand()"><img src="images/profileBackBtn.svg" alt="" title="Close Profile" /></span>
+                <div class="profile--flex">
+                  <h3 class="profile__name">Abeg Dutta</h3>
+                  <span class="profile__social">
+                    <div class="icon-container">
+                      <a href="javascript:void()">
+                        <svg class="icon icon--primary">
+                          <use xlink:href="images/sprite.svg#instagram"></use>
+                        </svg>
+                      </a>
+                      <a href="javascript:void()">
+                        <svg class="icon icon--primary">
+                          <use xlink:href="images/sprite.svg#linkedin"></use>
+                        </svg>
+                      </a>
+                      <a href="javascript:void()">
+                        <svg class="icon icon--primary">
+                          <use xlink:href="images/sprite.svg#twitter"></use>
+                        </svg>
+                      </a>
+                      <a href="javascript:void()">
+                        <svg class="icon icon--primary">
+                          <use xlink:href="images/sprite.svg#facebook"></use>
+                        </svg>
+                      </a>
+                    </div>
+                  </span>
+                </div>
+                <span class="profile__engagement">Engagement - Wet Lab & Human practices</span>
+              </header>
+              <div class="profile__body">
+                Hello ! I am Abeg Dutta , a third year undergraduate majoring in biological sciences and minoring in chemical sciences. I am currently working in the wet lab and human practices with my teammates. Apart from my passion in science , sketching , reading and writing poetry are my favourite getaways from the usual work schedule.
               </div>
             </div>
           </div>
@@ -353,35 +585,35 @@
           <h2 class="block__heading" id="dryLab">dry lab</h2>
           <div class="profile">
             <div class="profile__image">
-              <img src="images/IGA1.png" alt="" />
+              <img src="https://2021.igem.org/wiki/images/2/22/T--IISER_Kolkata--image-namooste.png" alt="" />
               <div class="textOnImage">
-                <h3 class="profile__heading">Debdeep Chatterjee</h3>
+                <h3 class="profile__heading">Mahapatra Anshuman Jaysingh</h3>
                 <a href="javascript:void();" class="btn btn--profile" onclick="profileToggle()">View</a>
               </div>
             </div>
             <div class="profile__modal">
               <header class="profile__header">
-                <span class="bckToggle" onClick="removeClassProExpand()"><img src="images/profileBackBtn.svg" alt="" /></span>
+                <span class="bckToggle" onClick="removeClassProExpand()"><img src="images/profileBackBtn.svg" alt="" title="Close Profile" /></span>
                 <div class="profile--flex">
-                  <h3 class="profile__name">Debdeep Chatterjee</h3>
+                  <h3 class="profile__name">Mahapatra Anshuman Jaysingh</h3>
                   <span class="profile__social">
                     <div class="icon-container">
-                      <a href="#">
+                      <a href="javascript:void()">
                         <svg class="icon icon--primary">
                           <use xlink:href="images/sprite.svg#instagram"></use>
                         </svg>
                       </a>
-                      <a href="#">
+                      <a href="javascript:void()">
                         <svg class="icon icon--primary">
                           <use xlink:href="images/sprite.svg#linkedin"></use>
                         </svg>
                       </a>
-                      <a href="#">
+                      <a href="javascript:void()">
                         <svg class="icon icon--primary">
                           <use xlink:href="images/sprite.svg#twitter"></use>
                         </svg>
                       </a>
-                      <a href="#">
+                      <a href="javascript:void()">
                         <svg class="icon icon--primary">
                           <use xlink:href="images/sprite.svg#facebook"></use>
                         </svg>
@@ -389,44 +621,44 @@
                     </div>
                   </span>
                 </div>
-                <span class="profile__engagement">Engagement - Wet Lab</span>
+                <span class="profile__engagement">Engagement - Dry Lab</span>
               </header>
               <div class="profile__body">
-                Hi! I am Debdeep, currently a fifth-year Biology major student at IISER Kolkata. I am fond of molecular biology and protein engineering. Other than managing and leading this wonderful team I work as a bio-modeler. I mostly spend my free time listening to music, reading or watching web series. The journey of iGEM2021 has been a roller coaster ride which I have enjoyed every bit with my team members.
+                Hi! I am Anshuman; a 5th year biology major at IISERK. A theoretical and computational biologist by trade, the overlap of theoretical and experimental biology attracted me to igem. You can find me mostly working in the dry lab component of the project. If you cannot find me working on code, you will definitely find me either gardening or playing with dogs. I also write some amateur poetry.
               </div>
             </div>
           </div>
           <div class="profile rightProfile">
             <div class="profile__image">
-              <img src="images/IGA1.png" alt="" />
+              <img src="https://2021.igem.org/wiki/images/2/22/T--IISER_Kolkata--image-namooste.png" alt="" />
               <div class="textOnImage">
-                <h3 class="profile__heading">Debdeep Chatterjee</h3>
+                <h3 class="profile__heading">Nivedaa Dhandapani</h3>
                 <a href="javascript:void();" class="btn btn--profile" onclick="profileToggle()">View</a>
               </div>
             </div>
             <div class="profile__modal">
               <header class="profile__header">
-                <span class="bckToggle" onClick="removeClassProExpand()"><img src="images/profileBackBtn.svg" alt="" /></span>
+                <span class="bckToggle" onClick="removeClassProExpand()"><img src="images/profileBackBtn.svg" alt="" title="Close Profile" /></span>
                 <div class="profile--flex">
-                  <h3 class="profile__name">Debdeep Chatterjee</h3>
+                  <h3 class="profile__name">Nivedaa Dhandapani</h3>
                   <span class="profile__social">
                     <div class="icon-container">
-                      <a href="#">
+                      <a href="javascript:void()">
                         <svg class="icon icon--primary">
                           <use xlink:href="images/sprite.svg#instagram"></use>
                         </svg>
                       </a>
-                      <a href="#">
+                      <a href="javascript:void()">
                         <svg class="icon icon--primary">
                           <use xlink:href="images/sprite.svg#linkedin"></use>
                         </svg>
                       </a>
-                      <a href="#">
+                      <a href="javascript:void()">
                         <svg class="icon icon--primary">
                           <use xlink:href="images/sprite.svg#twitter"></use>
                         </svg>
                       </a>
-                      <a href="#">
+                      <a href="javascript:void()">
                         <svg class="icon icon--primary">
                           <use xlink:href="images/sprite.svg#facebook"></use>
                         </svg>
@@ -434,10 +666,10 @@
                     </div>
                   </span>
                 </div>
-                <span class="profile__engagement">Engagement - Wet Lab</span>
+                <span class="profile__engagement">Engagement - Dry Lab</span>
               </header>
               <div class="profile__body">
-                Hi! I am Debdeep, currently a fifth-year Biology major student at IISER Kolkata. I am fond of molecular biology and protein engineering. Other than managing and leading this wonderful team I work as a bio-modeler. I mostly spend my free time listening to music, reading or watching web series. The journey of iGEM2021 has been a roller coaster ride which I have enjoyed every bit with my team members.
+                I am Nivedaa, an aspiring physicist very much fascinated by how beautifully biological phenomenon can be explained and visualised using physics. Origin of life from mere atoms always intrigued me and I love to further my understanding of life around us through the lens of physics. When I am not running codes I watch loads of movies, work out, go on walks, treks, trips and sketch. I see iGem as a wonderful opportunity to push limits of what I could do and I can't be more happier to be a part of it!
               </div>
             </div>
           </div>
@@ -447,7 +679,7 @@
           <h2 class="block__heading" id="#HumanPractices">Human Practices</h2>
           <div class="profile">
             <div class="profile__image">
-              <img src="images/IGA1.png" alt="" />
+              <img src="https://2021.igem.org/wiki/images/2/22/T--IISER_Kolkata--image-namooste.png" alt="" />
               <div class="textOnImage">
                 <h3 class="profile__heading">Debdeep Chatterjee</h3>
                 <a href="javascript:void();" class="btn btn--profile" onclick="profileToggle()">View</a>
@@ -455,27 +687,27 @@
             </div>
             <div class="profile__modal">
               <header class="profile__header">
-                <span class="bckToggle" onClick="removeClassProExpand()"><img src="images/profileBackBtn.svg" alt="" /></span>
+                <span class="bckToggle" onClick="removeClassProExpand()"><img src="images/profileBackBtn.svg" alt="" title="Close Profile" /></span>
                 <div class="profile--flex">
                   <h3 class="profile__name">Debdeep Chatterjee</h3>
                   <span class="profile__social">
                     <div class="icon-container">
-                      <a href="#">
+                      <a href="javascript:void()">
                         <svg class="icon icon--primary">
                           <use xlink:href="images/sprite.svg#instagram"></use>
                         </svg>
                       </a>
-                      <a href="#">
+                      <a href="javascript:void()">
                         <svg class="icon icon--primary">
                           <use xlink:href="images/sprite.svg#linkedin"></use>
                         </svg>
                       </a>
-                      <a href="#">
+                      <a href="javascript:void()">
                         <svg class="icon icon--primary">
                           <use xlink:href="images/sprite.svg#twitter"></use>
                         </svg>
                       </a>
-                      <a href="#">
+                      <a href="javascript:void()">
                         <svg class="icon icon--primary">
                           <use xlink:href="images/sprite.svg#facebook"></use>
                         </svg>
@@ -492,7 +724,7 @@
           </div>
           <div class="profile rightProfile">
             <div class="profile__image">
-              <img src="images/IGA1.png" alt="" />
+              <img src="https://2021.igem.org/wiki/images/2/22/T--IISER_Kolkata--image-namooste.png" alt="" />
               <div class="textOnImage">
                 <h3 class="profile__heading">Debdeep Chatterjee</h3>
                 <a href="javascript:void();" class="btn btn--profile" onclick="profileToggle()">View</a>
@@ -500,27 +732,27 @@
             </div>
             <div class="profile__modal">
               <header class="profile__header">
-                <span class="bckToggle" onClick="removeClassProExpand()"><img src="images/profileBackBtn.svg" alt="" /></span>
+                <span class="bckToggle" onClick="removeClassProExpand()"><img src="images/profileBackBtn.svg" alt="" title="Close Profile" /></span>
                 <div class="profile--flex">
                   <h3 class="profile__name">Debdeep Chatterjee</h3>
                   <span class="profile__social">
                     <div class="icon-container">
-                      <a href="#">
+                      <a href="javascript:void()">
                         <svg class="icon icon--primary">
                           <use xlink:href="images/sprite.svg#instagram"></use>
                         </svg>
                       </a>
-                      <a href="#">
+                      <a href="javascript:void()">
                         <svg class="icon icon--primary">
                           <use xlink:href="images/sprite.svg#linkedin"></use>
                         </svg>
                       </a>
-                      <a href="#">
+                      <a href="javascript:void()">
                         <svg class="icon icon--primary">
                           <use xlink:href="images/sprite.svg#twitter"></use>
                         </svg>
                       </a>
-                      <a href="#">
+                      <a href="javascript:void()">
                         <svg class="icon icon--primary">
                           <use xlink:href="images/sprite.svg#facebook"></use>
                         </svg>
@@ -541,35 +773,35 @@
           <h2 class="block__heading" id="wikiTeam">wiki team</h2>
           <div class="profile">
             <div class="profile__image">
-              <img src="images/IGA1.png" alt="" />
+              <img src="https://2021.igem.org/wiki/images/2/22/T--IISER_Kolkata--image-namooste.png" alt="" />
               <div class="textOnImage">
-                <h3 class="profile__heading">Debdeep Chatterjee</h3>
+                <h3 class="profile__heading">Pedisetti Venkatesh</h3>
                 <a href="javascript:void();" class="btn btn--profile" onclick="profileToggle()">View</a>
               </div>
             </div>
             <div class="profile__modal">
               <header class="profile__header">
-                <span class="bckToggle" onClick="removeClassProExpand()"><img src="images/profileBackBtn.svg" alt="" /></span>
+                <span class="bckToggle" onClick="removeClassProExpand()"><img src="images/profileBackBtn.svg" alt="" title="Close Profile" /></span>
                 <div class="profile--flex">
-                  <h3 class="profile__name">Debdeep Chatterjee</h3>
+                  <h3 class="profile__name">Pedisetti Venkatesh</h3>
                   <span class="profile__social">
                     <div class="icon-container">
-                      <a href="#">
+                      <a href="javascript:void()">
                         <svg class="icon icon--primary">
                           <use xlink:href="images/sprite.svg#instagram"></use>
                         </svg>
                       </a>
-                      <a href="#">
+                      <a href="javascript:void()">
                         <svg class="icon icon--primary">
                           <use xlink:href="images/sprite.svg#linkedin"></use>
                         </svg>
                       </a>
-                      <a href="#">
+                      <a href="javascript:void()">
                         <svg class="icon icon--primary">
                           <use xlink:href="images/sprite.svg#twitter"></use>
                         </svg>
                       </a>
-                      <a href="#">
+                      <a href="javascript:void()">
                         <svg class="icon icon--primary">
                           <use xlink:href="images/sprite.svg#facebook"></use>
                         </svg>
@@ -577,44 +809,44 @@
                     </div>
                   </span>
                 </div>
-                <span class="profile__engagement">Engagement - Wet Lab</span>
+                <span class="profile__engagement">Engagement - Web Development & web design</span>
               </header>
               <div class="profile__body">
-                Hi! I am Debdeep, currently a fifth-year Biology major student at IISER Kolkata. I am fond of molecular biology and protein engineering. Other than managing and leading this wonderful team I work as a bio-modeler. I mostly spend my free time listening to music, reading or watching web series. The journey of iGEM2021 has been a roller coaster ride which I have enjoyed every bit with my team members.
+                (---Yet to give an intro---)
               </div>
             </div>
           </div>
           <div class="profile rightProfile">
             <div class="profile__image">
-              <img src="images/IGA1.png" alt="" />
+              <img src="https://2021.igem.org/wiki/images/2/22/T--IISER_Kolkata--image-namooste.png" alt="" />
               <div class="textOnImage">
-                <h3 class="profile__heading">Debdeep Chatterjee</h3>
+                <h3 class="profile__heading">Abhiroop Chauhan</h3>
                 <a href="javascript:void();" class="btn btn--profile" onclick="profileToggle()">View</a>
               </div>
             </div>
             <div class="profile__modal">
               <header class="profile__header">
-                <span class="bckToggle" onClick="removeClassProExpand()"><img src="images/profileBackBtn.svg" alt="" /></span>
+                <span class="bckToggle" onClick="removeClassProExpand()"><img src="images/profileBackBtn.svg" alt="" title="Close Profile" /></span>
                 <div class="profile--flex">
-                  <h3 class="profile__name">Debdeep Chatterjee</h3>
+                  <h3 class="profile__name">Abhiroop Chauhan</h3>
                   <span class="profile__social">
                     <div class="icon-container">
-                      <a href="#">
+                      <a href="javascript:void()">
                         <svg class="icon icon--primary">
                           <use xlink:href="images/sprite.svg#instagram"></use>
                         </svg>
                       </a>
-                      <a href="#">
+                      <a href="javascript:void()">
                         <svg class="icon icon--primary">
                           <use xlink:href="images/sprite.svg#linkedin"></use>
                         </svg>
                       </a>
-                      <a href="#">
+                      <a href="javascript:void()">
                         <svg class="icon icon--primary">
                           <use xlink:href="images/sprite.svg#twitter"></use>
                         </svg>
                       </a>
-                      <a href="#">
+                      <a href="javascript:void()">
                         <svg class="icon icon--primary">
                           <use xlink:href="images/sprite.svg#facebook"></use>
                         </svg>
@@ -622,48 +854,48 @@
                     </div>
                   </span>
                 </div>
-                <span class="profile__engagement">Engagement - Wet Lab</span>
+                <span class="profile__engagement">Engagement - Web Design</span>
               </header>
               <div class="profile__body">
-                Hi! I am Debdeep, currently a fifth-year Biology major student at IISER Kolkata. I am fond of molecular biology and protein engineering. Other than managing and leading this wonderful team I work as a bio-modeler. I mostly spend my free time listening to music, reading or watching web series. The journey of iGEM2021 has been a roller coaster ride which I have enjoyed every bit with my team members.
+                (---Yet to give an Intro---)
               </div>
             </div>
           </div>
         </div>
 
         <div class="block block--long">
-          <h2 class="block__heading" id="pi">Pi</h2>
+          <h2 class="block__heading" id="pi">Pi's & Advisors</h2>
           <div class="profile">
             <div class="profile__image">
-              <img src="images/IGA1.png" alt="" />
+              <img src="https://2021.igem.org/wiki/images/2/22/T--IISER_Kolkata--image-namooste.png" alt="" />
               <div class="textOnImage">
-                <h3 class="profile__heading">Debdeep Chatterjee</h3>
+                <h3 class="profile__heading">Dr. Supratim Dutta</h3>
                 <a href="javascript:void();" class="btn btn--profile" onclick="profileToggle()">View</a>
               </div>
             </div>
             <div class="profile__modal">
               <header class="profile__header">
-                <span class="bckToggle" onClick="removeClassProExpand()"><img src="images/profileBackBtn.svg" alt="" /></span>
+                <span class="bckToggle" onClick="removeClassProExpand()"><img src="images/profileBackBtn.svg" alt="" title="Close Profile" /></span>
                 <div class="profile--flex">
-                  <h3 class="profile__name">Debdeep Chatterjee</h3>
+                  <h3 class="profile__name">Dr. Supratim Dutta</h3>
                   <span class="profile__social">
                     <div class="icon-container">
-                      <a href="#">
+                      <a href="javascript:void()">
                         <svg class="icon icon--primary">
                           <use xlink:href="images/sprite.svg#instagram"></use>
                         </svg>
                       </a>
-                      <a href="#">
+                      <a href="javascript:void()">
                         <svg class="icon icon--primary">
                           <use xlink:href="images/sprite.svg#linkedin"></use>
                         </svg>
                       </a>
-                      <a href="#">
+                      <a href="javascript:void()">
                         <svg class="icon icon--primary">
                           <use xlink:href="images/sprite.svg#twitter"></use>
                         </svg>
                       </a>
-                      <a href="#">
+                      <a href="javascript:void()">
                         <svg class="icon icon--primary">
                           <use xlink:href="images/sprite.svg#facebook"></use>
                         </svg>
@@ -671,44 +903,44 @@
                     </div>
                   </span>
                 </div>
-                <span class="profile__engagement">Engagement - Wet Lab</span>
+                <span class="profile__engagement">Role - Primary Principal Investigator</span>
               </header>
               <div class="profile__body">
-                Hi! I am Debdeep, currently a fifth-year Biology major student at IISER Kolkata. I am fond of molecular biology and protein engineering. Other than managing and leading this wonderful team I work as a bio-modeler. I mostly spend my free time listening to music, reading or watching web series. The journey of iGEM2021 has been a roller coaster ride which I have enjoyed every bit with my team members.
+                The research in my laboratory focuses on engineering proteins and organisms to yield improved and novel functions for industrial and pharmaceutical applications. We plan on combining synthetic biology-based approach with protein and metabolic engineering techniques with an overall goal of providing biology-based solutions in areas of bioenergy and chemical production.
               </div>
             </div>
           </div>
           <div class="profile rightProfile">
             <div class="profile__image">
-              <img src="images/IGA1.png" alt="" />
+              <img src="https://2021.igem.org/wiki/images/2/22/T--IISER_Kolkata--image-namooste.png" alt="" />
               <div class="textOnImage">
-                <h3 class="profile__heading">Debdeep Chatterjee</h3>
+                <h3 class="profile__heading">Dr. Dipjyoti Das</h3>
                 <a href="javascript:void();" class="btn btn--profile" onclick="profileToggle()">View</a>
               </div>
             </div>
             <div class="profile__modal">
               <header class="profile__header">
-                <span class="bckToggle" onClick="removeClassProExpand()"><img src="images/profileBackBtn.svg" alt="" /></span>
+                <span class="bckToggle" onClick="removeClassProExpand()"><img src="images/profileBackBtn.svg" alt="" title="Close Profile" /></span>
                 <div class="profile--flex">
-                  <h3 class="profile__name">Debdeep Chatterjee</h3>
+                  <h3 class="profile__name">Dr. Dipjyoti Das</h3>
                   <span class="profile__social">
                     <div class="icon-container">
-                      <a href="#">
+                      <a href="javascript:void()">
                         <svg class="icon icon--primary">
                           <use xlink:href="images/sprite.svg#instagram"></use>
                         </svg>
                       </a>
-                      <a href="#">
+                      <a href="javascript:void()">
                         <svg class="icon icon--primary">
                           <use xlink:href="images/sprite.svg#linkedin"></use>
                         </svg>
                       </a>
-                      <a href="#">
+                      <a href="javascript:void()">
                         <svg class="icon icon--primary">
                           <use xlink:href="images/sprite.svg#twitter"></use>
                         </svg>
                       </a>
-                      <a href="#">
+                      <a href="javascript:void()">
                         <svg class="icon icon--primary">
                           <use xlink:href="images/sprite.svg#facebook"></use>
                         </svg>
@@ -716,10 +948,145 @@
                     </div>
                   </span>
                 </div>
-                <span class="profile__engagement">Engagement - Wet Lab</span>
+                <span class="profile__engagement">Role - Secondary Principal investigator</span>
               </header>
               <div class="profile__body">
-                Hi! I am Debdeep, currently a fifth-year Biology major student at IISER Kolkata. I am fond of molecular biology and protein engineering. Other than managing and leading this wonderful team I work as a bio-modeler. I mostly spend my free time listening to music, reading or watching web series. The journey of iGEM2021 has been a roller coaster ride which I have enjoyed every bit with my team members.
+                In my lab we try to understand how complex behaviors emerge in biological systems at different scales of organizations, starting from the sub-cellular and cellular scale to the tissue and organismic level. At all these scales, biological systems are generally characterized by a large set of interconnected physical and chemical processes that drive the system out of equilibrium. Our method of investigation of such systems is theoretical and computational model building (using tools of statistical physics) and data analysis, in close collaboration with experimental biologists.
+              </div>
+            </div>
+          </div>
+          <div class="profile">
+            <div class="profile__image">
+              <img src="https://2021.igem.org/wiki/images/2/22/T--IISER_Kolkata--image-namooste.png" alt="" />
+              <div class="textOnImage">
+                <h3 class="profile__heading">Dwaipayan Dubey</h3>
+                <a href="javascript:void();" class="btn btn--profile" onclick="profileToggle()">View</a>
+              </div>
+            </div>
+            <div class="profile__modal">
+              <header class="profile__header">
+                <span class="bckToggle" onClick="removeClassProExpand()"><img src="images/profileBackBtn.svg" alt="" title="Close Profile" /></span>
+                <div class="profile--flex">
+                  <h3 class="profile__name">Dwaipayan Dubey</h3>
+                  <span class="profile__social">
+                    <div class="icon-container">
+                      <a href="javascript:void()">
+                        <svg class="icon icon--primary">
+                          <use xlink:href="images/sprite.svg#instagram"></use>
+                        </svg>
+                      </a>
+                      <a href="javascript:void()">
+                        <svg class="icon icon--primary">
+                          <use xlink:href="images/sprite.svg#linkedin"></use>
+                        </svg>
+                      </a>
+                      <a href="javascript:void()">
+                        <svg class="icon icon--primary">
+                          <use xlink:href="images/sprite.svg#twitter"></use>
+                        </svg>
+                      </a>
+                      <a href="javascript:void()">
+                        <svg class="icon icon--primary">
+                          <use xlink:href="images/sprite.svg#facebook"></use>
+                        </svg>
+                      </a>
+                    </div>
+                  </span>
+                </div>
+                <span class="profile__engagement">Role - Advisor</span>
+              </header>
+              <div class="profile__body">
+                Hi! I am Dwaipayan, a 5th-year Physics major student at IISER Kolkata. I have also done a minor in Chemical Sciences. I love to approach biological problems from the broad purview of mathematical modeling. Hence, I chose iGEM to be the field where I can impose my interdisciplinary knowledge as an advisor. I am greatly pleased to have such beautiful teammates, expertised with unimaginable skills. Apart from academia, I love to capture the beautiful world with my camera. Also, playing cricket and football are my energy drinks.
+              </div>
+            </div>
+          </div>
+          <div class="profile rightProfile">
+            <div class="profile__image">
+              <img src="https://2021.igem.org/wiki/images/2/22/T--IISER_Kolkata--image-namooste.png" alt="" />
+              <div class="textOnImage">
+                <h3 class="profile__heading">Mani Gupta</h3>
+                <a href="javascript:void();" class="btn btn--profile" onclick="profileToggle()">View</a>
+              </div>
+            </div>
+            <div class="profile__modal">
+              <header class="profile__header">
+                <span class="bckToggle" onClick="removeClassProExpand()"><img src="images/profileBackBtn.svg" alt="" title="Close Profile" /></span>
+                <div class="profile--flex">
+                  <h3 class="profile__name">Mani Gupta</h3>
+                  <span class="profile__social">
+                    <div class="icon-container">
+                      <a href="javascript:void()">
+                        <svg class="icon icon--primary">
+                          <use xlink:href="images/sprite.svg#instagram"></use>
+                        </svg>
+                      </a>
+                      <a href="javascript:void()">
+                        <svg class="icon icon--primary">
+                          <use xlink:href="images/sprite.svg#linkedin"></use>
+                        </svg>
+                      </a>
+                      <a href="javascript:void()">
+                        <svg class="icon icon--primary">
+                          <use xlink:href="images/sprite.svg#twitter"></use>
+                        </svg>
+                      </a>
+                      <a href="javascript:void()">
+                        <svg class="icon icon--primary">
+                          <use xlink:href="images/sprite.svg#facebook"></use>
+                        </svg>
+                      </a>
+                    </div>
+                  </span>
+                </div>
+                <span class="profile__engagement">Role - Advisor</span>
+              </header>
+              <div class="profile__body">
+                (---Yet to give an intro---)
+              </div>
+            </div>
+          </div>
+          <div class="profile">
+            <div class="profile__image">
+              <img src="https://2021.igem.org/wiki/images/2/22/T--IISER_Kolkata--image-namooste.png" alt="" />
+              <div class="textOnImage">
+                <h3 class="profile__heading">Praveen Nath</h3>
+                <a href="javascript:void();" class="btn btn--profile" onclick="profileToggle()">View</a>
+              </div>
+            </div>
+            <div class="profile__modal">
+              <header class="profile__header">
+                <span class="bckToggle" onClick="removeClassProExpand()"><img src="images/profileBackBtn.svg" alt="" title="Close Profile" /></span>
+                <div class="profile--flex">
+                  <h3 class="profile__name">Praveen Nath</h3>
+                  <span class="profile__social">
+                    <div class="icon-container">
+                      <a href="javascript:void()">
+                        <svg class="icon icon--primary">
+                          <use xlink:href="images/sprite.svg#instagram"></use>
+                        </svg>
+                      </a>
+                      <a href="javascript:void()">
+                        <svg class="icon icon--primary">
+                          <use xlink:href="images/sprite.svg#linkedin"></use>
+                        </svg>
+                      </a>
+                      <a href="javascript:void()">
+                        <svg class="icon icon--primary">
+                          <use xlink:href="images/sprite.svg#twitter"></use>
+                        </svg>
+                      </a>
+                      <a href="javascript:void()">
+                        <svg class="icon icon--primary">
+                          <use xlink:href="images/sprite.svg#facebook"></use>
+                        </svg>
+                      </a>
+                    </div>
+                  </span>
+                </div>
+                <span class="profile__engagement">Role - Advisor</span>
+              </header>
+              <div class="profile__body">
+                (---Yet to give an intro---)
               </div>
             </div>
           </div>

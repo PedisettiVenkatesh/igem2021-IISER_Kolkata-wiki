@@ -15,15 +15,17 @@
 /* Typography */
 html {
   font-size: 62.5%;
+  scrollbar-width: thin;
 }
 
 body {
   font-family: "Inter", Arial, Helvetica, sans-serif;
   /* font-family: "Montserrat", Arial, Helvetica, sans-serif; */
   font-size: 1.5rem;
+  margin-top: 1rem;
   line-height: 1.2;
   color: var(--color-body);
-  background: #eee;
+  background: #ebc8b9;
 }
 
 h1,
@@ -97,25 +99,6 @@ a {
     font-size: 1.5rem;
   }
 }
-/* TODO: Remove this */
-/* Badges
-.badge {
-  border-radius: 20px;
-  font-size: 2rem;
-  font-weight: bold;
-  padding: 0.5rem 2rem;
-  white-space: nowrap;
-}
-
-.badge--primary {
-  background: var(--color-primary);
-  color: #fff;
-}
-
-.badge--secondary {
-  background: var(--color-secondary);
-  color: #fff;
-} */
 
 /* Lists */
 .list {
@@ -327,16 +310,15 @@ a {
   color: #fff;
   font-size: 2.4rem;
   font-weight: 800;
-  margin-top: 23rem;
+  margin-top: 15rem;
   padding: 3rem;
   line-height: 1.2;
 }
 
 .profile__modal {
   border-radius: 3rem;
-  padding-top: 8rem;
+  padding-top: 4rem;
   overflow: hidden;
-  max-width: 800px;
   height: 400px;
   background: #fff;
   position: absolute;
@@ -349,9 +331,9 @@ a {
 }
 
 .profile--expanded .profile__modal {
-  width: 800px;
+  width: 82rem;
   box-shadow: 0 0 20px #000;
-  max-width: 800px;
+  max-width: 82rem;
   z-index: 99;
 }
 
@@ -359,7 +341,7 @@ a {
   width: 100%;
   display: inline-flex;
   justify-content: space-between;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
   align-items: center;
   padding-bottom: 2rem;
 }
@@ -405,6 +387,7 @@ a {
   margin: 0;
   font-weight: 700;
   font-size: 3.5rem;
+  line-height: 1;
   display: inline-block;
 }
 
@@ -493,7 +476,7 @@ a {
 }
 
 .block--skewed-left {
-  padding-bottom: calc(var(--padding-vertical) + 4rem);
+  padding-bottom: calc(var(--padding-vertical) + 10rem);
   clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 0% 100%);
   position: relative;
 }
@@ -743,4 +726,8 @@ a {
   padding: 5rem;
   /* width: 40rem; */
   top: 10%;
+}
+
+.page {
+  transform: translateY(-20rem);
 }
