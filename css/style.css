@@ -289,7 +289,7 @@ a {
 .profile {
   padding: 1rem;
   display: inline-flex;
-  /* position: relative; */
+  position: relative;
 }
 
 .profile__image {
@@ -330,22 +330,27 @@ a {
 
 .profile__modal {
   border-radius: 3rem;
-  padding-top: 4rem;
+  padding-top: 8rem;
   overflow: hidden;
   max-width: 800px;
-  height: auto;
+  height: 400px;
   background: #fff;
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   max-width: 0;
   transition: all 0.3s;
 }
 
+.middleProfile .profile__modal {
+  left: -75%;
+}
+
+.rightProfile .profile__modal {
+  right: 0;
+}
+
 .profile--expanded .profile__modal {
   width: 800px;
-  box-shadow: 0 0 20px 10px #000;
+  box-shadow: 0 0 20px #000;
   max-width: 800px;
   z-index: 99;
 }
@@ -376,6 +381,7 @@ a {
 .profile__header .bckToggle {
   /* This is a back button positioned absolute*/
   position: absolute;
+  cursor: pointer;
   top: -2rem;
 }
 

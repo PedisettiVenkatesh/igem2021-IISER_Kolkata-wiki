@@ -1,6 +1,6 @@
 <nav class="nav collapsible" id="navBar">
   <a class="nav__brand" href="/"><img src="images/logoMini.svg" alt="brand_logo" /></a>
-  <svg class="icon icon--white nav__toggler" onclick="navToggle(),removeClassDropExpand()">
+  <svg class="icon icon--white nav__toggler" onclick="navToggle('navBar'),removeClassDropExpand()">
     <use xlink:href="images/sprite.svg#pipetteMono"></use>
   </svg>
   <ul class="list nav__list collapsible__content">
@@ -56,8 +56,8 @@
   </ul>
 </nav>
 <script>
-  function navToggle() {
-    document.getElementById("navBar").classList.toggle("collapsible--expanded");
+  function navToggle(id) {
+    document.getElementById(id).classList.toggle("collapsible--expanded");
   }
 
   const drop = document.querySelectorAll(".dropdown");
