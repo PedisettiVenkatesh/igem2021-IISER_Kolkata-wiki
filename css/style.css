@@ -389,7 +389,7 @@ a {
   overflow: hidden;
   justify-content: space-between;
   align-items: center;
-  padding: 0 1rem;
+  padding: 0 2rem;
   flex-wrap: wrap;
   margin: 1rem;
   border-radius: 5rem;
@@ -412,7 +412,7 @@ a {
 }
 
 .nav__item {
-  padding: 0.5rem 2rem;
+  padding: 0.5rem 1rem;
   border-bottom: 1px solid #333;
 }
 
@@ -437,6 +437,10 @@ a {
   transform: translateY(-3px); /* FIXME: needed to remove when changed to new icon */
 }
 
+.nav__toggler:hover {
+  opacity: 1;
+}
+
 .nav.collapsible--expanded .nav__toggler {
   opacity: 1;
   /* box-shadow: 0 0 10px 3px #666; */ /* FIXME: need to uncomment when new icon applied */
@@ -450,6 +454,7 @@ a {
 @media screen and (min-width: 1024px) {
   .nav {
     margin: 1rem 5rem;
+    padding-right: 10rem;
   }
 
   .nav__item > a {
@@ -477,6 +482,11 @@ a {
   .nav__brand img {
     padding-left: 2rem;
   }
+
+  .nav.collapsible--expanded {
+    border-radius: 50px;
+    background: linear-gradient(to right, #6a73ff, #ff0982);
+  }
 }
 
 .nav__sticky {
@@ -495,8 +505,10 @@ a {
 } */
 
 .dropdown__content {
-  background: #f53131;
+  /* FIXME: background color */
+  /* background: #f53131; */
   /* background: linear-gradient(to right, #f5313136 0, #f53131 10%, #f53131 90%, #f5313136 100%); */
+  background: linear-gradient(to bottom, #f5313100 0, #f5313100 1.5rem, #f53131 1.5rem, #f53131 100%);
   border-radius: 0 0 20px 20px;
   width: auto;
   max-width: 70%;
@@ -504,8 +516,8 @@ a {
   padding: 1rem 2rem;
   display: none;
   position: absolute;
-  /* FIXME: to be determined absolute postion */
-  transform: translate(5rem, 0.5rem);
+  /* FIXME: to be determined absolute position */
+  transform: translate(5rem, -1rem);
   line-height: 0.6;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
@@ -536,9 +548,10 @@ a {
 
 @media screen and (min-width: 1024px) {
   .dropdown__content {
+    padding-top: 2rem;
     max-width: 20rem;
     line-height: 1;
-    transform: translate(-3rem, 0.5rem);
+    transform: translate(-3rem, 0);
   }
 }
 

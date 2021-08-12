@@ -1,6 +1,6 @@
 <nav class="nav collapsible" id="navBar">
   <a class="nav__brand" href="/"><img src="images/logoMini.svg" alt="brand_logo" /></a>
-  <svg class="icon icon--white nav__toggler" onclick="navToggle()">
+  <svg class="icon icon--white nav__toggler" onclick="navToggle(),removeClassDropExpand()">
     <use xlink:href="images/sprite.svg#pipetteMono"></use>
   </svg>
   <ul class="list nav__list collapsible__content">
@@ -19,7 +19,7 @@
       </ul>
     </li>
     <li class="nav__item dropdown">
-      <a class="" href="#">Lab Work</a>
+      <a class="dropbtn" href="#">Lab Work</a>
       <ul class="list dropdown__content">
         <li class="dropdown__item"><a href="">Experiments and protocols</a></li>
         <li class="dropdown__item"><a href="">Parts</a></li>
@@ -59,4 +59,23 @@
   function navToggle() {
     document.getElementById("navBar").classList.toggle("collapsible--expanded");
   }
+
+  const drop = document.querySelectorAll(".dropdown");
+
+  drop.forEach((item) =>
+    item.addEventListener("click", function () {
+      removeClassDropExpand();
+      this.classList.toggle("dropdown--expanded");
+    })
+  );
+
+  function removeClassDropExpand() {
+    drop.forEach((item) => item.classList.remove("dropdown--expanded"));
+  }
+
+  window.onclick = function (e) {
+    if (!e.target.matches(".dropbtn")) {
+      drop.forEach((item) => item.classList.remove("dropdown--expanded"));
+    }
+  };
 </script>
