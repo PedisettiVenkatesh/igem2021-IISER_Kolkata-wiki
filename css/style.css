@@ -23,6 +23,7 @@ body {
   font-size: 1.5rem;
   line-height: 1.2;
   color: var(--color-body);
+  background: #eee;
 }
 
 h1,
@@ -30,6 +31,7 @@ h2,
 h3 {
   color: var(--color-headings);
   margin-bottom: 1rem;
+  line-height: 1.1;
 }
 
 h1 {
@@ -384,7 +386,6 @@ a {
 .block {
   --padding-vertical: 6rem;
   padding: var(--padding-vertical) 2rem;
-  border: 2px solid red;
 }
 
 .block__header {
@@ -393,6 +394,8 @@ a {
 
 .block__heading {
   margin-top: 0;
+  font-size: 5.5rem;
+  /* padding-bottom: 5rem; */
 }
 
 .block--dark {
@@ -406,7 +409,8 @@ a {
 
 .block--skewed-left {
   padding-bottom: calc(var(--padding-vertical) + 4rem);
-  clip-path: polygon(0% 0%, 100% 0%, 100% 30%, 0% 100%);
+  clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 0% 100%);
+  position: relative;
 }
 
 .container {
@@ -428,6 +432,7 @@ a {
   margin: 1rem;
   border-radius: 5rem;
   transition: all 0.3s;
+  box-shadow: 0 0 10px #000;
 }
 
 .nav__list {
@@ -453,13 +458,14 @@ a {
 .nav__item > a {
   color: #fff;
   text-transform: uppercase;
-  font-weight: 700;
+  font-weight: 200;
   font-size: 1.8rem;
   transition: all 0.3s;
 }
 
 .nav__item > a:hover {
   color: #fff;
+  /* TODO: animate underline from center */
   /* text-decoration: underline; */
   border-bottom: 5px solid #ffe600;
 }
@@ -467,7 +473,7 @@ a {
 .nav__toggler {
   margin-right: 2rem;
   opacity: 0.5;
-  transition: box-shadow 0.15s;
+  /* transition: box-shadow 0.15s; */
   transform: translateY(-3px); /* FIXME: needed to remove when changed to new icon */
 }
 
@@ -523,9 +529,18 @@ a {
   }
 }
 
+.nav__item .activePage {
+  border-bottom: 2px solid #ffe600;
+  color: #fff;
+}
+
 .nav__sticky {
   position: fixed;
-  top: 0;
+  z-index: 999;
+  width: 95%;
+  max-width: 1140px;
+  /* height: auto; */
+  /* max-height: 100vh; */
 }
 
 /* Dropdown */
@@ -549,12 +564,13 @@ a {
   word-wrap: normal;
   padding: 1rem 2rem;
   display: none;
-  position: absolute;
+  position: relative;
   /* FIXME: to be determined absolute position */
-  transform: translate(5rem, -1rem);
+  transform: translate(1rem, -1rem);
   line-height: 0.6;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  z-index: 1;
+  /* TODO: come with proper shadow */
+  /* box-shadow: 1px 2rem 3rem #000; */
+  z-index: 99;
 }
 
 .dropdown:hover .dropdown__content {
@@ -582,6 +598,7 @@ a {
 
 @media screen and (min-width: 1024px) {
   .dropdown__content {
+    position: fixed;
     padding-top: 2rem;
     max-width: 20rem;
     line-height: 1;
@@ -589,6 +606,35 @@ a {
   }
 }
 
-.activePage {
-  border-bottom: 2px solid #ffe600;
+/* Hero */
+.hero {
+  padding-top: 10rem;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 60%, 0% 100%);
+}
+
+.hero__tagline {
+  font-size: 2rem;
+  color: #fff;
+  letter-spacing: 1px;
+  border-top: 1px solid #fff;
+  padding-top: 2rem;
+  margin: 5rem 0 3rem;
+}
+
+.hero__image {
+  width: 100%;
+  /* box-shadow: 0 0 10px #000; */
+  background: gold;
+  border-radius: 50rem;
+}
+
+@media screen and (min-width: 768px) {
+  /* .hero {
+    padding-top: 15rem;
+  } */
+
+  .hero__content {
+    text-align: left;
+    align-self: center;
+  }
 }
