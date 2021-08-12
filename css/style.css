@@ -22,7 +22,6 @@ body {
   font-family: "Inter", Arial, Helvetica, sans-serif;
   /* font-family: "Montserrat", Arial, Helvetica, sans-serif; */
   font-size: 1.5rem;
-  margin-top: 1rem;
   line-height: 1.2;
   color: var(--color-body);
   background: #ebc8b9;
@@ -390,6 +389,21 @@ a {
   line-height: 1;
   display: inline-block;
 }
+
+/* @media screen and (min-width: 1024px) {
+  .porfile--expanded .profile__modal {
+    width: 82rem;
+  }
+  .profile__body {
+    padding: 2rem 5rem 3rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .profile__modal {
+    width: 70rem;
+  }
+} */
 
 /* TODO: if there any media components do it here */
 
