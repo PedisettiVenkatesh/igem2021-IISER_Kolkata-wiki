@@ -252,21 +252,24 @@ a {
 /* FIXME: based on requirement */
 .btn--pageNav {
   background: #fff;
+  border-radius: 0.5rem;
   color: var(--color-body);
   /* text-transform: none; */ /* TODO: add separate class if needed*/
-  transition: scale 0.3s;
+  /* box-shadow: 0 0 10px #000; */
+  margin: 0.1rem 0;
+  padding: 2rem 4rem;
+  transition: all 0.2s ease-out;
 }
 
-.btn--pageNav:hover {
-  background: #eee;
-  color: #000;
-  scale: 1.2;
-}
-
+.btn--pageNav:hover,
 .btn--active {
-  background: tomato;
-  color: #fff;
-  scale: 1.3; /* FIXME: scale needed to changed on requirement */
+  margin: 1rem 0;
+  background: #fff;
+  color: #000;
+  border-radius: 0 0.5rem 0.5rem 0;
+  border-left: 10px solid dodgerblue;
+  scale: 1.03;
+  box-shadow: 0.5rem 0 4rem #000;
 }
 
 .btn--active1 {
@@ -717,4 +720,9 @@ a {
     text-align: left;
     align-self: center;
   }
+}
+
+/* SideNav */
+.sideNav {
+  width: 25rem;
 }
