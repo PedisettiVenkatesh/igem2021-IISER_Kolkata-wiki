@@ -290,14 +290,14 @@ a {
 
 /* Profile Cards */
 .profile {
-  padding: 1rem;
+  padding: 1rem 0.5rem;
   display: inline-flex;
   position: relative;
 }
 
 .profile__image {
   position: relative;
-  width: 30rem;
+  width: 40rem;
   height: 40rem;
   border-radius: 3rem;
   overflow: hidden;
@@ -311,6 +311,7 @@ a {
   text-align: center;
   position: absolute;
   bottom: 0;
+  width: 100%;
   height: 100%;
   padding: 2rem;
   background: #8604452f;
@@ -326,7 +327,7 @@ a {
   color: #fff;
   font-size: 2.4rem;
   font-weight: 800;
-  margin-top: 15rem;
+  margin-top: 23rem;
   padding: 3rem;
   line-height: 1.2;
 }
@@ -341,10 +342,6 @@ a {
   position: absolute;
   max-width: 0;
   transition: all 0.3s;
-}
-
-.middleProfile .profile__modal {
-  left: -75%;
 }
 
 .rightProfile .profile__modal {
@@ -428,7 +425,12 @@ a {
   .grid--1x3 {
     grid-template-columns: repeat(3, 1fr);
   }
+
+  .grid--1x2x2 {
+    grid-template-columns: 1fr 3fr;
+  }
 }
+
 /* FIXME: Grids are here(above) */
 
 /* Collapsible */
@@ -494,6 +496,20 @@ a {
   padding-bottom: calc(var(--padding-vertical) + 4rem);
   clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 0% 100%);
   position: relative;
+}
+
+.block--long {
+  padding: 3rem;
+  background: #fff;
+  border-radius: 2rem;
+  margin: 1rem 0;
+}
+
+.block--long .block__heading {
+  font-size: 2rem;
+  text-transform: uppercase;
+  /* padding-top: 4rem; */
+  border-bottom: 1px solid #1b0760;
 }
 
 .container {
@@ -724,5 +740,7 @@ a {
 
 /* SideNav */
 .sideNav {
-  width: 25rem;
+  padding: 5rem;
+  /* width: 40rem; */
+  top: 10%;
 }
