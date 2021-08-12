@@ -380,6 +380,40 @@ a {
   opacity: 1;
 }
 
+/* Blocks */
+.block {
+  --padding-vertical: 6rem;
+  padding: var(--padding-vertical) 2rem;
+  border: 2px solid red;
+}
+
+.block__header {
+  text-align: center;
+}
+
+.block__heading {
+  margin-top: 0;
+}
+
+.block--dark {
+  background: linear-gradient(to bottom, #2b315d, #0d112c);
+  color: #fff;
+}
+
+.block--dark .block__heading {
+  color: #fff;
+}
+
+.block--skewed-left {
+  padding-bottom: calc(var(--padding-vertical) + 4rem);
+  clip-path: polygon(0% 0%, 100% 0%, 100% 30%, 0% 100%);
+}
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
 /* Navigation Bar */
 .nav {
   background: linear-gradient(to right, #6a73ff, #ff0982);
