@@ -15,7 +15,8 @@
 /* Typography */
 html {
   font-size: 62.5%;
-  scrollbar-width: thin;
+  scrollbar-width: none;
+  scrollbar-color: red gold;
 }
 
 body {
@@ -24,7 +25,8 @@ body {
   font-size: 1.5rem;
   line-height: 1.2;
   color: var(--color-body);
-  background: #ebc8b9;
+  /* background: #ebc8b9; */
+  background: #eee;
 }
 
 h1,
@@ -130,8 +132,8 @@ a {
 
 /* TODO: Icons */
 .icon {
-  width: 20px;
-  height: 20px;
+  width: 24px;
+  height: 24px;
 }
 
 .icon--primary {
@@ -142,19 +144,26 @@ a {
   fill: #fff;
 }
 
+.icon--profile {
+  /* padding: 0.5rem 1rem; */
+  /* margin: 0 1rem; */
+  transform: translateY(2px);
+  fill: #2584ff;
+}
+
 .icon-container {
-  /*background: #fff;*/ /* TODO: change the background color for icons*/
+  background: #ddd; /* TODO: change the background color for icons*/
   width: auto;
-  height: 35px;
+  max-height: 35px;
   border-radius: 20px;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 0.6rem;
   display: inline-flex;
   justify-content: space-evenly;
   align-items: center;
 }
 
 .icon-container a {
-  padding: 0 1rem;
+  padding: 0 0.8rem;
 }
 
 /* Buttons */ /* TODO: button shadows to be added */
@@ -279,7 +288,7 @@ a {
 
 .profile__image {
   position: relative;
-  width: 40rem;
+  width: 40rem; /*TODO: change the width auto*/
   height: 40rem;
   border-radius: 3rem;
   overflow: hidden;
@@ -330,7 +339,7 @@ a {
 }
 
 .profile--expanded .profile__modal {
-  width: 82rem;
+  width: 82rem; /*TODO: change to auto*/
   box-shadow: 0 0 20px #000;
   max-width: 82rem;
   z-index: 99;
@@ -410,6 +419,8 @@ a {
 /* Grids */
 .grid {
   display: grid;
+  max-width: 1240px;
+  margin: 0 auto;
 }
 
 @media screen and (min-width: 768px) {
@@ -424,7 +435,7 @@ a {
   }
 
   .grid--1x2x2 {
-    grid-template-columns: 1fr 3fr;
+    grid-template-columns: 20% 80%;
   }
 }
 
@@ -500,6 +511,7 @@ a {
   background: #fff;
   border-radius: 2rem;
   margin: 1rem 0;
+  box-shadow: 0 0 20px #000;
 }
 
 .block--long .block__heading {
@@ -519,7 +531,8 @@ a {
   background: linear-gradient(to right, #6a73ff, #ff0982);
   display: flex;
   font-size: 3rem;
-  /* height: 5rem; */
+  /*   height: 5rem; */
+  /* max-width: 1040px; */
   overflow: hidden;
   justify-content: space-between;
   align-items: center;
@@ -570,7 +583,7 @@ a {
   margin-right: 2rem;
   opacity: 0.5;
   /* transition: box-shadow 0.15s; */
-  transform: translateY(-3px); /* FIXME: needed to remove when changed to new icon */
+  transform: translateY(-0.7rem); /* FIXME: needed to remove when changed to new icon */
 }
 
 .nav__toggler:hover {
@@ -705,7 +718,7 @@ a {
 /* Hero */
 .hero {
   padding-top: 10rem;
-  clip-path: polygon(0% 0%, 100% 0%, 100% 60%, 0% 100%);
+  clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 0% 100%);
 }
 
 .hero__tagline {
@@ -742,8 +755,23 @@ a {
   top: 10%;
 }
 
+.sideNav__sticky {
+  position: sticky;
+  bottom: 50%;
+}
+
 .page {
-  transform: translateY(-20rem);
+  transform: translateY(-25rem);
+}
+
+@media screen and (max-width: 1024px) {
+  .sideNav {
+    display: none;
+  }
+
+  .page {
+    transform: translateY(-30rem);
+  }
 }
 
 /*  */
