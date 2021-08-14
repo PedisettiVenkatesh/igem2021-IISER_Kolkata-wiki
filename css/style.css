@@ -3,7 +3,7 @@
   --color-secondary: #00d9ff;
   --color-accent: #ff3400;
   --color-headings: #1b0760;
-  --color-body: #918ca4;
+  --color-body: #020202;
 }
 
 *,
@@ -19,8 +19,38 @@ html {
   scrollbar-color: red gold;
 }
 
+@font-face {
+  font-family: MyFont;
+  src: url("../fonts/Inter-ExtraLight.ttf") format("truetype");
+  font-weight: 200;
+}
+
+@font-face {
+  font-family: MyFont;
+  src: url("../fonts/Inter-Light.ttf") format("truetype");
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: MyFont;
+  src: url("../fonts/Inter-Regular.ttf") format("truetype");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: MyFont;
+  src: url("https://2021.igem.org/wiki/images/d/d2/T--IISER_Kolkata--fonts-Inter-Bold.ttf") format("truetype");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: MyFont;
+  src: url("../fonts/Inter-ExtraBold.ttf") format("truetype");
+  font-weight: 800;
+}
+
 body {
-  font-family: "Inter", Arial, Helvetica, sans-serif;
+  font-family: "MyFont", Arial, Helvetica, sans-serif;
   /* font-family: "Montserrat", Arial, Helvetica, sans-serif; */
   font-size: 1.5rem;
   line-height: 1.2;
@@ -152,7 +182,7 @@ a {
 }
 
 .icon-container {
-  background: #ddd; /* TODO: change the background color for icons*/
+  background: #eee; /* TODO: change the background color for icons*/
   width: auto;
   max-height: 35px;
   border-radius: 20px;
@@ -212,7 +242,7 @@ a {
   border-radius: 1px;
   padding: 0.5rem 4rem;
   font-size: 1.8rem;
-  font-weight: 350;
+  font-weight: 300;
   color: #bbb;
   transition: all 0.3s;
 }
@@ -245,10 +275,11 @@ a {
   background: #fff;
   border-radius: 0.5rem;
   color: var(--color-body);
-  /* text-transform: none; */ /* TODO: add separate class if needed*/
+  /* text-transform: none; /* TODO: add separate class if needed*/
   /* box-shadow: 0 0 10px #000; */
   margin: 0.1rem 0;
-  padding: 2rem 4rem;
+  padding: 2rem 1rem;
+  word-wrap: normal;
   transition: all 0.2s ease-out;
 }
 
@@ -288,24 +319,29 @@ a {
 
 .profile__image {
   position: relative;
-  width: 40rem; /*TODO: change the width auto*/
-  height: 40rem;
+  /* TODO: change the width auto */
+  width: 25rem;
+  height: 30rem;
   border-radius: 3rem;
   overflow: hidden;
+  text-align: center;
+  vertical-align: middle;
 }
 
 .profile__image img {
-  height: 100%;
+  max-height: 100%;
+  transform: translateX(0);
 }
 
 .textOnImage {
   text-align: center;
+  /*   vertical-align: bottom; */
   position: absolute;
   bottom: 0;
   width: 100%;
   height: 100%;
-  padding: 2rem;
-  background: #8604452f;
+  /*   padding: 0rem; */
+  background: #550c30c4;
   opacity: 0;
   transition: all 0.3s;
 }
@@ -316,33 +352,49 @@ a {
 
 .profile__heading {
   color: #fff;
-  font-size: 2.4rem;
+  font-size: 3rem;
   font-weight: 800;
-  margin-top: 15rem;
-  padding: 3rem;
+  padding: 3rem 1rem;
   line-height: 1.2;
 }
 
 .profile__modal {
-  border-radius: 3rem;
-  padding-top: 4rem;
+  border-radius: 2rem;
+  padding-top: 3rem;
   overflow: hidden;
-  height: 400px;
+  height: 90%;
   background: #fff;
   position: absolute;
   max-width: 0;
   transition: all 0.3s;
+  /* scale: 0.6; */
+}
+
+.middleProfile .profile__modal {
+  left: -100%;
 }
 
 .rightProfile .profile__modal {
-  right: 0;
+  right: 2%;
 }
 
 .profile--expanded .profile__modal {
-  width: 82rem; /*TODO: change to auto*/
+  width: 300%; /*TODO: change to auto*/
   box-shadow: 0 0 20px #000;
+  height: 95%;
   max-width: 82rem;
   z-index: 99;
+}
+
+@media screen and (max-width: 1111px) {
+  .profile--expanded .profile__modal {
+    scale: 0.7;
+    left: -45%;
+  }
+
+  .middleProfile .profile__modal {
+    left: -145%;
+  }
 }
 
 .profile--flex {
@@ -355,7 +407,7 @@ a {
 }
 
 .profile__header {
-  padding: 3rem 5rem;
+  padding: 1rem 5rem;
   position: relative;
 }
 
@@ -371,22 +423,32 @@ a {
 .profile__header .bckToggle {
   /* This is a back button positioned absolute*/
   position: absolute;
+  transform: rotate(-90deg);
   cursor: pointer;
   top: -2rem;
+  left: 1rem;
+  transition: all 0.3s;
+}
+
+.profile--expanded .profile__header .bckToggle {
+  transform: rotate(0);
+  transition: all 0.3s;
 }
 
 .profile__body {
-  padding: 2rem 5rem 3rem;
+  font-size: 1.2rem;
+  padding: 1rem 5rem;
   color: #000;
   line-height: 1.5;
   letter-spacing: 0.05rem;
+  overflow-x: scroll;
 }
 
 .profile__engagement {
   color: #000;
   width: 100%;
-  padding-bottom: 3rem;
-  border-bottom: 2px solid black;
+  padding-bottom: 1rem;
+  border-bottom: 3px solid black;
   position: relative;
 }
 
@@ -419,7 +481,7 @@ a {
 /* Grids */
 .grid {
   display: grid;
-  max-width: 1240px;
+  max-width: 1140px;
   margin: 0 auto;
 }
 
@@ -539,7 +601,7 @@ a {
   align-items: center;
   padding: 0 2rem;
   flex-wrap: wrap;
-  margin: 1rem;
+  margin: 0.5rem;
   border-radius: 5rem;
   transition: all 0.3s;
   box-shadow: 0 0 40px #000;
@@ -603,7 +665,7 @@ a {
 
 @media screen and (min-width: 1024px) {
   .nav {
-    margin: 1rem auto;
+    margin: 0.5rem auto;
     padding-right: 10rem;
   }
 
@@ -752,7 +814,7 @@ a {
 
 /* SideNav */
 .sideNav {
-  padding: 5rem;
+  padding: 5rem 1rem;
   /* width: 40rem; */
   top: 10%;
 }
@@ -762,9 +824,9 @@ a {
   bottom: 50%;
 }
 
-.page {
+/* .page {
   transform: translateY(-25rem);
-}
+} */
 
 @media screen and (max-width: 1024px) {
   .sideNav {
