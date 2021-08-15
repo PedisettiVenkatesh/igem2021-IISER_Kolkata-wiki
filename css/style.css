@@ -1,5 +1,5 @@
 :root {
-  /* var are not working in igem server */
+  /* var are not working in igem server, that is bad */
   --color-primary: #2584ff;
   --color-secondary: #00d9ff;
   --color-accent: #ff3400;
