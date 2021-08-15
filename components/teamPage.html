@@ -60,6 +60,7 @@
   </ul>
 </nav>
 
+<!-- script for collapsible content and Dropdowns -->
 <script>
   function navToggle(id) {
     document.getElementById(id).classList.toggle("collapsible--expanded");
@@ -113,6 +114,7 @@
       <li><a class="btn btn--pageNav btn--block" href="#wikiTeam">Wiki Team</a></li>
       <li><a class="btn btn--pageNav btn--block" href="#pi">Pi's & Advisors</a></li>
     </ul>
+  </div>
   </div>
   <div class="block">
     <div class="block block--long grid--1x2" id="teamLeaders">
@@ -685,17 +687,17 @@
       </div>
     </div>
     <!-- 
-    <div class="block block--long" id="wetLab">
-      <h2 class="block__heading">wet lab</h2>
-    </div>
+<div class="block block--long" id="wetLab">
+  <h2 class="block__heading">wet lab</h2>
+</div>
 
-    <div class="block block--long" id="dryLab">
-      <h2 class="block__heading">dry lab</h2>
-    </div>
+<div class="block block--long" id="dryLab">
+  <h2 class="block__heading">dry lab</h2>
+</div>
 
-    <div class="block block--long" id="#HumanPractices">
-      <h2 class="block__heading">Human Practices</h2>
-    </div> -->
+<div class="block block--long" id="#HumanPractices">
+  <h2 class="block__heading">Human Practices</h2>
+</div> -->
 
     <div class="block block--long" id="wikiTeam">
       <h2 class="block__heading">wiki team</h2>
@@ -1036,6 +1038,7 @@
   </div>
 </section>
 
+<!-- script for active scroll on sideNav -->
 <script>
   let mainNavLinks = document.querySelectorAll(".btn--pageNav");
   let mainSections = document.querySelectorAll(".block--long");
@@ -1044,11 +1047,10 @@
   let cur = [];
 
   window.addEventListener("scroll", (event) => {
-    let fromTop = window.scrollY + 20;
+    let fromTop = window.scrollY - 250;
 
     mainNavLinks.forEach((item) => {
       let section = document.querySelector(item.hash);
-
       if (section.offsetTop <= fromTop && section.offsetTop + section.offsetHeight > fromTop) {
         item.classList.add("btn--active");
       } else {
@@ -1056,8 +1058,29 @@
       }
     });
   });
+
+  $(document).ready(function () {
+    $(".btn--pageNav").on("click", function (event) {
+      if (this.hash !== "") {
+        event.preventDefault();
+
+        var hash = this.hash;
+
+        $("html, body").animate(
+          {
+            scrollTop: $(hash).offset().top + 60,
+          },
+          800,
+          function () {
+            window.location.hash = hash;
+          }
+        );
+      }
+    });
+  });
 </script>
 
+<!-- script for profile expands -->
 <script>
   const pageNavs = document.querySelectorAll(".btn--pageNav");
 

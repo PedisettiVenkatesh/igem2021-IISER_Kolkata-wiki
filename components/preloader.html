@@ -4,12 +4,14 @@
     <img src="../images/preloader.gif" alt="" />
   </div>
 
+  <!-- Script for preloader -->
   <script>
     const preloader = document.getElementById("loading");
 
     function preload() {
       preloader.style.opacity = "0";
       preloader.style.zIndex = "-999999";
+      document.documentElement.scrollTop = 0;
     }
   </script>
 </body>

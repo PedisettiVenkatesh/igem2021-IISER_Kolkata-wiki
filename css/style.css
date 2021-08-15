@@ -20,7 +20,7 @@
   height: 100vh;
   background: #fff;
   /* background: #fff url("") no-repeat center; */
-  transition: all 1s ease-in;
+  transition: all 1s;
 }
 
 #loading img {
@@ -31,8 +31,9 @@
 /* Typography */
 html {
   font-size: 62.5%;
-  scrollbar-width: none;
-  scrollbar-color: red gold;
+  scrollbar-width: none !important;
+  scrollbar-color: tomato var(--color-headings);
+  scroll-behavior: smooth;
 }
 
 @font-face {
@@ -454,10 +455,12 @@ a {
 .profile__body {
   font-size: 1.2rem;
   padding: 1rem 5rem;
+  max-height: 15rem;
   color: #000;
   line-height: 1.5;
   letter-spacing: 0.05rem;
-  overflow-x: scroll;
+  overflow-y: auto;
+  scrollbar-color: dodgerblue #ddd;
 }
 
 .profile__engagement {
@@ -831,18 +834,25 @@ a {
 /* SideNav */
 .sideNav {
   padding: 5rem 1rem;
-  /* width: 40rem; */
-  top: 10%;
+  /* width: 100%; */
+  /* bottom: 10%; */
+  /* top: 10%; */
 }
+
+/* .sideNav__container {
+  position: relative;
+} */
 
 .sideNav__sticky {
   position: sticky;
-  bottom: 50%;
+  top: 0;
 }
 
-/* .page {
+.page {
+  /* display: inline-block; */
+  /* width: 100%; */
   transform: translateY(-25rem);
-} */
+}
 
 @media screen and (max-width: 1024px) {
   .sideNav {
@@ -853,6 +863,22 @@ a {
     transform: translateY(-30rem);
   }
 }
+
+/*  */
+
+/*  */
+
+/*  */
+
+/*  */
+
+/*  */
+
+/*  */
+
+/*  */
+
+/*  */
 
 /*  */
 
