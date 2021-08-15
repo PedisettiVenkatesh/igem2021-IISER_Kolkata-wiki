@@ -12,6 +12,22 @@
   box-sizing: border-box;
 }
 
+/* Preloader */
+#loading {
+  position: fixed;
+  z-index: 999999;
+  width: 100%;
+  height: 100vh;
+  background: #fff;
+  /* background: #fff url("") no-repeat center; */
+  transition: all 1s ease-in;
+}
+
+#loading img {
+  width: 20vw;
+  margin: 30vh 40vw;
+}
+
 /* Typography */
 html {
   font-size: 62.5%;

@@ -1,0 +1,15 @@
+<body onload="preload">
+  <!-- FIXME: on copying change the body tag -->
+  <div id="loading">
+    <img src="../images/preloader.gif" alt="" />
+  </div>
+
+  <script>
+    const preloader = document.getElementById("loading");
+
+    function preload() {
+      preloader.style.opacity = "0";
+      preloader.style.zIndex = "-999999";
+    }
+  </script>
+</body>
