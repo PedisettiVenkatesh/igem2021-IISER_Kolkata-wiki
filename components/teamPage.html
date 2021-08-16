@@ -1,122 +1,123 @@
-<div id="loading">
-  <img src="../images/preloader.gif" alt="" />
-</div>
-
-<!-- Script for preloader -->
-<script>
-  const preloader = document.getElementById("loading");
-
-  function preload() {
-    preloader.style.opacity = "0";
-    preloader.style.zIndex = "-999999";
-    document.documentElement.scrollTop = 0;
-  }
-</script>
-
-<nav class="nav collapsible nav__sticky" id="navBar">
-  <a class="nav__brand" href="/"><img src="https://2021.igem.org/wiki/images/c/ce/T--IISER_Kolkata--namoosteCapsule.svg" alt="logo" /></a>
-
-  <div class="icon icon--white nav__toggler" onclick="navToggle('navBar'),removeClassDropExpand()">
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-      <path d="M24 6h-24v-4h24v4zm0 4h-24v4h24v-4zm0 8h-24v4h24v-4z" />
-    </svg>
+<body onload="preload()">
+  <div id="loading">
+    <img src="https://2021.igem.org/wiki/images/d/d6/T--IISER_Kolkata--image-preloader.gif" alt="" />
   </div>
 
-  <ul class="list nav__list collapsible__content">
-    <li class="nav__item"><a href="javascript:void()">Home</a></li>
-    <li class="nav__item dropdown">
-      <a class="dropbtn" href="javascript:void()">Project</a>
-      <ul class="list dropdown__content">
-        <li class="dropdown__item"><a href="javascript:void()">Description</a></li>
-        <li class="dropdown__item"><a href="javascript:void()">Design</a></li>
-        <li class="dropdown__item"><a href="javascript:void()">Results</a></li>
-        <li class="dropdown__item"><a href="javascript:void()">Proof Of Concept</a></li>
-        <li class="dropdown__item"><a href="javascript:void()">Engineering</a></li>
-        <li class="dropdown__item"><a href="javascript:void()">Models</a></li>
-        <li class="dropdown__item"><a href="javascript:void()">Hardware</a></li>
-        <li class="dropdown__item"><a href="javascript:void()">Endowments</a></li>
-      </ul>
-    </li>
-    <li class="nav__item dropdown">
-      <a class="dropbtn" href="javascript:void()">Lab Work</a>
-      <ul class="list dropdown__content">
-        <li class="dropdown__item"><a href="">Experiments and protocols</a></li>
-        <li class="dropdown__item"><a href="">Parts</a></li>
-        <li class="dropdown__item"><a href="">Notebook</a></li>
-        <li class="dropdown__item"><a href="">Safety</a></li>
-      </ul>
-    </li>
-    <li class="nav__item dropdown">
-      <a class="dropbtn" href="javascript:void()">Human Practices</a>
-      <ul class="list dropdown__content">
-        <li class="dropdown__item"><a href="">timeline</a></li>
-        <li class="dropdown__item"><a href="">integrated human practices</a></li>
-        <li class="dropdown__item"><a href="">education and public engagements</a></li>
-        <li class="dropdown__item"><a href="">proposed implementation</a></li>
-        <li class="dropdown__item"><a href="">entrepreneurship</a></li>
-        <li class="dropdown__item"><a href="">diversity and inclusivity</a></li>
-      </ul>
-    </li>
-    <li class="nav__item dropdown">
-      <a class="dropbtn activePage" href="javascript:void()">Team</a>
-      <ul class="list dropdown__content">
-        <li class="dropdown__item"><a href="">Members</a></li>
-        <li class="dropdown__item"><a href="">attributions</a></li>
-        <li class="dropdown__item"><a href="">collaborations</a></li>
-      </ul>
-    </li>
-    <li class="nav__item"><a href="javascript:void()">Graphics</a></li>
-    <li class="nav__item dropdown">
-      <a class="dropbtn" href="javascript:void()">Awards</a>
-      <ul class="list dropdown__content">
-        <li class="dropdown__item"><a href="">media criteria</a></li>
-      </ul>
-    </li>
-  </ul>
-</nav>
+  <!-- Script for preloader -->
+  <script>
+    const preloader = document.getElementById("loading");
 
-<!-- script for collapsible content and Dropdowns -->
-<script>
-  function navToggle(id) {
-    document.getElementById(id).classList.toggle("collapsible--expanded");
-  }
+    function preload() {
+      preloader.style.opacity = "0";
+      preloader.style.zIndex = "-999999";
+      document.documentElement.scrollTop = 0;
+    }
+  </script>
 
-  const drop = document.querySelectorAll(".dropdown");
+  <nav class="nav collapsible nav__sticky" id="navBar">
+    <a class="nav__brand" href="/"><img src="https://2021.igem.org/wiki/images/c/ce/T--IISER_Kolkata--namoosteCapsule.svg" alt="logo" /></a>
 
-  drop.forEach((item) =>
-    item.addEventListener("click", function () {
-      removeClassDropExpand();
-      this.classList.toggle("dropdown--expanded");
-    })
-  );
+    <div class="icon icon--white nav__toggler" onclick="navToggle('navBar'),removeClassDropExpand()">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+        <path d="M24 6h-24v-4h24v4zm0 4h-24v4h24v-4zm0 8h-24v4h24v-4z" />
+      </svg>
+    </div>
 
-  function removeClassDropExpand() {
-    drop.forEach((item) => item.classList.remove("dropdown--expanded"));
-  }
+    <ul class="list nav__list collapsible__content">
+      <li class="nav__item"><a href="javascript:void()">Home</a></li>
+      <li class="nav__item dropdown">
+        <a class="dropbtn" href="javascript:void()">Project</a>
+        <ul class="list dropdown__content">
+          <li class="dropdown__item"><a href="javascript:void()">Description</a></li>
+          <li class="dropdown__item"><a href="javascript:void()">Design</a></li>
+          <li class="dropdown__item"><a href="javascript:void()">Results</a></li>
+          <li class="dropdown__item"><a href="javascript:void()">Proof Of Concept</a></li>
+          <li class="dropdown__item"><a href="javascript:void()">Engineering</a></li>
+          <li class="dropdown__item"><a href="javascript:void()">Models</a></li>
+          <li class="dropdown__item"><a href="javascript:void()">Hardware</a></li>
+          <li class="dropdown__item"><a href="javascript:void()">Endowments</a></li>
+        </ul>
+      </li>
+      <li class="nav__item dropdown">
+        <a class="dropbtn" href="javascript:void()">Lab Work</a>
+        <ul class="list dropdown__content">
+          <li class="dropdown__item"><a href="">Experiments and protocols</a></li>
+          <li class="dropdown__item"><a href="">Parts</a></li>
+          <li class="dropdown__item"><a href="">Notebook</a></li>
+          <li class="dropdown__item"><a href="">Safety</a></li>
+        </ul>
+      </li>
+      <li class="nav__item dropdown">
+        <a class="dropbtn" href="javascript:void()">Human Practices</a>
+        <ul class="list dropdown__content">
+          <li class="dropdown__item"><a href="">timeline</a></li>
+          <li class="dropdown__item"><a href="">integrated human practices</a></li>
+          <li class="dropdown__item"><a href="">education and public engagements</a></li>
+          <li class="dropdown__item"><a href="">proposed implementation</a></li>
+          <li class="dropdown__item"><a href="">entrepreneurship</a></li>
+          <li class="dropdown__item"><a href="">diversity and inclusivity</a></li>
+        </ul>
+      </li>
+      <li class="nav__item dropdown">
+        <a class="dropbtn activePage" href="javascript:void()">Team</a>
+        <ul class="list dropdown__content">
+          <li class="dropdown__item"><a href="">Members</a></li>
+          <li class="dropdown__item"><a href="">attributions</a></li>
+          <li class="dropdown__item"><a href="">collaborations</a></li>
+        </ul>
+      </li>
+      <li class="nav__item"><a href="javascript:void()">Graphics</a></li>
+      <li class="nav__item dropdown">
+        <a class="dropbtn" href="javascript:void()">Awards</a>
+        <ul class="list dropdown__content">
+          <li class="dropdown__item"><a href="">media criteria</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
 
-  window.onclick = function (e) {
-    if (!e.target.matches(".dropbtn")) {
+  <!-- script for collapsible content and Dropdowns -->
+  <script>
+    function navToggle(id) {
+      document.getElementById(id).classList.toggle("collapsible--expanded");
+    }
+
+    const drop = document.querySelectorAll(".dropdown");
+
+    drop.forEach((item) =>
+      item.addEventListener("click", function () {
+        removeClassDropExpand();
+        this.classList.toggle("dropdown--expanded");
+      })
+    );
+
+    function removeClassDropExpand() {
       drop.forEach((item) => item.classList.remove("dropdown--expanded"));
     }
-  };
-</script>
 
-<section class="block block--dark block--skewed-left hero">
-  <div class="grid grid--1x2">
-    <header class="block__header hero__content">
-      <h1 class="block__heading">
-        To The <br />
-        People Who <br />
-        Make This Happen
-      </h1>
-      <p class="hero__tagline">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum autem repudiandae nesciunt enim suscipit, architecto laborum. A numquam quae tenetur!</p>
-    </header>
-    <picture>
-      <source type="image/webp" />
-      <img class="hero__image" src="images/exampleTeam.png" alt=""
-    /></picture>
-  </div>
-</section>
+    window.onclick = function (e) {
+      if (!e.target.matches(".dropbtn")) {
+        drop.forEach((item) => item.classList.remove("dropdown--expanded"));
+      }
+    };
+  </script>
+
+  <section class="block block--dark block--skewed-left hero">
+    <div class="grid grid--1x2">
+      <header class="block__header hero__content">
+        <h1 class="block__heading">
+          To The <br />
+          People Who <br />
+          Make This Happen
+        </h1>
+        <p class="hero__tagline">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum autem repudiandae nesciunt enim suscipit, architecto laborum. A numquam quae tenetur!</p>
+      </header>
+      <picture>
+        <source type="image/webp" />
+        <img class="hero__image" src="images/exampleTeam.png" alt=""
+      /></picture>
+    </div>
+  </section>
 
 <section class="grid grid--1x2x2 page">
   <div class="sideNav sideNav__sticky" id="#sideNav">
@@ -130,7 +131,7 @@
       <li><a class="btn btn--pageNav btn--block" href="#pi">Pi's & Advisors</a></li>
     </ul>
   </div>
-  <div class="block">
+  <div class=block">
     <div class="block block--long grid--1x2" id="teamLeaders">
       <h2 class="block__heading">Team Leaders</h2>
       <div class="profile">
@@ -138,7 +139,7 @@
           <img src="https://2021.igem.org/wiki/images/2/28/T--IISER_Kolkata--images-team-LakshmiPrakash.jpg" alt="Lakshmi Prakash" />
           <div class="textOnImage">
             <h3 class="profile__heading">Lakshmi Prakash</h3>
-            <a href="javascript:void();" class="btn btn--profile">View</a>
+            <a href="#teamLeaders" class="btn btn--profile">View</a>
           </div>
         </div>
         <div class="profile__modal">
@@ -185,7 +186,7 @@
           <img src="https://2021.igem.org/wiki/images/8/82/T--IISER_Kolkata--images-team-DebdeepChatterjee.jpg" alt="Debdeep Chatterjee" />
           <div class="textOnImage">
             <h3 class="profile__heading">Debdeep Chatterjee</h3>
-            <a href="javascript:void();" class="btn btn--profile">View</a>
+            <a href="#teamLeaders" class="btn btn--profile">View</a>
           </div>
         </div>
         <div class="profile__modal">
@@ -238,7 +239,7 @@
           <img src="https://2021.igem.org/wiki/images/3/34/T--IISER_Kolkata--images-team-SoumiBhattacharyya.jpg" alt="Soumi Bhattacharyya" />
           <div class="textOnImage">
             <h3 class="profile__heading">Soumi Bhattacharyya</h3>
-            <a href="javascript:void();" class="btn btn--profile">View</a>
+            <a href="#teamMembers;" class="btn btn--profile">View</a>
           </div>
         </div>
         <div class="profile__modal">
@@ -287,7 +288,7 @@
           <img src="https://2021.igem.org/wiki/images/d/dd/T--IISER_Kolkata--images-team-ShubhamayDas.jpg" alt="Shubhamay Das" />
           <div class="textOnImage">
             <h3 class="profile__heading">Shubhamay Das</h3>
-            <a href="javascript:void();" class="btn btn--profile">View</a>
+            <a href="#teamMembers" class="btn btn--profile">View</a>
           </div>
         </div>
         <div class="profile__modal">
@@ -336,7 +337,7 @@
           <img src="https://2021.igem.org/wiki/images/7/7c/T--IISER_Kolkata--images-team-DebshrutiBiswas.jpg" alt="Debshruti Biswas" />
           <div class="textOnImage">
             <h3 class="profile__heading">Debshruti Biswas</h3>
-            <a href="javascript:void();" class="btn btn--profile">View</a>
+            <a href="#teamMembers" class="btn btn--profile">View</a>
           </div>
         </div>
         <div class="profile__modal">
@@ -385,7 +386,7 @@
           <img src="https://2021.igem.org/wiki/images/6/6f/T--IISER_Kolkata--images-team-ShreyashBorkar.jpg" alt="Shreyash Borkar" />
           <div class="textOnImage">
             <h3 class="profile__heading">Shreyash Borkar</h3>
-            <a href="javascript:void();" class="btn btn--profile">View</a>
+            <a href="#teamMembers" class="btn btn--profile">View</a>
           </div>
         </div>
         <div class="profile__modal">
@@ -434,7 +435,7 @@
           <img src="https://2021.igem.org/wiki/images/c/cb/T--IISER_Kolkata--images-team-SourinChatterjee.jpg" alt="Sourin Chatterjee" />
           <div class="textOnImage">
             <h3 class="profile__heading">Sourin Chatterjee</h3>
-            <a href="javascript:void();" class="btn btn--profile">View</a>
+            <a href="#teamMembers" class="btn btn--profile">View</a>
           </div>
         </div>
         <div class="profile__modal">
@@ -483,7 +484,7 @@
           <img src="https://2021.igem.org/wiki/images/6/6c/T--IISER_Kolkata--images-team-AdrijaAdhikary.jpg" alt="Adrija Adhikary" />
           <div class="textOnImage">
             <h3 class="profile__heading">Adrija Adhikary</h3>
-            <a href="javascript:void();" class="btn btn--profile">View</a>
+            <a href="#teamMembers" class="btn btn--profile">View</a>
           </div>
         </div>
         <div class="profile__modal">
@@ -532,7 +533,7 @@
           <img src="https://2021.igem.org/wiki/images/2/2b/T--IISER_Kolkata--images-team-UditGhosh.jpg" alt="Udit Ghosh" />
           <div class="textOnImage">
             <h3 class="profile__heading">Udit Ghosh</h3>
-            <a href="javascript:void();" class="btn btn--profile">View</a>
+            <a href="#teamMembers" class="btn btn--profile">View</a>
           </div>
         </div>
         <div class="profile__modal">
@@ -581,7 +582,7 @@
           <img src="https://2021.igem.org/wiki/images/2/21/T--IISER_Kolkata--images-team-AbegDutta.jpg" alt="Abeg Dutta" />
           <div class="textOnImage">
             <h3 class="profile__heading">Abeg Dutta</h3>
-            <a href="javascript:void();" class="btn btn--profile">View</a>
+            <a href="#teamMembers" class="btn btn--profile">View</a>
           </div>
         </div>
         <div class="profile__modal">
@@ -630,7 +631,7 @@
           <img src="https://2021.igem.org/wiki/images/8/89/T--IISER_Kolkata--images-team-AnshumanJaysingh.jpg" alt="Anshuman Jaysingh" />
           <div class="textOnImage">
             <h3 class="profile__heading">Mahapatra Anshuman Jaysingh</h3>
-            <a href="javascript:void();" class="btn btn--profile">View</a>
+            <a href="#teamMembers" class="btn btn--profile">View</a>
           </div>
         </div>
         <div class="profile__modal">
@@ -679,7 +680,7 @@
           <img src="https://2021.igem.org/wiki/images/9/90/T--IISER_Kolkata--images-team-NivedaaDhandhapani.jpg" alt="Nivedaa Dhandhapani" />
           <div class="textOnImage">
             <h3 class="profile__heading">Nivedaa Dhandapani</h3>
-            <a href="javascript:void();" class="btn btn--profile">View</a>
+            <a href="#teamMembers" class="btn btn--profile">View</a>
           </div>
         </div>
         <div class="profile__modal">
@@ -725,17 +726,17 @@
       </div>
     </div>
     <!-- 
-<div class="block block--long" id="wetLab">
-<h2 class="block__heading">wet lab</h2>
-</div>
-
-<div class="block block--long" id="dryLab">
-<h2 class="block__heading">dry lab</h2>
-</div>
-
-<div class="block block--long" id="#HumanPractices">
-<h2 class="block__heading">Human Practices</h2>
-</div> -->
+  <div class="block block--long" id="wetLab">
+  <h2 class="block__heading">wet lab</h2>
+  </div>
+  
+  <div class="block block--long" id="dryLab">
+  <h2 class="block__heading">dry lab</h2>
+  </div>
+  
+  <div class="block block--long" id="#HumanPractices">
+  <h2 class="block__heading">Human Practices</h2>
+  </div> -->
 
     <div class="block block--long" id="wikiTeam">
       <h2 class="block__heading">wiki team</h2>
@@ -744,7 +745,7 @@
           <img src="https://2021.igem.org/wiki/images/2/22/T--IISER_Kolkata--image-namooste.png" alt="" />
           <div class="textOnImage">
             <h3 class="profile__heading">Pedisetti Venkatesh</h3>
-            <a href="javascript:void();" class="btn btn--profile">View</a>
+            <a href="#wikiTeam" class="btn btn--profile">View</a>
           </div>
         </div>
         <div class="profile__modal">
@@ -793,7 +794,7 @@
           <img src="https://2021.igem.org/wiki/images/2/22/T--IISER_Kolkata--image-namooste.png" alt="" />
           <div class="textOnImage">
             <h3 class="profile__heading">Abhiroop Chauhan</h3>
-            <a href="javascript:void();" class="btn btn--profile">View</a>
+            <a href="#wikiTeam" class="btn btn--profile">View</a>
           </div>
         </div>
         <div class="profile__modal">
@@ -846,7 +847,7 @@
           <img src="https://2021.igem.org/wiki/images/2/22/T--IISER_Kolkata--image-namooste.png" alt="" />
           <div class="textOnImage">
             <h3 class="profile__heading">Dr. Supratim Dutta</h3>
-            <a href="javascript:void();" class="btn btn--profile">View</a>
+            <a href="#pi" class="btn btn--profile">View</a>
           </div>
         </div>
         <div class="profile__modal">
@@ -895,7 +896,7 @@
           <img src="https://2021.igem.org/wiki/images/2/22/T--IISER_Kolkata--image-namooste.png" alt="" />
           <div class="textOnImage">
             <h3 class="profile__heading">Dr. Dipjyoti Das</h3>
-            <a href="javascript:void();" class="btn btn--profile">View</a>
+            <a href="#pi" class="btn btn--profile">View</a>
           </div>
         </div>
         <div class="profile__modal">
@@ -944,7 +945,7 @@
           <img src="https://2021.igem.org/wiki/images/2/27/T--IISER_Kolkata--images-team-DwaipayanDubey.jpg" alt="Dwaipayan Dubey" />
           <div class="textOnImage">
             <h3 class="profile__heading">Dwaipayan Dubey</h3>
-            <a href="javascript:void();" class="btn btn--profile">View</a>
+            <a href="#pi" class="btn btn--profile">View</a>
           </div>
         </div>
         <div class="profile__modal">
@@ -993,7 +994,7 @@
           <img src="https://2021.igem.org/wiki/images/2/22/T--IISER_Kolkata--image-namooste.png" alt="" />
           <div class="textOnImage">
             <h3 class="profile__heading">Mani Gupta</h3>
-            <a href="javascript:void();" class="btn btn--profile">View</a>
+            <a href="#pi" class="btn btn--profile">View</a>
           </div>
         </div>
         <div class="profile__modal">
@@ -1042,7 +1043,7 @@
           <img src="https://2021.igem.org/wiki/images/2/22/T--IISER_Kolkata--image-namooste.png" alt="" />
           <div class="textOnImage">
             <h3 class="profile__heading">Praveen Nath</h3>
-            <a href="javascript:void();" class="btn btn--profile">View</a>
+            <a href="#pi" class="btn btn--profile">View</a>
           </div>
         </div>
         <div class="profile__modal">
@@ -1090,61 +1091,65 @@
   </div>
 </section>
 
-<!-- script for active scroll on sideNav -->
-<script>
-  let mainNavLinks = document.querySelectorAll(".btn--pageNav");
-  let mainSections = document.querySelectorAll(".block--long");
+  <!-- script for active scroll on sideNav -->
+  <script>
+    let mainNavLinks = document.querySelectorAll(".btn--pageNav");
+    let mainSections = document.querySelectorAll(".block--long");
 
-  let lastId;
-  let cur = [];
+    let lastId;
+    let cur = [];
 
-  window.addEventListener("scroll", (event) => {
-    let fromTop = window.scrollY - 150;
+    window.addEventListener("scroll", (event) => {
+      let fromTop = window.scrollY - 150;
 
-    mainNavLinks.forEach((item) => {
-      let section = document.querySelector(item.hash);
-      if (section.offsetTop <= fromTop && section.offsetTop + section.offsetHeight > fromTop) {
-        item.classList.add("btn--active");
-      } else {
-        item.classList.remove("btn--active");
-      }
+      mainNavLinks.forEach((item) => {
+        let section = document.querySelector(item.hash);
+        if (section.offsetTop <= fromTop && section.offsetTop + section.offsetHeight > fromTop) {
+          item.classList.add("btn--active");
+        } else {
+          item.classList.remove("btn--active");
+        }
+      });
     });
-  });
-</script>
+  </script>
 
-<!-- script for profile expands -->
-<script>
-  const pageNavs = document.querySelectorAll(".btn--pageNav");
+  <!-- script for profile expands -->
+  <script>
+    const pageNavs = document.querySelectorAll(".btn--pageNav");
 
-  pageNavs.forEach((item) =>
-    item.addEventListener("click", function () {
-      removeClassBtnActive();
-      item.classList.toggle("btn--active");
-    })
-  );
+    pageNavs.forEach((item) =>
+      item.addEventListener("click", function () {
+        removeClassBtnActive();
+        item.classList.toggle("btn--active");
+      })
+    );
 
-  function removeClassBtnActive() {
-    pageNavs.forEach((item) => item.classList.remove("btn--active"));
-  }
+    function removeClassBtnActive() {
+      pageNavs.forEach((item) => item.classList.remove("btn--active"));
+    }
 
-  const profiles = document.querySelectorAll(".profile");
-  const viewBtn = document.querySelectorAll(".btn--profile");
+    const profiles = document.querySelectorAll(".profile");
+    const viewBtn = document.querySelectorAll(".btn--profile");
 
-  viewBtn.forEach((item) =>
-    item.addEventListener("click", function () {
-      removeClassProExpand();
-      item.closest(".profile").classList.toggle("profile--expanded");
-    })
-  );
+    viewBtn.forEach((item) =>
+      item.addEventListener("click", function () {
+        removeClassProExpand();
+        item.closest(".profile").classList.toggle("profile--expanded");
+      })
+    );
 
-  function removeClassProExpand() {
-    profiles.forEach((item) => item.classList.remove("profile--expanded"));
-  }
+    function removeClassProExpand() {
+      profiles.forEach((item) => item.classList.remove("profile--expanded"));
+    }
 
-  // click anywhere to close
-  // window.onclick = function (el) {
-  //   if (!el.target.matches(".profile__modal") && !el.target.matches(".btn--profile")) {
-  //     profiles.forEach((item) => item.classList.remove("profile--expanded"));
-  //   }
-  // };
-</script>
+    // window.onscroll = function () {
+    //   document.classList("profile__modal").style.paddingTop = scrollY;
+    // };
+
+    window.onclick = function (event) {
+      if (event.target.matches(".profile__modal")) {
+        removeClassProExpand();
+      }
+    };
+  </script>
+</body>
