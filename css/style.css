@@ -329,6 +329,21 @@ a {
 
 /* FIXME: Do the input components after btn, here, if needed */
 
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
 /* Profile Cards */
 .profile {
   padding: 1rem 0.5rem;
@@ -365,7 +380,8 @@ a {
   transition: all 0.3s;
 }
 
-.textOnImage:hover {
+.textOnImage:hover,
+.textOnImage:focus {
   opacity: 1;
 }
 
@@ -416,6 +432,18 @@ a {
   }
 }
 
+@media screen and (max-width: 768px) {
+  .textOnImage {
+    opacity: 1;
+    height: auto;
+    padding-bottom: 1rem;
+  }
+
+  .profile__heading {
+    padding: 1rem;
+    margin: 0;
+  }
+}
 .profile--flex {
   width: 100%;
   display: inline-flex;

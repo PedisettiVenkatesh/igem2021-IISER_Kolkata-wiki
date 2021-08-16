@@ -1,3 +1,18 @@
+<div id="loading">
+  <img src="../images/preloader.gif" alt="" />
+</div>
+
+<!-- Script for preloader -->
+<script>
+  const preloader = document.getElementById("loading");
+
+  function preload() {
+    preloader.style.opacity = "0";
+    preloader.style.zIndex = "-999999";
+    document.documentElement.scrollTop = 0;
+  }
+</script>
+
 <nav class="nav collapsible nav__sticky" id="navBar">
   <a class="nav__brand" href="/"><img src="https://2021.igem.org/wiki/images/c/ce/T--IISER_Kolkata--namoosteCapsule.svg" alt="logo" /></a>
 
@@ -87,7 +102,7 @@
 </script>
 
 <section class="block block--dark block--skewed-left hero">
-  <div class="container grid grid--1x2">
+  <div class="grid grid--1x2">
     <header class="block__header hero__content">
       <h1 class="block__heading">
         To The <br />
@@ -103,18 +118,17 @@
   </div>
 </section>
 
-<section class="grid grid--1x2x2" style="transform: translateY(-25rem);">
-  <div class="sideNav sidenav__sticky" id="#sideNav">
+<section class="grid grid--1x2x2 page">
+  <div class="sideNav sideNav__sticky" id="#sideNav">
     <ul class="list">
-      <li><a class="btn btn--pageNav btn--block btn--active" href="#teamLeaders">Team Leader</a></li>
-      <li><a class="btn btn--pageNav btn--block btn--active" href="#teamMembers">Team Members</a></li>
+      <li><a class="btn btn--pageNav btn--block" href="#teamLeaders">Team Leader</a></li>
+      <li><a class="btn btn--pageNav btn--block" href="#teamMembers">Team Members</a></li>
       <!-- <li><a class="btn btn--pageNav btn--block" href="#wetLab">Wet Lab</a></li> -->
       <!-- <li><a class="btn btn--pageNav btn--block" href="#dryLab">Dry Lab</a></li> -->
       <!-- <li><a class="btn btn--pageNav btn--block" href="#HumanPractices">Human Practices</a></li> -->
       <li><a class="btn btn--pageNav btn--block" href="#wikiTeam">Wiki Team</a></li>
       <li><a class="btn btn--pageNav btn--block" href="#pi">Pi's & Advisors</a></li>
     </ul>
-  </div>
   </div>
   <div class="block">
     <div class="block block--long grid--1x2" id="teamLeaders">
@@ -169,7 +183,7 @@
           <img src="https://2021.igem.org/wiki/images/8/82/T--IISER_Kolkata--images-team-DebdeepChatterjee.jpg" alt="Debdeep Chatterjee" />
           <div class="textOnImage">
             <h3 class="profile__heading">Debdeep Chatterjee</h3>
-            <a href="javascript:void();" class="btn btn--profile" onclick="profileToggle()">View</a>
+            <a href="javascript:void();" class="btn btn--profile">View</a>
           </div>
         </div>
         <div class="profile__modal">
@@ -220,7 +234,7 @@
           <img src="https://2021.igem.org/wiki/images/3/34/T--IISER_Kolkata--images-team-SoumiBhattacharyya.jpg" alt="Soumi Bhattacharyya" />
           <div class="textOnImage">
             <h3 class="profile__heading">Soumi Bhattacharyya</h3>
-            <a href="javascript:void();" class="btn btn--profile" onclick="profileToggle()">View</a>
+            <a href="javascript:void();" class="btn btn--profile">View</a>
           </div>
         </div>
         <div class="profile__modal">
@@ -267,7 +281,7 @@
           <img src="https://2021.igem.org/wiki/images/d/dd/T--IISER_Kolkata--images-team-ShubhamayDas.jpg" alt="Shubhamay Das" />
           <div class="textOnImage">
             <h3 class="profile__heading">Shubhamay Das</h3>
-            <a href="javascript:void();" class="btn btn--profile" onclick="profileToggle()">View</a>
+            <a href="javascript:void();" class="btn btn--profile">View</a>
           </div>
         </div>
         <div class="profile__modal">
@@ -314,7 +328,7 @@
           <img src="https://2021.igem.org/wiki/images/7/7c/T--IISER_Kolkata--images-team-DebshrutiBiswas.jpg" alt="Debshruti Biswas" />
           <div class="textOnImage">
             <h3 class="profile__heading">Debshruti Biswas</h3>
-            <a href="javascript:void();" class="btn btn--profile" onclick="profileToggle()">View</a>
+            <a href="javascript:void();" class="btn btn--profile">View</a>
           </div>
         </div>
         <div class="profile__modal">
@@ -361,7 +375,7 @@
           <img src="https://2021.igem.org/wiki/images/6/6f/T--IISER_Kolkata--images-team-ShreyashBorkar.jpg" alt="Shreyash Borkar" />
           <div class="textOnImage">
             <h3 class="profile__heading">Shreyash Borkar</h3>
-            <a href="javascript:void();" class="btn btn--profile" onclick="profileToggle()">View</a>
+            <a href="javascript:void();" class="btn btn--profile">View</a>
           </div>
         </div>
         <div class="profile__modal">
@@ -408,7 +422,7 @@
           <img src="https://2021.igem.org/wiki/images/c/cb/T--IISER_Kolkata--images-team-SourinChatterjee.jpg" alt="Sourin Chatterjee" />
           <div class="textOnImage">
             <h3 class="profile__heading">Sourin Chatterjee</h3>
-            <a href="javascript:void();" class="btn btn--profile" onclick="profileToggle()">View</a>
+            <a href="javascript:void();" class="btn btn--profile">View</a>
           </div>
         </div>
         <div class="profile__modal">
@@ -455,7 +469,7 @@
           <img src="https://2021.igem.org/wiki/images/6/6c/T--IISER_Kolkata--images-team-AdrijaAdhikary.jpg" alt="Adrija Adhikary" />
           <div class="textOnImage">
             <h3 class="profile__heading">Adrija Adhikary</h3>
-            <a href="javascript:void();" class="btn btn--profile" onclick="profileToggle()">View</a>
+            <a href="javascript:void();" class="btn btn--profile">View</a>
           </div>
         </div>
         <div class="profile__modal">
@@ -502,7 +516,7 @@
           <img src="https://2021.igem.org/wiki/images/2/2b/T--IISER_Kolkata--images-team-UditGhosh.jpg" alt="Udit Ghosh" />
           <div class="textOnImage">
             <h3 class="profile__heading">Udit Ghosh</h3>
-            <a href="javascript:void();" class="btn btn--profile" onclick="profileToggle()">View</a>
+            <a href="javascript:void();" class="btn btn--profile">View</a>
           </div>
         </div>
         <div class="profile__modal">
@@ -549,7 +563,7 @@
           <img src="https://2021.igem.org/wiki/images/2/21/T--IISER_Kolkata--images-team-AbegDutta.jpg" alt="Abeg Dutta" />
           <div class="textOnImage">
             <h3 class="profile__heading">Abeg Dutta</h3>
-            <a href="javascript:void();" class="btn btn--profile" onclick="profileToggle()">View</a>
+            <a href="javascript:void();" class="btn btn--profile">View</a>
           </div>
         </div>
         <div class="profile__modal">
@@ -596,7 +610,7 @@
           <img src="https://2021.igem.org/wiki/images/8/89/T--IISER_Kolkata--images-team-AnshumanJaysingh.jpg" alt="Anshuman Jaysingh" />
           <div class="textOnImage">
             <h3 class="profile__heading">Mahapatra Anshuman Jaysingh</h3>
-            <a href="javascript:void();" class="btn btn--profile" onclick="profileToggle()">View</a>
+            <a href="javascript:void();" class="btn btn--profile">View</a>
           </div>
         </div>
         <div class="profile__modal">
@@ -643,7 +657,7 @@
           <img src="https://2021.igem.org/wiki/images/9/90/T--IISER_Kolkata--images-team-NivedaaDhandhapani.jpg" alt="Nivedaa Dhandhapani" />
           <div class="textOnImage">
             <h3 class="profile__heading">Nivedaa Dhandapani</h3>
-            <a href="javascript:void();" class="btn btn--profile" onclick="profileToggle()">View</a>
+            <a href="javascript:void();" class="btn btn--profile">View</a>
           </div>
         </div>
         <div class="profile__modal">
@@ -688,15 +702,15 @@
     </div>
     <!-- 
 <div class="block block--long" id="wetLab">
-  <h2 class="block__heading">wet lab</h2>
+<h2 class="block__heading">wet lab</h2>
 </div>
 
 <div class="block block--long" id="dryLab">
-  <h2 class="block__heading">dry lab</h2>
+<h2 class="block__heading">dry lab</h2>
 </div>
 
 <div class="block block--long" id="#HumanPractices">
-  <h2 class="block__heading">Human Practices</h2>
+<h2 class="block__heading">Human Practices</h2>
 </div> -->
 
     <div class="block block--long" id="wikiTeam">
@@ -706,7 +720,7 @@
           <img src="https://2021.igem.org/wiki/images/2/22/T--IISER_Kolkata--image-namooste.png" alt="" />
           <div class="textOnImage">
             <h3 class="profile__heading">Pedisetti Venkatesh</h3>
-            <a href="javascript:void();" class="btn btn--profile" onclick="profileToggle()">View</a>
+            <a href="javascript:void();" class="btn btn--profile">View</a>
           </div>
         </div>
         <div class="profile__modal">
@@ -753,7 +767,7 @@
           <img src="https://2021.igem.org/wiki/images/2/22/T--IISER_Kolkata--image-namooste.png" alt="" />
           <div class="textOnImage">
             <h3 class="profile__heading">Abhiroop Chauhan</h3>
-            <a href="javascript:void();" class="btn btn--profile" onclick="profileToggle()">View</a>
+            <a href="javascript:void();" class="btn btn--profile">View</a>
           </div>
         </div>
         <div class="profile__modal">
@@ -804,7 +818,7 @@
           <img src="https://2021.igem.org/wiki/images/2/22/T--IISER_Kolkata--image-namooste.png" alt="" />
           <div class="textOnImage">
             <h3 class="profile__heading">Dr. Supratim Dutta</h3>
-            <a href="javascript:void();" class="btn btn--profile" onclick="profileToggle()">View</a>
+            <a href="javascript:void();" class="btn btn--profile">View</a>
           </div>
         </div>
         <div class="profile__modal">
@@ -851,7 +865,7 @@
           <img src="https://2021.igem.org/wiki/images/2/22/T--IISER_Kolkata--image-namooste.png" alt="" />
           <div class="textOnImage">
             <h3 class="profile__heading">Dr. Dipjyoti Das</h3>
-            <a href="javascript:void();" class="btn btn--profile" onclick="profileToggle()">View</a>
+            <a href="javascript:void();" class="btn btn--profile">View</a>
           </div>
         </div>
         <div class="profile__modal">
@@ -898,7 +912,7 @@
           <img src="https://2021.igem.org/wiki/images/2/27/T--IISER_Kolkata--images-team-DwaipayanDubey.jpg" alt="Dwaipayan Dubey" />
           <div class="textOnImage">
             <h3 class="profile__heading">Dwaipayan Dubey</h3>
-            <a href="javascript:void();" class="btn btn--profile" onclick="profileToggle()">View</a>
+            <a href="javascript:void();" class="btn btn--profile">View</a>
           </div>
         </div>
         <div class="profile__modal">
@@ -945,7 +959,7 @@
           <img src="https://2021.igem.org/wiki/images/2/22/T--IISER_Kolkata--image-namooste.png" alt="" />
           <div class="textOnImage">
             <h3 class="profile__heading">Mani Gupta</h3>
-            <a href="javascript:void();" class="btn btn--profile" onclick="profileToggle()">View</a>
+            <a href="javascript:void();" class="btn btn--profile">View</a>
           </div>
         </div>
         <div class="profile__modal">
@@ -992,7 +1006,7 @@
           <img src="https://2021.igem.org/wiki/images/2/22/T--IISER_Kolkata--image-namooste.png" alt="" />
           <div class="textOnImage">
             <h3 class="profile__heading">Praveen Nath</h3>
-            <a href="javascript:void();" class="btn btn--profile" onclick="profileToggle()">View</a>
+            <a href="javascript:void();" class="btn btn--profile">View</a>
           </div>
         </div>
         <div class="profile__modal">
@@ -1047,7 +1061,7 @@
   let cur = [];
 
   window.addEventListener("scroll", (event) => {
-    let fromTop = window.scrollY - 250;
+    let fromTop = window.scrollY - 150;
 
     mainNavLinks.forEach((item) => {
       let section = document.querySelector(item.hash);
@@ -1055,26 +1069,6 @@
         item.classList.add("btn--active");
       } else {
         item.classList.remove("btn--active");
-      }
-    });
-  });
-
-  $(document).ready(function () {
-    $(".btn--pageNav").on("click", function (event) {
-      if (this.hash !== "") {
-        event.preventDefault();
-
-        var hash = this.hash;
-
-        $("html, body").animate(
-          {
-            scrollTop: $(hash).offset().top + 60,
-          },
-          800,
-          function () {
-            window.location.hash = hash;
-          }
-        );
       }
     });
   });
