@@ -265,15 +265,15 @@ a {
   border: 1px solid #fff;
   border-radius: 1px;
   padding: 0.5rem 4rem;
-  font-size: 1.8rem;
+  font-size: 1.2rem;
   font-weight: 300;
   color: #bbb;
   transition: all 0.3s;
 }
 
-.btn--profile:hover {
+.btn--profile:hover,
+.btn--profile:focus {
   color: #fff;
-  scale: 1.1;
 }
 
 .btn--block {
@@ -384,9 +384,10 @@ a {
 
 .profile__modal {
   display: none;
-  position: fixed;
+  position: absolute;
+  border-radius: 2rem;
   z-index: 99;
-  padding-top: 20rem;
+  padding-top: 15rem;
   left: 0;
   top: 0;
   width: 100%;
@@ -398,8 +399,8 @@ a {
 .profile__modalContent {
   border-radius: 2rem;
   padding-top: 3rem;
-  width: 60%;
-  margin: 5rem auto;
+  width: 80%;
+  margin: auto;
   background: #fff;
   transition: all 0.3s;
   /* scale: 0.6; */
@@ -407,39 +408,17 @@ a {
 
 .profile--expanded .profile__modal {
   display: block;
-  /* position: sticky; */
-  top: 0;
-  left: 0;
 }
 
-/* @media screen and (max-width: 1111px) {
-  .profile--expanded .profile__modal {
-    scale: 0.7;
-    left: -45%;
-  }
-
-  .middleProfile .profile__modal {
-    left: -145%;
-  }
-} */
-
-@media screen and (max-width: 768px) {
-  .textOnImage {
-    opacity: 1;
-    height: auto;
-    padding-bottom: 1rem;
-  }
-
-  .profile__heading {
-    padding: 1rem;
-    margin: 0;
-  }
+.profile__social {
+  padding: 1rem;
 }
+
 .profile--flex {
   width: 100%;
   display: inline-flex;
   justify-content: space-between;
-  /* flex-wrap: wrap; */
+  flex-wrap: wrap;
   align-items: center;
   padding-bottom: 2rem;
 }
@@ -448,15 +427,6 @@ a {
   padding: 1rem 5rem;
   position: relative;
 }
-
-/* .profile__header::before {
-  content: url(../images/profileBackBtn.svg);
-  z-index: 9;
-  width: 40px;
-  display: inline-block;
-  position: absolute;
-  top: -1.5rem;
-} */
 
 .profile__header .bckToggle {
   /* This is a back button positioned absolute*/
@@ -476,7 +446,7 @@ a {
 .profile__body {
   font-size: 1.2rem;
   padding: 1rem 5rem 3rem;
-  max-height: 20rem;
+  max-height: 25rem;
   color: #000;
   line-height: 1.5;
   letter-spacing: 0.05rem;
@@ -499,9 +469,34 @@ a {
   font-size: 3.5rem;
   line-height: 1;
   display: inline-block;
+  max-width: 40rem;
 }
 
-/* TODO: if there any media components do it here */
+@media screen and (max-width: 768px) {
+  .textOnImage {
+    opacity: 1;
+    height: auto;
+    padding-bottom: 1rem;
+  }
+
+  .profile__heading {
+    padding: 1rem;
+    font-size: 2rem;
+    margin: 0;
+  }
+
+  .profile--flex {
+    display: block;
+  }
+
+  .profile__body {
+    max-height: 40rem;
+  }
+
+  .profile__modal {
+    padding-top: 10rem;
+  }
+}
 
 /* Grids */
 .grid {
