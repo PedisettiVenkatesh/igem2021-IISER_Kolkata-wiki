@@ -9,7 +9,7 @@
   </head>
   <!-- ################################### Main Body content ######################################## -->
 
-  <body onload="preload()">
+  <body onload="preload()" class="noscroll">
     <div id="loading">
       <img src="https://2021.igem.org/wiki/images/d/d6/T--IISER_Kolkata--image-preloader.gif" alt="Loading..." />
       Loading . . .
@@ -23,12 +23,13 @@
         preloader.style.opacity = "0";
         preloader.style.zIndex = "-999999";
         document.documentElement.scrollTop = 0;
+        document.body.classList.remove("noscroll");
       }
     </script>
 
     <div class="nav__container">
       <nav class="nav collapsible" id="navBar">
-        <a class="nav__brand" href="/"><img src="https://2021.igem.org/wiki/images/c/ce/T--IISER_Kolkata--namoosteCapsule.svg" alt="logo" /></a>
+        <a class="nav__brand" href="https://2021.igem.org/Team:IISER_Kolkata" target="_self"><img src="https://2021.igem.org/wiki/images/c/ce/T--IISER_Kolkata--namoosteCapsule.svg" alt="logo" /></a>
         <div class="icon icon--white nav__toggler" onclick="navToggle('navBar'),removeClassDropExpand()">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
             <path d="M24 6h-24v-4h24v4zm0 4h-24v4h24v-4zm0 8h-24v4h24v-4z" />
@@ -1107,18 +1108,6 @@
       </div>
     </section>
 
-    <script>
-      var wrap = document.getElementById("sideNav");
-
-      wrap.on("scroll", function (this) {
-        if (this.scrollTop > 147) {
-          wrap.classList.add("fix-search");
-        } else {
-          wrap.classList.remove("fix-search");
-        }
-      });
-    </script>
-
     <!-- script for active scroll on sideNav -->
     <script>
       let mainNavLinks = document.querySelectorAll(".btn--pageNav");
@@ -1162,12 +1151,14 @@
       viewBtn.forEach((item) =>
         item.addEventListener("click", function () {
           removeClassProExpand();
+          document.body.classList.add("noscroll");
           item.closest(".profile").classList.toggle("profile--expanded");
         })
       );
 
       function removeClassProExpand() {
         profiles.forEach((item) => item.classList.remove("profile--expanded"));
+        document.body.classList.remove("noscroll");
       }
 
       // window.onscroll = function () {
