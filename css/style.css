@@ -400,6 +400,7 @@ a {
   overflow: auto;
   background-color: rgba(0, 0, 0, 0.9);
   padding-top: 17rem;
+  padding-bottom: 2rem;
 }
 
 body.noscroll {
