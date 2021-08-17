@@ -11,7 +11,8 @@
 
   <body onload="preload()">
     <div id="loading">
-      <img src="https://2021.igem.org/wiki/images/d/d6/T--IISER_Kolkata--image-preloader.gif" alt="" />
+      <img src="https://2021.igem.org/wiki/images/d/d6/T--IISER_Kolkata--image-preloader.gif" alt="Loading..." />
+      Loading . . .
     </div>
 
     <!-- Script for preloader -->
@@ -25,67 +26,67 @@
       }
     </script>
 
-    <nav class="nav collapsible nav__sticky" id="navBar">
-      <a class="nav__brand" href="/"><img src="https://2021.igem.org/wiki/images/c/ce/T--IISER_Kolkata--namoosteCapsule.svg" alt="logo" /></a>
-
-      <div class="icon icon--white nav__toggler" onclick="navToggle('navBar'),removeClassDropExpand()">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-          <path d="M24 6h-24v-4h24v4zm0 4h-24v4h24v-4zm0 8h-24v4h24v-4z" />
-        </svg>
-      </div>
-
-      <ul class="list nav__list collapsible__content">
-        <li class="nav__item"><a href="javascript:void()">Home</a></li>
-        <li class="nav__item dropdown">
-          <a class="dropbtn" href="javascript:void()">Project</a>
-          <ul class="list dropdown__content">
-            <li class="dropdown__item"><a href="javascript:void()">Description</a></li>
-            <li class="dropdown__item"><a href="javascript:void()">Design</a></li>
-            <li class="dropdown__item"><a href="javascript:void()">Results</a></li>
-            <li class="dropdown__item"><a href="javascript:void()">Proof Of Concept</a></li>
-            <li class="dropdown__item"><a href="javascript:void()">Engineering</a></li>
-            <li class="dropdown__item"><a href="javascript:void()">Models</a></li>
-            <li class="dropdown__item"><a href="javascript:void()">Hardware</a></li>
-            <li class="dropdown__item"><a href="javascript:void()">Endowments</a></li>
-          </ul>
-        </li>
-        <li class="nav__item dropdown">
-          <a class="dropbtn" href="javascript:void()">Lab Work</a>
-          <ul class="list dropdown__content">
-            <li class="dropdown__item"><a href="">Experiments and protocols</a></li>
-            <li class="dropdown__item"><a href="">Parts</a></li>
-            <li class="dropdown__item"><a href="">Notebook</a></li>
-            <li class="dropdown__item"><a href="">Safety</a></li>
-          </ul>
-        </li>
-        <li class="nav__item dropdown">
-          <a class="dropbtn" href="javascript:void()">Human Practices</a>
-          <ul class="list dropdown__content">
-            <li class="dropdown__item"><a href="">timeline</a></li>
-            <li class="dropdown__item"><a href="">integrated human practices</a></li>
-            <li class="dropdown__item"><a href="">education and public engagements</a></li>
-            <li class="dropdown__item"><a href="">proposed implementation</a></li>
-            <li class="dropdown__item"><a href="">entrepreneurship</a></li>
-            <li class="dropdown__item"><a href="">diversity and inclusivity</a></li>
-          </ul>
-        </li>
-        <li class="nav__item dropdown">
-          <a class="dropbtn activePage" href="javascript:void()">Team</a>
-          <ul class="list dropdown__content">
-            <li class="dropdown__item"><a href="">Members</a></li>
-            <li class="dropdown__item"><a href="">attributions</a></li>
-            <li class="dropdown__item"><a href="">collaborations</a></li>
-          </ul>
-        </li>
-        <li class="nav__item"><a href="javascript:void()">Graphics</a></li>
-        <li class="nav__item dropdown">
-          <a class="dropbtn" href="javascript:void()">Awards</a>
-          <ul class="list dropdown__content">
-            <li class="dropdown__item"><a href="">media criteria</a></li>
-          </ul>
-        </li>
-      </ul>
-    </nav>
+    <div class="nav__container">
+      <nav class="nav collapsible" id="navBar">
+        <a class="nav__brand" href="/"><img src="https://2021.igem.org/wiki/images/c/ce/T--IISER_Kolkata--namoosteCapsule.svg" alt="logo" /></a>
+        <div class="icon icon--white nav__toggler" onclick="navToggle('navBar'),removeClassDropExpand()">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+            <path d="M24 6h-24v-4h24v4zm0 4h-24v4h24v-4zm0 8h-24v4h24v-4z" />
+          </svg>
+        </div>
+        <ul class="list nav__list collapsible__content">
+          <li class="nav__item"><a href="javascript:void()">Home</a></li>
+          <li class="nav__item dropdown">
+            <a class="dropbtn" href="javascript:void()">Project</a>
+            <ul class="list dropdown__content">
+              <li class="dropdown__item"><a href="javascript:void()">Description</a></li>
+              <li class="dropdown__item"><a href="javascript:void()">Design</a></li>
+              <li class="dropdown__item"><a href="javascript:void()">Results</a></li>
+              <li class="dropdown__item"><a href="javascript:void()">Proof Of Concept</a></li>
+              <li class="dropdown__item"><a href="javascript:void()">Engineering</a></li>
+              <li class="dropdown__item"><a href="javascript:void()">Models</a></li>
+              <li class="dropdown__item"><a href="javascript:void()">Hardware</a></li>
+              <li class="dropdown__item"><a href="javascript:void()">Endowments</a></li>
+            </ul>
+          </li>
+          <li class="nav__item dropdown">
+            <a class="dropbtn" href="javascript:void()">Lab Work</a>
+            <ul class="list dropdown__content">
+              <li class="dropdown__item"><a href="">Experiments and protocols</a></li>
+              <li class="dropdown__item"><a href="">Parts</a></li>
+              <li class="dropdown__item"><a href="">Notebook</a></li>
+              <li class="dropdown__item"><a href="">Safety</a></li>
+            </ul>
+          </li>
+          <li class="nav__item dropdown">
+            <a class="dropbtn" href="javascript:void()">Human Practices</a>
+            <ul class="list dropdown__content">
+              <li class="dropdown__item"><a href="">timeline</a></li>
+              <li class="dropdown__item"><a href="">integrated human practices</a></li>
+              <li class="dropdown__item"><a href="">education and public engagements</a></li>
+              <li class="dropdown__item"><a href="">proposed implementation</a></li>
+              <li class="dropdown__item"><a href="">entrepreneurship</a></li>
+              <li class="dropdown__item"><a href="">diversity and inclusivity</a></li>
+            </ul>
+          </li>
+          <li class="nav__item dropdown">
+            <a class="dropbtn activePage" href="javascript:void()">Team</a>
+            <ul class="list dropdown__content">
+              <li class="dropdown__item"><a href="">Members</a></li>
+              <li class="dropdown__item"><a href="">attributions</a></li>
+              <li class="dropdown__item"><a href="">collaborations</a></li>
+            </ul>
+          </li>
+          <li class="nav__item"><a href="javascript:void()">Graphics</a></li>
+          <li class="nav__item dropdown">
+            <a class="dropbtn" href="javascript:void()">Awards</a>
+            <ul class="list dropdown__content">
+              <li class="dropdown__item"><a href="">media criteria</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </div>
 
     <!-- script for collapsible content and Dropdowns -->
     <script>
@@ -130,17 +131,19 @@
       </div>
     </section>
 
-    <section class="grid grid--1x2x2 page">
-      <div class="sideNav sideNav__sticky" id="#sideNav">
-        <ul class="list">
-          <li><a class="btn btn--pageNav btn--block" href="#teamLeaders">Team Leader</a></li>
-          <li><a class="btn btn--pageNav btn--block" href="#teamMembers">Team Members</a></li>
-          <!-- <li><a class="btn btn--pageNav btn--block" href="#wetLab">Wet Lab</a></li> -->
-          <!-- <li><a class="btn btn--pageNav btn--block" href="#dryLab">Dry Lab</a></li> -->
-          <!-- <li><a class="btn btn--pageNav btn--block" href="#HumanPractices">Human Practices</a></li> -->
-          <li><a class="btn btn--pageNav btn--block" href="#wikiTeam">Wiki Team</a></li>
-          <li><a class="btn btn--pageNav btn--block" href="#pi">Pi's & Advisors</a></li>
-        </ul>
+    <section class="grid grid--1x2x2">
+      <div class="sideNav__container">
+        <div class="sideNav" id="sideNav">
+          <ul class="list">
+            <li><a class="btn btn--pageNav btn--block" href="#teamLeaders">Team Leader</a></li>
+            <li><a class="btn btn--pageNav btn--block" href="#teamMembers">Team Members</a></li>
+            <!-- <li><a class="btn btn--pageNav btn--block" href="#wetLab">Wet Lab</a></li> -->
+            <!-- <li><a class="btn btn--pageNav btn--block" href="#dryLab">Dry Lab</a></li> -->
+            <!-- <li><a class="btn btn--pageNav btn--block" href="#HumanPractices">Human Practices</a></li> -->
+            <li><a class="btn btn--pageNav btn--block" href="#wikiTeam">Wiki Team</a></li>
+            <li><a class="btn btn--pageNav btn--block" href="#pi">Pi's & Advisors</a></li>
+          </ul>
+        </div>
       </div>
       <div class="block">
         <div class="block block--long grid--1x2" id="teamLeaders">
@@ -150,7 +153,7 @@
               <img src="https://2021.igem.org/wiki/images/2/28/T--IISER_Kolkata--images-team-LakshmiPrakash.jpg" alt="Lakshmi Prakash" />
               <div class="textOnImage">
                 <h3 class="profile__heading">Lakshmi Prakash</h3>
-                <a href="#teamLeaders" class="btn btn--profile">View</a>
+                <a href="javascript:void()" class="btn btn--profile">View</a>
               </div>
             </div>
             <div class="profile__modal">
@@ -197,7 +200,7 @@
               <img src="https://2021.igem.org/wiki/images/8/82/T--IISER_Kolkata--images-team-DebdeepChatterjee.jpg" alt="Debdeep Chatterjee" />
               <div class="textOnImage">
                 <h3 class="profile__heading">Debdeep Chatterjee</h3>
-                <a href="#teamLeaders" class="btn btn--profile">View</a>
+                <a href="javascript:void()" class="btn btn--profile">View</a>
               </div>
             </div>
             <div class="profile__modal">
@@ -299,7 +302,7 @@
               <img src="https://2021.igem.org/wiki/images/d/dd/T--IISER_Kolkata--images-team-ShubhamayDas.jpg" alt="Shubhamay Das" />
               <div class="textOnImage">
                 <h3 class="profile__heading">Shubhamay Das</h3>
-                <a href="#teamMembers" class="btn btn--profile">View</a>
+                <a href="javascript:void()" class="btn btn--profile">View</a>
               </div>
             </div>
             <div class="profile__modal">
@@ -348,7 +351,7 @@
               <img src="https://2021.igem.org/wiki/images/7/7c/T--IISER_Kolkata--images-team-DebshrutiBiswas.jpg" alt="Debshruti Biswas" />
               <div class="textOnImage">
                 <h3 class="profile__heading">Debshruti Biswas</h3>
-                <a href="#teamMembers" class="btn btn--profile">View</a>
+                <a href="javascript:void()" class="btn btn--profile">View</a>
               </div>
             </div>
             <div class="profile__modal">
@@ -397,7 +400,7 @@
               <img src="https://2021.igem.org/wiki/images/6/6f/T--IISER_Kolkata--images-team-ShreyashBorkar.jpg" alt="Shreyash Borkar" />
               <div class="textOnImage">
                 <h3 class="profile__heading">Shreyash Borkar</h3>
-                <a href="#teamMembers" class="btn btn--profile">View</a>
+                <a href="javascript:void()" class="btn btn--profile">View</a>
               </div>
             </div>
             <div class="profile__modal">
@@ -446,7 +449,7 @@
               <img src="https://2021.igem.org/wiki/images/c/cb/T--IISER_Kolkata--images-team-SourinChatterjee.jpg" alt="Sourin Chatterjee" />
               <div class="textOnImage">
                 <h3 class="profile__heading">Sourin Chatterjee</h3>
-                <a href="#teamMembers" class="btn btn--profile">View</a>
+                <a href="javascript:void()" class="btn btn--profile">View</a>
               </div>
             </div>
             <div class="profile__modal">
@@ -495,7 +498,7 @@
               <img src="https://2021.igem.org/wiki/images/6/6c/T--IISER_Kolkata--images-team-AdrijaAdhikary.jpg" alt="Adrija Adhikary" />
               <div class="textOnImage">
                 <h3 class="profile__heading">Adrija Adhikary</h3>
-                <a href="#teamMembers" class="btn btn--profile">View</a>
+                <a href="javascript:void()" class="btn btn--profile">View</a>
               </div>
             </div>
             <div class="profile__modal">
@@ -544,7 +547,7 @@
               <img src="https://2021.igem.org/wiki/images/2/2b/T--IISER_Kolkata--images-team-UditGhosh.jpg" alt="Udit Ghosh" />
               <div class="textOnImage">
                 <h3 class="profile__heading">Udit Ghosh</h3>
-                <a href="#teamMembers" class="btn btn--profile">View</a>
+                <a href="javascript:void()" class="btn btn--profile">View</a>
               </div>
             </div>
             <div class="profile__modal">
@@ -593,7 +596,7 @@
               <img src="https://2021.igem.org/wiki/images/2/21/T--IISER_Kolkata--images-team-AbegDutta.jpg" alt="Abeg Dutta" />
               <div class="textOnImage">
                 <h3 class="profile__heading">Abeg Dutta</h3>
-                <a href="#teamMembers" class="btn btn--profile">View</a>
+                <a href="javascript:void()" class="btn btn--profile">View</a>
               </div>
             </div>
             <div class="profile__modal">
@@ -642,7 +645,7 @@
               <img src="https://2021.igem.org/wiki/images/8/89/T--IISER_Kolkata--images-team-AnshumanJaysingh.jpg" alt="Anshuman Jaysingh" />
               <div class="textOnImage">
                 <h3 class="profile__heading">Mahapatra Anshuman Jaysingh</h3>
-                <a href="#teamMembers" class="btn btn--profile">View</a>
+                <a href="javascript:void()" class="btn btn--profile">View</a>
               </div>
             </div>
             <div class="profile__modal">
@@ -691,7 +694,7 @@
               <img src="https://2021.igem.org/wiki/images/9/90/T--IISER_Kolkata--images-team-NivedaaDhandhapani.jpg" alt="Nivedaa Dhandhapani" />
               <div class="textOnImage">
                 <h3 class="profile__heading">Nivedaa Dhandapani</h3>
-                <a href="#teamMembers" class="btn btn--profile">View</a>
+                <a href="javascript:void()" class="btn btn--profile">View</a>
               </div>
             </div>
             <div class="profile__modal">
@@ -736,18 +739,20 @@
             </div>
           </div>
         </div>
+
         <!-- 
-    <div class="block block--long" id="wetLab">
-    <h2 class="block__heading">wet lab</h2>
-    </div>
-    
-    <div class="block block--long" id="dryLab">
-    <h2 class="block__heading">dry lab</h2>
-    </div>
-    
-    <div class="block block--long" id="#HumanPractices">
-    <h2 class="block__heading">Human Practices</h2>
-    </div> -->
+        <div class="block block--long" id="wetLab">
+        <h2 class="block__heading">wet lab</h2>
+        </div>
+        
+        <div class="block block--long" id="dryLab">
+        <h2 class="block__heading">dry lab</h2>
+        </div>
+        
+        <div class="block block--long" id="HumanPractices">
+        <h2 class="block__heading">Human Practices</h2>
+        </div> 
+        -->
 
         <div class="block block--long" id="wikiTeam">
           <h2 class="block__heading">wiki team</h2>
@@ -756,7 +761,7 @@
               <img src="https://2021.igem.org/wiki/images/2/22/T--IISER_Kolkata--image-namooste.png" alt="" />
               <div class="textOnImage">
                 <h3 class="profile__heading">Pedisetti Venkatesh</h3>
-                <a href="#wikiTeam" class="btn btn--profile">View</a>
+                <a href="javascript:void()" class="btn btn--profile">View</a>
               </div>
             </div>
             <div class="profile__modal">
@@ -805,7 +810,7 @@
               <img src="https://2021.igem.org/wiki/images/2/22/T--IISER_Kolkata--image-namooste.png" alt="" />
               <div class="textOnImage">
                 <h3 class="profile__heading">Abhiroop Chauhan</h3>
-                <a href="#wikiTeam" class="btn btn--profile">View</a>
+                <a href="javascript:void()" class="btn btn--profile">View</a>
               </div>
             </div>
             <div class="profile__modal">
@@ -858,7 +863,7 @@
               <img src="https://2021.igem.org/wiki/images/2/22/T--IISER_Kolkata--image-namooste.png" alt="" />
               <div class="textOnImage">
                 <h3 class="profile__heading">Dr. Supratim Dutta</h3>
-                <a href="#pi" class="btn btn--profile">View</a>
+                <a href="javascript:void()" class="btn btn--profile">View</a>
               </div>
             </div>
             <div class="profile__modal">
@@ -907,7 +912,7 @@
               <img src="https://2021.igem.org/wiki/images/2/22/T--IISER_Kolkata--image-namooste.png" alt="" />
               <div class="textOnImage">
                 <h3 class="profile__heading">Dr. Dipjyoti Das</h3>
-                <a href="#pi" class="btn btn--profile">View</a>
+                <a href="javascript:void()" class="btn btn--profile">View</a>
               </div>
             </div>
             <div class="profile__modal">
@@ -956,7 +961,7 @@
               <img src="https://2021.igem.org/wiki/images/2/27/T--IISER_Kolkata--images-team-DwaipayanDubey.jpg" alt="Dwaipayan Dubey" />
               <div class="textOnImage">
                 <h3 class="profile__heading">Dwaipayan Dubey</h3>
-                <a href="#pi" class="btn btn--profile">View</a>
+                <a href="javascript:void()" class="btn btn--profile">View</a>
               </div>
             </div>
             <div class="profile__modal">
@@ -1005,7 +1010,7 @@
               <img src="https://2021.igem.org/wiki/images/2/22/T--IISER_Kolkata--image-namooste.png" alt="" />
               <div class="textOnImage">
                 <h3 class="profile__heading">Mani Gupta</h3>
-                <a href="#pi" class="btn btn--profile">View</a>
+                <a href="javascript:void()" class="btn btn--profile">View</a>
               </div>
             </div>
             <div class="profile__modal">
@@ -1054,7 +1059,7 @@
               <img src="https://2021.igem.org/wiki/images/2/22/T--IISER_Kolkata--image-namooste.png" alt="" />
               <div class="textOnImage">
                 <h3 class="profile__heading">Praveen Nath</h3>
-                <a href="#pi" class="btn btn--profile">View</a>
+                <a href="javascript:void()" class="btn btn--profile">View</a>
               </div>
             </div>
             <div class="profile__modal">
@@ -1102,6 +1107,18 @@
       </div>
     </section>
 
+    <script>
+      var wrap = document.getElementById("sideNav");
+
+      wrap.on("scroll", function (this) {
+        if (this.scrollTop > 147) {
+          wrap.classList.add("fix-search");
+        } else {
+          wrap.classList.remove("fix-search");
+        }
+      });
+    </script>
+
     <!-- script for active scroll on sideNav -->
     <script>
       let mainNavLinks = document.querySelectorAll(".btn--pageNav");
@@ -1111,7 +1128,7 @@
       let cur = [];
 
       window.addEventListener("scroll", (event) => {
-        let fromTop = window.scrollY - 150;
+        let fromTop = window.scrollY + 250;
 
         mainNavLinks.forEach((item) => {
           let section = document.querySelector(item.hash);
