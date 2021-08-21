@@ -1,3 +1,7 @@
+:root {
+  --length-pageHeight: calc(100vh - 16px);
+}
+
 *,
 *::after,
 *::before {
@@ -24,4 +28,5 @@ body {
 .masterGrid {
   display: grid;
   grid-template-columns: 8rem auto;
+  min-height: calc(100vh - 16px);
 }

@@ -22,7 +22,7 @@ PROJECT {
 PARTS {
     Part Collection {https://2021.igem.org/Team:IISER_Kolkata/Part_Collection}
     Parts {https://2021.igem.org/Team:IISER_Kolkata/Parts}
-    Improve {https://2021.igem.org/Team:IISER_Kolkata/Improve}
+    *** Improve {https://2021.igem.org/Team:IISER_Kolkata/Improve}
 }
 
 $ SAFETY {https://2021.igem.org/Team:IISER_Kolkata/Safety}
