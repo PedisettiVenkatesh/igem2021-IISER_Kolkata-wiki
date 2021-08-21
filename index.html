@@ -38,7 +38,7 @@
         <ul class="list nav__list collapsible__content">
           <li class="nav__item"><a href="https://2021.igem.org/Team:IISER_Kolkata">Home</a></li>
           <li class="nav__item dropdown">
-            <a class="dropbtn activePage" href="javascript:void()">Team</a>
+            <a class="dropbtn" href="javascript:void()">Team</a>
             <ul class="list dropdown__content">
               <li class="dropdown__item"><a href="https://2021.igem.org/Team:IISER_Kolkata/Team">team</a></li>
               <li class="dropdown__item"><a href="https://2021.igem.org/Team:IISER_Kolkata/Attributions">attributions</a></li>
@@ -1135,17 +1135,14 @@
 
     <!-- script for active scroll on sideNav -->
     <script>
-      let mainNavLinks = document.querySelectorAll(".btn--pageNav");
-      let mainSections = document.querySelectorAll(".block--long");
+      const mainNavLinks = document.querySelectorAll(".btn--pageNav");
+      const mainSections = document.querySelectorAll(".block--long");
 
-      let lastId;
-      let cur = [];
-
-      window.addEventListener("scroll", (event) => {
-        let fromTop = window.scrollY + 250;
+      window.addEventListener("scroll", () => {
+        const fromTop = window.scrollY + 250;
 
         mainNavLinks.forEach((item) => {
-          let section = document.querySelector(item.hash);
+          const section = document.querySelector(item.hash);
           if (section.offsetTop <= fromTop && section.offsetTop + section.offsetHeight > fromTop) {
             item.classList.add("btn--active");
           } else {
