@@ -1,0 +1,44 @@
+HOME {https://2021.igem.org/Team:IISER_Kolkata}
+
+TEAM {
+    TEAM {https://2021.igem.org/Team:IISER_Kolkata/Team}
+    *Attributions {https://2021.igem.org/Team:IISER_Kolkata/Attributions}
+    **Collaborations {https://2021.igem.org/Team:IISER_Kolkata/Collaborations}
+}
+
+PROJECT {
+    ***Communication {https://2021.igem.org/Team:IISER_Kolkata/Communication}
+    *Contribution {https://2021.igem.org/Team:IISER_Kolkata/Contribution}
+    *Description {https://2021.igem.org/Team:IISER_Kolkata/Description}
+    **Engineering {https://2021.igem.org/Team:IISER_Kolkata/Engineering}
+    Experiments {https://2021.igem.org/Team:IISER_Kolkata/Experiments}
+    **Implementation {https://2021.igem.org/Team:IISER_Kolkata/Implementation}
+    Notebook {https://2021.igem.org/Team:IISER_Kolkata/Notebook}
+    ***Partnership {https://2021.igem.org/Team:IISER_Kolkata/Partnership}
+    ***Proof Of Concept {https://2021.igem.org/Team:IISER_Kolkata/Proof_Of_Concept}
+    Results {https://2021.igem.org/Team:IISER_Kolkata/Results}
+}
+
+PARTS {
+    Part Collection {https://2021.igem.org/Team:IISER_Kolkata/Part_Collection}
+    Parts {https://2021.igem.org/Team:IISER_Kolkata/Parts}
+    Improve {https://2021.igem.org/Team:IISER_Kolkata/Improve}
+}
+
+$ SAFETY {https://2021.igem.org/Team:IISER_Kolkata/Safety}
+
+**HUMAN PRACTICES {https://2021.igem.org/Team:IISER_Kolkata/Human_Practices}
+
+AWARDS {
+    $ Education {https://2021.igem.org/Team:IISER_Kolkata/Education}
+    $ Entrepreneurship {https://2021.igem.org/Team:IISER_Kolkata/Entrepreneurship}
+    $ Hardware {https://2021.igem.org/Team:IISER_Kolkata/Hardware}
+    $ Inclusivity {https://2021.igem.org/Team:IISER_Kolkata/Inclusivity}
+    $ Measurements {https://2021.igem.org/Team:IISER_Kolkata/Measurement}
+    ***Model {https://2021.igem.org/Team:IISER_Kolkata/Model}
+    $ Plant {https://2021.igem.org/Team:IISER_Kolkata/Plant}
+    $ Software {https://2021.igem.org/Team:IISER_Kolkata/Software}
+    $ Sustainable {https://2021.igem.org/Team:IISER_Kolkata/Sustainable}
+}
+
+POSTER {https://2021.igem.org/Team:IISER_Kolkata/Poster}
