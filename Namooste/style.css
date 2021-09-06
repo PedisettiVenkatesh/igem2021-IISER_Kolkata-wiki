@@ -1,5 +1,5 @@
 :root {
-  --color-white: white;
+  --color-white: #fff;
 }
 
 *,
@@ -33,26 +33,30 @@ body {
 
 .masterGrid {
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: max-content auto;
   min-height: 100vh;
+  padding: 0;
 }
 
-.mainNav {
-  background: #3e4a5b;
-  color: var(--color-white);
-  width: 60px;
-  height: 100vh;
-  /* TODO: check if the nav is exceeding */
-  overflow: hidden;
-  transition: all 0.3s;
+/* .mainNav-container {
+  background: #1b0760;
+  width: 6rem;
+} */
+
+.mainNav-container {
+  background: gold;
+  display: fixed;
+  top: 0;
+  z-index: 999;
+  width: 100vw;
+  height: 6rem;
 }
 
-.mainNav:hover {
-  width: 20rem;
+.mainContent {
+  background: rgba(137, 43, 226, 0.473);
 }
 
-.mainNav--expanded {
-  width: 20rem;
+@media screen and (min-width: 768px) {
+  .mainNav {
+  }
 }
-
-/* Navigation Bar */
