@@ -27,6 +27,7 @@ body {
   background: #222831;
   height: 100vh;
   width: 100vw;
+  max-height: 100vh;
   /* overflow: hidden; */
 }
 
@@ -54,16 +55,4 @@ body {
   width: 20rem;
 }
 
-.brand-container {
-  background: #f05454;
-  height: 5rem;
-  padding: 0.5rem;
-}
-
-.brand img {
-  display: block;
-  height: 90%;
-  max-width: 100%;
-  margin: auto auto;
-  /* padding: 1rem; */
-}
+/* Navigation Bar */
