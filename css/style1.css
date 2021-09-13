@@ -298,6 +298,8 @@ a.hero3 {
   height: 5rem;
   position: relative;
   font-size: 1rem;
+  font-weight: bold;
+  line-height: 1;
   /* text-transform: uppercase; */
 }
 
@@ -307,4 +309,13 @@ a.hero3 {
 
 .nav:hover {
   background: #05243a;
+  color: var(--color-bodyText);
+}
+
+.nav.brand:hover {
+  background: var(--color-primary);
+}
+
+a .nav {
+  height: 5rem;
 }
