@@ -8,6 +8,29 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    Hello IISER Kolkata
+    <!-- IISER KOLKATA CONTAINER -->
+    <div class="iiserKolkata">
+      <!-- MASTER GRID -->
+      <div class="masterGrid">
+        <div id="scrollPath">
+          <div id="progressBar"></div>
+        </div>
+
+        <!-- Script for Progress Bar -->
+        <script>
+          var progressBar = document.getElementById("progressBar");
+
+          window.onscroll = function () {
+            let totalHeight = document.body.scrollHeight - window.innerHeight;
+            let progressHeight = (window.pageYOffset / totalHeight) * 100;
+            progressBar.style.height = progressHeight + "%";
+          };
+        </script>
+        <div>
+          <img style="width: 100%;" src="https://2021.igem.org/wiki/images/2/29/T--IISER_Kolkata--image-HomeHero.png" alt="" />
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium eos aliquid quasi repellat quidem hic distinctio neque commodi veritatis veniam accusantium consectetur, alias pariatur ipsam tempora officia exercitationem itaque aliquam quam, aspernatur porro quod blanditiis omnis totam. Minima a iure iste fugiat dolor suscipit vero magnam atque tenetur? Enim illum est nulla. Aut non minus eius, similique, amet maxime incidunt omnis asperiores numquam quos dignissimos officia dolores nemo minima temporibus exercitationem magnam natus aliquam. Optio, commodi maiores ex rerum asperiores, molestiae modi aspernatur porro accusamus inventore debitis harum reiciendis labore quam eum quas illum ut ipsa. Laboriosam impedit numquam odio!
+        </div>
+      </div>
+    </div>
   </body>
 </html>

@@ -4,3 +4,50 @@
   margin: 0;
   font-family: "Montserrat", Arial, Helvetica, sans-serif;
 }
+
+html {
+  margin: 0;
+  padding: 0;
+  scrollbar-width: none;
+}
+
+.iiserKolkata {
+  /* height: 100vh; */
+  width: 100vw;
+  overflow: auto;
+  scrollbar-width: none;
+}
+
+.masterGrid {
+  width: 100%;
+  overflow: auto;
+}
+
+/* ProgressBar */
+#scrollPath {
+  background: rgb(221, 157, 157);
+  height: 50vh;
+  margin: 30vh 2vw 20vh;
+  position: fixed;
+  border-radius: 5px;
+  left: 0;
+  top: 0;
+  width: 10px;
+  overflow: hidden;
+  /* box-shadow: inset 0 0 5px #000; */
+}
+
+#progressBar {
+  background: linear-gradient(to top, goldenrod, gold);
+  /* background: gold; */
+  height: 0%;
+  width: 100%;
+  border-radius: 5px;
+  /* box-shadow: inset 0 0 5px #000; */
+  box-shadow: 0 2px 5px #000;
+  max-height: 100%;
+}
+
+img {
+  width: 100vw;
+}
