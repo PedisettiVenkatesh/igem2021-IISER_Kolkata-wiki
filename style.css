@@ -23,6 +23,31 @@ html {
   overflow: auto;
 }
 
+/* Preloader */
+#loading {
+  /* background: #fff url("") no-repeat center; */
+  background: #fff;
+  font-weight: bold;
+  height: 100vh;
+  left: 0;
+  opacity: 1;
+  position: fixed;
+  text-align: center;
+  top: 0;
+  transition: all 1s ease-in-out 0.5s;
+  width: 100%;
+  z-index: 999999;
+}
+
+#loading img {
+  width: 20vw;
+  margin: 30vh 40vw 0;
+}
+
+body.noScroll {
+  overflow: hidden;
+}
+
 /* ProgressBar */
 #scrollPath {
   background: rgb(221, 157, 157);

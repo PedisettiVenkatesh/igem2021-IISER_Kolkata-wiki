@@ -7,7 +7,25 @@
     <title>Home - IISER Kolkata IGEM Team</title>
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
+  <body onload="preload()" class="noScroll">
+    <div id="loading">
+      <img src="https://2021.igem.org/wiki/images/d/d6/T--IISER_Kolkata--image-preloader.gif" alt="[preloader image]" />
+      <br />
+      Loading . . .
+    </div>
+
+    <!-- script for preloader -->
+    <script>
+      const preloader = document.getElementById("loading");
+
+      function preload() {
+        preloader.style.opacity = "0";
+        preloader.style.zIndex = "-999999";
+        document.documentElement.scrollTop = 0;
+        document.body.classList.remove("noScroll");
+      }
+    </script>
+
     <!-- IISER KOLKATA CONTAINER -->
     <div class="iiserKolkata">
       <!-- MASTER GRID -->
@@ -28,6 +46,12 @@
         </script>
         <div>
           <img style="width: 100%;" src="https://2021.igem.org/wiki/images/2/29/T--IISER_Kolkata--image-HomeHero.png" alt="" />
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Saepe, totam et ut, illo mollitia nulla perferendis tempore autem corrupti magni est. Corrupti ipsum voluptas vel. Doloremque distinctio iste voluptas eos est? Provident possimus reiciendis magnam dolor quod assumenda beatae animi blanditiis fugit facilis accusantium alias odio eos eum, atque eius fugiat impedit consectetur quasi amet non, minima exercitationem? Eius neque esse molestiae tenetur reprehenderit quod necessitatibus assumenda nulla, iste in fugiat dolorem sed. Ut, eligendi, deserunt reprehenderit cumque fugit quibusdam quo sed omnis quia porro soluta ipsum provident ipsa vero officiis minus dolore corrupti explicabo assumenda neque nihil velit eos id? Omnis voluptatem, eum, nulla molestias nihil quam fugiat officia odio fugit, illum distinctio nemo et maiores esse modi officiis. A
+          accusantium, ipsa rem reiciendis quibusdam velit recusandae. Laboriosam nesciunt dolorem debitis excepturi, sint corporis, at optio, dicta perferendis voluptate quaerat sed. Repellat a, perspiciatis perferendis excepturi autem esse, eos velit corporis placeat ipsa sint quos laborum et dolores. Eligendi tenetur mollitia nemo eaque reiciendis repudiandae nobis, quidem minus numquam asperiores impedit delectus possimus deserunt. Iusto, dolorum cum, minus vel pariatur aliquam deserunt vero maiores ipsa officia consequatur quam laboriosam, veritatis culpa nemo? Doloribus minima qui aliquid voluptas id dolorem animi, nemo laborum amet necessitatibus fugit voluptate repellendus fuga magni impedit, cupiditate delectus exercitationem ad? Quam ab sunt enim ipsa, dignissimos doloremque maiores quo iusto dicta quod animi, dolore ducimus laboriosam rem mollitia,
+          cupiditate consectetur ratione id quidem labore impedit est corporis. Fugiat officia sapiente, quisquam voluptates molestiae, possimus repellendus aut totam facilis saepe ratione esse labore corporis iure recusandae earum fuga rem nulla architecto ex itaque quibusdam minima. Incidunt labore sequi magnam atque dolorum nisi, officiis magni earum inventore expedita quibusdam corrupti nulla itaque voluptate distinctio architecto consectetur nobis, repudiandae praesentium ea, unde reiciendis! Quisquam unde nisi temporibus itaque!
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur eius tempora, eligendi, quibusdam voluptate dolor tenetur alias excepturi accusantium quasi quis reprehenderit sint molestiae vitae quas fugit blanditiis ad perferendis laborum. Quasi minus labore eos omnis tempora accusamus provident! Consectetur corporis, magnam possimus similique, beatae, amet hic libero molestiae earum impedit deleniti. Neque officia iusto minima eveniet nulla fugiat dolor voluptatum maxime? Explicabo ex aliquid, vero iste qui aut repellendus maxime quasi nam distinctio culpa excepturi odit numquam aliquam cum esse, ut deleniti! Non alias quae est a. Quos cumque mollitia illo quaerat voluptatibus, sit ipsam quas accusamus dolores fugit.</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur eius tempora, eligendi, quibusdam voluptate dolor tenetur alias excepturi accusantium quasi quis reprehenderit sint molestiae vitae quas fugit blanditiis ad perferendis laborum. Quasi minus labore eos omnis tempora accusamus provident! Consectetur corporis, magnam possimus similique, beatae, amet hic libero molestiae earum impedit deleniti. Neque officia iusto minima eveniet nulla fugiat dolor voluptatum maxime? Explicabo ex aliquid, vero iste qui aut repellendus maxime quasi nam distinctio culpa excepturi odit numquam aliquam cum esse, ut deleniti! Non alias quae est a. Quos cumque mollitia illo quaerat voluptatibus, sit ipsam quas accusamus dolores fugit.</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur eius tempora, eligendi, quibusdam voluptate dolor tenetur alias excepturi accusantium quasi quis reprehenderit sint molestiae vitae quas fugit blanditiis ad perferendis laborum. Quasi minus labore eos omnis tempora accusamus provident! Consectetur corporis, magnam possimus similique, beatae, amet hic libero molestiae earum impedit deleniti. Neque officia iusto minima eveniet nulla fugiat dolor voluptatum maxime? Explicabo ex aliquid, vero iste qui aut repellendus maxime quasi nam distinctio culpa excepturi odit numquam aliquam cum esse, ut deleniti! Non alias quae est a. Quos cumque mollitia illo quaerat voluptatibus, sit ipsam quas accusamus dolores fugit.</p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium eos aliquid quasi repellat quidem hic distinctio neque commodi veritatis veniam accusantium consectetur, alias pariatur ipsam tempora officia exercitationem itaque aliquam quam, aspernatur porro quod blanditiis omnis totam. Minima a iure iste fugiat dolor suscipit vero magnam atque tenetur? Enim illum est nulla. Aut non minus eius, similique, amet maxime incidunt omnis asperiores numquam quos dignissimos officia dolores nemo minima temporibus exercitationem magnam natus aliquam. Optio, commodi maiores ex rerum asperiores, molestiae modi aspernatur porro accusamus inventore debitis harum reiciendis labore quam eum quas illum ut ipsa. Laboriosam impedit numquam odio!
         </div>
       </div>
