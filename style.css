@@ -1,26 +1,16 @@
-* {
+:root {
+  --color-background: #fff;
+  --color-primary: #fff;
+  --color-secondary: #fff;
+  --color-accent: #fff;
+  --color-headings: #fff;
+  --color-body: #000;
+}
+
+*,
+*::after,
+*::before {
   box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-  font-family: "Montserrat", Arial, Helvetica, sans-serif;
-}
-
-html {
-  margin: 0;
-  padding: 0;
-  scrollbar-width: none;
-}
-
-.iiserKolkata {
-  /* height: 100vh; */
-  width: 100vw;
-  overflow: auto;
-  scrollbar-width: none;
-}
-
-.masterGrid {
-  width: 100%;
-  overflow: auto;
 }
 
 /* Preloader */
@@ -42,6 +32,43 @@ html {
 #loading img {
   width: 20vw;
   margin: 30vh 40vw 0;
+}
+/* /Preloader */
+
+/* Typography */
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  scrollbar-color: tomato #1b0760;
+  scrollbar-width: none;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-background);
+  background-image: url(./images/offline/elements-1x/bg-1x.png);
+  background-size: contain;
+  background-repeat: repeat-y;
+  color: var(--color-body);
+  font-size: 2rem;
+}
+/* /Typography */
+
+/* IISER Containers */
+.iiserKolkata {
+  /* height: 100vh; */
+  width: 100vw;
+  overflow: auto;
+  scrollbar-width: none;
+}
+
+.masterGrid {
+  width: 100%;
+  overflow: auto;
 }
 
 body.noScroll {
@@ -72,6 +99,17 @@ body.noScroll {
   box-shadow: 0 2px 5px #000;
   max-height: 100%;
 }
+
+#progressBtn {
+  width: 20px;
+  height: 20px;
+  background: rgb(74, 164, 253);
+  border-radius: 10px;
+  position: fixed;
+  transform: translate(-25%, -25%);
+}
+
+/* /ProgressBar */
 
 img {
   width: 100vw;
