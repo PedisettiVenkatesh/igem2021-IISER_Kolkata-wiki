@@ -30,7 +30,7 @@
     <!-- IISER KOLKATA CONTAINER -->
     <div class="iiserKolkata">
       <!-- MASTER GRID -->
-      <div class="masterGrid">
+      <div class="masterGrid" id="top">
         <!-- progressBar -->
         <div id="scrollPath">
           <div id="progressBar"></div>
@@ -38,23 +38,33 @@
         </div>
 
         <!-- Script for Progress Bar -->
-        <script>
-          var progressBar = document.getElementById("progressBar");
 
-          window.onscroll = function () {
-            let totalHeight = document.body.scrollHeight - window.innerHeight;
-            let progressHeight = (window.pageYOffset / totalHeight) * 100;
-            progressBar.style.height = progressHeight + "%";
-          };
-        </script>
         <!-- /progressBar -->
 
-        <div>
-          <img style="width: 100%;" src="https://2021.igem.org/wiki/images/2/29/T--IISER_Kolkata--image-HomeHero.png" alt="" />
+        <!-- toTop -->
+        <div id="toTop">
+          <a href="#top">
+            <img src="./images/offline/elements-1x/toTop-1x.png" alt="" />
+          </a>
         </div>
+        <!-- /toTop -->
+
+        <!-- Hero -->
+        <div id="hero">
+          <img style="width: 100;" src="https://2021.igem.org/wiki/images/2/29/T--IISER_Kolkata--image-HomeHero.png" alt="" />
+        </div>
+        <!-- /Hero -->
+
+        <!-- Navigation -->
+        <div id="navToggler">
+          <img src="" alt="..." />
+        </div>
+        <!-- /Navigation -->
 
         <div>
           <h1>Hello</h1>
+          <img style="width: 50%; float: left;" src="./images/offline/elements-1x/twoCows-1x.png" alt="" />
+          <img style="width: 50%; float: right;" src="./images/offline/elements-1x/cow70-1x.png" alt="" />
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet optio consequatur accusamus mollitia debitis dicta! Eum, in exercitationem. Ducimus vitae, aperiam quis deleniti necessitatibus quos temporibus odio officia quod alias aliquam sint autem est hic vero quibusdam, consequatur suscipit mollitia perspiciatis illum cupiditate, aspernatur doloribus? Ex unde porro quae atque, delectus veniam harum veritatis soluta nesciunt, debitis minus voluptatem sapiente officiis vel aut eligendi at minima cum eos! Impedit, debitis! Id, tempora aliquam? Earum minima ducimus vitae alias ipsa atque quod maxime ullam, tempore vero, aspernatur explicabo recusandae amet id, nemo dolore molestias consectetur ipsam quia culpa doloribus. Sit, dolorem.</p>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet optio consequatur accusamus mollitia debitis dicta! Eum, in exercitationem. Ducimus vitae, aperiam quis deleniti necessitatibus quos temporibus odio officia quod alias aliquam sint autem est hic vero quibusdam, consequatur suscipit mollitia perspiciatis illum cupiditate, aspernatur doloribus? Ex unde porro quae atque, delectus veniam harum veritatis soluta nesciunt, debitis minus voluptatem sapiente officiis vel aut eligendi at minima cum eos! Impedit, debitis! Id, tempora aliquam? Earum minima ducimus vitae alias ipsa atque quod maxime ullam, tempore vero, aspernatur explicabo recusandae amet id, nemo dolore molestias consectetur ipsam quia culpa doloribus. Sit, dolorem.</p>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet optio consequatur accusamus mollitia debitis dicta! Eum, in exercitationem. Ducimus vitae, aperiam quis deleniti necessitatibus quos temporibus odio officia quod alias aliquam sint autem est hic vero quibusdam, consequatur suscipit mollitia perspiciatis illum cupiditate, aspernatur doloribus? Ex unde porro quae atque, delectus veniam harum veritatis soluta nesciunt, debitis minus voluptatem sapiente officiis vel aut eligendi at minima cum eos! Impedit, debitis! Id, tempora aliquam? Earum minima ducimus vitae alias ipsa atque quod maxime ullam, tempore vero, aspernatur explicabo recusandae amet id, nemo dolore molestias consectetur ipsam quia culpa doloribus. Sit, dolorem.</p>
@@ -90,5 +100,6 @@
         </div>
       </div>
     </div>
+    <script src="app.js"></script>
   </body>
 </html>
