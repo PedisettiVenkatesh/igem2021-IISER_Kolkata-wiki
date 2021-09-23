@@ -8,23 +8,11 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body onload="preload()" class="noScroll">
-    <div id="loading">
+    <div id="preloader">
       <img src="https://2021.igem.org/wiki/images/d/d6/T--IISER_Kolkata--image-preloader.gif" alt="[preloader image]" />
       <br />
       Loading . . .
     </div>
-
-    <!-- script for preloader -->
-    <script>
-      const preloader = document.getElementById("loading");
-
-      function preload() {
-        preloader.style.opacity = "0";
-        preloader.style.zIndex = "-999999";
-        document.documentElement.scrollTop = 0;
-        document.body.classList.remove("noScroll");
-      }
-    </script>
     <!-- /Preloader -->
 
     <!-- IISER KOLKATA CONTAINER -->
@@ -36,30 +24,27 @@
           <div id="progressBar"></div>
           <div id="progressBtn"></div>
         </div>
-
-        <!-- Script for Progress Bar -->
-
         <!-- /progressBar -->
 
         <!-- toTop -->
         <div id="toTop">
           <a href="#top">
-            <img src="./images/offline/elements-1x/toTop-1x.png" alt="" />
+            <img src="./images/offline/elements1x/toTop-1x.png" alt="" />
           </a>
         </div>
         <!-- /toTop -->
-
-        <!-- Hero -->
-        <div id="hero">
-          <img style="width: 100;" src="https://2021.igem.org/wiki/images/2/29/T--IISER_Kolkata--image-HomeHero.png" alt="" />
-        </div>
-        <!-- /Hero -->
 
         <!-- Navigation -->
         <div id="navToggler">
           <img src="" alt="..." />
         </div>
         <!-- /Navigation -->
+
+        <!-- Hero -->
+        <div id="hero">
+          <img style="width: 100;" src="https://2021.igem.org/wiki/images/2/29/T--IISER_Kolkata--image-HomeHero.png" alt="" />
+        </div>
+        <!-- /Hero -->
 
         <div>
           <h1>Hello</h1>
