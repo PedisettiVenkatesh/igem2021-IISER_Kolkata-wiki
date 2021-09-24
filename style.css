@@ -2,9 +2,10 @@
   --color-background: #fff;
   --color-primary: #fff;
   --color-secondary: #fff;
-  --color-accent: #fff;
+  --color-accent: #5e8dd1;
   --color-headings: #fff;
   --color-body: #000;
+  --length-paddingLeft: 65px;
 }
 
 *,
@@ -58,6 +59,13 @@ body {
 }
 /* /Typography */
 
+/* Links */
+a {
+  color: inherit;
+  text-decoration: underline;
+}
+/* /Links */
+
 /* IISER Containers */
 .iiserKolkata {
   /* height: 100vh; */
@@ -101,12 +109,12 @@ body.noScroll {
   height: 0%;
   max-height: 100%;
   width: 100%;
+  /* transition: all 0.1s; */
 }
 
 #progressBtn {
   background: rgb(74, 164, 253);
   border-radius: 10px;
-  /* box-shadow: 0 0 10px 1px #000; */
   height: 20px;
   position: fixed;
   transform: translate(-25%, -50%);
@@ -117,23 +125,22 @@ body.noScroll {
 
 /* toTop */
 #toTop {
-  /* background: red; */
-  bottom: 0;
-  left: 0;
-  margin-left: 1vh;
-  margin-bottom: 5vh;
-  position: fixed;
-  width: 50px;
-  height: 0;
-  opacity: 0;
-  z-index: 9;
   border-radius: 55%;
+  bottom: 0;
+  height: 0;
+  left: 0;
+  margin-bottom: 5vh;
+  margin-left: 1vh;
+  opacity: 0;
+  position: fixed;
   transition: all 0.3s;
+  width: 50px;
+  z-index: 9;
 }
 
 #toTop:hover {
-  scale: 1.1;
   box-shadow: 0 0 5px 1px #000;
+  scale: 1.1;
 }
 
 #toTop img {
@@ -143,4 +150,135 @@ body.noScroll {
 
 img {
   width: 100%;
+}
+
+/* Navigation */
+#navToggler {
+  /* background: #fbc351; */
+  width: 45px;
+  position: fixed;
+  box-shadow: 0 0 10px 5px #000;
+  border-radius: 2px;
+  top: 2vh;
+  left: 2vh;
+}
+/* /Navigation */
+
+.heroAfterImage {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.heroAfterImage img {
+  width: 30%;
+}
+
+/* sectionHome */
+.sectionHome {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding-left: var(--length-paddingLeft);
+  padding-right: var(--length-paddingLeft);
+  margin-top: 5rem;
+}
+
+.sectionHome-text {
+  width: 100%;
+  padding: 1rem;
+}
+
+.sectionHome-text p {
+  padding: 1rem;
+  margin-top: 3rem;
+  font-size: 2.5rem;
+  line-height: 1.4;
+}
+
+.sectionHome-text--leftAlign {
+  text-align: left;
+  padding-right: 5rem;
+}
+
+.sectionHome-text--rightAlign {
+  text-align: right;
+  /* padding-right: var(--length-paddingLeft); */
+  padding-left: 5rem;
+}
+
+.rightAlign {
+  text-align: right;
+}
+
+.sectionHome-image {
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sectionHome-image img {
+  width: 70%;
+}
+
+.text-milk {
+  font-size: 10rem;
+  color: #fbc351;
+  font-weight: bold;
+  text-shadow: 0.5rem 0.5rem #645f56;
+}
+
+/* .sectionHome-Heads {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  padding-left: var(--length-paddingLeft);
+  padding-right: var(--length-paddingLeft);
+  margin-top: 5rem;
+  padding-top: 15rem;
+}
+
+.sectionHome-Heads-text p {
+  padding: 0 10rem;
+} */
+
+/* /sectionHome */
+
+/* reference */
+.reference {
+  padding: 1rem 160px;
+  background: #5e8dd1;
+  color: #33517a;
+}
+
+.reference ol {
+  margin-left: 3rem;
+}
+
+.theFooter {
+  background: #093349;
+  color: #addbe4;
+  padding: 1rem 4rem 1rem 6rem;
+}
+
+.footerSection {
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+}
+
+.knowMore {
+  text-align: center;
+}
+
+.knowMoreList {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.flexAround {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
 }
