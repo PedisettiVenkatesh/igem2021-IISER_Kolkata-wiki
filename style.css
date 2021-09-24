@@ -162,6 +162,14 @@ img {
   top: 2vh;
   left: 2vh;
 }
+
+.navigation-container {
+  position: fixed;
+  top: 50px;
+  left: 50px;
+  font-weight: bold;
+  line-height: 2;
+}
 /* /Navigation */
 
 .heroAfterImage {
