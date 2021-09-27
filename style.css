@@ -337,8 +337,11 @@ img {
 
 .rightSectionImage {
   padding-right: 3rem;
-  width: 100%;
   /* background: gold; */
+}
+
+.rightSectionImage img {
+  width: 100%;
 }
 
 .rightSectionText {
