@@ -19,7 +19,6 @@ window.onscroll = function () {
   let progressHeight = (window.pageYOffset / totalHeight) * 100;
   progressBar.style.height = progressHeight + "%";
 
-  console.log(window.pageYOffset, document.body.scrollTop, document.documentElement.scrollTop);
   if (document.body.scrollTop > overlayAppearValue || document.documentElement.scrollTop > overlayAppearValue || window.pageYOffset > overlayAppearValue) {
     topBtn.style.height = "50px";
     topBtn.style.opacity = "1";
