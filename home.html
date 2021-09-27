@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link rel="stylesheet" href="homeStyle.css" />
+  </head>
+  <body onload="preload()" class="noScroll">
+    <!-- preloader -->
+    <div id="preloader">
+      <!-- <img src="https://2021.igem.org/wiki/images/d/d6/T--IISER_Kolkata--image-preloader.gif" alt="[preloader image]" /> -->
+      <img src="images/preloader.gif" alt="" />
+      Loading...
+    </div>
+    <!-- /preloader -->
+
+    <!-- progressBar -->
+    <div id="scrollPath">
+      <div id="progressBar"></div>
+      <div id="progressBtn"></div>
+    </div>
+    <!-- /progressBar -->
+
+    <!-- toTop -->
+    <div id="toTop">
+      <a href="javascript:window.scrollTo(0, 0);">
+        <!-- <img src="https://2021.igem.org/wiki/images/d/d8/T--IISER_Kolkata--image-toTop-2x.png" alt="toTop" /> -->
+        <img src="images/offline/new/toTop-2x.png" alt="toTop" />
+      </a>
+    </div>
+    <!-- /toTop -->
+
+    <!-- navToggler -->
+    <div id="navToggler">
+      <!-- <img src="https://2021.igem.org/wiki/images/6/67/T--IISER_Kolkata--image-toggleBtn-2x.png" alt="#NAV#" /> -->
+      <img src="./images/offline/new/toggleBtn-2x.png" alt="#NAV#" />
+    </div>
+    <!-- /navToggler -->
+
+    <!-- navigation -->
+    <nav class="navigation-container">
+      <div class="navigation">
+        <!-- <img src="https://2021.igem.org/wiki/images/0/0e/T--IISER_Kolkata--image-navBG-2x.png" alt="" /> -->
+        <img src="images/offline/navBG-2x.png" alt="" />
+        <div class="navList">
+          <ol>
+            <li class="navDrop"><a href="https://2021.igem.org/Team:IISER_Kolkata">Home</a></li>
+            <li class="navDrop">
+              <a href="javascript:void();">
+                Team
+                <div class="navDropList">
+                  <ul>
+                    <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Team">Team</a></li>
+                    <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Attributions">Attributions</a></li>
+                    <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Collaborations">Collaborations</a></li>
+                  </ul>
+                </div>
+              </a>
+            </li>
+            <li class="navDrop">
+              <a href="javascript:void();">
+                Project
+                <div class="navDropList">
+                  <ul>
+                    <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Communication">Communication</a></li>
+                    <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Contribution">Contribution</a></li>
+                    <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Description">Description</a></li>
+                    <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Engineering">Engineering</a></li>
+                    <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Experiments">Experiments</a></li>
+                    <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Implementation">Implementation</a></li>
+                    <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Notebook">Notebook</a></li>
+                    <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Partnership">Partnership</a></li>
+                    <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Proof_Of_Concept">Proof Of Concept</a></li>
+                    <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Results">Results</a></li>
+                  </ul>
+                </div>
+              </a>
+            </li>
+            <li class="navDrop">
+              <a href="javascript:void();">
+                Parts
+                <div class="navDropList">
+                  <ul>
+                    <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Part_Collection">Part Collection</a></li>
+                    <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Parts">Parts</a></li>
+                    <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Improve">Improve</a></li>
+                  </ul>
+                </div>
+              </a>
+            </li>
+            <li class="navDrop"><a href="https://2021.igem.org/Team:IISER_Kolkata/Safety">Safety</a></li>
+            <li class="navDrop"><a href="https://2021.igem.org/Team:IISER_Kolkata/Human_Practices">Human Practices</a></li>
+            <li class="navDrop">
+              <a href="javascript:void();">
+                Awards
+                <div class="navDropList">
+                  <ul>
+                    <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Education">Education</a></li>
+                    <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Entrepreneurship">Entrepreneurship</a></li>
+                    <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Hardware">Hardware</a></li>
+                    <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Inclusivity">Inclusivity</a></li>
+                    <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Measurement">Measurement</a></li>
+                    <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Model">Model</a></li>
+                    <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Plant">Plant</a></li>
+                    <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Software">Software</a></li>
+                    <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Sustainable">Sustainable</a></li>
+                  </ul>
+                </div>
+              </a>
+            </li>
+            <li class="navDrop"><a href="https://2021.igem.org/Team:IISER_Kolkata/Poster">Poster</a></li>
+          </ol>
+        </div>
+      </div>
+    </nav>
+    <!-- /navigation -->
+
+    <!-- IISER KOLKATA CONTAINER -->
+    <div class="iiserKolkata">
+      <!--  -->
+
+      <!-- hero -->
+      <div id="hero">
+        <!-- <img src="https://2021.igem.org/wiki/images/2/29/T--IISER_Kolkata--image-HomeHero.png" alt="" /> -->
+        <img src="images/offline/HomeHero-3x.png" alt="" />
+      </div>
+      <!-- /hero -->
+
+      <div class="indentContainer centerImage">
+        <!-- <img src="https://2021.igem.org/wiki/images/7/7e/T--IISER_Kolkata--image-twoCows-1x.png" alt="image_twoCows" /> -->
+        <img src="images/offline/elements-2x/twoCows-2x.png" alt="" />
+      </div>
+
+      <div class="indentContainer">
+        <section class="impText">
+          <div class="leftAlign">
+            <p>Do you know a <b class="highlightBlue">secret formula</b> to boost infinite energy?</p>
+          </div>
+        </section>
+        <p class="centerAlign">it's <b class="largeText highlightYellow">MILK</b></p>
+
+        <section class="rightSection">
+          <div>
+            <div class="rightSectionImage">
+              <img src="images/offline/new/milkProduct-2x.png" alt="" />
+            </div>
+          </div>
+          <div>
+            <div class="rightSectionText rightAlign">
+              <p>Milk and its derivatives are one of the primary sources of nutrition. Globally, <b>more than 6 billion people consume milk and its products.</b></p>
+              <p><b>480,256,000</b> tonnes of milk has been produced globally and <b>198,400.000</b> tonnes of milk has been produced in India, in 2020.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="leftSection">
+          <div>
+            <div class="leftSectionText leftAlign">
+              <p>Milk is the leading agricultural produce in India with the Dairy industry contributing <b>5.3%</b> to India’s agricultural <b>GDP.</b></p>
+            </div>
+          </div>
+          <div>
+            <div class="leftSectionImage">
+              <img src="images/offline/new/graphIndia-2x.png" alt="" />
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <div class="indentContainer">
+        <section class="impText">
+          <div class="rightAlign">
+            <p>However, there is a <b class="highlightPeru">silent-killer</b> affecting our dairy industry...</p>
+          </div>
+        </section>
+
+        <section class="rightSection">
+          <div>
+            <div class="rightSectionImage">
+              <img src="images/offline/new/cow70-2x.png" alt="" />
+            </div>
+          </div>
+          <div>
+            <div class="rightSectionText rightAlign">
+              <p>Due to a silent killer disease called <b>Bovine Mastitis</b> disease, Out of the loss incurred in milk production, <b>70% </b>of it accounts to sub-clinical mastitis in India. As per <b>NDRI</b>, the estimated economic loss due to mastitis is <b>INR 7165.51 crore per annum.</b></p>
+              <p>Absence of visible symptoms in the sub-clinical stage of the disease makes it difficult to detect the disease using available detection techniques.</p>
+              <p>The disease in chronic stage can lead to <b>fatality</b> of bovines.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="leftSection">
+          <div>
+            <div class="leftSectionText leftAlign">
+              <p>Available treatment methods use broad-spectrum antibiotics.</p>
+              <p><b>2730 tonnes</b> of antibiotics are fed into the dairy sector.</p>
+            </div>
+          </div>
+          <div>
+            <div class="leftSectionImage">
+              <img src="images/offline/new/medicine-2x.png" alt="" />
+            </div>
+          </div>
+        </section>
+
+        <section class="leftSection">
+          <div>
+            <div class="leftSectionText leftAlign">
+              <p>This leads to a steady development of <b>antimicrobial resistance</b> in mastitis-causing pathogenic bacteria.</p>
+              <p>These antibiotics can also contaminate milk that we consume, creating <b class="highlightBlue">severe health problems in humans.</b></p>
+              <p>
+                <b> <p>So the Need of the Hour is to...</p></b>
+              </p>
+            </div>
+          </div>
+          <div>
+            <div class="leftSectionImage">
+              <img src="images/offline/new/graphGrowth-2x.png" alt="" />
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <div class="indentContainer">
+        <section class="impText">
+          <div class="rightAlign">
+            <p>Develop an <b>accurate, easy-to-use, point of care, portable, cheap detection kit.</b></p>
+            <p>Along with An <b>Antibiotic-free treatment system.</b></p>
+            <p>Hence <b class="highlightYellow">We Propose</b></p>
+            <p>A <b class="highlightBlue">3-way breakthrough</b> to tackle subclinical bovine mastitis</p>
+          </div>
+        </section>
+
+        <section class="leftSection">
+          <div>
+            <div class="leftSectionText leftAlign">
+              <h2>"Prevention is better than cure"</h2>
+              <p>
+                Maintaining proper hygienic methods while milking can stop the spread of this disease. Our <a href="https://2021.igem.org/Team:IISER_Kolkata/Human_Practices"><b>Human Practices</b></a> team has in-person spread awareness on the methods of hygienic milking among the stakeholders.
+              </p>
+            </div>
+          </div>
+          <div>
+            <div class="leftSectionImage">
+              <img src="images/offline/new/prevention-2x.png" alt="" />
+            </div>
+          </div>
+        </section>
+
+        <section class="rightSection">
+          <div>
+            <div class="rightSectionImage">
+              <img src="images/offline/new/detection-2x.png" alt="" />
+            </div>
+          </div>
+          <div>
+            <div class="rightSectionText rightAlign">
+              <h2>Detection</h2>
+              <p>The present detection methods are expensive, not easily available, and are not precise. We propose <b>a cheap, fast, point-of-care, portable, easy-to-use colorimetric detection kit</b> to specifically detect the Bovine Mastitis disease in the subclinical stage and prevent the disease from progressing to chronic stages.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="leftSection">
+          <div>
+            <div class="leftSectionText leftAlign">
+              <h2>Treatment</h2>
+              <p>
+                We propose an antibiotics-free cure for sub-clinical bovine mastitis using narrow-spectrum bacteriocins. When our GMO will be injected via intra-mammary injection into the tissues of the udder, it will specifically sense the presence of subclinical bovine mastitis causing pathogens and kill them, thus curing the cow.
+              </p>
+            </div>
+          </div>
+          <div>
+            <div class="leftSectionImage">
+              <img src="images/offline/new/cowTreatment-2x.png" alt="" />
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <div class="indentContainer">
+        <section class="knowMore">
+          <h2>Know More at...</h2>
+          <div class="knowMoreList">
+            <a href="javascript:void();">
+              <!-- <img src="https://2021.igem.org/wiki/images/2/2d/T--IISER_Kolkata--image-project-2x.png" alt="Project" /> -->
+              <img src="images/offline/new/project-2x.png" alt="" />
+            </a>
+            <a href="https://2021.igem.org/Team:IISER_Kolkata/Experiments">
+              <!-- <img src="https://2021.igem.org/wiki/images/5/58/T--IISER_Kolkata--image-experiments-2x.png" alt="Experiments" /> -->
+              <img src="/images/offline/new/experiment-2x.png" alt="" />
+            </a>
+            <a href="https://2021.igem.org/Team:IISER_Kolkata/Model">
+              <!-- <img src="https://2021.igem.org/wiki/images/c/c4/T--IISER_Kolkata--image-model-2x.png" alt="Model" />  -->
+              <img src="/images/offline/new/model-2x.png" alt="" />
+            </a>
+            <a href="https://2021.igem.org/Team:IISER_Kolkata/Human_Practices">
+              <!-- <img src="https://2021.igem.org/wiki/images/4/49/T--IISER_Kolkata--image-HumanPractices-2x.png" alt="HumanPractices" /> -->
+              <img src="/images/offline/new/HumanPractices-2x.png" alt="" />
+            </a>
+          </div>
+        </section>
+      </div>
+
+      <section class="reference">
+        <div class="wave topWave">
+          <!--  -->
+        </div>
+        <div class="indentContainer">
+          <h2>References</h2>
+          <ol>
+            <li><a href="https://en.wikipedia.org/wiki/Milk">Milk - Wikipedia</a></li>
+            <li><a href="https://knoema.com/atlas/topics/Agriculture/Live-Stock-Production-Production-Quantity/Production-of-milk#:~:text=The%20world's%20total%20production%20of,480%2C256%20thousand%20tonnes%20in%202020">Production of milk - Knoema</a></li>
+            <li><a href="https://economictimes.indiatimes.com/news/economy/agriculture/economic-survey-milk-production-rises-by-five-percent-to-198-4-million-tonnes-in-2019-20/articleshow/80585416.cms#:~:text=NEW%20DELHI%3A%20India's%20milk%20production,20%2C%E2%80%9D%20the%20survey%20said">Economic Survey: Milk production rises by five percent to 198.4 million tonnes in 2019-20</a></li>
+            <li><a href="https://www.ejmanager.com/mnstemps/68/68-1551673827.pdf?t=1632494459">J. Shilpa Shree, M. Prabu An Outlook on Growth of Dairy Sector and its Contribution to Indian Economy. International Journal of Livestock Research. Vol 9(6), 240-247</a></li>
+            <li><a href="https://www.medicinesjournal.com/download/38/1-2-36-714.pdf">Dr. Lakshmi R. A Review on Mastitis. International Journal of Medicine Research. Vol 1(2), 118-123, 2016</a></li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- footer -->
+      <footer>
+        <div class="theFooter">
+          <div class="wave topWave">
+            <!--  -->
+          </div>
+          <div class="indentContainer">
+            <div class="footerHead">
+              <h3>Our Sponsors</h3>
+              <div class="contacts">
+                <b>Contact us at - </b>
+                <a href="javascript:void();"> <img src="/images/offline/new/insta.png" alt="instagram" /></a>
+                <a href="javascript:void();"> <img src="/images/offline/new/facebook.png" alt="facebook" /></a>
+                <a href="javascript:void();"> <img src="/images/offline/new/twitter.png" alt="twitter" /></a>
+                <a href="javascript:void();"> <img src="/images/offline/new/linkedin.png" alt="linkedin" /></a>
+              </div>
+            </div>
+            <div class="sponsors">
+              <img src="/images/offline/new/igemiiserk-2x.png" alt="IGEM-IISERKolkata" />
+              <img src="/images/offline/new/promega-2x.png" alt="Promega" />
+              <img src="/images/offline/new/RCT-2x.png" alt="RCT" />
+              <img src="/images/offline/new/iiserkol-2x.png" alt="IISERKolkata" />
+              <img src="/images/offline/new/IDT-2x.png" alt="IDT" />
+              <img src="/images/offline/new/biolab-2x.png" alt="NewEnglandBioLabs" />
+              <img src="/images/offline/new/benchling-2x.png" alt="Benchling" />
+              <img src="/images/offline/new/twist-2x.png" alt="TWIST" />
+              <img src="/images/offline/new/igem-2x.png" alt="IGEM" />
+            </div>
+          </div>
+        </div>
+      </footer>
+      <!-- /footer -->
+    </div>
+    <!-- /IISER KOLKATA CONTAINER -->
+
+    <!-- JS -->
+    <script src="app.js"></script>
+    <!-- /JS -->
+  </body>
+</html>

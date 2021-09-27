@@ -32,6 +32,7 @@ window.onscroll = function () {
 
 navToggler.onclick = function () {
   navigationContainer.classList.toggle("navigation-expanded");
+  removeNavDropExpanded();
 };
 
 // navigationContainer.onclick = function () {
