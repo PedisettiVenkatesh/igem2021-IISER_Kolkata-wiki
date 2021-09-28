@@ -55,7 +55,7 @@ html {
 
 body {
   color: var(--color-body) !important;
-  font-family: "Montserrat", Arial, Helvetica, sans-serif !important;
+  font-family: "Muller", "Montserrat", Arial, Helvetica, sans-serif !important;
   margin: 0;
   padding: 0;
   font-size: 1.5rem;
@@ -95,6 +95,7 @@ img {
   min-width: 100vw;
   width: 100vw;
   max-width: 100vw !important;
+  font-family: "Muller", "Montserrat", Arial, Helvetica, sans-serif !important;
   overflow-y: hidden;
   background-image: url("https://2021.igem.org/wiki/images/5/51/T--IISER_Kolkata--image-bg-1x.png") !important;
   /* background-image: url("./images/offline/BG-2x.png") !important; */
@@ -115,6 +116,7 @@ img {
   font-weight: bold;
   height: 100vh;
   left: 0;
+  font-size: 1rem;
   opacity: 1;
   position: fixed;
   text-align: center !important;
@@ -310,7 +312,7 @@ img {
   width: 50%;
 }
 
-.centerImage h2 {
+.centerImage h3 {
   font-size: 4.5rem !important;
 }
 /* /centerImage */
@@ -321,7 +323,7 @@ img {
 }
 
 .highlightYellow {
-  color: goldenrod;
+  color: rgb(228, 198, 32);
 }
 
 .milkText {
@@ -400,6 +402,7 @@ img {
   width: auto;
   height: auto;
   max-width: 100%;
+  min-height: 300px;
   max-height: 450px;
 }
 
@@ -439,24 +442,28 @@ img {
   width: auto;
   height: auto;
   max-width: 100%;
+  min-height: 300px;
   max-height: 450px;
 }
 /* /leftSection */
 
 /* knowMoreSection */
-
 .knowMore {
+  line-height: 1.5;
   text-align: center !important;
   color: #093349;
   text-shadow: 2px 2px #33517a;
+  padding-bottom: 2rem !important ;
 }
 
-.knowMore h2 {
+.knowMore h3 {
+  margin-bottom: 1.5rem !important;
   font-size: 4.5rem !important;
   color: #093349;
 }
 
 .knowMoreList {
+  padding-top: 3rem !important;
   display: flex;
   justify-content: space-evenly;
   align-items: center !important;
@@ -475,13 +482,17 @@ img {
 /* reference */
 .reference {
   margin-top: 8rem;
-  font-size: 1.2rem !important;
+  font-size: 1rem !important;
   background: #5e8dd1;
   color: #23354e;
   line-height: 1.5;
   padding-top: 2rem;
   padding-bottom: 5rem;
   position: relative;
+}
+
+.reference h3 {
+  color: #23354e !important;
 }
 
 .reference ol {
@@ -503,7 +514,7 @@ img {
 }
 
 .topWave {
-  background-image: url("/images/offline/topWave-2x.png");
+  background-image: url("https://2021.igem.org/wiki/images/8/8a/T--IISER_Kolkata--image-topWave-2x.png");
 }
 
 .bottomWave {
@@ -513,6 +524,7 @@ img {
 
 /* footer */
 .theFooter {
+  padding-top: 2rem;
   background: #093349;
   width: 100%;
   position: relative;
@@ -522,6 +534,10 @@ img {
   font-size: 2.5rem !important;
   color: #5e8dd1 !important;
   position: relative;
+}
+
+.footerHead h3 {
+  color: #5e8dd1 !important;
 }
 
 .contacts {

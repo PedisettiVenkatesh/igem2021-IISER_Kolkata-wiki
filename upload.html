@@ -64,7 +64,7 @@
 
       body {
         color: var(--color-body) !important;
-        font-family: "Montserrat", Arial, Helvetica, sans-serif !important;
+        font-family: "Muller", "Montserrat", Arial, Helvetica, sans-serif !important;
         margin: 0;
         padding: 0;
         font-size: 1.5rem;
@@ -104,6 +104,7 @@
         min-width: 100vw;
         width: 100vw;
         max-width: 100vw !important;
+        font-family: "Muller", "Montserrat", Arial, Helvetica, sans-serif !important;
         overflow-y: hidden;
         background-image: url("https://2021.igem.org/wiki/images/5/51/T--IISER_Kolkata--image-bg-1x.png") !important;
         /* background-image: url("./images/offline/BG-2x.png") !important; */
@@ -123,6 +124,7 @@
         background: #fff;
         font-weight: bold;
         height: 100vh;
+        font-size: 1rem;
         left: 0;
         opacity: 1;
         position: fixed;
@@ -319,7 +321,7 @@
         width: 50%;
       }
 
-      .centerImage h2 {
+      .centerImage h3 {
         font-size: 4.5rem !important;
       }
       /* /centerImage */
@@ -330,7 +332,10 @@
       }
 
       .highlightYellow {
-        color: goldenrod;
+        color: rgb(228, 198, 32);
+      }
+
+      .milkText {
         font-family: cursive;
         text-shadow: 4px 4px rgb(49, 48, 41);
       }
@@ -345,7 +350,7 @@
 
       .centerAlign {
         padding: 1rem 0;
-        width: 70%;
+        width: 85%;
         text-align: center !important;
       }
 
@@ -357,12 +362,17 @@
         line-height: 1.5;
         font-size: 8rem !important;
       }
+
+      .mediumText {
+        line-height: 1.2;
+        font-size: 5rem !important;
+      }
       /* /textFormats */
 
       /* impText */
       .impText {
         font-weight: bold;
-        font-size: 3rem !important;
+        font-size: 2rem !important;
         width: 100%;
       }
 
@@ -401,12 +411,13 @@
         width: auto;
         height: auto;
         max-width: 100%;
+        min-height: 300px;
         max-height: 450px;
       }
 
       .rightSectionText {
         padding-left: 8rem;
-        font-size: 2rem !important;
+        font-size: 1.7rem !important;
         /* background: dodgerblue; */
       }
       /* /rightSection */
@@ -426,7 +437,7 @@
 
       .leftSectionText {
         padding-right: 8rem;
-        font-size: 2rem !important;
+        font-size: 1.7rem !important;
         /* background: dodgerblue; */
       }
 
@@ -440,24 +451,28 @@
         width: auto;
         height: auto;
         max-width: 100%;
+        min-height: 300px;
         max-height: 450px;
       }
       /* /leftSection */
 
       /* knowMoreSection */
-
       .knowMore {
+        line-height: 1.5;
         text-align: center !important;
         color: #093349;
         text-shadow: 2px 2px #33517a;
+        padding-bottom: 2rem !important ;
       }
 
-      .knowMore h2 {
+      .knowMore h3 {
+        margin-bottom: 1.5rem !important;
         font-size: 4.5rem !important;
         color: #093349;
       }
 
       .knowMoreList {
+        padding-top: 3rem !important;
         display: flex;
         justify-content: space-evenly;
         align-items: center !important;
@@ -476,13 +491,16 @@
       /* reference */
       .reference {
         margin-top: 8rem;
-        font-size: 1.2rem !important;
+        font-size: 1rem !important;
         background: #5e8dd1;
         color: #23354e;
         line-height: 1.5;
         padding-top: 2rem;
         padding-bottom: 5rem;
         position: relative;
+      }
+      .reference h3 {
+        color: #23354e !important;
       }
 
       .reference ol {
@@ -504,7 +522,7 @@
       }
 
       .topWave {
-        background-image: url("/images/offline/topWave-2x.png");
+        background-image: url("https://2021.igem.org/wiki/images/8/8a/T--IISER_Kolkata--image-topWave-2x.png");
       }
 
       .bottomWave {
@@ -517,12 +535,17 @@
         background: #093349;
         width: 100%;
         position: relative;
+        padding-top: 2rem;
       }
 
       .footerHead {
         font-size: 2.5rem !important;
         color: #5e8dd1 !important;
         position: relative;
+      }
+
+      .footerHead h3 {
+        color: #5e8dd1 !important;
       }
 
       .contacts {
@@ -672,7 +695,7 @@
             <p>Do you know a <b class="highlightBlue">secret formula</b> to boost infinite energy?</p>
           </div>
         </section>
-        <p class="centerAlign">it's <b class="largeText highlightYellow">MILK</b></p>
+        <p class="centerAlign">it's <b class="largeText highlightYellow milkText">MILK</b></p>
         <section class="rightSection">
           <div>
             <div class="rightSectionImage">
@@ -758,16 +781,19 @@
       <div class="indentContainer">
         <section class="impText">
           <div class="rightAlign">
-            <p>Develop an <b>accurate, easy-to-use, point of care, portable, cheap detection kit.</b></p>
-            <p>Along with An <b>Antibiotic-free treatment system.</b></p>
-            <p class="centerAlign">Hence <b class="highlightYellow">We Propose</b></p>
+            <p>Develop an <b>accurate, easy-to-use, point of care, portable, cheap detection kit.</b> Along with An <b>Antibiotic-free treatment system.</b></p>
+          </div>
+        </section>
+        <p class="centerAlign">Hence <b class="highlightYellow mediumText">We Propose</b></p>
+        <section class="impText">
+          <div class="rightAlign">
             <p>A <b class="highlightBlue">3-way breakthrough</b> to tackle subclinical bovine mastitis</p>
           </div>
         </section>
         <section class="leftSection">
           <div>
             <div class="leftSectionText leftAlign">
-              <h2>"Prevention is better than cure"</h2>
+              <h3>"Prevention is better than cure"</h3>
               <p>
                 Maintaining proper hygienic methods while milking can stop the spread of this disease. Our <a href="https://2021.igem.org/Team:IISER_Kolkata/Human_Practices"><b>Human Practices</b></a> team has in-person spread awareness on the methods of hygienic milking among the stakeholders.
               </p>
@@ -789,7 +815,7 @@
           </div>
           <div>
             <div class="rightSectionText rightAlign">
-              <h2>Detection</h2>
+              <h3>Detection</h3>
               <p>The present detection methods are expensive, not easily available, and are not precise. We propose <b>a cheap, fast, point-of-care, portable, easy-to-use colorimetric detection kit</b> to specifically detect the Bovine Mastitis disease in the subclinical stage and prevent the disease from progressing to chronic stages.</p>
             </div>
           </div>
@@ -797,7 +823,7 @@
         <section class="leftSection">
           <div>
             <div class="leftSectionText leftAlign">
-              <h2>Treatment</h2>
+              <h3>Treatment</h3>
               <p>
                 We propose an antibiotics-free cure for sub-clinical bovine mastitis using narrow-spectrum bacteriocins. When our GMO will be injected via intra-mammary injection into the tissues of the udder, it will specifically sense the presence of subclinical bovine mastitis causing pathogens and kill them, thus curing the cow.
               </p>
@@ -813,7 +839,7 @@
       </div>
       <div class="indentContainer">
         <section class="knowMore">
-          <h2>Know More at...</h2>
+          <h3>Know More at...</h3>
           <div class="knowMoreList">
             <a href="javascript:void();">
               <img src="https://2021.igem.org/wiki/images/2/2d/T--IISER_Kolkata--image-project-2x.png" alt="Project" />
@@ -839,7 +865,7 @@
           <!-- wave border  -->
         </div>
         <div class="indentContainer">
-          <h2>References</h2>
+          <h3>References</h3>
           <ol>
             <li><a href="https://en.wikipedia.org/wiki/Milk">Milk - Wikipedia</a></li>
             <li><a href="https://knoema.com/atlas/topics/Agriculture/Live-Stock-Production-Production-Quantity/Production-of-milk#:~:text=The%20world's%20total%20production%20of,480%2C256%20thousand%20tonnes%20in%202020">Production of milk - Knoema</a></li>
@@ -860,22 +886,22 @@
               <h3>Our Sponsors...</h3>
               <div class="contacts">
                 <b>Contact us at - </b>
-                <a href="javascript:void();"> <img src="/images/offline/new/insta.png" alt="instagram" /></a>
-                <a href="javascript:void();"> <img src="/images/offline/new/facebook.png" alt="facebook" /></a>
-                <a href="javascript:void();"> <img src="/images/offline/new/twitter.png" alt="twitter" /></a>
-                <a href="javascript:void();"> <img src="/images/offline/new/linkedin.png" alt="linkedin" /></a>
+                <a href="javascript:void();"> <img src="https://2021.igem.org/wiki/images/e/ec/T--IISER_Kolkata--image-instagramIcon.png" alt="instagram" /></a>
+                <a href="javascript:void();"> <img src="https://2021.igem.org/wiki/images/0/02/T--IISER_Kolkata--image-facebookIcon.png" alt="facebook" /></a>
+                <a href="javascript:void();"> <img src="https://2021.igem.org/wiki/images/e/e2/T--IISER_Kolkata--image-twitterIcon.png" alt="twitter" /></a>
+                <a href="javascript:void();"> <img src="https://2021.igem.org/wiki/images/1/15/T--IISER_Kolkata--image-linkedinIcon.png" alt="linkedin" /></a>
               </div>
             </div>
             <div class="sponsors">
-              <img src="/images/offline/new/igemiiserk-2x.png" alt="IGEM-IISERKolkata" />
-              <img src="/images/offline/new/promega-2x.png" alt="Promega" />
-              <img src="/images/offline/new/RCT-2x.png" alt="RCT" />
-              <img src="/images/offline/new/iiserkol-2x.png" alt="IISERKolkata" />
-              <img src="/images/offline/new/IDT-2x.png" alt="IDT" />
-              <img src="/images/offline/new/biolab-2x.png" alt="NewEnglandBioLabs" />
-              <img src="/images/offline/new/benchling-2x.png" alt="Benchling" />
-              <img src="/images/offline/new/twist-2x.png" alt="TWIST" />
-              <img src="/images/offline/new/igem-2x.png" alt="IGEM" />
+              <img src="https://2021.igem.org/wiki/images/9/90/T--IISER_Kolkata--image-igemiiserk-2x.png" alt="IGEM-IISERKolkata" />
+              <img src="https://2021.igem.org/wiki/images/f/f7/T--IISER_Kolkata--image-promegaLogo.png" alt="Promega" />
+              <img src="https://2021.igem.org/wiki/images/f/fb/T--IISER_Kolkata--image-RCTLogo.png" alt="RCT" />
+              <img src="https://2021.igem.org/wiki/images/e/e3/T--IISER_Kolkata--image-iiserkLogo.png" alt="IISERKolkata" />
+              <img src="https://2021.igem.org/wiki/images/c/cb/T--IISER_Kolkata--image-IDTLogo.png" alt="IDT" />
+              <img src="https://2021.igem.org/wiki/images/4/46/T--IISER_Kolkata--image-bioLabsLogo.png" alt="NewEnglandBioLabs" />
+              <img src="https://2021.igem.org/wiki/images/6/68/T--IISER_Kolkata--image-benchlingLogo.png" alt="Benchling" />
+              <img src="https://2021.igem.org/wiki/images/0/0a/T--IISER_Kolkata--image-twistLogo.png" alt="TWIST" />
+              <img src="https://2021.igem.org/wiki/images/0/0b/T--IISER_Kolkata--image-igemLogo.png" alt="IGEM" />
             </div>
           </div>
         </div>
@@ -883,7 +909,6 @@
       <!-- /footer -->
     </div>
     <!-- /IISER KOLKATA CONTAINER -->
-
     <!-- JS -->
     <script>
       const progressBar = document.getElementById("progressBar");
