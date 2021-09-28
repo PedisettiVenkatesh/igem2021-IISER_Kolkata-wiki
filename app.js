@@ -12,6 +12,7 @@ function preload() {
   preloader.style.zIndex = "-999999";
   document.documentElement.scrollTop = 0;
   document.body.classList.remove("noScroll");
+  preloader.style.visibility = "hidden";
 }
 
 window.onscroll = function () {

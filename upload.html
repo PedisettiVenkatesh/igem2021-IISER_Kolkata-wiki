@@ -1,917 +1,954 @@
-<!-- <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>IISER Kolkata IGEM Team - Home</title>
-  <!- <link rel="stylesheet" href="Style.css" /> ->
-</head> -->
-
-<style>
-  :root {
-    --color-body: #000;
-  }
-
-  *,
-  *::after,
-  *::before {
-    box-sizing: border-box;
-  }
-
-  /* typography */
-  html {
-    font-size: 100% !important;
-    scroll-behavior: smooth !important;
-    scrollbar-width: none !important;
-  }
-
-  body {
-    color: var(--color-body) !important;
-    font-family: "Montserrat", Arial, Helvetica, sans-serif !important;
-    margin: 0;
-    padding: 0;
-    font-size: 1.5rem;
-  }
-  /* /typography */
-
-  /* links */
-  a,
-  a:link,
-  a:visited,
-  a:active {
-    color: inherit !important;
-    text-decoration: underline !important;
-  }
-
-  a:hover {
-    color: initial;
-  }
-  /* /links */
-
-  /* images */
-  img {
-    width: 100%;
-    max-width: 100%;
-  }
-  /* /images */
-
-  /* containers */
-  .iiserKolkata {
-    min-width: 100vw;
-    width: 100vw;
-    max-width: 100vw !important;
-    overflow-y: hidden;
-    /* background-image: url("https://2021.igem.org/wiki/images/5/51/T--IISER_Kolkata--image-bg-1x.png") !important; */
-    background-image: url("./images/offline/BG-2x.png") !important;
-    background-size: 100vw !important;
-    background-repeat: repeat-y;
-    scrollbar-width: none !important;
-  }
-
-  .indentContainer {
-    padding: 1rem 5rem 1rem 6rem !important;
-    text-align: justify;
-  }
-  /* /containers */
-
-  /* preloader */
-  #preloader {
-    background: #fff;
-    font-weight: bold;
-    height: 100vh;
-    left: 0;
-    opacity: 1;
-    position: fixed;
-    text-align: center;
-    top: 0;
-    transition: all 1s ease-in-out 0.5s;
-    width: 100%;
-    z-index: 999999;
-  }
-
-  #preloader img {
-    width: 20vw;
-    margin: 30vh 40vw 0;
-  }
-  /* /preloader */
-
-  /* progressBar */
-  #scrollPath {
-    /* box-shadow: inset 0 0 5px #000; */
-    background: rgb(221, 157, 157);
-    border-radius: 5px;
-    height: 50vh;
-    left: 2.2rem;
-    bottom: 10rem;
-    opacity: 0;
-    overflow: hidden;
-    position: fixed;
-    width: 10px;
-    z-index: 9;
-    transition: all 0.3s linear;
-  }
-
-  #progressBar {
-    /* background: gold; */
-    /* box-shadow: inset 0 0 5px #000; */
-    background: linear-gradient(to top, goldenrod, gold);
-    border-radius: 5px;
-    box-shadow: 0 10px 10px 5px rgb(94, 84, 30);
-    height: 0%;
-    max-height: 100%;
-    width: 100%;
-    /* transition: all 0.5s linear; */
-  }
-
-  #progressBtn {
-    background: rgb(74, 164, 253);
-    border-radius: 10px;
-    height: 20px;
-    position: fixed;
-    transform: translate(-25%, -50%);
-    width: 20px;
-    z-index: 9;
-  }
-  /* /progressBar */
-
-  /* toTop */
-  #toTop {
-    border-radius: 55%;
-    position: fixed;
-    bottom: 3rem;
-    left: 1rem;
-    width: 50px;
-    height: 0;
-    opacity: 0;
-    transition: all 0.3s;
-    z-index: 9;
-  }
-
-  #toTop:hover {
-    box-shadow: 0 0 5px 1px #000;
-    scale: 1.1;
-  }
-  /* /toTop */
-
-  /* navToggler */
-  #navToggler {
-    width: 40px;
-    height: max-content;
-    /* box-shadow: 0 0 10px 5px #000; */
-    border-radius: 2px;
-    position: fixed;
-    top: 2.5rem;
-    left: 1.5rem;
-    cursor: pointer;
-    z-index: 999;
-  }
-  /* /navToggler */
-
-  /* navigation */
-  .navigation-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background: #0933498a;
-    visibility: hidden;
-    opacity: 0.1;
-    z-index: 998;
-    transition: all 0.3s;
-  }
-
-  .navigation-container.navigation-expanded {
-    visibility: visible;
-    opacity: 1;
-  }
-
-  .navigation {
-    overflow: hidden;
-    width: 50%;
-    position: absolute;
-    border-radius: 50%;
-    top: -10%;
-    left: -10%;
-  }
-
-  .navList {
-    width: max-content;
-    position: absolute;
-    top: 20%;
-    left: 30%;
-    font-size: 1.5rem;
-    line-height: 2;
-    font-weight: bold;
-    /* color: #093349; */
-  }
-
-  .navList > ol li:hover {
-    color: #093349;
-    /* text-shadow: 0 0 5px #093349; */
-  }
-
-  .navDrop {
-    width: max-content;
-  }
-
-  .navDrop li:hover {
-    color: #093349;
-    text-shadow: 0 0 5px #093349;
-  }
-
-  .navDropList {
-    border-radius: 50%;
-    /* background-image: url("https://2021.igem.org/wiki/images/5/5c/T--IISER_Kolkata--image-subNavBG-2x.png"); */
-    background-image: url("./images/offline/new/subNavBG.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    position: fixed;
-    top: 50vh;
-    left: 50vw;
-    min-width: 50vw;
-    min-height: 80vh;
-    width: max-content;
-    height: max-content;
-    transform: translate(-10%, -50%);
-    opacity: 0.1;
-    visibility: hidden;
-    line-height: 2;
-    transition: all 0.3s;
-    padding: 10rem 5rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .navDropList li {
-    text-align: center;
-    list-style: none;
-    transform: translateX(-20%);
-  }
-
-  .navigation-container.navigation-expanded .navDrop-expanded .navDropList {
-    visibility: visible;
-    opacity: 1;
-  }
-  /* /navigation */
-
-  /* hero */
-  #hero {
-    width: 100%;
-  }
-  /* /hero */
-
-  /* centerImage */
-  .centerImage {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .centerImage img {
-    width: 50%;
-  }
-
-  .centerImage h2 {
-    font-size: 4.5rem;
-  }
-  /* /centerImage */
-
-  /* textFormats */
-  .highlightBlue {
-    color: #5e8dd1;
-  }
-
-  .highlightYellow {
-    color: goldenrod;
-    font-family: cursive;
-    text-shadow: 4px 4px rgb(49, 48, 41);
-  }
-
-  .highlightPeru {
-    color: peru;
-  }
-
-  .rightAlign {
-    text-align: right;
-  }
-
-  .centerAlign {
-    width: 70%;
-    text-align: center;
-  }
-
-  .leftAlign {
-    text-align: left;
-  }
-
-  .largeText {
-    font-size: 8rem;
-  }
-  /* /textFormats */
-
-  /* impText */
-  .impText {
-    font-weight: bold;
-    font-size: 3rem;
-    width: 100%;
-  }
-
-  .impText > div {
-    width: 70%;
-  }
-
-  .impText .rightAlign {
-    width: 80%;
-    transform: translateX(25%);
-  }
-  /* /impText */
-
-  /* rightSection */
-  .rightSection {
-    /* background: #000; */
-    display: grid;
-    grid-template-columns: 40% 60%;
-    margin-top: 3rem;
-    margin-bottom: 5rem;
-  }
-
-  .rightSection > div {
-    display: flex;
-    /* justify-content: center; */
-    align-items: center;
-  }
-
-  .rightSectionImage {
-    padding-right: 3rem;
-    /* background: gold; */
-  }
-
-  .rightSectionImage img {
-    width: 100%;
-  }
-
-  .rightSectionText {
-    padding-left: 8rem;
-    font-size: 2rem;
-    /* background: dodgerblue; */
-  }
-  /* /rightSection */
-
-  /* leftSection */
-  .leftSection {
-    /* background: #ddd; */
-    display: grid;
-    grid-template-columns: 60% 40%;
-  }
-
-  .leftSection > div {
-    display: flex;
-    align-items: center;
-    margin-top: 5rem;
-  }
-
-  .leftSectionText {
-    padding-right: 8rem;
-    font-size: 2rem;
-    /* background: dodgerblue; */
-  }
-
-  .leftSectionImage {
-    /* background: gold; */
-    padding-left: 3rem;
-  }
-
-  .leftSectionImage img {
-    width: 100%;
-  }
-  /* /leftSection */
-
-  /* knowMoreSection */
-
-  .knowMore {
-    text-align: center;
-    color: #093349;
-    text-shadow: 2px 2px #33517a;
-  }
-
-  .knowMore h2 {
-    font-size: 4.5rem;
-    color: #093349;
-  }
-
-  .knowMoreList {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-  }
-
-  .knowMoreList img {
-    height: 12rem;
-    transition: all 0.3s;
-  }
-
-  .knowMore img:hover {
-    scale: 1.2;
-  }
-  /* /knowMoreSection */
-
-  /* reference */
-  .reference {
-    margin-top: 8rem;
-    font-size: 1.2rem;
-    background: #5e8dd1;
-    color: #23354e;
-    line-height: 1.5;
-    padding-top: 2rem;
-    padding-bottom: 5rem;
-    position: relative;
-  }
-
-  .reference ol {
-    margin-left: 3rem;
-  }
-
-  .reference li:hover {
-    text-shadow: 0 0 1px #093349;
-  }
-
-  .wave {
-    position: absolute;
-    top: -3.5rem;
-    left: 0;
-    background-repeat: repeat-x;
-    background-size: contain;
-    width: 100%;
-    height: 6rem;
-  }
-
-  .topWave {
-    background-image: url("/images/offline/topWave-2x.png");
-  }
-
-  .bottomWave {
-    background-image: url("/images/offline/topWave-2x.png");
-  }
-  /* /reference */
-
-  /* footer */
-  .theFooter {
-    background: #093349;
-    width: 100%;
-    position: relative;
-  }
-
-  .footerHead {
-    font-size: 2.5rem;
-    color: #5e8dd1;
-    position: relative;
-  }
-
-  .contacts {
-    position: absolute;
-    font-size: 1rem;
-    top: 40%;
-    right: 0;
-  }
-
-  .contacts img {
-    width: 4rem;
-    padding: 0 0.5rem;
-  }
-
-  .sponsors {
-    padding-top: 3rem;
-    padding-bottom: 3.5rem;
-  }
-
-  .sponsors img {
-    width: 11rem;
-    padding: 1rem 1.5rem;
-  }
-  /* /footer */
-</style>
-
-<body onload="preload()" class="noScroll">
-  <!-- preloader -->
-  <div id="preloader">
-    <img src="https://2021.igem.org/wiki/images/d/d6/T--IISER_Kolkata--image-preloader.gif" alt="[preloader image]" />
-    <!-- <img src="images/preloader.gif" alt="" /> -->
-    Loading . . .
-  </div>
-  <!-- /preloader -->
-
-  <!-- progressBar -->
-  <div id="scrollPath">
-    <div id="progressBar"></div>
-    <div id="progressBtn"></div>
-  </div>
-  <!-- /progressBar -->
-
-  <!-- toTop -->
-  <div id="toTop">
-    <a href="javascript:window.scrollTo(0, 0);">
-      <img src="https://2021.igem.org/wiki/images/d/d8/T--IISER_Kolkata--image-toTop-2x.png" alt="toTop" />
-      <!-- <img src="images/offline/new/toTop-2x.png" alt="toTop" /> -->
-    </a>
-  </div>
-  <!-- /toTop -->
-
-  <!-- navToggler -->
-  <div id="navToggler">
-    <img src="https://2021.igem.org/wiki/images/6/67/T--IISER_Kolkata--image-toggleBtn-2x.png" alt="#NAV#" />
-    <!-- <img src="./images/offline/new/toggleBtn-2x.png" alt="#NAV#" /> -->
-  </div>
-  <!-- /navToggler -->
-
-  <!-- navigation -->
-  <nav class="navigation-container">
-    <div class="navigation">
-      <img src="https://2021.igem.org/wiki/images/0/0e/T--IISER_Kolkata--image-navBG-2x.png" alt="" />
-      <!-- <img src="images/offline/navBG-2x.png" alt="" /> -->
-      <div class="navList">
-        <ol>
-          <li class="navDrop"><a href="https://2021.igem.org/Team:IISER_Kolkata">Home</a></li>
-          <li class="navDrop">
-            <a href="javascript:void();">
-              Team
-              <div class="navDropList">
-                <ul>
-                  <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Team">Team</a></li>
-                  <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Attributions">Attributions</a></li>
-                  <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Collaborations">Collaborations</a></li>
-                </ul>
-              </div>
-            </a>
-          </li>
-          <li class="navDrop">
-            <a href="javascript:void();">
-              Project
-              <div class="navDropList">
-                <ul>
-                  <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Communication">Communication</a></li>
-                  <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Contribution">Contribution</a></li>
-                  <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Description">Description</a></li>
-                  <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Engineering">Engineering</a></li>
-                  <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Experiments">Experiments</a></li>
-                  <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Implementation">Implementation</a></li>
-                  <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Notebook">Notebook</a></li>
-                  <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Partnership">Partnership</a></li>
-                  <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Proof_Of_Concept">Proof Of Concept</a></li>
-                  <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Results">Results</a></li>
-                </ul>
-              </div>
-            </a>
-          </li>
-          <li class="navDrop">
-            <a href="javascript:void();">
-              Parts
-              <div class="navDropList">
-                <ul>
-                  <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Part_Collection">Part Collection</a></li>
-                  <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Parts">Parts</a></li>
-                  <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Improve">Improve</a></li>
-                </ul>
-              </div>
-            </a>
-          </li>
-          <li class="navDrop"><a href="https://2021.igem.org/Team:IISER_Kolkata/Safety">Safety</a></li>
-          <li class="navDrop"><a href="https://2021.igem.org/Team:IISER_Kolkata/Human_Practices">Human Practices</a></li>
-          <li class="navDrop">
-            <a href="javascript:void();">
-              Awards
-              <div class="navDropList">
-                <ul>
-                  <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Education">Education</a></li>
-                  <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Entrepreneurship">Entrepreneurship</a></li>
-                  <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Hardware">Hardware</a></li>
-                  <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Inclusivity">Inclusivity</a></li>
-                  <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Measurement">Measurement</a></li>
-                  <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Model">Model</a></li>
-                  <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Plant">Plant</a></li>
-                  <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Software">Software</a></li>
-                  <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Sustainable">Sustainable</a></li>
-                </ul>
-              </div>
-            </a>
-          </li>
-          <li class="navDrop"><a href="https://2021.igem.org/Team:IISER_Kolkata/Poster">Poster</a></li>
-        </ol>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IISER Kolkata IGEM Team - Home</title>
+    <!-- <link rel="stylesheet" href="Style.css" /> -->
+
+    <style>
+      /* CLEAR DEFAULT SETTINGS **************************************************/
+      #sideMenu,
+      #top_title,
+      .patrollink,
+      #firstHeading,
+      #home_logo,
+      #sideMenu {
+        display: none;
+      }
+      #content {
+        padding: 0px;
+        width: 100%;
+        margin-top: -7px;
+        margin-left: 0px;
+        border: none;
+      }
+      body,
+      html {
+        background-color: #d1eaf6;
+        width: 100%;
+        height: 100%;
+      }
+      #bodyContent h1,
+      #bodyContent h2,
+      #bodyContent h3,
+      #bodyContent h4,
+      #bodyContent h5 {
+        margin-bottom: 0px;
+      }
+
+      #bodyContent a[href ^="https://"], .link-https
+      {
+        padding-right: 0px;
+      }
+
+      /* #################################################################################### */
+      /* Our CSS */
+
+      :root {
+        --color-body: #000;
+      }
+
+      *,
+      *::after,
+      *::before {
+        box-sizing: border-box;
+      }
+
+      /* typography */
+      html {
+        font-size: 16px !important;
+        scroll-behavior: smooth !important;
+        scrollbar-width: none !important;
+      }
+
+      body {
+        color: var(--color-body) !important;
+        font-family: "Montserrat", Arial, Helvetica, sans-serif !important;
+        margin: 0;
+        padding: 0;
+        font-size: 1.5rem;
+      }
+
+      p {
+        line-height: 1.3 !important;
+        text-align: unset !important;
+        font-size: inherit !important;
+      }
+      /* /typography */
+
+      /* links */
+      a,
+      a:link,
+      a:visited,
+      a:active {
+        color: inherit !important;
+        text-decoration: underline !important;
+      }
+
+      a:hover {
+        color: initial;
+      }
+      /* /links */
+
+      /* images */
+      img {
+        width: 100%;
+        max-width: 100%;
+      }
+      /* /images */
+
+      /* containers */
+      .iiserKolkata {
+        font-size: 100%;
+        min-width: 100vw;
+        width: 100vw;
+        max-width: 100vw !important;
+        overflow-y: hidden;
+        background-image: url("https://2021.igem.org/wiki/images/5/51/T--IISER_Kolkata--image-bg-1x.png") !important;
+        /* background-image: url("./images/offline/BG-2x.png") !important; */
+        background-size: 100vw !important;
+        background-repeat: repeat-y;
+        scrollbar-width: none !important;
+      }
+
+      .indentContainer {
+        padding: 1rem 5rem 1rem 6rem !important;
+        /* text-align: justify; */
+      }
+      /* /containers */
+
+      /* preloader */
+      #preloader {
+        background: #fff;
+        font-weight: bold;
+        height: 100vh;
+        left: 0;
+        opacity: 1;
+        position: fixed;
+        text-align: center !important;
+        top: 0;
+        transition: all 1s linear 0.5s;
+        width: 100%;
+        z-index: 999999;
+      }
+
+      #preloader img {
+        width: 20vw;
+        margin: 30vh 40vw 0;
+      }
+      /* /preloader */
+
+      /* progressBar */
+      #scrollPath {
+        /* box-shadow: inset 0 0 5px #000; */
+        background: rgb(221, 157, 157);
+        border-radius: 5px;
+        height: 50vh;
+        left: 2.2rem;
+        bottom: 10rem;
+        opacity: 0;
+        overflow: hidden;
+        position: fixed;
+        width: 10px;
+        z-index: 9;
+        transition: all 0.3s linear;
+      }
+
+      #progressBar {
+        /* background: gold; */
+        /* box-shadow: inset 0 0 5px #000; */
+        background: linear-gradient(to top, goldenrod, gold);
+        border-radius: 5px;
+        box-shadow: 0 10px 10px 5px rgb(94, 84, 30);
+        height: 0%;
+        max-height: 100%;
+        width: 100%;
+        /* transition: all 0.5s linear; */
+      }
+
+      #progressBtn {
+        background: rgb(74, 164, 253);
+        border-radius: 10px;
+        height: 20px;
+        position: fixed;
+        transform: translate(-25%, -50%);
+        width: 20px;
+        z-index: 9;
+      }
+      /* /progressBar */
+
+      /* toTop */
+      #toTop {
+        border-radius: 55%;
+        position: fixed;
+        bottom: 3rem;
+        left: 1rem;
+        width: 50px;
+        height: 0;
+        opacity: 0;
+        transition: all 0.3s;
+        z-index: 9;
+      }
+
+      #toTop:hover {
+        box-shadow: 0 0 5px 1px #000;
+        scale: 1.1;
+      }
+      /* /toTop */
+
+      /* navToggler */
+      #navToggler {
+        width: 40px;
+        height: max-content;
+        /* box-shadow: 0 0 10px 5px #000; */
+        border-radius: 2px;
+        position: fixed;
+        top: 2.5rem;
+        left: 1.5rem;
+        cursor: pointer;
+        z-index: 999;
+      }
+      /* /navToggler */
+
+      /* navigation */
+      .navigation-container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: #0933498a;
+        visibility: hidden;
+        opacity: 0.1;
+        z-index: 998;
+        transition: all 0.3s;
+      }
+
+      .navigation-container.navigation-expanded {
+        visibility: visible;
+        opacity: 1;
+      }
+
+      .navigation {
+        overflow: hidden;
+        width: 50%;
+        position: absolute;
+        border-radius: 50%;
+        top: -10%;
+        left: -10%;
+      }
+
+      .navList {
+        width: max-content;
+        position: absolute;
+        top: 20%;
+        left: 30%;
+        font-size: 1.5rem !important;
+        line-height: 2;
+        font-weight: bold;
+        /* color: #093349; */
+      }
+
+      .navList > ol li:hover {
+        color: #093349;
+        /* text-shadow: 0 0 5px #093349; */
+      }
+
+      .navDrop {
+        width: max-content;
+      }
+
+      .navDrop li:hover {
+        color: #093349;
+        text-shadow: 0 0 5px #093349;
+      }
+
+      .navDropList {
+        border-radius: 50%;
+        background-image: url("https://2021.igem.org/wiki/images/5/5c/T--IISER_Kolkata--image-subNavBG-2x.png");
+        /* background-image: url("./images/offline/new/subNavBG.png"); */
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        position: fixed;
+        top: 50vh;
+        left: 50vw;
+        min-width: 50vw;
+        min-height: 80vh;
+        width: max-content;
+        height: max-content;
+        transform: translate(-10%, -50%);
+        opacity: 0.1;
+        visibility: hidden;
+        line-height: 2;
+        transition: all 0.3s;
+        padding: 10rem 5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center !important;
+      }
+
+      .navDropList li {
+        text-align: center !important;
+        list-style: none;
+        transform: translateX(-20%);
+      }
+
+      .navigation-container.navigation-expanded .navDrop-expanded .navDropList {
+        visibility: visible;
+        opacity: 1;
+      }
+      /* /navigation */
+
+      /* hero */
+      #hero {
+        width: 100%;
+      }
+      /* /hero */
+
+      /* centerImage */
+      .centerImage {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center !important;
+      }
+
+      .centerImage img {
+        width: 50%;
+      }
+
+      .centerImage h2 {
+        font-size: 4.5rem !important;
+      }
+      /* /centerImage */
+
+      /* textFormats */
+      .highlightBlue {
+        color: #5e8dd1;
+      }
+
+      .highlightYellow {
+        color: goldenrod;
+        font-family: cursive;
+        text-shadow: 4px 4px rgb(49, 48, 41);
+      }
+
+      .highlightPeru {
+        color: peru;
+      }
+
+      .rightAlign {
+        text-align: right !important;
+      }
+
+      .centerAlign {
+        padding: 1rem 0;
+        width: 70%;
+        text-align: center !important;
+      }
+
+      .leftAlign {
+        text-align: left !important;
+      }
+
+      .largeText {
+        line-height: 1.5;
+        font-size: 8rem !important;
+      }
+      /* /textFormats */
+
+      /* impText */
+      .impText {
+        font-weight: bold;
+        font-size: 3rem !important;
+        width: 100%;
+      }
+
+      .impText > div {
+        width: 70%;
+      }
+
+      .impText .rightAlign {
+        width: 80%;
+        transform: translateX(25%);
+      }
+      /* /impText */
+
+      /* rightSection */
+      .rightSection {
+        /* background: #000; */
+        display: grid;
+        grid-template-columns: 40% 60%;
+        margin-top: 3rem;
+        margin-bottom: 5rem;
+      }
+
+      .rightSection > div {
+        display: flex;
+        /* justify-content: center; */
+        align-items: center !important;
+      }
+
+      .rightSectionImage {
+        width: 100%;
+        padding-right: 3rem;
+        /* background: gold; */
+      }
+
+      .rightSectionImage img {
+        width: auto;
+        height: auto;
+        max-width: 100%;
+        max-height: 450px;
+      }
+
+      .rightSectionText {
+        padding-left: 8rem;
+        font-size: 2rem !important;
+        /* background: dodgerblue; */
+      }
+      /* /rightSection */
+
+      /* leftSection */
+      .leftSection {
+        /* background: #ddd; */
+        display: grid;
+        grid-template-columns: 60% 40%;
+      }
+
+      .leftSection > div {
+        display: flex;
+        align-items: center !important;
+        margin-top: 5rem;
+      }
+
+      .leftSectionText {
+        padding-right: 8rem;
+        font-size: 2rem !important;
+        /* background: dodgerblue; */
+      }
+
+      .leftSectionImage {
+        width: 100%;
+        /* background: gold; */
+        padding-left: 3rem;
+      }
+
+      .leftSectionImage img {
+        width: auto;
+        height: auto;
+        max-width: 100%;
+        max-height: 450px;
+      }
+      /* /leftSection */
+
+      /* knowMoreSection */
+
+      .knowMore {
+        text-align: center !important;
+        color: #093349;
+        text-shadow: 2px 2px #33517a;
+      }
+
+      .knowMore h2 {
+        font-size: 4.5rem !important;
+        color: #093349;
+      }
+
+      .knowMoreList {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center !important;
+      }
+
+      .knowMoreList img {
+        height: 12rem;
+        transition: all 0.3s;
+      }
+
+      .knowMore img:hover {
+        scale: 1.2;
+      }
+      /* /knowMoreSection */
+
+      /* reference */
+      .reference {
+        margin-top: 8rem;
+        font-size: 1.2rem !important;
+        background: #5e8dd1;
+        color: #23354e;
+        line-height: 1.5;
+        padding-top: 2rem;
+        padding-bottom: 5rem;
+        position: relative;
+      }
+
+      .reference ol {
+        margin-left: 3rem;
+      }
+
+      .reference li:hover {
+        text-shadow: 0 0 1px #093349;
+      }
+
+      .wave {
+        position: absolute;
+        top: -3.5rem;
+        left: 0;
+        background-repeat: repeat-x;
+        background-size: contain;
+        width: 100%;
+        height: 6rem;
+      }
+
+      .topWave {
+        background-image: url("/images/offline/topWave-2x.png");
+      }
+
+      .bottomWave {
+        background-image: url("/images/offline/topWave-2x.png");
+      }
+      /* /reference */
+
+      /* footer */
+      .theFooter {
+        background: #093349;
+        width: 100%;
+        position: relative;
+      }
+
+      .footerHead {
+        font-size: 2.5rem !important;
+        color: #5e8dd1 !important;
+        position: relative;
+      }
+
+      .contacts {
+        position: absolute;
+        font-size: 1rem !important;
+        top: 40%;
+        right: 0;
+      }
+
+      .contacts img {
+        width: 4rem;
+        padding: 0 0.5rem;
+      }
+
+      .sponsors {
+        padding-top: 3rem;
+        padding-bottom: 3.5rem;
+      }
+
+      .sponsors img {
+        width: 11rem;
+        padding: 1rem 1.5rem;
+      }
+      /* /footer */
+    </style>
+  </head>
+  <body onload="preload()" class="noScroll">
+    <!-- preloader -->
+    <div id="preloader">
+      <img src="https://2021.igem.org/wiki/images/d/d6/T--IISER_Kolkata--image-preloader.gif" alt="[preloader image]" />
+      <!-- <img src="images/preloader.gif" alt="" /> -->
+      Loading . . .
+    </div>
+    <!-- /preloader -->
+    <!-- progressBar -->
+    <div id="scrollPath">
+      <div id="progressBar"></div>
+      <div id="progressBtn"></div>
+    </div>
+    <!-- /progressBar -->
+    <!-- toTop -->
+    <div id="toTop">
+      <a href="javascript:window.scrollTo(0, 0);">
+        <img src="https://2021.igem.org/wiki/images/d/d8/T--IISER_Kolkata--image-toTop-2x.png" alt="toTop" />
+        <!-- <img src="images/offline/new/toTop-2x.png" alt="toTop" /> -->
+      </a>
+    </div>
+    <!-- /toTop -->
+    <!-- navToggler -->
+    <div id="navToggler">
+      <img src="https://2021.igem.org/wiki/images/6/67/T--IISER_Kolkata--image-toggleBtn-2x.png" alt="#NAV#" />
+      <!-- <img src="./images/offline/new/toggleBtn-2x.png" alt="#NAV#" /> -->
+    </div>
+    <!-- /navToggler -->
+    <!-- navigation -->
+    <nav class="navigation-container">
+      <div class="navigation">
+        <img src="https://2021.igem.org/wiki/images/0/0e/T--IISER_Kolkata--image-navBG-2x.png" alt="" />
+        <!-- <img src="images/offline/navBG-2x.png" alt="" /> -->
+        <div class="navList">
+          <ol>
+            <li class="navDrop"><a href="https://2021.igem.org/Team:IISER_Kolkata">Home</a></li>
+            <li class="navDrop">
+              <a href="javascript:void();">
+                Team
+                <div class="navDropList">
+                  <ul>
+                    <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Team">Team</a></li>
+                    <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Attributions">Attributions</a></li>
+                    <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Collaborations">Collaborations</a></li>
+                  </ul>
+                </div>
+              </a>
+            </li>
+            <li class="navDrop">
+              <a href="javascript:void();">
+                Project
+                <div class="navDropList">
+                  <ul>
+                    <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Communication">Communication</a></li>
+                    <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Contribution">Contribution</a></li>
+                    <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Description">Description</a></li>
+                    <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Engineering">Engineering</a></li>
+                    <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Experiments">Experiments</a></li>
+                    <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Implementation">Implementation</a></li>
+                    <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Notebook">Notebook</a></li>
+                    <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Partnership">Partnership</a></li>
+                    <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Proof_Of_Concept">Proof Of Concept</a></li>
+                    <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Results">Results</a></li>
+                  </ul>
+                </div>
+              </a>
+            </li>
+            <li class="navDrop">
+              <a href="javascript:void();">
+                Parts
+                <div class="navDropList">
+                  <ul>
+                    <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Part_Collection">Part Collection</a></li>
+                    <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Parts">Parts</a></li>
+                    <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Improve">Improve</a></li>
+                  </ul>
+                </div>
+              </a>
+            </li>
+            <li class="navDrop"><a href="https://2021.igem.org/Team:IISER_Kolkata/Safety">Safety</a></li>
+            <li class="navDrop"><a href="https://2021.igem.org/Team:IISER_Kolkata/Human_Practices">Human Practices</a></li>
+            <li class="navDrop">
+              <a href="javascript:void();">
+                Awards
+                <div class="navDropList">
+                  <ul>
+                    <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Education">Education</a></li>
+                    <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Entrepreneurship">Entrepreneurship</a></li>
+                    <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Hardware">Hardware</a></li>
+                    <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Inclusivity">Inclusivity</a></li>
+                    <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Measurement">Measurement</a></li>
+                    <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Model">Model</a></li>
+                    <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Plant">Plant</a></li>
+                    <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Software">Software</a></li>
+                    <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Sustainable">Sustainable</a></li>
+                  </ul>
+                </div>
+              </a>
+            </li>
+            <li class="navDrop"><a href="https://2021.igem.org/Team:IISER_Kolkata/Poster">Poster</a></li>
+          </ol>
+        </div>
       </div>
-    </div>
-  </nav>
-  <!-- /navigation -->
-
-  <!-- IISER KOLKATA CONTAINER -->
-  <div class="iiserKolkata">
-    <!-- hero -->
-    <div id="hero">
-      <img src="https://2021.igem.org/wiki/images/2/29/T--IISER_Kolkata--image-HomeHero.png" alt="" />
-      <!-- <img src="images/offline/HomeHero-3x.png" alt="" /> -->
-    </div>
-    <!-- /hero -->
-
-    <div class="indentContainer centerImage">
-      <img src="https://2021.igem.org/wiki/images/7/7e/T--IISER_Kolkata--image-twoCows-1x.png" alt="image_twoCows" />
-      <!-- <img src="images/offline/elements-2x/twoCows-2x.png" alt="" /> -->
-    </div>
-
-    <div class="indentContainer">
-      <section class="impText">
-        <div class="leftAlign">
-          <p>Do you know a <b class="highlightBlue">secret formula</b> to boost infinite energy?</p>
-        </div>
-      </section>
-      <p class="centerAlign">it's <b class="largeText highlightYellow">MILK</b></p>
-
-      <section class="rightSection">
-        <div>
-          <div class="rightSectionImage">
-            <img src="https://2021.igem.org/wiki/images/5/5f/T--IISER_Kolkata--image-milkProducts-1x.png" alt="image_milkProducts" />
-            <!-- <img src="images/offline/new/milkProduct-2x.png" alt="" /> -->
-          </div>
-        </div>
-        <div>
-          <div class="rightSectionText rightAlign">
-            <p>Milk and its derivatives are one of the primary sources of nutrition. Globally, <b>more than 6 billion people consume milk and its products.</b></p>
-            <p><b>480,256,000</b> tonnes of milk has been produced globally and <b>198,400,000</b> tonnes of milk has been produced in India, in 2020.</p>
-          </div>
-        </div>
-      </section>
-
-      <section class="leftSection">
-        <div>
-          <div class="leftSectionText leftAlign">
-            <p>Milk is the leading agricultural produce in India with the Dairy industry contributing <b>5.3%</b> to India’s agricultural <b>GDP.</b></p>
-          </div>
-        </div>
-        <div>
-          <div class="leftSectionImage">
-            <img src="https://2021.igem.org/wiki/images/a/a1/T--IISER_Kolkata--image-graphIndia-1x.png" alt="image_graphIndia" />
-            <!-- <img src="images/offline/new/graphIndia-2x.png" alt="" /> -->
-          </div>
-        </div>
-      </section>
-    </div>
-
-    <div class="indentContainer">
-      <section class="impText">
-        <div class="rightAlign">
-          <p>However, there is a <b class="highlightPeru">silent-killer</b> affecting our dairy industry...</p>
-        </div>
-      </section>
-
-      <section class="rightSection">
-        <div>
-          <div class="rightSectionImage">
-            <img src="https://2021.igem.org/wiki/images/8/88/T--IISER_Kolkata--image-cow70loss-1x.png" alt="image_cow70loss" />
-            <!-- <img src="images/offline/new/cow70-2x.png" alt="" /> -->
-          </div>
-        </div>
-        <div>
-          <div class="rightSectionText rightAlign">
-            <p>Due to a silent killer disease called <b>Bovine Mastitis</b> disease, Out of the loss incurred in milk production, <b>70% </b>of it accounts to sub-clinical mastitis in India. As per <b>NDRI</b>, the estimated economic loss due to mastitis is <b>INR 7165.51 crore per annum.</b></p>
-            <p>Absence of visible symptoms in the sub-clinical stage of the disease makes it difficult to detect the disease using available detection techniques.</p>
-            <p>The disease in chronic stage can lead to <b>fatality</b> of bovines.</p>
-          </div>
-        </div>
-      </section>
-
-      <section class="leftSection">
-        <div>
-          <div class="leftSectionText leftAlign">
-            <p>Available treatment methods use broad-spectrum antibiotics.</p>
-            <p><b>2730 tonnes</b> of antibiotics are fed into the dairy sector.</p>
-          </div>
-        </div>
-        <div>
-          <div class="leftSectionImage">
-            <img src="https://2021.igem.org/wiki/images/2/2f/T--IISER_Kolkata--image-medicine-2x.png" alt="image_medicine" />
-            <!-- <img src="https://2021.igem.org/wiki/images/3/38/T--IISER_Kolkata--image-antibactirial-1x.png" alt="image_antibact" /> -->
-            <!-- <img src="images/offline/new/medicine-2x.png" alt="" /> -->
-          </div>
-        </div>
-      </section>
-
-      <section class="leftSection">
-        <div>
-          <div class="leftSectionText leftAlign">
-            <p>This leads to a steady development of <b>antimicrobial resistance</b> in mastitis-causing pathogenic bacteria.</p>
-            <p>These antibiotics can also contaminate milk that we consume, creating <b class="highlightBlue">severe health problems in humans.</b></p>
-            <p>
-              <b> <p>So the Need of the Hour is to...</p></b>
-            </p>
-          </div>
-        </div>
-        <div>
-          <div class="leftSectionImage">
-            <img src="https://2021.igem.org/wiki/images/7/7e/T--IISER_Kolkata--image-graphIncrease-1x.png" alt="image_graphIncrease" />
-            <!-- <img src="images/offline/new/graphGrowth-2x.png" alt="" /> -->
-          </div>
-        </div>
-      </section>
-    </div>
-
-    <div class="indentContainer">
-      <section class="impText">
-        <div class="rightAlign">
-          <p>Develop an <b>accurate, easy-to-use, point of care, portable, cheap detection kit.</b></p>
-          <p>Along with An <b>Antibiotic-free treatment system.</b></p>
-          <p>Hence <b class="highlightYellow">We Propose</b></p>
-          <p>A <b class="highlightBlue">3-way breakthrough</b> to tackle subclinical bovine mastitis</p>
-        </div>
-      </section>
-
-      <section class="leftSection">
-        <div>
-          <div class="leftSectionText leftAlign">
-            <h2>"Prevention is better than cure"</h2>
-            <p>
-              Maintaining proper hygienic methods while milking can stop the spread of this disease. Our <a href="https://2021.igem.org/Team:IISER_Kolkata/Human_Practices"><b>Human Practices</b></a> team has in-person spread awareness on the methods of hygienic milking among the stakeholders.
-            </p>
-          </div>
-        </div>
-        <div>
-          <div class="leftSectionImage">
-            <img src="https://2021.igem.org/wiki/images/d/d6/T--IISER_Kolkata--image-prevention-2x.png" alt="image_prevention" />
-            <!-- <img src="images/offline/new/prevention-2x.png" alt="" /> -->
-          </div>
-        </div>
-      </section>
-
-      <section class="rightSection">
-        <div>
-          <div class="rightSectionImage">
-            <img src="https://2021.igem.org/wiki/images/f/fb/T--IISER_Kolkata--image-detection-2x.png" alt="image_detection" />
-            <!-- <img src="images/offline/new/detection-2x.png" alt="" /> -->
-          </div>
-        </div>
-        <div>
-          <div class="rightSectionText rightAlign">
-            <h2>Detection</h2>
-            <p>The present detection methods are expensive, not easily available, and are not precise. We propose <b>a cheap, fast, point-of-care, portable, easy-to-use colorimetric detection kit</b> to specifically detect the Bovine Mastitis disease in the subclinical stage and prevent the disease from progressing to chronic stages.</p>
-          </div>
-        </div>
-      </section>
-
-      <section class="leftSection">
-        <div>
-          <div class="leftSectionText leftAlign">
-            <h2>Treatment</h2>
-            <p>
-              We propose an antibiotics-free cure for sub-clinical bovine mastitis using narrow-spectrum bacteriocins. When our GMO will be injected via intra-mammary injection into the tissues of the udder, it will specifically sense the presence of subclinical bovine mastitis causing pathogens and kill them, thus curing the cow.
-            </p>
-          </div>
-        </div>
-        <div>
-          <div class="leftSectionImage">
-            <img src="https://2021.igem.org/wiki/images/1/16/T--IISER_Kolkata--image-cowTreatment-2x.png" alt="image_cowTreatment" />
-            <!-- <img src="images/offline/new/cowTreatment-2x.png" alt="" /> -->
-          </div>
-        </div>
-      </section>
-    </div>
-
-    <div class="indentContainer">
-      <section class="knowMore">
-        <h2>Know More at...</h2>
-        <div class="knowMoreList">
-          <a href="javascript:void();">
-            <img src="https://2021.igem.org/wiki/images/2/2d/T--IISER_Kolkata--image-project-2x.png" alt="Project" />
-            <!-- <img src="images/offline/new/project-2x.png" alt="" /> -->
-          </a>
-          <a href="https://2021.igem.org/Team:IISER_Kolkata/Experiments">
-            <img src="https://2021.igem.org/wiki/images/5/58/T--IISER_Kolkata--image-experiments-2x.png" alt="Experiments" />
-            <!-- <img src="/images/offline/new/experiment-2x.png" alt="" /> -->
-          </a>
-          <a href="https://2021.igem.org/Team:IISER_Kolkata/Model">
-            <img src="https://2021.igem.org/wiki/images/c/c4/T--IISER_Kolkata--image-model-2x.png" alt="Model" />
-            <!-- <img src="/images/offline/new/model-2x.png" alt="" /> -->
-          </a>
-          <a href="https://2021.igem.org/Team:IISER_Kolkata/Human_Practices">
-            <img src="https://2021.igem.org/wiki/images/4/49/T--IISER_Kolkata--image-HumanPractices-2x.png" alt="HumanPractices" />
-            <!-- <img src="/images/offline/new/HumanPractices-2x.png" alt="" /> -->
-          </a>
-        </div>
-      </section>
-    </div>
-
-    <section class="reference">
-      <div class="wave topWave">
-        <!-- wave border  -->
+    </nav>
+    <!-- /navigation -->
+    <!-- IISER KOLKATA CONTAINER -->
+    <div class="iiserKolkata">
+      <!-- hero -->
+      <div id="hero">
+        <img src="https://2021.igem.org/wiki/images/2/29/T--IISER_Kolkata--image-HomeHero.png" alt="" />
+        <!-- <img src="images/offline/HomeHero-3x.png" alt="" /> -->
+      </div>
+      <!-- /hero -->
+      <div class="indentContainer centerImage">
+        <img src="https://2021.igem.org/wiki/images/7/7e/T--IISER_Kolkata--image-twoCows-1x.png" alt="image_twoCows" />
+        <!-- <img src="images/offline/elements-2x/twoCows-2x.png" alt="" /> -->
       </div>
       <div class="indentContainer">
-        <h2>References</h2>
-        <ol>
-          <li><a href="https://en.wikipedia.org/wiki/Milk">Milk - Wikipedia</a></li>
-          <li><a href="https://knoema.com/atlas/topics/Agriculture/Live-Stock-Production-Production-Quantity/Production-of-milk#:~:text=The%20world's%20total%20production%20of,480%2C256%20thousand%20tonnes%20in%202020">Production of milk - Knoema</a></li>
-          <li><a href="https://economictimes.indiatimes.com/news/economy/agriculture/economic-survey-milk-production-rises-by-five-percent-to-198-4-million-tonnes-in-2019-20/articleshow/80585416.cms#:~:text=NEW%20DELHI%3A%20India's%20milk%20production,20%2C%E2%80%9D%20the%20survey%20said">Economic Survey: Milk production rises by five percent to 198.4 million tonnes in 2019-20</a></li>
-          <li><a href="https://www.ejmanager.com/mnstemps/68/68-1551673827.pdf?t=1632494459">J. Shilpa Shree, M. Prabu An Outlook on Growth of Dairy Sector and its Contribution to Indian Economy. International Journal of Livestock Research. Vol 9(6), 240-247</a></li>
-          <li><a href="https://www.medicinesjournal.com/download/38/1-2-36-714.pdf">Dr. Lakshmi R. A Review on Mastitis. International Journal of Medicine Research. Vol 1(2), 118-123, 2016</a></li>
-        </ol>
+        <section class="impText">
+          <div class="leftAlign">
+            <p>Do you know a <b class="highlightBlue">secret formula</b> to boost infinite energy?</p>
+          </div>
+        </section>
+        <p class="centerAlign">it's <b class="largeText highlightYellow">MILK</b></p>
+        <section class="rightSection">
+          <div>
+            <div class="rightSectionImage">
+              <img src="https://2021.igem.org/wiki/images/5/5f/T--IISER_Kolkata--image-milkProducts-1x.png" alt="image_milkProducts" />
+              <!-- <img src="images/offline/new/milkProduct-2x.png" alt="" /> -->
+            </div>
+          </div>
+          <div>
+            <div class="rightSectionText rightAlign">
+              <p>Milk and its derivatives are one of the primary sources of nutrition. Globally, <b>more than 6 billion people consume milk and its products.</b></p>
+              <p><b>480,256,000</b> tonnes of milk has been produced globally and <b>198,400,000</b> tonnes of milk has been produced in India, in 2020.</p>
+            </div>
+          </div>
+        </section>
+        <section class="leftSection">
+          <div>
+            <div class="leftSectionText leftAlign">
+              <p>Milk is the leading agricultural produce in India with the Dairy industry contributing <b>5.3%</b> to India’s agricultural <b>GDP.</b></p>
+            </div>
+          </div>
+          <div>
+            <div class="leftSectionImage">
+              <img src="https://2021.igem.org/wiki/images/a/a1/T--IISER_Kolkata--image-graphIndia-1x.png" alt="image_graphIndia" />
+              <!-- <img src="images/offline/new/graphIndia-2x.png" alt="" /> -->
+            </div>
+          </div>
+        </section>
       </div>
-    </section>
-
-    <!-- footer -->
-    <footer>
-      <div class="theFooter">
+      <div class="indentContainer">
+        <section class="impText">
+          <div class="rightAlign">
+            <p>However, there is a <b class="highlightPeru">silent-killer</b> affecting our dairy industry...</p>
+          </div>
+        </section>
+        <section class="rightSection">
+          <div>
+            <div class="rightSectionImage">
+              <img src="https://2021.igem.org/wiki/images/8/88/T--IISER_Kolkata--image-cow70loss-1x.png" alt="image_cow70loss" />
+              <!-- <img src="images/offline/new/cow70-2x.png" alt="" /> -->
+            </div>
+          </div>
+          <div>
+            <div class="rightSectionText rightAlign">
+              <p>Due to a silent killer disease called <b>Bovine Mastitis</b> disease, Out of the loss incurred in milk production, <b>70% </b>of it accounts to sub-clinical mastitis in India. As per <b>NDRI</b>, the estimated economic loss due to mastitis is <b>INR 7165.51 crore per annum.</b></p>
+              <p>Absence of visible symptoms in the sub-clinical stage of the disease makes it difficult to detect the disease using available detection techniques.</p>
+              <p>The disease in chronic stage can lead to <b>fatality</b> of bovines.</p>
+            </div>
+          </div>
+        </section>
+        <section class="leftSection">
+          <div>
+            <div class="leftSectionText leftAlign">
+              <p>Available treatment methods use broad-spectrum antibiotics.</p>
+              <p><b>2730 tonnes</b> of antibiotics are fed into the dairy sector.</p>
+            </div>
+          </div>
+          <div>
+            <div class="leftSectionImage">
+              <img src="https://2021.igem.org/wiki/images/2/2f/T--IISER_Kolkata--image-medicine-2x.png" alt="image_medicine" />
+              <!-- <img src="https://2021.igem.org/wiki/images/3/38/T--IISER_Kolkata--image-antibactirial-1x.png" alt="image_antibact" /> -->
+              <!-- <img src="images/offline/new/medicine-2x.png" alt="" /> -->
+            </div>
+          </div>
+        </section>
+        <section class="leftSection">
+          <div>
+            <div class="leftSectionText leftAlign">
+              <p>This leads to a steady development of <b>antimicrobial resistance</b> in mastitis-causing pathogenic bacteria.</p>
+              <p>These antibiotics can also contaminate milk that we consume, creating <b class="highlightBlue">severe health problems in humans.</b></p>
+              <p>
+                <b> <p>So the Need of the Hour is to...</p></b>
+              </p>
+            </div>
+          </div>
+          <div>
+            <div class="leftSectionImage">
+              <img src="https://2021.igem.org/wiki/images/7/7e/T--IISER_Kolkata--image-graphIncrease-1x.png" alt="image_graphIncrease" />
+              <!-- <img src="images/offline/new/graphGrowth-2x.png" alt="" /> -->
+            </div>
+          </div>
+        </section>
+      </div>
+      <div class="indentContainer">
+        <section class="impText">
+          <div class="rightAlign">
+            <p>Develop an <b>accurate, easy-to-use, point of care, portable, cheap detection kit.</b></p>
+            <p>Along with An <b>Antibiotic-free treatment system.</b></p>
+            <p class="centerAlign">Hence <b class="highlightYellow">We Propose</b></p>
+            <p>A <b class="highlightBlue">3-way breakthrough</b> to tackle subclinical bovine mastitis</p>
+          </div>
+        </section>
+        <section class="leftSection">
+          <div>
+            <div class="leftSectionText leftAlign">
+              <h2>"Prevention is better than cure"</h2>
+              <p>
+                Maintaining proper hygienic methods while milking can stop the spread of this disease. Our <a href="https://2021.igem.org/Team:IISER_Kolkata/Human_Practices"><b>Human Practices</b></a> team has in-person spread awareness on the methods of hygienic milking among the stakeholders.
+              </p>
+            </div>
+          </div>
+          <div>
+            <div class="leftSectionImage">
+              <img src="https://2021.igem.org/wiki/images/d/d6/T--IISER_Kolkata--image-prevention-2x.png" alt="image_prevention" />
+              <!-- <img src="images/offline/new/prevention-2x.png" alt="" /> -->
+            </div>
+          </div>
+        </section>
+        <section class="rightSection">
+          <div>
+            <div class="rightSectionImage">
+              <img src="https://2021.igem.org/wiki/images/f/fb/T--IISER_Kolkata--image-detection-2x.png" alt="image_detection" />
+              <!-- <img src="images/offline/new/detection-2x.png" alt="" /> -->
+            </div>
+          </div>
+          <div>
+            <div class="rightSectionText rightAlign">
+              <h2>Detection</h2>
+              <p>The present detection methods are expensive, not easily available, and are not precise. We propose <b>a cheap, fast, point-of-care, portable, easy-to-use colorimetric detection kit</b> to specifically detect the Bovine Mastitis disease in the subclinical stage and prevent the disease from progressing to chronic stages.</p>
+            </div>
+          </div>
+        </section>
+        <section class="leftSection">
+          <div>
+            <div class="leftSectionText leftAlign">
+              <h2>Treatment</h2>
+              <p>
+                We propose an antibiotics-free cure for sub-clinical bovine mastitis using narrow-spectrum bacteriocins. When our GMO will be injected via intra-mammary injection into the tissues of the udder, it will specifically sense the presence of subclinical bovine mastitis causing pathogens and kill them, thus curing the cow.
+              </p>
+            </div>
+          </div>
+          <div>
+            <div class="leftSectionImage">
+              <img src="https://2021.igem.org/wiki/images/1/16/T--IISER_Kolkata--image-cowTreatment-2x.png" alt="image_cowTreatment" />
+              <!-- <img src="images/offline/new/cowTreatment-2x.png" alt="" /> -->
+            </div>
+          </div>
+        </section>
+      </div>
+      <div class="indentContainer">
+        <section class="knowMore">
+          <h2>Know More at...</h2>
+          <div class="knowMoreList">
+            <a href="javascript:void();">
+              <img src="https://2021.igem.org/wiki/images/2/2d/T--IISER_Kolkata--image-project-2x.png" alt="Project" />
+              <!-- <img src="images/offline/new/project-2x.png" alt="" /> -->
+            </a>
+            <a href="https://2021.igem.org/Team:IISER_Kolkata/Experiments">
+              <img src="https://2021.igem.org/wiki/images/5/58/T--IISER_Kolkata--image-experiments-2x.png" alt="Experiments" />
+              <!-- <img src="/images/offline/new/experiment-2x.png" alt="" /> -->
+            </a>
+            <a href="https://2021.igem.org/Team:IISER_Kolkata/Model">
+              <img src="https://2021.igem.org/wiki/images/c/c4/T--IISER_Kolkata--image-model-2x.png" alt="Model" />
+              <!-- <img src="/images/offline/new/model-2x.png" alt="" /> -->
+            </a>
+            <a href="https://2021.igem.org/Team:IISER_Kolkata/Human_Practices">
+              <img src="https://2021.igem.org/wiki/images/4/49/T--IISER_Kolkata--image-HumanPractices-2x.png" alt="HumanPractices" />
+              <!-- <img src="/images/offline/new/HumanPractices-2x.png" alt="" /> -->
+            </a>
+          </div>
+        </section>
+      </div>
+      <section class="reference">
         <div class="wave topWave">
           <!-- wave border  -->
         </div>
         <div class="indentContainer">
-          <div class="footerHead">
-            <h3>Our Sponsors...</h3>
-            <div class="contacts">
-              <b>Contact us at - </b>
-              <a href="javascript:void();"> <img src="/images/offline/new/insta.png" alt="instagram" /></a>
-              <a href="javascript:void();"> <img src="/images/offline/new/facebook.png" alt="facebook" /></a>
-              <a href="javascript:void();"> <img src="/images/offline/new/twitter.png" alt="twitter" /></a>
-              <a href="javascript:void();"> <img src="/images/offline/new/linkedin.png" alt="linkedin" /></a>
+          <h2>References</h2>
+          <ol>
+            <li><a href="https://en.wikipedia.org/wiki/Milk">Milk - Wikipedia</a></li>
+            <li><a href="https://knoema.com/atlas/topics/Agriculture/Live-Stock-Production-Production-Quantity/Production-of-milk#:~:text=The%20world's%20total%20production%20of,480%2C256%20thousand%20tonnes%20in%202020">Production of milk - Knoema</a></li>
+            <li><a href="https://economictimes.indiatimes.com/news/economy/agriculture/economic-survey-milk-production-rises-by-five-percent-to-198-4-million-tonnes-in-2019-20/articleshow/80585416.cms#:~:text=NEW%20DELHI%3A%20India's%20milk%20production,20%2C%E2%80%9D%20the%20survey%20said">Economic Survey: Milk production rises by five percent to 198.4 million tonnes in 2019-20</a></li>
+            <li><a href="https://www.ejmanager.com/mnstemps/68/68-1551673827.pdf?t=1632494459">J. Shilpa Shree, M. Prabu An Outlook on Growth of Dairy Sector and its Contribution to Indian Economy. International Journal of Livestock Research. Vol 9(6), 240-247</a></li>
+            <li><a href="https://www.medicinesjournal.com/download/38/1-2-36-714.pdf">Dr. Lakshmi R. A Review on Mastitis. International Journal of Medicine Research. Vol 1(2), 118-123, 2016</a></li>
+          </ol>
+        </div>
+      </section>
+      <!-- footer -->
+      <footer>
+        <div class="theFooter">
+          <div class="wave topWave">
+            <!-- wave border  -->
+          </div>
+          <div class="indentContainer">
+            <div class="footerHead">
+              <h3>Our Sponsors...</h3>
+              <div class="contacts">
+                <b>Contact us at - </b>
+                <a href="javascript:void();"> <img src="/images/offline/new/insta.png" alt="instagram" /></a>
+                <a href="javascript:void();"> <img src="/images/offline/new/facebook.png" alt="facebook" /></a>
+                <a href="javascript:void();"> <img src="/images/offline/new/twitter.png" alt="twitter" /></a>
+                <a href="javascript:void();"> <img src="/images/offline/new/linkedin.png" alt="linkedin" /></a>
+              </div>
+            </div>
+            <div class="sponsors">
+              <img src="/images/offline/new/igemiiserk-2x.png" alt="IGEM-IISERKolkata" />
+              <img src="/images/offline/new/promega-2x.png" alt="Promega" />
+              <img src="/images/offline/new/RCT-2x.png" alt="RCT" />
+              <img src="/images/offline/new/iiserkol-2x.png" alt="IISERKolkata" />
+              <img src="/images/offline/new/IDT-2x.png" alt="IDT" />
+              <img src="/images/offline/new/biolab-2x.png" alt="NewEnglandBioLabs" />
+              <img src="/images/offline/new/benchling-2x.png" alt="Benchling" />
+              <img src="/images/offline/new/twist-2x.png" alt="TWIST" />
+              <img src="/images/offline/new/igem-2x.png" alt="IGEM" />
             </div>
           </div>
-          <div class="sponsors">
-            <img src="/images/offline/new/igemiiserk-2x.png" alt="IGEM-IISERKolkata" />
-            <img src="/images/offline/new/promega-2x.png" alt="Promega" />
-            <img src="/images/offline/new/RCT-2x.png" alt="RCT" />
-            <img src="/images/offline/new/iiserkol-2x.png" alt="IISERKolkata" />
-            <img src="/images/offline/new/IDT-2x.png" alt="IDT" />
-            <img src="/images/offline/new/biolab-2x.png" alt="NewEnglandBioLabs" />
-            <img src="/images/offline/new/benchling-2x.png" alt="Benchling" />
-            <img src="/images/offline/new/twist-2x.png" alt="TWIST" />
-            <img src="/images/offline/new/igem-2x.png" alt="IGEM" />
-          </div>
         </div>
-      </div>
-    </footer>
-    <!-- /footer -->
-  </div>
-  <!-- /IISER KOLKATA CONTAINER -->
+      </footer>
+      <!-- /footer -->
+    </div>
+    <!-- /IISER KOLKATA CONTAINER -->
 
-  <!-- JS -->
-  <script>
-    const progressBar = document.getElementById("progressBar");
-    const scrollPath = document.getElementById("scrollPath");
-    const topBtn = document.getElementById("toTop");
-    const overlayAppearValue = 300;
-    const preloader = document.getElementById("preloader");
-    const navToggler = document.getElementById("navToggler");
-    const navigationContainer = document.querySelector(".navigation-container");
-    const navDrops = document.querySelectorAll(".navDrop");
+    <!-- JS -->
+    <script>
+      const progressBar = document.getElementById("progressBar");
+      const scrollPath = document.getElementById("scrollPath");
+      const topBtn = document.getElementById("toTop");
+      const overlayAppearValue = 300;
+      const preloader = document.getElementById("preloader");
+      const navToggler = document.getElementById("navToggler");
+      const navigationContainer = document.querySelector(".navigation-container");
+      const navDrops = document.querySelectorAll(".navDrop");
 
-    function preload() {
-      preloader.style.opacity = "0";
-      preloader.style.zIndex = "-999999";
-      document.documentElement.scrollTop = 0;
-      document.body.classList.remove("noScroll");
-    }
-
-    window.onscroll = function () {
-      let totalHeight = document.body.scrollHeight - window.innerHeight;
-      let progressHeight = (window.pageYOffset / totalHeight) * 100;
-      progressBar.style.height = progressHeight + "%";
-
-      if (document.body.scrollTop > overlayAppearValue || document.documentElement.scrollTop > overlayAppearValue || window.pageYOffset > overlayAppearValue) {
-        topBtn.style.height = "50px";
-        topBtn.style.opacity = "1";
-        scrollPath.style.opacity = "1";
-      } else {
-        topBtn.style.height = "0";
-        topBtn.style.opacity = "0";
-        scrollPath.style.opacity = "0";
+      function preload() {
+        preloader.style.opacity = "0";
+        preloader.style.zIndex = "-999999";
+        document.documentElement.scrollTop = 0;
+        document.body.classList.remove("noScroll");
+        preloader.style.visibility = "hidden";
       }
-    };
 
-    navToggler.onclick = function () {
-      navigationContainer.classList.toggle("navigation-expanded");
-      removeNavDropExpanded();
-    };
+      window.onscroll = function () {
+        let totalHeight = document.body.scrollHeight - window.innerHeight;
+        let progressHeight = (window.pageYOffset / totalHeight) * 100;
+        progressBar.style.height = progressHeight + "%";
 
-    // navigationContainer.onclick = function () {
-    //   navigationContainer.classList.toggle("navigation-expanded");
-    // };
+        if (document.body.scrollTop > overlayAppearValue || document.documentElement.scrollTop > overlayAppearValue || window.pageYOffset > overlayAppearValue) {
+          topBtn.style.height = "50px";
+          topBtn.style.opacity = "1";
+          scrollPath.style.opacity = "1";
+        } else {
+          topBtn.style.height = "0";
+          topBtn.style.opacity = "0";
+          scrollPath.style.opacity = "0";
+        }
+      };
 
-    navDrops.forEach((item) =>
-      item.addEventListener("mouseover", function () {
+      navToggler.onclick = function () {
+        navigationContainer.classList.toggle("navigation-expanded");
         removeNavDropExpanded();
-        item.classList.toggle("navDrop-expanded");
-      })
-    );
+      };
 
-    function removeNavDropExpanded() {
-      navDrops.forEach((item) => item.classList.remove("navDrop-expanded"));
-    }
+      // navigationContainer.onclick = function () {
+      //   navigationContainer.classList.toggle("navigation-expanded");
+      // };
 
-    function removeNavigationExpanded() {
-      navigationContainer.classList.remove("navigation-expanded");
-    }
+      navDrops.forEach((item) =>
+        item.addEventListener("mouseover", function () {
+          removeNavDropExpanded();
+          item.classList.toggle("navDrop-expanded");
+        })
+      );
 
-    window.onclick = function (event) {
-      if (event.target.matches(".navigation-container")) {
-        removeNavigationExpanded();
+      function removeNavDropExpanded() {
+        navDrops.forEach((item) => item.classList.remove("navDrop-expanded"));
       }
-    };
-  </script>
-  <!-- /JS -->
-</body>
+
+      function removeNavigationExpanded() {
+        navigationContainer.classList.remove("navigation-expanded");
+      }
+
+      window.onclick = function (event) {
+        if (event.target.matches(".navigation-container")) {
+          removeNavigationExpanded();
+        }
+      };
+    </script>
+    <!-- /JS -->
+  </body>
+</html>
