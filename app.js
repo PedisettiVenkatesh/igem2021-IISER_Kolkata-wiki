@@ -23,10 +23,12 @@ window.onscroll = function () {
   if (document.body.scrollTop > overlayAppearValue || document.documentElement.scrollTop > overlayAppearValue || window.pageYOffset > overlayAppearValue) {
     topBtn.style.height = "50px";
     topBtn.style.opacity = "1";
+    topBtn.style.visibility = "visible";
     scrollPath.style.opacity = "1";
   } else {
     topBtn.style.height = "0";
     topBtn.style.opacity = "0";
+    topBtn.style.visibility = "hidden";
     scrollPath.style.opacity = "0";
   }
 };
