@@ -76,6 +76,7 @@ a:visited,
 a:active {
   color: inherit !important;
   text-decoration: underline !important;
+  cursor: pointer !important;
 }
 
 a:hover {
@@ -231,7 +232,7 @@ img {
 }
 
 .navigation {
-  overflow: hidden;
+  /* overflow: hidden; */
   width: 50%;
   position: absolute;
   border-radius: 50%;
@@ -638,7 +639,21 @@ img {
   margin-top: 2rem;
 }
 
-.sideNav a {
+.scrollID {
   text-decoration: none !important;
 }
+
+/* TODO: try making them with JS */
+.scrollID.scrollID-active {
+  text-decoration: underline !important;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-shadow: 0 0 5px #093349;
+}
 /* /sideNav */
+
+/* contentSection */
+.contentSection {
+  min-height: 400px;
+}
+/* /contentSection */

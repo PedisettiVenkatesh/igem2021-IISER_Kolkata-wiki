@@ -6,6 +6,7 @@ const preloader = document.getElementById("preloader");
 const navToggler = document.getElementById("navToggler");
 const navigationContainer = document.querySelector(".navigation-container");
 const navDrops = document.querySelectorAll(".navDrop");
+const dragBtn = document.getElementById("progressBtn");
 
 function preload() {
   preloader.style.opacity = "0";
@@ -19,6 +20,8 @@ window.onscroll = function () {
   let totalHeight = document.body.scrollHeight - window.innerHeight;
   let progressHeight = (window.pageYOffset / totalHeight) * 100;
   progressBar.style.height = progressHeight + "%";
+
+  // console.log(window.pageYOffset);
 
   if (document.body.scrollTop > overlayAppearValue || document.documentElement.scrollTop > overlayAppearValue || window.pageYOffset > overlayAppearValue) {
     topBtn.style.height = "50px";
@@ -62,3 +65,17 @@ window.onclick = function (event) {
     removeNavigationExpanded();
   }
 };
+
+// var firstY = dragBtn.offsetTop;
+// console.log(firstY);
+// dragBtn.ondrag = function () {
+//   var lastY = dragBtn.offsetTop;
+//   console.log("dragged", firstY, lastY);
+// };
+
+function scrollToID(hash) {
+  var topOffSet = 50;
+  var distance = document.getElementById(hash).offsetTop - topOffSet;
+  window.scrollTo(0, distance);
+  // document.getElementById(hash).scrollIntoView();
+}

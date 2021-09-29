@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Team Page</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body onload="preload()" class="noScroll">
+    <!-- preloader -->
+    <div id="preloader" title="Loading...">
+      <!-- <img src="https://2021.igem.org/wiki/images/d/d6/T--IISER_Kolkata--image-preloader.gif" alt="[preloader image]" /> -->
+      <img src="images/preloader.gif" alt="" />
+      Loading . . .
+    </div>
+    <!-- /preloader -->
+
+    <!-- progressBar -->
+    <div id="scrollPath">
+      <div id="progressBar"></div>
+      <div id="progressBtn" draggable="false"></div>
+    </div>
+    <!-- /progressBar -->
+
+    <!-- toTop -->
+    <div id="toTop" title="Go To Top">
+      <a href="javascript:window.scrollTo(0, 0);">
+        <!-- <img src="https://2021.igem.org/wiki/images/d/d8/T--IISER_Kolkata--image-toTop-2x.png" alt="toTop" /> -->
+        <img src="images/offline/new/toTop-2x.png" alt="toTop" />
+      </a>
+    </div>
+    <!-- /toTop -->
+
+    <!-- navToggler -->
+    <div id="navToggler" title="navigation">
+      <!-- <img src="https://2021.igem.org/wiki/images/6/67/T--IISER_Kolkata--image-toggleBtn-2x.png" alt="#NAV#" /> -->
+      <img src="./images/offline/new/toggleBtn-2x.png" alt="#NAV#" />
+    </div>
+    <!-- /navToggler -->
+
+    <!-- navigation -->
+    <nav class="navigation-container">
+      <div class="navigation">
+        <!-- <img src="https://2021.igem.org/wiki/images/0/0e/T--IISER_Kolkata--image-navBG-2x.png" alt="" /> -->
+        <img src="images/offline/navBG-2x.png" alt="" />
+        <div class="navList">
+          <ol>
+            <li class="navDrop">
+              <a href="javascript:void();">
+                Project
+                <div class="navDropList">
+                  <ul>
+                    <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Description">Description</a></li>
+                    <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Design">Design</a></li>
+                  </ul>
+                </div>
+              </a>
+            </li>
+            <li class="navDrop">
+              <a href="javascript:void();">
+                Wet Lab
+                <div class="navDropList">
+                  <ul>
+                    <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Experiments">Experiments</a></li>
+                    <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Notebook">Notebook</a></li>
+                    <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Parts">Parts</a></li>
+                    <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Results">Results</a></li>
+                    <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Safety">Safety</a></li>
+                  </ul>
+                </div>
+              </a>
+            </li>
+            <li class="navDrop">
+              <a href="javascript:void();">
+                Dry Lab
+                <div class="navDropList">
+                  <ul>
+                    <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Overview">Overview</a></li>
+                    <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Mathematical_Modeling">Mathematical Modeling</a></li>
+                  </ul>
+                </div>
+              </a>
+            </li>
+            <li class="navDrop">
+              <a href="javascript:void();">
+                Human Practices
+                <div class="navDropList">
+                  <ul>
+                    <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Overview">Overview</a></li>
+                    <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Integrated_Human_Practices">Integrated Human Practices</a></li>
+                    <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Proposed_Implementation">Proposed Implementation</a></li>
+                    <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Supporting_Entrepreneurship">Supporting Entrepreneurship</a></li>
+                    <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Inclusivity">Inclusivity</a></li>
+                  </ul>
+                </div>
+              </a>
+            </li>
+            <li class="navDrop">
+              <a href="javascript:void();">
+                Education
+                <div class="navDropList">
+                  <ul>
+                    <li><a href="">Introduction Children's Book</a></li>
+                    <li><a href="">Science Workshop</a></li>
+                    <li><a href="">Webinars</a></li>
+                    <li><a href="">Genscript Interview</a></li>
+                    <li><a href="">Podcasts & Blogs</a></li>
+                    <li><a href="">Science Through Art</a></li>
+                    <li><a href="">In Person Visits</a></li>
+                  </ul>
+                </div>
+              </a>
+            </li>
+            <li class="navDrop">
+              <a href="javascript:void();">
+                Team
+                <div class="navDropList">
+                  <ul>
+                    <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Team">Team Members</a></li>
+                    <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Collaborations">Collaborations</a></li>
+                    <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Attributions">Attributions</a></li>
+                  </ul>
+                </div>
+              </a>
+            </li>
+            <li class="navDrop">
+              <a href="javascript:void();">
+                Judging
+                <div class="navDropList">
+                  <ul>
+                    <li><a href="">Medals</a></li>
+                    <li><a href="">Judging Form</a></li>
+                  </ul>
+                </div>
+              </a>
+            </li>
+            <li class="navDrop"><a href="javascript:void();"> Awards </a></li>
+          </ol>
+        </div>
+      </div>
+    </nav>
+    <!-- /navigation -->
+
+    <!-- IISER KOLKATA CONTAINER -->
+    <div class="iiserKolkata">
+      <!-- hero -->
+      <div id="hero">
+        <!-- <img src="https://2021.igem.org/wiki/images/2/29/T--IISER_Kolkata--image-HomeHero.png" alt="Team_Hero" /> -->
+        <img src="images/offline/HomeHero-3x.png" alt="" />
+        <div class="homeBtn" title="Go To Home">
+          <a href="https://2021.igem.org/Team:IISER_Kolkata">
+            <img src="images/offline/navBG-2x.png" alt="Namooste" />
+          </a>
+        </div>
+      </div>
+      <!-- /hero -->
+      <div class="indentContainer centerImage">
+        <div class="highlightYellow mediumText textShadow"><b>Overview</b></div>
+        <div style="position: sticky; top: 0;"></div>
+        <!-- <img src="https://2021.igem.org/wiki/images/7/7e/T--IISER_Kolkata--image-twoCows-1x.png" alt="image_twoCows" /> -->
+        <!-- <img src="images/offline/elements-2x/twoCows-2x.png" alt="" /> -->
+      </div>
+
+      <div class="indentContainer">
+        <div class="gridedContainer">
+          <div>
+            <div class="sideNav sticky">
+              NAVIGATE TO
+              <ul>
+                <li><a class="scrollID" onclick="scrollToID('ran')">The Team</a></li>
+                <li><a class="scrollID" onclick="scrollToID('ran2')">Instructors</a></li>
+                <li><a class="scrollID" onclick="scrollToID('ran3')">Web Designer</a></li>
+                <li><a class="scrollID" onclick="scrollToID('ran4')">Advisors</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div>
+            <section class="scrollSection">
+              <div id="ran" class="centerImage">
+                <div class="highlightYellow mediumText textShadow"><b>The Team</b></div>
+              </div>
+              <div class="contentSection">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, ipsum.
+              </div>
+            </section>
+            <section class="scrollSection">
+              <div id="ran2" class="centerImage">
+                <div class="highlightYellow mediumText textShadow"><b>Instructors</b></div>
+              </div>
+              <div class="contentSection">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem placeat hic sed nulla animi quod at eius non numquam rem atque iure, modi iusto nihil laboriosam ipsa iste natus omnis nisi eum aperiam dignissimos. Quos dolores odio accusantium illo fugiat molestias architecto, aliquam repudiandae fugit harum voluptatem rem repellat quae.</p>
+              </div>
+            </section>
+            <section class="scrollSection">
+              <div id="ran3" class="centerImage">
+                <div class="highlightYellow mediumText textShadow"><b>Web Designer</b></div>
+              </div>
+              <div class="contentSection">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem placeat hic sed nulla animi quod at eius non numquam rem atque iure, modi iusto nihil laboriosam ipsa iste natus omnis nisi eum aperiam dignissimos. Quos dolores odio accusantium illo fugiat molestias architecto, aliquam repudiandae fugit harum voluptatem rem repellat quae.</p>
+              </div>
+            </section>
+            <section class="scrollSection">
+              <div id="ran4" class="centerImage">
+                <div class="highlightYellow mediumText textShadow"><b>Advisors</b></div>
+              </div>
+              <div class="contentSection">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem placeat hic sed nulla animi quod at eius non numquam rem atque iure, modi iusto nihil laboriosam ipsa iste natus omnis nisi eum aperiam dignissimos. Quos dolores odio accusantium illo fugiat molestias architecto, aliquam repudiandae fugit harum voluptatem rem repellat quae.</p>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+
+      <section class="reference">
+        <div class="wave topWave">
+          <!-- wave border  -->
+        </div>
+        <div class="indentContainer">
+          <h3>References</h3>
+          <ol>
+            <li><a href="https://en.wikipedia.org/wiki/Milk">Milk - Wikipedia</a></li>
+            <li><a href="https://knoema.com/atlas/topics/Agriculture/Live-Stock-Production-Production-Quantity/Production-of-milk#:~:text=The%20world's%20total%20production%20of,480%2C256%20thousand%20tonnes%20in%202020">Production of milk - Knoema</a></li>
+            <li><a href="https://economictimes.indiatimes.com/news/economy/agriculture/economic-survey-milk-production-rises-by-five-percent-to-198-4-million-tonnes-in-2019-20/articleshow/80585416.cms#:~:text=NEW%20DELHI%3A%20India's%20milk%20production,20%2C%E2%80%9D%20the%20survey%20said">Economic Survey: Milk production rises by five percent to 198.4 million tonnes in 2019-20</a></li>
+            <li><a href="https://www.ejmanager.com/mnstemps/68/68-1551673827.pdf?t=1632494459">J. Shilpa Shree, M. Prabu An Outlook on Growth of Dairy Sector and its Contribution to Indian Economy. International Journal of Livestock Research. Vol 9(6), 240-247</a></li>
+            <li><a href="https://www.medicinesjournal.com/download/38/1-2-36-714.pdf">Dr. Lakshmi R. A Review on Mastitis. International Journal of Medicine Research. Vol 1(2), 118-123, 2016</a></li>
+          </ol>
+        </div>
+      </section>
+      <!-- footer -->
+      <!-- <footer>
+        <div class="theFooter">
+          <div class="wave topWave">
+          </div>
+          <div class="indentContainer">
+            <div class="footerHead">
+              <h3>Our Sponsors...</h3>
+              <div class="contacts">
+                <b>Contact us at - </b>
+                <a href="javascript:void();"> <img src="https://2021.igem.org/wiki/images/e/ec/T--IISER_Kolkata--image-instagramIcon.png" alt="instagram" /></a>
+                <a href="javascript:void();"> <img src="https://2021.igem.org/wiki/images/0/02/T--IISER_Kolkata--image-facebookIcon.png" alt="facebook" /></a>
+                <a href="javascript:void();"> <img src="https://2021.igem.org/wiki/images/e/e2/T--IISER_Kolkata--image-twitterIcon.png" alt="twitter" /></a>
+                <a href="javascript:void();"> <img src="https://2021.igem.org/wiki/images/1/15/T--IISER_Kolkata--image-linkedinIcon.png" alt="linkedIn" /></a>
+              </div>
+            </div>
+            <div class="sponsors">
+              <img src="https://2021.igem.org/wiki/images/9/90/T--IISER_Kolkata--image-igemiiserk-2x.png" alt="IGEM-IISERKolkata" />
+              <img src="https://2021.igem.org/wiki/images/f/f7/T--IISER_Kolkata--image-promegaLogo.png" alt="Promega" />
+              <img src="https://2021.igem.org/wiki/images/f/fb/T--IISER_Kolkata--image-RCTLogo.png" alt="RCT" />
+              <img src="https://2021.igem.org/wiki/images/e/e3/T--IISER_Kolkata--image-iiserkLogo.png" alt="IISERKolkata" />
+              <img src="https://2021.igem.org/wiki/images/c/cb/T--IISER_Kolkata--image-IDTLogo.png" alt="IDT" />
+              <img src="https://2021.igem.org/wiki/images/4/46/T--IISER_Kolkata--image-bioLabsLogo.png" alt="NewEnglandBioLabs" />
+              <img src="https://2021.igem.org/wiki/images/6/68/T--IISER_Kolkata--image-benchlingLogo.png" alt="Benchling" />
+              <img src="https://2021.igem.org/wiki/images/0/0a/T--IISER_Kolkata--image-twistLogo.png" alt="TWIST" />
+              <img src="https://2021.igem.org/wiki/images/0/0b/T--IISER_Kolkata--image-igemLogo.png" alt="IGEM" />
+            </div>
+          </div>
+        </div>
+      </footer> -->
+      <!-- /footer -->
+    </div>
+    <!-- /IISER KOLKATA CONTAINER -->
+
+    <!-- JS -->
+    <!-- <script src="https://2021.igem.org/Template:IISER_Kolkata/js"></script> -->
+    <script src="app.js"></script>
+    <!-- /JS -->
+  </body>
+</html>
