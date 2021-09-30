@@ -100,15 +100,15 @@ img {
   font-family: "Muller", "Montserrat", Arial, Helvetica, sans-serif !important;
   /* TODO: check if overflow property is needed, this is causing bug in sticky */
   /* overflow-y: hidden; */
-  /* background-image: url("https://2021.igem.org/wiki/images/5/51/T--IISER_Kolkata--image-bg-1x.png") !important; */
-  background-image: url("./images/offline/bgnt-1x.png") !important;
+  background-image: url("https://2021.igem.org/wiki/images/5/51/T--IISER_Kolkata--image-bg-1x.png") !important;
+  /* background-image: url("./images/offline/bgnt-1x.png") !important; */
   background-size: 100vw !important;
   background-repeat: repeat-y;
   scrollbar-width: none !important;
 }
 
 .indentContainer {
-  padding: 1rem 5rem 1rem 6rem !important;
+  padding: 1rem 5rem 1rem 5rem !important;
   /* text-align: justify; */
 }
 /* /containers */
@@ -267,8 +267,8 @@ img {
 
 .navDropList {
   border-radius: 50%;
-  /* background-image: url("https://2021.igem.org/wiki/images/5/5c/T--IISER_Kolkata--image-subNavBG-2x.png"); */
-  background-image: url("./images/offline/new/subNavBG.png");
+  background-image: url("https://2021.igem.org/wiki/images/5/5c/T--IISER_Kolkata--image-subNavBG-2x.png");
+  /* background-image: url("./images/offline/new/subNavBG.png"); */
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -313,7 +313,15 @@ img {
   position: absolute;
   top: 1rem;
   right: 1rem;
-  width: 6rem;
+  width: 12rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+.homeBtn a {
+  width: 50%;
 }
 /* /hero */
 
@@ -321,9 +329,14 @@ img {
 .centerImage {
   width: 100%;
   text-align: center;
+  word-wrap: break-word;
   display: flex;
   justify-content: center;
   align-items: center !important;
+}
+
+.centerImage div {
+  width: 100%;
 }
 
 .centerImage img {
@@ -475,7 +488,7 @@ img {
   text-align: center !important;
   color: #093349;
   text-shadow: 2px 2px #33517a;
-  padding-bottom: 2rem !important ;
+  padding: 2rem 2rem !important;
 }
 
 .knowMore h3 {
@@ -492,7 +505,8 @@ img {
 }
 
 .knowMoreList img {
-  height: 12rem;
+  padding: 1rem;
+  height: auto;
   transition: all 0.3s;
 }
 
@@ -536,8 +550,8 @@ img {
 }
 
 .topWave {
-  /* background-image: url("https://2021.igem.org/wiki/images/8/8a/T--IISER_Kolkata--image-topWave-2x.png"); */
-  background-image: url("/images/offline/topWave-2x.png");
+  background-image: url("https://2021.igem.org/wiki/images/8/8a/T--IISER_Kolkata--image-topWave-2x.png");
+  /* background-image: url("/images/offline/topWave-2x.png"); */
 }
 
 .bottomWave {
@@ -638,6 +652,7 @@ img {
 .sideNav ul {
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 
 .sideNav li {
@@ -657,6 +672,7 @@ img {
   background: #ddd;
   border-radius: 10px;
   word-wrap: break-word;
+  transition: all 0.3s linear;
 }
 
 /* TODO: try making them with JS */
@@ -667,6 +683,9 @@ img {
   font-weight: bold;
   text-shadow: 0 0 5px #093349;
   background: #1b8cc98a;
+  /* border: 1px dashed red; */
+  padding: 1rem;
+  /* border-left: 5px solid dodgerblue; */
 }
 /* /sideNav */
 

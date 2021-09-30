@@ -2,12 +2,15 @@ const progressBar = document.getElementById("progressBar");
 const scrollPath = document.getElementById("scrollPath");
 const topBtn = document.getElementById("toTop");
 const overlayAppearValue = 300;
-const preloader = document.getElementById("preloader");
 const navToggler = document.getElementById("navToggler");
 const navigationContainer = document.querySelector(".navigation-container");
 const navDrops = document.querySelectorAll(".navDrop");
 const dragBtn = document.getElementById("progressBtn");
 const mainNavLinks = document.querySelectorAll(".scrollID");
+const myOffset = 50;
+
+// preloader
+const preloader = document.getElementById("preloader");
 
 function preload() {
   preloader.style.opacity = "0";
@@ -16,6 +19,7 @@ function preload() {
   document.body.classList.remove("noScroll");
   preloader.style.visibility = "hidden";
 }
+// preloader
 
 window.onscroll = function () {
   let totalHeight = document.body.scrollHeight - window.innerHeight;
@@ -35,16 +39,27 @@ window.onscroll = function () {
     topBtn.style.visibility = "hidden";
     scrollPath.style.opacity = "0";
   }
+
+  var fromTop = window.pageYOffset + myOffset;
+
+  mainNavLinks.forEach((item) => {
+    var section = document.getElementById(item.id + "Section");
+    if (section.offsetTop <= fromTop) {
+      if (section.offsetTop + section.offsetHeight > fromTop) {
+        item.classList.add("scrollID-active");
+      } else {
+        item.classList.remove("scrollID-active");
+      }
+    } else {
+      item.classList.remove("scrollID-active");
+    }
+  });
 };
 
 navToggler.onclick = function () {
   navigationContainer.classList.toggle("navigation-expanded");
   removeNavDropExpanded();
 };
-
-// navigationContainer.onclick = function () {
-//   navigationContainer.classList.toggle("navigation-expanded");
-// };
 
 navDrops.forEach((item) =>
   item.addEventListener("mouseover", function () {
@@ -67,36 +82,11 @@ window.onclick = function (event) {
   }
 };
 
-// var firstY = dragBtn.offsetTop;
-// console.log(firstY);
-// dragBtn.ondrag = function () {
-//   var lastY = dragBtn.offsetTop;
-//   console.log("dragged", firstY, lastY);
-// };
-
 function scrollToID(hash) {
-  var topOffSet = 50;
+  var topOffSet = myOffset;
   var distance = document.getElementById(hash).offsetTop - topOffSet;
   window.scrollTo(0, distance);
   // document.getElementById(hash).scrollIntoView();
 
   // return hash;
 }
-
-// function getArg(item) {
-//   var arg = scrollToID(item);
-//   return arg;
-// }
-
-window.onscroll = function () {
-  const fromTop = window.pageYOffset + 50;
-
-  mainNavLinks.forEach((item) => {
-    const section = document.getElementById(item.id + "Section");
-    if (section.offsetTop <= fromTop && section.offsetTop + section.offsetHeight > fromTop) {
-      item.classList.add("scrollID-active");
-    } else {
-      item.classList.remove("scrollID-active");
-    }
-  });
-};
