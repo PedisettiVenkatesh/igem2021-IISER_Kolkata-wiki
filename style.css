@@ -320,6 +320,7 @@ img {
 /* centerImage */
 .centerImage {
   width: 100%;
+  text-align: center;
   display: flex;
   justify-content: center;
   align-items: center !important;
@@ -588,7 +589,7 @@ img {
 /* gridedContainer */
 .gridedContainer {
   display: grid;
-  grid-template-columns: 15% 85%;
+  grid-template-columns: 20% 80%;
   column-gap: 10px;
 }
 
@@ -610,6 +611,12 @@ img {
 }
 /* /gridedContainer */
 
+@media screen and (max-width: 768px) {
+  .gridedContainer {
+    grid-template-columns: 0 100%;
+  }
+}
+
 /* sticky */
 .sticky {
   position: -webkit-sticky;
@@ -619,13 +626,13 @@ img {
 
 /* sideNav */
 .sideNav {
-  background: #eee;
-  padding: 1rem;
+  /* background: #eee; */
   width: 100%;
   height: auto;
   top: 15%;
   border-radius: 10px;
   font-size: 1rem;
+  overflow: hidden;
 }
 
 .sideNav ul {
@@ -636,19 +643,30 @@ img {
 .sideNav li {
   font-size: 1.2rem;
   font-weight: bold;
-  margin-top: 2rem;
+  /* margin-top: 2rem; */
 }
 
 .scrollID {
   text-decoration: none !important;
+  width: 100%;
+  display: block;
+  margin: 0.5rem 0;
+  padding: 0.5rem 1rem;
+  text-align: center;
+  /* background: rgba(221, 221, 221, 0.4); */
+  background: #ddd;
+  border-radius: 10px;
+  word-wrap: break-word;
 }
 
 /* TODO: try making them with JS */
-.scrollID.scrollID-active {
+.scrollID.scrollID-active,
+.scrollID:hover {
   text-decoration: underline !important;
-  font-size: 1.5rem;
+  /* font-size: 1.5rem; */
   font-weight: bold;
   text-shadow: 0 0 5px #093349;
+  background: #1b8cc98a;
 }
 /* /sideNav */
 

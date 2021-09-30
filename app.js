@@ -7,6 +7,7 @@ const navToggler = document.getElementById("navToggler");
 const navigationContainer = document.querySelector(".navigation-container");
 const navDrops = document.querySelectorAll(".navDrop");
 const dragBtn = document.getElementById("progressBtn");
+const mainNavLinks = document.querySelectorAll(".scrollID");
 
 function preload() {
   preloader.style.opacity = "0";
@@ -78,4 +79,24 @@ function scrollToID(hash) {
   var distance = document.getElementById(hash).offsetTop - topOffSet;
   window.scrollTo(0, distance);
   // document.getElementById(hash).scrollIntoView();
+
+  // return hash;
 }
+
+// function getArg(item) {
+//   var arg = scrollToID(item);
+//   return arg;
+// }
+
+window.onscroll = function () {
+  const fromTop = window.pageYOffset + 50;
+
+  mainNavLinks.forEach((item) => {
+    const section = document.getElementById(item.id + "Section");
+    if (section.offsetTop <= fromTop && section.offsetTop + section.offsetHeight > fromTop) {
+      item.classList.add("scrollID-active");
+    } else {
+      item.classList.remove("scrollID-active");
+    }
+  });
+};
