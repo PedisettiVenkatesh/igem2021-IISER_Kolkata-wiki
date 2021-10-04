@@ -42,16 +42,16 @@ window.onscroll = function () {
 
   var fromTop = window.pageYOffset + myOffset;
 
-  mainNavLinks.forEach((item) => {
-    var section = document.getElementById(item.id + "Section");
+  mainNavLinks.forEach((navD) => {
+    var section = document.getElementById(navD.id + "Section");
     if (section.offsetTop <= fromTop) {
       if (section.offsetTop + section.offsetHeight > fromTop) {
-        item.classList.add("scrollID-active");
+        navD.classList.add("scrollID-active");
       } else {
-        item.classList.remove("scrollID-active");
+        navD.classList.remove("scrollID-active");
       }
     } else {
-      item.classList.remove("scrollID-active");
+      navD.classList.remove("scrollID-active");
     }
   });
 };
@@ -89,4 +89,28 @@ function scrollToID(hash) {
   // document.getElementById(hash).scrollIntoView();
 
   // return hash;
+}
+
+const collapsibles = document.querySelectorAll(".collapsible");
+
+collapsibles.forEach((coll) =>
+  coll.querySelector(".collapsible-header").addEventListener("click", function () {
+    removeCollapsibleExpanded(coll);
+    coll.classList.toggle("collapsible--expanded");
+
+    if (coll.querySelector(".collapsibleToggler").innerHTML == "+") {
+      coll.querySelector(".collapsibleToggler").innerHTML = "-";
+    } else {
+      coll.querySelector(".collapsibleToggler").innerHTML = "+";
+    }
+  })
+);
+
+function removeCollapsibleExpanded(notRemove) {
+  collapsibles.forEach((collD) => {
+    if (collD != notRemove) {
+      collD.classList.remove("collapsible--expanded");
+      collD.querySelector(".collapsibleToggler").innerHTML = "+";
+    }
+  });
 }
