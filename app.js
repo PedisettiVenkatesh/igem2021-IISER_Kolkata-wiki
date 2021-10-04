@@ -7,7 +7,7 @@ const navigationContainer = document.querySelector(".navigation-container");
 const navDrops = document.querySelectorAll(".navDrop");
 const dragBtn = document.getElementById("progressBtn");
 const mainNavLinks = document.querySelectorAll(".scrollID");
-const myOffset = 50;
+const myOffset = 100;
 
 // preloader
 const preloader = document.getElementById("preloader");
