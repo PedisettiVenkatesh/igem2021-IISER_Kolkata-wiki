@@ -42,6 +42,7 @@ html {
 
 :root {
   --color-body: #000;
+  --color-border: #98c1d9;
 }
 
 *,
@@ -216,8 +217,8 @@ img {
 
 /* navToggler */
 #navToggler {
-  width: 40px;
-  height: max-content;
+  width: 50px;
+  height: auto;
   /* box-shadow: 0 0 10px 5px #000; */
   border-radius: 2px;
   position: fixed;
@@ -529,13 +530,14 @@ img {
 .knowMoreList {
   padding-top: 3rem !important;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center !important;
 }
 
 .knowMoreList img {
   padding: 1rem;
   height: auto;
+  max-height: 300px;
   transition: all 0.3s;
 }
 
@@ -621,11 +623,21 @@ img {
 
 .sponsors {
   padding: 3rem 0 1rem;
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  position: relative;
+}
+
+.sponsors div:first-child img {
+  position: absolute;
+  top: 30%;
+  border-right: 3px solid #5e8dd1;
 }
 
 .sponsors img {
   width: 11rem;
   padding: 1rem 1.5rem;
+  height: auto;
 }
 /* /footer */
 

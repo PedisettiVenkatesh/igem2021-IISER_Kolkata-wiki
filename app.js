@@ -6,8 +6,6 @@ const navToggler = document.getElementById("navToggler");
 const navigationContainer = document.querySelector(".navigation-container");
 const navDrops = document.querySelectorAll(".navDrop");
 const dragBtn = document.getElementById("progressBtn");
-const mainNavLinks = document.querySelectorAll(".scrollID");
-const myOffset = 100;
 
 // preloader
 const preloader = document.getElementById("preloader");
@@ -20,6 +18,8 @@ function preload() {
   preloader.style.visibility = "hidden";
 }
 // preloader
+
+const myOffset = 100;
 
 window.onscroll = function () {
   let totalHeight = document.body.scrollHeight - window.innerHeight;
@@ -40,20 +40,7 @@ window.onscroll = function () {
     scrollPath.style.opacity = "0";
   }
 
-  var fromTop = window.pageYOffset + myOffset;
-
-  mainNavLinks.forEach((navD) => {
-    var section = document.getElementById(navD.id + "Section");
-    if (section.offsetTop <= fromTop) {
-      if (section.offsetTop + section.offsetHeight > fromTop) {
-        navD.classList.add("scrollID-active");
-      } else {
-        navD.classList.remove("scrollID-active");
-      }
-    } else {
-      navD.classList.remove("scrollID-active");
-    }
-  });
+  highlightActiveSection();
 };
 
 navToggler.onclick = function () {
@@ -89,28 +76,4 @@ function scrollToID(hash) {
   // document.getElementById(hash).scrollIntoView();
 
   // return hash;
-}
-
-const collapsibles = document.querySelectorAll(".collapsible");
-
-collapsibles.forEach((coll) =>
-  coll.querySelector(".collapsible-header").addEventListener("click", function () {
-    removeCollapsibleExpanded(coll);
-    coll.classList.toggle("collapsible--expanded");
-
-    if (coll.querySelector(".collapsibleToggler").innerHTML == "+") {
-      coll.querySelector(".collapsibleToggler").innerHTML = "-";
-    } else {
-      coll.querySelector(".collapsibleToggler").innerHTML = "+";
-    }
-  })
-);
-
-function removeCollapsibleExpanded(notRemove) {
-  collapsibles.forEach((collD) => {
-    if (collD != notRemove) {
-      collD.classList.remove("collapsible--expanded");
-      collD.querySelector(".collapsibleToggler").innerHTML = "+";
-    }
-  });
 }
