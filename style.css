@@ -52,15 +52,21 @@ html {
 }
 
 /* typography */
-/* @font-face {
-  font-family: "iiserK";
-  src: url("https://2021.igem.org/wiki/images/d/d2/T--IISER_Kolkata--fonts-Inter-Bold.ttf");
-} */
+
+/* tif, tiff, fcs, otf, eot, ttf, woff, svg. */
 
 @font-face {
-  font-family: "iiserK";
-  src: url("https://2021.igem.org/wiki/images/d/d2/T--IISER_Kolkata--fonts-Inter-Bold.ttf") format("ttf");
+  font-family: MyRaleway;
+  src: url("https://2021igem.org/wiki/images/3/34/T--IISER_Kolkata--fonts-Raleway-regular.ttf") format("truetype");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: MyRaleway;
+  src: url("https://2021.igem.org/wiki/images/6/6e/T--IISER_Kolkata--fonts-Raleway-Bold-eot.eot");
+  src: url("https://2021.igem.org/wiki/images/7/7a/T--IISER_Kolkata--fonts-Raleway-Bold.woff") format("woff"), url("https://2021.igem.org/wiki/images/0/0f/T--IISER_Kolkata--fonts-Raleway-bold.ttf") format("truetype");
   font-weight: bold;
+  font-style: normal;
 }
 
 html {
@@ -71,7 +77,7 @@ html {
 
 body {
   color: var(--color-body) !important;
-  font-family: "iiserK", Arial, Helvetica, sans-serif !important;
+  font-family: MyRaleway, Arial, Helvetica, sans-serif !important;
   margin: 0;
   padding: 0;
   font-size: 1.5rem;
@@ -114,7 +120,7 @@ img {
   min-width: 100vw;
   width: 100vw;
   max-width: 100vw !important;
-  font-family: "iiserK", Arial, Helvetica, sans-serif !important;
+  font-family: MyRaleway, Arial, Helvetica, sans-serif !important;
   /* TODO: check if overflow property is needed, this is causing bug in sticky */
   /* overflow-y: hidden; */
   background-image: url("https://2021.igem.org/wiki/images/5/51/T--IISER_Kolkata--image-bg-1x.png") !important;
@@ -384,7 +390,7 @@ img {
 }
 
 .highlightYellow {
-  color: rgb(228, 198, 32);
+  color: #ffce60;
 }
 
 .milkText {
@@ -548,7 +554,7 @@ img {
 
 /* reference */
 .reference {
-  margin-top: 8rem;
+  margin-top: 3rem;
   font-size: 1rem !important;
   background: #5e8dd1;
   color: #23354e;
@@ -647,6 +653,7 @@ img {
   grid-template-columns: 20% auto;
   column-gap: 10px;
   text-align: justify;
+  margin-bottom: 90px;
 }
 
 .gridedContainer > div {
@@ -689,6 +696,7 @@ img {
   border-radius: 10px;
   font-size: 1rem;
   overflow: hidden;
+  margin-bottom: 3.2rem;
 }
 
 .sideNav ul {
@@ -733,6 +741,7 @@ img {
 /* contentSection */
 .contentSection {
   min-height: 400px;
+  margin-top: 3rem;
 }
 /* /contentSection */
 
@@ -785,3 +794,105 @@ img {
   background: rgb(10, 168, 168);
 }
 /* /collapsible */
+
+/* profiles */
+.profilesContainer {
+  background: rgba(255, 255, 255, 0.5);
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 1px 1pc 5px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 3rem;
+}
+
+.profile {
+  /* background: gold; */
+  width: 30%;
+  height: 30%;
+  border-radius: 50%;
+  padding: 0.5rem;
+  /* overflow: hidden; */
+  border: 1.8rem solid #5e8dd1;
+  box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.5);
+  margin: 1rem 0.5rem;
+  transition: all 0.3s linear;
+  line-height: 1.2;
+}
+
+.profile:hover {
+  border: 1.8rem solid #ffce60;
+}
+
+.profile__image {
+  overflow: hidden;
+  border-radius: 50%;
+  width: 100%;
+  height: auto;
+  transition: all 0.1s ease;
+  /* box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.5); */
+}
+
+.profile__image:hover {
+  filter: grayscale(1);
+}
+
+.profile__modal {
+  background: rgba(10, 50, 100, 0.5);
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  z-index: 50;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s linear;
+}
+
+.profile__modalContent {
+  background: white;
+  border-radius: 1.5rem;
+  width: 60%;
+  min-height: 40%;
+  max-height: 95%;
+  padding: 2.5rem 3rem 2rem;
+  overflow: hidden;
+  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.2);
+}
+
+.profile__name {
+  font-size: 2.2rem;
+  font-weight: bold;
+  padding: 1rem 0;
+  color: #5e8dd1;
+}
+
+.profile__role {
+  font-size: 1.2rem;
+  padding: 1rem 0;
+}
+
+.profile__info {
+  padding: 1rem 0.5rem 1rem;
+  border-top: 2px solid #000;
+  font-size: 0.9rem;
+  max-height: 50vh;
+  /* box-shadow: inset 0 0 5px 1px rgba(0, 0, 0, 0.2); */
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.profile.profile--expanded .profile__modal {
+  /* z-index: 9; */
+  visibility: visible;
+  opacity: 1;
+}
+
+/* /profiles */
