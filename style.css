@@ -128,6 +128,7 @@ img {
   background-size: 100vw !important;
   background-repeat: repeat-y;
   scrollbar-width: none !important;
+  position: relative;
 }
 
 .indentContainer {
@@ -135,6 +136,16 @@ img {
   /* text-align: justify; */
 }
 /* /containers */
+
+/* bottle */
+.milkBottle {
+  height: 3.2rem;
+  width: auto;
+  position: absolute;
+  top: 10%;
+  left: 55%;
+}
+/* /bottle */
 
 /* preloader */
 #preloader {

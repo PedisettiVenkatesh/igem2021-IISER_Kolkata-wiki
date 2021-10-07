@@ -39,8 +39,9 @@ window.onscroll = function () {
     topBtn.style.visibility = "hidden";
     scrollPath.style.opacity = "0";
   }
+  console.log(window.scrollY - 400);
 
-  highlightActiveSection();
+  // highlightActiveSection();
 };
 
 navToggler.onclick = function () {
