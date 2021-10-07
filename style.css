@@ -142,8 +142,9 @@ img {
   height: 3.2rem;
   width: auto;
   position: absolute;
-  top: 10%;
+  top: 11%;
   left: 55%;
+  z-index: 0;
 }
 /* /bottle */
 
@@ -354,6 +355,7 @@ img {
   text-align: center;
   width: 100%;
   position: relative;
+  z-index: 1;
 }
 
 .homeBtn {
