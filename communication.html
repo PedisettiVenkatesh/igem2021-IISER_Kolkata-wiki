@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IISER Kolkata IGEM Team - Home</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body onload="preload()" class="noScroll">
+    <!-- preloader -->
+    <div id="preloader" title="Loading...">
+      <img src="https://2021.igem.org/wiki/images/d/d6/T--IISER_Kolkata--image-preloader.gif" alt="[preloader image]" />
+      Loading . . .
+    </div>
+    <!-- /preloader -->
+
+    <!-- progressBar -->
+    <div id="scrollPath">
+      <div id="progressBar"></div>
+      <div id="progressBtn"></div>
+    </div>
+    <!-- /progressBar -->
+
+    <!-- toTop -->
+    <div id="toTop" title="Go To Top">
+      <a href="javascript:window.scrollTo(0, 0);">
+        <img src="https://2021.igem.org/wiki/images/d/d8/T--IISER_Kolkata--image-toTop-2x.png" alt="toTop" />
+      </a>
+    </div>
+    <!-- /toTop -->
+
+    <!-- navToggler -->
+    <div id="navToggler" title="navigation">
+      <img src="https://2021.igem.org/wiki/images/6/67/T--IISER_Kolkata--image-toggleBtn-2x.png" alt="#NAV#" />
+    </div>
+    <!-- /navToggler -->
+
+    <!-- navigation -->
+    <nav class="navigation-container">
+      <div class="navigation">
+        <img src="https://2021.igem.org/wiki/images/0/0e/T--IISER_Kolkata--image-navBG-2x.png" alt="" />
+        <div class="navList">
+          <ol>
+            <li class="navDrop"><a href="https://2021.igem.org/Team:IISER_Kolkata"> Home </a></li>
+            <li class="navDrop">
+              <a>
+                Team
+                <div class="navDropList">
+                  <ul>
+                    <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Team">Team Members</a></li>
+                    <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Attributions">Attributions</a></li>
+                    <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Collaborations">Collaborations</a></li>
+                    <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Partnership">Partnership</a></li>
+                  </ul>
+                </div>
+              </a>
+            </li>
+            <li class="navDrop">
+              <a>
+                Project
+                <div class="navDropList">
+                  <ul>
+                    <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Description">Description</a></li>
+                    <!-- <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Design">Design</a></li> -->
+                    <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Contribution">Contribution</a></li>
+                    <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Engineering">Engineering</a></li>
+                    <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Improve">Improvement</a></li>
+                  </ul>
+                </div>
+              </a>
+            </li>
+            <li class="navDrop">
+              <a>
+                Wet Lab
+                <div class="navDropList">
+                  <ul>
+                    <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Experiments">Experiments</a></li>
+                    <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Notebook">Notebook</a></li>
+                    <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Parts">Parts</a></li>
+                    <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Safety">Safety</a></li>
+                    <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Results">Results</a></li>
+                  </ul>
+                </div>
+              </a>
+            </li>
+            <li class="navDrop">
+              <a>
+                Dry Lab
+                <div class="navDropList">
+                  <ul>
+                    <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Model">Mathematical Modeling</a></li>
+                  </ul>
+                </div>
+              </a>
+            </li>
+            <li class="navDrop">
+              <a>
+                Human Practices
+                <div class="navDropList">
+                  <ul>
+                    <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Human_Practices">Integrated Human Practices</a></li>
+                    <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Implementation">Proposed Implementation</a></li>
+                    <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Communication">Communication</a></li>
+                  </ul>
+                </div>
+              </a>
+            </li>
+            <li class="navDrop">
+              <a>
+                Awards
+                <div class="navDropList">
+                  <ul>
+                    <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Education">Education</a></li>
+                    <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Inclusivity">Inclusivity</a></li>
+                    <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Entrepreneurship">Supporting Entrepreneurship</a></li>
+                    <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Measurement">Measurement</a></li>
+                  </ul>
+                </div>
+              </a>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </nav>
+    <!-- /navigation -->
+
+    <!-- IISER KOLKATA CONTAINER -->
+    <div class="iiserKolkata">
+      <!-- hero -->
+      <div id="hero">
+        <img src="https://2021.igem.org/wiki/images/3/39/T--IISER_Kolkata--image-communictaionHero.png" alt="Communication_Hero" />
+        <div class="homeBtn" title="Go To Home">
+          <a href="https://2021.igem.org/Team:IISER_Kolkata">
+            <img src="https://2021.igem.org/wiki/images/c/cd/T--IISER_Kolkata--image-igemIISERK_home.png" alt="IGEM-IISERKolkata" />
+          </a>
+          <a href="https://2021.igem.org/Team:IISER_Kolkata">
+            <img src="https://2021.igem.org/wiki/images/c/c5/T--IISER_Kolkata--images-namoosteTransparent.jpg" alt="Namooste" />
+          </a>
+        </div>
+      </div>
+      <!-- /hero -->
+
+      <!-- content -->
+      <div class="indentContainer">
+        <div class="gridedContainer">
+          <div>
+            <!-- sideNav -->
+            <div class="sideNav sticky">
+              <!-- navigate in Page -->
+              <ul>
+                <li><a id="run" class="scrollID" onclick="scrollToID('runSection')">Overview</a></li>
+                <li><a id="run1" class="scrollID" onclick="scrollToID('run1Section')">Gene Gala</a></li>
+                <li><a id="run2" class="scrollID" onclick="scrollToID('run2Section')">SynKTBio</a></li>
+                <li><a id="run3" class="scrollID" onclick="scrollToID('run3Section')">Bangla Article for Vigyan Mancha</a></li>
+                <li><a id="run4" class="scrollID" onclick="scrollToID('run4Section')">Children’s StoryBook</a></li>
+                <li><a id="run5" class="scrollID" onclick="scrollToID('run5Section')">Interviews</a></li>
+              </ul>
+            </div>
+            <!-- /sideNav -->
+          </div>
+          <div>
+            <!-- overview -->
+            <section id="runSection" class="scrollSection">
+              <div class="centerImage">
+                <div class="highlightYellow mediumText textShadow"><b>Overview</b></div>
+              </div>
+              <div class="contentSection">
+                <div class="boxContent">
+                  <p>Communication is an integral part of science and its branches. Talking to people, spreading awareness, sharing knowledge is what science truly is. Team iGEM IISER Kolkata focussed a lot on communicating with their stakeholders. Be it primary school kids or high school students, be it local dairy farmers or veterinary doctors, be it scientists or the demand of people around us; our team has gone to discuss, learn and develop our project by taking inputs from the grass-root level of our community. We have organised workshops, webinars and distributed storybooks to interact with the young minds of the society. At the end of the day, they are the upcoming generation who has to carry our lead forward.</p>
+                </div>
+              </div>
+            </section>
+            <!-- 1. Gene Gala: 5 Day Mini Summer School on Synthetic Biology -->
+            <section id="run1Section" class="scrollSection">
+              <div class="centerImage">
+                <div class="highlightYellow mediumText textShadow"><b>Gene Gala: 5 Day Mini Summer School on Synthetic Biology</b></div>
+              </div>
+              <div class="contentSection">
+                <div class="boxContent">
+                  <p>
+                    In order to spread the message and create awareness about synthetic biology, our team along with iGEM IISER Tirupati decided to target the young minds. By discussing ideas, organising presentations and some fun-filled activities, we planned to organise a 5-day Mini Summer School by hosting 75 girl students from different schools run by the Directorate of Education, Delhi. It was a great pleasure to interact with the fresh minds and discuss the potential strategies to find a solution for the prevailing problems. Each day the workshop started off with a presentation in which we discussed the basics of molecular biology, synthetic biology, genetic engineering, etc. The details of the same are mentioned <a class="referenceLinks" href="https://2021.igem.org/Team:IISER_Kolkata/Education">here</a>. We engaged in a proper interactive session in which the
+                    students as well as their teachers expressed their views, doubts and concerns with us about which we shall discuss in detail in some time. It was a two-way learning process as we too got to learn a lot from this workshop. Moreover, it was a beautiful journey which unfortunately had to come to an end on the 5th day. Despite all the disadvantages owing to the pandemic, it would be an understatement to say the workshop was merely a set of interactions. It was a profound experience for us to understand and connect to students coming from diverse backgrounds. After the presentation, the students were divided into small groups and then moved on to different breakout sessions. Each breakout room consisted of two guides (one from IISER Kolkata and the other from IISER Tirupati) for enquiring any possible doubts of the students. Each day after the
+                    discussion session, we also organised some activities for the students based on elements of biology.
+                  </p>
+                  <p><b>Why Gene Gala? </b></p>
+                  <ol>
+                    <li>
+                      <b> Promoting #WiSTEM </b> <br />
+                      We aimed to inspire more and more female students who are currently in their high school levels to take up different fields of science, technology, engineering and education (STEM). As a result, along with the help of the Directorate of Education, Delhi, we organised this event to have 75 students on board and have a fruitful discussion on not just molecular biology basics, but also having an exchange of ideas on their future areas of interest. Upon discussing with them, we came up with several new fields they looked forward to as their career choices and we were told that many of them were already interested in taking up science and maths as their future prospects. We encouraged them to pursue their areas of interest and break the vivid barriers based on gender along the way. We also aimed at improving STEM education as well as making them
+                      easily accessible for their future references, rendering confidence and supporting them at their early stage itself.
+                    </li>
+                    <li>
+                      <b>Interactive Discussion Forums:</b> <br />
+                      At the end of every presentation, we divided our students into different breakout rooms headed by an iGEM IISER Kolkata team member and an iGEM IISER Tirupati team member, where we continued with a discussion session and took note of their doubts and concerns on a one-on-one basis. We provided real life approaches to clear their doubts for their better understanding and clearing their concepts. This was done so that they could connect themselves to the question and understand better. We focused and encouraged them to keep asking questions and also made them understand the importance of understanding the questions first. Asking the right questions should be an integral part of the knowledge gaining process from the very beginning and we tried to incorporate the same into them.
+                    </li>
+                    <li>
+                      <b>Fun-filled activities:</b> <br />
+                      Each day the activities were designed in a way that the students took their time to think and come to a solution on the next day and discussed the answers with us. On the very first day, we taught them to decode a phone number or a given sequence of numbers into a sequence of nucleotides or a chain of amino acids (For more details, kindly refer to <a class="referenceLinks" href="https://2021.igem.org/Team:IISER_Kolkata/Education">Education</a>). For the same, we showed them a stepwise process for base conversion of numbers and some of the students were very enthusiastic about it. We also made sure the foundation for these conversions was understood by each and every student present in their respective breakout rooms so that in the near future, they are able to pass on this knowledge to others when and where required. Later, we went on to send
+                      them an assignment related to the same. On the second day, we conducted a quiz related to the topics we covered on that particular day and discussed the answers of the same. We also went on to discuss the answers of the previous day’s assignment and were highly encouraged and enthused to look at their excitement and participation while answering. On our third day’s activity we discussed along with the students about building a syn-bio lego in which we taught them to build a plasmid by placing the corresponding part to the respective hint provided. The fourth day activity included a quiz session followed by a discussion session with the students. At the end of fourth day, we asked the students to come up with a new idea on how they could solve an already existing problem around us with the help of syn-bio and/or genetic engineering. Discussion on
+                      5th day was the most enjoyable part of this whole session as the students got to present their own ideas.
+                    </li>
+                    <li>
+                      <b>The Fifth Day:</b> <br />
+                      On the final day (well, our personal favourite), we went on to discuss some really fascinating and great ideas the students came up with (as mentioned above). We discussed the strengths and weaknesses of their ideas, and encouraged them to continue thinking about a prospective solution such that it drives them towards their goal, and they stay inspired so that in the near future, we might have a bunch of young minds working on an approach to make this world a better place to live in. We also made them aware of the ethical concerns and issues related to syn-bio. We emphasized on creating a sound and safe platform for promoting the discussion on syn-bio with high-school students.
+                    </li>
+                    <li>
+                      <b>Distributing Handbooks:</b> <br />
+                      Handbooks were distributed to give them a written overview of a day's content to help them engage with us better and also provide them an opportunity to think about science and ideas discussed during the workshop, on their own. We made sure to provide a handbook to the students every day. The handbook primarily contained an overview of that day’s presentation and activities. For more details, refer <a class="referenceLinks" href="">here</a>. It can also be used as a future reference by the students and the necessary information and awareness could be deliberately passed on to others whenever required.
+                    </li>
+                  </ol>
+                  <p>Gene Gala was undoubtedly a beautiful expedition. For most of us it was the first time being a “teacher” and we were very happy that in return we even got to learn a lot out of it. We collected valuable feedback from the students as well as their teachers which is shown below.</p>
+                  <div class="figures">
+                    <figure>
+                      <img src="" alt="screenshot" />
+                      <figcaption>A screenshot Gene Gala</figcaption>
+                    </figure>
+                  </div>
+                  <p>Thanks to everyone who had been a part of this journey.</p>
+                </div>
+              </div>
+            </section>
+            <!-- 2. SynKTBio -->
+            <section id="run2Section" class="scrollSection">
+              <div class="centerImage">
+                <div class="highlightYellow mediumText textShadow"><b>SynKTBio</b></div>
+              </div>
+              <div class="contentSection">
+                <div class="boxContent">
+                  <p>
+                    Team iGEM IISER Kolkata organised an open-for-all event to create awareness among the rising generation about the importance, applicability and ethical issues related to synthetic biology. We proposed our idea to three regional schools from Asansol, Kolkata, India and the authorities were highly enthusiastic about the idea. They agreed on an online seminar with us along with their students as well as teachers. Around 70 high school students attended the 3-hour webinar with frequent breaks in between. We started off the presentation with slides based on molecular biology, synthetic biology, genetic engineering, etc. A proper discussion-based interaction helped us know the views of the students on the real-world problems and their approach towards introducing a possible solution using synthetic biology and genetic engineering. The entire presentation
+                    was introduced in a regional language (i.e. Bengali) for the proper documentation and implementation of the delivered content. In order to keep the session fun and interactive, we ended it with an activity and we were very grateful for the feedback we received.
+                  </p>
+
+                  <ol>
+                    <li>
+                      <b>Including regional language:</b> <br />
+                      India is a diverse country with linguistic and cultural assortment. Most of the public schools prefer to teach and communicate in their regional languages. So, our team members who were fluent in Bengali went on to present a 3-hour seminar to the students from three different schools in Asansol, Kolkata, India. This was done to make sure that all sections of students could be included in order to create awareness about synthetic biology and learn the basics of molecular biology at the same time. The students who studied in Bengali from their childhood itself must be comfortable with the same and consequently the decision was made to encourage a presentation in Bengali for proper implementation of the webinar. We made sure that in near future the students will also be able to share their views and knowledge on the same to the upcoming generation
+                      efficiently and productively.
+                    </li>
+                    <li>
+                      <b>Distributing Lecture Slides:</b> <br />
+                      We sent out our lecture slides to the students so that they will be able to go through them whenever required. The lecture slides were well equipped with the basics of molecular biology and its applications. We also made sure that the students could enjoy the presentation slides and not get bored of it by putting attractive visuals and animations. The lecture slides were also distributed so that they could pass on the information whenever required and also spread awareness. After all, science should be accessible to all.
+                    </li>
+                    <li>
+                      <b>Interactive doubt sessions:</b><br />
+                      After every lecture, we held a 10-minute doubt clearing session in which the students were allowed to ask any questions based on the content of the previous presentation. We kept on encouraging interactions as this would have boosted their confidence and allowed them to clear their concepts. At the end of the day, science is all about asking the right questions.
+                    </li>
+                    <li>
+                      <b>Sharing interesting activities:</b> <br />
+                      We provided them with an assignment asking them to decode a phone number or a given sequence of numbers into a sequence of nucleotides or a chain of amino acids (For more details, kindly refer to <a class="referenceLinks" href="https://2021.igem.org/Team:IISER_Kolkata/Education">Education</a>). We showed them a stepwise process for base conversion of numbers. We also made sure the foundation for these conversions was understood by each and every student present in the webinar so that in the near future, they are able to pass on this knowledge to others when and where required. The assignment was provided to them via a google form and the link is attached <a class="referenceLinks" href="">herewith</a>. We are glad that two of the students excelled in the assignment by providing all the answers correct. All the students who performed really well,
+                      which makes us glad and excited for our future expeditions.
+                    </li>
+                    <li>
+                      <b>Receiving feedback:</b> <br />
+                      The aforementioned points were something we experienced, but we value our students’ feedback as well. So, we sent out a google form asking how they felt about the webinar and we were glad to receive positive feedback from them. The details of which are mentioned below: <a class="referenceLinks" href="">LINK</a>
+                      <div class="figures">
+                        <figure>
+                          <img src="" alt="The screenshots of some feedback also need to be attached." />
+                          <figcaption>The screenshots of some feedback also need to be attached.</figcaption>
+                        </figure>
+                      </div>
+                    </li>
+                  </ol>
+                </div>
+              </div>
+            </section>
+            <!-- 3. Bangla Article for Vigyan Mancha -->
+            <section id="run3Section" class="scrollSection">
+              <div class="centerImage">
+                <div class="highlightYellow mediumText textShadow"><b>Bangla Article for Vigyan Mancha</b></div>
+              </div>
+              <div class="contentSection">
+                <div class="boxContent">
+                  <p>
+                    The Indian subcontinent is not only the largest producer of milk but also the largest consumer of milk producing 199.6 million metric tons of milk and consuming 77.7 million metric tonnes. The country possesses 355 million milch animals in terms of cows and buffalos that make up for the largest dairy sector in the world. However the dairy sector is crippled by a very common problem that affects one out of every two dairy animals - mastitis. Upon discussion with the veterinary doctors and scientists, we realized the importance of creating awareness via an article published by a renowned local science organization about bovine mastitis among the local people and farmers such that the disease does not proceed to the fatal stages. Bovine mastitis often remains unnoticed and is highly injurious to the cow’s health if allowed to proceed to further
+                    stages. We also went on to discuss an antibiotic-free approach to tackle AMR and eventually, we mentioned about the scientific methods involved with our project. This article was published in the regional language, i.e. Bengali for an easy accessibility and understanding of the locals. This was done so that we could educate and encourage the local farmers to stop the overuse of antibiotics. Moreover, Paschim Banga Vigyan Mancha is the largest people science organization in India and millions of people of West Bengal are very much familiar with the name of it. <a class="referenceLinks" href="http://www.paschimbangavigyanmancha.org/index.php">[1]</a> Consequently, we decided to use it as a platform to generate awareness about bovine mastitis among the locals and our respective stakeholders. These can even lead to sparks of interest and curiosity in
+                    young minds.
+                  </p>
+                  <p>We, the team at iGEM IISER Kolkata believe in the inclusivity of every possible person directly or indirectly involved in the fate of bovine mastitis. Small-scale farmers whose livelihood solely depended on milk and/or cattle may not have been accustomed or exposed to English much. Hence, we chose Bengali which is a regional language for their easy and better understanding.</p>
+                </div>
+              </div>
+            </section>
+            <!-- 4. Children’s StoryBook -->
+            <section id="run4Section" class="scrollSection">
+              <div class="centerImage">
+                <div class="highlightYellow mediumText textShadow"><b>Children’s StoryBook</b></div>
+              </div>
+              <div class="contentSection">
+                <div class="boxContent boxTable">
+                  <p>
+                    Team iGEM IISER Kolkata strongly believes in the inclusion of the fresh young minds as they will be the future leaders of this world. It is believed that children learn more from pictures than they learn from literature. We decided to draw our inspiration from a previously released episode of Tom and Jerry entitled "Dr. Jekyll and Mr. Mouse". Tom and Jerry is a story loved by many children across the world and as a result, we felt that keeping the characters intact shall help our children to connect more with the storyline and understand the concepts better. The storybook was targeted for the age group of 10 years and below, and consequently, it could be used for encompassing the beauty and basics of science to children. Moreover, we have emphasized on the importance of humanity and being kind to each other in every possible way. Science should be
+                    progressed in a way that it helps every individual and we have shown the same through our storybook.
+                  </p>
+                  <ul>
+                    <li>
+                      <b>Creative and Attractive Visuals:</b> <br />
+                      Our team documented the storyline and then designed some attractive visuals for the interests of the children. Apart from using it as a mode of education, parents and/or can also use this storybook to teach moral values to their children. The visuals present in our storybook shall help the children connect more to the morals and values we have tried to inculcate in them. On the top of that, the lead roles having the visuals of Tom and Jerry shall help them connect more.
+                    </li>
+                    <li>
+                      <b>Using simpler terminologies:</b> <br />
+                      In the entire storybook, we have made sure that simple terminologies are used to refer to scientific terms. This was done so that children could understand the plot better. For example, Green Fluorescent Protein (GFP) was introduced as Green Fluorescent Potion and the idea of genetic engineering was also introduced in a very simple way.
+                    </li>
+                    <li>
+                      <b>Receiving feedback:</b> <br />
+                      We circulated our storybook to schools and other children falling in the age group, and received feedback from them by google form as well as an offline form. Most of the responses were really sweet and we were glad that they could understand the morals and basics of science. We have attached some of the feedback below for your perusal.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </section>
+            <!-- 5. Interviews -->
+            <section id="run5Section" class="scrollSection">
+              <div class="centerImage">
+                <div class="highlightYellow mediumText textShadow"><b>Interviews</b></div>
+              </div>
+              <div class="contentSection">
+                <div class="boxContent">
+                  <ul>
+                    <li>
+                      <b>Local Farmers:</b> <br />
+                      We interviewed a number of farmers in Asansol, a city in West Bengal and asked about the problems they are facing when it comes to bovine mastitis. Most of them were unaware of the harmful effects of the overuse of antibiotics and the need to reach out to certified doctors. We tried to share our views on appropriate milking practices and maintaining proper hygiene. We also communicated the harmful effects of overuse of antibiotics and asked their views on an antibiotic free approach towards curing this disease.
+                    </li>
+                    <li>
+                      <b>Scientists and veterinary doctors:</b> <br />
+                      Our team interviewed a number of scientists and veterinary doctors, and took their valuable inputs to develop our project. Dr. Peter explained the formation of a can-like structure around pathogens which makes it difficult for the antibiotics to act and Prof. Amirul Islam Mallick proposed that we should use a probiotic bacteria as a chassis organism. The latter also advised us about GMO trials before releasing them into the environment. Similarly, several other scientists like (include their names) gave us several important inputs which enabled us to work on our mistakes. A number of veterinary doctors whom we contacted suggested to us the importance of creating awareness among the local farmers regarding a proper treatment by certified doctors, rather than following the foots of quackery. These quacks have been a major reason for the rising
+                      concerns of AMR and we tried to make the farmers aware of the same. As we all believe, communication is a two-way process. We took the inputs from them and worked on the necessary footsteps.
+                    </li>
+                    <li><b>Genscript:</b> <br /></li>
+                    <li><b>AIIM: </b> <br /></li>
+
+                    <li><b>Global CRISPR conference: </b> <br /></li>
+                  </ul>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+      <!-- /content -->
+
+      <!-- reference -->
+      <section class="reference">
+        <div class="wave topWave">
+          <!-- Top Wave  -->
+        </div>
+        <div class="indentContainer">
+          <h3>References</h3>
+          <p>
+            All the references are provided within content, relative to content. <br />
+            Check for square bracketed Numbers in the paragraphs.
+          </p>
+        </div>
+      </section>
+      <!-- /reference -->
+
+      <!-- footer -->
+      <footer>
+        <div class="theFooter">
+          <div class="wave bottomWave"></div>
+          <div class="indentContainer">
+            <div class="footerHead">
+              <h3>Our Sponsors...</h3>
+              <div class="contacts">
+                <b>Contact us at - </b>
+                <a href="https://www.instagram.com/igem.iiserk/"> <img src="https://2021.igem.org/wiki/images/e/ec/T--IISER_Kolkata--image-instagramIcon.png" alt="instagram" /></a>
+                <a href="https://www.facebook.com/iGEM.IISERK"> <img src="https://2021.igem.org/wiki/images/0/02/T--IISER_Kolkata--image-facebookIcon.png" alt="facebook" /></a>
+                <a href="https://twitter.com/iGEM_IISERKol?s=08"> <img src="https://2021.igem.org/wiki/images/e/e2/T--IISER_Kolkata--image-twitterIcon.png" alt="twitter" /></a>
+                <a href="https://www.linkedin.com/in/igem-iiser-kolkata-189707189/"> <img src="https://2021.igem.org/wiki/images/1/15/T--IISER_Kolkata--image-linkedinIcon.png" alt="linkedIn" /></a>
+              </div>
+            </div>
+            <div class="sponsors">
+              <div style="border-right: 3px solid #5e8dd1;">
+                <img src="https://2021.igem.org/wiki/images/9/90/T--IISER_Kolkata--image-igemiiserk-2x.png" alt="IGEM-IISERKolkata" />
+              </div>
+              <div>
+                <div>
+                  <img src="https://2021.igem.org/wiki/images/f/f7/T--IISER_Kolkata--image-promegaLogo.png" alt="Promega" />
+                  <img src="https://2021.igem.org/wiki/images/f/fb/T--IISER_Kolkata--image-RCTLogo.png" alt="RCT" />
+                  <img src="https://2021.igem.org/wiki/images/e/e3/T--IISER_Kolkata--image-iiserkLogo.png" alt="IISERKolkata" />
+                  <img class="hLogo" src="https://2021.igem.org/wiki/images/c/cb/T--IISER_Kolkata--image-IDTLogo.png" alt="IDT" />
+                  <div class="flexBreak"></div>
+                  <img class="hLogo" src="https://2021.igem.org/wiki/images/4/46/T--IISER_Kolkata--image-bioLabsLogo.png" alt="NewEnglandBioLabs" />
+                  <img class="hLogo" src="https://2021.igem.org/wiki/images/6/68/T--IISER_Kolkata--image-benchlingLogo.png" alt="Benchling" />
+                  <img class="hLogo" src="https://2021.igem.org/wiki/images/0/0a/T--IISER_Kolkata--image-twistLogo.png" alt="TWIST" />
+                  <img src="https://2021.igem.org/wiki/images/0/0b/T--IISER_Kolkata--image-igemLogo.png" alt="IGEM" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <!-- /footer -->
+    </div>
+
+    <!-- script for scroll actives -->
+    <script>
+      var mainNavLinks = document.querySelectorAll(".scrollID");
+
+      function highlightActiveSection() {
+        var fromTop = window.pageYOffset + 100;
+        var r = 0;
+
+        for (r = 0; r < mainNavLinks.length; r++) {
+          navD = mainNavLinks[r];
+          var section = document.getElementById(navD.id + "Section");
+          if (section.offsetTop <= fromTop) {
+            if (section.offsetTop + section.offsetHeight > fromTop) {
+              navD.classList.add("scrollID-active");
+            } else {
+              navD.classList.remove("scrollID-active");
+            }
+          } else {
+            navD.classList.remove("scrollID-active");
+          }
+        }
+      }
+    </script>
+    <!-- /script for scroll actives -->
+
+    <!-- script for collapsibles -->
+    <script>
+      var collapsibles = document.querySelectorAll(".collapsible");
+
+      function removeCollapsibleExpanded(notRemove) {
+        collapsibles.forEach((collD) => {
+          if (collD != notRemove) {
+            collD.classList.remove("collapsible--expanded");
+            collD.querySelector(".collapsibleToggler").innerHTML = "+";
+          }
+        });
+      }
+
+      collapsibles.forEach((coll) =>
+        coll.querySelector(".collapsible-header").addEventListener("click", function () {
+          removeCollapsibleExpanded(coll);
+          coll.classList.toggle("collapsible--expanded");
+
+          if (coll.querySelector(".collapsibleToggler").innerHTML == "+") {
+            coll.querySelector(".collapsibleToggler").innerHTML = "-";
+          } else {
+            coll.querySelector(".collapsibleToggler").innerHTML = "+";
+          }
+        })
+      );
+    </script>
+    <!-- /script for collapsibles -->
+
+    <!-- /IISER KOLKATA CONTAINER -->
+
+    <!-- JS -->
+    <!-- <script src="https://2021.igem.org/Template:IISER_Kolkata/js"></script> -->
+    <script src="app.js"></script>
+    <!-- /JS -->
+  </body>
+</html>

@@ -34,7 +34,7 @@ html {
 }
 
 #globalWrapper {
-  padding-bottom: 0px;
+  padding-bottom: 0px !important;
 }
 
 /* #################################################################################### */
@@ -737,8 +737,8 @@ a.referenceLinks {
   top: 10%;
   font-size: 1rem;
   margin-bottom: 3.2rem;
-  max-height: 97vh;
-  overflow: auto;
+  max-height: 95vh;
+  overflow-y: auto;
   scrollbar-width: none;
 }
 
@@ -756,8 +756,8 @@ a.referenceLinks {
   margin: 0.2rem 0;
   padding: 0.3rem 1rem;
   text-align: center;
-  /* background: rgba(221, 221, 221, 0.4); */
-  background: #ddd;
+  /* background: #ddd; */
+  background: #cfdcd9;
   border-radius: 5px;
   word-wrap: break-word;
   transition: all 0.3s linear;
@@ -785,7 +785,8 @@ a.referenceLinks {
 .boxContent {
   /* background: #fffaaa; */
   /* background: #eeefff; */
-  background: #fff;
+  background: #cfdcd9;
+  /* background: #fff; */
   padding: 1rem;
   margin-left: 1rem;
   border-radius: 10px;
@@ -803,6 +804,7 @@ a.referenceLinks {
 
 .boxContent li {
   padding-bottom: 1rem;
+  margin-right: 1rem;
 }
 
 /* /contentSection */
@@ -833,14 +835,15 @@ figcaption {
 
 /* tables */
 .boxTable table {
-  width: 100% !important;
-  /* padding: 1rem; */
-  margin: 1rem 0.5rem !important;
+  /* width: 100% !important; */
+  margin: 1rem 1rem !important;
+  background: none !important;
   border-collapse: collapse !important;
   border: none !important;
 }
 
 .boxTable td {
+  background: none !important;
   border: none !important;
   vertical-align: top !important;
   padding-bottom: 1.3rem !important;
