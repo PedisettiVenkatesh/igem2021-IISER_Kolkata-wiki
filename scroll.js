@@ -3,7 +3,7 @@ const bottlePath = {
   autoRotate: true,
   values: [
     { x: 0, y: 0 },
-    { x: 400, y: 5660 },
+    { x: 0, y: 5700 },
   ],
 };
 
