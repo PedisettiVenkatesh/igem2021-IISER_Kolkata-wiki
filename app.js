@@ -19,8 +19,6 @@ function preload() {
 }
 // preloader
 
-const myOffset = 100;
-
 window.onscroll = function () {
   let totalHeight = document.body.scrollHeight - window.innerHeight;
   let progressHeight = (window.pageYOffset / totalHeight) * 100;
@@ -42,10 +40,13 @@ window.onscroll = function () {
   // console.log(window.scrollY - 400);
 
   highlightActiveSection();
+
+  hideOnScroll();
 };
 
 navToggler.onclick = function () {
   navigationContainer.classList.toggle("navigation-expanded");
+  document.body.classList.toggle("noScroll");
   removeNavDropExpanded();
 };
 
@@ -62,6 +63,7 @@ function removeNavDropExpanded() {
 
 function removeNavigationExpanded() {
   navigationContainer.classList.remove("navigation-expanded");
+  document.body.classList.toggle("noScroll");
 }
 
 window.onclick = function (event) {
@@ -70,11 +72,14 @@ window.onclick = function (event) {
   }
 };
 
-function scrollToID(hash) {
-  var topOffSet = myOffset;
-  var distance = document.getElementById(hash).offsetTop - topOffSet;
-  window.scrollTo(0, distance);
-  // document.getElementById(hash).scrollIntoView();
+var myOffset = 75;
 
-  // return hash;
+if (window.matchMedia("(max-width: 980px)").matches) {
+  var myOffset = 500;
+}
+
+function scrollToID(hash) {
+  // var topOffSet = myOffset;
+  var distance = document.getElementById(hash).offsetTop - myOffset;
+  window.scrollTo(0, distance);
 }

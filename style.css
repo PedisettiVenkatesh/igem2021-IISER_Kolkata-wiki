@@ -194,6 +194,16 @@ img {
   width: 20vw;
   /* margin: 30vh 40vw 0; */
 }
+
+@media screen and (max-width: 980px) {
+  #preloader img {
+    width: 50vw;
+  }
+
+  #preloader {
+    font-size: 2rem;
+  }
+}
 /* /preloader */
 
 /* progressBar */
@@ -352,7 +362,6 @@ img {
 .navDropList {
   border-radius: 50%;
   background-image: url("https://2021.igem.org/wiki/images/5/5c/T--IISER_Kolkata--image-subNavBG-2x.png");
-  /* background-image: url("./images/offline/new/subNavBG.png"); */
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -395,10 +404,24 @@ img {
     left: -20vw;
     width: 90vw;
   }
+
   .navList {
-    top: 5vh;
-    left: 17vh;
+    top: 10vh;
+    left: 15vh;
     font-size: 2.5rem !important;
+  }
+
+  .navDropList {
+    top: 60vh;
+    left: 40vw;
+  }
+
+  .navDropList li {
+    text-align: left;
+    max-width: 45vw;
+    word-wrap: normal;
+    line-height: 1;
+    padding: 1rem;
   }
 }
 /* /navigation */
@@ -743,7 +766,7 @@ a.referenceLinks {
   /* width: auto; */
 }
 
-.sponsors > div:first-child img {
+.sponsors > div:first-child {
   border-right: 2px dashed #5e8dd1;
 }
 
@@ -760,6 +783,9 @@ a.referenceLinks {
   .sponsors > div:first-child img {
     border-right: none;
     margin-bottom: 1rem;
+  }
+  .sponsors > div:first-child {
+    border-right: none;
   }
 }
 
@@ -804,7 +830,9 @@ a.referenceLinks {
   }
 
   .gridedContainer > div:first-child {
-    background: #fff;
+    /* background: #fff; */
+    background: #fffcea;
+    box-shadow: 2px 2px 20px 1px rgba(0, 0, 0, 0.5);
     position: sticky;
     top: 0.8%;
     z-index: 1;
@@ -824,6 +852,10 @@ a.referenceLinks {
 /* /sticky */
 
 /* sideNav */
+#scrollHide {
+  transition: top 0.3s;
+}
+
 .sideNav {
   /* background: #eee; */
   width: 100%;
@@ -834,6 +866,7 @@ a.referenceLinks {
   max-height: 95vh;
   overflow-y: auto;
   scrollbar-width: none;
+  transition: all 0.3s;
 }
 
 .sideNav ul {

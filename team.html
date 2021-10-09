@@ -2,8 +2,8 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" ="IE=edge" />
-    <meta name="viewport" ="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
     <title>IISER Kolkata IGEM Team - Home</title>
     <link rel="stylesheet" href="style.css" />
   </head>
@@ -145,15 +145,15 @@
       <!-- content  -->
       <div class="indentContainer">
         <div class="gridedContainer">
-          <div>
+          <div id="scrollHide">
             <!-- sideNav -->
             <div class="sideNav sticky">
               <!-- navigate in Page -->
               <ul>
                 <li><a id="run" class="scrollID" onclick="scrollToID('runSection')">Team Leaders</a></li>
                 <li><a id="run1" class="scrollID" onclick="scrollToID('run1Section')">Team Members</a></li>
-                <li><a id="run2" class="scrollID" onclick="scrollToID('run2Section')">Primary Principal Inverstigator</a></li>
-                <li><a id="run3" class="scrollID" onclick="scrollToID('run3Section')">Secondary Principal Inverstigators</a></li>
+                <li><a id="run2" class="scrollID" onclick="scrollToID('run2Section')">Primary Principal Investigator</a></li>
+                <li><a id="run3" class="scrollID" onclick="scrollToID('run3Section')">Secondary Principal Investigators</a></li>
                 <li><a id="run4" class="scrollID" onclick="scrollToID('run4Section')">Advisors</a></li>
                 <li><a id="run5" class="scrollID" onclick="scrollToID('run5Section')">Lab Instructor</a></li>
                 <li><a id="run6" class="scrollID" onclick="scrollToID('run6Section')">Web Designers</a></li>
@@ -401,7 +401,7 @@
             <!-- Primary Principal Investigators -->
             <section id="run2Section" class="scrollSection">
               <div class="centerImage">
-                <div class="highlightYellow mediumText textShadow"><b>Primary Principal Inverstigator</b></div>
+                <div class="highlightYellow mediumText textShadow"><b>Primary Principal Investigator</b></div>
               </div>
               <div class="contentSection">
                 <div class="profilesContainer boxContent">
@@ -415,7 +415,7 @@
                           Dr. Supratim Dutta
                         </div>
                         <div class="profile__role">
-                          Role - Primary Principal Inverstigator
+                          Role - Primary Principal Investigator
                         </div>
                         <div class="profile__info">
                           The research in my laboratory focuses on engineering proteins and organisms to yield improved and novel functions for industrial and pharmaceutical applications. We plan on combining synthetic biology-based approach with protein and metabolic engineering techniques with an overall goal of providing biology-based solutions in areas of bioenergy and chemical production.
@@ -429,7 +429,7 @@
             <!-- Secondary Principal Investigators -->
             <section id="run3Section" class="scrollSection">
               <div class="centerImage">
-                <div class="highlightYellow mediumText textShadow"><b>Secondary Principal Inverstigators</b></div>
+                <div class="highlightYellow mediumText textShadow"><b>Secondary Principal Investigators</b></div>
               </div>
               <div class="contentSection">
                 <div class="profilesContainer boxContent">
@@ -443,7 +443,7 @@
                           Dr. Dipjyoti Das
                         </div>
                         <div class="profile__role">
-                          Role - Secondary Principal Inverstigator
+                          Role - Secondary Principal Investigator
                         </div>
                         <div class="profile__info">
                           In my lab we try to understand how complex behaviors emerge in biological systems at different scales of organizations, starting from the sub-cellular and cellular scale to the tissue and organismic level. At all these scales, biological systems are generally characterized by a large set of interconnected physical and chemical processes that drive the system out of equilibrium. Our method of investigation of such systems is theoretical and computational model building (using tools of statistical physics) and data analysis, in close collaboration with experimental biologists.
@@ -461,7 +461,7 @@
                           name
                         </div>
                         <div class="profile__role">
-                          Role - Secondary Principal Inverstigator
+                          Role - Secondary Principal Investigator
                         </div>
                         <div class="profile__info">
                           info
@@ -708,6 +708,25 @@
       modal.onclick = removeProfileExpanded();
     </script>
     <!-- /script  for profiles -->
+
+    <!-- hide on Scroll -->
+    <script>
+      // hide on scroll
+      var prevScrollPos = window.pageYOffset;
+
+      function hideOnScroll() {
+        if (window.matchMedia("(max-width: 980px)").matches) {
+          var currentScrollPos = window.pageYOffset;
+          if (prevScrollPos > currentScrollPos) {
+            document.getElementById("scrollHide").style.top = "0.8%";
+          } else {
+            document.getElementById("scrollHide").style.top = "-50vh";
+          }
+          prevScrollPos = currentScrollPos;
+        }
+      }
+    </script>
+    <!-- /hide on scroll -->
 
     <!-- script for scroll actives -->
     <script>
