@@ -913,7 +913,7 @@ a.referenceLinks {
   box-shadow: 2px 2px 20px 1px rgba(0, 0, 0, 0.5);
 }
 
-.boxContent img {
+.boxContent > img {
   display: block;
   margin: 1rem auto 0.5rem;
 }
@@ -1048,15 +1048,14 @@ figcaption {
 
 /* profiles */
 .profilesContainer {
-  background: #cfdcd9;
+  /* background: #cfdcd9;
   padding: 1rem;
   border-radius: 10px;
-  box-shadow: 0 1px 1pc 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 1pc 5px rgba(0, 0, 0, 0.2); */
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   flex-wrap: wrap;
-  margin-bottom: 3rem;
 }
 
 .profile {
@@ -1065,7 +1064,7 @@ figcaption {
   height: 30%;
   border-radius: 50%;
   padding: 0.5rem;
-  /* overflow: hidden; */
+  overflow: hidden;
   border: 1.8rem solid #5e8dd1;
   box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.5);
   margin: 1rem 0.5rem;
