@@ -572,15 +572,15 @@
         <div class="theFooter">
           <div class="wave bottomWave"></div>
           <div class="indentContainer">
+            <div class="contactHead"><b>Contact us at</b></div>
+            <div class="contacts">
+              <a href="https://www.instagram.com/igem.iiserk/"> <img src="https://2021.igem.org/wiki/images/e/ec/T--IISER_Kolkata--image-instagramIcon.png" alt="instagram" /></a>
+              <a href="https://www.facebook.com/iGEM.IISERK"> <img src="https://2021.igem.org/wiki/images/0/02/T--IISER_Kolkata--image-facebookIcon.png" alt="facebook" /></a>
+              <a href="https://twitter.com/iGEM_IISERKol?s=08"> <img src="https://2021.igem.org/wiki/images/e/e2/T--IISER_Kolkata--image-twitterIcon.png" alt="twitter" /></a>
+              <a href="https://www.linkedin.com/in/igem-iiser-kolkata-189707189/"> <img src="https://2021.igem.org/wiki/images/1/15/T--IISER_Kolkata--image-linkedinIcon.png" alt="linkedIn" /></a>
+            </div>
             <div class="footerHead">
               <h3>Our Sponsors...</h3>
-              <div class="contacts">
-                <b>Contact us at - </b>
-                <a href="https://www.instagram.com/igem.iiserk/"> <img src="https://2021.igem.org/wiki/images/e/ec/T--IISER_Kolkata--image-instagramIcon.png" alt="instagram" /></a>
-                <a href="https://www.facebook.com/iGEM.IISERK"> <img src="https://2021.igem.org/wiki/images/0/02/T--IISER_Kolkata--image-facebookIcon.png" alt="facebook" /></a>
-                <a href="https://twitter.com/iGEM_IISERKol?s=08"> <img src="https://2021.igem.org/wiki/images/e/e2/T--IISER_Kolkata--image-twitterIcon.png" alt="twitter" /></a>
-                <a href="https://www.linkedin.com/in/igem-iiser-kolkata-189707189/"> <img src="https://2021.igem.org/wiki/images/1/15/T--IISER_Kolkata--image-linkedinIcon.png" alt="linkedIn" /></a>
-              </div>
             </div>
             <div class="sponsors">
               <div style="border-right: 3px solid #5e8dd1;">
@@ -608,14 +608,20 @@
 
     <!-- script for scroll actives -->
     <script>
-      var mainNavLinks = document.querySelectorAll(".scrollID");
+      const mainNavLinks = document.querySelectorAll(".scrollID");
+
+      var topOff = 200;
+
+      if (window.matchMedia("(max-width: 980px)").matches) {
+        var topOff = 500;
+      }
 
       function highlightActiveSection() {
-        var fromTop = window.pageYOffset + 100;
+        var fromTop = window.pageYOffset + topOff;
         var r = 0;
 
         for (r = 0; r < mainNavLinks.length; r++) {
-          navD = mainNavLinks[r];
+          var navD = mainNavLinks[r];
           var section = document.getElementById(navD.id + "Section");
           if (section.offsetTop <= fromTop) {
             if (section.offsetTop + section.offsetHeight > fromTop) {

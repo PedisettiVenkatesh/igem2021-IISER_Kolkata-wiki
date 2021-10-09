@@ -138,6 +138,19 @@ img {
   padding: 1rem 3rem 1rem 5rem !important;
   /* text-align: justify; */
 }
+
+@media screen and (max-width: 980px) {
+  html {
+    font-size: 120%;
+  }
+  .iiserKolkata {
+    font-size: 120%;
+  }
+  .indentContainer {
+    padding: 1rem 1rem 1rem 5rem !important;
+  }
+}
+
 /* /containers */
 
 /* bottle */
@@ -150,6 +163,12 @@ img {
   z-index: 0;
 }
 /* /bottle */
+
+/* noScroll */
+.noScroll {
+  overflow: hidden;
+}
+/* /noScroll */
 
 /* preloader */
 #preloader {
@@ -215,6 +234,12 @@ img {
   width: 20px;
   z-index: 9;
 }
+
+@media screen and (max-width: 980px) {
+  #scrollPath {
+    height: 35vh;
+  }
+}
 /* /progressBar */
 
 /* toTop */
@@ -234,6 +259,17 @@ img {
 #toTop:hover {
   box-shadow: 0 0 5px 1px #000;
   scale: 1.1;
+}
+
+@media screen and (max-width: 980px) {
+  #toTop {
+    width: 100px;
+    bottom: 5%;
+  }
+
+  #toTop:hover {
+    box-shadow: none;
+  }
 }
 /* /toTop */
 
@@ -351,6 +387,19 @@ img {
 .navigation-container.navigation-expanded .navDrop-expanded .navDropList {
   visibility: visible;
   opacity: 1;
+}
+
+@media screen and (max-width: 980px) {
+  .navigation {
+    top: -10vw;
+    left: -20vw;
+    width: 90vw;
+  }
+  .navList {
+    top: 5vh;
+    left: 17vh;
+    font-size: 2.5rem !important;
+  }
 }
 /* /navigation */
 
@@ -619,6 +668,12 @@ a.referenceLinks {
   background-image: url("https://2021.igem.org/wiki/images/c/c7/T--IISER_Kolkata--image-bottomWave-3x.png");
   /* background-image: url("/images/offline/topWave-2x.png"); */
 }
+
+@media screen and (max-width: 980px) {
+  .wave {
+    top: -2rem;
+  }
+}
 /* /reference */
 
 /* footer */
@@ -637,22 +692,30 @@ a.referenceLinks {
 
 .footerHead h3 {
   color: #5e8dd1 !important;
+  margin: 0.3rem !important;
+}
+
+.contactHead {
+  text-align: center;
+  color: #5e8dd1 !important;
 }
 
 .contacts {
-  position: absolute;
+  padding: 1rem 0;
+  display: flex;
+  justify-content: center;
   font-size: 1rem !important;
   top: 40%;
   right: 0;
 }
 
 .contacts img {
-  width: 4rem;
-  padding: 0 0.5rem;
+  width: 5rem;
+  padding: 0 1rem;
 }
 
 .sponsors {
-  padding: 3rem 0 1rem;
+  padding: 1rem 0 0rem;
   display: grid;
   grid-template-columns: 1fr 5fr;
   position: relative;
@@ -691,7 +754,7 @@ a.referenceLinks {
   grid-template-columns: 17% auto;
   column-gap: 10px;
   text-align: left;
-  margin-bottom: 90px;
+  margin-bottom: 2rem;
   font-size: 1rem;
   line-height: 1.2;
 }
@@ -716,9 +779,22 @@ a.referenceLinks {
 }
 /* /gridedContainer */
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 980px) {
   .gridedContainer {
-    grid-template-columns: 0 100%;
+    grid-template-columns: none;
+    grid-template-rows: auto auto;
+  }
+
+  .gridedContainer > div:first-child {
+    background: #fff;
+    position: sticky;
+    top: 0.8%;
+    z-index: 1;
+    padding: 1rem;
+  }
+
+  .gridedContainer > div:nth-child(2) {
+    height: auto;
   }
 }
 
@@ -773,6 +849,32 @@ a.referenceLinks {
   /* border: 1px dashed red; */
   padding: 0.5rem 1rem;
   /* border-left: 5px solid dodgerblue; */
+}
+
+@media screen and (max-width: 980px) {
+  .sideNav {
+    margin: 0;
+  }
+
+  .sideNav ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-size: 2rem;
+  }
+
+  .sideNav li {
+    margin: 0 0.5rem;
+  }
+
+  .scrollID {
+    padding: 0.5rem 1rem;
+  }
+
+  .scrollID.scrollID-active,
+  .scrollID:hover {
+    padding: 0.5rem 2rem;
+  }
 }
 /* /sideNav */
 
@@ -928,7 +1030,7 @@ figcaption {
 
 /* profiles */
 .profilesContainer {
-  background: rgba(255, 255, 255, 0.5);
+  background: #cfdcd9;
   padding: 1rem;
   border-radius: 10px;
   box-shadow: 0 1px 1pc 5px rgba(0, 0, 0, 0.2);
@@ -991,7 +1093,7 @@ figcaption {
   background: white;
   border-radius: 1.5rem;
   width: 60%;
-  min-height: 40%;
+  /* min-height: 40%; */
   max-height: 95%;
   padding: 2.5rem 3rem 2rem;
   overflow: hidden;
@@ -1024,6 +1126,25 @@ figcaption {
   /* z-index: 9; */
   visibility: visible;
   opacity: 1;
+}
+
+@media screen and (max-width: 980px) {
+  .profile__modalContent {
+    width: 90%;
+  }
+
+  .profile__name {
+    font-size: 2.5rem;
+  }
+
+  .profile__role {
+    font-size: 1.5rem;
+  }
+
+  .profile__info {
+    font-size: 1.5rem;
+    max-height: 90vh;
+  }
 }
 
 /* /profiles */
