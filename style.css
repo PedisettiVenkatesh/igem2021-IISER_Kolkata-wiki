@@ -691,8 +691,10 @@ a.referenceLinks {
 }
 
 .footerHead h3 {
+  border-top: 1px dashed #5e8dd1 !important;
   color: #5e8dd1 !important;
   margin: 0.3rem !important;
+  text-align: center;
 }
 
 .contactHead {
@@ -741,8 +743,24 @@ a.referenceLinks {
   /* width: auto; */
 }
 
+.sponsors > div:first-child img {
+  border-right: 2px dashed #5e8dd1;
+}
+
 .hLogo {
   width: 15.5rem !important;
+}
+
+@media screen and (max-width: 980px) {
+  .sponsors {
+    grid-template-columns: none;
+    grid-template-rows: auto auto;
+  }
+
+  .sponsors > div:first-child img {
+    border-right: none;
+    margin-bottom: 1rem;
+  }
 }
 
 /* /footer */

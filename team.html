@@ -142,7 +142,7 @@
       </div>
       <!-- /hero -->
 
-      <!--  -->
+      <!-- content  -->
       <div class="indentContainer">
         <div class="gridedContainer">
           <div>
@@ -162,6 +162,7 @@
             <!-- /sideNav -->
           </div>
           <div>
+            <!-- Team Leaders -->
             <section id="runSection" class="scrollSection">
               <div class="centerImage">
                 <div class="highlightYellow mediumText textShadow"><b>Team Leaders</b></div>
@@ -207,6 +208,7 @@
                 </div>
               </div>
             </section>
+            <!-- The Team -->
             <section id="run1Section" class="scrollSection">
               <div class="centerImage">
                 <div class="highlightYellow mediumText textShadow"><b>Team Members</b></div>
@@ -396,6 +398,7 @@
                 </div>
               </div>
             </section>
+            <!-- Primary Principal Investigators -->
             <section id="run2Section" class="scrollSection">
               <div class="centerImage">
                 <div class="highlightYellow mediumText textShadow"><b>Primary Principal Inverstigator</b></div>
@@ -423,6 +426,7 @@
                 </div>
               </div>
             </section>
+            <!-- Secondary Principal Investigators -->
             <section id="run3Section" class="scrollSection">
               <div class="centerImage">
                 <div class="highlightYellow mediumText textShadow"><b>Secondary Principal Inverstigators</b></div>
@@ -468,6 +472,7 @@
                 </div>
               </div>
             </section>
+            <!-- Advisors -->
             <section id="run4Section" class="scrollSection">
               <div class="centerImage">
                 <div class="highlightYellow mediumText textShadow"><b>Advisors</b></div>
@@ -567,6 +572,7 @@
                 </div>
               </div>
             </section>
+            <!-- Lab Instructor -->
             <section id="run5Section" class="scrollSection">
               <div class="centerImage">
                 <div class="highlightYellow mediumText textShadow"><b>Lab Instructor</b></div>
@@ -592,6 +598,7 @@
                 </div>
               </div>
             </section>
+            <!-- Web Designers -->
             <section id="run6Section" class="scrollSection">
               <div class="centerImage">
                 <div class="highlightYellow mediumText textShadow"><b>Web Designers</b></div>
@@ -640,25 +647,25 @@
           </div>
         </div>
       </div>
-      <!-- / -->
+      <!-- /content -->
 
       <!-- footer -->
       <footer>
         <div class="theFooter">
-          <div class="wave topWave"></div>
+          <div class="wave bottomWave"></div>
           <div class="indentContainer">
+            <div class="contactHead"><b>Contact us at</b></div>
+            <div class="contacts">
+              <a href="https://www.instagram.com/igem.iiserk/"> <img src="https://2021.igem.org/wiki/images/e/ec/T--IISER_Kolkata--image-instagramIcon.png" alt="instagram" /></a>
+              <a href="https://www.facebook.com/iGEM.IISERK"> <img src="https://2021.igem.org/wiki/images/0/02/T--IISER_Kolkata--image-facebookIcon.png" alt="facebook" /></a>
+              <a href="https://twitter.com/iGEM_IISERKol?s=08"> <img src="https://2021.igem.org/wiki/images/e/e2/T--IISER_Kolkata--image-twitterIcon.png" alt="twitter" /></a>
+              <a href="https://www.linkedin.com/in/igem-iiser-kolkata-189707189/"> <img src="https://2021.igem.org/wiki/images/1/15/T--IISER_Kolkata--image-linkedinIcon.png" alt="linkedIn" /></a>
+            </div>
             <div class="footerHead">
-              <h3>Our Sponsors...</h3>
-              <div class="contacts">
-                <b>Contact us at - </b>
-                <a href="https://www.instagram.com/igem.iiserk/"> <img src="https://2021.igem.org/wiki/images/e/ec/T--IISER_Kolkata--image-instagramIcon.png" alt="instagram" /></a>
-                <a href="https://www.facebook.com/iGEM.IISERK"> <img src="https://2021.igem.org/wiki/images/0/02/T--IISER_Kolkata--image-facebookIcon.png" alt="facebook" /></a>
-                <a href="https://twitter.com/iGEM_IISERKol?s=08"> <img src="https://2021.igem.org/wiki/images/e/e2/T--IISER_Kolkata--image-twitterIcon.png" alt="twitter" /></a>
-                <a href="https://www.linkedin.com/in/igem-iiser-kolkata-189707189/"> <img src="https://2021.igem.org/wiki/images/1/15/T--IISER_Kolkata--image-linkedinIcon.png" alt="linkedIn" /></a>
-              </div>
+              <h3>Our Sponsors</h3>
             </div>
             <div class="sponsors">
-              <div style="border-right: 3px solid #5e8dd1;">
+              <div>
                 <img src="https://2021.igem.org/wiki/images/9/90/T--IISER_Kolkata--image-igemiiserk-2x.png" alt="IGEM-IISERKolkata" />
               </div>
               <div>
@@ -688,13 +695,13 @@
 
       function removeProfileExpanded() {
         profiles.forEach((pro) => pro.classList.remove("profile--expanded"));
-        document.body.classList.remove("noScroll");
+        document.body.classList.toggle("noScroll");
       }
 
       profiles.forEach((pro) =>
         pro.addEventListener("click", function () {
           pro.classList.toggle("profile--expanded");
-          document.body.classList.add("noScroll");
+          document.body.classList.toggle("noScroll");
         })
       );
 
@@ -706,8 +713,14 @@
     <script>
       const mainNavLinks = document.querySelectorAll(".scrollID");
 
+      var topOff = 200;
+
+      if (window.matchMedia("(max-width: 980px)").matches) {
+        var topOff = 500;
+      }
+
       function highlightActiveSection() {
-        var fromTop = window.pageYOffset + 100;
+        var fromTop = window.pageYOffset + topOff;
         var r = 0;
 
         for (r = 0; r < mainNavLinks.length; r++) {
