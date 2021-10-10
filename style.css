@@ -141,10 +141,7 @@ img {
   width: 100vw;
   max-width: 100vw !important;
   font-family: MyRaleway, "Calibri", Arial, Helvetica, sans-serif !important;
-  /* TODO: check if overflow property is needed, this is causing bug in sticky */
-  /* overflow-y: hidden; */
   background-image: url("https://2021.igem.org/wiki/images/5/51/T--IISER_Kolkata--image-bg-1x.png") !important;
-  /* background-image: url("./images/offline/bgnt-1x.png") !important; */
   background-size: 100vw !important;
   background-repeat: repeat-y;
   scrollbar-width: none !important;
@@ -292,7 +289,6 @@ img {
 }
 
 #toTop:hover {
-  box-shadow: 0 0 5px 1px #000;
   scale: 1.1;
 }
 
@@ -311,22 +307,23 @@ img {
 /* navToggler */
 #navToggler {
   width: 60px;
-  /* width: 15rem; */
-  height: 30px;
-  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
-  border-radius: 10px;
+  height: auto;
   position: fixed;
   top: 2rem;
   left: 1rem;
   cursor: pointer;
   z-index: 999;
+  transition: all 0.3s;
+}
+
+#navToggler:hover {
+  scale: 1.1;
 }
 
 @media screen and (max-width: 980px) {
   #navToggler {
-    width: 120px;
-    height: 63px;
-    border-radius: 10px;
+    width: 110px;
+    top: 1rem;
   }
 }
 /* /navToggler */
@@ -468,6 +465,10 @@ img {
   z-index: 1;
 }
 
+#hero > img:hover {
+  animation: heroAnimate 3s linear infinite alternate;
+}
+
 .homeBtn {
   position: absolute;
   top: 1rem;
@@ -481,6 +482,30 @@ img {
 
 .homeBtn a {
   width: 50%;
+  transition: all 0.3s;
+}
+
+.homeBtn a:hover {
+  scale: 1.2;
+}
+
+@keyframes heroAnimate {
+  0%,
+  100% {
+    transform: rotate(0) scale(1);
+  }
+
+  25% {
+    transform: rotate(0.1deg) scale(1.01);
+  }
+
+  50% {
+    transform: rotate(0deg) scale(1.005);
+  }
+
+  75% {
+    transform: rotate(0.1deg) scale(1.01);
+  }
 }
 /* /hero */
 
@@ -708,7 +733,7 @@ a.referenceLinks {
 
 .wave {
   position: absolute;
-  top: -3.5rem;
+  top: -3rem;
   left: 0;
   background-repeat: repeat-x;
   background-size: contain;
@@ -717,13 +742,32 @@ a.referenceLinks {
 }
 
 .topWave {
+  animation: waveAnimate 3s linear infinite alternate;
   background-image: url("https://2021.igem.org/wiki/images/8/8a/T--IISER_Kolkata--image-topWave-2x.png");
-  /* background-image: url("/images/offline/topWave-2x.png"); */
 }
 
 .bottomWave {
+  animation: waveAnimate 3.5s linear infinite alternate-reverse;
   background-image: url("https://2021.igem.org/wiki/images/c/c7/T--IISER_Kolkata--image-bottomWave-3x.png");
-  /* background-image: url("/images/offline/topWave-2x.png"); */
+}
+
+@keyframes waveAnimate {
+  0%,
+  100% {
+    transform: translateX(0) rotate(-0.6deg) scale(1);
+  }
+
+  25% {
+    transform: translateX(-5px) rotate(0deg) scale(1.01);
+  }
+
+  50% {
+    transform: translateX(0) rotate(0.5deg) scale(1);
+  }
+
+  75% {
+    transform: translateX(5px) rotate(0deg) scale(1.01);
+  }
 }
 
 @media screen and (max-width: 980px) {
@@ -771,6 +815,31 @@ a.referenceLinks {
 .contacts img {
   width: 5rem;
   padding: 0 1rem;
+  transition: all 0.2s;
+}
+
+.contacts img:hover {
+  /* transform: rotate(-15deg) translateY(-8px); */
+  /* scale: 1.1; */
+  animation: socialHover 1s linear infinite alternate;
+}
+
+@keyframes socialHover {
+  0% {
+    transform: translateY(-5px) rotate(-15deg);
+  }
+
+  25% {
+    transform: translateY(5px) rotate(0deg);
+  }
+
+  75% {
+    transform: translate(0px) rotate(15deg);
+  }
+
+  100% {
+    transform: translate(-5px) rotate(-15deg);
+  }
 }
 
 .sponsors {
@@ -1133,9 +1202,10 @@ figcaption {
   position: absolute;
   top: -6px;
   right: -5.5px;
-  border-top: 4px solid #cfdcd9;
+  border-top: 5px solid #cfdcd9;
   border-right: 4px solid #cfdcd9;
   border-bottom: 2px solid #9aa7b2;
+  animation: testimonialPaper 1s ease infinite alternate;
 }
 
 .testimonialSpeaker {
@@ -1143,6 +1213,16 @@ figcaption {
   font-weight: normal;
   text-align: right;
   margin: 0.5rem 3rem 0;
+}
+
+@keyframes testimonialPaper {
+  0%,
+  100% {
+    transform: scale(1) translate(0, 0);
+  }
+  50% {
+    transform: scale(1.09) translate(-2px, 1px);
+  }
 }
 
 @media screen and (max-width: 980px) {
