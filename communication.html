@@ -144,7 +144,7 @@
       <!-- content -->
       <div class="indentContainer">
         <div class="gridedContainer">
-          <div>
+          <div id="scrollHide">
             <!-- sideNav -->
             <div class="sideNav sticky">
               <!-- navigate in Page -->
@@ -417,6 +417,25 @@
       }
     </script>
     <!-- /script for scroll actives -->
+
+    <!-- hide on Scroll -->
+    <script>
+      // hide on scroll
+      var prevScrollPos = window.pageYOffset;
+
+      function hideOnScroll() {
+        if (window.matchMedia("(max-width: 980px)").matches) {
+          var currentScrollPos = window.pageYOffset;
+          if (prevScrollPos > currentScrollPos) {
+            document.getElementById("scrollHide").style.top = "0.8%";
+          } else {
+            document.getElementById("scrollHide").style.top = "-50vh";
+          }
+          prevScrollPos = currentScrollPos;
+        }
+      }
+    </script>
+    <!-- /hide on scroll -->
 
     <!-- script for collapsibles -->
     <script>
