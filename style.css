@@ -151,10 +151,6 @@ img {
   position: relative;
 }
 
-.iiserKolkata > p:last-child {
-  margin: 0;
-}
-
 .indentContainer {
   padding: 1rem 3rem 1rem 5rem !important;
   /* text-align: justify; */
