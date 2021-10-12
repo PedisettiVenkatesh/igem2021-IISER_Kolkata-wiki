@@ -12,9 +12,6 @@
     <div id="preloader" title="Loading...">
       <img src="https://2021.igem.org/wiki/images/d/d6/T--IISER_Kolkata--image-preloader.gif" alt="[preloader image]" />
       Loading . . .
-      <div class="suggestion">
-        [Better viewed on Desktop Site]
-      </div>
     </div>
     <!-- /preloader -->
 
@@ -35,8 +32,9 @@
 
     <!-- navToggler -->
     <div id="navToggler" title="navigation">
-      <img id="navTogglerImg" src="https://2021.igem.org/wiki/images/6/67/T--IISER_Kolkata--image-toggleBtn-2x.png" alt="#NAV#" />
+      <img src="https://2021.igem.org/wiki/images/6/67/T--IISER_Kolkata--image-toggleBtn-2x.png" alt="#NAV#" />
     </div>
+    <!-- /navToggler -->
 
     <script>
       function changeToggleBtn() {
@@ -47,7 +45,6 @@
         }
       }
     </script>
-    <!-- /navToggler -->
 
     <!-- navigation -->
     <nav class="navigation-container">
@@ -406,34 +403,6 @@
       }
     </script>
     <!-- /hide on scroll -->
-
-    <!-- script for collapsibles -->
-    <script>
-      var collapsibles = document.querySelectorAll(".collapsible");
-
-      function removeCollapsibleExpanded(notRemove) {
-        collapsibles.forEach((collD) => {
-          if (collD != notRemove) {
-            collD.classList.remove("collapsible--expanded");
-            collD.querySelector(".collapsibleToggler").innerHTML = "+";
-          }
-        });
-      }
-
-      collapsibles.forEach((coll) =>
-        coll.querySelector(".collapsible-header").addEventListener("click", function () {
-          removeCollapsibleExpanded(coll);
-          coll.classList.toggle("collapsible--expanded");
-
-          if (coll.querySelector(".collapsibleToggler").innerHTML == "+") {
-            coll.querySelector(".collapsibleToggler").innerHTML = "-";
-          } else {
-            coll.querySelector(".collapsibleToggler").innerHTML = "+";
-          }
-        })
-      );
-    </script>
-    <!-- /script for collapsibles -->
 
     <!-- /IISER KOLKATA CONTAINER -->
 

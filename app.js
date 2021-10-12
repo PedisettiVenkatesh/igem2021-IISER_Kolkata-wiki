@@ -3,6 +3,7 @@ const scrollPath = document.getElementById("scrollPath");
 const topBtn = document.getElementById("toTop");
 const overlayAppearValue = 300;
 const navToggler = document.getElementById("navToggler");
+const navTogglerImg = document.getElementById("navTogglerImg");
 const navigationContainer = document.querySelector(".navigation-container");
 const navDrops = document.querySelectorAll(".navDrop");
 const dragBtn = document.getElementById("progressBtn");
@@ -37,6 +38,20 @@ window.onscroll = function () {
     topBtn.style.visibility = "hidden";
     scrollPath.style.opacity = "0";
   }
+
+  var scrollPathHeight = scrollPath.offsetHeight;
+  var progressBarHeight = progressBar.offsetHeight;
+
+  var differenceHeight = scrollPathHeight - progressBarHeight;
+
+  if (differenceHeight < 0) {
+    differenceHeight = -1 * differenceHeight;
+  }
+
+  if (differenceHeight < 20) {
+    scrollPath.style.opacity = "0";
+  }
+
   // console.log(window.scrollY - 400);
 
   highlightActiveSection();
@@ -47,6 +62,9 @@ window.onscroll = function () {
 navToggler.onclick = function () {
   navigationContainer.classList.toggle("navigation-expanded");
   document.body.classList.toggle("noScroll");
+
+  changeToggleBtn();
+
   removeNavDropExpanded();
 };
 
@@ -68,6 +86,7 @@ function removeNavigationExpanded() {
 
 window.onclick = function (event) {
   if (event.target.matches(".navigation-container")) {
+    changeToggleBtn();
     removeNavigationExpanded();
   }
 };

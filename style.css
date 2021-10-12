@@ -51,6 +51,8 @@ html {
 :root {
   --color-body: #000;
   --color-border: #98c1d9;
+  --cursor-normal: url("https://2021.igem.org/wiki/images/0/0e/T--IISER_Kolkata--image-navBG-2x.png") 1 1, url(/icons/CowNormal.cur), auto !important;
+  --cursor-pointer: url(/icons/CowLink.cur) 1 1, pointer !important;
 }
 
 *,
@@ -67,8 +69,6 @@ html {
   font-family: MyRaleway;
   src: url("https://2021.igem.org/wiki/images/1/1e/T--IISER_Kolkata--fonts-Raleway-Regular-eot.eot");
   src: url("https://2021igem.org/wiki/images/2/2e/T--IISER_Kolkata--fonts-Raleway-Regular.woff") format("woff"), url("https://2021igem.org/wiki/images/3/34/T--IISER_Kolkata--fonts-Raleway-regular.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
 }
 
 @font-face {
@@ -79,10 +79,16 @@ html {
   font-style: normal;
 }
 
+::selection {
+  color: #fff;
+  background: #000;
+}
+
 html {
   font-size: 16px !important;
   scroll-behavior: smooth !important;
   scrollbar-width: none !important;
+  cursor: var(--cursor-normal);
 }
 
 body {
@@ -119,7 +125,7 @@ a:visited,
 a:active {
   color: inherit !important;
   text-decoration: underline !important;
-  cursor: pointer !important;
+  cursor: var(--cursor-pointer);
 }
 
 a:hover {
@@ -202,11 +208,19 @@ img {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  cursor: wait;
 }
 
 #preloader img {
   width: 20vw;
   /* margin: 30vh 40vw 0; */
+}
+
+.suggestion {
+  font-size: 2rem;
+  color: #666;
+  font-weight: lighter;
+  visibility: hidden;
 }
 
 @media screen and (max-width: 980px) {
@@ -216,6 +230,10 @@ img {
 
   #preloader {
     font-size: 2rem;
+  }
+
+  .suggestion {
+    visibility: visible;
   }
 }
 /* /preloader */
@@ -263,13 +281,16 @@ img {
   #scrollPath {
     height: 35vh;
     width: 20px;
+    border-radius: 15px;
+  }
+  #progressBar {
+    box-shadow: 0 20px 20px 15px rgb(94, 84, 30);
   }
 
   #progressBtn {
     height: 40px;
     width: 40px;
     border-radius: 20px;
-    visibility: hidden;
   }
 }
 /* /progressBar */
@@ -311,7 +332,7 @@ img {
   position: fixed;
   top: 2rem;
   left: 1rem;
-  cursor: pointer;
+  cursor: var(--cursor-pointer);
   z-index: 999;
   transition: all 0.3s;
 }
@@ -339,12 +360,7 @@ img {
   visibility: hidden;
   opacity: 0.1;
   z-index: 998;
-  transition: all 0.3s;
-}
-
-.navigation-container.navigation-expanded {
-  visibility: visible;
-  opacity: 1;
+  transition: all 0.1s;
 }
 
 .navigation {
@@ -352,6 +368,17 @@ img {
   width: 50vw;
   position: absolute;
   border-radius: 50%;
+  top: -100vw;
+  left: -50vw;
+  transition: all 0.5s ease;
+}
+
+.navigation-container.navigation-expanded {
+  visibility: visible;
+  opacity: 1;
+}
+
+.navigation-container.navigation-expanded .navigation {
   top: -10vw;
   left: -10vw;
 }
@@ -362,7 +389,7 @@ img {
 .navigation a:active {
   color: inherit !important;
   text-decoration: none !important;
-  cursor: pointer !important;
+  cursor: var(--cursor-pointer);
 }
 
 .navList {
@@ -378,7 +405,7 @@ img {
 
 .navList > ol li:hover {
   color: #093349;
-  /* text-shadow: 0 0 5px #093349; */
+  text-shadow: 1px 1px 5px #addbe4;
 }
 
 .navDrop {
@@ -387,7 +414,7 @@ img {
 
 .navDrop li:hover {
   color: #093349;
-  text-shadow: 0 0 5px #093349;
+  text-shadow: 0 0 5px #093349 !important;
 }
 
 .navDropList {
@@ -397,8 +424,8 @@ img {
   background-repeat: no-repeat;
   background-position: center;
   position: fixed;
-  top: 50vh;
-  left: 45vw;
+  top: 150vh;
+  left: 90vw;
   min-width: 50vw;
   min-height: 50vh;
   width: max-content;
@@ -427,13 +454,20 @@ img {
 .navigation-container.navigation-expanded .navDrop-expanded .navDropList {
   visibility: visible;
   opacity: 1;
+  top: 50vh;
+  left: 45vw;
 }
 
 @media screen and (max-width: 980px) {
   .navigation {
+    top: -50vw;
+    left: -60vw;
+    width: 90vw;
+  }
+
+  .navigation-container.navigation-expanded .navigation {
     top: -10vw;
     left: -20vw;
-    width: 90vw;
   }
 
   .navList {
@@ -443,10 +477,14 @@ img {
   }
 
   .navDropList {
+    top: 80vh;
+    left: 100vw;
+  }
+
+  .navigation-container.navigation-expanded .navDrop-expanded .navDropList {
     top: 60vh;
     left: 40vw;
   }
-
   .navDropList li {
     text-align: left;
     max-width: 45vw;
@@ -463,7 +501,6 @@ img {
   width: 100%;
   position: relative;
   z-index: 1;
-  overflow-x: hidden;
 }
 
 .homeBtn {
@@ -484,6 +521,12 @@ img {
 
 .homeBtn a:hover {
   scale: 1.2;
+}
+
+@media screen and (max-width: 980px) {
+  .homeBtn {
+    width: 18rem;
+  }
 }
 /* /hero */
 
@@ -894,8 +937,9 @@ a.referenceLinks {
   column-gap: 10px;
   text-align: justify;
   margin-bottom: 2rem;
-  font-size: 1rem;
-  line-height: 1.2;
+  font-size: 1.4rem !important;
+  line-height: 1.1;
+  font-weight: lighter !important;
 }
 
 .gridedContainer > div {
@@ -922,6 +966,8 @@ a.referenceLinks {
   .gridedContainer {
     grid-template-columns: none;
     grid-template-rows: auto auto;
+    font-weight: normal !important;
+    font-size: 2rem !important;
   }
 
   .gridedContainer > div:first-child {
@@ -991,7 +1037,7 @@ a.referenceLinks {
 .scrollID.scrollID-active,
 .scrollID:hover {
   /* font-size: 1.5rem; */
-  font-weight: bold;
+  font-weight: normal;
   text-shadow: 0 0 5px #093349;
   background: #1b8cc98a;
   /* border: 1px dashed red; */
@@ -1058,6 +1104,12 @@ a.referenceLinks {
   margin-right: 1rem;
 }
 
+.boxContent b {
+  font-size: 1.4rem !important;
+  font-weight: bold !important;
+  color: #222;
+}
+
 .overviewPara {
   /* background: rgba(255, 217, 0, 0.3); */
   color: #093349;
@@ -1100,6 +1152,7 @@ a.referenceLinks {
 }
 
 .pdfLink {
+  font-size: 1.1rem !important;
   text-align: center !important;
 }
 
@@ -1140,6 +1193,8 @@ figcaption {
   /* width: 100%; */
   color: #333;
   font-style: italic;
+  font-size: 1.1rem;
+  font-weight: normal;
   padding: 2px;
   text-align: center;
   margin: 0 auto 0.5rem;
@@ -1276,7 +1331,7 @@ figcaption {
 .collapsible-header {
   background: darkcyan;
   padding: 0.5rem 1rem;
-  cursor: pointer;
+  cursor: var(--cursor-pointer);
   width: 100%;
   box-shadow: 0 3px 5px 1px #000;
   border-radius: 5px;
