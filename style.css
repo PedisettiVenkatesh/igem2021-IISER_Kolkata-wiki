@@ -1092,8 +1092,9 @@ a.referenceLinks {
 
 /* pdf */
 .pdf {
-  width: 80%;
+  width: 100%;
   height: 768px;
+  max-height: 770px;
   display: block;
   margin: 0 auto;
 }
