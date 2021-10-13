@@ -401,6 +401,10 @@ img {
   cursor: var(--cursor-pointer);
 }
 
+.navigation img {
+  animation: navBG 120s linear infinite forwards;
+}
+
 .navList {
   width: max-content;
   position: absolute;
@@ -465,6 +469,16 @@ img {
   opacity: 1;
   top: 50vh;
   left: 45vw;
+}
+
+@keyframes navBG {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 @media screen and (max-width: 980px) {
@@ -1016,7 +1030,7 @@ a.referenceLinks {
   /* background: #eee; */
   width: 100%;
   height: auto;
-  top: 25%;
+  top: 20%;
   font-size: 1rem;
   margin-bottom: 3.2rem;
   max-height: 95vh;
