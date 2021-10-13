@@ -3,15 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
     <title>IISER Kolkata IGEM Team - Home</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body onload="preload()" class="noScroll">
     <!-- preloader -->
-    <div id="preloader" title="Loading...">
-      <!-- <img src="https://2021.igem.org/wiki/images/d/d6/T--IISER_Kolkata--image-preloader.gif" alt="[preloader image]" /> -->
-      <img src="images/preloader.gif" alt="" />
+    <div id="preloader" class="unSelectable" title="Loading...">
+      <img src="https://2021.igem.org/wiki/images/d/d6/T--IISER_Kolkata--image-preloader.gif" alt="[preloader image]" />
       Loading . . .
     </div>
     <!-- /preloader -->
@@ -24,7 +23,7 @@
     <!-- /progressBar -->
 
     <!-- toTop -->
-    <div id="toTop" title="Go To Top">
+    <div id="toTop" class="unSelectable" title="Go To Top">
       <a href="javascript:window.scrollTo(0, 0);">
         <img src="https://2021.igem.org/wiki/images/d/d8/T--IISER_Kolkata--image-toTop-2x.png" alt="toTop" />
       </a>
@@ -32,13 +31,25 @@
     <!-- /toTop -->
 
     <!-- navToggler -->
-    <div id="navToggler" title="navigation">
-      <img src="https://2021.igem.org/wiki/images/6/67/T--IISER_Kolkata--image-toggleBtn-2x.png" alt="#NAV#" />
+    <div id="navToggler" class="unSelectable" title="navigation">
+      <img id="navTogglerImg" src="https://2021.igem.org/wiki/images/6/67/T--IISER_Kolkata--image-toggleBtn-2x.png" alt="#NAV#" />
     </div>
+
+    <!-- script for NavToggler -->
+    <script>
+      function changeToggleBtn() {
+        if (navTogglerImg.src.match("https://2021.igem.org/wiki/images/6/67/T--IISER_Kolkata--image-toggleBtn-2x.png")) {
+          navTogglerImg.src = "https://2021.igem.org/wiki/images/e/ee/T--IISER_Kolkata--image-toggleBtn-Close.png";
+        } else {
+          navTogglerImg.src = "https://2021.igem.org/wiki/images/6/67/T--IISER_Kolkata--image-toggleBtn-2x.png";
+        }
+      }
+    </script>
+    <!-- /script for NavToggler -->
     <!-- /navToggler -->
 
     <!-- navigation -->
-    <nav class="navigation-container">
+    <nav class="navigation-container unSelectable">
       <div class="navigation">
         <img src="https://2021.igem.org/wiki/images/0/0e/T--IISER_Kolkata--image-navBG-2x.png" alt="" />
         <div class="navList">
@@ -129,7 +140,7 @@
     <!-- IISER KOLKATA CONTAINER -->
     <div class="iiserKolkata">
       <!-- hero -->
-      <div id="hero">
+      <div id="hero" class="unSelectable">
         <img src="https://2021.igem.org/wiki/images/8/85/T--IISER_Kolkata--image-collaborationsHero.png" alt="Collaborations_Hero" />
         <div class="homeBtn" title="Go To Home">
           <a href="https://2021.igem.org/Team:IISER_Kolkata">
@@ -145,160 +156,128 @@
       <!-- content -->
       <div class="indentContainer">
         <div class="gridedContainer">
-          <div>
+          <div id="scrollHide" class="unSelectable">
             <!-- sideNav -->
             <div class="sideNav sticky">
               <!-- navigate in Page -->
               <ul>
-                <li><a id="run" class="scrollID" onclick="scrollToID('runSection')">section1</a></li>
-                <li><a id="run1" class="scrollID" onclick="scrollToID('run1Section')"> section2</a></li>
-                <li><a id="run2" class="scrollID" onclick="scrollToID('run2Section')"> section3 </a></li>
-                <li><a id="run3" class="scrollID" onclick="scrollToID('run3Section')"> section4</a></li>
-                <li><a id="run4" class="scrollID" onclick="scrollToID('run4Section')">section5</a></li>
-                <li><a id="run5" class="scrollID" onclick="scrollToID('run5Section')">section6</a></li>
+                <li><a id="run" class="scrollID" onclick="scrollToID('runSection')">Team IISER Tirupati</a></li>
+                <li><a id="run1" class="scrollID" onclick="scrollToID('run1Section')">Team GoParisSaclay</a></li>
+                <li><a id="run2" class="scrollID" onclick="scrollToID('run2Section')">Team IISER Berhampur</a></li>
+                <li><a id="run3" class="scrollID" onclick="scrollToID('run3Section')">Team NTU Singapore</a></li>
+                <li><a id="run4" class="scrollID" onclick="scrollToID('run4Section')">Team CCU Taiwan</a></li>
+                <li><a id="run5" class="scrollID" onclick="scrollToID('run5Section')">Team Crete</a></li>
+                <li><a id="run6" class="scrollID" onclick="scrollToID('run6Section')">Team Guelph</a></li>
               </ul>
             </div>
             <!-- /sideNav -->
           </div>
           <div>
+            <!-- 1. Team IISER Tirupati -->
             <section id="runSection" class="scrollSection">
               <div class="centerImage">
-                <div class="highlightYellow mediumText textShadow"><b>section1</b></div>
+                <div class="highlightYellow mediumText textShadow"><b>Team IISER Tirupati</b></div>
               </div>
               <div class="contentSection">
-                <p>Overview body text .................................................</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit vero nesciunt in sint veritatis vitae eius, itaque culpa dolorum? Nisi atque voluptatum recusandae quaerat laboriosam libero illo nostrum totam quia.</p>
+                <div class="boxContent">
+                  <p>
+                    The first in our list is an amazing event which we had the pleasure to organize and execute. Following days of planning and brainstorming, our team conducted, along with the team of IISER Tirupati, an online workshop with the purpose of educating female high school students in the basics of synthetic biology and its applications. Simply named as “Gene Gala”, the event was conducted over five days in the month of June from the 12th to the 16th, which saw enthusiastic participation of female students from different schools across Delhi under the aegis of the Directorate of Education (DoE), Delhi. Being conducted as a mini summer camp/ school, the workshop witnessed enthusiastic participation, with upto 75 student attendees and their teachers from their respective schools. The lesson plan, designed by IISER Tirupati, was made with the objective of it
+                    being suitable for the level of high school students keeping in mind the curricula of schools the students hail from. We managed to cover various topics by means of day-wise lecture slides and supplementary activities and quizzes with each day’s lecture. The last day was specifically dynamic as we tasked the students to come up with ideas of their own to use synthetic biology to solve a certain issue, on the lines of iGEM. Enriched with a plethora of ideas and a multitude of perspectives, we got a glimpse of the ways in which children are capable of grasping different concepts and unleashing their potential to craft new ways of solving real life problems. We had a lively discussion with the students and their teachers over these five days which helped us understand our areas for improvement and gave us an opportunity to ignite the interest of
+                    synthetic biology in young and aspiring minds. This effort of ours has been officially acknowledged by the Directorate. Detailed information is available on our <a class="referenceLinks" href="https://2021.igem.org/Team:IISER_Kolkata/Education">Education</a> page !
+                  </p>
+                  <div class="figures">
+                    <figure>
+                      <img src="https://2021.igem.org/wiki/images/5/54/T--IISER_Kolkata--image-Collaboration_Tirupati.png" alt="Collaboration_Tirupati.png" />
+                      <figcaption>Collaborating with Team Tirupati</figcaption>
+                    </figure>
+                  </div>
+                </div>
               </div>
             </section>
+            <!-- 2. Team GoParisSaclay   -->
             <section id="run1Section" class="scrollSection">
               <div class="centerImage">
-                <div class="highlightYellow mediumText textShadow"><b>section2</b></div>
+                <div class="highlightYellow mediumText textShadow"><b>Team GoParisSaclay</b></div>
               </div>
               <div class="contentSection">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, ipsum.
+                <div class="boxContent">
+                  <p>Team GO Paris Saclay purified cas13a and tested our miRNA targets of the detection part in the cas13a system that they managed to produce and purify. The miRNA targets and the activity of cas13a on them has been successfully affirmed by the GO Paris Saclay team.</p>
+                </div>
               </div>
             </section>
+            <!-- 3. Team IISER Berhampur  -->
             <section id="run2Section" class="scrollSection">
               <div class="centerImage">
-                <div class="highlightYellow mediumText textShadow"><b> section3</b></div>
+                <div class="highlightYellow mediumText textShadow"><b>Team IISER Berhampur</b></div>
               </div>
               <div class="contentSection">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem placeat hic sed nulla animi quod at eius non numquam rem atque iure, modi iusto nihil laboriosam ipsa iste natus omnis nisi eum aperiam dignissimos. Quos dolores odio accusantium illo fugiat molestias architecto, aliquam repudiandae fugit harum voluptatem rem repellat quae.</p>
+                <div class="boxContent">
+                  <p>We participated in the iGEM Global CRISPR Conference hosted by IISER Berhampur and presented our project discussing its various aspects in detail. We emphasised on the gravitas of the problem caused by Bovine Mastitis in the dairy industry, and how our project aims to tackle the issue via diagnostic as well as therapeutic approaches. We emphasised on the technical aspects of our project alongwith how are using CRISPR to execute the diagnostic part of our project, explaining the detection part of our project. We had a very productive session discussing our project. Details of the same can be found in our education page under miscellaneous.</p>
+                </div>
               </div>
             </section>
+            <!-- 4. Team NTU Singapore  -->
             <section id="run3Section" class="scrollSection">
               <div class="centerImage">
-                <div class="highlightYellow mediumText textShadow"><b> section4</b></div>
+                <div class="highlightYellow mediumText textShadow"><b>Team NTU Singapore</b></div>
               </div>
               <div class="contentSection">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem placeat hic sed nulla animi quod at eius non numquam rem atque iure, modi iusto nihil laboriosam ipsa iste natus omnis nisi eum aperiam dignissimos. Quos dolores odio accusantium illo fugiat molestias architecto, aliquam repudiandae fugit harum voluptatem rem repellat quae.</p>
+                <div class="boxContent">
+                  <p>
+                    We started off with discussing our projects and subsequently deliberated on possible areas of collaboration. We decided to collaborate by helping each other carry out surveys and interviews. We circulated two google forms framed by team NTU Singapore on C ovid-19 and Cancer. The form for Covid-19 aims to gauge how willing people are in using their kit for Covid-19 testing, as the kit designed by NTU Singapore is less invasive than current methods of testing and also the kit is not necessary to be operated by professionals. The form on Cancer aims to understand if people are willing to regularly test for cancer using their less invasive testing kit. NTU Singapore also circulated our survey forms which we designed to conduct a general awareness survey amongst college students about bovine mastitis, it's harmful effects upon cattle and humans, the
+                    harmful effects of antibiotics and awareness about synthetic biology. Participation in our surveys is completely voluntary and anonymous, with no information of the persons filling the forms being collected.
+                  </p>
+                  <p>We also conducted interviews with some students of our institute who graduated during the pandemic and a medical student as well regarding Covid-19, its impact on their lives and regarding self-test kits.</p>
+                  <div class="figures">
+                    <figure><img src="https://2021.igem.org/wiki/images/a/a1/T--IISER_Kolkata--image-Collaboration_NTU-Singapore.png" alt="Collaboration_NTU-Singapore.png" /></figure>
+                  </div>
+                </div>
               </div>
             </section>
+            <!-- 5. Team CCU Taiwan  -->
             <section id="run4Section" class="scrollSection">
               <div class="centerImage">
-                <div class="highlightYellow mediumText textShadow"><b>section5</b></div>
+                <div class="highlightYellow mediumText textShadow"><b>Team CCU Taiwan</b></div>
               </div>
               <div class="contentSection">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem placeat hic sed nulla animi quod at eius non numquam rem atque iure, modi iusto nihil laboriosam ipsa iste natus omnis nisi eum aperiam dignissimos. Quos dolores odio accusantium illo fugiat molestias architecto, aliquam repudiandae fugit harum voluptatem rem repellat quae.</p>
+                <div class="boxContent">
+                  <p>For Team CCU Taiwan, we translated their parent-child picture book to Assamese. Assamese is the official language of the state of Assam, in the North-eastern part of India. Titled “The War on Germs”, the picture book aims at inculcating awareness in children regarding the issue of superbugs.</p>
+                  <div class="figures">
+                    <figure><img src="https://2021.igem.org/wiki/images/1/10/T--IISER_Kolkata--image-Collaboration_CCU-Taiwan.jpg" alt="Collaboration_CCU-Taiwan.jpg" /></figure>
+                  </div>
+                </div>
               </div>
-              <section>
-                <div class="collapsible">
-                  <header class="collapsible-header">
-                    heading1
-                    <div class="collapsibleToggler">+</div>
-                  </header>
-                  <div class="collapsible-content">
-                    this is a collapsible.
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non a nulla eum iusto recusandae obcaecati inventore quo? Non, soluta voluptatem.</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non a nulla eum iusto recusandae obcaecati inventore quo? Non, soluta voluptatem.</p>
-                  </div>
-                </div>
-                <div class="collapsible">
-                  <header class="collapsible-header">
-                    heading1
-                    <div class="collapsibleToggler">+</div>
-                  </header>
-                  <div class="collapsible-content">
-                    this is a collapsible.
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non a nulla eum iusto recusandae obcaecati inventore quo? Non, soluta voluptatem.</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non a nulla eum iusto recusandae obcaecati inventore quo? Non, soluta voluptatem.</p>
-                  </div>
-                </div>
-                <div class="collapsible">
-                  <header class="collapsible-header">
-                    heading1
-                    <div class="collapsibleToggler">+</div>
-                  </header>
-                  <div class="collapsible-content">
-                    this is a collapsible.
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non a nulla eum iusto recusandae obcaecati inventore quo? Non, soluta voluptatem.</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non a nulla eum iusto recusandae obcaecati inventore quo? Non, soluta voluptatem.</p>
-                  </div>
-                </div>
-                <div class="collapsible">
-                  <header class="collapsible-header">
-                    heading1
-                    <div class="collapsibleToggler">+</div>
-                  </header>
-                  <div class="collapsible-content">
-                    this is a collapsible.
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non a nulla eum iusto recusandae obcaecati inventore quo? Non, soluta voluptatem.</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non a nulla eum iusto recusandae obcaecati inventore quo? Non, soluta voluptatem.</p>
-                  </div>
-                </div>
-              </section>
             </section>
+            <!-- 6. Team Crete  -->
             <section id="run5Section" class="scrollSection">
-              <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam deserunt ad doloribus obcaecati cupiditate numquam placeat inventore deleniti incidunt, sed quo dignissimos voluptate illum fugit repellendus? Culpa commodi consequatur tempore quo qui temporibus eaque blanditiis repudiandae vero nulla accusantium sapiente iusto quos aliquam sunt alias et, esse impedit asperiores tenetur distinctio in ratione autem. Praesentium quisquam nam, eos harum earum, voluptates, voluptatibus voluptatem molestiae deleniti impedit qui aspernatur neque et. Magni laboriosam harum tempore nihil repudiandae! Itaque velit animi accusamus nihil magnam dolorum voluptas quibusdam, tenetur natus tempora corporis omnis iste, laboriosam pariatur laudantium at soluta. Veritatis perspiciatis facere illo facilis voluptate ullam nemo, eos, quasi iure eaque aut molestias. Modi minima
-              </p>
-              <video style="width: 400px;" controls loop>
-                <source src="/offline/testVideo.mp4" type="video/mp4" />
-                <track src="" kind="subtitles" srclang="en" label="English" />
-              </video>
+              <div class="centerImage">
+                <div class="highlightYellow mediumText textShadow"><b>Team Crete</b></div>
+              </div>
+              <div class="contentSection">
+                <div class="boxContent">
+                  <p>We collaborated with team iGEM Crete by providing an excerpt on the potential way in which synthetic biology can be used to deal with the rising issue of antimicrobial resistance. Team iGEM Crete aimed to make a repository of information related to biology which would be translated into braille of the specific language. This would enhance their database of information in braille.</p>
+                </div>
+              </div>
+            </section>
+            <!-- 7. Team Guelph  -->
+            <section id="run6Section" class="scrollSection">
+              <div class="centerImage">
+                <div class="highlightYellow mediumText textShadow"><b>Team Guelph</b></div>
+              </div>
+              <div class="contentSection">
+                <div class="boxContent">
+                  <p>Based on our answers to interview questions about our project , Team Guelph put together short (1-2 page) summaries of our iGEM project. They have done the same for iGEM projects from around the world. The content has been credited to us and posted on their team's website for public access.</p>
+                </div>
+              </div>
             </section>
           </div>
         </div>
       </div>
       <!-- /content -->
 
-      <!-- knowMore -->
-      <div class="indentContainer">
-        <section class="knowMore">
-          <!-- <h3>Know More at...</h3> -->
-          <div class="knowMoreList">
-            <a href="javascript:void();">
-              <img src="https://2021.igem.org/wiki/images/7/73/T--IISER_Kolkata--image-PLM_Icon.png" alt="Population-Level Modeling" />
-            </a>
-            <a href="javascript:void();">
-              <img src="https://2021.igem.org/wiki/images/5/5b/T--IISER_Kolkata--image-MLM_Icon.png" alt="Molecular-Level Modeling" />
-            </a>
-            <a href="javascript:void();">
-              <img src="https://2021.igem.org/wiki/images/1/1f/T--IISER_Kolkata--image-OLM_Icon.png" alt="Organisimal-Level Modeling" />
-            </a>
-          </div>
-        </section>
-      </div>
-      <!-- /knowMore -->
-
-      <!-- reference -->
-      <section class="reference">
-        <div class="wave topWave">
-          <!-- Top Wave  -->
-        </div>
-        <div class="indentContainer">
-          <h3>References</h3>
-          <ol>
-            <li><a href="">reference 1</a></li>
-            <li><a href="">reference 2</a></li>
-          </ol>
-        </div>
-      </section>
-      <!-- /reference -->
-
       <!-- footer -->
       <footer>
-        <div class="theFooter">
+        <div class="theFooter unSelectable">
           <div class="wave bottomWave"></div>
           <div class="indentContainer">
             <div class="contactHead"><b>Contact us at</b></div>
@@ -309,10 +288,10 @@
               <a href="https://www.linkedin.com/in/igem-iiser-kolkata-189707189/"> <img src="https://2021.igem.org/wiki/images/1/15/T--IISER_Kolkata--image-linkedinIcon.png" alt="linkedIn" /></a>
             </div>
             <div class="footerHead">
-              <h3>Our Sponsors...</h3>
+              <h3>Our Sponsors</h3>
             </div>
             <div class="sponsors">
-              <div style="border-right: 3px solid #5e8dd1;">
+              <div>
                 <img src="https://2021.igem.org/wiki/images/9/90/T--IISER_Kolkata--image-igemiiserk-2x.png" alt="IGEM-IISERKolkata" />
               </div>
               <div>
@@ -337,14 +316,20 @@
 
     <!-- script for scroll actives -->
     <script>
-      var mainNavLinks = document.querySelectorAll(".scrollID");
+      const mainNavLinks = document.querySelectorAll(".scrollID");
+
+      var topOff = 200;
+
+      if (window.matchMedia("(max-width: 980px)").matches) {
+        var topOff = 500;
+      }
 
       function highlightActiveSection() {
-        var fromTop = window.pageYOffset + 100;
+        var fromTop = window.pageYOffset + topOff;
         var r = 0;
 
         for (r = 0; r < mainNavLinks.length; r++) {
-          navD = mainNavLinks[r];
+          var navD = mainNavLinks[r];
           var section = document.getElementById(navD.id + "Section");
           if (section.offsetTop <= fromTop) {
             if (section.offsetTop + section.offsetHeight > fromTop) {
@@ -360,33 +345,23 @@
     </script>
     <!-- /script for scroll actives -->
 
-    <!-- script for collapsibles -->
+    <!-- hide on Scroll -->
     <script>
-      var collapsibles = document.querySelectorAll(".collapsible");
+      var prevScrollPos = window.pageYOffset;
 
-      function removeCollapsibleExpanded(notRemove) {
-        collapsibles.forEach((collD) => {
-          if (collD != notRemove) {
-            collD.classList.remove("collapsible--expanded");
-            collD.querySelector(".collapsibleToggler").innerHTML = "+";
-          }
-        });
-      }
-
-      collapsibles.forEach((coll) =>
-        coll.querySelector(".collapsible-header").addEventListener("click", function () {
-          removeCollapsibleExpanded(coll);
-          coll.classList.toggle("collapsible--expanded");
-
-          if (coll.querySelector(".collapsibleToggler").innerHTML == "+") {
-            coll.querySelector(".collapsibleToggler").innerHTML = "-";
+      function hideOnScroll() {
+        if (window.matchMedia("(max-width: 980px)").matches) {
+          var currentScrollPos = window.pageYOffset;
+          if (prevScrollPos > currentScrollPos) {
+            document.getElementById("scrollHide").style.top = "0.8%";
           } else {
-            coll.querySelector(".collapsibleToggler").innerHTML = "+";
+            document.getElementById("scrollHide").style.top = "-100vh";
           }
-        })
-      );
+          prevScrollPos = currentScrollPos;
+        }
+      }
     </script>
-    <!-- /script for collapsibles -->
+    <!-- /hide on scroll -->
 
     <!-- /IISER KOLKATA CONTAINER -->
 

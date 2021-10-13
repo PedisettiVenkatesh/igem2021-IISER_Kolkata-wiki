@@ -9,12 +9,9 @@
   </head>
   <body onload="preload()" class="noScroll">
     <!-- preloader -->
-    <div id="preloader" title="Loading...">
+    <div id="preloader" class="unSelectable" title="Loading...">
       <img src="https://2021.igem.org/wiki/images/d/d6/T--IISER_Kolkata--image-preloader.gif" alt="[preloader image]" />
       Loading . . .
-      <div class="suggestion">
-        [Better viewed on Desktop Site]
-      </div>
     </div>
     <!-- /preloader -->
 
@@ -26,7 +23,7 @@
     <!-- /progressBar -->
 
     <!-- toTop -->
-    <div id="toTop" title="Go To Top">
+    <div id="toTop" class="unSelectable" title="Go To Top">
       <a href="javascript:window.scrollTo(0, 0);">
         <img src="https://2021.igem.org/wiki/images/d/d8/T--IISER_Kolkata--image-toTop-2x.png" alt="toTop" />
       </a>
@@ -34,10 +31,11 @@
     <!-- /toTop -->
 
     <!-- navToggler -->
-    <div id="navToggler" title="navigation">
+    <div id="navToggler" class="unSelectable" title="navigation">
       <img id="navTogglerImg" src="https://2021.igem.org/wiki/images/6/67/T--IISER_Kolkata--image-toggleBtn-2x.png" alt="#NAV#" />
     </div>
 
+    <!-- script for NavToggler -->
     <script>
       function changeToggleBtn() {
         if (navTogglerImg.src.match("https://2021.igem.org/wiki/images/6/67/T--IISER_Kolkata--image-toggleBtn-2x.png")) {
@@ -47,10 +45,11 @@
         }
       }
     </script>
+    <!-- /script for NavToggler -->
     <!-- /navToggler -->
 
     <!-- navigation -->
-    <nav class="navigation-container">
+    <nav class="navigation-container unSelectable">
       <div class="navigation">
         <img src="https://2021.igem.org/wiki/images/0/0e/T--IISER_Kolkata--image-navBG-2x.png" alt="" />
         <div class="navList">
@@ -141,8 +140,8 @@
     <!-- IISER KOLKATA CONTAINER -->
     <div class="iiserKolkata">
       <!-- hero -->
-      <div id="hero">
-        <img src="https://2021.igem.org/wiki/images/e/ea/T--IISER_Kolkata--image-wetLabHero.png" alt="Safety_Hero" />
+      <div id="hero" class="unSelectable">
+        <img src="https://2021.igem.org/wiki/images/8/85/T--IISER_Kolkata--image-collaborationsHero.png" alt="Collaborations_Hero" />
         <div class="homeBtn" title="Go To Home">
           <a href="https://2021.igem.org/Team:IISER_Kolkata">
             <img src="https://2021.igem.org/wiki/images/c/cd/T--IISER_Kolkata--image-igemIISERK_home.png" alt="IGEM-IISERKolkata" />
@@ -157,150 +156,117 @@
       <!-- content -->
       <div class="indentContainer">
         <div class="gridedContainer">
-          <div id="scrollHide">
+          <div id="scrollHide" class="unSelectable">
             <!-- sideNav -->
             <div class="sideNav sticky">
               <!-- navigate in Page -->
               <ul>
-                <li><a id="run" class="scrollID" onclick="scrollToID('runSection')">Overview</a></li>
-                <li><a id="run1" class="scrollID" onclick="scrollToID('run1Section')">Lab Safety</a></li>
-                <li><a id="run2" class="scrollID" onclick="scrollToID('run2Section')">Ensuring safety in project design</a></li>
-                <li><a id="run3" class="scrollID" onclick="scrollToID('run3Section')">Detection Safety</a></li>
+                <li><a id="run" class="scrollID" onclick="scrollToID('runSection')">Team IISER Tirupati</a></li>
+                <li><a id="run1" class="scrollID" onclick="scrollToID('run1Section')">Team GoParisSaclay</a></li>
+                <li><a id="run2" class="scrollID" onclick="scrollToID('run2Section')">Team IISER Berhampur</a></li>
+                <li><a id="run3" class="scrollID" onclick="scrollToID('run3Section')">Team NTU Singapore</a></li>
+                <li><a id="run4" class="scrollID" onclick="scrollToID('run4Section')">Team CCU Taiwan</a></li>
+                <li><a id="run5" class="scrollID" onclick="scrollToID('run5Section')">Team Crete</a></li>
+                <li><a id="run6" class="scrollID" onclick="scrollToID('run6Section')">Team Guelph</a></li>
               </ul>
             </div>
             <!-- /sideNav -->
           </div>
           <div>
-            <!-- overview -->
+            <!-- 1. Team IISER Tirupati -->
             <section id="runSection" class="scrollSection">
               <div class="centerImage">
-                <div class="highlightYellow mediumText textShadow"><b>Overview</b></div>
+                <div class="highlightYellow mediumText textShadow"><b>Team IISER Tirupati</b></div>
               </div>
               <div class="contentSection">
                 <div class="boxContent">
-                  <p>Safety is one of the most important aspects of a project. When our project was being engineered, safety was an aspect that was prioritised in every sphere. Our project aims to detect the pathogen causing bovine mastitis in cows using a cheap, on-field test kit. On detection of pathogens, we have also developed a method of killing the target pathogen by a method that does not entail the usage of antibiotics (see design). The safety issues that pertain to both these aspects of our project have been minutely checked and taken care of to the best of our abilities.</p>
+                  <p>
+                    The first in our list is an amazing event which we had the pleasure to organize and execute. Following days of planning and brainstorming, our team conducted, along with the team of IISER Tirupati, an online workshop with the purpose of educating female high school students in the basics of synthetic biology and its applications. Simply named as “Gene Gala”, the event was conducted over five days in the month of June from the 12th to the 16th, which saw enthusiastic participation of female students from different schools across Delhi under the aegis of the Directorate of Education (DoE), Delhi. Being conducted as a mini summer camp/ school, the workshop witnessed enthusiastic participation, with upto 75 student attendees and their teachers from their respective schools. The lesson plan, designed by IISER Tirupati, was made with the objective of it
+                    being suitable for the level of high school students keeping in mind the curricula of schools the students hail from. We managed to cover various topics by means of day-wise lecture slides and supplementary activities and quizzes with each day’s lecture. The last day was specifically dynamic as we tasked the students to come up with ideas of their own to use synthetic biology to solve a certain issue, on the lines of iGEM. Enriched with a plethora of ideas and a multitude of perspectives, we got a glimpse of the ways in which children are capable of grasping different concepts and unleashing their potential to craft new ways of solving real life problems. We had a lively discussion with the students and their teachers over these five days which helped us understand our areas for improvement and gave us an opportunity to ignite the interest of
+                    synthetic biology in young and aspiring minds. This effort of ours has been officially acknowledged by the Directorate. Detailed information is available on our <a class="referenceLinks" href="https://2021.igem.org/Team:IISER_Kolkata/Education">Education</a> page !
+                  </p>
+                  <div class="figures">
+                    <figure>
+                      <img src="https://2021.igem.org/wiki/images/5/54/T--IISER_Kolkata--image-Collaboration_Tirupati.png" alt="Collaboration_Tirupati.png" />
+                      <figcaption>Collaborating with Team Tirupati</figcaption>
+                    </figure>
+                  </div>
                 </div>
               </div>
             </section>
-            <!-- 1. Lab Safety -->
+            <!-- 2. Team GoParisSaclay   -->
             <section id="run1Section" class="scrollSection">
               <div class="centerImage">
-                <div class="highlightYellow mediumText textShadow"><b>Lab Safety</b></div>
+                <div class="highlightYellow mediumText textShadow"><b>Team GoParisSaclay</b></div>
               </div>
               <div class="contentSection">
                 <div class="boxContent">
-                  <p>
-                    The Department of Biotechnology (DBT) of the Government of India regulates biosafety and biosecurity in research laboratories in India. The complete set of rules and regulations regarding laboratory safety can be found <a class="referenceLinks" href="https://2021.igem.org/wiki/images/b/bb/T--IISER_Kolkata--PDF-Safety-Regulations-Guidelines-for-Reocminant-DNA-Research-and-Biocontainment-2017.pdf">here</a>. In addition to that, IISER Kolkata has its own set of laboratory safety guidelines formulated by the Institutional Biosafety Committee (<a class="referenceLinks" href="https://2021.igem.org/wiki/images/f/f1/T--IISER_Kolkata--PDF-Safety-IISER-Kolkata-Biosafety-Manual.pdf">IBSC</a>). These set of guidelines function to ensure a safe laboratory work environment, minimise the risk of accidents and also to realise the benefits of a safe work
-                    environment in eliminating the hazards to the working personnel. The team initially underwent strict lab-safety training about the do’s and don'ts of lab safety under the able guidance of Mr. Suvam Mukherjee and Dr G. Lekha.
-                  </p>
-                  <div class="figures">
-                    <figure>
-                      <img src="https://2021.igem.org/wiki/images/0/03/T--IISER_Kolkata--image-Safety-LabSafetySuvanMukherjee.jpg" alt="LabSafetySuvanMukherjee.jpg" />
-                      <figcaption>Lab safety session with Mr. Suvan Mukherjee</figcaption>
-                    </figure>
-                  </div>
-                  <p>Briefing about proper handling and disposal of materials including biosafety hazards as well as developing a positive attitude toward safety in laboratory operations were taught. We were also shown where to find fire and chemical extinguishers, as well as where to find emergency showers and eyewash stations, as well as how to use them. Also the working labs were initially fumigated to destroy any pathogens that might have been suspended in the air.</p>
-                  <p>Despite the COVID-19 pandemic, we were grateful to be allowed lab access to perform the experiments that we had planned. Throughout the working period, the team diligently maintained the covid-19 guidelines:</p>
-                  <ol>
-                    <li>
-                      Only the minimum number of members required to carry out the wet-lab work were called back to college to perform the experiments. Rest of the members remained at home and performed their assigned duties and contributions in taking our project forward.
-                    </li>
-                    <li>
-                      In the lab, social distancing was maintained. The team employed two labs for carrying out the experiments and at any point of time there were no more than 6 people working in both the labs combined.
-                    </li>
-                    <li>
-                      During lab hours, the team obeyed COVID regulations by wearing the mask mandatorily, gloves and periodic sanitisation of hands and surfaces.
-                    </li>
-                    <li>
-                      Team members who came in contact with covid positive people or were secondary contacts, strict quarantine was maintained to contain the spread.
-                    </li>
-                    <li>
-                      Most of the brainstorming sessions were conducted on zoom or on google meet to minimise physical proximity as much as possible.
-                    </li>
-                  </ol>
-                  <div class="figures">
-                    <figure>
-                      <img src="https://2021.igem.org/wiki/images/3/39/T--IISER_Kolkata--image-Safety-FireExtinguishers.jpg" alt="Safety-FireExtinguishers.jpg" />
-                      <figcaption>Fire extinguishers outside our lab</figcaption>
-                    </figure>
-                  </div>
-                  <p>The wetlab aspects were performed in the Teaching and Research complex in three laboratories, including the laboratory of our PI, Dr. Supratim Datta. The general safety observed in experimental design is as follows;</p>
-                  <p>
-                    <b>BSL-1 Safety:</b><br />
-                    All our experiments belonging to the cloning of the quorum-sensing unit of our project fall under the BSL-1 category. These are performed in the BSL-1 laboratory as per required guidelines. The quorum sensing unit is cloned into E-coli DH5𝛼 and E. coli BL21 and KRX for expression are all BSL-1 bacteria. The chassis organism that we later plan to use is Lactococcus lactis LMG 7930 which also falls under the BSL-1 category of bacteria. A class biosafety cabinet is used for all these experiments.
-                  </p>
-                  <div class="figures">
-                    <figure>
-                      <img src="https://2021.igem.org/wiki/images/5/5d/T--IISER_Kolkata--image-Safety-BSL-1-SafetyCabinet.jpg" alt="BSL-1-SafetyCabinet.jpg" />
-                      <figcaption>BSL-1 Safety Cabinet</figcaption>
-                    </figure>
-                  </div>
-                  <p>
-                    <b>BSL-2 Safety:</b><br />
-                    Pseudomonas aeruginosa was used for our biofilm assay involving DNase I. Since P. aeruginosa falls under the BSL-2 category, all experiments involving the bacteria were done under appropriate guidelines and regulations under a BSL-2 safety cabinet. After the assay, the discarded bacterial cultures were disposed of according to the safety guidelines in a biohazard waste packet to prevent any cross contamination and unintended release of pathogenic bacteria.
-                  </p>
-                  <div class="figures">
-                    <figure>
-                      <img src="https://2021.igem.org/wiki/images/7/71/T--IISER_Kolkata--image-Safety-BSL-2-SafetyCabinet.jpg" alt="BSL-2-SafetyCabinet.jpg" />
-                      <figcaption>BSL-2 Safety Cabinet</figcaption>
-                    </figure>
-                  </div>
-                  <p>
-                    <b>Microorganisms:</b><br />
-                    In our experiments, we used E. coli DH5𝛼 and E. coli BL21 and KRX as our chassis organism which all fall under the class of BSL-1 microorganisms. In addition, our intended chassis, Lactococcus lactis LMG 7930 which also falls under the BSL-1 category of bacteria. The biofilm degradation assay was performed with P. aeruginosa which falls under the BSL-2 category of microorganisms. All of these microorganisms were handled using the right precautions and discarded safely after usage.
-                  </p>
-                  <p>
-                    <b>Inserts:</b><br />
-                    Only safe inserts were expressed. The agrA,B,C,D circuit produces only one molecule which is the AIP or the autoinducer peptide. The AIP molecule falls within the BSL-1 category and is not documented to cause any harm to humans or any unwarranted harm to the environment. Also DNase-I is only documented to degrade biofilms and do not pose any harm to the environment or to humans if leaked. Rest of the genes only code for receptor molecules and will be destroyed once the GMO lyses. The gene fragments were ordered from twist biosciences and some were supplied by iGEM.
-                  </p>
-                  <p>
-                    <b>Vectors:</b><br />
-                    For carrying out our experiments, two different backbone vectors were used - pSB1C3 and PUC19 plasmid backbones. pSB1C3 was obtained from iGEM whereas the PUC19 was obtained from our PI, Dr. Supratim Datta’s lab.
-                  </p>
-                  <p>
-                    <b>Chemical usage:</b><br />
-                    Hazardous chemicals like ethidium bromide were used only under designated areas, handled using appropriate gloves, used only in minor quantities and disposed only in biohazard red bags. In addition all reagents were appropriately handled according to their usage instructions. Any contaminated equipment was disposed of appropriately
-                  </p>
-                  <div class="figures">
-                    <figure>
-                      <img src="https://2021.igem.org/wiki/images/d/d5/T--IISER_Kolkata--image-Safety-RedBiohazardBag.jpg" alt="RedBiohazardBag.jpg" />
-                      <figcaption>Red Biohazard Bag</figcaption>
-                    </figure>
-                  </div>
+                  <p>Team GO Paris Saclay purified cas13a and tested our miRNA targets of the detection part in the cas13a system that they managed to produce and purify. The miRNA targets and the activity of cas13a on them has been successfully affirmed by the GO Paris Saclay team.</p>
                 </div>
               </div>
             </section>
-            <!-- 2. Ensuring safety in project design -->
+            <!-- 3. Team IISER Berhampur  -->
             <section id="run2Section" class="scrollSection">
               <div class="centerImage">
-                <div class="highlightYellow mediumText textShadow"><b>Ensuring safety in project design </b></div>
+                <div class="highlightYellow mediumText textShadow"><b>Team IISER Berhampur</b></div>
               </div>
               <div class="contentSection">
                 <div class="boxContent">
-                  <p>
-                    <b>Design:</b> <br />
-                    Our genetically modified bacteria aims to detect the presence of the target pathogen using the quorum sensing system and then secrete a bacteriocin. This bacteriocin is more specific to the pathogen and serves as an effective alternative for broad spectrum antibiotics. In case our GMO doesn't come in contact with the pathogen, it is equipped with a kill switch so that it lyses itself and does not cause unwarranted contamination via gene transfer.
-                  </p>
-                  <p>
-                    <b>Endolysin:</b> <br />
-                    Endolysin is used to lyse our GMO for the effective release of the bacteriocin Nisin PV which then targets the pathogen Staphylococcus aureus. This not only provides for a method of release of the bacteriocin as said previously but also lyses the GMO. Hence the GMO cannot transfer its genes to any other bacteria residing in the microbiota of the udder and cause unprecedented problems and contamination.
-                  </p>
-                  <p>
-                    <b>Kill switch:</b> <br />
-                    In the unlikely event that our GMO does not come in contact with the pathogen, it is equipped with a kill switch (link to implementation page here) for lysis of the chassis organism. We plan to mutate the thyA gene in our chassis organism using CRISPR Cas9. ThyA mutants cannot survive in environments containing low amounts of thymidine or thymine (such as Luria-Bertani medium) unless complemented by the thyA gene. Mutation of thyA is a recessive lethal mutation that prevents the bacteria from producing any thymidine and has to depend on the surroundings for external supply of thymidine. In the absence of thymidine, the bacteria dies as it cannot synthesize it anymore.
-                  </p>
-                  <p>While the bacteria is being grown in the bioreactor, the mutant bacteria is supplemented by thymidine. The vial is then stored in 4 degrees celsius supplemented with thymidine so that the bacterial growth is negligible and the thymidine is unused. When injected into the udder, the bacteria then starts growing utilising the thymidine. In case it comes in contact with the target pathogen, the lysisE7 lyses the chassis GMO and releases the bacteriocin. In case it doesn't come in contact with the pathogen, the dearth of thymidine in the surrounding environment of the udder will kill the chassis. In this manner, thyA mutant lactococcus lactis proves to be an effective chassis.</p>
+                  <p>We participated in the iGEM Global CRISPR Conference hosted by IISER Berhampur and presented our project discussing its various aspects in detail. We emphasised on the gravitas of the problem caused by Bovine Mastitis in the dairy industry, and how our project aims to tackle the issue via diagnostic as well as therapeutic approaches. We emphasised on the technical aspects of our project alongwith how are using CRISPR to execute the diagnostic part of our project, explaining the detection part of our project. We had a very productive session discussing our project. Details of the same can be found in our education page under miscellaneous.</p>
                 </div>
               </div>
             </section>
-            <!-- 3. Detection Safety -->
+            <!-- 4. Team NTU Singapore  -->
             <section id="run3Section" class="scrollSection">
               <div class="centerImage">
-                <div class="highlightYellow mediumText textShadow"><b>Detection Safety</b></div>
+                <div class="highlightYellow mediumText textShadow"><b>Team NTU Singapore</b></div>
               </div>
               <div class="contentSection">
                 <div class="boxContent">
-                  <p>Our detection kit aims to use the combined cleavage efficiency of cas13a and csm6. However this will generate a lot of RNA cleaved products at the end of the procedure. We plan to provide a 10% bleach solution along with our kit so that any RNA residues remaining in the eppendorf tube and not poured into the micropad can be denatured and disposed of properly (link to detection design here). In addition, the micropad is wax-paper based. However it also contains RNA waste. The micropad can be incinerated after use with minimal contribution to gaseous pollution but maximal stop in contamination via cleaved RNA residues.</p>
+                  <p>
+                    We started off with discussing our projects and subsequently deliberated on possible areas of collaboration. We decided to collaborate by helping each other carry out surveys and interviews. We circulated two google forms framed by team NTU Singapore on C ovid-19 and Cancer. The form for Covid-19 aims to gauge how willing people are in using their kit for Covid-19 testing, as the kit designed by NTU Singapore is less invasive than current methods of testing and also the kit is not necessary to be operated by professionals. The form on Cancer aims to understand if people are willing to regularly test for cancer using their less invasive testing kit. NTU Singapore also circulated our survey forms which we designed to conduct a general awareness survey amongst college students about bovine mastitis, it's harmful effects upon cattle and humans, the
+                    harmful effects of antibiotics and awareness about synthetic biology. Participation in our surveys is completely voluntary and anonymous, with no information of the persons filling the forms being collected.
+                  </p>
+                  <p>We also conducted interviews with some students of our institute who graduated during the pandemic and a medical student as well regarding Covid-19, its impact on their lives and regarding self-test kits.</p>
+                  <div class="figures">
+                    <figure><img src="https://2021.igem.org/wiki/images/a/a1/T--IISER_Kolkata--image-Collaboration_NTU-Singapore.png" alt="Collaboration_NTU-Singapore.png" /></figure>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <!-- 5. Team CCU Taiwan  -->
+            <section id="run4Section" class="scrollSection">
+              <div class="centerImage">
+                <div class="highlightYellow mediumText textShadow"><b>Team CCU Taiwan</b></div>
+              </div>
+              <div class="contentSection">
+                <div class="boxContent">
+                  <p>For Team CCU Taiwan, we translated their parent-child picture book to Assamese. Assamese is the official language of the state of Assam, in the North-eastern part of India. Titled “The War on Germs”, the picture book aims at inculcating awareness in children regarding the issue of superbugs.</p>
+                  <div class="figures">
+                    <figure><img src="https://2021.igem.org/wiki/images/1/10/T--IISER_Kolkata--image-Collaboration_CCU-Taiwan.jpg" alt="Collaboration_CCU-Taiwan.jpg" /></figure>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <!-- 6. Team Crete  -->
+            <section id="run5Section" class="scrollSection">
+              <div class="centerImage">
+                <div class="highlightYellow mediumText textShadow"><b>Team Crete</b></div>
+              </div>
+              <div class="contentSection">
+                <div class="boxContent">
+                  <p>We collaborated with team iGEM Crete by providing an excerpt on the potential way in which synthetic biology can be used to deal with the rising issue of antimicrobial resistance. Team iGEM Crete aimed to make a repository of information related to biology which would be translated into braille of the specific language. This would enhance their database of information in braille.</p>
+                </div>
+              </div>
+            </section>
+            <!-- 7. Team Guelph  -->
+            <section id="run6Section" class="scrollSection">
+              <div class="centerImage">
+                <div class="highlightYellow mediumText textShadow"><b>Team Guelph</b></div>
+              </div>
+              <div class="contentSection">
+                <div class="boxContent">
+                  <p>Based on our answers to interview questions about our project , Team Guelph put together short (1-2 page) summaries of our iGEM project. They have done the same for iGEM projects from around the world. The content has been credited to us and posted on their team's website for public access.</p>
                 </div>
               </div>
             </section>
@@ -309,24 +275,9 @@
       </div>
       <!-- /content -->
 
-      <!-- reference -->
-      <section class="reference">
-        <div class="wave topWave">
-          <!-- Top Wave  -->
-        </div>
-        <div class="indentContainer">
-          <h3>References</h3>
-          <p>
-            All the references are provided within content, relative to content. <br />
-            Check for square bracketed Numbers in the paragraphs.
-          </p>
-        </div>
-      </section>
-      <!-- /reference -->
-
       <!-- footer -->
       <footer>
-        <div class="theFooter">
+        <div class="theFooter unSelectable">
           <div class="wave bottomWave"></div>
           <div class="indentContainer">
             <div class="contactHead"><b>Contact us at</b></div>
@@ -337,10 +288,10 @@
               <a href="https://www.linkedin.com/in/igem-iiser-kolkata-189707189/"> <img src="https://2021.igem.org/wiki/images/1/15/T--IISER_Kolkata--image-linkedinIcon.png" alt="linkedIn" /></a>
             </div>
             <div class="footerHead">
-              <h3>Our Sponsors...</h3>
+              <h3>Our Sponsors</h3>
             </div>
             <div class="sponsors">
-              <div style="border-right: 3px solid #5e8dd1;">
+              <div>
                 <img src="https://2021.igem.org/wiki/images/9/90/T--IISER_Kolkata--image-igemiiserk-2x.png" alt="IGEM-IISERKolkata" />
               </div>
               <div>
@@ -365,14 +316,20 @@
 
     <!-- script for scroll actives -->
     <script>
-      var mainNavLinks = document.querySelectorAll(".scrollID");
+      const mainNavLinks = document.querySelectorAll(".scrollID");
+
+      var topOff = 200;
+
+      if (window.matchMedia("(max-width: 980px)").matches) {
+        var topOff = 500;
+      }
 
       function highlightActiveSection() {
-        var fromTop = window.pageYOffset + 100;
+        var fromTop = window.pageYOffset + topOff;
         var r = 0;
 
         for (r = 0; r < mainNavLinks.length; r++) {
-          navD = mainNavLinks[r];
+          var navD = mainNavLinks[r];
           var section = document.getElementById(navD.id + "Section");
           if (section.offsetTop <= fromTop) {
             if (section.offsetTop + section.offsetHeight > fromTop) {
@@ -390,7 +347,6 @@
 
     <!-- hide on Scroll -->
     <script>
-      // hide on scroll
       var prevScrollPos = window.pageYOffset;
 
       function hideOnScroll() {
@@ -399,41 +355,13 @@
           if (prevScrollPos > currentScrollPos) {
             document.getElementById("scrollHide").style.top = "0.8%";
           } else {
-            document.getElementById("scrollHide").style.top = "-50vh";
+            document.getElementById("scrollHide").style.top = "-100vh";
           }
           prevScrollPos = currentScrollPos;
         }
       }
     </script>
     <!-- /hide on scroll -->
-
-    <!-- script for collapsibles -->
-    <script>
-      var collapsibles = document.querySelectorAll(".collapsible");
-
-      function removeCollapsibleExpanded(notRemove) {
-        collapsibles.forEach((collD) => {
-          if (collD != notRemove) {
-            collD.classList.remove("collapsible--expanded");
-            collD.querySelector(".collapsibleToggler").innerHTML = "+";
-          }
-        });
-      }
-
-      collapsibles.forEach((coll) =>
-        coll.querySelector(".collapsible-header").addEventListener("click", function () {
-          removeCollapsibleExpanded(coll);
-          coll.classList.toggle("collapsible--expanded");
-
-          if (coll.querySelector(".collapsibleToggler").innerHTML == "+") {
-            coll.querySelector(".collapsibleToggler").innerHTML = "-";
-          } else {
-            coll.querySelector(".collapsibleToggler").innerHTML = "+";
-          }
-        })
-      );
-    </script>
-    <!-- /script for collapsibles -->
 
     <!-- /IISER KOLKATA CONTAINER -->
 

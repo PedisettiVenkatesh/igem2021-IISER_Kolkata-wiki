@@ -9,7 +9,7 @@
   </head>
   <body onload="preload()" class="noScroll">
     <!-- preloader -->
-    <div id="preloader" title="Loading...">
+    <div id="preloader" class="unSelectable" title="Loading...">
       <img src="https://2021.igem.org/wiki/images/d/d6/T--IISER_Kolkata--image-preloader.gif" alt="[preloader image]" />
       Loading . . .
     </div>
@@ -23,7 +23,7 @@
     <!-- /progressBar -->
 
     <!-- toTop -->
-    <div id="toTop" title="Go To Top">
+    <div id="toTop" class="unSelectable" title="Go To Top">
       <a href="javascript:window.scrollTo(0, 0);">
         <img src="https://2021.igem.org/wiki/images/d/d8/T--IISER_Kolkata--image-toTop-2x.png" alt="toTop" />
       </a>
@@ -31,13 +31,25 @@
     <!-- /toTop -->
 
     <!-- navToggler -->
-    <div id="navToggler" title="navigation">
-      <img src="https://2021.igem.org/wiki/images/6/67/T--IISER_Kolkata--image-toggleBtn-2x.png" alt="#NAV#" />
+    <div id="navToggler" class="unSelectable" title="navigation">
+      <img id="navTogglerImg" src="https://2021.igem.org/wiki/images/6/67/T--IISER_Kolkata--image-toggleBtn-2x.png" alt="#NAV#" />
     </div>
+
+    <!-- script for NavToggler -->
+    <script>
+      function changeToggleBtn() {
+        if (navTogglerImg.src.match("https://2021.igem.org/wiki/images/6/67/T--IISER_Kolkata--image-toggleBtn-2x.png")) {
+          navTogglerImg.src = "https://2021.igem.org/wiki/images/e/ee/T--IISER_Kolkata--image-toggleBtn-Close.png";
+        } else {
+          navTogglerImg.src = "https://2021.igem.org/wiki/images/6/67/T--IISER_Kolkata--image-toggleBtn-2x.png";
+        }
+      }
+    </script>
+    <!-- /script for NavToggler -->
     <!-- /navToggler -->
 
     <!-- navigation -->
-    <nav class="navigation-container">
+    <nav class="navigation-container unSelectable">
       <div class="navigation">
         <img src="https://2021.igem.org/wiki/images/0/0e/T--IISER_Kolkata--image-navBG-2x.png" alt="" />
         <div class="navList">
@@ -128,7 +140,7 @@
     <!-- IISER KOLKATA CONTAINER -->
     <div class="iiserKolkata">
       <!-- hero -->
-      <div id="hero">
+      <div id="hero" class="unSelectable">
         <img src="https://2021.igem.org/wiki/images/3/39/T--IISER_Kolkata--image-communictaionHero.png" alt="Communication_Hero" />
         <div class="homeBtn" title="Go To Home">
           <a href="https://2021.igem.org/Team:IISER_Kolkata">
@@ -144,7 +156,7 @@
       <!-- content -->
       <div class="indentContainer">
         <div class="gridedContainer">
-          <div id="scrollHide">
+          <div id="scrollHide" class="unSelectable">
             <!-- sideNav -->
             <div class="sideNav sticky">
               <!-- navigate in Page -->
@@ -187,12 +199,22 @@
                         We interviewed a number of farmers in Asansol, a city in West Bengal and asked about the problems they are facing when it comes to bovine mastitis. Most of them were unaware of the harmful effects of the overuse of antibiotics and the need to reach out to certified doctors. We tried to share our views on appropriate milking practices and maintaining proper hygiene. We also communicated the harmful effects of overuse of antibiotics and took their views on an antibiotic free approach towards curing this disease. The meeting was conducted in-person on a one-on-one basis to follow COVID-19 guidelines issued by the Government of West Bengal. Although due to COVID guidelines of West Bengal, no workshop in groups could be conducted. But realising the extreme importance of spreading awareness regarding mastitis and AMR, our team was ready to fight the
                         odds in spite of the hurdles. We went on to spreading awareness on a one-on-one basis, near Kalyani and Asansol regions of West Bengal.
                       </p>
+                      <div class="figures verticalFigure verticalLongFigure">
+                        <figure>
+                          <img src="https://2021.igem.org/wiki/images/e/ec/T--IISER_Kolkata--image-EducationSourinChatterjee05.jpg" alt="Education_SourinChatterjee05" />
+                        </figure>
+                        <figure>
+                          <img src="https://2021.igem.org/wiki/images/d/d4/T--IISER_Kolkata--image-EducationSourinChatterjee06.jpg" alt="Education_SourinChatterjee06" />
+                        </figure>
+                        <figcaption>Our team member Sourin Chatterjee interacting with and interviewing local dairy farmers!</figcaption>
+                      </div>
                     </li>
                     <li>
                       <b>Scientists and veterinary doctors:</b> <br />
                       <p>
-                        Our team interviewed a number of scientists and veterinary doctors, and took their valuable inputs to develop our project. Dr. Peter explained the formation of a can-like structure around pathogens which makes it difficult for the antibiotics to act and Prof. Amirul Islam Mallick proposed that we should use a probiotic bacteria as a chassis organism. The latter also advised us about GMO trials before releasing them into the environment. Similarly, several other scientists like (include their names) gave us many important inputs which enabled us to work efficiently and effectively. The documentation of every meeting with the scientists can be found here:
+                        Our team interviewed a number of scientists and veterinary doctors, and took their valuable inputs to develop our project. Dr. Peter Edmondson explained the formation of a can-like structure around pathogens which makes it difficult for the antibiotics to act and Prof. Amirul Islam Mallick proposed that we should use a probiotic bacteria as a chassis organism. The latter also advised us about GMO trials before releasing them into the environment. Similarly, several other scientists, Dr. Kunal Batyabal, Dr. Indranil Samanta, Dr. Nimai Chandra Patra gave us many important inputs which enabled us to work efficiently and effectively. The meeting seconds with the scientists can be found here:
                       </p>
+                      <img src="https://2021.igem.org/wiki/images/3/30/T--IISER_Kolkata--image-Communication_VetDocsSS.jpg" alt="" />
                       <p>A number of veterinary doctors whom we contacted suggested to us the importance of creating awareness among the local farmers regarding a proper treatment by certified doctors, rather than following the foots of quackery. These quacks have been a major reason for the rising concerns of AMR and we tried to make the farmers aware of the same. As we all believe, communication is a two-way process. Most of the doctors were already aware of the harmful effects of the overuse of antibiotics and upon discussing our project idea with them, they were already looking forward to an antibiotic-free approach towards the early detection and cure of bovine mastitis. We took the inputs from them and worked on the necessary steps.</p>
                     </li>
                     <li>
@@ -497,7 +519,7 @@
 
       <!-- footer -->
       <footer>
-        <div class="theFooter">
+        <div class="theFooter unSelectable">
           <div class="wave bottomWave"></div>
           <div class="indentContainer">
             <div class="contactHead"><b>Contact us at</b></div>

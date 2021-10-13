@@ -84,6 +84,15 @@ html {
   background: #000;
 }
 
+.unSelectable {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
 html {
   font-size: 16px !important;
   scroll-behavior: smooth !important;
@@ -552,6 +561,10 @@ img {
 .centerImage h3 {
   font-size: 4.5rem !important;
 }
+
+.centerImage b {
+  font-weight: bold !important;
+}
 /* /centerImage */
 
 /* textFormats */
@@ -1003,7 +1016,7 @@ a.referenceLinks {
   /* background: #eee; */
   width: 100%;
   height: auto;
-  top: 10%;
+  top: 25%;
   font-size: 1rem;
   margin-bottom: 3.2rem;
   max-height: 95vh;
