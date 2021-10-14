@@ -51,8 +51,8 @@ html {
 :root {
   --color-body: #000;
   --color-border: #98c1d9;
-  --cursor-normal: url("https://2021.igem.org/wiki/images/0/0e/T--IISER_Kolkata--image-navBG-2x.png") 1 1, url(/icons/CowNormal.cur), auto !important;
-  --cursor-pointer: url(/icons/CowLink.cur) 1 1, pointer !important;
+  --color-blue: #5e8dd1;
+  --cursor-pointer: pointer !important;
 }
 
 *,
@@ -62,9 +62,6 @@ html {
 }
 
 /* typography */
-
-/* tif, tiff, fcs, otf, eot, ttf, woff, svg. */
-
 @font-face {
   font-family: MyRaleway;
   src: url("https://2021.igem.org/wiki/images/1/1e/T--IISER_Kolkata--fonts-Raleway-Regular-eot.eot");
@@ -81,7 +78,7 @@ html {
 
 ::selection {
   color: #fff;
-  background: #000;
+  background: var(--color-body);
 }
 
 .unSelectable {
@@ -97,7 +94,6 @@ html {
   font-size: 16px !important;
   scroll-behavior: smooth !important;
   scrollbar-width: none !important;
-  cursor: var(--cursor-normal);
 }
 
 body {
@@ -249,7 +245,7 @@ img {
 
 /* progressBar */
 #scrollPath {
-  /* box-shadow: inset 0 0 5px #000; */
+  /* box-shadow: inset 0 0 5px var(--color-body); */
   background: rgb(221, 157, 157);
   border-radius: 5px;
   height: 50vh;
@@ -266,7 +262,7 @@ img {
 
 #progressBar {
   /* background: gold; */
-  /* box-shadow: inset 0 0 5px #000; */
+  /* box-shadow: inset 0 0 5px var(--color-body); */
   background: linear-gradient(to top, goldenrod, gold);
   border-radius: 5px;
   box-shadow: 0 10px 10px 5px rgb(94, 84, 30);
@@ -583,7 +579,7 @@ img {
 
 /* textFormats */
 .highlightBlue {
-  color: #5e8dd1;
+  color: var(--color-blue);
 }
 
 .highlightYellow {
@@ -647,7 +643,7 @@ img {
 
 /* rightSection */
 .rightSection {
-  /* background: #000; */
+  /* background: var(--color-body); */
   display: grid;
   grid-template-columns: 40% 60%;
   margin-top: 3rem;
@@ -753,7 +749,7 @@ img {
 .reference {
   margin-top: 3rem;
   font-size: 1rem !important;
-  background: #5e8dd1;
+  background: var(--color-blue);
   color: #23354e;
   line-height: 1.5;
   padding-top: 2rem;
@@ -762,7 +758,7 @@ img {
 }
 
 a.referenceLinks {
-  color: #5e8dd1 !important;
+  color: var(--color-blue) !important;
   text-decoration: none !important;
   font-weight: bold;
   text-shadow: 1px 1px 1px #093349;
@@ -787,7 +783,7 @@ a.referenceLinks {
 
 .wave {
   position: absolute;
-  top: -2.5rem;
+  top: -2.3rem;
   left: 0;
   background-repeat: repeat-x;
   background-size: contain;
@@ -849,20 +845,20 @@ a.referenceLinks {
 
 .footerHead {
   font-size: 2.5rem !important;
-  color: #5e8dd1 !important;
+  color: var(--color-blue) !important;
   position: relative;
 }
 
 .footerHead h3 {
-  border-top: 1px dashed #5e8dd1 !important;
-  color: #5e8dd1 !important;
+  border-top: 1px dashed var(--color-blue) !important;
+  color: var(--color-blue) !important;
   margin: 0.3rem !important;
   text-align: center;
 }
 
 .contactHead {
   text-align: center;
-  color: #5e8dd1 !important;
+  color: var(--color-blue) !important;
 }
 
 .contacts {
@@ -932,7 +928,7 @@ a.referenceLinks {
 }
 
 .sponsors > div:first-child {
-  border-right: 2px dashed #5e8dd1;
+  border-right: 2px dashed var(--color-blue);
 }
 
 .hLogo {
@@ -978,7 +974,7 @@ a.referenceLinks {
 }
 
 .gridedContainer > div:first-child {
-  color: #000;
+  color: var(--color-body);
   height: auto;
   padding: 0;
   position: relative;
@@ -1044,6 +1040,7 @@ a.referenceLinks {
   padding: 0;
   margin: 0;
   overflow-x: hidden;
+  line-height: 1;
 }
 
 .scrollID {
@@ -1142,7 +1139,7 @@ a.referenceLinks {
   color: #093349;
   /* line-height: 1.3; */
   /* border-radius: 10px; */
-  text-shadow: 1px 1px 2px #5e8dd1;
+  text-shadow: 1px 1px 2px var(--color-blue);
   padding: 1rem 0.3rem;
   /* font-family: Arial, Helvetica, sans-serif !important; */
   font-size: 1.5rem !important;
@@ -1160,7 +1157,7 @@ a.referenceLinks {
   .overviewPara {
     font-size: 4rem !important;
     line-height: 1.2 !important;
-    text-shadow: 3px 3px 4px #5e8dd1;
+    text-shadow: 3px 3px 4px var(--color-blue);
   }
 
   .overviewHeading {
@@ -1228,7 +1225,7 @@ figcaption {
 }
 
 .verticalLongFigure figure {
-  width: auto;
+  width: 30%;
 }
 
 @media screen and (max-width: 980px) {
@@ -1267,7 +1264,7 @@ figcaption {
 }
 
 .realTable table {
-  border: 1px solid #000 !important;
+  border: 1px solid var(--color-body) !important;
   border-collapse: collapse !important;
   text-align: center !important;
 }
@@ -1280,7 +1277,7 @@ figcaption {
 .realTable td {
   vertical-align: center !important;
   padding: 0.5rem 1rem 0.5rem !important;
-  border: 1px solid #000 !important;
+  border: 1px solid var(--color-body) !important;
 }
 
 /* /tables */
@@ -1293,7 +1290,7 @@ figcaption {
   position: relative;
   font-size: 1.1rem;
   font-weight: bold;
-  /* box-shadow: 10px 10px 35px 1px #000; */
+  /* box-shadow: 10px 10px 35px 1px var(--color-body); */
   border: 1px solid #9aa7b2;
   border-right: 4px solid #9aa7b2;
   border-bottom: 4px solid #9aa7b2;
@@ -1356,17 +1353,17 @@ figcaption {
 }
 
 .collapsible-header {
-  background: darkcyan;
+  background: #5e8ed180;
   padding: 0.5rem 1rem;
   cursor: var(--cursor-pointer);
   width: 100%;
-  box-shadow: 0 3px 5px 1px #000;
+  box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.5);
   border-radius: 5px;
   margin-bottom: 0.5rem;
 }
 
 .collapsible-header:hover {
-  background: rgb(10, 168, 168);
+  background: var(--color-blue);
 }
 
 .collapsibleToggler {
@@ -1380,17 +1377,17 @@ figcaption {
   height: 0;
   overflow: hidden;
   border-radius: 5px;
-  transition: all 0.3s linear;
+  transition: all 0.3s;
 }
 
 .collapsible.collapsible--expanded .collapsible-content {
   padding: 1rem;
-  box-shadow: 0 3px 5px 1px #000;
+  box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.5);
   height: auto;
 }
 
 .collapsible.collapsible--expanded .collapsible-header {
-  background: rgb(10, 168, 168);
+  background: #5e8ed1;
 }
 /* /collapsible */
 
@@ -1413,7 +1410,7 @@ figcaption {
   border-radius: 50%;
   padding: 0.5rem;
   overflow: hidden;
-  border: 1.8rem solid #5e8dd1;
+  border: 1.8rem solid var(--color-blue);
   box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.5);
   margin: 1rem 0.5rem;
   transition: all 0.3s linear;
@@ -1469,7 +1466,7 @@ figcaption {
   font-size: 2.2rem;
   font-weight: bold;
   padding: 1rem 0;
-  color: #5e8dd1;
+  color: var(--color-blue);
 }
 
 .profile__role {
@@ -1479,7 +1476,7 @@ figcaption {
 
 .profile__info {
   padding: 1rem 0.5rem 1rem;
-  border-top: 2px solid #000;
+  border-top: 2px solid var(--color-body);
   font-size: 0.9rem;
   max-height: 50vh;
   /* box-shadow: inset 0 0 5px 1px rgba(0, 0, 0, 0.2); */
@@ -1511,5 +1508,10 @@ figcaption {
     max-height: 90vh;
   }
 }
-
 /* /profiles */
+
+/* animations */
+.animateOnScroll {
+  transform: translateX(100px) translateY(50px);
+}
+/* /animations */

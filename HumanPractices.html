@@ -1,92 +1,62 @@
 <!DOCTYPE html>
-<!-- https://2021.igem.org/Template:IISER_Kolkata -->
-<!-- https://2021.igem.org/Template:IISER_Kolkata/css -->
-<!-- https://2021.igem.org/Template:IISER_Kolkata/js -->
-<!-- 
-Human Practices
-
-At iGEM we believe societal considerations should be upfront and integrated throughout the design and execution of synthetic biology projects. “Human Practices” refers to iGEM teams’ efforts to actively consider how the world affects their work and their work affects the world. Through your Human Practices activities, your team should demonstrate how you have thought carefully and creatively about whether your project is responsible and good for the world. We invite you to explore issues relating (but not limited) to the ethics, safety, security, and sustainability of your project, and to show how this exploration feeds back into your project purpose, design, and execution.
-
-Please note you can compete for the Silver Medal criterion #3, Gold Medal criterion #1 and the Best Integrated Human Practices prize with this page.
-
-For more information, please see the Human Practices Hub.
-
-On this page, your team should document all of your Human Practices work and activities. You should write about the Human Practices topics you considered in your project, document any activities you conducted to explore these topics (such as engaging with experts and stakeholders), describe why you took a particular approach (including referencing any work you built upon), and explain if and how you integrated takeaways from your Human Practices work back into your project purpose, design and/or execution.
-Silver Medal Criterion #3
-
-Explain how you have determined your work is responsible and good for the world.
-Gold Medal Criterion #1
-
-Demonstrate how your team responded to your human practices reflections, research, and/or engagement. You should show how your activities impacted your project purpose, design and/or execution.
-
-Please see the 2021 Medals Page for more information.
-Best Integrated Human Practices Special Prize
-
-To compete for the Best Integrated Human Practices prize, please describe your work on this page and also fill out the description on the judging form.
-
-How does your project affect society and how does society influence the direction of your project? How might ethical considerations and stakeholder input guide your project purpose and design and the experiments you conduct in the lab? How does this feedback enter into the process of your work all through the iGEM competition? Document a thoughtful and creative approach to exploring these questions and how your project evolved in the process to compete for this award!
-Inspiration
-
-You can look at what other teams did to get some inspiration!
-Here are a few examples:
-
-    2019 Thessaly
-    2019 Linkoping Sweden
-    2019 FDR HB Peru
-    2020 William and Mary
-    2020 Rochester
-    2020 Leiden
-    2020 Baltimore BioCrew
-
- -->
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
     <title>IISER Kolkata IGEM Team - Home</title>
-    <!-- <link rel="stylesheet" href="https://2021.igem.org/Template:IISER_Kolkata" /> -->
     <link rel="stylesheet" href="style.css" />
   </head>
   <body onload="preload()" class="noScroll">
     <!-- preloader -->
-    <div id="preloader" title="Loading...">
-      <!-- <img src="https://2021.igem.org/wiki/images/d/d6/T--IISER_Kolkata--image-preloader.gif" alt="[preloader image]" /> -->
-      <img src="images/preloader.gif" alt="" />
+    <div id="preloader" class="unSelectable" title="Loading...">
+      <img src="https://2021.igem.org/wiki/images/d/d6/T--IISER_Kolkata--image-preloader.gif" alt="[preloader image]" />
       Loading . . .
     </div>
-
     <!-- /preloader -->
+
     <!-- progressBar -->
     <div id="scrollPath">
       <div id="progressBar"></div>
       <div id="progressBtn"></div>
     </div>
     <!-- /progressBar -->
+
     <!-- toTop -->
-    <div id="toTop" title="Go To Top">
+    <div id="toTop" class="unSelectable" title="Go To Top">
       <a href="javascript:window.scrollTo(0, 0);">
-        <!-- <img src="https://2021.igem.org/wiki/images/d/d8/T--IISER_Kolkata--image-toTop-2x.png" alt="toTop" /> -->
-        <img src="images/offline/new/toTop-2x.png" alt="toTop" />
+        <img src="https://2021.igem.org/wiki/images/d/d8/T--IISER_Kolkata--image-toTop-2x.png" alt="toTop" />
       </a>
     </div>
     <!-- /toTop -->
+
     <!-- navToggler -->
-    <div id="navToggler" title="navigation">
-      <!-- <img src="https://2021.igem.org/wiki/images/6/67/T--IISER_Kolkata--image-toggleBtn-2x.png" alt="#NAV#" /> -->
-      <img src="./images/offline/new/toggleBtn-2x.png" alt="#NAV#" />
+    <div id="navToggler" class="unSelectable" title="navigation">
+      <img id="navTogglerImg" src="https://2021.igem.org/wiki/images/6/67/T--IISER_Kolkata--image-toggleBtn-2x.png" alt="#NAV#" />
     </div>
+
+    <!-- script for NavToggler -->
+    <script>
+      function changeToggleBtn() {
+        if (navTogglerImg.src.match("https://2021.igem.org/wiki/images/6/67/T--IISER_Kolkata--image-toggleBtn-2x.png")) {
+          navTogglerImg.src = "https://2021.igem.org/wiki/images/e/ee/T--IISER_Kolkata--image-toggleBtn-Close.png";
+        } else {
+          navTogglerImg.src = "https://2021.igem.org/wiki/images/6/67/T--IISER_Kolkata--image-toggleBtn-2x.png";
+        }
+      }
+    </script>
+    <!-- /script for NavToggler -->
     <!-- /navToggler -->
+
     <!-- navigation -->
-    <nav class="navigation-container">
+    <nav class="navigation-container unSelectable">
       <div class="navigation">
         <img src="https://2021.igem.org/wiki/images/0/0e/T--IISER_Kolkata--image-navBG-2x.png" alt="" />
-        <!-- <img src="images/offline/navBG-2x.png" alt="" /> -->
         <div class="navList">
           <ol>
             <li class="navDrop"><a href="https://2021.igem.org/Team:IISER_Kolkata"> Home </a></li>
             <li class="navDrop">
-              <a href="javascript:void();">
+              <a>
                 Team
                 <div class="navDropList">
                   <ul>
@@ -99,7 +69,7 @@ Here are a few examples:
               </a>
             </li>
             <li class="navDrop">
-              <a href="javascript:void();">
+              <a>
                 Project
                 <div class="navDropList">
                   <ul>
@@ -113,7 +83,7 @@ Here are a few examples:
               </a>
             </li>
             <li class="navDrop">
-              <a href="javascript:void();">
+              <a>
                 Wet Lab
                 <div class="navDropList">
                   <ul>
@@ -127,7 +97,7 @@ Here are a few examples:
               </a>
             </li>
             <li class="navDrop">
-              <a href="javascript:void();">
+              <a>
                 Dry Lab
                 <div class="navDropList">
                   <ul>
@@ -137,7 +107,7 @@ Here are a few examples:
               </a>
             </li>
             <li class="navDrop">
-              <a href="javascript:void();">
+              <a>
                 Human Practices
                 <div class="navDropList">
                   <ul>
@@ -149,7 +119,7 @@ Here are a few examples:
               </a>
             </li>
             <li class="navDrop">
-              <a href="javascript:void();">
+              <a>
                 Awards
                 <div class="navDropList">
                   <ul>
@@ -161,29 +131,17 @@ Here are a few examples:
                 </div>
               </a>
             </li>
-
-            <!-- <li class="navDrop">
-              <a href="javascript:void();">
-                Judging
-                <div class="navDropList">
-                  <ul>
-                    <li><a href="">Medals</a></li>
-                    <li><a href="">Judging Form</a></li>
-                  </ul>
-                </div>
-              </a>
-            </li> -->
           </ol>
         </div>
       </div>
     </nav>
     <!-- /navigation -->
+
     <!-- IISER KOLKATA CONTAINER -->
     <div class="iiserKolkata">
       <!-- hero -->
       <div id="hero">
         <img src="https://2021.igem.org/wiki/images/a/a4/T--IISER_Kolkata--image-HP_Hero.png" alt="HP_Hero" />
-        <!-- <img src="images/offline/HomeHero-3x.png" alt="" /> -->
         <div class="homeBtn" title="Go To Home">
           <a href="https://2021.igem.org/Team:IISER_Kolkata">
             <img src="https://2021.igem.org/wiki/images/c/cd/T--IISER_Kolkata--image-igemIISERK_home.png" alt="IGEM-IISERKolkata" />
@@ -195,188 +153,439 @@ Here are a few examples:
       </div>
       <!-- /hero -->
 
+      <!-- content -->
       <div class="indentContainer">
         <div class="gridedContainer">
-          <div>
+          <div id="scrollHide" class="unSelectable">
+            <!-- sideNav -->
             <div class="sideNav sticky">
               <!-- navigate in Page -->
               <ul>
                 <li><a id="run" class="scrollID" onclick="scrollToID('runSection')">Overview</a></li>
-                <li><a id="run1" class="scrollID" onclick="scrollToID('run1Section')">Integrated Human Practices</a></li>
-                <li><a id="run2" class="scrollID" onclick="scrollToID('run2Section')">Proposed Implementation</a></li>
-                <li><a id="run3" class="scrollID" onclick="scrollToID('run3Section')">Supporting Entrepreneurship</a></li>
-                <li><a id="run4" class="scrollID" onclick="scrollToID('run4Section')">Inclusivity</a></li>
+                <li><a id="run1" class="scrollID" onclick="scrollToID('run1Section')">Choosing the Problem of Subclinical Bovine Mastitis</a></li>
+                <li><a id="run2" class="scrollID" onclick="scrollToID('run2Section')">Building upon existing iGEM Project</a></li>
+                <li><a id="run3" class="scrollID" onclick="scrollToID('run3Section')">Understanding the problem</a></li>
+                <li><a id="run4" class="scrollID" onclick="scrollToID('run4Section')">Proposing a Good, Safe & Responsible Solution</a></li>
+                <li><a id="run5" class="scrollID" onclick="scrollToID('run5Section')">Designing naMOOste Products</a></li>
+                <li><a id="run6" class="scrollID" onclick="scrollToID('run6Section')">Implementing our product</a></li>
+                <li><a id="run7" class="scrollID" onclick="scrollToID('run7Section')">Effective Science Communication</a></li>
               </ul>
             </div>
+            <!-- /sideNav -->
           </div>
           <div>
+            <!-- overview -->
             <section id="runSection" class="scrollSection">
               <div class="centerImage">
                 <div class="highlightYellow mediumText textShadow"><b>Overview</b></div>
               </div>
               <div class="contentSection">
-                <p>Overview body text .................................................</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit vero nesciunt in sint veritatis vitae eius, itaque culpa dolorum? Nisi atque voluptatum recusandae quaerat laboriosam libero illo nostrum totam quia.</p>
+                <div class="boxContent">
+                  <p>
+                    Subclinical Bovine mastitis is a long-persisting problem in the dairy industries all over the world. India is one of the largest producers of milk in the world, bovine mastitis is a problem that demands serious attention to safeguarding the economy of our dairy sector as well as the health of cows and the health of people consuming raw milk. The prevalence of subclinical bovine mastitis ranges from 19.20 to 83% in cows and alone leads to 70-80% economic loss in the dairy industry <a class="referenceLinks" href="http://www.ijpab.com/form/2018%20Volume%206,%20issue%202/IJPAB-2018-6-2-1291-1299.pdf">[1]</a>. It is also seen that subclinical bovine mastitis is more prevalent in India <a class="referenceLinks" href="https://pubmed.ncbi.nlm.nih.gov/17135496/ ">[2]</a>. Not only in India, but this problem also persists in dairy industries all over the
+                    world for many years and people are trying to find a permanent solution to this problem <a class="referenceLinks" href="https://www.sciencedirect.com/science/article/pii/S0022030217310329#:~:text=National%20data%20collected%20for%20US,%25%20(USDA%2C%202016).">[3]</a>. Now, as much as subclinical mastitis is a problem in the cows and dairy industry, it is also a serious health hazard for humans. Subclinical bovine mastitis doesn’t show any visible symptoms in either the cows or the milk. Therefore the mastitis-causing pathogens present in the milk can easily enter the food chain of humans resulting in food poisoning outbreaks and other severe health problems <a class="referenceLinks" href="https://www.cabdirect.org/cabdirect/abstract/20073145566">[4]</a>. Thus mastitis is resulting in a serious amount of wastage and extremely degraded milk quality
+                    leading to health problems and thus is emerging as a very challenging hurdle to overcome.
+                  </p>
+                  <p>
+                    One of our team members on encountering the problem of bovine mastitis at a personal level, we obtained the realisation that the problem of bovine mastitis is extremely relevant to society, affecting different members of the society differently. Therefore our team wanted to recognize the difficulties faced by people due to bovine mastitis and develop a solution for them. We understood the importance of evaluating the impact that our project will have on society and further modify and adapt our project to deliver the most optimized solution to the stakeholders by taking input from them. Integrated Human Practices will help us to understand the mutual relationship of society and science and how their views will shape scientific advancement and cater to the needs of communities along with building a good and responsible solution. We have engaged in
+                    meaningful discussions with communities to develop a solution with them. Our conversations with our stakeholders have guided the development of our project throughout to shape it to be a responsible and good solution to the long-standing problem of Bovine subclinical mastitis in the dairy industry.
+                  </p>
+                  <p>You may follow our Human Practices Tree to know our Human Practices Workflow and framework.</p>
+                  <img style="padding: 0 3rem;" src="https://2021.igem.org/wiki/images/0/0a/T--IISER_Kolkata--image-HumanPractices-Tree.jpg" alt="" />
+                </div>
               </div>
             </section>
+            <!-- 1. Choosing the Problem of Subclinical Bovine Mastitis  -->
             <section id="run1Section" class="scrollSection">
               <div class="centerImage">
-                <div class="highlightYellow mediumText textShadow">
-                  <b>
-                    Integrated <br />
-                    Human Practices
-                  </b>
-                </div>
+                <div class="highlightYellow mediumText textShadow"><b>Choosing the Problem of Subclinical Bovine Mastitis</b></div>
               </div>
               <div class="contentSection">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, ipsum.
+                <div class="boxContent">
+                  <p>The Problem of subclinical bovine mastitis is a persistent problem in dairy industries all over the world and also indirectly affecting human health since time immemorial. But unfortunately, since the ill-effects of bovine mastitis disease is not absolutely directly experienced by the general public, common people are quite unaware of the serious threats this disease can pose and the escalating problem of antibiotic resistance which is also boosted by the current treatment techniques of subclinical bovine mastitis disease.</p>
+                  <p><b> 1.a. Knowing the problem </b></p>
+                  <p>
+                    Likewise, our team members too were unfortunately unaware of the bovine mastitis disease and its menaces. Anshuman was the first person in our team to learn about the existence of bovine mastitis disease for the first time when he engaged in a conversation with his milk person (referred to as Milkperson1) - enquiring him about his absence on his duty for a few days. During this conversation, Anshuman first learnt about the symptoms of bovine mastitis and came to know that proper treatment of the disease is inaccessible in remote rural places in India. Due to no visibility of symptoms of the disease in the early stage, Milkperson1 was unaware that one of his cows were suffering from mastitis and he did not start the treatment procedure early. By the time symptoms started appearing, i.e. the udder of the cow turned red and hard and the quality of
+                    milk produced by the cow deteriorated as it contained flakes and pus in it. By the time, antibiotic dosage treatment was initiated by vets, it was quite late to help the cow recover from the disease. This incident had prompted the whole team to properly realize the roots of the problem and a process of researching upon “What is Bovine Mastitis” got initiated.
+                  </p>
+                  <p><b> 1.b. Literature study of the problem </b></p>
+                  <p>
+                    After learning about the existence of Bovine Mastitis disease, it was important to educate ourselves more about the study that has happened in the academic world on this disease to date. An initial in-depth study about the disease was important for us to collect valuable preliminary information about the disease. After sufficient literature study, we learnt about the etiology of the disease, the colonization of pathogens in the udder tissue and the disease progression. A variety of pathogens like <em>Staphylococcus aureus,</em> Streptococcus uberis, Streptococcus agalactiae, Klebsiella spp, certain strains of E.coli are responsible for infecting the cows in different regions in the world to cause clinical and subclinical mastitis [5]. The pathogenic cells produce certain toxins and start spreading the infection by first damaging the cells lining
+                    the teat and the gland cisterns in the alveoli. The infection further progresses to the duct system and the milk-producing cells. As the infection progresses, the leukocytes reach the area of inflammation to fight the infection [6]. Currently, antibiotics are majorly used in treating the disease by killing the mastitis-causing pathogens. To detect subclinical and clinical mastitis in cows, some tests like Somatic Cell Count, California Mastitis Test, Modified White Side test, Bromothyl Blue Card Test exist in today’s world [7]. But recent studies have produced data to show that mastitis-causing pathogens are developing antibiotic resistance and therefore it is becoming increasingly difficult to treat the disease in cows by using controlled dosage of antibiotics. Hence the problem of the development of antimicrobial resistance is prevalent in this
+                    field too [8]. This detailed study provided us with several steps in the disease which we could target in our solution technique.
+                  </p>
+                </div>
               </div>
             </section>
+            <!-- 2. Building upon existing iGEM Project -->
             <section id="run2Section" class="scrollSection">
               <div class="centerImage">
-                <div class="highlightYellow mediumText textShadow"><b>Proposed Implementation</b></div>
+                <div class="highlightYellow mediumText textShadow"><b>Building upon existing iGEM Project</b></div>
               </div>
               <div class="contentSection">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem placeat hic sed nulla animi quod at eius non numquam rem atque iure, modi iusto nihil laboriosam ipsa iste natus omnis nisi eum aperiam dignissimos. Quos dolores odio accusantium illo fugiat molestias architecto, aliquam repudiandae fugit harum voluptatem rem repellat quae.</p>
+                <div class="boxContent">
+                  <p>
+                    Since the inception of iGEM, many projects have been developed to tackle the issue of antibiotic resistance. It gave us a scope of taking inspiration from previous iGEM Projects and further propose a solution. We came across the project <a class="referenceLinks" href="http://2017.igem.org/Team:TUDelft">Case13a, 2017 iGEM Project of Team TUDelft</a>. This project also focuses on tackling the problem of antibiotic resistance in the dairy industry. The team has developed a very elegant detection kit that can identify the antibiotic resistance in pathogenic bacteria with the help of the CRISPR-Cas13a system. Their detection kit was developed by integrating the needs of the stakeholders and therefore is well-shaped to be a relevant and responsible solution. We wanted to communicate their solution to the dairy farmers in our country or local regions to
+                    understand whether the detection kit proposed by Team TUDelft in 2017 is supportive of the needs and expectations of the community in India who is affected by the problem of bovine mastitis. To understand the social landscape in our local region, we thus engaged in respectful conversations with various stakeholders of our project.
+                  </p>
+                </div>
               </div>
             </section>
+            <!-- 3. Understanding the problem -->
             <section id="run3Section" class="scrollSection">
               <div class="centerImage">
-                <div class="highlightYellow mediumText textShadow"><b>Supporting Entrepreneurship</b></div>
+                <div class="highlightYellow mediumText textShadow"><b>Understanding the problem</b></div>
               </div>
               <div class="contentSection">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem placeat hic sed nulla animi quod at eius non numquam rem atque iure, modi iusto nihil laboriosam ipsa iste natus omnis nisi eum aperiam dignissimos. Quos dolores odio accusantium illo fugiat molestias architecto, aliquam repudiandae fugit harum voluptatem rem repellat quae.</p>
+                <div class="boxContent">
+                  <p>
+                    Subclinical and clinical bovine mastitis being prevalent in dairy industries all over the world, there are some detection and treatment techniques that do exist and are in use currently. But recent research shows that antibiotic resistance is increasing in the pathogens of mastitis. Due to the extensive and inappropriate use of antibiotics for various purposes in animal food, there has been a steady evolution of antibiotic-resistant microbes. Staphylococcus aureus, which is one of the major subclinical mastitis-causing pathogens, is also developing AMR <a class="referenceLinks" href="https://bmcresnotes.biomedcentral.com/articles/10.1186/s13104-017-3100-0">[9]</a>. TUDelft’s proposed detection kit will help to specify the antibiotic resistance of the pathogen but devising a non-antibiotic method of treatment is extremely essential to prevent the
+                    uncontrolled usage of antibiotics in the dairy industry.
+                  </p>
+                  <p>There is also a very striking socio-economic difference in India and the Netherlands. We recognized this differential need of the community in our local region and therefore it is very important to interact with the stakeholders for whom we are developing the solution. The human-centric design will help us to incorporate the exigencies of the people directly affected by our work. An empathetic and respectful conversation along with asking the right questions will help us shape a good, safe and responsible solution adapting to the requirements of the stakeholders. Our carefully framed conversations made sure that people concerned with our project had involvement throughout the formulation process of our project.</p>
+                  <p>To maintain the correct pathway of research to develop a solution and the mutualistic relationship of people and science we had started interacting with the stakeholders from the beginning of our project.</p>
+                  <p><b>3.a. Our steps to involve the stakeholders included: </b></p>
+                  <blockquote><b> ⎼ Identifying the stakeholders </b></blockquote>
+                  <p>&nbsp; &nbsp; &nbsp; &nbsp; We analyzed and listed the individuals who have direct or indirect relationships with our research and whose lives are affected either positively or negatively by our work. Small scale and large scale dairy farmers, local milk persons, dairy farms, veterinary doctors, veterinary scientists and consumers of milk and milk products.</p>
+                  <blockquote><b> ⎼ Framing the right questions</b></blockquote>
+                  <p>&nbsp; &nbsp; &nbsp; &nbsp; We needed to ask the direct users of our product about the problems they face due to mastitis in cows, what their observations were of the disease, how the disease affects their livelihood and what their opinions were regarding the existing solutions to the problem. We also needed to ask their views regarding the proposed synthetic biology solutions to understand the acceptance of the technology in the veterinary community. We framed our interview and survey questions and with the guidance of Dr Malancha Ta, the Institutional Ethics Committee screened our survey and interview questions. We proceeded to conduct our interviews and surveys based on the approved questionnaire.</p>
+                  <blockquote><b> ⎼ Analyzing the conversation</b></blockquote>
+                  <p>&nbsp; &nbsp; &nbsp; &nbsp; After meaningful interaction with the stakeholders, it is extremely essential to analyze the conversation to identify and understand the issues that need to be addressed and prioritized while developing our solution.</p>
+                  <p><b>3.b. Engagement with stakeholders</b></p>
+                  <blockquote><b> Interaction with milk persons or small scale dairy farmers </b></blockquote>
+                  <p>
+                    India has the highest number of small scale dairy farmers in the world with small scale dairy farmers producing 62% of the total amount of milk produced in the country <a class="referenceLinks" href="http://www.fao.org/3/bp233e/bp233e.pdf">[10]</a>, <a class="referenceLinks" href="https://www.iihmrdelhi.edu.in/uploads/articles/pdf/Is%20small%20scale%20dairy%20farming%20dying%20out%20An%20In-depth%20study%20%20Sumant%20Swain%20Mansi%20Jatwani1589365944.pdf">[11]</a>. We interviewed some local milk persons and small scale dairy farmers to know their perspectives. Talking to 9 small scale dairy farmers from the Asansol region in West Bengal state, we learnt that even though there is the existence of detection techniques, hardly any detection kits or techniques are used practically to detect the disease or to keep a check on it. Prevention techniques
+                    are also not in practice amongst them. Ramsundar Yadav, a dairy farmer having 10 cows explained to us the problem they faced with antibiotics as the only treatment techniques
+                  </p>
+                  <blockquote>- “The antibiotics treatment is not always that effective. Most of the time it is a matter of luck. If the teats get cured then it's good otherwise they get damaged permanently. It will be better if we can obtain an injection with a better success rate.”</blockquote>
+                  <p>The current diagnostic kit like California Mastitis Test is very rarely used by any local milk persons or small scale dairy farmers as the kit is not sensitive and therefore all the interviewees state that this kit is not at all popular in use. They also cannot afford a somatic cell count test as the SCC Tests are both expensive and time-consuming and therefore not at all profitable for farmers rearing very few cows. The absolute reliance of detection of the disease upon symptoms that are visible under naked eyes has also made it difficult to identify the disease and start a treatment process early. This has been reiterated by Gangasagar Prasad in his interview as</p>
+                  <blockquote>“It will be good to have people come up with better and easy-to-use detection kits as the disease cannot be seen and is only reported when visible.”</blockquote>
+                  <p>However, all the interviewees have invariably mentioned that bovine mastitis once caused, damages the teats either partially or fully and the treatment is quite expensive for them and also incur heavy monetary losses with a huge decrease in milk production as dairy is their only prime source of income and livelihood. So a cheaper method of detection and treatment will always be beneficial for them.</p>
+                  <div class="figures verticalFigure verticalLongFigure">
+                    <figure>
+                      <img src="https://2021.igem.org/wiki/images/e/ec/T--IISER_Kolkata--image-EducationSourinChatterjee05.jpg" alt="Education_SourinChatterjee05" />
+                    </figure>
+                    <figure>
+                      <img src="https://2021.igem.org/wiki/images/d/d4/T--IISER_Kolkata--image-EducationSourinChatterjee06.jpg" alt="Education_SourinChatterjee06" />
+                    </figure>
+                    <figcaption>Images from interaction with local milk persons and small dairy farmers</figcaption>
+                  </div>
+                  <blockquote><b> Interaction with dairy processing units and Dairy farm - Haringhata Dairy Farm </b></blockquote>
+                  <p>
+                    After obtaining a detailed overview of how bovine mastitis affects the livelihoods of small scale dairy farmers and milk persons, it was also important to understand the perspective of dairy processing units and big dairy farms. We interacted with the large scale dairy farmers and managers of Haringhata farm in Mohanpur, West Bengal to understand their purview too. Subclinical Mastitis is the disease-causing maximum amount of losses in their dairy production. Our conversation with these stakeholders helped us to know that prevention and detection techniques are more in use in the big dairy farms and dairy processing units as in this case, implementing these processes are more affordable and achievable. Even public health is of great concern to them as consumption of milk (or milk products) from disease cows will lead to transmission of infectious
+                    pathogens from the milk to humans which will cause very serious gastrointestinal diseases and other infections like TB, Scarlet fever, etc. However, antibiotic treatment technique still remains an unsolved complication here too. They look up to an alternative solution to the problem of the antibiotic treatment process to evade the problem of antibiotic resistance in pathogens.
+                  </p>
+                  <div class="figures">
+                    <figure>
+                      <img src="https://2021.igem.org/wiki/images/5/53/T--IISER_Kolkata--image-HumanPractices-HaringhataFarm03.jpg" alt="HaringhataFarm03.jpg" />
+                    </figure>
+                    <figure>
+                      <img src="https://2021.igem.org/wiki/images/3/37/T--IISER_Kolkata--image-HumanPractices-HaringhataFarm02.jpg" alt="HaringhataFarm02.jpg" />
+                    </figure>
+                    <figure>
+                      <img src="https://2021.igem.org/wiki/images/8/8b/T--IISER_Kolkata--image-HumanPractices-HaringhataFarm01.jpg" alt="HaringhataFarm01.jpg" />
+                      <figcaption>Images from Haringhata Farm visit</figcaption>
+                    </figure>
+                  </div>
+                  <p>Veterinary doctors have years of experience in handling mastitis disease and therefore have profound knowledge in this field. We talked to a few veterinary doctors to understand the pathological conditions of mastitis and their opinions on antibiotic treatment. Most of them have expressed a major concern to us regarding the uncontrolled usage of antibiotics recommended by non-certified veterinarians which causes a huge problem. As Dr Sujit Das puts it,</p>
+                  <blockquote>“Another major issue is the heavy use of antibiotics by non-certified doctors like Ceftriaxone, i.e. a third-generation cephalosporin leading to antibiotic resistance phenomenon. We DO NOT prescribe Ceftriaxone at all. We usually suggest gentamicin and amikacin which are lower group antibiotics and help us curing the disease in general. If these lower group antibiotics do not work, we check the pH of the milk and then go for higher antibiotics. When these cases reach us, we are not left with any further scope as those non-certified doctors have already used such higher antibiotics. This is a very huge concern to mankind because such unethical use of antibiotics has led to antibiotic resistance in most of the bacteria causing mastitis in the total environment.”</blockquote>
+                  <p>While discussing the possible treatment procedures, Dr Amal Roy advised us to focus upon identifying the specific pathogens and further killing them with non-antibiotics if possible. He suggested that it is also important to use injections to administer the medicine directly into the tissues in the udder where the pathogens reside. Usage of injections is also important as dairy farmers commonly tend to have more reliance on injections and it is easier to convince the farmers to use an injection than any other medicine-administration procedure.</p>
+                  <p>During our interview session with Dr N.C. Patra, a very important aspect regarding our project was highlighted by him. Cows in India are considered divine representatives and are worshipped too. So people here share a very sentimental connection with cows and are extremely cautious about their cows. So farmers generally are very protective of their cows and it is pretty challenging to convince them to treat cows in newer and better scientific ways. Only when the farmer can trust the process they allow their cows to be tested. Dr. Patra thus advised us that creating awareness amongst the dairy farmers and milk persons is extremely important to make them understand the importance of new non-antibiotic treatment techniques so that they too get involved in this noble initiative.</p>
+                  <div class="figures">
+                    <figure>
+                      <img src="https://2021.igem.org/wiki/images/4/48/T--IISER_Kolkata--image-HumanPractices-DrNCPatra.png" alt="DrNCPatra.png" />
+                      <figcaption>Interview session with Dr N.C. Patra</figcaption>
+                    </figure>
+                  </div>
+                  <p>
+                    We also wanted to obtain a global perspective of bovine mastitis and decided to reach out to people affected by mastitis in other countries. We contacted Dr Peter Edmundson, a veterinarian practising in the UK and also has significant work experience in certain parts of Africa. Dr Edmundson has been very instrumental in helping us understand the main problems in treating the disease in the UK and also informed us about the scenario in Africa. He mentioned to us that treating the S.aureus infection with antibiotics is extremely difficult as they have developed antimicrobial resistance. Also, accurate and reliable detection is what the vets and farmers in their region look forward to for early detection of the disease. However, in countries in the West, prevention techniques, regular detection tests (SCC Count) for mastitis are maintained as much as
+                    possible. Strict regulations regarding the usage of antibiotics are maintained by the government, quite contrary to India. However, in Africa, situations are somewhat similar to India regarding the testing and treatment of mastitis due to similar socio-economic reasons.
+                  </p>
+                  <div class="figures">
+                    <figure>
+                      <img src="https://2021.igem.org/wiki/images/8/87/T--IISER_Kolkata--image-HumanPractices-DrPeterEdmundson01.png" alt="DrPeterEdmundson01.png" />
+                    </figure>
+                    <figure>
+                      <img src="https://2021.igem.org/wiki/images/2/24/T--IISER_Kolkata--image-HumanPractices-DrPeterEdmundson02.png" alt="DrPeterEdmundson02.png" />
+                    </figure>
+                    <figcaption>Interview session with Dr Peter Edmundson</figcaption>
+                  </div>
+                  <blockquote><b> Interaction with milk consumers </b></blockquote>
+                  <p>
+                    During our conversation with Dr Indranil Samanta (veterinary scientist at West Bengal University of Animal and Fishery Sciences), he mentioned to us that, bovine mastitis disease, not only affects the cows and the economy of the dairy industry but also affects the milk or milk product consumers and their public health. Consumption of raw milk or improperly pasteurised milk or milk products lead to serious stomach infections and diseases like tuberculosis and food poisoning outbreaks. The excessive amount of antibiotics that are used in treating and controlling the disease can cause inflammation in allergic individuals, sensitization in people with normal health and develop antibiotic resistant strains of bacteria. If the issue of antibiotic resistance is not checked, passing time and prolonged usage of antibiotics can also develop into a potential
+                    epidemic or pandemic. So we also tried to reach out to the milk or milk products consumers to understand whether they are sufficiently aware of the mastitis and AMR issues. We had circulated a survey google form for the initiative and collected their responses. From their responses, it was clear that not many people were aware of mastitis disease and the issue of AMR. It was essential to increase awareness regarding these issues to help people maintain their public health and no longer add on to the problem of AMR but rather help in reducing it.
+                  </p>
+                </div>
               </div>
             </section>
+            <!-- 4. Proposing a Good, Safe & Responsible Solution -->
             <section id="run4Section" class="scrollSection">
               <div class="centerImage">
-                <div class="highlightYellow mediumText textShadow"><b>Inclusivity</b></div>
+                <div class="highlightYellow mediumText textShadow"><b>Proposing a Good, Safe & Responsible Solution</b></div>
               </div>
               <div class="contentSection">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem placeat hic sed nulla animi quod at eius non numquam rem atque iure, modi iusto nihil laboriosam ipsa iste natus omnis nisi eum aperiam dignissimos. Quos dolores odio accusantium illo fugiat molestias architecto, aliquam repudiandae fugit harum voluptatem rem repellat quae.</p>
+                <div class="boxContent">
+                  <p>
+                    Our conversation with the stakeholders made us realize that subclinical bovine mastitis is a very serious problem demanding immediate attention for the sake of public health, the health of cows and the dairy industry’s economy in countries all over the world. However, it is being dealt with at different levels of importance in different places currently due to differences in economy, technological advances and opportunities in different countries. When we contemplated the use of the detection kit developed by the 2017 iGEM Team of TUDelft and discussed it with the users, we understood that they expected a more user-friendly detection kit with fewer steps involved. Also devising a non-antibiotic treatment method is of most importance as the threats of antimicrobial resistance are increasing at an alarming rate. Listening to our stakeholders’
+                    interests, we returned to come up with a safe and responsible solution incorporating and integrating stakeholders’ opinions and voices. What our stakeholders expect in a good solution are:
+                  </p>
+                  <ol>
+                    <li>A non-antibiotic treatment method</li>
+                    <li>A Very quick treatment process</li>
+                    <li>An efficient treatment process to kill most of the pathogens</li>
+                    <li>Safe to be used upon the cow</li>
+                    <li>An early and very user-friendly detection kit</li>
+                  </ol>
+                  <p>
+                    Integrating all these opinions were very important to us to build our project. But due to limited time, resources and opportunities, it was difficult for us to practically fulfil every requirement. Therefore we prioritised certain needs and values in our project so that we can offer the best and optimised solution to our stakeholders. We felt that a non-antibiotic treatment technique should be our utmost priority to combat the problem of AMR and ensuring the safety of the treatment process respecting both animal and public health and the sentiments of people for the cows is extremely important. For an efficient implementation of the treatment process to keep the disease under check, it is also important to detect subclinical mastitis at an early stage. Hence we also decided to focus upon developing an early, point-of-care, user-friendly detection
+                    kit that can be used regularly by the farmers to keep a check of mastitis in their herd of cows. To effectively implement a better treatment and detection method, it is also essential to properly increase the awareness of our stakeholders regarding the bovine mastitis disease and its preventive measures.
+                  </p>
+                  <p>Our Priorities are to build -</p>
+                  <ol>
+                    <li>Non-Antibiotic method of treatment</li>
+                    <li>Early, cheap, point-of-care, user-friendly detection</li>
+                    <li>Safe detection and treatment techniques</li>
+                    <li>Spreading awareness regarding AMR, Bovine mastitis disease and its preventive measures</li>
+                  </ol>
+                  <blockquote><b>Choosing synthetic biology as a solution </b></blockquote>
+                  <p>
+                    Synthetic biology has a huge potential to solve many problems in this current world. Hence, we too wanted to explore the possibilities that synthetic biology could also be used to solve the treatment and detection parts of subclinical bovine mastitis disease. However, we had to keep in mind the risks that synbio could pose to nature when the products will be applied in the real world. We talked to Dr Indranil Samanta and he helped us understand how we should be careful while implementing a synthetic biology solution. He awared us regarding the steps of trials that our product should undergo to make sure that it is safe to be used in cows and in the environment. He advised us to abide by the guidelines of the ethics committee, institutional biosafety committee and animal ethics committee to ensure our product’s safety. Dr Amal Roy mentioned to us
+                    the application of genetically engineered material might not face widespread acceptance and will pose a challenge to us. The product will need to be tested, used and recommended by veterinarians for dairy farmers and milk persons to use our product. Also, we needed to incorporate a kill switch in our GMO to ensure that it will not cause any additional harm when released into the environment. With all these initial inputs from our stakeholders, we started building the framework of our project.
+                  </p>
+                </div>
               </div>
-              <section>
-                <div class="collapsible">
-                  <header class="collapsible-header">
-                    heading1
-                    <div class="collapsibleToggler">+</div>
-                  </header>
-                  <div class="collapsible-content">
-                    this is a collapsible.
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non a nulla eum iusto recusandae obcaecati inventore quo? Non, soluta voluptatem.</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non a nulla eum iusto recusandae obcaecati inventore quo? Non, soluta voluptatem.</p>
-                  </div>
-                </div>
-                <div class="collapsible">
-                  <header class="collapsible-header">
-                    heading1
-                    <div class="collapsibleToggler">+</div>
-                  </header>
-                  <div class="collapsible-content">
-                    this is a collapsible.
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non a nulla eum iusto recusandae obcaecati inventore quo? Non, soluta voluptatem.</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non a nulla eum iusto recusandae obcaecati inventore quo? Non, soluta voluptatem.</p>
-                  </div>
-                </div>
-                <div class="collapsible">
-                  <header class="collapsible-header">
-                    heading1
-                    <div class="collapsibleToggler">+</div>
-                  </header>
-                  <div class="collapsible-content">
-                    this is a collapsible.
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non a nulla eum iusto recusandae obcaecati inventore quo? Non, soluta voluptatem.</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non a nulla eum iusto recusandae obcaecati inventore quo? Non, soluta voluptatem.</p>
-                  </div>
-                </div>
-                <div class="collapsible">
-                  <header class="collapsible-header">
-                    heading1
-                    <div class="collapsibleToggler">+</div>
-                  </header>
-                  <div class="collapsible-content">
-                    this is a collapsible.
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non a nulla eum iusto recusandae obcaecati inventore quo? Non, soluta voluptatem.</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non a nulla eum iusto recusandae obcaecati inventore quo? Non, soluta voluptatem.</p>
-                  </div>
-                </div>
-              </section>
             </section>
-            <section>
-              <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam deserunt ad doloribus obcaecati cupiditate numquam placeat inventore deleniti incidunt, sed quo dignissimos voluptate illum fugit repellendus? Culpa commodi consequatur tempore quo qui temporibus eaque blanditiis repudiandae vero nulla accusantium sapiente iusto quos aliquam sunt alias et, esse impedit asperiores tenetur distinctio in ratione autem. Praesentium quisquam nam, eos harum earum, voluptates, voluptatibus voluptatem molestiae deleniti impedit qui aspernatur neque et. Magni laboriosam harum tempore nihil repudiandae! Itaque velit animi accusamus nihil magnam dolorum voluptas quibusdam, tenetur natus tempora corporis omnis iste, laboriosam pariatur laudantium at soluta. Veritatis perspiciatis facere illo facilis voluptate ullam nemo, eos, quasi iure eaque aut molestias. Modi minima
-                sed asperiores deleniti reprehenderit, placeat mollitia explicabo consequuntur maxime repellat facilis facere optio harum numquam similique alias omnis commodi autem aperiam accusamus fuga doloribus distinctio veritatis? Quasi architecto, dolores reiciendis ipsum enim ipsa corporis accusamus vel id, odit, sit eaque animi sapiente odio atque vero tempore fuga? Voluptas debitis a quam explicabo ratione dolorum ipsum, modi, sapiente tempore nihil recusandae, nobis laborum eos nostrum architecto distinctio voluptatum rerum exercitationem dignissimos! Commodi, quasi dolores fuga enim cumque accusantium unde nihil in dolore repellendus debitis neque. Natus vel dolor esse libero distinctio aspernatur nemo, non quasi quam rem veniam quas, doloremque, modi minus fugiat voluptas perspiciatis. Ex, nisi. Facere dolorem officiis assumenda repudiandae tenetur. Animi
-                illo laborum impedit, eius, officiis explicabo magni blanditiis sint dolores rem, nobis ex. Recusandae id quos nobis explicabo minima at, illum nulla? Perferendis itaque, voluptatem sit molestiae, sed asperiores doloribus fugit ratione atque animi velit nisi quidem expedita neque accusamus maiores dolorem quisquam, inventore omnis odio illum consequatur? Consequatur ab enim magnam temporibus similique incidunt excepturi voluptatum, impedit explicabo, mollitia, necessitatibus consequuntur suscipit pariatur expedita? Ab eius et excepturi voluptatem officiis id, ipsum recusandae nihil.
-              </p>
+            <!-- 5. Designing naMOOste Products -->
+            <section id="run5Section" class="scrollSection">
+              <div class="centerImage">
+                <div class="highlightYellow mediumText textShadow"><b>Designing naMOOste Products</b></div>
+              </div>
+              <div class="contentSection">
+                <div class="boxContent">
+                  <p>
+                    Our conversation with our stakeholders helped us realise how we should build our project and which aspects we should prioritise. With this basic knowledge support, we started designing our GMO which will be able to kill the pathogens. We first needed to decide the pathogens that will be targeted by our GMO. From the literature study, we learnt that there are several pathogens (S.aureus, S.uberis, S.agalactiae, E.coli, Pseudomonas aeruginosa, etc.) that are the causative organisms of subclinical and clinical bovine mastitis. Both Dr Indranil Samanta and Dr Peter Edmundson advised us to mainly focus on targeting S.aureus and S.uberis pathogens as they mainly cause disease and are most abundant in most cows. They shared their opinion that effectively killing most of S.aureus pathogens will help to cure the subclinical bovine mastitis disease to the
+                    maximum extent. Hence we went on to focus upon targeting S.aureus (and S.uberis to some extent) pathogens by our GMO so that we are able to cure the disease to the maximum level.
+                  </p>
+                  <p>
+                    After finalising on S.aureus as our target pathogen, we decided to sense the pathogen utilizing the quorum sensing system of S.aureus itself. We decided to clone two genes, NisinPV (the bacteriocin which can kill S.aureus and S.uberis) and the lysisE7 gene (the gene that will lyse the chassis cell to let the bacteriocin escape out of the cell and kill the pathogenic cells) downstream to the quorum sensing unit. After this basic design of our genetic circuit, we had a conversation with Dr Peter Edmundson again to know whether releasing only a bacteriocin will be enough to kill the pathogens. He then explained to us how S.aureus forms a biofilm matrix all around its cells. The biofilms at the very advanced stage of the disease form a hard can like structure around the cells and therefore it becomes extremely difficult for the antibiotics to evade the
+                    biofilm and finally kill the pathogenic cells. So it is very essential for us to incorporate a method in our project or the genetic circuit that will be able to degrade the biofilm formed by the pathogenic cells and help the bacteriocin directly act upon the pathogenic cells. Listening to this great piece of advice, we further did some research and finalized to incorporate the DnaseI gene into our genetic circuit that will degrade the biofilm formed by the pathogenic bacteria.
+                  </p>
+                  <p>We also needed to choose a suitable bacteria as our chassis organism which can work inside the udder tissues of the cows. We consulted Dr Amirul Islam Mallick regarding this issue and he suggested using probiotic bacteria like Lactobacillus lactis as the chassis. These probiotics are also introduced into cows and therefore can be safely used as chassis organisms for our GMO therapeutic. This helped us to proceed to choose Lactococcus lactis LMG7930 as our chassis. Dr Mallick also assured us that synthetic biology does have a lot of potential as a solution to subclinical bovine mastitis disease.</p>
+                  <p>With some more refinements in our proposed genetic circuit, we went on to consult our department professor Dr Tapas Kumar Sengupta for more advice. He advised us to put the lysis gene under a weak promoter to ensure that the cell gets lysed only after a required amount of DnaseI and NisinPV has been produced. So we proceeded to put the LysisE7 gene under the P3 promoter which is a weak promoter.</p>
+                  <p>To know more visit our <a class="referenceLinks" href="https://2021.igem.org/Team:IISER_Kolkata/Experiments">wetlab</a> and <a class="referenceLinks" href="https://2021.igem.org/Team:IISER_Kolkata/Model">drylab</a> pages of our website.</p>
+                </div>
+              </div>
+            </section>
+            <!-- 6. Implementing our product -->
+            <section id="run6Section" class="scrollSection">
+              <div class="centerImage">
+                <div class="highlightYellow mediumText textShadow"><b>Implementing our product</b></div>
+              </div>
+              <div class="contentSection">
+                <div class="boxContent">
+                  <p>Our team had designed a non-antibiotic method of treatment and a SHERLOCKv2 based detection kit with the advice of experts and stakeholders, we needed to think about ways to implement our product too. We have aimed to build our project in a human-centric approach and therefore it was important that we reached back to our stakeholders who have helped us shape our project to get their feedback. Our conversation with our stakeholders after building our project will help us close the loop by emphasizing building a safe, ethical and responsible solution now. It is important to make sure that we had incorporated the values and concerns and shared by the people we had communicated with and delivered them a safe solution to use.</p>
+                  <blockquote><b> 6.a. A safe product following ethical guidelines </b></blockquote>
+                  <p>To ensure that our project and naMOOste product is safe and follows the ethical rules, we had approached Dr Amirul Islam Mallick for guidance. He advised us to firstly apply our project to Institutional BioSafety Committee for their approval. We have applied for the same with the help of our PI Dr Supratim Datta. With clearance from IBSC, we will be applying to the Institutional Animal Ethics Committee to ensure that our experiments and GMO are safe to be tested upon animals. Further our GMO product will have to undergo phase trials of experimental testing within laboratory conditions and in a controlled and contained environment. If the phase trials turn out to be successful, our product will be ready to be launched into the market.</p>
+                  <blockquote><b>6. b. Closing the loop </b></blockquote>
+                  <p>We had chosen the aspects to focus on in our project to tackle the problem of subclinical bovine mastitis to the maximum extent possible. After designing the solution it is essential to walk back the path to evaluate whether our solution catered to the requirements of our stakeholders.</p>
+                  <div class="collapsible">
+                    <header class="collapsible-header">
+                      <b>
+                        Non-antibiotic method of treatment
+                        <div class="collapsibleToggler">+</div>
+                      </b>
+                    </header>
+                    <div class="collapsible-content">
+                      <p>We have genetically engineered a GMO which will sense the presence of pathogens and release bacteriocins to kill the pathogenic cells. This non-antibiotic therapeutic will help in reducing the uncontrolled overuse of antibiotics in the dairy industry to a certain extent and thus meets the stakeholders’ needs.</p>
+                    </div>
+                  </div>
+                  <div class="collapsible">
+                    <header class="collapsible-header">
+                      <b>
+                        Early, cheap, point-of-care, user-friendly detection
+                        <div class="collapsibleToggler">+</div>
+                      </b>
+                    </header>
+                    <div class="collapsible-content">
+                      <p>
+                        We had finalised the use of the SHERLOCKv2 technique to detect the miRNAs (biomarkers for subclinical bovine mastitis disease). To turn the signal into a visual colourimetric we started exploring different methods. After enough research, we concluded upon using a hydrogel-based micropad for a visual readout for the results. We brainstormed to develop a detection kit with a lesser number of steps than the kit developed by the 2017 TUDelft iGEM Team and therefore combined the SHERLOCKv2 into a hydrogel-based micropad made of wax paper to evade the RPA amplification step yet attain a detectable signal. However, the CRISPR-responsive micropad based diagnostics that James Collins lab has developed was based on CRISPRCas12 and DNA system. We had to reproduce the method for the Cas13a enzyme and RNA system. Dr Sayam Sen Gupta played a huge role in
+                        helping us devising the method for CRISPR-Cas13a enzymes and on RNA hydrogel. Avinash Padhy, a research student working in Dr Sengupta’s lab guided us on the procedure of synthesizing the RNA hydrogel and the crosslinkers keeping in mind to make a cheap and accurate detection kit. The detection kit can be used at regular intervals by dairy farmers (small scale farmers and large dairy farms) to detect subclinical bovine mastitis from milk even when there are no visible symptoms available. After several rounds of brainstorming, we proceeded to develop a storable, cheap, point-of-care, user-friendly early detection kit for use. To know more about our detection you may visit our Design webpage.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="collapsible">
+                    <header class="collapsible-header">
+                      <b>
+                        A safe detection and treatment technique
+                        <div class="collapsibleToggler">+</div>
+                      </b>
+                    </header>
+                    <div class="collapsible-content">
+                      <p>We made sure to take into account the safety concerns of the detection technique as we were using a genetically modified organism as our therapeutic which can even pose a threat if not evaluated properly. Our stakeholders had expressed concerns that the GMO needs to be eliminated if their work is done or are not used and should not be allowed to stay alive in the environment without any check. To make sure that these risks are tackled we incorporated a kill switch into our GMO which is explained in detail in our <a class="referenceLinks" href="https://2021.igem.org/Team:IISER_Kolkata/Safety">Safety</a> webpage.</p>
+                    </div>
+                  </div>
+                  <div class="collapsible">
+                    <header class="collapsible-header">
+                      <b>
+                        Spreading awareness about AMR and Bovine Mastitis
+                        <div class="collapsibleToggler">+</div>
+                      </b>
+                    </header>
+                    <div class="collapsible-content">
+                      <p>Our conversation with our stakeholders made us realise that effective science communication and awareness regarding the threats of overuse of antibiotics and proper education of bovine mastitis disease amongst the dairy farmers and the general public is extremely important to reduce the harmful effects of these issues. We, therefore, engaged in effective conversations with the public to communicate our science and also helped them connect to our research endeavours. These meaningful conversations helped them to understand that their voices were heard and how they could also participate in the noble initiative of turning the world into a better place.</p>
+                    </div>
+                  </div>
+                  <blockquote><b> 6. c. Turning our product into a scalable market product </b></blockquote>
+                  <p>To launch our GMO therapeutic in the market, we have to turn it into a scalable product. This step will help our users to reach our end product. The GMO needs to be produced in masses at a large scale in bioreactors. These opportunities were explored under the guidance of the RISE incubation centre and Dr Sayam Sengupta. To know more about our entrepreneurial work you may visit our <a class="referenceLinks" href="https://2021.igem.org/Team:IISER_Kolkata/Entrepreneurship">Supporting Entrepreneurship</a> Webpage.</p>
+                </div>
+              </div>
+            </section>
+            <!-- 7. Effective Science Communication -->
+            <section id="run7Section" class="scrollSection">
+              <div class="centerImage">
+                <div class="highlightYellow mediumText textShadow"><b>Effective Science Communication</b></div>
+              </div>
+              <div class="contentSection">
+                <div class="boxContent">
+                  <p>
+                    Since the beginning of our project, effective conversations and consultations with various stakeholders have helped us shape our project. The voices and values of their concerns have been integrated into our project to build a solution for them and with them. But there is an essential need of connecting the people with the scientific research we are working on for them for more effective implementation of the measures and control of the alarming issues. As mentioned earlier too, we had noticed a significant lack of awareness about the threats of rising AMR and public health issues from bovine mastitis. Preventive measures are also not in good practice due to a lack of knowledge amongst the small scale dairy farmers and local milk persons. We thus also tried to reduce the gap between the scientific and social community through our various science
+                    communication. We have explored various ways to communicate to the general masses which we have discussed in detail on the <a class="referenceLinks" href="https://2021.igem.org/Team:IISER_Kolkata/Education">Education</a> page.
+                  </p>
+                  <p>IISER Kolkata 2021 iGEM Team have tried their best to build an effective solution for subclinical bovine mastitis - the silent killer of the dairy industry by engaging with different communities at different steps of our project and integrating their voices and concerns to build a solution for them.</p>
+                </div>
+              </div>
             </section>
           </div>
         </div>
       </div>
-      <div class="indentContainer">
-        <section class="knowMore">
-          <!-- <h3>Know More at...</h3> -->
-          <div class="knowMoreList">
-            <a href="javascript:void();">
-              <img src="https://2021.igem.org/wiki/images/8/8b/T--IISER_Kolkata--image-IHP_Icon.png" alt="Integrated Human Practices" />
-              <!-- <img src="images/offline/new/project-2x.png" alt="" /> -->
-            </a>
-            <a href="javascript:void();">
-              <img src="https://2021.igem.org/wiki/images/6/6d/T--IISER_Kolkata--image-ProposedImplementation_Icon.png.png" alt="Proposed Implementation" />
-              <!-- <img src="/images/offline/new/experiment-2x.png" alt="" /> -->
-            </a>
-            <a href="javascript:void();">
-              <img src="https://2021.igem.org/wiki/images/c/c3/T--IISER_Kolkata--image-SupportingEntrepreneurship_Icon.png.png" alt="Supporting Entrepreneurship" />
-              <!-- <img src="/images/offline/new/model-2x.png" alt="" /> -->
-            </a>
-            <a href="javascript:void();">
-              <img src="https://2021.igem.org/wiki/images/d/dc/T--IISER_Kolkata--image-Inclusivity_icon.png" alt="Inclusivity" />
-              <!-- <img src="/images/offline/new/HumanPractices-2x.png" alt="" /> -->
-            </a>
-          </div>
-        </section>
-      </div>
+      <!-- /content -->
+
+      <!-- reference -->
       <section class="reference">
         <div class="wave topWave">
-          <!-- wave border  -->
+          <!-- Top Wave  -->
         </div>
         <div class="indentContainer">
           <h3>References</h3>
-          <ol>
-            <li><a href="">reference 1</a></li>
-          </ol>
+          <p>
+            All the references are provided within content, relative to content. <br />
+            Check for square bracketed Numbers in the paragraphs.
+          </p>
         </div>
       </section>
+      <!-- /reference -->
+
       <!-- footer -->
       <footer>
-        <div class="theFooter">
-          <div class="wave topWave"></div>
+        <div class="theFooter unSelectable">
+          <div class="wave bottomWave"></div>
           <div class="indentContainer">
+            <div class="contactHead"><b>Contact us at</b></div>
+            <div class="contacts">
+              <a href="https://www.instagram.com/igem.iiserk/"> <img src="https://2021.igem.org/wiki/images/e/ec/T--IISER_Kolkata--image-instagramIcon.png" alt="instagram" /></a>
+              <a href="https://www.facebook.com/iGEM.IISERK"> <img src="https://2021.igem.org/wiki/images/0/02/T--IISER_Kolkata--image-facebookIcon.png" alt="facebook" /></a>
+              <a href="https://twitter.com/iGEM_IISERKol?s=08"> <img src="https://2021.igem.org/wiki/images/e/e2/T--IISER_Kolkata--image-twitterIcon.png" alt="twitter" /></a>
+              <a href="https://www.linkedin.com/in/igem-iiser-kolkata-189707189/"> <img src="https://2021.igem.org/wiki/images/1/15/T--IISER_Kolkata--image-linkedinIcon.png" alt="linkedIn" /></a>
+            </div>
             <div class="footerHead">
               <h3>Our Sponsors...</h3>
-              <div class="contacts">
-                <b>Contact us at - </b>
-                <a href="https://www.instagram.com/igem.iiserk/"> <img src="https://2021.igem.org/wiki/images/e/ec/T--IISER_Kolkata--image-instagramIcon.png" alt="instagram" /></a>
-                <a href="https://www.facebook.com/iGEM.IISERK"> <img src="https://2021.igem.org/wiki/images/0/02/T--IISER_Kolkata--image-facebookIcon.png" alt="facebook" /></a>
-                <a href="https://twitter.com/iGEM_IISERKol?s=08"> <img src="https://2021.igem.org/wiki/images/e/e2/T--IISER_Kolkata--image-twitterIcon.png" alt="twitter" /></a>
-                <a href="https://www.linkedin.com/in/igem-iiser-kolkata-189707189/"> <img src="https://2021.igem.org/wiki/images/1/15/T--IISER_Kolkata--image-linkedinIcon.png" alt="linkedIn" /></a>
-              </div>
             </div>
             <div class="sponsors">
-              <img src="https://2021.igem.org/wiki/images/9/90/T--IISER_Kolkata--image-igemiiserk-2x.png" alt="IGEM-IISERKolkata" />
-              <img src="https://2021.igem.org/wiki/images/f/f7/T--IISER_Kolkata--image-promegaLogo.png" alt="Promega" />
-              <img src="https://2021.igem.org/wiki/images/f/fb/T--IISER_Kolkata--image-RCTLogo.png" alt="RCT" />
-              <img src="https://2021.igem.org/wiki/images/e/e3/T--IISER_Kolkata--image-iiserkLogo.png" alt="IISERKolkata" />
-              <img src="https://2021.igem.org/wiki/images/c/cb/T--IISER_Kolkata--image-IDTLogo.png" alt="IDT" />
-              <img src="https://2021.igem.org/wiki/images/4/46/T--IISER_Kolkata--image-bioLabsLogo.png" alt="NewEnglandBioLabs" />
-              <img src="https://2021.igem.org/wiki/images/6/68/T--IISER_Kolkata--image-benchlingLogo.png" alt="Benchling" />
-              <img src="https://2021.igem.org/wiki/images/0/0a/T--IISER_Kolkata--image-twistLogo.png" alt="TWIST" />
-              <img src="https://2021.igem.org/wiki/images/0/0b/T--IISER_Kolkata--image-igemLogo.png" alt="IGEM" />
+              <div style="border-right: 3px solid #5e8dd1;">
+                <img src="https://2021.igem.org/wiki/images/9/90/T--IISER_Kolkata--image-igemiiserk-2x.png" alt="IGEM-IISERKolkata" />
+              </div>
+              <div>
+                <div>
+                  <img src="https://2021.igem.org/wiki/images/f/f7/T--IISER_Kolkata--image-promegaLogo.png" alt="Promega" />
+                  <img src="https://2021.igem.org/wiki/images/f/fb/T--IISER_Kolkata--image-RCTLogo.png" alt="RCT" />
+                  <img src="https://2021.igem.org/wiki/images/e/e3/T--IISER_Kolkata--image-iiserkLogo.png" alt="IISERKolkata" />
+                  <img class="hLogo" src="https://2021.igem.org/wiki/images/c/cb/T--IISER_Kolkata--image-IDTLogo.png" alt="IDT" />
+                  <div class="flexBreak"></div>
+                  <img class="hLogo" src="https://2021.igem.org/wiki/images/4/46/T--IISER_Kolkata--image-bioLabsLogo.png" alt="NewEnglandBioLabs" />
+                  <img class="hLogo" src="https://2021.igem.org/wiki/images/6/68/T--IISER_Kolkata--image-benchlingLogo.png" alt="Benchling" />
+                  <img class="hLogo" src="https://2021.igem.org/wiki/images/0/0a/T--IISER_Kolkata--image-twistLogo.png" alt="TWIST" />
+                  <img src="https://2021.igem.org/wiki/images/0/0b/T--IISER_Kolkata--image-igemLogo.png" alt="IGEM" />
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </footer>
       <!-- /footer -->
     </div>
+
+    <!-- script for scroll actives -->
+    <script>
+      var mainNavLinks = document.querySelectorAll(".scrollID");
+
+      function highlightActiveSection() {
+        var fromTop = window.pageYOffset + 100;
+        var r = 0;
+
+        for (r = 0; r < mainNavLinks.length; r++) {
+          navD = mainNavLinks[r];
+          var section = document.getElementById(navD.id + "Section");
+          if (section.offsetTop <= fromTop) {
+            if (section.offsetTop + section.offsetHeight > fromTop) {
+              navD.classList.add("scrollID-active");
+            } else {
+              navD.classList.remove("scrollID-active");
+            }
+          } else {
+            navD.classList.remove("scrollID-active");
+          }
+        }
+      }
+    </script>
+    <!-- /script for scroll actives -->
+
+    <!-- hide on Scroll -->
+    <script>
+      // hide on scroll
+      var prevScrollPos = window.pageYOffset;
+
+      function hideOnScroll() {
+        if (window.matchMedia("(max-width: 980px)").matches) {
+          var currentScrollPos = window.pageYOffset;
+          if (prevScrollPos > currentScrollPos) {
+            document.getElementById("scrollHide").style.top = "0.8%";
+          } else {
+            document.getElementById("scrollHide").style.top = "-50vh";
+          }
+          prevScrollPos = currentScrollPos;
+        }
+      }
+    </script>
+    <!-- /hide on scroll -->
+
+    <!-- script for collapsibles -->
+    <script>
+      var collapsibles = document.querySelectorAll(".collapsible");
+
+      function removeCollapsibleExpanded(notRemove) {
+        collapsibles.forEach((collD) => {
+          if (collD != notRemove) {
+            collD.classList.remove("collapsible--expanded");
+            collD.querySelector(".collapsibleToggler").innerHTML = "+";
+          }
+        });
+      }
+
+      collapsibles.forEach((coll) =>
+        coll.querySelector(".collapsible-header").addEventListener("click", function () {
+          removeCollapsibleExpanded(coll);
+          coll.classList.toggle("collapsible--expanded");
+
+          if (coll.querySelector(".collapsibleToggler").innerHTML == "+") {
+            coll.querySelector(".collapsibleToggler").innerHTML = "-";
+          } else {
+            coll.querySelector(".collapsibleToggler").innerHTML = "+";
+          }
+        })
+      );
+    </script>
+    <!-- /script for collapsibles -->
+
     <!-- /IISER KOLKATA CONTAINER -->
 
     <!-- JS -->
