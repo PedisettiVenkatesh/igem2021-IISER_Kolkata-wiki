@@ -89,6 +89,10 @@ window.onclick = function (event) {
     changeToggleBtn();
     removeNavigationExpanded();
   }
+
+  if (event.target.matches(".profile__modal")) {
+    removeProfileExpanded();
+  }
 };
 
 var myOffset = 75;

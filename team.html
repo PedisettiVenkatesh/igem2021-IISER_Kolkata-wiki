@@ -9,9 +9,8 @@
   </head>
   <body onload="preload()" class="noScroll">
     <!-- preloader -->
-    <div id="preloader" title="Loading...">
-      <!-- <img src="https://2021.igem.org/wiki/images/d/d6/T--IISER_Kolkata--image-preloader.gif" alt="[preloader image]" /> -->
-      <img src="images/preloader.gif" alt="" />
+    <div id="preloader" class="unSelectable" title="Loading...">
+      <img src="https://2021.igem.org/wiki/images/d/d6/T--IISER_Kolkata--image-preloader.gif" alt="[preloader image]" />
       Loading . . .
     </div>
     <!-- /preloader -->
@@ -24,7 +23,7 @@
     <!-- /progressBar -->
 
     <!-- toTop -->
-    <div id="toTop" title="Go To Top">
+    <div id="toTop" class="unSelectable" title="Go To Top">
       <a href="javascript:window.scrollTo(0, 0);">
         <img src="https://2021.igem.org/wiki/images/d/d8/T--IISER_Kolkata--image-toTop-2x.png" alt="toTop" />
       </a>
@@ -32,13 +31,25 @@
     <!-- /toTop -->
 
     <!-- navToggler -->
-    <div id="navToggler" title="navigation">
-      <img src="https://2021.igem.org/wiki/images/6/67/T--IISER_Kolkata--image-toggleBtn-2x.png" alt="#NAV#" />
+    <div id="navToggler" class="unSelectable" title="navigation">
+      <img id="navTogglerImg" src="https://2021.igem.org/wiki/images/6/67/T--IISER_Kolkata--image-toggleBtn-2x.png" alt="#NAV#" />
     </div>
+
+    <!-- script for NavToggler -->
+    <script>
+      function changeToggleBtn() {
+        if (navTogglerImg.src.match("https://2021.igem.org/wiki/images/6/67/T--IISER_Kolkata--image-toggleBtn-2x.png")) {
+          navTogglerImg.src = "https://2021.igem.org/wiki/images/e/ee/T--IISER_Kolkata--image-toggleBtn-Close.png";
+        } else {
+          navTogglerImg.src = "https://2021.igem.org/wiki/images/6/67/T--IISER_Kolkata--image-toggleBtn-2x.png";
+        }
+      }
+    </script>
+    <!-- /script for NavToggler -->
     <!-- /navToggler -->
 
     <!-- navigation -->
-    <nav class="navigation-container">
+    <nav class="navigation-container unSelectable">
       <div class="navigation">
         <img src="https://2021.igem.org/wiki/images/0/0e/T--IISER_Kolkata--image-navBG-2x.png" alt="" />
         <div class="navList">
@@ -129,7 +140,7 @@
     <!-- IISER KOLKATA CONTAINER -->
     <div class="iiserKolkata">
       <!-- hero -->
-      <div id="hero">
+      <div id="hero" class="unSelectable">
         <img src="https://2021.igem.org/wiki/images/7/75/T--IISER_Kolkata--image-teamHero.png" alt="Team_Hero" />
         <div class="homeBtn" title="Go To Home">
           <a href="https://2021.igem.org/Team:IISER_Kolkata">
@@ -145,7 +156,7 @@
       <!-- content  -->
       <div class="indentContainer">
         <div class="gridedContainer">
-          <div id="scrollHide">
+          <div id="scrollHide" class="unSelectable">
             <!-- sideNav -->
             <div class="sideNav sticky">
               <!-- navigate in Page -->
@@ -176,7 +187,7 @@
                     <div class="profile__modal">
                       <div class="profile__modalContent">
                         <div class="profile__name">
-                          Lakshmi Prakash
+                          Lakshmi Prakash (she/her)
                         </div>
                         <div class="profile__role">
                           Engagement - Wet Lab
@@ -194,7 +205,7 @@
                     <div class="profile__modal">
                       <div class="profile__modalContent">
                         <div class="profile__name">
-                          Debdeep Chatterjee
+                          Debdeep Chatterjee (they/them)
                         </div>
                         <div class="profile__role">
                           Engagement - Wet Lab
@@ -222,7 +233,7 @@
                     <div class="profile__modal">
                       <div class="profile__modalContent">
                         <div class="profile__name">
-                          Soumi Bhattacharyya
+                          Soumi Bhattacharyya (she/her)
                         </div>
                         <div class="profile__role">
                           Engagement - Wet Lab & Human Practices
@@ -240,7 +251,7 @@
                     <div class="profile__modal">
                       <div class="profile__modalContent">
                         <div class="profile__name">
-                          Shubhamay Das
+                          Shubhamay Das (he/his)
                         </div>
                         <div class="profile__role">
                           Engagement - Wet Lab & Dry Lab
@@ -258,7 +269,7 @@
                     <div class="profile__modal">
                       <div class="profile__modalContent">
                         <div class="profile__name">
-                          Debshruti Biswas
+                          Debshruti Biswas (she/her)
                         </div>
                         <div class="profile__role">
                           Engagement - Wet Lab & Human Practices
@@ -276,7 +287,7 @@
                     <div class="profile__modal">
                       <div class="profile__modalContent">
                         <div class="profile__name">
-                          Shreyash Borkar
+                          Shreyash Borkar (he/his)
                         </div>
                         <div class="profile__role">
                           Engagement - Wet Lab & Graphics Design
@@ -294,7 +305,7 @@
                     <div class="profile__modal">
                       <div class="profile__modalContent">
                         <div class="profile__name">
-                          Sourin Chatterjee
+                          Sourin Chatterjee (he/his)
                         </div>
                         <div class="profile__role">
                           Engagement - Wet Lab, Dry Lab & Human Practices
@@ -312,7 +323,7 @@
                     <div class="profile__modal">
                       <div class="profile__modalContent">
                         <div class="profile__name">
-                          Adrija Adhikary
+                          Adrija Adhikary (she/her)
                         </div>
                         <div class="profile__role">
                           Engagement - Wet Lab & Human practices
@@ -330,7 +341,7 @@
                     <div class="profile__modal">
                       <div class="profile__modalContent">
                         <div class="profile__name">
-                          Udit Ghosh
+                          Udit Ghosh (he/his)
                         </div>
                         <div class="profile__role">
                           Engagement - Wet Lab & Human Practices
@@ -348,7 +359,7 @@
                     <div class="profile__modal">
                       <div class="profile__modalContent">
                         <div class="profile__name">
-                          Abeg Dutta
+                          Abeg Dutta (he/his)
                         </div>
                         <div class="profile__role">
                           Engagement - Wet Lab & Human practices
@@ -366,7 +377,7 @@
                     <div class="profile__modal">
                       <div class="profile__modalContent">
                         <div class="profile__name">
-                          Mahapatra Anshuman Jaysingh
+                          Mahapatra Anshuman Jaysingh (he/his)
                         </div>
                         <div class="profile__role">
                           Engagement - Dry Lab
@@ -384,7 +395,7 @@
                     <div class="profile__modal">
                       <div class="profile__modalContent">
                         <div class="profile__name">
-                          Nivedaa Dhandapani
+                          Nivedaa Dhandapani (she/her)
                         </div>
                         <div class="profile__role">
                           Engagement - Dry Lab
@@ -412,7 +423,7 @@
                     <div class="profile__modal">
                       <div class="profile__modalContent">
                         <div class="profile__name">
-                          Dr. Supratim Dutta
+                          Dr. Supratim Dutta (he/his)
                         </div>
                         <div class="profile__role">
                           Role - Primary Principal Investigator
@@ -486,7 +497,7 @@
                     <div class="profile__modal">
                       <div class="profile__modalContent">
                         <div class="profile__name">
-                          Dwaipayan Dubey
+                          Dwaipayan Dubey (he/his)
                         </div>
                         <div class="profile__role">
                           Role - Advisor
@@ -612,7 +623,7 @@
                     <div class="profile__modal">
                       <div class="profile__modalContent">
                         <div class="profile__name">
-                          Pedisetti Venkatesh
+                          Pedisetti Venkatesh (he/his)
                         </div>
                         <div class="profile__role">
                           Engagement - Web Development & web design
@@ -630,7 +641,7 @@
                     <div class="profile__modal">
                       <div class="profile__modalContent">
                         <div class="profile__name">
-                          Abhiroop Chauhan
+                          Abhiroop Chauhan (he/his)
                         </div>
                         <div class="profile__role">
                           Engagement - Web Design
@@ -691,21 +702,18 @@
     <!-- script  for profiles -->
     <script>
       const profiles = document.querySelectorAll(".profile");
-      const modal = document.querySelectorAll(".profile__modal");
 
       function removeProfileExpanded() {
         profiles.forEach((pro) => pro.classList.remove("profile--expanded"));
-        document.body.classList.toggle("noScroll");
+        document.body.classList.remove("noScroll");
       }
 
       profiles.forEach((pro) =>
         pro.addEventListener("click", function () {
-          pro.classList.toggle("profile--expanded");
-          document.body.classList.toggle("noScroll");
+          pro.classList.add("profile--expanded");
+          document.body.classList.add("noScroll");
         })
       );
-
-      modal.onclick = removeProfileExpanded();
     </script>
     <!-- /script  for profiles -->
 
