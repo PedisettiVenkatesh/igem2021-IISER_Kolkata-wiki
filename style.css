@@ -1391,6 +1391,64 @@ figcaption {
 }
 /* /collapsible */
 
+/* collapsibleDocuments */
+.collapsibleDocuments {
+  background: #ffce60;
+  width: 70%;
+  padding: 1rem;
+  margin: 0 auto;
+  border-radius: 2rem;
+}
+
+.collapsibleDocuments h3 {
+  color: #fff;
+  text-align: center;
+  font-size: 2rem;
+  margin: 0.5rem 1rem 1rem;
+}
+
+.collapsibleDocument-Collapsibles {
+  background: #fff;
+  border-radius: 1.5rem;
+  padding: 1rem;
+}
+
+.collapsibleDocument-Collapsibles .collapsible-header {
+  background: #ddd;
+  border-radius: 1.2rem;
+  box-shadow: none;
+  position: relative;
+  transition: all 0.3s;
+}
+
+.collapsibleDocument-Collapsibles .collapsible-header:hover {
+  background: #aaa;
+}
+
+.collapsibleDocument-Collapsibles .collapsibleToggler {
+  background: #093349;
+  border-radius: 1.2rem;
+  color: #fff;
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 3.5rem;
+  height: 100%;
+}
+
+.collapsibleDocument-Collapsibles .collapsible-content {
+  background: none !important;
+  box-shadow: none !important;
+}
+
+.collapsibleDocument-Collapsibles .collapsible.collapsible--expanded .collapsible-header {
+  background: #aaa;
+}
+/* /collapsibleDocuments */
+
 /* profiles */
 .profilesContainer {
   /* background: #cfdcd9;

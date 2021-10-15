@@ -156,7 +156,7 @@
       <!-- content -->
       <div class="indentContainer">
         <div class="gridedContainer">
-          <div id="scrollHide">
+          <div id="scrollHide" class="unSelectable">
             <!-- sideNav -->
             <div class="sideNav sticky" style="top: 10%;">
               <!-- navigate in Page -->
@@ -217,16 +217,20 @@
                   <div class="figures">
                     <figure>
                       <img src="https://2021.igem.org/wiki/images/4/46/T--IISER_Kolkata--image-EtreprenurshipFig01.png" alt="" />
-                      <figcaption>Image 2 : Structure of the Company</figcaption>
                     </figure>
                   </div>
                   <p>To run our company successfully we need to have these four licenses -</p>
-                  <ol>
+                  <!-- <ol>
                     <li>Company Registration</li>
                     <li>Drug License</li>
                     <li>GST</li>
                     <li>FSSAI</li>
-                  </ol>
+                  </ol> -->
+                  <div class="figures">
+                    <figure>
+                      <img src="https://2021.igem.org/wiki/images/3/3f/T--IISER_Kolkata--image-entrepreneurship_FourLicenses.png" alt="(CompanyRegistration, DrugLicense, GST, FSSAI.)" />
+                    </figure>
+                  </div>
                   <p>Our start-up will be registered as a Private Limited Company, as this allows all our team-members to have shares in the company and it is not available for the general public to trade on stock market.</p>
                   <p>The documents required for registration and the procedure is following:-</p>
                   <div class="figures">
@@ -238,6 +242,60 @@
                       <img src="https://2021.igem.org/wiki/images/1/18/T--IISER_Kolkata--image-EtreprenurshipFig03.png" alt="" />
                       <figcaption>Image 4: Procedure of registration</figcaption>
                     </figure>
+                  </div>
+                  <div class="collapsibleDocuments">
+                    <h3>Documents</h3>
+                    <div class="collapsibleDocument-Collapsibles">
+                      <div class="collapsible">
+                        <header class="collapsible-header">
+                          <b>
+                            Personal Documents
+                            <div class="collapsibleToggler">+</div>
+                          </b>
+                        </header>
+                        <div class="collapsible-content">
+                          <ul>
+                            <li>DSC (Digital Signature Certificate) & DIN (Director Identification Number)</li>
+                            <li>PAN (Permanent Account Number) Card</li>
+                            <li>TAN (Tax Deduction and Collection Number)</li>
+                            <li>Identity Proof (Aadhar Card etc.)</li>
+                            <li>Passport Size Photo</li>
+                            <li>DSC Form Download Format</li>
+                            <li>Address Proof (Bank Statement Mobile Bill / Telephone)</li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="collapsible">
+                        <header class="collapsible-header">
+                          <b>
+                            Registered Company Office
+                            <div class="collapsibleToggler">+</div>
+                          </b>
+                        </header>
+                        <div class="collapsible-content">
+                          <ul>
+                            <li>Rent Agreement</li>
+                            <li>Property (Director/ Relative) - Registry Proof / House Tax</li>
+                            <li>Receipts (Notarised) Latest Electricity Bill</li>
+                            <li>NOC from the owner on the name of any director (Notarised)</li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="collapsible">
+                        <header class="collapsible-header">
+                          <b>
+                            Other Documents
+                            <div class="collapsibleToggler">+</div>
+                          </b>
+                        </header>
+                        <div class="collapsible-content">
+                          <ul>
+                            <li>MOA (Memorandum of Association)</li>
+                            <li>AOA (Article of Association)</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -259,7 +317,7 @@
                     <li>Intramammary antibiotics, the classic mastitis tube and</li>
                     <li>Systemic antibiotics given by the intramuscular or subcutaneous route.</li>
                   </ol>
-                  <p>The ease of application provided by our technique passes one of the key tests for an MVP proposed by Sergiy Andriyenko <a class="referenceLinks" href="">[4]</a>, that is, minimalism. Our product provides valuable utility to the novice, which would prove to be a huge addendum after the launch.</p>
+                  <p>The ease of application provided by our technique passes one of the key tests for an MVP proposed by Sergiy Andriyenko, that is, minimalism. Our product provides valuable utility to the novice, which would prove to be a huge addendum after the launch.</p>
                   <p>The animal health market can be segmented into five fragments (in order of preference):</p>
                   <ol>
                     <li>Veterinary hospitals & pharmacy retailers</li>
@@ -268,7 +326,10 @@
                     <li>Individual dairy farmers</li>
                     <li>Cattle aggregators and large farmers</li>
                   </ol>
-                  <p>While the small-scale farmers own almost 60% of all the milk animals in the country <a class="referenceLinks" href="">[5]</a>.</p>
+                  <div class="figures">
+                    <figure style="width: 80%;"><img src="https://2021.igem.org/wiki/images/7/7d/T--IISER_Kolkata--image-entrepreneurship_AnimalHealthMarket.png" alt="entrepreneurship_AnimalHealthMarket.png" /></figure>
+                  </div>
+                  <p>While the small-scale farmers own almost 60% of all the milk animals in the country.</p>
                   <p>The majority share in animal healthcare is not governed by them. Cattle aggregators (farmers who own more than 5 animals) only account for 5% of the milk producers in India.</p>
                   <p>Historically, veterinary clinics have emerged as the leading distribution channel for animal health care products in India and are expected to continue to be over the next few years. The segment led the overall market with a share of 33% in 2015. This could certainly be a preferred channel especially in the urban setting. For dairy animals, one of the most preferred channels continues to be pharmaceutical retailers, accounting for almost 51% of the share in livestock care. Also, while antibiotics still make up 50% of revenues for these major players, their new drug developments have begun taking AMR into consideration. This is in accordance with the increasing stringency of antibiotic regulation enforcement by ICMR’s Antimicrobial Resistance Surveillance and Research Network (AMRSN).</p>
                 </div>
@@ -280,54 +341,75 @@
                 <div class="highlightYellow mediumText textShadow"><b>SWOT Analysis</b></div>
               </div>
               <div class="contentSection">
-                <div class="boxContent boxTable">
-                  <table>
-                    <tr>
-                      <td>
-                        <b><u>Strengths:</u></b>
-                      </td>
-                      <td>
-                        Scientifically sound project <br />
-                        Tackling a world-wide problem <br />
-                        Developed using inputs of people from all socio-economic and knowledge backgrounds <br />
-                        Helps for massive scaling up of production from RISE organisation of Home Institute <br />
-                        Exposure from after iGEM and attended startup summits.
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <b><u>Weaknesses:</u></b>
-                      </td>
-                      <td>
-                        Large scale clinical trials and approve of Ethical committee <br />
-                        Comparatively higher prices for treatment <br />
-                        Training of workers and transfer of technical knowledge <br />
-                        After iGEM scalability as it is a student venture.
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <b><u>Opportunities:</u></b>
-                      </td>
-                      <td>
-                        Dairy industry is one of biggest industry in food sector <br />
-                        Tackles the problem of antibiotic resistance which will be more prevalent in future <br />
-                        iGEM exposure <br />
-                        Emerging field of synthetic biology.
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <b><u>Threats:</u></b>
-                      </td>
-                      <td>
-                        Open source competition <br />
-                        Usage of GMO is not welcomed by people and many countries as a whole <br />
-                        Competition with veterinary pharma companies <br />
-                        Underlying science is complicated so communicating it to investors
-                      </td>
-                    </tr>
-                  </table>
+                <div class="boxContent">
+                  <div class="collapsible">
+                    <header class="collapsible-header">
+                      <b>
+                        Strengths
+                        <div class="collapsibleToggler">+</div>
+                      </b>
+                    </header>
+                    <div class="collapsible-content">
+                      <ol>
+                        <li>Scientifically sound project</li>
+                        <li>Tackling a world-wide problem</li>
+                        <li>Developed using inputs of people from all socio-economic and knowledge backgrounds</li>
+                        <li>Helps for massive scaling up of production from RISE organisation of Home Institute</li>
+                        <li>Exposure from after iGEM and attended startup summits</li>
+                      </ol>
+                    </div>
+                  </div>
+                  <div class="collapsible">
+                    <header class="collapsible-header">
+                      <b>
+                        Weaknesses
+                        <div class="collapsibleToggler">+</div>
+                      </b>
+                    </header>
+                    <div class="collapsible-content">
+                      <ol>
+                        <li>Large scale clinical trials and approve of Ethical committee</li>
+                        <li>Comparatively higher prices for treatment</li>
+                        <li>Training of workers and transfer of technical knowledge</li>
+                        <li>After iGEM scalability as it is a student venture</li>
+                      </ol>
+                    </div>
+                  </div>
+                  <div class="collapsible">
+                    <header class="collapsible-header">
+                      <b>
+                        Opportunities
+                        <div class="collapsibleToggler">+</div>
+                      </b>
+                    </header>
+                    <div class="collapsible-content">
+                      <ol>
+                        <li>Dairy industry is one of biggest industry in food sector</li>
+                        <li>Tackles the problem of antibiotic resistance which will be more prevalent in future</li>
+                        <li>iGEM exposure</li>
+                        <li>Emerging field of synthetic biology</li>
+                      </ol>
+                    </div>
+                  </div>
+                  <div class="collapsible">
+                    <header class="collapsible-header">
+                      <b>
+                        Threats
+                        <div class="collapsibleToggler">+</div>
+                      </b>
+                    </header>
+                    <div class="collapsible-content">
+                      <ol>
+                        <li>Open source competition</li>
+                        <li>Usage of GMO is not welcomed by people and many countries as a whole</li>
+                        <li>Competition with veterinary pharma companies</li>
+                        <li>Underlying science is complicated so communicating it to investors</li>
+                      </ol>
+                    </div>
+                  </div>
+                  <div class="figures">
+                    <figure><img src="https://2021.igem.org/wiki/images/0/0d/T--IISER_Kolkata--image-entrepreneurship_SWOT.png" alt="entrepreneurship_SWOT.png" /></figure>
+                  </div>
                 </div>
               </div>
             </section>
@@ -339,42 +421,8 @@
               <div class="contentSection">
                 <div class="boxContent">
                   <p>In the case of a start-up there are various risks associated with it, so it is always important to analyze the risk properly to understand future prospects and performance of our project.<a class="referenceLinks" href="https://www.codingvc.com/how-to-de-risk-a-startup/">[4]</a> Here, 1 denotes highest risk and 5 denotes lowest risk.</p>
-                  <div class="realTable">
-                    <table>
-                      <tr>
-                        <th>Risk Type</th>
-                        <th>Risk Factor</th>
-                      </tr>
-                      <tr>
-                        <td>Product/Market</td>
-                        <td>2</td>
-                      </tr>
-                      <tr>
-                        <td>Product Quality</td>
-                        <td>1</td>
-                      </tr>
-                      <tr>
-                        <td>Team</td>
-                        <td>3</td>
-                      </tr>
-                      <tr>
-                        <td>Recruiting</td>
-                        <td>1</td>
-                      </tr>
-                      <tr>
-                        <td>Sales</td>
-                        <td>1</td>
-                      </tr>
-                      <tr>
-                        <td>Funding</td>
-                        <td>2</td>
-                      </tr>
-                      <tr>
-                        <td>Competition</td>
-                        <td>4</td>
-                      </tr>
-                      <!-- <caption>Table 1</caption> -->
-                    </table>
+                  <div class="figures">
+                    <figure style="width: 80%;"><img src="https://2021.igem.org/wiki/images/2/29/T--IISER_Kolkata--image-entrepreneurship_RiskFactor.png" alt="entrepreneurship_RiskFactor.png" /></figure>
                   </div>
                   <p>As we are making this venture as students it seems like we have a very high risk, but with proper guidance of incubators we can overcome this to excel in this field.</p>
                 </div>
@@ -388,10 +436,9 @@
               <div class="contentSection">
                 <div class="boxContent">
                   <p>
-                    We have reached our target customer to understand their acceptance and wills regarding the usage of the product. From the survey conducted we can conclude that Small scale and large scale dairy farmers are really facing problems with usage of antibiotics and they are ready to use it, if it is proven well under all safety standards and prescribed by Veterinary doctors. So, regarding this we have talked with veterinary doctors and scientists, who also checked our theoretical model and found it to be preliminarily safe for usage. Still we have to check the efficiency of our method and have to go through large clinical trials to finally comment on this. We have talked with the Animal Ethics Committee of our institute regarding this and got useful information stepping forward in this direction and also have checked rules and regulations of Government of
-                    India about the same. <a class="referenceLinks" href="https://2021.igem.org/Team:IISER_Kolkata/Implementation">[Link to proposed implementation]</a>
+                    We have reached our target customer to understand their acceptance and wills regarding the usage of the product. From the survey conducted we can conclude that Small scale and large scale dairy farmers are really facing problems with usage of antibiotics and they are ready to use it, if it is proven well under all safety standards and prescribed by Veterinary doctors. So, regarding this we have talked with veterinary doctors and scientists, who also checked our theoretical model and found it to be preliminarily safe for usage. Still we have to check the efficiency of our method and have to go through large clinical trials to finally comment on this. We will be talking with the Animal Ethics Committee of our institute regarding this and get useful information stepping forward in this direction and also will be checking rules and regulations of the
+                    Government of India about the same. <a class="referenceLinks" href="https://2021.igem.org/Team:IISER_Kolkata/Implementation">Our discussion regarding the ethics concerning our project is documented in the proposed implementation webpage.</a> After clearing all the guidelines, preliminary products will be given in selected areas to milk-persons and dairy farms for the product feedback. Upon receiving that we will modify our products accordingly and after that launch in the market.
                   </p>
-                  <p>After clearing all the guidelines, preliminary products will be given in selected areas to milk-persons and dairy farms for the product feedback. Upon receiving that we will modify our products accordingly and after that launch in the market.</p>
                 </div>
               </div>
             </section>
@@ -405,13 +452,15 @@
                   <ol>
                     <li>Value Proposition Canvas:</li>
                     <div class="figures">
-                      <figure>
-                        <img src="https://2021.igem.org/wiki/images/2/2c/T--IISER_Kolkata--image-EtreprenurshipFig04.png" alt="" />
+                      <figure style="width: 80%;">
+                        <img src="https://2021.igem.org/wiki/images/9/9a/T--IISER_Kolkata--image-entrepreneurship_ValuePropositionCanvas.png" alt="entrepreneurship_ValuePropositionCanvas.png" />
                         <figcaption>Image 5 : Value Proposition canvas</figcaption>
                       </figure>
                     </div>
                     <li>Business Model Canvas</li>
-                    <p>---ppt file---</p>
+                    <div class="figures">
+                      <figure style="width: 80%;"><img src="https://2021.igem.org/wiki/images/2/2c/T--IISER_Kolkata--image-EtreprenurshipFig04.png" alt="EtreprenurshipFig04.png" /></figure>
+                    </div>
                   </ol>
                 </div>
               </div>
@@ -433,6 +482,9 @@
                   <p>So, Money in Hand = Rs.(38.57-26)/- = Rs.12.57/-</p>
                   <p>Now for each product Rs.3/- will go to the salaries of the employee, Rs.2.57/- to the promotion, Rs.5/- to Research and development, Rs.2/- for additional costs.</p>
                   <p>Thus, once our setup is done this model will provide profits indicating successful running of the start-up if sales is well-managed.</p>
+                  <div class="figures">
+                    <figure style="width: 80%;"><img src="https://2021.igem.org/wiki/images/9/92/T--IISER_Kolkata--image-entrepreneurship_BusinessPlanPieChart.png" alt="entrepreneurship_BusinessPlanPieChart.png" /></figure>
+                  </div>
                 </div>
               </div>
             </section>
@@ -461,6 +513,7 @@
                 <div class="boxContent">
                   <p>Regarding this we have talked with RISE Organization of IISER Kolkata that is an incubation centre for students and professors of IISER Kolkata. We organized several rounds of discussions figuring out the problems and challenges we might face going to the production and tried to solve them with the help of experts from the organization.</p>
                   <p>Following the suggestions we have looked for our competitor’s market share, closely verified sensitivity and specificity of our biomarkers as well as the limit of detection from literature to make our test kit more effective. We have also theoretically developed the process of synthetising RNA-Hydrogel but due to lack of time lab synthesis was not possible.</p>
+                  <p>We have talked with experts about Intellectual property rights and for patent application and taken their valuable advice regarding the same and checked with …..farm, if our detection kit and treatment method can be patented or not. We have received some positive feedback and talks are in progress. For our treatment part, we have thought to manufacture GMOs from international companies following our proposed gene circuit and finally use this as medicine.<a class="referenceLinks" href="https://www.tiredearth.com/articles/a-brief-explanation-about-gmos-companies">[5]</a></p>
                 </div>
               </div>
             </section>
@@ -479,12 +532,11 @@
                     <div class="figures">
                       <figure>
                         <img src="https://2021.igem.org/wiki/images/b/bb/T--IISER_Kolkata--image-EtreprenurshipFig05.png" alt="" />
-                        <figcaption>Image 6</figcaption>
                       </figure>
                       <figure>
                         <img src="https://2021.igem.org/wiki/images/9/9e/T--IISER_Kolkata--image-EtreprenurshipFig06.png" alt="" />
-                        <figcaption>Image 7</figcaption>
                       </figure>
+                      <figcaption>Pharma Start-Up Webinar</figcaption>
                     </div>
                     <li>
                       <b><u>Bio-Entrepreneurship Awareness Programme:</u></b> <br />
@@ -493,16 +545,21 @@
                     <div class="figures">
                       <figure>
                         <img src="https://2021.igem.org/wiki/images/3/37/T--IISER_Kolkata--image-EtreprenurshipFig07.png" alt="" />
-                        <figcaption>Image 8</figcaption>
                       </figure>
                       <figure>
                         <img src="https://2021.igem.org/wiki/images/4/4d/T--IISER_Kolkata--image-EtreprenurshipFig08.png" alt="" />
-                        <figcaption>Image 9</figcaption>
                       </figure>
+                      <figcaption>Bio Entrepreneurship Awareness Webinar</figcaption>
                     </div>
                     <li>
                       <b><u>EPIC Summer Boot Camp:</u></b> <br />
-                      26th July, 3rd August, 10th August by iGEM EPIC. We learnt about The importance of interviewing our stakeholder, Developing our Business Model and finally Pitching our idea to investors in 3 subsequent days that helped us to shape our project better.
+                      iGEM Entrepreneurship Program Innovation Community (EPIC) organised a summer bootcamp on 26th August, 3rd September and 10th September for all participating teams. We learnt about The importance of interviewing our stakeholder, Developing our Business Model and finally Pitching our idea to investors in 3 subsequent days that helped us to shape our project better.
+                      <div class="figures">
+                        <figure>
+                          <img src="https://2021.igem.org/wiki/images/8/84/T--IISER_Kolkata--image-entrepreneurship_SummerBootcampBadge.png" alt="entrepreneurship_SummerBootcampBadge.png" />
+                          <figcaption>iGEM EPIC Summer Bootcamp Badge &trade;</figcaption>
+                        </figure>
+                      </div>
                     </li>
                     <li>
                       <b><u>NBEC:</u></b> <br />
@@ -511,8 +568,13 @@
                     <li>
                       <b><u>E-Cell of IISER-K:</u></b> <br />
                       We have officially collaborated with the Entrepreneurship Cell of IISER Kolkata to do our market research, review our business and marketing strategy and receive overall feedback on our project idea and pitching to investors.
+                      <div class="figures">
+                        <figure style="width: 80%;">
+                          <img src="https://2021.igem.org/wiki/images/b/bb/T--IISER_Kolkata--image-EtreprenurshipFig09.png" alt="" />
+                          <figcaption>Meeting with E-Cell</figcaption>
+                        </figure>
+                      </div>
                     </li>
-                    <img src="https://2021.igem.org/wiki/images/b/bb/T--IISER_Kolkata--image-EtreprenurshipFig09.png" alt="" />
                   </ol>
                 </div>
               </div>
@@ -537,14 +599,13 @@
               <div class="contentSection">
                 <div class="boxContent">
                   <p>
-                    For any product, after successful launching, it is important to keep up the sales but despite that upon reaching the maturity phase the sales declines. So, it is always important to explore different dimensions with the product and extend it. Our test-kit detects particular mi-RNA for the Bovine Mastitis disease and gives us the result of a cow being Bovine Mastitis positive or negative. There are several other diseases where mi-RNA acts as a biomarker and is upregulated upon the onset of the disease. It ranges from Breast Cancer, Ovarian Cancer, Cervical cancer to Cardio-vascular disease, Neuro disorder and bacterial infection.<a class="referenceLinks" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7072450/">[5]</a> So, using the same technique just by changing the complementary sequence of target mi-RNA we can make detection kits for many
+                    For any product, after successful launching, it is important to keep up the sales but despite that upon reaching the maturity phase the sales declines. So, it is always important to explore different dimensions with the product and extend it. Our test-kit detects particular mi-RNA for the Bovine Mastitis disease and gives us the result of a cow being Bovine Mastitis positive or negative. There are several other diseases where mi-RNA acts as a biomarker and is upregulated upon the onset of the disease. It ranges from Breast Cancer, Ovarian Cancer, Cervical cancer to Cardio-vascular disease, Neuro disorder and bacterial infection.<a class="referenceLinks" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7072450/">[6]</a> So, using the same technique just by changing the complementary sequence of target mi-RNA we can make detection kits for many
                     other diseases as well. We might need to pin down on which samples we are going to test the disease. We would like our company to extend and grow in this direction.
                   </p>
                   <div class="figures">
                     <figure>
-                      <img src="https://2021.igem.org/wiki/images/3/3c/T--IISER_Kolkata--image-EtreprenurshipFig10.png" alt="" />
-
-                      <figcaption>Image 11</figcaption>
+                      <img src="https://2021.igem.org/wiki/images/3/3c/T--IISER_Kolkata--image-EtreprenurshipFig10.png" alt="EtreprenurshipFig10.png" />
+                      <figcaption>Sales of a product with time</figcaption>
                     </figure>
                   </div>
                   <p>P.S: California Mastitis Test cost 650/-, where our estimated price for test kit will be less than 500/-</p>
@@ -574,10 +635,14 @@
         </div>
         <div class="indentContainer">
           <h3>References</h3>
-          <p>
-            All the references are provided within content, relative to content. <br />
-            Check for square bracketed Numbers in the paragraphs.
-          </p>
+          <ol>
+            <li><a href="https://www.tpci.in/indiabusinesstrade/blogs/indian-dairy-sector-on-a-road-to-resilience/">https://www.tpci.in/indiabusinesstrade/blogs/indian-dairy-sector-on-a-road-to-resilience/</a></li>
+            <li><a href="https://www.mordorintelligence.com/industry-reports/india-veterinary-healthcare-market-industry">https://www.mordorintelligence.com/industry-reports/india-veterinary-healthcare-market-industry</a></li>
+            <li><a href="https://dx.doi.org/10.3923/ajava.2012.454.476">https://dx.doi.org/10.3923/ajava.2012.454.476</a></li>
+            <li><a href="https://www.codingvc.com/how-to-de-risk-a-startup/">https://www.codingvc.com/how-to-de-risk-a-startup/</a></li>
+            <li><a href="https://www.tiredearth.com/articles/a-brief-explanation-about-gmos-companies">https://www.tiredearth.com/articles/a-brief-explanation-about-gmos-companies</a></li>
+            <li><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7072450/">https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7072450/</a></li>
+          </ol>
         </div>
       </section>
       <!-- /reference -->
