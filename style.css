@@ -1641,6 +1641,13 @@ figcaption {
 /* hp Tree */
 .pointerClass {
   cursor: var(--cursor-pointer);
+  transform-origin: center;
+  transform-box: fill-box;
+  transition: all 0.3s;
+}
+
+.pointerClass:hover {
+  scale: 1.1;
 }
 
 #SVGrun1,
@@ -1649,6 +1656,7 @@ figcaption {
 #SVGrun7 {
   animation: svgAnimate 5s ease infinite alternate;
 }
+
 #SVGrun3,
 #SVGrun4,
 #SVGrun6 {
@@ -1658,16 +1666,16 @@ figcaption {
 @keyframes svgAnimate {
   0%,
   100% {
-    transform: translate(0, 0);
+    transform: translate(0, 0) rotate(0);
   }
 
   25%,
   75% {
-    transform: translate(-10px, 10px);
+    transform: translate(-10px, 10px) rotate(2deg);
   }
 
   50% {
-    transform: translate(-10px, 0);
+    transform: translate(-10px, 0) rotate(-2deg);
   }
 }
 /* /hp Tree */
