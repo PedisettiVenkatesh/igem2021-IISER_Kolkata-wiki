@@ -1129,9 +1129,9 @@ a.referenceLinks {
 }
 
 .boxContent b {
-  font-size: 1.4rem !important;
+  /* font-size: 1.4rem !important; */
   font-weight: bold !important;
-  color: #222;
+  /* color: #222; */
 }
 
 .overviewPara {
@@ -1577,13 +1577,14 @@ figcaption {
 
 /* SWOT */
 .SWOT {
-  background: gold;
+  /* background: gold; */
   width: 100%;
-  padding: 1rem 1rem 20rem;
+  padding: 1rem 1rem;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   position: relative;
+  overflow: hidden;
 }
 
 .SWOT > div {
@@ -1592,27 +1593,85 @@ figcaption {
 }
 
 .SWOT-image {
-  /*  */
+  transition: all 0.3s;
+}
+
+.SWOT-image:hover {
+  transform: rotate(-35deg);
 }
 
 .SWOT-content {
   /* display: none; */
   position: absolute;
-  top: 0;
-  left: 30%;
+  top: 5%;
+  left: 25%;
+  transform-origin: left;
+  transform: translateY(-50px) rotate(-45deg);
+  opacity: 0;
+  transition: all 0.3s;
 }
 
 .SWOT ol {
   width: 100%;
+  background: orange;
+  border-radius: 1rem;
+  padding-left: 1rem;
 }
 
 .SWOT-content ol li {
-  padding: 1rem 2rem !important;
-  margin: 0.5rem !important;
-  font-size: 1.5rem;
+  padding: 0.5rem 2rem !important;
+  margin: 0.2rem !important;
+  font-size: 1rem;
   color: #fff;
   background: red;
-  border-radius: 1rem;
+  border-radius: 0.5rem;
+}
+
+.SWOT-expanded .SWOT-content {
+  transform: none;
+  opacity: 1;
 }
 
 /* /SWOT */
+
+/* hp Tree */
+#SVGrun1,
+#SVGrun2,
+#SVGrun5,
+#SVGrun7 {
+  animation: svgAnimate 6s ease infinite alternate;
+  cursor: var(--cursor-pointer);
+}
+#SVGrun3,
+#SVGrun4,
+#SVUrun6 {
+  animation: svgAnimate 6s ease 1s infinite alternate-reverse;
+  cursor: var(--cursor-pointer);
+}
+
+#SVGrun1:hover,
+#SVGrun2:hover,
+#SVGrun3:hover,
+#SVGrun4:hover,
+#SVGrun5:hover,
+#SVUrun6:hover,
+#SVGrun7:hover {
+  animation: svgAnimate 1s ease infinite alternate-reverse;
+}
+
+@keyframes svgAnimate {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+
+  25%,
+  75% {
+    transform: translate(-10px, 10px);
+  }
+
+  50% {
+    transform: translate(-10px, 0);
+  }
+}
+/* /hp Tree */
