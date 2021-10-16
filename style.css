@@ -1635,28 +1635,20 @@ figcaption {
 /* /SWOT */
 
 /* hp Tree */
+.pointerClass {
+  cursor: var(--cursor-pointer);
+}
+
 #SVGrun1,
 #SVGrun2,
 #SVGrun5,
 #SVGrun7 {
-  animation: svgAnimate 6s ease infinite alternate;
-  cursor: var(--cursor-pointer);
+  animation: svgAnimate 5s ease infinite alternate;
 }
 #SVGrun3,
 #SVGrun4,
-#SVUrun6 {
-  animation: svgAnimate 6s ease 1s infinite alternate-reverse;
-  cursor: var(--cursor-pointer);
-}
-
-#SVGrun1:hover,
-#SVGrun2:hover,
-#SVGrun3:hover,
-#SVGrun4:hover,
-#SVGrun5:hover,
-#SVUrun6:hover,
-#SVGrun7:hover {
-  animation: svgAnimate 1s ease infinite alternate-reverse;
+#SVGrun6 {
+  animation: svgAnimate 5s ease 1s infinite alternate-reverse;
 }
 
 @keyframes svgAnimate {
