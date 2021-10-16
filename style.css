@@ -1129,9 +1129,13 @@ a.referenceLinks {
 }
 
 .boxContent b {
-  /* font-size: 1.4rem !important; */
-  font-weight: bold !important;
-  /* color: #222; */
+  font-weight: bold;
+}
+
+.subSection b {
+  font-size: 1.8rem !important;
+  color: var(--color-blue);
+  text-shadow: 1px 1px #000;
 }
 
 .overviewPara {
@@ -1290,7 +1294,7 @@ figcaption {
   position: relative;
   font-size: 1.1rem;
   font-weight: bold;
-  /* box-shadow: 10px 10px 35px 1px var(--color-body); */
+  line-height: 1.2;
   border: 1px solid #9aa7b2;
   border-right: 4px solid #9aa7b2;
   border-bottom: 4px solid #9aa7b2;
