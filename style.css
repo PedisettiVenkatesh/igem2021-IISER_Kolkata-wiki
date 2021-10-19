@@ -1680,6 +1680,26 @@ figcaption {
     transform: translate(-10px, 0) rotate(-2deg);
   }
 }
+
+#SDG3,
+#SDG4,
+#SDG8,
+#SDG9,
+#SDG12 {
+  cursor: var(--cursor-pointer);
+  transform-origin: center;
+  transform-box: fill-box;
+  transition: all 0.3s;
+}
+
+#SDG3:hover,
+#SDG4:hover,
+#SDG8:hover,
+#SDG9:hover,
+#SDG12:hover {
+  scale: 1.1;
+  fill: gold;
+}
 /* /hp Tree */
 
 /* pageQuote */
