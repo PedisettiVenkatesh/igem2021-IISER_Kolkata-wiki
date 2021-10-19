@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
+    <title>IISER Kolkata IGEM Team - Home</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body onload="preload()" class="noScroll">
+    <!-- preloader -->
+    <div id="preloader" class="unSelectable" title="Loading...">
+      <img src="https://2021.igem.org/wiki/images/d/d6/T--IISER_Kolkata--image-preloader.gif" alt="[preloader image]" />
+      Loading . . .
+    </div>
+    <!-- /preloader -->
+
+    <!-- progressBar -->
+    <div id="scrollPath">
+      <div id="progressBar"></div>
+      <div id="progressBtn"></div>
+    </div>
+    <!-- /progressBar -->
+
+    <!-- toTop -->
+    <div id="toTop" class="unSelectable" title="Go To Top">
+      <a href="javascript:window.scrollTo(0, 0);">
+        <img src="https://2021.igem.org/wiki/images/d/d8/T--IISER_Kolkata--image-toTop-2x.png" alt="toTop" />
+      </a>
+    </div>
+    <!-- /toTop -->
+
+    <!-- navToggler -->
+    <div id="navToggler" class="unSelectable" title="navigation">
+      <img id="navTogglerImg" src="https://2021.igem.org/wiki/images/6/67/T--IISER_Kolkata--image-toggleBtn-2x.png" alt="#NAV#" />
+    </div>
+
+    <!-- script for NavToggler -->
+    <script>
+      function changeToggleBtn() {
+        if (navTogglerImg.src.match("https://2021.igem.org/wiki/images/6/67/T--IISER_Kolkata--image-toggleBtn-2x.png")) {
+          navTogglerImg.src = "https://2021.igem.org/wiki/images/e/ee/T--IISER_Kolkata--image-toggleBtn-Close.png";
+        } else {
+          navTogglerImg.src = "https://2021.igem.org/wiki/images/6/67/T--IISER_Kolkata--image-toggleBtn-2x.png";
+        }
+      }
+    </script>
+    <!-- /script for NavToggler -->
+    <!-- /navToggler -->
+
+    <!-- navigation -->
+    <nav class="navigation-container unSelectable">
+      <div class="navigation">
+        <img src="https://2021.igem.org/wiki/images/0/0e/T--IISER_Kolkata--image-navBG-2x.png" alt="" />
+        <div class="navList">
+          <ol>
+            <li class="navDrop"><a href="https://2021.igem.org/Team:IISER_Kolkata"> Home </a></li>
+            <li class="navDrop">
+              <a>
+                Team
+                <div class="navDropList">
+                  <ul>
+                    <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Team">Team Members</a></li>
+                    <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Attributions">Attributions</a></li>
+                    <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Collaborations">Collaborations</a></li>
+                    <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Partnership">Partnership</a></li>
+                  </ul>
+                </div>
+              </a>
+            </li>
+            <li class="navDrop">
+              <a>
+                Project
+                <div class="navDropList">
+                  <ul>
+                    <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Description">Description</a></li>
+                    <!-- <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Design">Design</a></li> -->
+                    <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Contribution">Contribution</a></li>
+                    <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Engineering">Engineering</a></li>
+                    <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Improve">Improvement</a></li>
+                  </ul>
+                </div>
+              </a>
+            </li>
+            <li class="navDrop">
+              <a>
+                Wet Lab
+                <div class="navDropList">
+                  <ul>
+                    <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Experiments">Experiments</a></li>
+                    <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Notebook">Notebook</a></li>
+                    <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Parts">Parts</a></li>
+                    <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Safety">Safety</a></li>
+                    <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Results">Results</a></li>
+                  </ul>
+                </div>
+              </a>
+            </li>
+            <li class="navDrop">
+              <a>
+                Dry Lab
+                <div class="navDropList">
+                  <ul>
+                    <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Model">Mathematical Modeling</a></li>
+                  </ul>
+                </div>
+              </a>
+            </li>
+            <li class="navDrop">
+              <a>
+                Human Practices
+                <div class="navDropList">
+                  <ul>
+                    <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Human_Practices">Integrated Human Practices</a></li>
+                    <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Implementation">Proposed Implementation</a></li>
+                    <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Communication">Communication</a></li>
+                  </ul>
+                </div>
+              </a>
+            </li>
+            <li class="navDrop">
+              <a>
+                Awards
+                <div class="navDropList">
+                  <ul>
+                    <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Education">Education</a></li>
+                    <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Inclusivity">Inclusivity</a></li>
+                    <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Entrepreneurship">Supporting Entrepreneurship</a></li>
+                    <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Measurement">Measurement</a></li>
+                  </ul>
+                </div>
+              </a>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </nav>
+    <!-- /navigation -->
+
+    <!-- IISER KOLKATA CONTAINER -->
+    <div class="iiserKolkata">
+      <!-- hero -->
+      <div id="hero">
+        <img src="https://2021.igem.org/wiki/images/e/e2/T--IISER_Kolkata--image-entrepreneurshipHero.png" alt="Entrepreneurship_Hero" />
+        <div class="homeBtn" title="Go To Home">
+          <a href="https://2021.igem.org/Team:IISER_Kolkata">
+            <img src="https://2021.igem.org/wiki/images/c/cd/T--IISER_Kolkata--image-igemIISERK_home.png" alt="IGEM-IISERKolkata" />
+          </a>
+          <a href="https://2021.igem.org/Team:IISER_Kolkata">
+            <img src="https://2021.igem.org/wiki/images/c/c5/T--IISER_Kolkata--images-namoosteTransparent.jpg" alt="Namooste" />
+          </a>
+        </div>
+      </div>
+      <!-- /hero -->
+
+      <!-- content -->
+      <div class="indentContainer">
+        <div class="gridedContainer">
+          <div id="scrollHide" class="unSelectable">
+            <!-- sideNav -->
+            <div class="sideNav sticky">
+              <!-- navigate in Page -->
+              <ul>
+                <li><a id="run" class="scrollID" onclick="scrollToID('runSection')">Overview</a></li>
+              </ul>
+            </div>
+            <!-- /sideNav -->
+          </div>
+          <div>
+            <section id="runSection" class="scrollSection">
+              <div class="centerImage">
+                <div class="highlightYellow mediumText textShadow"><b>SWOT Analysis</b></div>
+              </div>
+              <div class="contentSection">
+                <div class="boxContent">
+                  <div class="SWOT SWOT-expanded">
+                    <div class="SWOT1">
+                      <div class="SWOT-image">
+                        <img src="/images/Entreprenurship/SWOT-01.png" alt="Strengths" />
+                      </div>
+                      <div class="SWOT-content">
+                        <ol>
+                          <li>Scientifically sound project</li>
+                          <li>Tackling a world-wide problem</li>
+                          <li>Developed using inputs of people from all socio-economic and knowledge backgrounds</li>
+                          <li>Helps for massive scaling up of production from RISE organisation of Home Institute</li>
+                          <li>Exposure from after iGEM and attended startup summits</li>
+                        </ol>
+                      </div>
+                      <div>Strengths</div>
+                    </div>
+                    <div class="SWOT2">
+                      <div class="SWOT-image">
+                        <img src="/images/Entreprenurship/SWOT-02.png" alt="Weaknesses" />
+                      </div>
+                    </div>
+                    <div class="SWOT3">
+                      <div class="SWOT-image">
+                        <img src="/images/Entreprenurship/SWOT-03.png" alt="Opportunities" />
+                      </div>
+                    </div>
+                    <div class="SWOT4">
+                      <div class="SWOT-image">
+                        <img src="/images/Entreprenurship/SWOT-04.png" alt="Threats" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+      <!-- /content -->
+
+      <!-- reference -->
+      <section class="reference">
+        <div class="wave topWave">
+          <!-- Top Wave  -->
+        </div>
+        <div class="indentContainer">
+          <h3>References</h3>
+        </div>
+      </section>
+      <!-- /reference -->
+
+      <!-- footer -->
+      <footer>
+        <div class="theFooter">
+          <div class="wave bottomWave"></div>
+          <div class="indentContainer">
+            <div class="contactHead"><b>Contact us at</b></div>
+            <div class="contacts">
+              <a href="https://www.instagram.com/igem.iiserk/"> <img src="https://2021.igem.org/wiki/images/e/ec/T--IISER_Kolkata--image-instagramIcon.png" alt="instagram" /></a>
+              <a href="https://www.facebook.com/iGEM.IISERK"> <img src="https://2021.igem.org/wiki/images/0/02/T--IISER_Kolkata--image-facebookIcon.png" alt="facebook" /></a>
+              <a href="https://twitter.com/iGEM_IISERKol?s=08"> <img src="https://2021.igem.org/wiki/images/e/e2/T--IISER_Kolkata--image-twitterIcon.png" alt="twitter" /></a>
+              <a href="https://www.linkedin.com/in/igem-iiser-kolkata-189707189/"> <img src="https://2021.igem.org/wiki/images/1/15/T--IISER_Kolkata--image-linkedinIcon.png" alt="linkedIn" /></a>
+            </div>
+            <div class="footerHead">
+              <h3>Our Sponsors...</h3>
+            </div>
+            <div class="sponsors">
+              <div style="border-right: 3px solid #5e8dd1;">
+                <img src="https://2021.igem.org/wiki/images/9/90/T--IISER_Kolkata--image-igemiiserk-2x.png" alt="IGEM-IISERKolkata" />
+              </div>
+              <div>
+                <div>
+                  <img src="https://2021.igem.org/wiki/images/f/f7/T--IISER_Kolkata--image-promegaLogo.png" alt="Promega" />
+                  <img src="https://2021.igem.org/wiki/images/f/fb/T--IISER_Kolkata--image-RCTLogo.png" alt="RCT" />
+                  <img src="https://2021.igem.org/wiki/images/e/e3/T--IISER_Kolkata--image-iiserkLogo.png" alt="IISERKolkata" />
+                  <img class="hLogo" src="https://2021.igem.org/wiki/images/c/cb/T--IISER_Kolkata--image-IDTLogo.png" alt="IDT" />
+                  <div class="flexBreak"></div>
+                  <img class="hLogo" src="https://2021.igem.org/wiki/images/4/46/T--IISER_Kolkata--image-bioLabsLogo.png" alt="NewEnglandBioLabs" />
+                  <img class="hLogo" src="https://2021.igem.org/wiki/images/6/68/T--IISER_Kolkata--image-benchlingLogo.png" alt="Benchling" />
+                  <img class="hLogo" src="https://2021.igem.org/wiki/images/0/0a/T--IISER_Kolkata--image-twistLogo.png" alt="TWIST" />
+                  <img src="https://2021.igem.org/wiki/images/0/0b/T--IISER_Kolkata--image-igemLogo.png" alt="IGEM" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <!-- /footer -->
+    </div>
+
+    <!-- script for scroll actives -->
+    <script>
+      const mainNavLinks = document.querySelectorAll(".scrollID");
+
+      var topOff = 200;
+
+      if (window.matchMedia("(max-width: 980px)").matches) {
+        var topOff = 500;
+      }
+
+      function highlightActiveSection() {
+        var fromTop = window.pageYOffset + topOff;
+        var r = 0;
+
+        for (r = 0; r < mainNavLinks.length; r++) {
+          var navD = mainNavLinks[r];
+          var section = document.getElementById(navD.id + "Section");
+          if (section.offsetTop <= fromTop) {
+            if (section.offsetTop + section.offsetHeight > fromTop) {
+              navD.classList.add("scrollID-active");
+            } else {
+              navD.classList.remove("scrollID-active");
+            }
+          } else {
+            navD.classList.remove("scrollID-active");
+          }
+        }
+      }
+    </script>
+    <!-- /script for scroll actives -->
+
+    <!-- hide on Scroll -->
+    <script>
+      // hide on scroll
+      var prevScrollPos = window.pageYOffset;
+
+      function hideOnScroll() {
+        if (window.matchMedia("(max-width: 980px)").matches) {
+          var currentScrollPos = window.pageYOffset;
+          if (prevScrollPos > currentScrollPos) {
+            document.getElementById("scrollHide").style.top = "0.8%";
+          } else {
+            document.getElementById("scrollHide").style.top = "-50vh";
+          }
+          prevScrollPos = currentScrollPos;
+        }
+      }
+    </script>
+    <!-- /hide on scroll -->
+
+    <!-- script for collapsibles -->
+    <script>
+      var collapsibles = document.querySelectorAll(".collapsible");
+
+      function removeCollapsibleExpanded(notRemove) {
+        collapsibles.forEach((collD) => {
+          if (collD != notRemove) {
+            collD.classList.remove("collapsible--expanded");
+            collD.querySelector(".collapsibleToggler").innerHTML = "+";
+          }
+        });
+      }
+
+      collapsibles.forEach((coll) =>
+        coll.querySelector(".collapsible-header").addEventListener("click", function () {
+          removeCollapsibleExpanded(coll);
+          coll.classList.toggle("collapsible--expanded");
+
+          if (coll.querySelector(".collapsibleToggler").innerHTML == "+") {
+            coll.querySelector(".collapsibleToggler").innerHTML = "-";
+          } else {
+            coll.querySelector(".collapsibleToggler").innerHTML = "+";
+          }
+        })
+      );
+    </script>
+    <!-- /script for collapsibles -->
+
+    <!-- /IISER KOLKATA CONTAINER -->
+
+    <!-- JS -->
+    <!-- <script src="https://2021.igem.org/Template:IISER_Kolkata/js"></script> -->
+    <script src="app.js"></script>
+    <!-- /JS -->
+  </body>
+</html>

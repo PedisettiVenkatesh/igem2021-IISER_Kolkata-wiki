@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
+    <title>IISER Kolkata IGEM Team - Home</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body onload="preload()" class="noScroll">
+    <!-- preloader -->
+    <div id="preloader" class="unSelectable" title="Loading...">
+      <img src="https://2021.igem.org/wiki/images/d/d6/T--IISER_Kolkata--image-preloader.gif" alt="[preloader image]" />
+      Loading . . .
+    </div>
+    <!-- /preloader -->
+
+    <!-- progressBar -->
+    <div id="scrollPath">
+      <div id="progressBar"></div>
+      <div id="progressBtn"></div>
+    </div>
+    <!-- /progressBar -->
+
+    <!-- toTop -->
+    <div id="toTop" class="unSelectable" title="Go To Top">
+      <a href="javascript:window.scrollTo(0, 0);">
+        <img src="https://2021.igem.org/wiki/images/d/d8/T--IISER_Kolkata--image-toTop-2x.png" alt="toTop" />
+      </a>
+    </div>
+    <!-- /toTop -->
+
+    <!-- navToggler -->
+    <div id="navToggler" class="unSelectable" title="navigation">
+      <img id="navTogglerImg" src="https://2021.igem.org/wiki/images/6/67/T--IISER_Kolkata--image-toggleBtn-2x.png" alt="#NAV#" />
+    </div>
+
+    <!-- script for NavToggler -->
+    <script>
+      function changeToggleBtn() {
+        if (navTogglerImg.src.match("https://2021.igem.org/wiki/images/6/67/T--IISER_Kolkata--image-toggleBtn-2x.png")) {
+          navTogglerImg.src = "https://2021.igem.org/wiki/images/e/ee/T--IISER_Kolkata--image-toggleBtn-Close.png";
+        } else {
+          navTogglerImg.src = "https://2021.igem.org/wiki/images/6/67/T--IISER_Kolkata--image-toggleBtn-2x.png";
+        }
+      }
+    </script>
+    <!-- /script for NavToggler -->
+    <!-- /navToggler -->
+
+    <!-- navigation -->
+    <nav class="navigation-container unSelectable">
+      <div class="navigation">
+        <img src="https://2021.igem.org/wiki/images/0/0e/T--IISER_Kolkata--image-navBG-2x.png" alt="" />
+        <div class="navList">
+          <ol>
+            <li class="navDrop"><a href="https://2021.igem.org/Team:IISER_Kolkata"> Home </a></li>
+            <li class="navDrop">
+              <a>
+                Team
+                <div class="navDropList">
+                  <ul>
+                    <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Team">Team Members</a></li>
+                    <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Attributions">Attributions</a></li>
+                    <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Collaborations">Collaborations</a></li>
+                    <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Partnership">Partnership</a></li>
+                  </ul>
+                </div>
+              </a>
+            </li>
+            <li class="navDrop">
+              <a>
+                Project
+                <div class="navDropList">
+                  <ul>
+                    <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Description">Description</a></li>
+                    <!-- <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Design">Design</a></li> -->
+                    <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Contribution">Contribution</a></li>
+                    <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Engineering">Engineering</a></li>
+                    <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Improve">Improvement</a></li>
+                  </ul>
+                </div>
+              </a>
+            </li>
+            <li class="navDrop">
+              <a>
+                Wet Lab
+                <div class="navDropList">
+                  <ul>
+                    <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Experiments">Experiments</a></li>
+                    <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Notebook">Notebook</a></li>
+                    <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Parts">Parts</a></li>
+                    <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Safety">Safety</a></li>
+                    <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Results">Results</a></li>
+                  </ul>
+                </div>
+              </a>
+            </li>
+            <li class="navDrop">
+              <a>
+                Dry Lab
+                <div class="navDropList">
+                  <ul>
+                    <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Model">Mathematical Modeling</a></li>
+                  </ul>
+                </div>
+              </a>
+            </li>
+            <li class="navDrop">
+              <a>
+                Human Practices
+                <div class="navDropList">
+                  <ul>
+                    <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Human_Practices">Integrated Human Practices</a></li>
+                    <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Implementation">Proposed Implementation</a></li>
+                    <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Communication">Communication</a></li>
+                  </ul>
+                </div>
+              </a>
+            </li>
+            <li class="navDrop">
+              <a>
+                Awards
+                <div class="navDropList">
+                  <ul>
+                    <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Education">Education</a></li>
+                    <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Inclusivity">Inclusivity</a></li>
+                    <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Entrepreneurship">Supporting Entrepreneurship</a></li>
+                    <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Measurement">Measurement</a></li>
+                  </ul>
+                </div>
+              </a>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </nav>
+    <!-- /navigation -->
+
+    <!-- IISER KOLKATA CONTAINER -->
+    <div class="iiserKolkata">
+      <!-- hero -->
+      <div id="hero">
+        <img src="https://2021.igem.org/wiki/images/5/50/T--IISER_Kolkata--image-inclusivityHero.png" alt="Inclusivity_Hero" />
+        <div class="homeBtn" title="Go To Home">
+          <a href="https://2021.igem.org/Team:IISER_Kolkata">
+            <img src="https://2021.igem.org/wiki/images/c/cd/T--IISER_Kolkata--image-igemIISERK_home.png" alt="IGEM-IISERKolkata" />
+          </a>
+          <a href="https://2021.igem.org/Team:IISER_Kolkata">
+            <img src="https://2021.igem.org/wiki/images/c/c5/T--IISER_Kolkata--images-namoosteTransparent.jpg" alt="Namooste" />
+          </a>
+        </div>
+      </div>
+      <!-- /hero -->
+
+      <!-- content -->
+      <div class="indentContainer">
+        <div class="gridedContainer">
+          <div id="scrollHide" class="unSelectable">
+            <!-- sideNav -->
+            <div class="sideNav sticky">
+              <!-- navigate in Page -->
+              <ul>
+                <li><a id="run" class="scrollID" onclick="scrollToID('runSection')">Overview</a></li>
+                <li><a id="run1" class="scrollID" onclick="scrollToID('run1Section')">Disabled in STEM</a></li>
+                <li><a id="run2" class="scrollID" onclick="scrollToID('run2Section')">Digital Accessibility</a></li>
+                <li><a id="run3" class="scrollID" onclick="scrollToID('run3Section')">Gene Gala</a></li>
+                <li><a id="run4" class="scrollID" onclick="scrollToID('run4Section')">Educating our senior citizens</a></li>
+                <li><a id="run5" class="scrollID" onclick="scrollToID('run5Section')">Miscellaneous</a></li>
+              </ul>
+            </div>
+            <!-- /sideNav -->
+          </div>
+          <div>
+            <!-- Overview -->
+            <section id="runSection" class="scrollSection">
+              <div class="centerImage">
+                <div class="highlightYellow mediumText textShadow"><b>Overview</b></div>
+              </div>
+              <div class="contentSection">
+                <div class="boxContent">
+                  <p>A large section of the global population doesn’t have access to the most basic science education and tools. Due to which they are unable to participate in creating new knowledge. We here at IISER Kolkata understand the need to create a more welcoming scientific atmosphere where everyone should practice science irrespective of their background. We have tried to ensure that we can reach the maximum number of people and empower them to start a conversation in science, think scientifically, and appreciate nature and science’s beauty. To achieve this motto, we conducted various outreach activities, which are briefly discussed below.</p>
+                </div>
+              </div>
+            </section>
+            <!-- 1. Disabled in STEM -->
+            <section id="run1Section" class="scrollSection">
+              <div class="centerImage">
+                <div class="highlightYellow mediumText textShadow"><b>Disabled in STEM</b></div>
+              </div>
+              <div class="contentSection">
+                <div class="boxContent">
+                  <p>Around 93-150 million children of age group 0-14 years living with disabilities<a class="referenceLinks" href="https://www.who.int/teams/noncommunicable-diseases/sensory-functions-disability-and-rehabilitation/world-report-on-disability">[1]</a>. A large section of these students never attends school. Of those who participate in primary schooling, very few continue to attend higher education. While many factors affect this underrepresentation, and we have to cover a long journey towards making a welcoming education environment, the journey starts with small steps.</p>
+                  <p>As individuals, we always look up to someone we can relate to, who feels like ourselves, and we have them as role models. We aspire to be like them; we try to work on things that people similar to us are doing. As young children, most of us wanted to perceive the profession of our parents or be a teacher, right?. Because that was what we were aware of, they were the ones we could look forward to. The confusion got lesser as we grew up and had a chance to look forward to more variety of people around us. Finally, we are in a carrier field where we are!</p>
+                  <p>Imagine what if you never had come across the career you are working in or the subject you are studying. Would you have been able to be where you are?. Probably, No!. The igem blog "A letter to my role model"<a class="referenceLinks" href="https://blog.igem.org/blog/2019/10/16/a-letter-to-my-role-model?mtm_campaign=elink&mtm_kwd=21_diversity">[2]</a> by Henrik Johansen clearly highlights the importance of a role model for an individual. It highlights the level of impact a role model can have, by just being there, by just being visible. To individuals in the minority, mear visibility of a relatable person can assure them that they are not alone and they can do it.</p>
+                  <p>Disabilities can be physical or mental; most individuals with mental disabilities do not report it, primarily due to the social stigma associated with it. Knowing a person with similar challenges can help individuals with mental disabilities to overcome the social stigma and be themselves.</p>
+                  <p>With this understanding of the importance of a role model in one's life, we launched the campaign Disabled in STEM (#Disabled_In_STEM). The campaign was run in two segments.</p>
+                  <p class="subSection"><b>Segment One - Highlighting Scientists with Disabilities</b></p>
+                  <p>
+                    The first segment highlighted eminent scientists with disabilities. It targeted to achieve our first motto - <b>To Inspire</b> young students with disabilities to pursue science. The series of social media posts highlighted the contributions of scientists with disabilities to science and society, the challenges they overcame. It highlighted the fact that having a disability does not prevent you from practising your passion for science. Irrespective of your identity, you can practice and excel in science. The series highlighted a very diverse group of scientists with different challenges. From scientists with mental challenges like Paranoid schizophrenia and depression to physical challenges like motor paralysis and deafness. From hereditary disabilities like autism and colour blindness to disabilities due to diseases like Polio and Arthritis to
+                    loss of limbs in an accident. The series highlighted 10 scientists (07 male and 03 female) working in physics, chemistry, animal behaviour and mathematics.
+                  </p>
+                  <p>
+                    We started with our scientist with <em>the beautiful mind</em> - John Nash. He battled mental illness and won the 1996 Nobel prize in Economics for his contribution to Game theory. We featured John W. Cornforth, whose hearing impairment guided his way into chemistry laboratory work as he could perform chemical experiments without having his deafness as a barrier. The life of Dorothy Hodgkin is incredibly inspiring. Her iron-hearted determination and pursuit of her research despite her increasingly frail disposition is a testament to the strength of one's will in the face of adversity. The life and contributions of various other eminent scientists like Stephan Hawking, Temple Grandin, Nikolaas Tinbergen, Solomon Lefschetz, Harold B. Hartley and Florence B Seibert were highlighted in this segment. We completed the series by featuring John Dalton; for
+                    him, his unusual perception instead became a source of inspiration to explore questions that were thus far unanswered. He did research on colourblindness with which he was himself affected.
+                  </p>
+                  <div class="figures">
+                    <figure>
+                      <img src="" alt="[Horizontal Scroll - Include all posters]" />
+                      <figcaption>Posters highlighting few Scientists with Disabilities</figcaption>
+                    </figure>
+                  </div>
+                  <p>The scientists highlighted in the first segment continues to inspire most and are role models for many and would become role models for many more to pursue their passion. But as discussed earlier, multiple challenges prevent students from pursuing Higher education in STEM. Accessibility is one of the significant issues. As we saw from the scientists in the first segment, disabilities can be of various types and may require different levels of assistance. Finding solutions may take some time, but we can start by playing our minor roles in making things accessible.</p>
+                  <p>However, a solution cannot be designed without understanding the problem. Most people are generally unaware of the challenges an individual with disabilities may face and how they can be helped. Hence, this leads to the development of stereotypes and ignorance towards individuals with disabilities. So, Creating awareness among the general public about the challenges faced by current students in STEM can help people design solutions and think with a new perspective while planning educational events, material, etc.</p>
+                  <p class="subSection"><b>Segment two - Highlighting Students with Disabilities</b></p>
+                  <p>With the Motto - <b>To Educate</b> the general public about the challenges currently faced by students pursuing higher education in STEM fields, create awareness about it and <b>Impact</b> their lives by spreading awareness about the possible solutions, we launched the second segment of the campaign. The second segment highlights the students with disabilities pursuing their higher education in STEM fields. The series explores their love for science, their motivation to pursue scientific research, their experience of being in STEM, things that made them feel comfortable or supported in their journey and their expectations or suggestions to improve the general accessibility.</p>
+                  <p>The students are interviewed through a google form survey. The form is designed to be easily accessible. The questions and the data in the form are available in text and audio format. The questions can be answered in text or as an audio note. To answer the questions in audio format, respondent has to add a plugin "Talk and Comment" in their Google Chrome browser. Note that we have verified the app; however, ultimately, the plugin is a third party application and should be used at the individual's own risk. Honouring the participants' privacy, the form allows them to submit answers to questions they are comfortable in. The form also provides an option to review the content about their information before it is released on social media.</p>
+                  <p>We also reached out to the iGEM's inclusion and diversity committee for seeking suggestions to improve the survey form. We got valuable guidance from Dr Anne S. Meyer (Chairperson I&D committee). Quoting a line from the email conversation with her -</p>
+                  <div class="testimonial">
+                    <div class="testimonialQuote">
+                      "How terrific to see that your team will be working to improve accessibility for disabled people in STEM! This is such a great idea, and I really appreciate that you reached out for advice."
+                    </div>
+                    <div class="testimonialSpeaker">
+                      - Dr Anne S. Meyer
+                    </div>
+                  </div>
+                  <p>We are thankful to the I&D committee for their valuable feedback to improve our survey form. We plan to continue this campaign even after the iGEM jamboree. Hence, the form is open to responses. If you know someone who identifies themselves as Disabled in STEM, please share this form with them. <a class="referenceLinks" href="https://forms.gle/jjXkuWu2ACDuGWn38">Click here to fill the form</a>.</p>
+                  <p>
+                    Each response enabled us to educate and create an impact on our society. The section exploring their passion for science unfurled the beauty of science and its potential, Inspiring people to learn and practice science. Actions that improved accessibility for our participants or made them feel supported can be practised by our society to create a supportive environment where everyone feels welcomed. There is still a lot more room for improvement in accessibility, but as Naoto Kan says - <em>"If you are unable to understand the cause of a problem, it is impossible to solve it."</em>, it is difficult for people without disabilities to design reliable solutions as they often fail to properly understand the problem. Hence, we have asked our participants who thoroughly understand the difficulties to provide us with some suggestions or express their
+                    expectations that our society could practice improving the general accessibility. The information obtained from this section's responses will help us propagate the solutions to the proper authorities to implement them and create a welcoming and inclusive atmosphere.
+                  </p>
+                  <div class="figures">
+                    <figure>
+                      <img src="" alt="[Poster of individual students]" />
+                      <figcaption></figcaption>
+                    </figure>
+                  </div>
+                  <p class="subSection"><b>Let's make STEM accessible together. </b></p>
+                  <p>We have compiled the data obtained in the survey to educate our society to take small actions to create a welcoming culture.</p>
+                  <p>Let's work together to create an inclusive workspace. We understand there is a long way to go, but a journey of a thousand miles starts with single steps. Let us see how we can take those small steps through our actions to begin our journey together.</p>
+                  <ul>
+                    <li>If you see that someone is struggling, don't hesitate to express your observation and offer help. Similarly, ask for help whenever and wherever you need it.</li>
+                    <li>If you are conducting a seminar, event etc. If the event permits, try to explore the opportunities of running it in hybrid mode (online cum offline) to be widely accessible. Additionally, it's better to provide a detailed schedule of any event well in advance so that people can plan out their medication and other programs accordingly. If you are an attendee, feel free to ask for the schedules if not provided. If you are uncomfortable travelling, enquire about the possibility of a live telecast or a recorded version being made available.</li>
+                    <li>As a teacher, please encourage students to reach out to you for any help about classes or anything they would like to share with you. Try to understand their stance and plan the teaching accordingly. At the same time, it's essential that, as a student, you reach out to your teacher if you are struggling with anything and need help.</li>
+                    <li>Encourage people from diverse backgrounds to take up leadership roles to influence people to act more profoundly to create an inclusive workspace.</li>
+                  </ul>
+                  <p>Some suggestions for educational organisations</p>
+                  <ul>
+                    <li>Set up a cell where you can discuss and meet people with similar interests, with similar abilities, share their experiences, challenges and understand each other. It can be a centre for diversity run by the organisation. The cell can also be the place that takes care of the additional accessories required to facilitate students, like providing a wheelchair etc.</li>
+                    <li>Educating staff (teaching and non-teaching) about disabilities and how to interact with the students equally. This can prevent the students from getting into uncomfortable situations.</li>
+                    <li>Having a specially trained consultant to guide students and staff can be made available in educational institutes.</li>
+                    <li>If your organisation provides any additional assistance/ scholarship/ facilities for people with disabilities, do highlight them on your website or make them easily accessible at one place so that maximum students can avail those facilities.</li>
+                  </ul>
+                  <p>Our small actions can play a pivotal role in someone's life. Many times, people do not need exceptional accessories but rather need some patience from you. Which I believe everyone can try to practice. If you need additional support or assistance, it does not make you any less competent or intelligent than others. Every individual requires a different form and level of support and help. It's crucial to communicate your problems and understand the challenges faced to work upon a possible solution and work it out together.</p>
+                  <p>Together, we can make Science more profound, robust, inclusive and accessible.</p>
+                  <p class="subSection"><b>Foldscope: A powerful device </b></p>
+                  <p>Education is a fundamental right, and every child has the right to get education. Due to supportive government policies like mid-day meals and distribution of school uniforms In recent years the number of children going to schools has increased. However does attending school guarantee quality education?. The UNICEF website says</p>
+                  <p>
+                    <b><em>“ Schooling does not always lead to learning. Worldwide, there are more non-learners in school than out of school.” </em></b><a href="https://www.unicef.org/education" class="referenceLinks">[4]</a>
+                  </p>
+                  <p>Many schools lack trained teachers and basic teaching facilities. There are ideal schools in place, but the cost of education is not affordable by all. This often prevents children from poor socio-economic backgrounds to lack quality education, preventing them from exploring their interests. An estimated 153 million children worldwide are orphans (UNICEF)<a class="referenceLinks" href="https://www.sos-usa.org/our-impact/focus-areas/advocacy-movement-building/childrens-statistics">[5]</a>. These children are often cared for by NGOs or government run orphanages. Most of these organisations depend on external funds, which are bare minimum to provide these children with their essential needs.</p>
+                  <p>
+                    There is one orphanage near our institute. The children over there seemed to lack something important, something crucial - Quality Education. On enquiry, we came to know that most of the students are enrolled in nearby schools. However, the facilities available there are minimal. Many primary schools don't have basic scientific tools like microscopes, mainly due to insufficient funds. This prevents these children from exploring science and their curiosity. In the past, a group of students have conducted short scientific workshops and demonstrations to ignite the scientific temper and interest in the children and enable them to appreciate the science around them. However, these workshops happened twice or thrice a year and often lasted for a maximum of four to five hours. The spark for science was ignited, but what next?, there was very little that
+                    these children would explore once we (organizing students) head back to our college.
+                  </p>
+                  <p>We started thing of ways where these children would be able to learn and explore nature by themselves. What if we equip them with the instruments to do science?. The idea was fascinating but equally challenging. Most of the scientific instruments are costly and are very delicate. We needed something cheap, something easy to use, something where the science done would be of more care than the instrument itself. We started searching for the existing solutions. While doing so, we came across this wonderful product that was designed to make science more accessible - The <b>Foldscope</b> by Manu Prakash and Jim Cybulski.</p>
+                  <p>Foldscope is a paper microscope assembled by paper folding (Origami). The device has a magnification power of 140X. It can be used to visualize bacterias, fabric, plant tissues and many more to explore the microscopic world around. Images produced by Foldscope can be easily projected on any surface like a book, wall by simply coupling it with a mobile phone or a light source. It also comes with the facility to easily attach the mobile camera to gain additional control on the captured image through the mobile phone camera, to record movies of a moving organism etc. <a href="https://www.foldscope.com/" class="referenceLinks">[6]</a></p>
+                  <p>Most importantly, the microscope is completely portable, waterproof, and doesn't require any sophisticated instruments to create slides. This further expands the potential of this device which can be carried in a small compass box. Can you guess the cost of such a powerful device??. It's just 2 US Dollars.</p>
+                  <p>Hurray! So there we were with the solution. Without further delay, we obtained some units of foldscopes and started exploring their potential. We were incredibly fascinated by the potential it had. The information booklet/user manual which came with the Foldscope was in English. As most of the children were enrolled in local government schools, where Bengali is the primary teaching language, they are often not comfortable in English. To overcome the barrier, we translated the manual to Bengali. We contacted the caretaker and expressed our willingness to conduct a workshop to demonstrate the use of this device, which was wholeheartedly welcomed.</p>
+                  <p>On the day of the workshop, we started by assembling the Foldscope. Given that it was complete paper origami, it was fun to assemble it.</p>
+                  <div class="figures">
+                    <figure style="width: 90%;">
+                      <img src="https://2021.igem.org/wiki/images/4/43/T--IISER_Kolkata--image-inclusivityFoldscape.png" alt="inclusivityFoldScope.png" />
+                      <figcaption>Foldscope being assembled: 1) The paper sheet has groves to cut out the paper fragments. 2)The fragments are torn out of the provided sheet 3) The paper pieces are folded to produce Foldscope.</figcaption>
+                    </figure>
+                  </div>
+                  <p>
+                    After assembling the device, we discussed about the microscopic world around us. We discussed the tiny size of bacterias, the ability to zoom into leaves, etc. They were amazed but could not really appreciate it as they had never visualized it earlier. So, we moved ahead to the fundamental part - magnifying things. We started by showing the pre-made slide of the fern rhizome. The beauty of cells arrangement and the level of magnification made them understand what we actually meant by the beauty of the microscopic world. We explained to them how they could focus the image and place sides. Now, it was time to explore; one of the students bought a leaf from a mango tree and said he wanted to see the stomata. He explained that he has studied in class the tiny pores on the leaf that act like plants noses to breathe. We went ahead to create a thin layer
+                    and taught them the process of creating a slide. We handed over the device to these students to mount the slides themselves and adjust the focus. They were really curious to visualize the pores. Finally, we were able to visualize the kidney-shaped stomata.
+                  </p>
+                  <div class="figures">
+                    <figure style="width: 80%;">
+                      <img src="" alt="" />
+                      <figcaption>Magnifying through the foldscope: Cells in a fern rhizome (Left), Mango leaf with stomata visible as translucent coffee beans.</figcaption>
+                    </figure>
+                  </div>
+                  <p>The glimpse of the stomata made them plunge in joy. They were curious to explore more. On asking what they would like to see next, a whole unique bunch of answers started coming up, from the bacteria in the water to the mask's fabric. We left the foldscopes with them to explore all their curiosity. Since then, children have used it to visualise various things taught in schools, from onion peel to pollen grains, and have explored their own interests.</p>
+                  <p>It was a deeply satisfying experience to have contributed to their life in some form.</p>
+                  <div class="figures">
+                    <figure>
+                      <img src="https://2021.igem.org/wiki/images/c/ce/T--IISER_Kolkata--image-EducationShreyashOrphanage02.jpg" alt="ShreyashOrphanage02.jpg" />
+                      <figcaption>Photo from the Ashram (Orphanage): Four individuals are sitting around in chairs around a table. A boy from an orphanage is watching through the foldscope, while the caretaker (old man) is waiting for his chance to see through the device.</figcaption>
+                    </figure>
+                  </div>
+                  <p class="subSection"><b>Future prospects </b></p>
+                  <p>
+                    From the experience of this workshop, where the caretaker, who is an old man, was equally interested and amazed by the microscopic visuals which he had never seen in his lifetime. we understood that the potential of this Foldscope is not just lifted to learning science for students but is far beyond to explore the nature around. It can be easily used by anyone, from a small kid to an old man. Why not give a glimpse of the microscopic world to old people as well? Why not engage them in discovering a new perspective of life?. We were unable to reach old-age homes due to covid restrictions, but we look forward to reaching out to them as soon as possible. Foldscope offers a tremendous opportunity to everyone to discover and participate in creating new knowledge without any barrier. We would encourage future iGEM teams to use this device as an
+                    opportunity to educate and empower all people to practice science.
+                  </p>
+                </div>
+              </div>
+            </section>
+            <!-- 2. Digital Accessibility -->
+            <section id="run2Section" class="scrollSection">
+              <div class="centerImage">
+                <div class="highlightYellow mediumText textShadow"><b>Digital Accessibility</b></div>
+              </div>
+              <div class="contentSection">
+                <div class="boxContent">
+                  <p>From shopping for your favorite goods to choosing a suitable life partner everything is getting digitalised. From the beginning of the COVID pandemic a large section of the world was under lockdown, where the digitalization has reached its peak, from schooling to corporate offices everything has shifted online. Digitalization has created a plethora of opportunities. But in this long run of digitalization are we leaving someone behind? Are we creating additional challenges for someone?. Probably yes, people with visual, hearing or cognitive disabilities may struggle to access content on these digital platforms. Moreover, senior citizens whose auditory and visual capabilities decline with age also face challenges to access digital platforms. So what should be done?</p>
+                  <p>To improve accessibility for our content on websites and our social media platforms, we implemented some healthy practices. Let's discuss each of these practices and their outcome in detail.</p>
+                  <p class="subSection"><b>Use of colours </b></p>
+                  <p>About 8% of Аll men and about 0.5% of all women suffer from colour blindness (colour vision deficiency). This means changes that your neighbour or one of your classmates is colourblind are very high. Individuals with color deficiency are unable to distinguish between one or more colours based on their type of defect. There are a few different types of colour deficiency that can be broadly separated into three categories: red-green colorblindness, blue-yellow colour blindness, and the much more rare complete colour blindness. 99% of all colourblind people are suffering from red-green colorblindness. Inspired by the work of the iGEM Leiden 2020 team, we have ensured that our wiki is also colourblind friendly. By incorporating the following points.</p>
+                  <ol>
+                    <li></li>
+                    <li></li>
+                  </ol>
+                </div>
+              </div>
+            </section>
+            <!-- 3. Gene Gala -->
+            <section id="run3Section" class="scrollSection">
+              <div class="centerImage">
+                <div class="highlightYellow mediumText textShadow"><b>Overview</b></div>
+              </div>
+              <div class="contentSection">
+                <div class="boxContent">
+                  <p>A large section of the global population doesn’t have access to the most basic science education and tools. Due to which they are unable to participate in creating new knowledge. We here at IISER Kolkata understand the need to create a more welcoming scientific atmosphere where everyone should practice science irrespective of their background. We have tried to ensure that we can reach the maximum number of people and empower them to start a conversation in science, think scientifically, and appreciate nature and science’s beauty. To achieve this motto, we conducted various outreach activities, which are briefly discussed below.</p>
+                </div>
+              </div>
+            </section>
+            <!-- 4. Educating our senior citizens -->
+            <section id="run4Section" class="scrollSection">
+              <div class="centerImage">
+                <div class="highlightYellow mediumText textShadow"><b>Overview</b></div>
+              </div>
+              <div class="contentSection">
+                <div class="boxContent">
+                  <p>A large section of the global population doesn’t have access to the most basic science education and tools. Due to which they are unable to participate in creating new knowledge. We here at IISER Kolkata understand the need to create a more welcoming scientific atmosphere where everyone should practice science irrespective of their background. We have tried to ensure that we can reach the maximum number of people and empower them to start a conversation in science, think scientifically, and appreciate nature and science’s beauty. To achieve this motto, we conducted various outreach activities, which are briefly discussed below.</p>
+                </div>
+              </div>
+            </section>
+            <!-- 5. Miscellaneous -->
+            <section id="run5Section" class="scrollSection">
+              <div class="centerImage">
+                <div class="highlightYellow mediumText textShadow"><b>Overview</b></div>
+              </div>
+              <div class="contentSection">
+                <div class="boxContent">
+                  <p>A large section of the global population doesn’t have access to the most basic science education and tools. Due to which they are unable to participate in creating new knowledge. We here at IISER Kolkata understand the need to create a more welcoming scientific atmosphere where everyone should practice science irrespective of their background. We have tried to ensure that we can reach the maximum number of people and empower them to start a conversation in science, think scientifically, and appreciate nature and science’s beauty. To achieve this motto, we conducted various outreach activities, which are briefly discussed below.</p>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+      <!-- /content -->
+
+      <!-- reference -->
+      <section class="reference">
+        <div class="wave topWave">
+          <!-- Top Wave  -->
+        </div>
+        <div class="indentContainer">
+          <h3>References</h3>
+        </div>
+      </section>
+      <!-- /reference -->
+
+      <!-- footer -->
+      <footer>
+        <div class="theFooter">
+          <div class="wave bottomWave"></div>
+          <div class="indentContainer">
+            <div class="contactHead"><b>Contact us at</b></div>
+            <div class="contacts">
+              <a href="https://www.instagram.com/igem.iiserk/"> <img src="https://2021.igem.org/wiki/images/e/ec/T--IISER_Kolkata--image-instagramIcon.png" alt="instagram" /></a>
+              <a href="https://www.facebook.com/iGEM.IISERK"> <img src="https://2021.igem.org/wiki/images/0/02/T--IISER_Kolkata--image-facebookIcon.png" alt="facebook" /></a>
+              <a href="https://twitter.com/iGEM_IISERKol?s=08"> <img src="https://2021.igem.org/wiki/images/e/e2/T--IISER_Kolkata--image-twitterIcon.png" alt="twitter" /></a>
+              <a href="https://www.linkedin.com/in/igem-iiser-kolkata-189707189/"> <img src="https://2021.igem.org/wiki/images/1/15/T--IISER_Kolkata--image-linkedinIcon.png" alt="linkedIn" /></a>
+            </div>
+            <div class="footerHead">
+              <h3>Our Sponsors...</h3>
+            </div>
+            <div class="sponsors">
+              <div style="border-right: 3px solid #5e8dd1;">
+                <img src="https://2021.igem.org/wiki/images/9/90/T--IISER_Kolkata--image-igemiiserk-2x.png" alt="IGEM-IISERKolkata" />
+              </div>
+              <div>
+                <div>
+                  <img src="https://2021.igem.org/wiki/images/f/f7/T--IISER_Kolkata--image-promegaLogo.png" alt="Promega" />
+                  <img src="https://2021.igem.org/wiki/images/f/fb/T--IISER_Kolkata--image-RCTLogo.png" alt="RCT" />
+                  <img src="https://2021.igem.org/wiki/images/e/e3/T--IISER_Kolkata--image-iiserkLogo.png" alt="IISERKolkata" />
+                  <img class="hLogo" src="https://2021.igem.org/wiki/images/c/cb/T--IISER_Kolkata--image-IDTLogo.png" alt="IDT" />
+                  <div class="flexBreak"></div>
+                  <img class="hLogo" src="https://2021.igem.org/wiki/images/4/46/T--IISER_Kolkata--image-bioLabsLogo.png" alt="NewEnglandBioLabs" />
+                  <img class="hLogo" src="https://2021.igem.org/wiki/images/6/68/T--IISER_Kolkata--image-benchlingLogo.png" alt="Benchling" />
+                  <img class="hLogo" src="https://2021.igem.org/wiki/images/0/0a/T--IISER_Kolkata--image-twistLogo.png" alt="TWIST" />
+                  <img src="https://2021.igem.org/wiki/images/0/0b/T--IISER_Kolkata--image-igemLogo.png" alt="IGEM" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <!-- /footer -->
+    </div>
+
+    <!-- script for scroll actives -->
+    <script>
+      const mainNavLinks = document.querySelectorAll(".scrollID");
+
+      var topOff = 200;
+
+      if (window.matchMedia("(max-width: 980px)").matches) {
+        var topOff = 500;
+      }
+
+      function highlightActiveSection() {
+        var fromTop = window.pageYOffset + topOff;
+        var r = 0;
+
+        for (r = 0; r < mainNavLinks.length; r++) {
+          var navD = mainNavLinks[r];
+          var section = document.getElementById(navD.id + "Section");
+          if (section.offsetTop <= fromTop) {
+            if (section.offsetTop + section.offsetHeight > fromTop) {
+              navD.classList.add("scrollID-active");
+            } else {
+              navD.classList.remove("scrollID-active");
+            }
+          } else {
+            navD.classList.remove("scrollID-active");
+          }
+        }
+      }
+    </script>
+    <!-- /script for scroll actives -->
+
+    <!-- hide on Scroll -->
+    <script>
+      // hide on scroll
+      var prevScrollPos = window.pageYOffset;
+
+      function hideOnScroll() {
+        if (window.matchMedia("(max-width: 980px)").matches) {
+          var currentScrollPos = window.pageYOffset;
+          if (prevScrollPos > currentScrollPos) {
+            document.getElementById("scrollHide").style.top = "0.8%";
+          } else {
+            document.getElementById("scrollHide").style.top = "-50vh";
+          }
+          prevScrollPos = currentScrollPos;
+        }
+      }
+    </script>
+    <!-- /hide on scroll -->
+
+    <!-- script for collapsibles -->
+    <script>
+      var collapsibles = document.querySelectorAll(".collapsible");
+
+      function removeCollapsibleExpanded(notRemove) {
+        collapsibles.forEach((collD) => {
+          if (collD != notRemove) {
+            collD.classList.remove("collapsible--expanded");
+            collD.querySelector(".collapsibleToggler").innerHTML = "+";
+          }
+        });
+      }
+
+      collapsibles.forEach((coll) =>
+        coll.querySelector(".collapsible-header").addEventListener("click", function () {
+          removeCollapsibleExpanded(coll);
+          coll.classList.toggle("collapsible--expanded");
+
+          if (coll.querySelector(".collapsibleToggler").innerHTML == "+") {
+            coll.querySelector(".collapsibleToggler").innerHTML = "-";
+          } else {
+            coll.querySelector(".collapsibleToggler").innerHTML = "+";
+          }
+        })
+      );
+    </script>
+    <!-- /script for collapsibles -->
+
+    <!-- /IISER KOLKATA CONTAINER -->
+
+    <!-- JS -->
+    <!-- <script src="https://2021.igem.org/Template:IISER_Kolkata/js"></script> -->
+    <script src="app.js"></script>
+    <!-- /JS -->
+  </body>
+</html>
