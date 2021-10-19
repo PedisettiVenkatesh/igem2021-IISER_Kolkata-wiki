@@ -1120,7 +1120,7 @@ a.referenceLinks {
 }
 
 .boxContent ol img {
-  padding: 0 1rem;
+  /* padding: 0 1rem; */
 }
 
 .boxContent li {
@@ -1232,6 +1232,20 @@ figcaption {
 
 .verticalLongFigure figure {
   width: 30%;
+}
+
+.horizontalScrollFigures {
+  overflow-x: auto;
+  display: flex;
+  scrollbar-width: thin;
+  scrollbar-color: tomato var(--color-blue);
+}
+
+.horizontalScrollFigures img {
+  padding: 5px;
+  width: 275px;
+  border: none;
+  border-radius: 0;
 }
 
 @media screen and (max-width: 980px) {
