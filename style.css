@@ -1681,3 +1681,48 @@ figcaption {
   }
 }
 /* /hp Tree */
+
+/* pageQuote */
+.pageQuote {
+  font-size: 2.8rem;
+  text-align: center;
+  color: #093349;
+  font-family: cursive;
+  text-shadow: 1px 1px 10px #000;
+  margin-top: 1rem;
+}
+
+.pageQuote-Name {
+  text-align: right !important;
+}
+/* /pageQuote */
+
+/* treeDropdown */
+.treeDropdownContainer {
+  display: grid;
+  grid-template-columns: 25% 50% 25%;
+  margin: 2rem 1rem 5rem !important;
+  padding-bottom: 10rem;
+}
+
+.treeDropdownContainer > div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.treeDropdownContainer .collapsible {
+  position: relative;
+  font-size: 1rem !important;
+  text-align: left !important;
+}
+
+.treeDropdownContainer .collapsible-content {
+  position: absolute;
+  width: 100%;
+  background: #093349;
+  z-index: 4;
+  color: #fff;
+}
+/* /treeDropdown */
