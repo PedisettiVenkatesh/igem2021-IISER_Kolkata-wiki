@@ -162,40 +162,124 @@
             <div class="sideNav sticky">
               <!-- navigate in Page -->
               <ul>
-                <li><a id="run" class="scrollID" onclick="scrollToID('runSection')">Overview</a></li>
+                <li><a id="run" class="scrollID" onclick="scrollToID('runSection')">Construction of the model</a></li>
+                <li><a id="run1" class="scrollID" onclick="scrollToID('run1Section')">Assumptions</a></li>
+                <li><a id="run2" class="scrollID" onclick="scrollToID('run2Section')">Governing Equations</a></li>
+                <li><a id="run3" class="scrollID" onclick="scrollToID('run3Section')">Parameter Set</a></li>
+                <li><a id="run4" class="scrollID" onclick="scrollToID('run4Section')">Initialisation of Parameters</a></li>
               </ul>
             </div>
             <!-- /sideNav -->
           </div>
           <div>
-            <!-- Overview -->
+            <!-- Construction of the model -->
             <section id="runSection" class="scrollSection">
               <div class="centerImage">
-                <div class="highlightYellow mediumText textShadow"><b>overview</b></div>
+                <div class="highlightYellow mediumText textShadow"><b>Construction of the model</b></div>
               </div>
               <div class="contentSection">
                 <div class="boxContent">
-                  <p>Lorem ipsum dolor sit.</p>
-                  <table width="80%">
-                    <tr>
-                      <th>Lipid</th>
-                      <th>Structure</th>
-                      <th>Net charge (at pH 7)</th>
-                      <th>Tm (K)</th>
-                    </tr>
-                    <tr>
-                      <td>POPE</td>
-                      <td>16:0 /18:1 PE</td>
-                      <td>0</td>
-                      <td>298</td>
-                    </tr>
-                    <tr>
-                      <td>POPG</td>
-                      <td>16:0 /18:1 PG</td>
-                      <td>-1</td>
-                      <td>269</td>
-                    </tr>
-                  </table>
+                  <p>Here we consider a 1mm \(\times\) 1mm two dimensional grid segment of the capillary tube horizontally centered around the biofilm. The biofilm is a semicircle attached to the bottom of this grid setup with its centre at 0.5mm from the left end and its radius 0.3mm. This biofilm consists of four layers of with a varying degree of live and dead bacteria (initially there is no dead bacteria in these layers). This biofilm dome is treated with a flowing solvent containing the antimicrobial agent of choice (here it is Nisin). The fluid dynamics follows Navier- Stokes equation with the added condition of incompressiblity. We map this segement of flow into a 128 $\times$ 128 matrix-grid with all the necessary parameter defined is a their corresponding matrices of the same dimensions.</p>
+                </div>
+              </div>
+            </section>
+            <!-- 1. Assumptions -->
+            <section id="run1Section" class="scrollSection">
+              <div class="centerImage">
+                <div class="highlightYellow mediumText textShadow"><b>Assumptions</b></div>
+              </div>
+              <div class="contentSection">
+                <div class="boxContent">
+                  <ul>
+                    <li>The growth of the biofilm in the treatment phase is negligible.</li>
+                    <li>The extra cellular polymeric substances are absent.Film only consists of live and dead bacteria.</li>
+                    <li>Biocide penetrates the biofilm mainly by diffusion.</li>
+                  </ul>
+                </div>
+              </div>
+            </section>
+            <!-- 2. Governing Equations -->
+            <section id="run2Section" class="scrollSection">
+              <div class="centerImage">
+                <div class="highlightYellow mediumText textShadow"><b>Governing Equations</b></div>
+              </div>
+              <div class="contentSection">
+                <div class="boxContent">
+                  <p><b>The reaction–diffusion–advection equations for d</b>, \(\phi_{bl}\), \(\phi_{bd}\) :</p>
+                  \begin{array}{l} \frac{\partial}{\partial t}\left(\phi_{s} d\right)+\nabla \cdot\left(\phi_{s} \mathbf{v} d-D_{e} \phi_{s} \nabla d\right)=-\phi_{b l} \frac{K_{1} d}{d_{0}+d}\rightarrow (1) \\ \frac{\partial \phi_{b l}}{\partial t}+\nabla \cdot\left(\phi_{b l} \mathbf{v}\right)=\nabla \cdot\left(\Lambda \phi_{b l} \nabla \frac{\delta f}{\delta \phi_{b l}}\right)-\phi_{b l} \frac{K_{2} d}{K_{d}+d}\rightarrow (2) \\ \frac{\partial \phi_{b d}}{\partial t}+\nabla \cdot\left(\phi_{b d} \mathbf{v}\right)=\nabla \cdot\left(\Lambda \phi_{b d} \nabla \frac{\delta f}{\delta \phi_{b d}}\right)+\phi_{b l} \frac{K_{2} d}{K_{d}+d}\rightarrow (3) \end{array}
+                  <p><b>Chemical free energy density equation:</b></p>
+                  $$ f\left(\phi_{b}\right)=k_{B} T\left[\frac{\Gamma_{1}}{2}\left\|\nabla \phi_{b}\right\|^{2}+\Gamma_{2}\left(\frac{1}{N} \phi_{b} \ln \phi_{b}+\left(1-\phi_{b}\right) \ln \left(1-\phi_{b}\right)+\chi \phi_{b}\left(1-\phi_{b}\right)\right)\right]\rightarrow(4) $$
+                  <p><b>Chemical potenital equation:</b></p>
+                  $$ \frac{\delta f}{\delta \phi_{b}}=k_{B} T\left[-\Gamma_{1} \Delta \phi_{b}+\Gamma_{2}\left(\frac{1}{N}\left(1+\ln \phi_{b}\right)-\ln \left(1-\phi_{b}\right)-1+\chi\left(1-2 \phi_{b}\right)\right)\right] $$
+                  <p><em>from (4) and by adding (2) and (3) we get,</em></p>
+                  $$ \frac{\partial \phi_{b}}{\partial t}+\nabla \cdot\left(\phi_{b} \mathbf{v}\right)=\nabla \cdot\left(\Lambda \phi_{b} \nabla \frac{\delta f}{\delta \phi_{b}}\right) $$
+                  <p><b>Modified Navier Stokes Equation:</b></p>
+                  $$ \begin{array}{l} \nabla \cdot \mathbf{v}=0 \\ \rho\left(\frac{\partial \mathbf{v}}{\partial t}+\mathbf{v} \cdot \nabla \mathbf{v}\right)=\nabla \cdot(v \mathbf{D})-\nabla p+\frac{\delta f}{\delta \phi_{b}} \nabla \phi_{b} \end{array} $$
+                  <p>with:</p>
+                  $$ v=v\left(\phi_{b d}, \phi_{b l}, \phi_{s}, v_{b}, v_{s}, d\right), \quad \rho=\phi_{b} \rho_{b}+\phi_{s} \rho_{s}, \quad \mathbf{D}=\frac{1}{2}\left(\nabla \mathbf{v}+\nabla \mathbf{v}^{T}\right) $$
+                  <p><b>Equation for Effective Diffusion Coefficient:</b></p>
+                  $$ D_{e}=\frac{2 D_{d}^{0}\left(1-0.4{\phi}_{b}\right)}{\left(2+0.4{\phi}_{b}\right)\left(\phi_{s}+0.6{\phi}_{b} / D_{p r}\right)} $$
+                  <p><b>Effect of viscosity of the material:</b></p>
+                  $$ v=\phi_{b} v_{b}+\phi_{s} v_{s} $$
+                  <p><b>Numerical methods:</b></p>
+                  $$ \tilde{\mathbf{x}}=\frac{\mathbf{x}}{h_{0}}, \quad \tilde{t}=\frac{t}{t_{0}}, \quad \tilde{\mathbf{v}}=\frac{\mathbf{v} t_{0}}{h_{0}}, \quad \tilde{p}=\frac{p t_{0}^{2}}{\rho_{0} h_{0}^{2}}, \quad \tilde{d}=\frac{d}{d_{0}} $$
+                </div>
+              </div>
+            </section>
+            <!-- 3. Parameter Set -->
+            <section id="run3Section" class="scrollSection">
+              <div class="centerImage">
+                <div class="highlightYellow mediumText textShadow"><b>Parameter Set</b></div>
+              </div>
+              <div class="contentSection">
+                <div class="boxContent">
+                  <p></p>
+                  \begin{array} \hline Symbol & Parameter & Value & Unit \\ \hline$T$ & Temperature & 296 & Kelvin \\ $\Gamma_{1}$ & Distortional energy & $8 \times 10^{6}$ & $\mathrm{~kg} \mathrm{~m} \mathrm{~s}^{-2}$ \\ $\Gamma_{2}$ & Strength of the bulk mixing energy & $3 \times 10^{17}$ & $\mathrm{~kg} \mathrm{~m} \mathrm{~s}^{-2}$ \\ $\chi$ & Flory-Huggins mixing parameter & $0.55$ & \multicolumn{1}{l}{ dimensionless } \\ $N$ & Generalized polymerization parameter & $1 \times 10^{3}$ & dimensionless \\ $\Lambda$ & Mobility parameter & $1 \times 10^{-9}$ & $\mathrm{~kg}^{-1} \mathrm{~m}^{3} \mathrm{~s}$ \\ $v_{b}$ & Viscosity of the bacteria & 5 & $\mathrm{~kg} \mathrm{~m}^{-1} \mathrm{~s}^{-1}$ \\ $v_{s}$ & Viscosity of the solvent & $1.002 \times 10^{-3}$ & $\mathrm{~kg} \mathrm{~m}^{-1} \mathrm{~s}^{-1}$ \\ $\rho_{b}$ & Biofilm density & $1 \times 10^{3}$ &
+                  $\mathrm{~kg} \mathrm{~m}^{-3}$ \\ $\rho_{s}$ & Solvent density & $1 \times 10^{3}$ & $\mathrm{~kg} \mathrm{~m}^{-3}$ \\ $D_{C}^{0}$ & Aqueous diffusion coefficient of chlorine & $1.9 \times 10^{-9}$ & $\mathrm{~m}^{2} \mathrm{~s}^{-1}$ \\ $D_{Q}^{0}$ & Aqueous diffusion coefficient of QAC & $0.427 \times 10^{-9}$ & $\mathrm{~m}^{2} \mathrm{~s}^{-1}$ \\ $D_{N}^{0}$ & Aqueous diffusion coefficient of Nisin & $0.19 \times 10^{-9}$ & $\mathrm{~m}^{2} \mathrm{~s}^{-1}$ \\ $K_{1}$ & Maximum biocide consumption rate for chlorine and QAC & $2 \times 10^{-4}$ & $\mathrm{~kg} \mathrm{~m}^{-3} \mathrm{~s}^{-1}$ \\ $K_{1}$ & Maximum biocide consumption rate for nisin & $2 \times 10^{-7}$ & $\mathrm{~kg} \mathrm{~m}^{-3} \mathrm{~s}^{-1}$ \\ $d_{0}$ & Biocide Monod half-saturation coefficient & $1 \times 10^{-3}$ & $\mathrm{~kg} \mathrm{~m}^{-3}$ \\ $K_{2}$ &
+                  Maximum decay rate of live bacteria (due to biocide action) & $2 \times 10^{-5}$ & $\mathrm{~s}^{-1}$ \\ $K_{d}$ & Live bacteria decay Monod half-saturation coefficient & $1 \times 10^{-5} & $\mathrm{~kg} \mathrm{~m}^{-3}$ \\ $\bar{d}$ & Reference biocide concentration for weakening biomaterial & $5 \times 10^{-3}$ & $\mathrm{~kg} \mathrm{~m}^{-3}$ \\ $\bar{T}$ & Reference time scale for weakening biomaterial & 120 & $\mathrm{~s}$ \\ $h_{0}$ & Characteristic length scale & $10^{-3}$ & $\mathrm{~m}$ \\ $t_{0}$ & Characteristic time scale & $5 \times 10^{-2}$ & $\mathrm{~s}$ \\ $\rho_{0}$ & Characteristic density scale & $1 \times 10^{3}$ & $\mathrm{~kg} \mathrm{~m}^{-3}$ \\ \hline \end{array}
+                </div>
+              </div>
+            </section>
+            <!-- 4. Initialisation of Parameters -->
+            <section id="run4Section" class="scrollSection">
+              <div class="centerImage">
+                <div class="highlightYellow mediumText textShadow"><b>Initialisation of Parameters</b></div>
+              </div>
+              <div class="contentSection">
+                <div class="boxContent">
+                  <p>The following parameter matrices need to be initialised before running the simulation:</p>
+                  <ul>
+                    <li>Volume fraction of live bacteria</li>
+                    <li>Volume fraction of dead bacteria</li>
+                    <li>Volume fraction of total bacteria</li>
+                    <li>Volume fraction of solvent</li>
+                    <li>Concentration of Nisin</li>
+                    <li>Horizontal and Vertical components of fluid velocity in the system</li>
+                    <li>Density across the system</li>
+                    <li>Effective diffusion Coefficient</li>
+                    <li>Pressure across the system</li>
+                    <li>Viscosity across the system</li>
+                    <li>Chemical potential</li>
+                  </ul>
+                  <p class="subSection"><b>Setting up the Initial Velocity of the fluid</b></p>
+                  <p><b>Horizontal component of velocity</b></p>
+                  <p>The Horizontal component of velocity of solution at every point will be symmetric about the vertical line passing through the centre of the biofilm. Hence the velocity profile of the left half is replicated in the right half.</p>
+                  <p><u>The first and the last of the 128 columns</u> has a quadratic velocity profile with bottom-most layer having zero velocity and top layer having a maximum speed of 2cm/s.</p>
+                  <p><u>The column through the centre of the biofilm</u> has zero horizontal velocity in the innermost layer of biofilm and maximum velocity at the top. The horizontal velocity variation in this column is bi-quadratic.</p>
+                  <p><u>For the horizontal component of velocity in all the rows above the biofilm</u> From the equation of continuity we see that for a particular row, speed of the fluid increases as we move towards the centre. This is because height available for the fluid decreases (due to presence of biofilm) as we move towards the centre. So our velocity profile will have a maximum in the middle and minimum at the ends for a given row in the grid map. Because the incompressibility condition has to be satisfied, these three points have to be turning points.The simplest variation that has three turning points (leftmost, rightmost and at the middle) is a bi-quadratic. The horizontal component of velocity in all the rows above the biofilm will have bi-quadratic variation symmetric about the middle.</p>
+                  <p><u>In the middle, right above the centre of the biofilm</u> using equations of continuity and the fact that the velocity will be purely horizontal at the top of the dome of the biofilm .There will be a quadratic variation of this horizontal velocity from the top of the solvent flow to the innermost layer of the biofilm, with the innermost layer of biofilm having 0 velocity and top layer having maximum speed.With this, we calculate a new maximum speed at this column location.</p>
+                  <p><u>In gridpoints to the left and right of the biofilm</u> In a particular row below the height of 0.3mm from the bottom, the velocity varies in a bi-quadratic fashion from the leftmost gridpoint having the maximum velocity to the point in the innermost interface of biofilm having zero velocity. This can be extended to right of the biofilm due to symmetry.</p>
+                  <p><b>Vertical component of velocity</b></p>
+                  <p>The vertical component of velocity of solution at every point will be symmetric in magnitude about the vertical line passing through the centre of the biofilm but opposite in direction i.e, in the left half the velocity direction is upwards while in the right half its downwards. Hence the velocity profile of the left half is replicated in the right half in magnitude and reversed in direction.</p>
+                  <p><u>The vertical velocity of the innermost layer of the biofilm</u> is obtained by multiplying the slope of inner layer at each grid point to the horizontal velocity component.</p>
+                  <p><u>The vertical velocity of the other outer layers of the biofilm</u> is calculated from the incompressibility of the fluid condition.</p>
+                  <p><u>In other regions</u> the vertical velocity varies quadratically.</p>
+                  <p class="subSection"><b>Setting up concentration grid</b></p>
+                  <p><b>Bacterial and solvent concentration:</b> The biofilm has four layers. The outermost layer has bacterial volume fraction of 0.1, the layer beneath has 0.2,the layer beneath the second 0.3 and the innermost layer has 0.4. Inside these four layers the bacterial volume fraction is 1. Everywhere else in the grid the bacterial volume fraction is zero.</p>
+                  <p>Solvent volume fraction= 1-bacterial volume fraction.</p>
+                  <p>Initially there is no dead bacteria, and bacterial volume fraction is live bacterial volume fraction.</p>
+                  <p><b>Antimicrobial Concentration(matrix 'd'):</b> Same throughout the grid</p>
+                  <p>Matrix initialisation for viscosity, density, pressure and effective diffusion coefficient can be easily done using governing equations.</p>
                 </div>
               </div>
             </section>
@@ -337,6 +421,7 @@
     <!-- JS -->
     <!-- <script src="https://2021.igem.org/Template:IISER_Kolkata/js"></script> -->
     <script src="app.js"></script>
+    <script src="https://2021.igem.org/common/MathJax-2.5-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <!-- /JS -->
   </body>
 </html>
