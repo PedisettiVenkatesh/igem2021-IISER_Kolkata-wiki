@@ -1211,7 +1211,7 @@ figure {
 
 figure img {
   width: 100%;
-  max-height: 90vh;
+  /* max-height: 90vh; */
   border-radius: 25px;
   border: 5px solid #000;
 }
@@ -1464,6 +1464,12 @@ figcaption {
 
 .collapsibleDocument-Collapsibles .collapsible.collapsible--expanded .collapsible-header {
   background: #aaa;
+}
+
+@media screen and (max-width: 980px) {
+  .collapsibleDocuments {
+    width: 95%;
+  }
 }
 /* /collapsibleDocuments */
 
