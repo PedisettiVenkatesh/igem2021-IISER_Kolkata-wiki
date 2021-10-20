@@ -74,7 +74,7 @@
                 <div class="navDropList">
                   <ul>
                     <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Description">Description</a></li>
-                    <!-- <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Design">Design</a></li> -->
+                    <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Design">Design</a></li>
                     <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Contribution">Contribution</a></li>
                     <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Engineering">Engineering</a></li>
                     <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Improve">Improvement</a></li>
@@ -102,6 +102,10 @@
                 <div class="navDropList">
                   <ul>
                     <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Model">Mathematical Modeling</a></li>
+                    <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Molecular_Dynamics">Molecular Dynamics</a></li>
+                    <li><a href="https://2021.igem.org/Team:IISER_Kolkata/GeneRegulation">Gene Regulation</a></li>
+                    <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Biofilm_Degradation">Biofilm Degradation</a></li>
+                    <li><a href="https://2021.igem.org/Team:IISER_Kolkata/PopulationDynamics">Population Dynamics</a></li>
                   </ul>
                 </div>
               </a>
@@ -162,18 +166,106 @@
               <!-- navigate in Page -->
               <ul>
                 <li><a id="run" class="scrollID" onclick="scrollToID('runSection')">Overview</a></li>
+                <li><a id="run1" class="scrollID" onclick="scrollToID('run1Section')">Treatment</a></li>
+                <li><a id="run2" class="scrollID" onclick="scrollToID('run2Section')">Detection</a></li>
               </ul>
             </div>
             <!-- /sideNav -->
           </div>
           <div>
+            <!-- Overview -->
             <section id="runSection" class="scrollSection">
               <div class="centerImage">
                 <div class="highlightYellow mediumText textShadow"><b>Overview</b></div>
               </div>
               <div class="contentSection">
                 <div class="boxContent">
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, ex aliquid. Corporis.</p>
+                  <p>
+                    With a population of 138 crores, India is not only the second-most populous country <a class="referenceLinks" href="http://www.worldometers.info/world-population/india-population/">[1]</a> but also the <b>largest producer and consumer of milk-producing 187 million metric tons</b> of milk and <b>consuming 81 million metric tonnes</b> alone in 2020 <a class="referenceLinks" href="">[2]</a> <a class="referenceLinks" href="">[3]</a>. Also, the country possesses around <b>145.12 million female cows</b> that make up the largest dairy industry <a class="referenceLinks" href="">[4]</a>. However, in a country that feeds the world milk, the health of dairy cows are neglected. Most of the detection techniques are too expensive and inaccessible to be used by the small scale dairy farmers who contribute maximum of the milk production in a developing country
+                    like India and the treatment techniques involved use antibiotics blatantly without any regulation. We have thus narrowed down on one of the most crippling diseases of the dairy economy of the country - <b>Bovine Mastitis</b>.
+                  </p>
+                  <p>Bovine mastitis is often called the silent killer of cows. It occurs in four stages: <b>infection, subclinical bovine mastitis, clinical bovine mastitis and recurrent clinical mastitis</b> <a class="referenceLinks" href="">[5]</a>. In the infection stage the pathogens infect the cow mostly through the teats of the udder. In the subclinical stage, even though the infection has manifested, no visible symptoms neither in the cow nor the milk is observed. In the clinical stage of the disease, the visible symptoms appear like redness, heat and pain in the udder and formation of pus and watery appearance of the milk produced by the diseased cow. In the recurrent clinical mastitis stage, the infection advances to an extreme chronic stage. It becomes extremely difficult to treat the cow in this stage and the cow is culled.</p>
+                  <p>A problem we came across after our initial research and talking to farmers was the method that was employed to treat the disease. India is one of the leading consumers of antibiotics and most of these antibiotics are pumped into the dairy and livestock industry. These antibiotics mainly belong to the <b>beta-lactamase class</b> of antibiotics which are normally used as the last-resort antibiotics. The rampant usage of antibiotics in treating the clinical stages of the disease has not only led to the causative pathogens of the disease becoming antimicrobial-resistant but also posed a general danger to people ingesting milk.</p>
+                  <p>During our interactive sessions with dairy farmers, veterinarian doctors and scientists, it was reiterated that S.aureus is the most dominant disease-causing bacteria of subclinical bovine mastitis and killing of <b>S.aureus</b> and <b>S.uberis</b> will effectively be able to cure the disease in most cases. Hence we chose to target S.aureus and S.uberis through our treatment technique to cure the disease.</p>
+                  <p>
+                    Now statistical data shows that there is a higher prevalence of subclinical bovine mastitis in cows in India <a class="referenceLinks" href="https://pubmed.ncbi.nlm.nih.gov/25407741/">[6]</a>. But unfortunately, it is also the hardest to identify the disease in the subclinical bovine mastitis stage as the symptoms are invisible under the naked eye. To treat the disease efficiently it is also very important to employ an efficient and early detection of bovine mastitis disease. Certain bovine mastitis detection tests like the <b>Somatic cell count (SCC) test, California Mastitis Test(CMT)</b> are available in the current world but are either too expensive or inaccessible to the small scale dairy farmers of our country. Also, these tests are not very accurate and render false-positive results too. Hence, it is the subclinical bovine mastitis stage
+                    that we wish to target as it manifests in cows without any symptoms. On subsequent milking of a healthy cow after an infected cow, the disease mainly spreads through the hands of the unsuspecting milker or the milking apparatus if it is not sanitised after every milking.
+                  </p>
+                  <p>On foraging through already documented and currently in use methods of detection of bovine mastitis, we found the California Mastitis Test(CMT) to be the one frequently employed. However, on talking to small scale dairy farmers in India, we discovered that most of them had never heard of the test leading us to the conclusion that the test was not very commonly deployed in a developing country like India. The CMT is also very subjective, relying on the interpretation of the colour of the sample to correspond to the stage of the disease. Also, lactating cows gave false positives when subjected to the CMT.</p>
+                  <p>In the light of these concerns, we have decided to treat the disease without the usage of antibiotics. Later, we also intend to develop a cheap, easy to use, real-time detection kit to detect subclinical bovine mastitis. The fundamentals upon which the test kit works can be optimised to detect any disease having viable <b>microRNA biomarkers</b>.</p>
+                </div>
+              </div>
+            </section>
+            <!-- 1. Treatment -->
+            <section id="run1Section" class="scrollSection">
+              <div class="centerImage">
+                <div class="highlightYellow mediumText textShadow"><b>Treatment</b></div>
+              </div>
+              <div class="contentSection">
+                <div class="boxContent">
+                  <p>The blatant usage of severe broad-spectrum antibiotics in the dairy industry has rendered most of the bacteria causing mastitis, antimicrobial resistant. <em>Staphylococcus aureus</em> is a high priority pathogen as per the <a class="referenceLinks" href="https://dbtindia.gov.in/sites/default/files/IPPL_final.pdf">Indian Priority pathogen list</a> to guide research, discovery and development of new Antibiotics in India and has been developed and released by the WHO country office for India in collaboration with the Department of biotechnology, Government of India.</p>
+                  <p>
+                    We present some statistical evidence to enunciate the importance and relevance of this disease. In a study conducted in Bishoftu town in Ethiopia (November 2015 to March 2016) it was observed that 105 out of 262 (40.1%) cows and 170 out of 1048 (16.2%) cows tested positive for subclinical bovine mastitis under the California mastitis test (CMT). This sub-clinical mastitis resulted in over 90% loss in the milk industry. The positive samples were tested for the disease-causing organism. <b>Staphylococcus aureus</b> was found to be the major disease-causing bacteria in <b>44.9%</b> of samples. Other bacteria of <b>Streptococcus sp</b>. was found in <b>25.3%</b> of the samples followed by other gram-negative E.coli bacteria <a class="referenceLinks" href="https://bmcresnotes.biomedcentral.com/articles/10.1186/s13104-017-3100-0">[7]</a>. This data is
+                    substantiated by the following graph.
+                  </p>
+                  <div class="figures">
+                    <figure style="width: 80%;">
+                      <img style="width: 50%;" src="https://2021.igem.org/wiki/images/6/62/T--IISER_Kolkata--image-Description-GraphSaureus.png" alt="Description-GraphSaureus.png" />
+                      <figcaption>Graph showing that S.aureus is the most dominant bacteria causing subclinical bovine mastitis. [<a class="referenceLinks" href="https://bmcresnotes.biomedcentral.com/articles/10.1186/s13104-017-3100-0">Birhanu et.al. 2017</a>]</figcaption>
+                    </figure>
+                  </div>
+                  <p>
+                    However, due to the extensive and inappropriate use of antibiotics for various purposes in animal food, there has been a steady evolution of antibiotic-resistant microbes. Now, S.aureus bacteria is involved maximum in causing the subclinical bovine mastitis and it has been found that the S.aureus strains are increasingly resistant to a large number of antibiotics. S.aureus is resistant to antibiotics like penicillin, methicillin, and vancomycin. Presently more than 90% of S.aureus species produce Penicillinase which makes them resistant to penicillin. Due to this antibiotic methicillin was being used to kill these penicillin-resistant bacterial strains. As methicillin was being used in large quantities to tackle these strains, with time methicillin-resistant S.aureus strains (possessing the mecA gene, a mobile genetic element that is responsible
+                    for methicillin resistance) again developed. Similarly, vancomycin was used to treat the methicillin-resistant strains of S.aureus. A recent study highlighted by two research papers has reported that even <b>vancomycin-resistant</b> strains of the bacteria have developed and are capable of causing severe infections <a class="referenceLinks" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC154455/">[8]</a>, <a class="referenceLinks" href="https://pubmed.ncbi.nlm.nih.gov/12418544/">[9]</a>, <a class="referenceLinks" href="https://pubmed.ncbi.nlm.nih.gov/12139181/">[10]</a>. This situation leaves us with very few choices of antibiotics to treat diseases caused by these bacterial strains. Hence it is extremely essential to devise a non-antibiotic method of targeting and killing the S.aureus bacteria to combat subclinical bovine mastitis disease
+                    <a class="referenceLinks" href="https://www.jci.org/articles/view/18535">[11]</a>.
+                  </p>
+                  <div class="figures">
+                    <figure>
+                      <img src="https://2021.igem.org/wiki/images/a/a3/T--IISER_Kolkata--image-Description-GraphSensitivity.png" alt="Description-GraphSensitivity.png" />
+                      <figcaption>Graph showing sensitivity of S.aureus to antimicrobial agents / antibiotics. [<a class="referenceLinks" href="https://pubmed.ncbi.nlm.nih.gov/12727914/">Lowy 2003</a>]</figcaption>
+                    </figure>
+                  </div>
+                  <p>We have two main goals in our treatment part - to sense the presence of the pathogen and then kill the pathogens. To keep control of the release of the pathogen-killing molecules, a sensitive and specific therapy is very important. Therefore we want to first sense the presence of pathogens and further release the pathogen-killing molecule as per the needs.</p>
+                  <p>To sense the presence of pathogens we are utilizing the quorum sensing technique of Staphylococcus aureus itself into our chassis organism. Quorum sensing is a technique where environment-dependent gene regulation happens by cell-cell communication. S.aureus uses this technique to sense the bacterial density, respond to genetic adaptations, and regulate the expression of virulence factors with the help of the <b>accessory gene regulator (agr)</b>.</p>
+                  <p>
+                    In the genome of S.aureus, the Agr locus is segregated into 2 transcriptional parts, RNA II driven by P2 promoter and RNA III driven by P3 promoter. agrB, agrC, agrD, agrA are present in the RNAII locus, encoded by RNAII. When AgrB maturation occurs, it produces a transmembrane endopeptidase as the gene product which introduces thiolactone modification and C-terminal cleavage in the <b>AIP (autoinducing peptide)</b> whose precursor is produced by agrD and results in AIP maturation and export. A certain threshold concentration of AIP results in the activation of the agrC-agrA component system. agrC and agrA comprise a two-component signal transduction system in which AgrC is the membrane histidine kinase and agrA is the response regulator. Upon binding of AIP, agrC phosphorylates agrA. The phosphorylated agrA then activates the P2 promoter leading
+                    to auto-feedback regulation. RNA III, which is the intracellular effector molecule, regulates the Agr targets by increasing the transcription by agrA through the P3 promoter. When agrC dependent phosphorylation activates agrA it binds to the P2 promoter region of RNA II and P3 promoter region of RNA III.
+                  </p>
+                  <p>To know how we have incorporated this quorum sensing network in our chassis organism, refer to our <a class="referenceLinks" href="https://2021.igem.org/Team:IISER_Kolkata/Design">design</a> page.</p>
+                  <div class="figures">
+                    <figure>
+                      <img src="https://2021.igem.org/wiki/images/c/c3/T--IISER_Kolkata--image-Description-ArgControlInStaphylococcus.png" alt="Description-ArgControlInStaphylococcus.png" />
+                      <figcaption>Ref - Quorum-sensing regulation in staphylococci—an overview (<a class="referenceLinks" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4621875/">Y.Le et.al </a>)</figcaption>
+                    </figure>
+                  </div>
+                  <p>After sensing, our chassis organism should be able to kill the pathogens. The main goals in killing the pathogens are:</p>
+                  <ul>
+                    <li>Should be killed specifically without a broad-spectrum action</li>
+                    <li>Should be able to kill antibiotic resistant strains of pathogenic bacteria</li>
+                  </ul>
+                  <p>The design of our chassis organism should be such that it fulfills both these requirements to function as an efficient therapeutic.</p>
+                  <p>After several literature studies, we concluded on the fact that bacteriocin can be an effective alternative to antibiotics. Bacteriocins are a type of antimicrobial peptide which are synthesized by bacteria and show antimicrobial activity specific to certain bacterial strains. From our human practices survey, we received the input that along with S.aureus, targeting the S.uberis pathogen will enable us to properly tackle and cure the subclinical bovine mastitis. So, based on our targeted pathogens we decided to use <b>Nisin PV</b>, a bioengineered form of Nisin A bacteriocin. NisinPV will kill the targeted pathogens by pore formation on their cell wall leading to efflux of its cell contents and thus eventually leading to death. This method of pore formation is quite different from the pore formation mechanism of antibiotics.</p>
+                  <p>Both of our targeted pathogens colonize the host tissues by forming an extracellular matrix, slowly helping in the development of microcolony and tolerance to antimicrobials. A biofilm is further formed by cell division and the accumulation of biomass. Hence we need to break down the biofilm first in order to kill the pathogenic cells underneath. Hence we accomplished the degradation of Biofilm by <b>DNaseI</b>. To know more about the biofilm degradation by DnaseI assay you may refer to the <a class="referenceLinks" href="https://2021.igem.org/Team:IISER_Kolkata/Results">results</a>.</p>
+                  <p>Finally, we also need to lyse our chassis cell so that the DNaseI and NisinPV can escape out of the cell (<a class="referenceLinks" href="">details</a>) and start their action on the pathogenic cells. This is accomplished by the <b>LysisE7</b>.</p>
+                  <p>Finally, to ensure the safety of our GMO-based therapeutic, we have incorporated kill switches while designing our chassis. LysisE7 and <b>Thymidine mutation</b> is a part of our kill switch. The kill switch has been documented in detail on our <a class="referenceLinks" href="https://2021.igem.org/Team:IISER_Kolkata/Safety">Safety</a> page.</p>
+                  <p>Our GMO-based therapeutic once injected into the udder of an infected cow by means of an <b>intramammary injection</b>, the chassis organism will exploit the quorum sensing mechanism of the pathogen bacteria to sense the <b>autoinducer peptide-I (AIP-I molecules)</b> to actually sense the presence of pathogens. Along with that, the translation of our cloned <b>NisinPV</b> bacteriocin, <b>DnaseI</b>, and <b>LysisE7</b> genes will ultimately lead to the death and biofilm destruction of the pathogens post-sensing their presence. If the chassis organism does not encounter the pathogen in the udder, our thymidine mutation-based kill switch will ensure the death of GMO after a period of time due to the starvation of an essential nutrient.</p>
+                  <p>A detailed explanation of our genetic circuit with illustrations is present on our <a class="referenceLinks" href="https://2021.igem.org/Team:IISER_Kolkata/Design">Design</a> page.</p>
+                </div>
+              </div>
+            </section>
+            <!-- 2. Detection -->
+            <section id="run2Section" class="scrollSection">
+              <div class="centerImage">
+                <div class="highlightYellow mediumText textShadow"><b>Detection</b></div>
+              </div>
+              <div class="contentSection">
+                <div class="boxContent">
+                  <p>In order to make the test targeted towards subclinical bovine mastitis, we decided to monitor the <b>rise and presence of microRNAs</b> that are the main biomarkers associated with subclinical bovine mastitis and are significantly upregulated and released even during the subclinical stage of bovine mastitis. These miRNAs we regarded were not present or present in very nominal amounts in non-mastitic milk samples. The chosen miRNAs are <b>bta-miR-184</b> and <b>bta-miR-222</b>. The method of choosing these miRNAs are explained fully in the Design section.</p>
+                  <p>
+                    In order to target these specific miRNAs, we use <a class="referenceLinks" href="https://www.science.org/doi/full/10.1126/science.aaq0179">SHERLOCKv2</a> developed by the Zhang Lab. SHERLOCKv2 uses the activity of Cas13a and Csm6 in tandem. Cas13a is a CRISPR enzyme that is activated by binding to specific RNA but once activated cleaves whatever RNA it can find around the sample. The cleavage residues of Cas13a go on to activate Csm6 which also works by collateral cleavage of RNA molecules <a class="referenceLinks" href="">[10]</a>. SHERLOCKv2 is then combined with a polyacrylamide RNA based hydrogel to give a <b>colourimetric output</b>. The latter part of the detection kit comprises a <b>wax paper-based micropad</b> and a <b>polyacrylamide RNA based hydrogel</b>. The wax-paper based micropad diagnostic kit that we propose to implement will be
+                    cheap, point-of-care and portable so that they can be very easily used by small scale dairy farmers in low resource environments too. This section is elaborately explained on the <a class="referenceLinks" href="https://2021.igem.org/Team:IISER_Kolkata/Design">design</a> page.
+                  </p>
+                  <p>We also wanted to optimise the detection kit in a way that can be used with any disease containing miRNA biomarkers. For this reason, we intend to synthesise both <b>Polyethylene glycol (PEG) and Polyacrylamide RNA based hydrogel</b>. The synthesis reactions and the specific usage of both these hydrogels under different circumstances is explained in the<a class="referenceLinks" href="https://2021.igem.org/Team:IISER_Kolkata/Design"> design</a> section.</p>
                 </div>
               </div>
             </section>
@@ -189,6 +281,21 @@
         </div>
         <div class="indentContainer">
           <h3>References</h3>
+          <ol>
+            <li>“India Population (LIVE).” Worldometer, www.worldometers.info/world-population/india-population/</li>
+            <li>“New Disease Threatens India's Milk Production.” Zenger News, Jitendra Choubey, 25 Dec. 2020, www.zenger.news/2020/12/25/new-disease-threatens-indias-milk-production/</li>
+            <li>Shahbandeh, M. “Global Consumption of Milk per Year by Country, 2020.” Statista, 19 Jan. 2021, www.statista.com/statistics/272003/global-annual-consumption-of-milk-by-region/</li>
+            <li>“Department of Animal Husbandry & Dairying Releases 20th Livestock Census; Total Livestock Population Increases 4.6% over Census-2012, Increases to 535.78 Million.” Press Information Bureau, pib.gov.in/PressReleasePage.aspx?PRID=1588304</li>
+            <li>Hoque, M. Nazmul, et al. “Microbiome Dynamics and Genomic Determinants of Bovine Mastitis.” Genomics, vol. 112, no. 6, 2020, pp. 5188–5203., doi:10.1016/j.ygeno.2020.09.039</li>
+            <li>Bangar YC, Singh B, Dohare AK, Verma MR. A systematic review and meta-analysis of prevalence of subclinical mastitis in dairy cows in India. Trop Anim Health Prod. 2015 Feb;47(2):291-7. doi: 10.1007/s11250-014-0718-y. Epub 2014 Nov 19. PMID: 25407741.</li>
+            <li>Birhanu, M., Leta, S., Mamo, G. et al. Prevalence of bovine subclinical mastitis and isolation of its major causes in Bishoftu Town, Ethiopia. BMC Res Notes 10, 767 (2017). https://doi.org/10.1186/s13104-017-3100-0</li>
+            <li>Lowy, Franklin D. “Antimicrobial resistance: the example of Staphylococcus aureus.” The Journal of clinical investigation vol. 111,9 (2003): 1265-73. doi:10.1172/JCI18535</li>
+            <li>Centers for Disease Control and Prevention (CDC). Vancomycin-resistant Staphylococcus aureus--Pennsylvania, 2002. MMWR Morb Mortal Wkly Rep. 2002 Oct 11;51(40):902. Erratum in: MMWR Morb Mortal Wkly Rep 2002 Oct 18;51(41):931. PMID: 12418544.</li>
+            <li>Centers for Disease Control and Prevention (CDC). Staphylococcus aureus resistant to vancomycin--United States, 2002. MMWR Morb Mortal Wkly Rep. 2002 Jul 5;51(26):565-7. PMID: 12139181.</li>
+            <li>Clin Invest. 2003;111(9):1265-1273. https://doi.org/10.1172/JCI18535</li>
+            <li>Le, Katherine Y, and Michael Otto. “Quorum-sensing regulation in staphylococci-an overview.” Frontiers in microbiology vol. 6 1174. 27 Oct. 2015, doi:10.3389/fmicb.2015.01174</li>
+            <li>Journal Article, Jonathan S. Gootenberg, Omar O. Abudayyeh, Max J. Kellner, Julia Joung, James J. Collins, Feng Zhang T Multiplexed and portable nucleic acid detection platform with Cas13, Cas12a, and Csm6 D 2018 J Science P 439-444 V 360 N 6387 doi:10.1126/science.aaq0179</li>
+          </ol>
         </div>
       </section>
       <!-- /reference -->
