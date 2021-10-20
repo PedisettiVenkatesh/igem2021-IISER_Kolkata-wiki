@@ -289,6 +289,9 @@
                   <p>It is interesting to note that major fluctuations in RMSD correspond to fluctuations in SASA. We further performed residue-wise SASA calculation to understand the dynamic of the system in greater detail. The residue-wise SASA was calculated using the VMD timeline analysis extension with the distance cutoff set as 0.14 nm.</p>
                   <p class="subSection"><b>Connolly surfaces </b></p>
                   <p>The SASA is closely related to the concept of the solvent-excluded surface (also known as Connolly surface), which is imagined as a cavity in bulk solvent. The Connolly surfaces for both systems are as follows.</p>
+                  <div class="figures">
+                    <figure style="width: 90%;"><img src="https://2021.igem.org/wiki/images/f/f9/T--IISER_Kolkata--image-MolecularDynamic-ConnollySurfaces.svg" alt="MolecularDynamic-ConnollySurfaces.svg" /></figure>
+                  </div>
                   <p class="subSection"><b>Secondary structure analysis </b></p>
                   <p class="subSection"><b>Free energy surfaces </b></p>
                   <p>Biomolecular processes can be described in terms of the molecule's free energy:</p>
@@ -297,8 +300,38 @@
                   <p>The free energy is typically plotted along with two such order parameters, giving rise to a (reduced) free energy surface (FES). Here we use a custom python script to plot the FES as a function of dihedrals in the first case and as a function of RMSD and radius of gyration (RGyr)in the second case. The radius of gyration is a measure for the compactness of a structure and is calculated as:</p>
                   $$ R_{g}=\left(\frac{\sum_{i}\left|r_{i}\right|^{2} m_{i}}{\sum_{i} m_{i}}\right)^{1 / 2} $$
                   <p>We performed the radius of gyration calculation with the GROMACS “gmx gyrate” tool which computes the radius of gyration of a group of atoms as a function of time. The atoms are explicitly mass-weighted.</p>
+                  <div class="figures">
+                    <figure style="width: 90%;"><img src="https://2021.igem.org/wiki/images/a/a1/T--IISER_Kolkata--image-MolecularDynamic-FreeEnergySurfaces.svg" alt="MolecularDynamic-FreeEnergySurfaces.svg" /></figure>
+                  </div>
                   <p>The free energy surface with Phi-Psi as reaction coordinates is similar for both NisinA and NisinPV. The position of the free energy minima for both systems are also in the same vicinity.</p>
                   <p>For the FES with RMSD-RGyr as reaction coordinates, we, unfortunately, do not have sufficient data points to draw any inferences. The distribution is very sparse. Performing longer and higher frequency simulation would have enabled us to draw inferences in this regard.</p>
+                  <p class="subSection"><b>Diffusion behaviour (MSD) </b></p>
+                  <p>The mean-squared displacement (MSD) is a measure of the deviation of the position of a particle with respect to a reference position over time. The MSD at time \({\displaystyle t}\) is defined as an ensemble average.</p>
+                  $$ \mathrm{MSD} \equiv\left\langle\left|\mathbf{x}(t)-\mathbf{x}_{\mathbf{0}}\right|^{2}\right\rangle=\frac{1}{N} \sum_{i=1}^{N}\left|\mathbf{x}^{(\mathbf{i})}(t)-\mathbf{x}^{(\mathbf{i})}(0)\right|^{2} $$
+                  <p>where \(N\) is the number of particles to be averaged, vector \(\mathbf{x}^{(\mathbf{i})}(0)=\mathbf{x}_{0}^{(\mathbf{i})}\) is the reference position of the \(i\)-th particle, and vector \(\mathbf{x}^{(\mathbf{i})}(t)\) is the position of the \(i\)-th particle at time \(t .{ }^{[3]}\)</p>
+                  <p>We calculated the MSD for both Nisin A and Nisin PV using the GROMACS “gmx msd” tool. The MSD was fitted to a line (excluding the first and last 10% of the trajectory to avoid the initial ballistic region and the noise at the end) to obtain the diffusion coefficient for the system. The stope of the MSD v/s time plot is indicative of the diffusion coefficient (with dimensions)</p>
+                  <p>For n dimensions, MSD is related to diffusion coefficient (D) as :</p>
+                  $$ \mathrm{MSD}=2 n D t $$
+                  <p>The observed diffusion coefficients for both models are tabulated below:</p>
+                  <table width="70%">
+                    <tr>
+                      <th>Model</th>
+                      <th>Diffusion Coefficient (1e-5 cm^2/s)</th>
+                    </tr>
+                    <tr>
+                      <td>Nisin A</td>
+                      <td>0.0470 (+/- 0.0051)</td>
+                    </tr>
+                    <tr>
+                      <td>Nisin PV</td>
+                      <td>0.3208 (+/- 0.0997)</td>
+                    </tr>
+                  </table>
+                  <p>We shall be using these values in our biofilm degradation model.</p>
+                  <div class="figures">
+                    <figure style="width: 90%;"><img src="https://2021.igem.org/wiki/images/2/2d/T--IISER_Kolkata--image-MolecularDynamic-MeanSquareDisplacement.svg" alt="MolecularDynamic-MeanSquareDisplacement.svg" /></figure>
+                  </div>
+                  <p>Our simulations showed that MSD for Nisin PV is significantly higher than MSD of Nisin A, thereby the diffusion coefficient of NisinPV would also be higher likewise. This aspect of Nisin PV might confer it an advantage against the pathogen as it can theoretically diffuse faster in the system and therefore cause faster action against the pathogenic bacteria.</p>
                 </div>
               </div>
             </section>
@@ -331,6 +364,9 @@
                       <td>269</td>
                     </tr>
                   </table>
+                  <div class="figures">
+                    <figure style="width: 60%;"><img src="https://2021.igem.org/wiki/images/a/a2/T--IISER_Kolkata--image-MolecularDynamic-pope-popg.png" alt="MolecularDynamic-pope-popg.png" /></figure>
+                  </div>
                   <p>POPE has 16 carbon atoms in one tail and 18 carbon atoms in the other with one unsaturation and the head group is Phosphatidylethanolamine. POPG acyl tail structure is the same as POPE and the head group, in this case, is Phosphatidylglycerol. The important point to note here is the head group charge and melting temperate (Tm). POPG is much more negatively charged as compared to POPE and has a significantly lower melting temperature. We started off with an inkling that the higher negative charge will play a crucial ride in membrane protein interactions.</p>
                   <p>We set up two identical membrane systems and added NisinA to one and NisinPV to the other. All systems were created using CHARMM GUI. The thermodynamics and composition parameters were the same as previously outlined. Although membrane-protein systems are huge in terms of the number of particles to be simulated, we did not go for a coarse-grained approach as we intended to delineate the intricacies of the membrane-protein interactions. Therefore, we went ahead with fully atomistic systems and the simulations were run for 150 ns each. A summary of the setup is given as follows:</p>
                   <table>
@@ -364,15 +400,24 @@
                     <p>
                       Lipid membrane thickness is a standard parameter to check the stability of a membrane simulation. Additionally, if there is the generation of any membrane curvature, it should be indicated in the membrane thickness. We calculated the membrane thickness over time by defining a selection group consisting of the Phosphate head groups of the lipids in the bilayer. The local normal to the nearest phosphate neighbour would produce the local membrane thickness. This when averaged out over the entire membrane gives one value of membrane thickness as a function of time. FATSLiM is a nifty python-based tool that can be used to calculate membrane thickness for courage-gained simulation. However, since we performed atomistic simulation we had to play around with the distance cutoff for the local normal and leaflet identification in the FATSLiM source code.
                     </p>
-                    <img style="padding: 1rem;" src="" alt="imageHere" />
+                    <img style="padding: 0 3rem;" src="https://2021.igem.org/wiki/images/8/8e/T--IISER_Kolkata--image-MolecularDynamic-MembraneBilayerThickness.png" alt="MolecularDynamic-MembraneBilayerThickness.png" />
+                  </div>
+                  <div class="figures">
+                    <figure style="width: 90%;"><img src="https://2021.igem.org/wiki/images/6/6b/T--IISER_Kolkata--image-MolecularDynamic-BilayerThickness.svg" alt="MolecularDynamic-BilayerThickness.svg" /></figure>
                   </div>
                   <p>The membrane bilayer thickness remains more or less constant and within the margins of thermal fluctuations. Certain significant dips in the bilayer thickness might be indicative of the generation of local membrane fluctuations.</p>
                   <p class="subSection"><b>Area per lipid (APL) calculation </b></p>
                   <p>Membrane APL is another parameter to describe the dynamic of membrane systems. APL is indicative of not only membrane stability but also indicates probate regions of interaction between the lipid bilayer and the membrane. APL calculation is similar to the thickness and used a section group consisting of the phosphates. The Area of the lipid boundary is approximately defined by the coordinates of the phosphates in the head groups. This area divided by the total number of lipids in the bilayer gives the area per lipid. We again used a modified implementation of FATSLiM for this calculation</p>
+                  <div class="figures">
+                    <figure style="width: 90%;"><img src="https://2021.igem.org/wiki/images/7/72/T--IISER_Kolkata--image-MolecularDynamic-APL.svg" alt="MolecularDynamic-APL.svg" /></figure>
+                  </div>
                   <p>The area per lipid for both membrane-protein systems is virtually constant within the margins of thermal fluctuations. However, the APL for NisinPV is marginally higher than the APL for NisinA. The more significant fluctuations of APL could be indicative of membrane-protein interactions.</p>
                   <p class="subSection"><b>Hydrogen bonds between protein and lipid head-groups </b></p>
                   <p>Hydrogen bonds provide most of the directional interactions that underpin protein folding, protein structure and molecular recognition. Hydrogen bonding confers rigidity to the protein structure and specificity to intermolecular interactions. An H-bond is formed by the interaction of a hydrogen atom that is covalently bonded to an electronegative atom (donor D) with another electronegative atom (acceptor A). The accepted geometry for an H-bond is a distance of less than 3.5 \(Å\) between hydrogen D and A and an D-H-A angle of 180° ± 30°.</p>
                   <p>Having established that the membrane system is stable and there are instances of membrane-protein interaction. We went ahead to try to explain the nature of these interactions. We started plotting the number of Hydrogen bonds between the protein and the lipids over time. The analysis was performed using the “gmx hbond” tool in GROMACS. This analyses all H-bonds existing between two groups of atoms (which must be either identical or non-overlapping) or in specified D-H-A triplets using specified D-A distance and D-H-A angle criteria. The distance cutoff or hydrogen bonds was set up to be 0.35 nm so that even slightly weaker hydrogen bonds could be taken into account.</p>
+                  <div class="figures">
+                    <figure style="width: 90%;"><img src="https://2021.igem.org/wiki/images/0/09/T--IISER_Kolkata--image-MolecularDynamic-Hbonds.svg" alt="MolecularDynamic-Hbonds.svg" /></figure>
+                  </div>
                   <p>The time evolution of the total number of H-bonds between the selected groups shows that the number of hydrogen bonds between the protein and the POPG is similar for both NisinA and NisinPV. However, the same is drastically different for POPE wherein Nisin PV forms significantly lower H-bond contacts with the lipid. It must be noted here that POPE is three times more abundant in the system. Still, the number of H-bond contacts between NisinPV and the POPE is significantly lower than NisinA. In fact, even the total membrane H-bond contacts for NisinPV as lower than the NisinA-POPE contacts.</p>
                   <p>
                     To have a deeper look at this behavior, we plotted the residue-wise H-bond contacts for Nisin and realised that the majority of contacts formed between the protein and the POPG lipids involve the first few residues in the N-terminal region of Nisin (which in our case in unmodified between NisinA and NisinPV) specifically in residue 1 to 11 region and the contacts are formed with the oxygen atoms in the POPG head group.. Here, we would like to invoke the fact that the net charge of POPG at pH7 id -1 whereas for POPE is 0. We know from literature that the Nisin 1-11 region is responsible for interactions with lipid-II and is in fact responsible for the capture of membrane-bound lipid-II, causing membrane degradation. Nisin interacts with the pyrophosphate group of lipid-II (as reported by Panina et al.). We suspect that the interaction with POPG is
@@ -382,6 +427,9 @@
                   [Add animation here ]
                   <p class="subSection"><b>Free energy surfaces </b></p>
                   <p>We calculated the free energy for NisinA and NisinPV in the membrane environment just the way we did in the section where we looked at the protein dynamics in water. We took two cases of reaction coordinates, the first being the Phi-Psi angles (Ramachandran plot) and the second being RMSD-RGyr.</p>
+                  <div class="figures">
+                    <figure style="width: 90%;"><img src="https://2021.igem.org/wiki/images/1/15/T--IISER_Kolkata--image-MolecularDynamic-FreeEnergySurface.svg" alt="MolecularDynamic-FreeEnergySurface.svg" /></figure>
+                  </div>
                   <p>The free energy surface with Phi-Psi as reaction coordinates is similar for both NisinA and NisinPV. The position of the free energy minima for both systems are also in the same vicinity.</p>
                   <p>The free energy surface with RMSD-RGyr as the reaction coordinates is more dispersed (Spread out) for NisinA as compared to NisinPV. The free energy minimums are also positioned almost linearly in both systems, indicating that RMSD and RGyr are positively correlated in terms of the free energy associated with it. The maximum RMSD and maximum RGyr are also significantly higher for the NisinPV system (almost two times that of the NisinA system). Although, these extremes are sparsely populated.</p>
                 </div>
@@ -397,6 +445,84 @@
                   <p>The data in this section is adapted from the simulations by <b>Field, Des et al</b>. They carried out MD simulations to predict the difference in molecular dynamics of the NSR protein in its interaction with the nisin C-terminus (residues 22–34) for nisin-A and nisin PV models.</p>
                   <p class="subSection"><b>Molecular docking </b></p>
                   <p>We tried to replicate the setup used by Des et al. For the NSR (Nisin Resistance protein) molecule, the PDB file 4Y68 was used and for the Nisin the 1WCO PDB file was used. NisinA structure was mutated using PyMol and a PRO-VAL mutation was added to the 29th and 30th residue respectively. To determine a starting configuration for the NSR-nisin complex a docking program Autodock for ligand and protein binding was used where the Nisin (A/PV) was set as ligand and NSR was set as receptor. We first performed the docking of NisinA with the tunnel region of NSR and selected the lowest energy stage as the starting configuration. The docs location was observed to be consistent with the ligand-binding site of Nisin as discussed in literature. The ligand-binding site for NisinA was noted and NisinPV was docked using the same coordinates.</p>
+                  <p>The free energies of the configurations obtained from docking are as follows:</p>
+                  <table>
+                    <tr>
+                      <th>position</th>
+                      <th colspan="2">Affinity (kcal/mol)</th>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td>Nisin A</td>
+                      <td>Nisin PV</td>
+                    </tr>
+                    <tr>
+                      <td>1</td>
+                      <td>-9.3</td>
+                      <td>-9.5</td>
+                    </tr>
+                    <tr>
+                      <td>2</td>
+                      <td>-8.9</td>
+                      <td>-9.1</td>
+                    </tr>
+                    <tr>
+                      <td>3</td>
+                      <td>-8.7</td>
+                      <td>-9</td>
+                    </tr>
+                    <tr>
+                      <td>4</td>
+                      <td>-8.7</td>
+                      <td>-8.9</td>
+                    </tr>
+                    <tr>
+                      <td>5</td>
+                      <td>-8.7</td>
+                      <td>-8.8</td>
+                    </tr>
+                    <tr>
+                      <td>6</td>
+                      <td>-8.6</td>
+                      <td>-8.8</td>
+                    </tr>
+                    <tr>
+                      <td>7</td>
+                      <td>-8.6</td>
+                      <td>-8.7</td>
+                    </tr>
+                    <tr>
+                      <td>8</td>
+                      <td>-8.5</td>
+                      <td>-8.4</td>
+                    </tr>
+                    <tr>
+                      <td>9</td>
+                      <td>-8.5</td>
+                      <td>-8.4</td>
+                    </tr>
+                  </table>
+                  <p>The 1st position is the best docking position for both molecules. Subsequent docking positions were also found by this study. This shows both Nisin A and Nisin PV docks similarly to NSR protein, which indicates that binding is not the mechanism by which NSR cleaves Nisin A.</p>
+                  <div class="figuers">
+                    <figure style="width: 90%;"><img style="border: none;" src="https://2021.igem.org/wiki/images/3/34/T--IISER_Kolkata--image-MolecularDynamic-MolecularDocking.svg" alt="MolecularDynamic-MolecularDocking.svg" /></figure>
+                  </div>
+                  <p>The above figure elucidates the docking of the 22-34 N-terminus end of NisinA (cyan) and Nisin PV (magenta) to the tunnel region of NSR. Only the lowest free energy structures are shown.</p>
+                  <p class="subSection"><b>RMSD Analysis </b></p>
+                  <div class="fogures">
+                    <figure style="width: 90%;"><img src="https://2021.igem.org/wiki/images/6/6b/T--IISER_Kolkata--image-MolecularDynamic-RMSDanalysis.svg" alt="MolecularDynamic-RMSDanalysis.svg" /></figure>
+                  </div>
+                  <p>Initially, both models quickly deviate from their reference structure by approximately 3 Å (this happens over the course of the first 0.3 ns during the heating, equilibration and the start of the production phase of the simulation). From then on in the simulation, the nisin A model continues to deviate until it reaches approximately 5 angstroms. In contrast, the nisin PV model exhibits different behaviour. Although it too initially deviates further to almost 5 angstroms early in the simulation it then returns to just under 4 angstroms deviation from its reference structure and remains virtually constant for the rest of the simulation.</p>
+                  <p>This evidence of greater structural change in the nisin A model that is less apparent in the nisin PV model supports the findings of the binding energy analyses for both bond and total energies. Indeed, it is clear that the nisin PV model is more durably bound to the NSR protein and is certainly more robust than the nisin A model.</p>
+                  <p class="subSection"><b>Hydrogen bond occupancy </b></p>
+                  <p>These simulations revealed the hydrogen bond occupancy (defined as whether a hydrogen bond is present or absent at every frame over the duration of simulation) for all nisin residues greater than 20%. It is evident that the nisin PV model exhibits higher occupancy values than the nisin-A model for residues corresponding to the region 27-29. In particular, there is a hydrogen bond with 47.65% occupancy between the sidechain oxygen of proline in the nisin-PV model and the hydrogen from the nitrogen sidechain on residue 265 (asparagine) in NSR that may play a role in the inhibition of proteolytic cleavage for nisin PV.</p>
+                  <div class="figures">
+                    <figure style="width: 90%;"><img src="https://2021.igem.org/wiki/images/6/6c/T--IISER_Kolkata--image-MolecularDynamic-ClevagePointDistance.svg" alt="MolecularDynamic-ClevagePointDistance.svg" /></figure>
+                  </div>
+                  <p class="subSection"><b>Free energy per residue </b></p>
+                  <div class="figures">
+                    <figure style="width: 90%;"><img src="https://2021.igem.org/wiki/images/4/46/T--IISER_Kolkata--image-MolecularDynamic-FreeEnergyPerResidue.svg" alt="MolecularDynamic-FreeEnergyPerResidue.svg" /></figure>
+                  </div>
+                  <p>Analysis of the total binding energies for each residue in both nisin A and nisin PV models reveals that at the critical residue 29, the total energy for proline is seven times greater than serine (4.6292 kcal/mol for PRO and 0.8775 kcal/mol for SER).</p>
                 </div>
               </div>
             </section>
@@ -406,7 +532,15 @@
                 <div class="highlightYellow mediumText textShadow"><b>Key Takeaways</b></div>
               </div>
               <div class="contentSection">
-                <div class="boxContent"></div>
+                <div class="boxContent">
+                  <ul>
+                    <li>Considering the binding of Nisin(A/PV) to NSR, there is compelling evidence that NSR has a much more difficult time cleaving the bond at the 29th in the case of NisinPV.</li>
+                    <li>The total energy at the 29th residue is approximately 7 times larger for NisinPV as compared to NisA. This is consistent with the results for the biofilm assay (citation needed) where the minimum inhibitory concentration (MIC) for NisinA was measured to be approximately 7 times that of NisinPV. We shall use this information in our mathematical model for the degradation of biofilm where we would make the assumption that the rate of degradation of the biocide is higher for NisinPV as compared to NisinA. Add a link to the biofilm assay here.</li>
+                    <li>Both NisinA and PV majorly interact with the highly negatively charged lipids in the biological membrane. This would mean that NisinPV has at least equal membrane degradation potential (in the absence of any resistance proteins of course) to NisinA.</li>
+                    <li>Our simulations show that NisinA interacts with lipids with a neutral charge (like POPE) more preferentially than NisinPV. It is yet to be determined whether this differential interaction with POPE would affect the membrane destabilisation and degradation.</li>
+                    <li>Our simulations showed that MSD for Nisin PV is significantly higher than MSD of Nisin A, thereby the diffusion coefficient of NisinPV would also be higher likewise. This aspect of Nisin PV might confer it an advantage against the pathogen as it can theoretically diffuse faster in the system and therefore cause faster action against the pathogenic bacteria.</li>
+                  </ul>
+                </div>
               </div>
             </section>
             <!-- 5. A word of caution -->
@@ -415,7 +549,9 @@
                 <div class="highlightYellow mediumText textShadow"><b>A word of caution</b></div>
               </div>
               <div class="contentSection">
-                <div class="boxContent"></div>
+                <div class="boxContent">
+                  <p>Even though we tried to model the topologies and parameters of all the non-standard amino acids in the structure, we had to settle for replacing some of the non-standard amino-acid with standard amino acids. This resulted in higher fluctuations in our model as compared to other modes in the literature.</p>
+                </div>
               </div>
             </section>
           </div>
