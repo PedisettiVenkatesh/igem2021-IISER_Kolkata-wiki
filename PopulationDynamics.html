@@ -192,12 +192,20 @@
                   <p class="subSection"><b>Result and Analysis</b></p>
                   <p>In order to understand the practicality of our solution we tried to see the community structure in the graph and used greedy modularity community detection algorithm and found 8 communities in the graph of 100 nodes which is practical with the cow-herd situation where cows are kept separately in a bunch of 10 to 15.</p>
                   <div class="figures">
-                    <figure style="width: 90%;"><img src="" alt="fig-m3" /></figure>
+                    <figure style="width: 60%;"><img style="border: none; border-radius: 0;" src="https://2021.igem.org/wiki/images/a/a9/T--IISER_Kolkata--image-PopulationDynamics-m3.png" alt="fig-m3" /></figure>
                   </div>
                   <p>From comparing both scenarios with the currently best possible antibiotic treatment and our proposed GMO based treatment we can infer that as our method treats the disease faster, it will be more effective. From the animations, we can see the outbreak size is smaller and lasts for a shorter amount of period for our proposed treatment.</p>
                   <div class="figures">
-                    <figure style="width: 90%;"><img src="" alt="Insert animation mm-current" /></figure>
-                    <figure style="width: 90%;"><img src="" alt="Insert animation mm-gmo" /></figure>
+                    <figure>
+                      <video width="100%" controls autoplay loop>
+                        <source src="https://2021.igem.org/wiki/images/b/bf/T--IISER_Kolkata--video-PopulationDynamics-mm_current.mp4" type="video/mp4" />
+                      </video>
+                    </figure>
+                    <figure>
+                      <video width="100%" controls autoplay loop>
+                        <source src="https://2021.igem.org/wiki/images/2/24/T--IISER_Kolkata--video-PopulationDynamics-mm_cgmo.mp4" type="video/mp4" />
+                      </video>
+                    </figure>
                   </div>
                   <p>Our detection kit actually enables early detection which will also decrease the size of the epidemic, but this component is not included in our simple modelling technique. We have used Network and EON python modules to implement our model.</p>
                 </div>
@@ -222,8 +230,8 @@
                   <p class="subSection"><b>Result and Analysis</b></p>
                   <p>Performing the 1-D minimization with several values of 'S' and 'p', we found that when the p-value is more than 0.3, the grouping strategy does not yield good results and testing all individuals is the best policy. Also for a herd of 100 to 500 cows, we found under p=0.3, grouping with 3 samples provide the best results. For a very large scale testing, it will be better rather than random groupings, if nearby and contact cows of a disease infected cows are grouped along with our strategy to lower the number of tests needed to finally conclude disease is positive or negative in cases of all the cows.</p>
                   <div class="figures">
-                    <figure style="width: 90%;"><img src="" alt="Fig m5" /></figure>
-                    <figure style="width: 90%;"><img src="" alt="Fig m6" /></figure>
+                    <figure><img style="border: none; border-radius: 0;" src="https://2021.igem.org/wiki/images/d/df/T--IISER_Kolkata--image-PopulationDynamics-m5.png" alt="Fig m5" /></figure>
+                    <figure><img style="border: none; border-radius: 0;" src="https://2021.igem.org/wiki/images/9/96/T--IISER_Kolkata--image-PopulationDynamics-m6.png" alt="Fig m6" /></figure>
                   </div>
                 </div>
               </div>
