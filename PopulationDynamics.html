@@ -162,40 +162,69 @@
             <div class="sideNav sticky">
               <!-- navigate in Page -->
               <ul>
-                <li><a id="run" class="scrollID" onclick="scrollToID('runSection')">Overview</a></li>
+                <li><a id="run" class="scrollID" onclick="scrollToID('runSection')">Epidemiological Model for spread of bovine mastitis</a></li>
+                <li><a id="run1" class="scrollID" onclick="scrollToID('run1Section')">Mathematical Model for Testing</a></li>
               </ul>
             </div>
             <!-- /sideNav -->
           </div>
           <div>
-            <!-- Overview -->
+            <!-- 1. Epidemiological Model for spread of bovine mastitis -->
             <section id="runSection" class="scrollSection">
               <div class="centerImage">
-                <div class="highlightYellow mediumText textShadow"><b>overview</b></div>
+                <div class="highlightYellow mediumText textShadow"><b>Epidemiological Model for spread of bovine mastitis</b></div>
               </div>
               <div class="contentSection">
                 <div class="boxContent">
-                  <p>Lorem ipsum dolor sit.</p>
-                  <table width="80%">
-                    <tr>
-                      <th>Lipid</th>
-                      <th>Structure</th>
-                      <th>Net charge (at pH 7)</th>
-                      <th>Tm (K)</th>
-                    </tr>
-                    <tr>
-                      <td>POPE</td>
-                      <td>16:0 /18:1 PE</td>
-                      <td>0</td>
-                      <td>298</td>
-                    </tr>
-                    <tr>
-                      <td>POPG</td>
-                      <td>16:0 /18:1 PG</td>
-                      <td>-1</td>
-                      <td>269</td>
-                    </tr>
-                  </table>
+                  <p class="subSection"><b>Model Development</b></p>
+                  <p>Bovine Mastitis spreads from one cow to another cow, so to understand disease dynamics we have used infectious disease modelling technique that will give us real insights moving forward with this project. Though all models are mere approximations of real-world scenarios hence wrong some models are useful. Simple models allow us to explain the influence of parameters on whether an epidemic will occur and its size and duration analytically. This comes with the cost of sacrificing finer details to mimic real-world scenarios as closely as possible. At the other end of the spectrum, models can be developed that contains much more detail about the disease and interactions at the individual level, but due to complexity interpretation is difficult.</p>
+                  <p>We have developed the stochastic SIR model on a network based on Gillespie Algorithm. The chosen network defines the connection between agents on which the disease spreads.</p>
+                  <p>The basic SIR model is as follows:</p>
+                  $$ \dot{S(t)} = - \frac{\beta I(t) S(t)}{N} $$ $$ \dot{I(t)} = \frac{\beta I(t) S(t)}{N} - \gamma I(t) $$ $$ \dot{R(t)} = \gamma I(t) $$ $$ N=S(0)+I(0)+R(0) $$
+                  <p>In the stochastic version of the SIR model, the continuous variables are replaced by discrete numbers, and the process rates are replaced by process probabilities. The transitions are given by-</p>
+                  $$ (S,I,R) \xrightarrow{\frac{\beta I S}{N}} (S-1,I+1,R) $$ $$ (S,I,R) \xrightarrow{\gamma I} (S,I-1,R+1) $$
+                  <p>Although conceptually, the stochastic SIR model is more difficult than the deterministic one, but not computationally to simulate. As the computers to handles discrete variable easily than continuous ones. Using a random number generator the stochastic process is simulated.</p>
+                  <p>In the brute-force method to simulate the stochastic SIR model we have to set very small time-steps in the simulation, so that, at max one process happens at a given step, which avoids problems arising from two or more processes happening at the same time step. But this method is inefficient as nothing happens at most of the time step. In the case of the Gillespie algorithm, the occurrence of the next event is calculated. Suppose the current time is t. The time \(t + \tau\) at which something happens next is an exponentially distributed random number scaled by the sum of all process rates,\(\sum_{i} {a_i}\) . Then, the Gillespie algorithm determines what happens next by drawing a process randomly from all possible processes with weighted probabilities.</p>
+                  <p>Classical models at the early stage of outbreak treat the immediate neighbourhood of an individual remains fully susceptible, which tends to overestimate the spread. Furthermore, the neighbourhood of individuals infected later will tend to be less susceptible than for region the disease has already visited, and so the equations may be inaccurate in later stages also. So, we have introduced a network-based modelling approach to overcome that.</p>
+                  <p class="subSection"><b>Assumptions</b></p>
+                  <p>In our model, we have used Watts-Strogatz random graph model to mimic the real world scenario inside a cowherd. It is a graph with small-world properties, short average path lengths and high clustering coefficients. We have taken 100 nodes and 'k' value as 4 for our simulation. We have given a weighted graph where weighted were generated randomly between 0 to 1.</p>
+                  <p>In our stochastic network SIR model, we have taken \(\beta \) value (transmission factor) from a random distribution of 0.64 to 0.72. For the best available current treatment procedure, the cow recovers on average from 5 to 7days. In our proposed GMO based treatment the cow will be within 3 to 5 days. Similarly, \(\gamma\) value used for both the models is also randomized between the range. We have taken six infected cases as starting of our model. We have not considered any birth or death in our model as it is a relatively very small time scale with respect to change in population.</p>
+                  <p class="subSection"><b>Result and Analysis</b></p>
+                  <p>In order to understand the practicality of our solution we tried to see the community structure in the graph and used greedy modularity community detection algorithm and found 8 communities in the graph of 100 nodes which is practical with the cow-herd situation where cows are kept separately in a bunch of 10 to 15.</p>
+                  <div class="figures">
+                    <figure style="width: 90%;"><img src="" alt="fig-m3" /></figure>
+                  </div>
+                  <p>From comparing both scenarios with the currently best possible antibiotic treatment and our proposed GMO based treatment we can infer that as our method treats the disease faster, it will be more effective. From the animations, we can see the outbreak size is smaller and lasts for a shorter amount of period for our proposed treatment.</p>
+                  <div class="figures">
+                    <figure style="width: 90%;"><img src="" alt="Insert animation mm-current" /></figure>
+                    <figure style="width: 90%;"><img src="" alt="Insert animation mm-gmo" /></figure>
+                  </div>
+                  <p>Our detection kit actually enables early detection which will also decrease the size of the epidemic, but this component is not included in our simple modelling technique. We have used Network and EON python modules to implement our model.</p>
+                </div>
+              </div>
+            </section>
+            <!-- 2. Mathematical Model for Testing -->
+            <section id="run1Section" class="scrollSection">
+              <div class="centerImage">
+                <div class="highlightYellow mediumText textShadow"><b>Mathematical Model for Testing</b></div>
+              </div>
+              <div class="contentSection">
+                <div class="boxContent">
+                  <p class="subSection"><b>Model Development</b></p>
+                  <p>Suppose there are total 'S' samples to be tested for sub-clinical bovine mastitis. We will try to optimize the total number of tests needed to be performed to exactly tell which samples are infected with the disease. In the first round we will test the samples by grouping and out of that which sample-groups are tested positive, we only test every sample from those. We will make a group of 'n' samples.</p>
+                  <p>Let's assume p is the probability of the disease (testing positive) in all samples,</p>
+                  <p>so (1-p) probability of the sample being tested negative.</p>
+                  <p>So \( (1-p)^{n} \) is the probability of all n samples in that group to be tested negative</p>
+                  <p>Then \( 1-(1-p)^{n} \) is the probability of at least one of the samples being positive.</p>
+                  <p>There are total \( \frac{S}{n} \) groups and each group has n samples, so for the 2nd round \( S(1-(1-p)^{n}) \) test needed to be performed.</p>
+                  <p>For the 1st round \( \frac{S}{n} \) tests are needed to be performed. So total number of test are \( \frac{S}{n} + S(1-(1-p)^{n}) \).</p>
+                  <p>We will take 'p' and 'S' as a fixed input and optimize the total number of tests to be performed as a function of 'n'.</p>
+                  <p class="subSection"><b>Result and Analysis</b></p>
+                  <p>Performing the 1-D minimization with several values of 'S' and 'p', we found that when the p-value is more than 0.3, the grouping strategy does not yield good results and testing all individuals is the best policy. Also for a herd of 100 to 500 cows, we found under p=0.3, grouping with 3 samples provide the best results. For a very large scale testing, it will be better rather than random groupings, if nearby and contact cows of a disease infected cows are grouped along with our strategy to lower the number of tests needed to finally conclude disease is positive or negative in cases of all the cows.</p>
+                  <div class="figures">
+                    <figure style="width: 90%;"><img src="" alt="Fig m5" /></figure>
+                    <figure style="width: 90%;"><img src="" alt="Fig m6" /></figure>
+                  </div>
                 </div>
               </div>
             </section>
@@ -337,6 +366,7 @@
     <!-- JS -->
     <!-- <script src="https://2021.igem.org/Template:IISER_Kolkata/js"></script> -->
     <script src="app.js"></script>
+    <script src="https://2021.igem.org/common/MathJax-2.5-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <!-- /JS -->
   </body>
 </html>
