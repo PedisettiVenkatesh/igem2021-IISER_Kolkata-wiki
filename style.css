@@ -315,7 +315,7 @@ img {
 }
 
 #toTop:hover {
-  scale: 1.1;
+  transform: scale(1.1);
 }
 
 @media screen and (max-width: 980px) {
@@ -343,7 +343,7 @@ img {
 }
 
 #navToggler:hover {
-  scale: 1.1;
+  transform: scale(1.1);
 }
 
 @media screen and (max-width: 980px) {
@@ -539,7 +539,7 @@ img {
 }
 
 .homeBtn a:hover {
-  scale: 1.2;
+  transform: scale(1.2);
 }
 
 @media screen and (max-width: 980px) {
@@ -741,7 +741,7 @@ img {
 }
 
 .knowMore img:hover {
-  scale: 1.2;
+  transform: scale(1.2);
 }
 /* /knowMoreSection */
 
@@ -877,8 +877,6 @@ a.referenceLinks {
 }
 
 .contacts img:hover {
-  /* transform: rotate(-15deg) translateY(-8px); */
-  /* scale: 1.1; */
   animation: socialHover 1s linear infinite alternate;
 }
 
@@ -1663,7 +1661,8 @@ figcaption {
 }
 
 .pointerClass:hover {
-  scale: 1.1;
+  /* transform: scale(1.1); */
+  animation: svgAnimate2 2s ease infinite alternate;
 }
 
 #SVGrun1,
@@ -1677,6 +1676,22 @@ figcaption {
 #SVGrun4,
 #SVGrun6 {
   animation: svgAnimate 5s ease 1s infinite alternate-reverse;
+}
+
+@keyframes svgAnimate2 {
+  0%,
+  100% {
+    transform: translate(-5px, 5px) scale(1.05);
+  }
+
+  50% {
+    transform: translate(5px, 5px) scale(1.05);
+  }
+
+  25%,
+  75% {
+    transform: translate(0, 0) scale(1);
+  }
 }
 
 @keyframes svgAnimate {
@@ -1711,7 +1726,7 @@ figcaption {
 #SDG8:hover,
 #SDG9:hover,
 #SDG12:hover {
-  scale: 1.1;
+  transform: scale(1.1);
   fill: gold;
 }
 /* /hp Tree */
