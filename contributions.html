@@ -161,7 +161,10 @@
             <div class="sideNav sticky">
               <!-- navigate in Page -->
               <ul>
-                <li><a id="run" class="scrollID" onclick="scrollToID('runSection')">New Information about existing part BBa_K2323004 </a></li>
+                <li><a id="run" class="scrollID" onclick="scrollToID('runSection')">New Information about existing part </a></li>
+                <li><a id="run1" class="scrollID" onclick="scrollToID('run1Section')">Document troubleshooting to help future teams </a></li>
+                <li><a id="run2" class="scrollID" onclick="scrollToID('run2Section')">MODELLING OF EXISTING PART</a></li>
+                <li><a id="run3" class="scrollID" onclick="scrollToID('run3Section')">New </a></li>
               </ul>
             </div>
             <!-- /sideNav -->
@@ -170,12 +173,109 @@
             <!-- 1. New Information about existing part BBa_K2323004 -->
             <section id="runSection" class="scrollSection">
               <div class="centerImage">
-                <div class="highlightYellow mediumText textShadow"><b>New Information about existing part BBa_K2323004</b></div>
+                <div class="highlightYellow mediumText textShadow"><b>New Information about existing part</b></div>
               </div>
               <div class="contentSection">
                 <div class="boxContent">
-                  <p>Lorem ipsum dolor sit.</p>
+                  <p class="subSection">
+                    <b>New Information about existing part <a class="referenceLinks" href="http://parts.igem.org/Part:BBa_K2323004">BBa_K2323004</a></b>
+                  </p>
+                  <p class="subSection"><b>Summary</b> - We learnt that Team iGEM17_Munich has performed the assay for target-dependent activity of purified Cas13a protein under different concentrations of target RNA molecules. Team ZJUT_China_B 2020 has characterized the base preference of collateral cleavage activity of LwaCas13a protein. Due to limitations in laboratory access, we have contributed more information about this part through literature surveys.</p>
+                  <p class="subSection"><b>NEW INFORMATION:</b> Zhang Lab devised the SHERLOCK technique which uses isothermal preamplification with specific activation and non-specific cleavage activity of Cas13a to detect small RNA or DNA molecules. This is a significant scientific advancement in the field of rapid nucleic acid detection used in diagnostics and biotechnological applications. LwaCas13a collateral cleavage activity results in the production of cleaved RNA products with hydroxylated 5’ ends and 2’-3’ cyclic phosphate ends. A Type III CRISPR Cas system protein called Csm6 gets efficiently activated by 2’-3’ cyclic phosphate terminated hexadenylated ends <a class="referenceLinks" href="https://www.nature.com/articles/nature23467">[1]</a>.</p>
+                  <p>
+                    Zhang et al. have further devised SHERLOCKv2 <a class="referenceLinks" href="https://www.science.org/doi/full/10.1126/science.aaq0179">[2]</a> which is an advancement of the SHERLOCK technique <a class="referenceLinks" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6956564/">[3]</a>. In this method, orthogonal CRISPR enzymes Cas13a and Csm6 are multiplexed together to detect RNA molecules. SHERLOCKv2 acts by the method of initial specific activation of cas13a by target RNA molecules which then goes on to generate cleavage residues/overhangs of 2’-3’ cyclic phosphate by collateral cleavage of RNA in the sample. These overhangs further activate Csm6 which also carries out collateral cleavage. According to literature, it was found that this can be used to detect as low as 2 attomolar input RNA with a preamplification step (Eg: Recombinase
+                    Polymerase Amplification). They also devised a lateral flow detection technique where the signal of LwaCas13a is enhanced by EiCsm6(Csm6 from <em>Enterococcus italicus</em>) solely, without the preamplification step by RPA.
+                  </p>
+                  <div class="figures">
+                    <figure style="width: 85%;">
+                      <img src="http://parts.igem.org/wiki/images/9/98/T--IISER_Kolkata--Sherlockv2.jpg" alt="IISER_Kolkata--Sherlockv2.jpg" />
+                      <figcaption>Working mechanism of SHERLOCKv2; how LwaCas13a cleavage products activate Csm6</figcaption>
+                    </figure>
+                    <figure>
+                      <img src="http://parts.igem.org/wiki/images/5/51/T--IISER_Kolkata--figure1contri.jpg" alt="IISER_Kolkata--figure1contri.jpg" />
+                      <figcaption>Combined activity of both LwaCas13a and EiCsm6 for increasing concentrations of (A)6-(U)5 activator detecting 20 nM of ssRNA. Image reference - <a class="referenceLinks" href="https://www.science.org/doi/full/10.1126/science.aaq0179">Zhang et al. Science Vol 360, Issue 6387 439-444 Fig2F</a></figcaption>
+                    </figure>
+                    <figure>
+                      <img src="http://parts.igem.org/wiki/images/b/ba/T--IISER_Kolkata--contribution2.jpg" alt="IISER_Kolkata--contribution2.jpg" />
+                      <figcaption>Kinetics of LwaCas13a SHERLOCK Detection enhanced by EiCsm6 of P. aeruginosa acyltransferase synthetic target. Image reference - <a class="referenceLinks" href="https://www.science.org/doi/full/10.1126/science.aaq0179">Zhang et al. Science Vol 360, Issue 6387 439-444 Fig2G</a></figcaption>
+                    </figure>
+                  </div>
                 </div>
+              </div>
+            </section>
+            <!-- 2. Document troubleshooting to help future teams -->
+            <section id="run1Section" class="scrollSection">
+              <div class="centerImage">
+                <div class="highlightYellow mediumText textShadow"><b>Document troubleshooting to help future teams </b></div>
+              </div>
+              <div class="contentSection">
+                <div class="boxContent">
+                  <p>Among the crucial experiments we conducted for our wet lab component, is a microtiter plate assay for gauging the optimum conditions for the growth of <em>Pseudomonas aeruginosa</em> biofilms. However, in a number of microtiter plates, we were constantly observing the growth of bacteria and hence, the development of biofilm, in wells where uninoculated control media was present. We were unable to comprehend the reason behind the repeated contamination of control wells with bacterial inoculation which hampered our readings for the control replicates in a microtiter plate. We searched up available literature and came across a study involving the analysis of well-to-well contamination. The study studied the observations of well-to-well contamination and quantified it in the context of microbiome research.</p>
+                  <p>Based on this, we have come up with a set of ideas to deal with cross contamination among wells in a microtiter plate while conducting any experiment. Our inferences are specifically in the context of our experiment of the biofilm formation assay.</p>
+                  <p>Intraplate contamination among adjacent wells in a microtiter plate is often a neglected area of focus when it comes to understanding and eradicating causes of contamination. A major part of the focus is on contaminants which are external in the nature of their origin, such as reagents and consumables, rather than well-to-well contamination which happens within the arena of the plate itself. This is why well-to-well contamination has a lot of importance in experimental results and their significance must be rigorously understood, analysed and their effects be taken care of.</p>
+                  <p>The purpose of inclusion of positive and negative controls in an experiment is to minimise variable changes except the variable that is being tested. However, along with it, controls also play a role in assessing contamination in a study and subsequent removal of contaminants in silico. The problem arises when the controls themselves are hampered and the interpretation of results is rendered a hazy outlook. The contamination of controls by physical cross-contamination by samples is an important reason behind the contamination of controls, more so the negative controls.</p>
+                  <p><b>We hypothesised that the possibility of cross contamination among wells is a function of the distance between the wells in context. Hence, for a given source well, the possibility of physical cross contamination is greatest in the wells directly surrounding the source well and decreases as we move outwards. We came across a similar line of thought in literature wherein the number of observed events of cross -contamination have been studied as a function of the pythagorean distance from the source well. This is for the case of DNA extraction for microbiome studies. Inevitably, the rate of cross-contamination is higher in the immediate range of the source well. </b></p>
+                  <p>Well-to-well contamination is important to consider when evaluating experimental results. The risks posed by well-to-well contamination is very significant considering control blanks physically adjacent to samples. The contamination events across different wells are largely independent and one needs to be careful in designing the microtiter plate assay and other aspects of the experiment to minimise well-to-well contamination.</p>
+                  <div class="figures">
+                    <figure>
+                      <img src="http://parts.igem.org/wiki/images/0/0c/T--IISER_Kolkata--crosscontamination.jpg" alt="IISER_Kolkata--crosscontamination.jpg" />
+                      <figcaption>Figure showing contamination in negative control wells.</figcaption>
+                    </figure>
+                  </div>
+                  <p>We are compiling a set of points that we deliberated upon while designing our biofilm formation assay and can be used by future iGEM teams while designing microtiter plate assay regarding well-to-well contamination :</p>
+                  <ol>
+                    <li>It is not easy to identify the precise moment or step in which cross contamination among wells takes place. Instead of deliberating on this, more focus needs to be on designing the way in which wells have to be filled while doing the assay or study .</li>
+                    <li>The possibility of well-to-well contamination is the highest in wells adjacent to the source well. The consideration of sample location in plates should be <b>explicitly considered</b> in the experimental design.</li>
+                    <li>
+                      While designing a plate for an experiment and sample locations in the wells, one should take care of two major effects of well-to-well contamination. One, if treatment samples all are kept together and control samples together, any well-to-well contamination , say, among the treatment wells, will increase the metrics of similarity among the treatment wells only, thereby increasing the chances of detecting false positive signals. On the other hand, randomising the samples without maintaining sufficient separation between controls and treatment wells would possibly contaminate the controls themselves with the treatment wells acting as the source well. Based on this line of thought, the design of the assay must be done considering both the following aspects :
+                      <ol style="list-style: lower-alpha;">
+                        <li>Sufficient separation between treatment and control wells, preferably more separation between control and treatment wells to ensure control wells are safe from physical cross contamination.</li>
+                        <li>Randomisation of treatment and control wells to ensure minimum interaction among control wells and on the other side, treatment wells.</li>
+                      </ol>
+                    </li>
+                    <li>Well-to-well contamination has a major impact on low-biomass samples if they are kept adjacent to samples of high biomass where the high biomass samples can act as source wells.</li>
+                    <li>It must be noted that the occurrence of cross contamination is a matter of chance and there is no assurance that it would not occur at all. However, adopting certain careful practices and clever experimental designs, one can minimise the hampering of experimental results due to cross contamination between wells.</li>
+                    <li>While filling wells in a microtiter plate, avoid handling the control wells near laboratory containers with bacterial culture. Handle them such that they are away from the bacterial culture without any possibility of incidental inoculation of the control wells. This is more of a general precaution, but its consequences can be mistaken for well-to-well contamination.</li>
+                    <li>As a point of precaution, it is always advisable to fill control wells first and then follow it up with test wells. This order of operation ensures that the possibility of incidental contamination of the control wells while handling test wells is less as control wells are already filled and test wells can be handled separately on the lines of the previous point. It is to be noted that this does not exactly lead to cross contamination but its effects can be misinterpreted as cross contamination if one is not careful enough while filling the wells, as per the previous point.</li>
+                  </ol>
+                  <p>Contamination is indeed a hindrance to scientific research. While well-to-well cross contamination can be generalized as being a widespread problem, the specific nature and mechanism of this problem remains vague. The onus is on us to adopt practices to minimise its occurrence.</p>
+                </div>
+              </div>
+            </section>
+            <!-- 3. MODELLING OF EXISTING PART -->
+            <section id="run2Section" class="scrollSection">
+              <div class="centerImage">
+                <div class="highlightYellow mediumText textShadow"><b>MODELLING OF EXISTING PART </b></div>
+              </div>
+              <div class="contentSection">
+                <div class="boxContent">
+                  <p>MODELLING OF EXISTING PART <a class="referenceLinks" href="http://parts.igem.org/Part:BBa_K1365006">BBa_K1365006</a></p>
+                  <p class="subSection">
+                    <b>Summary:</b> This year our team focuses on one segment of this part which is nisA. NisA gene is responsible for the production of the 57-amino acid long pre-peptide. This 57-amino acid comprises a leader peptide, cleavage of which produces a 34 amino acid long Nisin A protein. Nisin Resistance Protein (NSR) is a protein that is expressed on the cell surface of certain pathogenic strains like Streptococcus agalactiae, Streptococcus uberis. NSR is responsible for inactivating nisin by proteolytically cleaving the peptide bond between MeLan28 and Ser29 resulting in a truncated nisin (nisin1–28). NisinPV is a synthetically designed mutant of NisinA with the Mutation of Serine to proline at position 29 (S29P) combined with isoleucine to valine at position 30 (I30V). Nisin PV (
+                    <a class="referenceLinks" href="http://parts.igem.org/Part:BBa_K3799004">BBa_K379904 </a>) shows enhanced antimicrobial activity against Streptococcus uberis by inhibiting biofilm formation and decreasing its viability. In the section below we have shown a comparative analysis of the stability of NisinA and NisinPV under the interaction of Nisin Resistance protein.
+                  </p>
+                  <p class="subSection"><b>Interaction with Nisin Resistance Protein:</b> The data in this section is adapted from the simulations by Field, Des et al<a class="referenceLinks" href="">[7]</a>. They carried out MD simulations to predict the difference in molecular dynamics of the NSR protein in its interaction with the nisin C-terminus (residues 22–34) for nisin-A and nisin PV models.</p>
+                  <p class="subSection">
+                    <b>Molecular docking:</b> We tried to replicate the setup used by Des et al. For the NSR (Nisin Resistance protein) molecule, the PDB file 4Y68 was used and for the Nisin the 1WCO PDB file was used. NisinA structure was mutated using PyMol and a PRO-VAL mutation was added to the 29th and 30th residue respectively. To determine a starting configuration for the NSR-nisin complex a docking program Autodock for ligand and protein binding was used where the Nisin (A/PV) was set as ligand and NSR was set as the receptor. We first performed the docking of NisinA with the tunnel region of NSR and selected the lowest energy stage as the starting configuration. The docs location was observed to be consistent with the ligand-binding site of Nisin as discussed in the literature. The ligand-binding site for NisinA was noted and NisinPV was docked using the same
+                    coordinates.
+                  </p>
+                  <p class="subSection"><b>The free energies of the configurations obtained from docking are as follows:</b></p>
+                  <div class="figures">
+                    <figure>
+                      <img src="http://parts.igem.org/wiki/images/5/52/T--IISER_Kolkata--affinity.jpg" alt="IISER_Kolkata--affinity.jpg" />
+                      <figcaption></figcaption>
+                    </figure>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <!-- 4. New Information about existing part BBa_K2323004 -->
+            <section id="run3Section" class="scrollSection">
+              <div class="centerImage">
+                <div class="highlightYellow mediumText textShadow"><b>New Information about existing part</b></div>
+              </div>
+              <div class="contentSection">
+                <div class="boxContent"></div>
               </div>
             </section>
           </div>
