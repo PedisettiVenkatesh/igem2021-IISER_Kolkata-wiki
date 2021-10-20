@@ -14,7 +14,7 @@ const preloader = document.getElementById("preloader");
 function preload() {
   preloader.style.opacity = "0";
   preloader.style.zIndex = "-999999";
-  document.documentElement.scrollTop = 0;
+  // document.documentElement.scrollTop = 0;
   document.body.classList.remove("noScroll");
   preloader.style.visibility = "hidden";
 }

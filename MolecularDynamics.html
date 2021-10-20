@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
+    <title>IISER Kolkata IGEM Team - Home</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body onload="preload()" class="noScroll">
+    <!-- preloader -->
+    <div id="preloader" class="unSelectable" title="Loading...">
+      <img src="https://2021.igem.org/wiki/images/d/d6/T--IISER_Kolkata--image-preloader.gif" alt="[preloader image]" />
+      Loading . . .
+    </div>
+    <!-- /preloader -->
+
+    <!-- progressBar -->
+    <div id="scrollPath">
+      <div id="progressBar"></div>
+      <div id="progressBtn"></div>
+    </div>
+    <!-- /progressBar -->
+
+    <!-- toTop -->
+    <div id="toTop" class="unSelectable" title="Go To Top">
+      <a href="javascript:window.scrollTo(0, 0);">
+        <img src="https://2021.igem.org/wiki/images/d/d8/T--IISER_Kolkata--image-toTop-2x.png" alt="toTop" />
+      </a>
+    </div>
+    <!-- /toTop -->
+
+    <!-- navToggler -->
+    <div id="navToggler" class="unSelectable" title="navigation">
+      <img id="navTogglerImg" src="https://2021.igem.org/wiki/images/6/67/T--IISER_Kolkata--image-toggleBtn-2x.png" alt="#NAV#" />
+    </div>
+
+    <!-- script for NavToggler -->
+    <script>
+      function changeToggleBtn() {
+        if (navTogglerImg.src.match("https://2021.igem.org/wiki/images/6/67/T--IISER_Kolkata--image-toggleBtn-2x.png")) {
+          navTogglerImg.src = "https://2021.igem.org/wiki/images/e/ee/T--IISER_Kolkata--image-toggleBtn-Close.png";
+        } else {
+          navTogglerImg.src = "https://2021.igem.org/wiki/images/6/67/T--IISER_Kolkata--image-toggleBtn-2x.png";
+        }
+      }
+    </script>
+    <!-- /script for NavToggler -->
+    <!-- /navToggler -->
+
+    <!-- navigation -->
+    <nav class="navigation-container unSelectable">
+      <div class="navigation">
+        <img src="https://2021.igem.org/wiki/images/0/0e/T--IISER_Kolkata--image-navBG-2x.png" alt="" />
+        <div class="navList">
+          <ol>
+            <li class="navDrop"><a href="https://2021.igem.org/Team:IISER_Kolkata"> Home </a></li>
+            <li class="navDrop">
+              <a>
+                Team
+                <div class="navDropList">
+                  <ul>
+                    <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Team">Team Members</a></li>
+                    <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Attributions">Attributions</a></li>
+                    <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Collaborations">Collaborations</a></li>
+                    <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Partnership">Partnership</a></li>
+                  </ul>
+                </div>
+              </a>
+            </li>
+            <li class="navDrop">
+              <a>
+                Project
+                <div class="navDropList">
+                  <ul>
+                    <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Description">Description</a></li>
+                    <!-- <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Design">Design</a></li> -->
+                    <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Contribution">Contribution</a></li>
+                    <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Engineering">Engineering</a></li>
+                    <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Improve">Improvement</a></li>
+                  </ul>
+                </div>
+              </a>
+            </li>
+            <li class="navDrop">
+              <a>
+                Wet Lab
+                <div class="navDropList">
+                  <ul>
+                    <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Experiments">Experiments</a></li>
+                    <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Notebook">Notebook</a></li>
+                    <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Parts">Parts</a></li>
+                    <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Safety">Safety</a></li>
+                    <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Results">Results</a></li>
+                  </ul>
+                </div>
+              </a>
+            </li>
+            <li class="navDrop">
+              <a>
+                Dry Lab
+                <div class="navDropList">
+                  <ul>
+                    <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Model">Mathematical Modeling</a></li>
+                    <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Molecular_Dynamics">Molecular Dynamics</a></li>
+                  </ul>
+                </div>
+              </a>
+            </li>
+            <li class="navDrop">
+              <a>
+                Human Practices
+                <div class="navDropList">
+                  <ul>
+                    <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Human_Practices">Integrated Human Practices</a></li>
+                    <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Implementation">Proposed Implementation</a></li>
+                    <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Communication">Communication</a></li>
+                  </ul>
+                </div>
+              </a>
+            </li>
+            <li class="navDrop">
+              <a>
+                Awards
+                <div class="navDropList">
+                  <ul>
+                    <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Education">Education</a></li>
+                    <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Inclusivity">Inclusivity</a></li>
+                    <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Entrepreneurship">Supporting Entrepreneurship</a></li>
+                    <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Measurement">Measurement</a></li>
+                  </ul>
+                </div>
+              </a>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </nav>
+    <!-- /navigation -->
+
+    <!-- IISER KOLKATA CONTAINER -->
+    <div class="iiserKolkata">
+      <div id="hero">
+        <img src="https://2021.igem.org/wiki/images/c/cb/T--IISER_Kolkata--image-MolecularDynamic-Hero.png" alt="MolecularDynamic-Hero.png" />
+        <div class="homeBtn" title="Go To Home">
+          <a href="https://2021.igem.org/Team:IISER_Kolkata">
+            <img src="https://2021.igem.org/wiki/images/c/cd/T--IISER_Kolkata--image-igemIISERK_home.png" alt="IGEM-IISERKolkata" />
+          </a>
+          <a href="https://2021.igem.org/Team:IISER_Kolkata">
+            <img src="https://2021.igem.org/wiki/images/c/c5/T--IISER_Kolkata--images-namoosteTransparent.jpg" alt="Namooste" />
+          </a>
+        </div>
+      </div>
+      <!-- /hero -->
+
+      <!-- content -->
+      <div class="indentContainer">
+        <div class="gridedContainer">
+          <div id="scrollHide" class="unSelectable">
+            <!-- sideNav -->
+            <div class="sideNav sticky">
+              <!-- navigate in Page -->
+              <ul>
+                <li><a id="run" class="scrollID" onclick="scrollToID('runSection')">Introduction</a></li>
+                <li><a id="run1" class="scrollID" onclick="scrollToID('run1Section')">Protein dynamics in water</a></li>
+                <li><a id="run2" class="scrollID" onclick="scrollToID('run2Section')">Membrane protein interactions</a></li>
+                <li><a id="run3" class="scrollID" onclick="scrollToID('run3Section')">Interaction with Nisin Resistance Protein</a></li>
+                <li><a id="run4" class="scrollID" onclick="scrollToID('run4Section')">Key Takeaways</a></li>
+                <li><a id="run5" class="scrollID" onclick="scrollToID('run5Section')">A word of caution</a></li>
+              </ul>
+            </div>
+            <!-- /sideNav -->
+          </div>
+          <div>
+            <!-- Introduction -->
+            <section id="runSection" class="scrollSection">
+              <div class="centerImage">
+                <div class="highlightYellow mediumText textShadow"><b>Introduction</b></div>
+              </div>
+              <div class="contentSection">
+                <div class="boxContent">
+                  <p class="subSection"><b>Choice of systems</b></p>
+                  <p class="subSection"><b>Model setup</b></p>
+                  <p>All systems were prepared using CHARMM GUI and were simulated using the GROMACS molecular dynamics engine. The PDB structure 1WCO was used as the reference structure for all simulations. The lipid-II moiety was stripped off during system preparation. For NisinA, the native 1WCO structure was used and to generate NisinPV the following mutations were performed within CHARMM GUI itself.:</p>
+                  <ul>
+                    <li>Serine to Proline in 29th position</li>
+                    <li>Isoleucine to Valine in 30th position</li>
+                  </ul>
+                  <p>Considering that we have non-traditional (or engineered amino acid residues in our protein), we tried to gather previously reported topologies and parameters for some of the non-standard amino acids. Amino acids for which we could not find compatible topologies and parameters, we used AMBER LEaP and antechamber program to generate parameters. The topology and parameter files that were used in our systems are present in our <a class="referenceLinks" href="">GitHub repository</a>. For some non-traditional amino acids, we could not generate the topology and parameters using AMBER's LEaP program because of conflicting dihedral angle values. Thus, we had to resort to converting these amino-acts to their closes traditional amino acid counterparts while taking care to maintain the connectivity.</p>
+                  <p><a href="" class="referenceLinks">Link GitHub </a></p>
+                  <p>The systems were equilibrated as following equilibration scheme:</p>
+                  <table width="90%">
+                    <tr>
+                      <th colspan="7">
+                        Suggested Equilibrium Scheme [Reducing Force Constants] <br />
+                        (5 cycles, 1 cycle = 50 - 100 ps)
+                      </th>
+                    </tr>
+                    <tr>
+                      <th></th>
+                      <th>1 cycle</th>
+                      <th>2 cycle</th>
+                      <th>3 cycle</th>
+                      <th>4 cycle</th>
+                      <th>5 cycle</th>
+                      <th>6 cycle</th>
+                    </tr>
+                    <tr>
+                      <td>BB</td>
+                      <td>10.0</td>
+                      <td>5.0</td>
+                      <td>2.5</td>
+                      <td>1.0</td>
+                      <td>0.5</td>
+                      <td>0.1</td>
+                    </tr>
+                    <tr>
+                      <td>SC</td>
+                      <td>5.0</td>
+                      <td>2.5</td>
+                      <td>1.0</td>
+                      <td>0.5</td>
+                      <td>0.1</td>
+                      <td>0.0</td>
+                    </tr>
+                    <tr>
+                      <td>wforce</td>
+                      <td>2.5</td>
+                      <td>2.5</td>
+                      <td>10</td>
+                      <td>0.5</td>
+                      <td>0.1</td>
+                      <td>0.0</td>
+                    </tr>
+                    <tr>
+                      <td>tforce</td>
+                      <td>2.5</td>
+                      <td>2.5</td>
+                      <td>1.0</td>
+                      <td>0.5</td>
+                      <td>0.1</td>
+                      <td>00</td>
+                    </tr>
+                    <tr>
+                      <td>mforce</td>
+                      <td>2.5</td>
+                      <td>2.5</td>
+                      <td>1.0</td>
+                      <td>0.5</td>
+                      <td>0.1</td>
+                      <td>0.0</td>
+                    </tr>
+                    <tr>
+                      <td>ion</td>
+                      <td>10.0</td>
+                      <td>0.0</td>
+                      <td>0.0</td>
+                      <td>0.0</td>
+                      <td>0.0</td>
+                      <td>0.0</td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+            </section>
+            <!-- 1. Protein dynamics in water -->
+            <section id="run1Section" class="scrollSection">
+              <div class="centerImage">
+                <div class="highlightYellow mediumText textShadow"><b>Protein dynamics in water</b></div>
+              </div>
+              <div class="contentSection">
+                <div class="boxContent">
+                  <p>We performed molecular dynamics simulations of NisinA and NisinPV in water to determine the stability of our Pro-Val mutant protein as compared to the wild type NisinA. Both systems were simulated with the following molecular dynamics parameters.</p>
+                  <p class="subSection"><b>Root-mean-square deviation (RMSD) Analysis </b></p>
+                  <p>RMSD is a measure of how the protein residues change structurally at each frame of the simulation. Each residue is compared to its position to a reference frame, and its RMSD is plotted for every fame. The RMSD is given by:</p>
+                  $$ RMSD(t) = \left[ \frac{1}{M} \sum^{N}_{i=1} m_{i} | r_{i}(t) - r_{i}^{mof} | ^{2} \right] ^{\frac{1}{2}} $$
+                  <p>Where \(M = \sum_{i} m_{i}\) and \( r_{i} (t) \) is the position of atom i at time t after least square fitting the structure to the reference structure.</p>
+                  <p>Usually fitting is done with respect to the starting structure. It is not necessary to use the same set of atoms for the RMSD calculation and fitting, e.g. a protein is usually fitted on the backbone atoms but the RMSD can be computed for the backbone or for the whole protein.</p>
+                  <p>We performed RMSD analysis using the GROMACS “gmx rms” tool. We are using RMSD to indicate any major structural fluctuations that would have occurred during the progression of the simulation. The RMSD was calculated for the entire protein molecule for both systems and the least square was fitted to the protein backbone. Additionally RMSD analysis can be used to check the similarity between both protein models.</p>
+                  <div class="figures">
+                    <figure style="width: 95%;"><img src="https://2021.igem.org/wiki/images/1/1a/T--IISER_Kolkata--image-MolecularDynamic-RMSDimage.svg" alt="MolecularDynamic-RMSDimage.svg" /></figure>
+                  </div>
+                  <p>Initially, both models quickly deviate from their reference structure by approximately 1 nm (this happens over the course of the first few nanoseconds during the heating, equilibration and the start of the production phase of the simulation). From then on in the simulation, the Nisin A model continues to deviate until it reaches approximately 2.5 nm and exhibits temporary stability. The Nisin PV model exhibits similar behaviour but shows a stark contrast beyond 15ns. Although it too initially deviates further to almost 3 nm early in the simulation it then returns to just under 1nm deviation from its reference structure and remains virtually constant for the rest of the simulation. There is some major fluctuation around the end of the trajectory for both models.</p>
+                  <p class="subSection"><b>Solvent Accessible Surface Area (SASA) Analysis </b></p>
+                  <p>We performed SASA calculations along with free energy of solvation calculation for both protein-water systems. The SASA was calculated with the GROMACS “sasa” tool which uses</p>
+                  <div class="figures">
+                    <figure style="width: 90%;"><img src="https://2021.igem.org/wiki/images/d/d3/T--IISER_Kolkata--image-MolecularDynamic-SolventAccssibleSurfaceFig.svg" alt="MolecularDynamic-SolventAccssibleSurfaceFig.svg" /></figure>
+                  </div>
+                  <p>It is interesting to note that major fluctuations in RMSD correspond to fluctuations in SASA. We further performed residue-wise SASA calculation to understand the dynamic of the system in greater detail. The residue-wise SASA was calculated using the VMD timeline analysis extension with the distance cutoff set as 0.14 nm.</p>
+                  <p class="subSection"><b>Connolly surfaces </b></p>
+                  <p>The SASA is closely related to the concept of the solvent-excluded surface (also known as Connolly surface), which is imagined as a cavity in bulk solvent. The Connolly surfaces for both systems are as follows.</p>
+                  <p class="subSection"><b>Secondary structure analysis </b></p>
+                  <p class="subSection"><b>Free energy surfaces </b></p>
+                  <p>Biomolecular processes can be described in terms of the molecule's free energy:</p>
+                  $$ \Delta G (R) = - k_{B}T \left[\ln P(R) - \ln P_{max} \right] $$
+                  <p>where kB is the Boltzmann constant, P is the probability distribution of the molecular system along with some coordinate R, and Pmax denotes its maximum, which is subtracted to ensure that δG = 0 for the lowest free energy minimum. Popular choices for R (so-called order parameters) are the RMSD, Rgyr, number of hydrogen bonds or native contacts, or principal components.</p>
+                  <p>The free energy is typically plotted along with two such order parameters, giving rise to a (reduced) free energy surface (FES). Here we use a custom python script to plot the FES as a function of dihedrals in the first case and as a function of RMSD and radius of gyration (RGyr)in the second case. The radius of gyration is a measure for the compactness of a structure and is calculated as:</p>
+                  $$ R_{g}=\left(\frac{\sum_{i}\left|r_{i}\right|^{2} m_{i}}{\sum_{i} m_{i}}\right)^{1 / 2} $$
+                  <p>We performed the radius of gyration calculation with the GROMACS “gmx gyrate” tool which computes the radius of gyration of a group of atoms as a function of time. The atoms are explicitly mass-weighted.</p>
+                  <p>The free energy surface with Phi-Psi as reaction coordinates is similar for both NisinA and NisinPV. The position of the free energy minima for both systems are also in the same vicinity.</p>
+                  <p>For the FES with RMSD-RGyr as reaction coordinates, we, unfortunately, do not have sufficient data points to draw any inferences. The distribution is very sparse. Performing longer and higher frequency simulation would have enabled us to draw inferences in this regard.</p>
+                </div>
+              </div>
+            </section>
+            <!-- 2. Membrane protein interactions -->
+            <section id="run2Section" class="scrollSection">
+              <div class="centerImage">
+                <div class="highlightYellow mediumText textShadow"><b>Membrane protein interactions</b></div>
+              </div>
+              <div class="contentSection">
+                <div class="boxContent">
+                  <p>We started out by setting up simulations of NisinA and NisinPV with a biological membrane to be able to delineate the dynamics and the interaction of these two bacteriocides with bacterial membrane. We went ahead with a membrane lipid composition of POPE: POPG = 3:1. This particular membrane composition is representative of a typical gram-positive bacterial cell membrane and has been used extensively in the literature for similar simulations involving bacterial membrane.</p>
+                  <p>The following aspects of the nature of lipids are important to understand the nature of membrane protein interactions.</p>
+                  <table width="80%">
+                    <tr>
+                      <th>Lipid</th>
+                      <th>Structure</th>
+                      <th>Net charge (at pH 7)</th>
+                      <th>Tm (K)</th>
+                    </tr>
+                    <tr>
+                      <td>POPE</td>
+                      <td>16:0 /18:1 PE</td>
+                      <td>0</td>
+                      <td>298</td>
+                    </tr>
+                    <tr>
+                      <td>POPG</td>
+                      <td>16:0 /18:1 PG</td>
+                      <td>-1</td>
+                      <td>269</td>
+                    </tr>
+                  </table>
+                  <p>POPE has 16 carbon atoms in one tail and 18 carbon atoms in the other with one unsaturation and the head group is Phosphatidylethanolamine. POPG acyl tail structure is the same as POPE and the head group, in this case, is Phosphatidylglycerol. The important point to note here is the head group charge and melting temperate (Tm). POPG is much more negatively charged as compared to POPE and has a significantly lower melting temperature. We started off with an inkling that the higher negative charge will play a crucial ride in membrane protein interactions.</p>
+                  <p>We set up two identical membrane systems and added NisinA to one and NisinPV to the other. All systems were created using CHARMM GUI. The thermodynamics and composition parameters were the same as previously outlined. Although membrane-protein systems are huge in terms of the number of particles to be simulated, we did not go for a coarse-grained approach as we intended to delineate the intricacies of the membrane-protein interactions. Therefore, we went ahead with fully atomistic systems and the simulations were run for 150 ns each. A summary of the setup is given as follows:</p>
+                  <table>
+                    <tr>
+                      <td>Force field</td>
+                      <td>CHARMM36m</td>
+                    </tr>
+                    <tr>
+                      <td>Water Model</td>
+                      <td>TIP3P</td>
+                    </tr>
+                    <tr>
+                      <td>Ions</td>
+                      <td>0.15M NaCl (with neutralising ions)</td>
+                    </tr>
+                    <tr>
+                      <td>Temperature</td>
+                      <td>310.15K</td>
+                    </tr>
+                    <tr>
+                      <td>Trajectory length</td>
+                      <td>150 ns</td>
+                    </tr>
+                    <tr>
+                      <td>Lipid composition on each leaflet</td>
+                      <td>POPE:POPG = 3:1</td>
+                    </tr>
+                  </table>
+                  <p class="subSection"><b>Membrane bilayer thickness </b></p>
+                  <div style="display: grid; grid-template-columns: 60% 40%;">
+                    <p>
+                      Lipid membrane thickness is a standard parameter to check the stability of a membrane simulation. Additionally, if there is the generation of any membrane curvature, it should be indicated in the membrane thickness. We calculated the membrane thickness over time by defining a selection group consisting of the Phosphate head groups of the lipids in the bilayer. The local normal to the nearest phosphate neighbour would produce the local membrane thickness. This when averaged out over the entire membrane gives one value of membrane thickness as a function of time. FATSLiM is a nifty python-based tool that can be used to calculate membrane thickness for courage-gained simulation. However, since we performed atomistic simulation we had to play around with the distance cutoff for the local normal and leaflet identification in the FATSLiM source code.
+                    </p>
+                    <img style="padding: 1rem;" src="" alt="imageHere" />
+                  </div>
+                  <p>The membrane bilayer thickness remains more or less constant and within the margins of thermal fluctuations. Certain significant dips in the bilayer thickness might be indicative of the generation of local membrane fluctuations.</p>
+                  <p class="subSection"><b>Area per lipid (APL) calculation </b></p>
+                  <p>Membrane APL is another parameter to describe the dynamic of membrane systems. APL is indicative of not only membrane stability but also indicates probate regions of interaction between the lipid bilayer and the membrane. APL calculation is similar to the thickness and used a section group consisting of the phosphates. The Area of the lipid boundary is approximately defined by the coordinates of the phosphates in the head groups. This area divided by the total number of lipids in the bilayer gives the area per lipid. We again used a modified implementation of FATSLiM for this calculation</p>
+                  <p>The area per lipid for both membrane-protein systems is virtually constant within the margins of thermal fluctuations. However, the APL for NisinPV is marginally higher than the APL for NisinA. The more significant fluctuations of APL could be indicative of membrane-protein interactions.</p>
+                  <p class="subSection"><b>Hydrogen bonds between protein and lipid head-groups </b></p>
+                  <p>Hydrogen bonds provide most of the directional interactions that underpin protein folding, protein structure and molecular recognition. Hydrogen bonding confers rigidity to the protein structure and specificity to intermolecular interactions. An H-bond is formed by the interaction of a hydrogen atom that is covalently bonded to an electronegative atom (donor D) with another electronegative atom (acceptor A). The accepted geometry for an H-bond is a distance of less than 3.5 \(Å\) between hydrogen D and A and an D-H-A angle of 180° ± 30°.</p>
+                  <p>Having established that the membrane system is stable and there are instances of membrane-protein interaction. We went ahead to try to explain the nature of these interactions. We started plotting the number of Hydrogen bonds between the protein and the lipids over time. The analysis was performed using the “gmx hbond” tool in GROMACS. This analyses all H-bonds existing between two groups of atoms (which must be either identical or non-overlapping) or in specified D-H-A triplets using specified D-A distance and D-H-A angle criteria. The distance cutoff or hydrogen bonds was set up to be 0.35 nm so that even slightly weaker hydrogen bonds could be taken into account.</p>
+                  <p>The time evolution of the total number of H-bonds between the selected groups shows that the number of hydrogen bonds between the protein and the POPG is similar for both NisinA and NisinPV. However, the same is drastically different for POPE wherein Nisin PV forms significantly lower H-bond contacts with the lipid. It must be noted here that POPE is three times more abundant in the system. Still, the number of H-bond contacts between NisinPV and the POPE is significantly lower than NisinA. In fact, even the total membrane H-bond contacts for NisinPV as lower than the NisinA-POPE contacts.</p>
+                  <p>
+                    To have a deeper look at this behavior, we plotted the residue-wise H-bond contacts for Nisin and realised that the majority of contacts formed between the protein and the POPG lipids involve the first few residues in the N-terminal region of Nisin (which in our case in unmodified between NisinA and NisinPV) specifically in residue 1 to 11 region and the contacts are formed with the oxygen atoms in the POPG head group.. Here, we would like to invoke the fact that the net charge of POPG at pH7 id -1 whereas for POPE is 0. We know from literature that the Nisin 1-11 region is responsible for interactions with lipid-II and is in fact responsible for the capture of membrane-bound lipid-II, causing membrane degradation. Nisin interacts with the pyrophosphate group of lipid-II (as reported by Panina et al.). We suspect that the interaction with POPG is
+                    along the same lines as the interaction with Lipid-II given the charged nature of the groups involved. We wanted to perform Potentials of Mean Force (PMF) calculations to further explore this aspect, but due to a shortage of computational resources and cluster time, we could not perform any enhanced sampling simulations in this regard.
+                  </p>
+                  <p>Given here is an animation of the residues involved in the interaction of Nisin with Lipid-II. The animation has been made with the data published by Panina et al.</p>
+                  [Add animation here ]
+                  <p class="subSection"><b>Free energy surfaces </b></p>
+                  <p>We calculated the free energy for NisinA and NisinPV in the membrane environment just the way we did in the section where we looked at the protein dynamics in water. We took two cases of reaction coordinates, the first being the Phi-Psi angles (Ramachandran plot) and the second being RMSD-RGyr.</p>
+                  <p>The free energy surface with Phi-Psi as reaction coordinates is similar for both NisinA and NisinPV. The position of the free energy minima for both systems are also in the same vicinity.</p>
+                  <p>The free energy surface with RMSD-RGyr as the reaction coordinates is more dispersed (Spread out) for NisinA as compared to NisinPV. The free energy minimums are also positioned almost linearly in both systems, indicating that RMSD and RGyr are positively correlated in terms of the free energy associated with it. The maximum RMSD and maximum RGyr are also significantly higher for the NisinPV system (almost two times that of the NisinA system). Although, these extremes are sparsely populated.</p>
+                </div>
+              </div>
+            </section>
+            <!-- 3. Interaction with Nisin Resistance Protein -->
+            <section id="run3Section" class="scrollSection">
+              <div class="centerImage">
+                <div class="highlightYellow mediumText textShadow"><b>Interaction with Nisin Resistance Protein</b></div>
+              </div>
+              <div class="contentSection">
+                <div class="boxContent">
+                  <p>The data in this section is adapted from the simulations by <b>Field, Des et al</b>. They carried out MD simulations to predict the difference in molecular dynamics of the NSR protein in its interaction with the nisin C-terminus (residues 22–34) for nisin-A and nisin PV models.</p>
+                  <p class="subSection"><b>Molecular docking </b></p>
+                  <p>We tried to replicate the setup used by Des et al. For the NSR (Nisin Resistance protein) molecule, the PDB file 4Y68 was used and for the Nisin the 1WCO PDB file was used. NisinA structure was mutated using PyMol and a PRO-VAL mutation was added to the 29th and 30th residue respectively. To determine a starting configuration for the NSR-nisin complex a docking program Autodock for ligand and protein binding was used where the Nisin (A/PV) was set as ligand and NSR was set as receptor. We first performed the docking of NisinA with the tunnel region of NSR and selected the lowest energy stage as the starting configuration. The docs location was observed to be consistent with the ligand-binding site of Nisin as discussed in literature. The ligand-binding site for NisinA was noted and NisinPV was docked using the same coordinates.</p>
+                </div>
+              </div>
+            </section>
+            <!-- 4. Key Takeaways -->
+            <section id="run4Section" class="scrollSection">
+              <div class="centerImage">
+                <div class="highlightYellow mediumText textShadow"><b>Key Takeaways</b></div>
+              </div>
+              <div class="contentSection">
+                <div class="boxContent"></div>
+              </div>
+            </section>
+            <!-- 5. A word of caution -->
+            <section id="run5Section" class="scrollSection">
+              <div class="centerImage">
+                <div class="highlightYellow mediumText textShadow"><b>A word of caution</b></div>
+              </div>
+              <div class="contentSection">
+                <div class="boxContent"></div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+      <!-- /content -->
+
+      <!-- reference -->
+      <section class="reference">
+        <div class="wave topWave">
+          <!-- Top Wave  -->
+        </div>
+        <div class="indentContainer">
+          <h3>References</h3>
+        </div>
+      </section>
+      <!-- /reference -->
+
+      <!-- footer -->
+      <footer>
+        <div class="theFooter">
+          <div class="wave bottomWave"></div>
+          <div class="indentContainer">
+            <div class="contactHead"><b>Contact us at</b></div>
+            <div class="contacts">
+              <a href="https://www.instagram.com/igem.iiserk/"> <img src="https://2021.igem.org/wiki/images/e/ec/T--IISER_Kolkata--image-instagramIcon.png" alt="instagram" /></a>
+              <a href="https://www.facebook.com/iGEM.IISERK"> <img src="https://2021.igem.org/wiki/images/0/02/T--IISER_Kolkata--image-facebookIcon.png" alt="facebook" /></a>
+              <a href="https://twitter.com/iGEM_IISERKol?s=08"> <img src="https://2021.igem.org/wiki/images/e/e2/T--IISER_Kolkata--image-twitterIcon.png" alt="twitter" /></a>
+              <a href="https://www.linkedin.com/in/igem-iiser-kolkata-189707189/"> <img src="https://2021.igem.org/wiki/images/1/15/T--IISER_Kolkata--image-linkedinIcon.png" alt="linkedIn" /></a>
+            </div>
+            <div class="footerHead">
+              <h3>Our Sponsors...</h3>
+            </div>
+            <div class="sponsors">
+              <div style="border-right: 3px solid #5e8dd1;">
+                <img src="https://2021.igem.org/wiki/images/9/90/T--IISER_Kolkata--image-igemiiserk-2x.png" alt="IGEM-IISERKolkata" />
+              </div>
+              <div>
+                <div>
+                  <img src="https://2021.igem.org/wiki/images/f/f7/T--IISER_Kolkata--image-promegaLogo.png" alt="Promega" />
+                  <img src="https://2021.igem.org/wiki/images/f/fb/T--IISER_Kolkata--image-RCTLogo.png" alt="RCT" />
+                  <img src="https://2021.igem.org/wiki/images/e/e3/T--IISER_Kolkata--image-iiserkLogo.png" alt="IISERKolkata" />
+                  <img class="hLogo" src="https://2021.igem.org/wiki/images/c/cb/T--IISER_Kolkata--image-IDTLogo.png" alt="IDT" />
+                  <div class="flexBreak"></div>
+                  <img class="hLogo" src="https://2021.igem.org/wiki/images/4/46/T--IISER_Kolkata--image-bioLabsLogo.png" alt="NewEnglandBioLabs" />
+                  <img class="hLogo" src="https://2021.igem.org/wiki/images/6/68/T--IISER_Kolkata--image-benchlingLogo.png" alt="Benchling" />
+                  <img class="hLogo" src="https://2021.igem.org/wiki/images/0/0a/T--IISER_Kolkata--image-twistLogo.png" alt="TWIST" />
+                  <img src="https://2021.igem.org/wiki/images/0/0b/T--IISER_Kolkata--image-igemLogo.png" alt="IGEM" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <!-- /footer -->
+    </div>
+
+    <!-- script for scroll actives -->
+    <script>
+      const mainNavLinks = document.querySelectorAll(".scrollID");
+
+      var topOff = 200;
+
+      if (window.matchMedia("(max-width: 980px)").matches) {
+        var topOff = 500;
+      }
+
+      function highlightActiveSection() {
+        var fromTop = window.pageYOffset + topOff;
+        var r = 0;
+
+        for (r = 0; r < mainNavLinks.length; r++) {
+          var navD = mainNavLinks[r];
+          var section = document.getElementById(navD.id + "Section");
+          if (section.offsetTop <= fromTop) {
+            if (section.offsetTop + section.offsetHeight > fromTop) {
+              navD.classList.add("scrollID-active");
+            } else {
+              navD.classList.remove("scrollID-active");
+            }
+          } else {
+            navD.classList.remove("scrollID-active");
+          }
+        }
+      }
+    </script>
+    <!-- /script for scroll actives -->
+
+    <!-- hide on Scroll -->
+    <script>
+      // hide on scroll
+      var prevScrollPos = window.pageYOffset;
+
+      function hideOnScroll() {
+        if (window.matchMedia("(max-width: 980px)").matches) {
+          var currentScrollPos = window.pageYOffset;
+          if (prevScrollPos > currentScrollPos) {
+            document.getElementById("scrollHide").style.top = "0.8%";
+          } else {
+            document.getElementById("scrollHide").style.top = "-50vh";
+          }
+          prevScrollPos = currentScrollPos;
+        }
+      }
+    </script>
+    <!-- /hide on scroll -->
+
+    <!-- script for collapsibles -->
+    <script>
+      var collapsibles = document.querySelectorAll(".collapsible");
+
+      function removeCollapsibleExpanded(notRemove) {
+        collapsibles.forEach((collD) => {
+          if (collD != notRemove) {
+            collD.classList.remove("collapsible--expanded");
+            collD.querySelector(".collapsibleToggler").innerHTML = "+";
+          }
+        });
+      }
+
+      collapsibles.forEach((coll) =>
+        coll.querySelector(".collapsible-header").addEventListener("click", function () {
+          removeCollapsibleExpanded(coll);
+          coll.classList.toggle("collapsible--expanded");
+
+          if (coll.querySelector(".collapsibleToggler").innerHTML == "+") {
+            coll.querySelector(".collapsibleToggler").innerHTML = "-";
+          } else {
+            coll.querySelector(".collapsibleToggler").innerHTML = "+";
+          }
+        })
+      );
+    </script>
+    <!-- /script for collapsibles -->
+
+    <!-- /IISER KOLKATA CONTAINER -->
+
+    <!-- JS -->
+    <!-- <script src="https://2021.igem.org/Template:IISER_Kolkata/js"></script> -->
+    <script src="app.js"></script>
+    <script src="https://2021.igem.org/common/MathJax-2.5-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <!-- /JS -->
+  </body>
+</html>

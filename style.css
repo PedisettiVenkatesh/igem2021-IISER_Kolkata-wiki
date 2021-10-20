@@ -1254,44 +1254,24 @@ figcaption {
 /* /figure */
 
 /* tables */
-.boxTable table {
-  /* width: 100% !important; */
-  margin: 1rem 1rem !important;
-  background: none !important;
+table {
+  margin: 1rem auto !important;
+  border: 2px solid #000 !important;
+}
+
+th,
+td {
+  border: 1px solid #000 !important;
+  padding: 0.5rem 1rem !important;
+}
+
+th {
+  color: #111 !important;
+}
+
+td {
   border-collapse: collapse !important;
-  border: none !important;
-}
-
-.boxTable td {
   background: none !important;
-  border: none !important;
-  vertical-align: top !important;
-  padding-bottom: 1.3rem !important;
-  /* border: 1px dashed red; */
-}
-
-.realTable {
-  width: 100% !important;
-  display: flex;
-  justify-content: center;
-  margin-bottom: 2rem;
-}
-
-.realTable table {
-  border: 1px solid var(--color-body) !important;
-  border-collapse: collapse !important;
-  text-align: center !important;
-}
-
-.realTable th {
-  background: #ffce60 !important;
-}
-
-.realTable th,
-.realTable td {
-  vertical-align: center !important;
-  padding: 0.5rem 1rem 0.5rem !important;
-  border: 1px solid var(--color-body) !important;
 }
 
 /* /tables */
