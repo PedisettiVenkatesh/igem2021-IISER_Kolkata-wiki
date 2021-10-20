@@ -1757,3 +1757,10 @@ td {
   color: #fff;
 }
 /* /treeDropdown */
+
+/* Math */
+.math {
+  max-width: 900px;
+  transform: scale(0.85);
+}
+/* /Math */
