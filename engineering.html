@@ -161,20 +161,166 @@
             <div class="sideNav sticky">
               <!-- navigate in Page -->
               <ul>
-                <li><a id="run" class="scrollID" onclick="scrollToID('runSection')">Overview</a></li>
+                <li><a id="run" class="scrollID" onclick="scrollToID('runSection')">Research</a></li>
+                <li><a id="run1" class="scrollID" onclick="scrollToID('run1Section')">Imagine</a></li>
+                <li><a id="run2" class="scrollID" onclick="scrollToID('run2Section')">DNaseI</a></li>
+                <li><a id="run3" class="scrollID" onclick="scrollToID('run3Section')">AIP-I</a></li>
               </ul>
             </div>
             <!-- /sideNav -->
           </div>
           <div>
-            <!-- Overview -->
+            <!-- Research -->
             <section id="runSection" class="scrollSection">
               <div class="centerImage">
-                <div class="highlightYellow mediumText textShadow"><b>overview</b></div>
+                <div class="highlightYellow mediumText textShadow"><b>Research</b></div>
               </div>
               <div class="contentSection">
                 <div class="boxContent">
-                  <p>Lorem ipsum dolor sit.</p>
+                  <p>
+                    We came to know about the severe problems of Bovine mastitis from a very personal perspective through one of our teammates. After encountering the problem, detailed human practices research helped us to realize the real-life problems faced by the stakeholders and the solution they need to tackle this problem at this moment. We felt the necessity of the human-centric approach to detect and cure bovine mastitis and also be aware the people about prevention practices. From the various inputs from our stakeholders, we understood that a non-antibiotic method of treatment is the need of the hour. Antimicrobial resistance in pathogens is an alarming issue and pathogens causing bovine mastitis are also becoming antibiotic resistant due to extreme overuse of broad-spectrum antibiotics in the dairy industry. Currently, only antibiotics are used to treat
+                    bovine mastitis disease and are not much effective for its purpose. Therefore the non-antibiotic method of treatment is needed to reduce the use of antibiotics in the dairy industry. We decided to approach this issue using synthetic biology. To ensure effective implementation of the treatment technique we also realized the need for an early, easy-to-use, cheap detection kit to detect the subclinical bovine mastitis disease.
+                  </p>
+                </div>
+              </div>
+            </section>
+            <!-- 1. Imagine -->
+            <section id="run1Section" class="scrollSection">
+              <div class="centerImage">
+                <div class="highlightYellow mediumText textShadow"><b>Imagine</b></div>
+              </div>
+              <div class="contentSection">
+                <div class="boxContent">
+                  <p>Through our interactions with dairy farmers and veterinary doctors from various parts of India, we narrowed down our research to the major reasons why Mastitis still remains a threat. The current method for detection can only detect bovine mastitis at a very later stage and is not specific. By that time it gets difficult to cure the disease. The current treatment which highly depends on broad-spectrum antibiotics is not only delivered in sufficient amounts to kill the pathogens,(S aureus and S uberis) but also could lead to antimicrobial resistance(AMR). Hence we decided to treat the disease at its root by using a combinatorial approach of early detection along with a proper treatment method that is not only the best alternative to antibiotics but also more specific and efficient.</p>
+                  <p>The problem with using broad-spectrum antibiotics in the treatment of Bovine mastitis is that it leads to the development of antibiotic resistance among bacterial strains. Also most of the time, the antibiotic supplied to the udder via intramammary injection does not reach the bacteria insufficient amount. We have taken special care to address both these issues by focussing on finding the best alternative and ensuring that it gets delivered at the location of bacteria insufficient amount.</p>
+                </div>
+              </div>
+            </section>
+            <!-- 2. DNaseI  -->
+            <section id="run2Section" class="scrollSection">
+              <div class="centerImage">
+                <div class="highlightYellow mediumText textShadow"><b>DNaseI</b></div>
+              </div>
+              <div class="contentSection">
+                <div class="boxContent">
+                  <p><b>Design</b></p>
+                  <p>Literature on Bovine mastitis treatment led us to discover the potential candidates for our approach. We choose to incorporate Nisin PV, a synthetic variant of Nisin A lantibiotic alongside DNaseI to eradicate S aureus and S uberis which are the major bacterias present in the udder of infected cows. Nisin PV creates pores in the bacterial membrane. DNaseI favors this activity by degrading the extracellular DNA in bacterial biofilm. DNaseI treated bacterial colony is found to be more susceptible to the activity of antibacterial agents.</p>
+                  <p>Due to the time and space constraints, we decided to focus on DNaseI. Our team designed a very simple and elegant method to clone and characterize Bovine DNaseI.</p>
+                  <p class="subSection"><b>Cycle-1 </b></p>
+                  <p><b>Build and test </b></p>
+                  <p>
+                    Primarily, the Bovine DNaseI gene fragment was cloned and expressed in E Coli BL21 in the PSB1C3 vector. Transformants were tested using colony PCR. Expression was induced under IPTG. <em>See <a class="referenceLinks" href="https://2021.igem.org/Team:IISER_Kolkata/Results">results</a> for more info.</em>
+                  </p>
+                  <p><b>Learn and improve </b></p>
+                  <p>Unfortunately, due to COVID restrictions, we lack time and lab access for the proper extraction and purification of protein. So as an alternative, we further depended on industrially prepared DNaseI from sigma Aldrich(D2025-15KU) to carry out further experiments.</p>
+                  <p class="subSection"><b>Cycle-2 </b></p>
+                  <p><b>Build and test </b></p>
+                  <p>To further study the activity of DNase1 against biofilm of bacteria, we conducted a biofilm assay in 96 well plates. Before studying DNaseI activity against biofilm, we decided to standardize the biofilm formation in 96 well plates by following standard procedure. We used Pseudomonas aeruginosa for developing biofilm. Initially, bacteria were grown by varying growth media, incubation times, dilutions, and other conditions to determine the optimal conditions for maximum yield of biofilm. The yield of biofilm was calculated by determining A595 nm after crystal violet treatment.</p>
+                  <div class="figures">
+                    <figure style="width: 80%;">
+                      <img style="border: none; border-radius: 0;" src="https://2021.igem.org/wiki/images/5/57/T--IISER_Kolkata--image-Engineering-001.png" alt="Engineering-001.png" />
+                      <figcaption>96 Well plate showing biofilm formation after 72hr incubation, in different dilutions of different dilutions.</figcaption>
+                    </figure>
+                    <figure style="width: 80%;">
+                      <img style="border: none; border-radius: 0;" src="https://2021.igem.org/wiki/images/b/bb/T--IISER_Kolkata--image-Engineering-002.png" alt="Engineering-002.png" />
+                      <figcaption>Crystal Voilet added in each well after washing out excess excess cells.</figcaption>
+                    </figure>
+                    <figure style="width: 80%;">
+                      <img style="border: none; border-radius: 0;" src="https://2021.igem.org/wiki/images/2/25/T--IISER_Kolkata--image-Engineering-003.png" alt="Engineering-003.png" />
+                      <figcaption>96 well plate after washing off the crystal violet.</figcaption>
+                    </figure>
+                  </div>
+                  <p><b>Learn and improve </b></p>
+                  <p>Biofilm yield for all different conditions was determined. Based on the results the following inferences were made about conditions favouring maximum yield: see <a class="referenceLinks" href="https://2021.igem.org/Team:IISER_Kolkata/Results">results</a> for more info.</p>
+                  <ol>
+                    <li>NB media gave higher biofilm compared to LB and TSB Media.</li>
+                    <li>72 hr incubation was optimal for maximum biofilm formation when compared to 24 hr and 48 hr.</li>
+                    <li>Dilution of primary culture to 0.1 OD before adding into wells gave maximum biofilm when compared to 0.05 OD.</li>
+                  </ol>
+                  <p>Hence, for further assays, we decided to incubate bacteria for 72 hrs in NB media maintaining initial OD of 0.1.</p>
+                  <p class="subSection"><b>Cycle -3 </b></p>
+                  <p><b>Build and test </b></p>
+                  <p>The next step is to determine the optimum concentration of DNase1 required for maximum degradation of biofilm produced. This value is critical while designing the diagnostic tool. This was determined by carrying out a biofilm assay similar to what was mentioned above. However, here we pre-incubate the media with varying concentrations of DNaseI to determine which concentration gave maximum degradation at the end of 72 hr. The degradation rate was compared in terms of biofilm percentage reduction(BPR) which is given by:</p>
+                  $$ BPR = \left( \frac{Control \ A595 nm - test \ A595 nm}{Control \ A595 nm} \right) \times 100 $$
+                  <p><b>Learn and improve </b></p>
+                  <p>Based on the experiments, a concentration of 10 µg/ml was found to give the maximum degradation rate. This concentration was chosen as a standard in further experiments. See <a class="referenceLinks" href="https://2021.igem.org/Team:IISER_Kolkata/Results">results</a> for more info.</p>
+                  <p class="subSection"><b>Cycle-4</b></p>
+                  <p><b>Build and test </b></p>
+                  <p>Considering the optimal concentration of DNaseI required for maximum degradation of biofilm, we further tried to determine the optimal time or the time for maximum degradation of biofilm. For this experiment, we developed a biofilm of Pseudomonas aeruginosa in 96 well plates for 72 hrs. Following this, all the bacteria in the well was decanted and the pure biofilm was further treated with media containing 10 µg/ml of DNaseI(concentration determined from pretreatment above) and incubated for different time intervals. Biofilm quantification was carried out and the degradation rate was compared by calculating biofilm percentage reduction(BPR).</p>
+                  <p><b>Learn and improve </b></p>
+                  <p>Maximum biofilm degradation was observed in wells incubated for 40 min.No further change was observed for a longer duration of incubation. see <a class="referenceLinks" href="https://2021.igem.org/Team:IISER_Kolkata/Results">results</a> for more info.</p>
+                </div>
+              </div>
+            </section>
+            <!-- 3. AIP-I -->
+            <section id="run3Section" class="scrollSection">
+              <div class="centerImage">
+                <div class="highlightYellow mediumText textShadow"><b>AIP-I</b></div>
+              </div>
+              <div class="contentSection">
+                <div class="boxContent">
+                  <p><b>Design</b></p>
+                  <p>To ensure that our bacteria gets activated only in the presence of our target pathogen, we decided to utilize the Quorum sensing pathway of S.aureus. S.aureus produces AIP-I as a quorum-sensing molecule. So, we choose to incorporate the agrA_agrC system to enable our GMO to sense AIP-I. To regulate Nisin PV and DNase I production, their corresponding genes were designed to be downstream of the AIP-I inducible P2 promoter. To characterize our genetic circuits, we required AIP-I molecules. There were two options to obtain them - 1) Obtain synthetic AIP-I from a vendor, 2) Express AIP-I in bacteria. We found the second option more feasible for our team, and hence, we decided to clone the AIP-I producing Gene in E.Coli DH5α,pSB1C3 vector and use the expressed protein for our experiment.</p>
+                  <p>We decided to use the parts from the iGEM DNA Distribution kit plate to assemble our gene circuit for AIP-I production. We used the IPTG inducible Plac promoter (BBa_R0010) with the AIP generator - agrB agrD system (I746001). The Plac promoter was used as it is strongly regulated by IPTG and hence the expression of the protein can be controlled. We planned to clone the Circuit in the pSB1C3 plasmid vector itself and express them in E.Coli BL21 for protein expression.</p>
+                  <p class="subSection">Cycle - 1</p>
+                  <p><b>Build</b></p>
+                  <p>As we planned to use the parts from the iGEM DNA Distribution kit, it was more feasible for us to use the biobrick 2A assembly method for cloning our genetic circuit. To obtain the Plac promoter gene we did double restriction digestion with E.CoRI and Spel. The agrB agrD containing pSB1C3 plasmid was double restriction digestion using EcoRI and XbaI. The time required for complete double restriction digestion was optimized.</p>
+                  <div class="figures">
+                    <figure style="width: 90%;"><img style="border: none; border-radius: 0;" src="https://2021.igem.org/wiki/images/2/2d/T--IISER_Kolkata--image-Engineering-abc.png" alt="Engineering-abc.png" /></figure>
+                  </div>
+                  <p><b>Test</b></p>
+                  <p>Optimum digestion was observed with 4 hours of incubation. The digested products were run in agarose gel electrophoresis against the DNA ladder to check the presence of digested DNA fragments. No band were observed for Plac fragments.</p>
+                  <p><b>Learn and Improve </b></p>
+                  <p>The band for Plac was not obtained in the gel as the size of the digested fragment is approximately 200bp so, it was not retained in the 0.8% agarose gel, and hence it was not visible. We learned that we should do double restriction digestion such that the desired fragments are not smaller than 800bp, to enable proper resolution of fragments in agarose gel.</p>
+                  <p class="subSection"><b>Cycle - 2 </b></p>
+                  <p><b>Build</b></p>
+                  <p>We modified the experimental design. This time we double digested the agrB_agrD containing plasmids with Xbal and PstI to create the insert, while the Plac containing plasmid was digested with Spel and PstI to create a linearized plasmid. The length of both the DNA fragments was above 800bp.</p>
+                  <div class="figures">
+                    <figure style="width: 90%;"><img style="border: none; border-radius: 0;" src="https://2021.igem.org/wiki/images/c/c5/T--IISER_Kolkata--image-Engineering-efg.png" alt="Engineering-efg.png" /></figure>
+                  </div>
+                  <p><b>Test</b></p>
+                  <p>The digested product was run in agarose gel to check the presence of the digested products. The desired DNA bands were obtained (see <a class="referenceLinks" href="https://2021.igem.org/Team:IISER_Kolkata/Results">results</a> for more info.). The digested fragments were purified by agarose gel extraction. The concentration of the DNA sample was checked. The concentration of the agrB_agrD fragment was observed to be very low and the 280/260 ratio was not between 1.8 and 1.9. (Table)</p>
+                  <table>
+                    <tr>
+                      <td>Sample</td>
+                      <td>Concentration (ng/ul)</td>
+                      <td>280/260 ratio</td>
+                    </tr>
+                    <tr>
+                      <td>agrB_agrD digested samp01</td>
+                      <td>4.7</td>
+                      <td>2.35</td>
+                    </tr>
+                    <tr>
+                      <td>agrB_agrD digested samp02</td>
+                      <td>3.5</td>
+                      <td>2.06</td>
+                    </tr>
+                  </table>
+                  <p><b>Learn and Improve. </b></p>
+                  <p>For restriction digestion, we used the same weight of both the plasmids samples. The plasmid containing agrB_agrD had higher base pairs (2966bp) compared to the plasmid with Plac (2470bp). Hence we hypothesize that fewer units of agrBD plasmids were digested as compared to the Plac containing plasmids. However, For ligation, we need a higher amount of insert fragments compared to the linearized plasmid. Hence, we could not proceed with the purified digested fragments.</p>
+                  <p>We understood that we needed to obtain the agrB_agrD fragment in a much higher concentration than the Plac-containing linearized plasmid.</p>
+                  <p class="subSection"><b>Cycle - 3 </b></p>
+                  <p><b>Build</b></p>
+                  <p>To obtain the agrB_agrD fragments in higher concentration, the agrB_agrD plasmid was PCR amplified using the biobrick forward and biobrick reverse primers. The amplified fragments were then purified by PCR clean-up.</p>
+                  <p><b>Test</b></p>
+                  <p>DNA concentration of PCR amplified products was measured. A high concentration of DNA was obtained.</p>
+                  <table>
+                    <tr>
+                      <td>Sample</td>
+                      <td>Concentration (ng/ul)</td>
+                      <td>280/260 ratio</td>
+                    </tr>
+                    <tr>
+                      <td>agrB_agrD PCR amplified samp01</td>
+                      <td>73.7</td>
+                      <td>1.90</td>
+                    </tr>
+                  </table>
+                  <p>The amplified fragments were double restriction digested. The double digested product was ligated and transformed into E.Coli DH5α. Colony PCR was performed using vf2 and VR primers. The colonies having correct (desired) plasmid were identified (see <a class="referenceLinks" href="https://2021.igem.org/Team:IISER_Kolkata/Results">results</a> for more info). The cloned plasmid was extracted and transformed in BL21. Protein expression was induced with IPTG on reaching 0.6 OD (600 nm). The cells were pellet down, and the media was sterilized by filter sterilization. The expressed protein was concentrated by lyophilization.</p>
+                  <p>The presence of the AIP molecule was checked by the induction of the GFP production under the AIP inducible P2 promoter in unidirectional circuit (BBa_K1022100).</p>
+                  <p><b>Learn</b></p>
+                  <p>AIP molecules were successfully expressed.</p>
                 </div>
               </div>
             </section>
@@ -190,6 +336,13 @@
         </div>
         <div class="indentContainer">
           <h3>References</h3>
+          <ol>
+            <li><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3182663/">https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3182663/</a></li>
+            <li><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5867557/">https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5867557/</a></li>
+            <li><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3288126/">https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3288126/</a></li>
+            <li><a href="https://www.sigmaaldrich.com/deepweb/assets/sigmaaldrich/product/documents/213/541/d5025dat.pdf">https://www.sigmaaldrich.com/deepweb/assets/sigmaaldrich/product/documents/213/541/d5025dat.pdf</a></li>
+            <li><a href="https://www.frontiersin.org/articles/10.3389/fmicb.2020.00813/full">https://www.frontiersin.org/articles/10.3389/fmicb.2020.00813/full</a></li>
+          </ol>
         </div>
       </section>
       <!-- /reference -->
@@ -316,6 +469,7 @@
     <!-- JS -->
     <!-- <script src="https://2021.igem.org/Template:IISER_Kolkata/js"></script> -->
     <script src="app.js"></script>
+    <script src="https://2021.igem.org/common/MathJax-2.5-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <!-- /JS -->
   </body>
 </html>
