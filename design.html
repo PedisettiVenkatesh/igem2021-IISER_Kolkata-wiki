@@ -163,6 +163,12 @@
               <!-- navigate in Page -->
               <ul>
                 <li><a id="run" class="scrollID" onclick="scrollToID('runSection')">Overview</a></li>
+                <li><a id="run1" class="scrollID" onclick="scrollToID('run1Section')">Chassis organism</a></li>
+                <li><a id="run2" class="scrollID" onclick="scrollToID('run2Section')">Sensing</a></li>
+                <li><a id="run3" class="scrollID" onclick="scrollToID('run3Section')">Killing</a></li>
+                <li><a id="run4" class="scrollID" onclick="scrollToID('run4Section')">How our GMO works?</a></li>
+                <li><a id="run5" class="scrollID" onclick="scrollToID('run5Section')">Detection</a></li>
+                <li><a id="run6" class="scrollID" onclick="scrollToID('run6Section')">Conclusion</a></li>
               </ul>
             </div>
             <!-- /sideNav -->
@@ -175,7 +181,318 @@
               </div>
               <div class="contentSection">
                 <div class="boxContent">
-                  <p>Lorem ipsum dolor sit.</p>
+                  <p>Bovine Mastitis disease is a silent killer of the dairy industry in the whole world. The overuse of antibiotics to treat the disease has rendered the disease causing pathogens to be antibiotic resistant and can also induce antibiotic resistance in the human gut flora and microbiome. We realised that a non-antibiotic treatment method is the need of the hour to reduce the uncontrolled antibiotic usage in the dairy industry. To implement our non-antibiotic treatment technique it is also extremely important to devise an early subclinical bovine mastitis detection kit so that the disease gets detected in a stage where the disease is curable.</p>
+                  <p>Our genetic circuit has been judiciously designed to suffice all our needs as discussed on the <a class="referenceLinks" href="https://2021.igem.org/Team:IISER_Kolkata/Description#run1Section">Description</a> page. Our main aim of designing the GMO was such that it doesn’t harm the cows and also is a specific and effective therapeutic for this undetectable fatal disease.</p>
+                </div>
+              </div>
+            </section>
+            <!-- 1. Chassis organism -->
+            <section id="run1Section" class="scrollSection">
+              <div class="centerImage">
+                <div class="highlightYellow mediumText textShadow"><b>Chassis organism </b></div>
+              </div>
+              <div class="contentSection">
+                <div class="boxContent">
+                  <p>Before deciding on our chassis organism we listed down the features that our chassis should fulfill such that it becomes a more effective tool to deliver our planned therapeutic with specificity and effectivity. The features that we required in our chassis are -</p>
+                  <ul>
+                    <li><b>It should be a gram-positive bacteria</b> - We plan to incorporate the agrC-agrA quorum-sensing unit of Staphylococcus aureus into our chassis such that it can sense the presence of <b>AIP-I molecules</b>. Staphylococcus aureus itself is a gram-positive bacteria. Its quorum-sensing unit will be more easily expressed on another gram-positive bacteria than a gram-negative bacteria due to the absence of an outer membrane like gram-negative bacteria.</li>
+                    <li>
+                      <b>It should be a Nisin producing bacteria</b> - The <b>nisin biosynthetic gene cluster</b> is essential for posttranslational modification of the nisin precursor molecule, self Immunity against Nisin, translocation, and cleaving of the leader peptide. All these processes are essential for the production of active nisin. Other than cloning a gene cluster would be difficult as that would make our designed plasmid unstable. So we need a Nisin-producing bacterial strain.
+                      <div class="figures">
+                        <figure style="width: 98%;">
+                          <img src="https://2021.igem.org/wiki/images/a/ab/T--IISER_Kolkata--image-Design-GeneCluster.png" alt="Design-GeneCluster.png" />
+                          <figcaption>The Nisin biosynthetic gene cluster <a class="referenceLinks" href="https://docs.google.com/document/d/1SYYXZayP-wKl8ixTw-nP_AyIXuVT6WUMtima0_yIKbY/edit#heading=h.209dqpnhs572">[1]</a></figcaption>
+                        </figure>
+                      </div>
+                    </li>
+                    <li><b>It should be Nis T mutant</b> - As per our mode of targeting the causative pathogens (degrade the biofilm and kill them using bacteriocins), it is needed to release the Nisin PV and the DNaseI at the same time such that we can overcome the protective effect of biofilm on the producing bacteria.</li>
+                    <li><b>It should be safe for the cows</b> - We emphasized finding a probiotic strain that can be injected into the udder tissue without causing any harm to the cow.</li>
+                  </ul>
+                  <p>Based on all these requirements, we chose <b>Lactococcus Lactis LMG 7930</b> as our chassis organism. The reasons for selecting this strain are as follows -</p>
+                  <ul>
+                    <li>This is a probiotic strain and is already in use for treating bovine mastitis through intramammary injection.</li>
+                    <li>This is a gram-positive Nisin-producing strain but with NisT gene mutation.</li>
+                  </ul>
+                  <p>Based on our directed motive, method, and approach of treating subclinical bovine mastitis our treatment section can be divided into two parts for better understanding -</p>
+                  <ol>
+                    <li>Sensing</li>
+                    <li>Killing</li>
+                  </ol>
+                </div>
+              </div>
+            </section>
+            <!-- 2. Sensing  -->
+            <section id="run2Section" class="scrollSection">
+              <div class="centerImage">
+                <div class="highlightYellow mediumText textShadow"><b>Sensing</b></div>
+              </div>
+              <div class="contentSection">
+                <div class="boxContent">
+                  <p>The end effects of broad-spectrum antibiotics usage for treating bovine mastitis has directed us to design our therapeutic to be narrow-spectrum and specific for the pathogens. We plan to incorporate a particular segment of agr quorum-sensing system. Staphylococcus aureus uses AIP-I molecules for intraspecies communication. Hence our main goal is to design a genetic circuit so that our GMO can sense the presence of AIP-I molecules in its surroundings and then regulate the downstream signaling. We designed a <b>regulatory module</b> that consists of agrC and agrA under a constitutive expression using pBAD promoter with a strong ribosomal binding site [B0034] and a double terminator [B0015].</p>
+                  <div class="figures">
+                    <figure style="width: 98%;">
+                      <img style="border: none; border-radius: 0;" src="https://2021.igem.org/wiki/images/a/a3/T--IISER_Kolkata--image-Design-regulatoryModule.png" alt="Design-regulatoryModule.png" />
+                      <figcaption>The Regulatory module</figcaption>
+                    </figure>
+                  </div>
+                  <p>We added a <b>sensing module</b> downstream of the regulatory module consisting of promoter P2 which is activated by agrA.</p>
+                  <div class="figures">
+                    <figure style="width: 98%;">
+                      <img style="border: none; border-radius: 0;" src="https://2021.igem.org/wiki/images/d/d7/T--IISER_Kolkata--image-Design-SensingModule.png" alt="Design-SensingModule.png" />
+                      <figcaption>The Sensing module</figcaption>
+                    </figure>
+                  </div>
+                  <p>To test this sensing module, we incorporated GFP as a reporter gene downstream of the P2 promoter such that in the presence of AIP-I molecules P2 promoter can express GFP. So, we externally added AIP-I molecules to observe if the module is sensing its presence or not (<a class="referenceLinks" href="https://2021.igem.org/Team:IISER_Kolkata/Results">details</a>).</p>
+                  <div class="figures">
+                    <figure style="width: 98%;">
+                      <img style="border: none; border-radius: 0;" src="https://2021.igem.org/wiki/images/c/c7/T--IISER_Kolkata--image-Design-Unidirectional.png" alt="Unidirectional AIP-I reporter" />
+                      <figcaption>Unidirectional AIP-I reporter</figcaption>
+                    </figure>
+                  </div>
+                  <p>After analyzing the fluorescence data, we observed that our sensing module showed high fluorescence levels even in the absence of AIP-I molecules. Based on this observation, we inferred that this could be due to the leaky expression of GFP.</p>
+                  <p>Now to tackle this problem, we designed a <b>bi-directional sensing module</b> such that it can sense the AIP-I molecules and reduce the leaky gene expression of GFP. Post these changes we observed a significant decrease in gfp expression. See results <a class="referenceLinks" href="https://2021.igem.org/Team:IISER_Kolkata/Results">here</a>.</p>
+                  <div class="figures">
+                    <figure style="width: 98%;">
+                      <img style="border: none; border-radius: 0;" src="https://2021.igem.org/wiki/images/f/f2/T--IISER_Kolkata--image-Design-Bi-directional.png" alt="Bi-directional Sensing Module" />
+                      <figcaption>Bi-directional Sensing Module</figcaption>
+                    </figure>
+                  </div>
+                  <p>Hence we decided to use this bi-directional sensing module in our proposed genetic circuit.</p>
+                </div>
+              </div>
+            </section>
+            <!-- 3. Killing -->
+            <section id="run3Section" class="scrollSection">
+              <div class="centerImage">
+                <div class="highlightYellow mediumText textShadow"><b>Killing</b></div>
+              </div>
+              <div class="contentSection">
+                <div class="boxContent">
+                  <p>We have not only designed the killing of the causative pathogens but have also targeted their biofilm. The design has been such that the Nisin PV and the DNase I are released at once when the GMO is lysed by the lysis proteins.</p>
+                  <p class="subSection"><b>Bacteriocin of Choice - </b></p>
+                  <p>
+                    Bacteriocins are narrow-spectrum antimicrobials that will suffice our need to kill the targeted pathogens effectively. In the initial stages of designing the treatment part of our project, we chose NisinA bacteriocin to target Staphylococcus aureus specifically. Nisin A is a lantibiotic belonging to class I bacteriocin. It consists of 34 amino acids. It kills the pathogenic bacterial cells by pore formation. Initially, it docks to lipid II, a membrane-anchored cell wall precursor that is essential for bacterial cell wall biosynthesis. After binding, it prevents the peptidoglycan monomer from incorporation into the growing peptidoglycan network. This finally enables the C-terminal segment of nisinA to insert into the cell membrane. These nisin-lipid II complexes assemble to form a stable pore in the cell membrane of target cells. Once a pore is
+                    formed, it causes an increase in membrane permeability which leads to the dissipation of the membrane potential. Consequently, these cells cannot synthesize any energy, which ultimately leads to their death <a class="referenceLinks" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2681560/">[2]</a><a class="referenceLinks" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7285073/">[3]</a>. Therefore nisinA can very effectively kill the antibiotic-resistant S.aureus strains <a class="referenceLinks" href="https://pubmed.ncbi.nlm.nih.gov/23979748/">[4]</a>.
+                  </p>
+                  <div class="figures">
+                    <figure style="width: 70%;">
+                      <img style="border: none; border-radius: 0;" src="https://2021.igem.org/wiki/images/6/60/T--IISER_Kolkata--image-Design-GraphBnG.png" alt="Design-GraphBnG.png" />
+                      <figcaption>This graph explains that the CFU/ml of the cells decreased most rapidly for NisinA followed by other bacteriocin and antitbiotics.<a class="referenceLinks" href="https://pubmed.ncbi.nlm.nih.gov/23979748/">[4]</a></figcaption>
+                    </figure>
+                  </div>
+                  <p>
+                    After receiving inputs from several experts in this field of study, we understood that to make our treatment approach more effective, we have to be more inclusive in terms of targetting more than one causative pathogen. Literature studies showed that subclinical bovine mastitis is majorly caused by Staphylococcus aureus followed by Streptococcus uberis <a class="referenceLinks" href="https://pubmed.ncbi.nlm.nih.gov/29268785/">[5]</a>. Streptococcus uberis expresses a protein called Nisin Resistance Protein (NSR), which proteolytically cleaves Nisin A at the bond between MeLan28 and Ser29 resulting in a truncated nisin <b>(nisin \( ^{1–28}\) )</b>. This cleavage inactivates the Nisin A. Hence, to target both we chose Nisin PV, a bioengineered variant of Nisin A. Mutation at <b>29th position</b> of Nisin A from <b>Serine to Proline</b> and
+                    <b>Isoleucine to Valine</b> at the <b>30th position</b>. These mutations make this variant of bacteriocin resistant to cleavage by NSR. <a class="referenceLinks" href="https://pubmed.ncbi.nlm.nih.gov/30537404/">[6]</a>
+                  </p>
+                  <div class="figures">
+                    <figure style="width: 98%;">
+                      <img style="border: none; border-radius: 0;" src="https://2021.igem.org/wiki/images/e/e4/T--IISER_Kolkata--image-Design-NSR.png" alt="Design-NSR.png" />
+                      <figcaption>The Nisin Resistance Protein (NSR) cut-site is indicated by red arrow.<a class="referenceLinks" href="https://pubmed.ncbi.nlm.nih.gov/30537404/">[6]</a></figcaption>
+                    </figure>
+                  </div>
+                  <p>Though Nisin A and Ninsin PV have structurally similar stability (<a class="referenceLinks" href="https://2021.igem.org/Team:IISER_Kolkata/Molecular_Dynamics">details</a>) but Nisin PV is more effective with respect to our designed project. Nisin PV also has phenomenal capabilities of inhibiting biofilm formation and decreasing its viability up to 56% and 85% more than nisin A, respectively <a class="referenceLinks" href="https://journals.asm.org/doi/10.1128/AEM.00391-21">[7]</a>. Nisin PV has been placed downstream of the P2 promoter in our genetic circuit.</p>
+                  <p class="subSection"><b>Targeting the Biofilm - </b></p>
+                  <p>Our targeted pathogens colonize the host tissues by forming an extracellular matrix, slowly helping in the development of microcolony. A biofilm is further formed by cell division and the accumulation of biomass. The biofilm protects the pathogenic cells from the bacteriocin as the biofilm shows tolerance. So we incorporated DNaseI in our genetic circuit. It was placed downstream of Nisin PV under the same P2 promoter. We observed significant degradation of the biofilm by DNase I. More details are on the <a class="referenceLinks" href="https://2021.igem.org/Team:IISER_Kolkata/Results">Results</a> page.</p>
+                  <div class="figures">
+                    <figure style="width: 98%;">
+                      <img style="border: none; border-radius: 0;" src="https://2021.igem.org/wiki/images/e/ec/T--IISER_Kolkata--image-Design-NisinPVandDNase.png" alt="Design-NisinPVandDNase.png" />
+                      <figcaption>Nisin PV and DNase I downstream of P2 promoter.</figcaption>
+                    </figure>
+                  </div>
+                  <p class="subSection">Lysis of the GMO</p>
+                  <p>In the end, we need to lyse our GMO for two main reasons -</p>
+                  <ul>
+                    <li>After producing the required amount of our therapeutic molecules, the GMO will lyse itself and die. Thus serving the purpose of a kill switch.</li>
+                    <li>Both the therapeutic molecules are needed to be released at the same time to increase the effectiveness of our therapeutic approach.</li>
+                  </ul>
+                  <p>These criteria can be achieved by incorporating the Lysis E7 downstream of the P3 promoter. We designed it to put under the weak P3 promoter, which gets activated by phosphorylated agrA. But the interaction between the promoter and agrA is weak compared to the interaction of P3 <a class="referenceLinks" href="https://pubmed.ncbi.nlm.nih.gov/28955870/">[8]</a>. This weak interaction results in delayed production of Lysis proteins. Hence allowing the accumulation of Nisin PV and DNaseI. This lysis of our GMO after being used to its full potential acts as a kill switch too as it ensures the safety of the environment.</p>
+                  <p>Other than that, we have incorporated another kill switch to resist damages pertaining to the accidental release of our GMO into the environment. This kill switch is based on a thymidine mutation which has made our GMO’s life span depend on the amount of thymidine available in its surrounding. Both the kill switches ensure that our proposed therapeutic is safe. More details can be found on the <a class="referenceLinks" href="https://2021.igem.org/Team:IISER_Kolkata/Safety">Safety</a> page.</p>
+                  <div class="figures">
+                    <figure style="width: 80%;">
+                      <img style="border: none; border-radius: 0;" src="https://2021.igem.org/wiki/images/8/83/T--IISER_Kolkata--image-Design-LysisE7.png" alt="Design-LysisE7.png" />
+                      <figcaption>Lysis E7 downstream of P3 promoter</figcaption>
+                    </figure>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <!-- 4. How our GMO works? -->
+            <section id="run4Section" class="scrollSection">
+              <div class="centerImage">
+                <div class="highlightYellow mediumText textShadow"><b>How our GMO works? </b></div>
+              </div>
+              <div class="contentSection">
+                <div class="boxContent">
+                  <p>When the AIP-I concentration is above a certain threshold due to the presence of Staphylococcus aureus cells, the AIP-I molecules bind to the agrC. The agrC-AIP-I complex then acts as kinase and phosphorylates the agrA. The phosphorylated agrA then binds to P2 and P3 and activates the production of Nisin PV and DNase I downstream of P2 whereas Lysis E7 downstream of P3. But the production rate of Nisin PV and DNase I will be higher than the production rate of Lysis E7 due to the stronger affinity of phosphorylated agrA towards P2 than P3 promoter. So, our GMO will only lyse after a significant accumulation of Nisin PV and DNaseI.</p>
+                  <p>If the AIP-I concentration is not above a certain threshold, then our GMO will not be switched on.</p>
+                  <div class="figures">
+                    <figure style="width: 98%;">
+                      <img style="border: none; border-radius: 0;" src="https://2021.igem.org/wiki/images/0/04/T--IISER_Kolkata--image-Design-OurDesign.png" alt="Design-OurDesign.png" />
+                      <figcaption>Our designed complete genetic circuit.</figcaption>
+                    </figure>
+                  </div>
+                  <div class="figures">
+                    <figure style="width: 90%;">
+                      <video width="100%" controls autoplay loop>
+                        <source src="https://2021.igem.org/wiki/images/a/a7/T--IISER_Kolkata--video-Design-TreatAnimate.mp4" type="video/mp4" />
+                      </video>
+                      <figcaption>Working of our genetic circuit</figcaption>
+                    </figure>
+                  </div>
+                  <p>Due to Lab restrictions and time constraints, we could not clone the whole genetic circuit neither could we test the whole system. We plan to continue with this project and clone the whole genetic circuit and test it.</p>
+                </div>
+              </div>
+            </section>
+            <!-- 5. Detection -->
+            <section id="run5Section" class="scrollSection">
+              <div class="centerImage">
+                <div class="highlightYellow mediumText textShadow"><b>Detection</b></div>
+              </div>
+              <div class="contentSection">
+                <div class="boxContent">
+                  <p>
+                    Detection of subclinical bovine mastitis plays an important role in laying the foundation for the treatment of the disease. Subclinical bovine mastitis is undetectable as it is symptomless, early and systematic detection of milk to identify diseased cows are a must to continue the treatment phase of the afflicted cows. Our method of detection employs the <b>activity of SHERLOCKv2</b> which consists of <b>Cas13a</b> and <b>Csm6</b>. This is combined with an <b>RNA hydrogel</b> to give a colorimetric readout. We have tried to propose an optimisation of this method in a way that it can be used to detect any disease with viable miRNA biomarkers by coupling SHERLOCKv2 with two kinds of RNA hydrogels, PEG and polyacrylamide, depending on the initial concentrations of the targeted miRNA for the disease. Our detection pathway consists of the following
+                    steps:
+                  </p>
+                  <ol>
+                    <li>Detection of the target miRNA biomarkers by the usage of Cas13a and Csm6 constituting SHERLOCKv2<a class="referenceLinks" href="https://pubmed.ncbi.nlm.nih.gov/29449508/">[9]</a>.</li>
+                    <li>RNA-based hydrogel to give a colorimetric readout depending on the activity of the SHERLOCKv2 enzymes.<a class="referenceLinks" href="https://www.nature.com/articles/s41596-020-0367-8">[10]</a></li>
+                    <li>Optimisation of the hydrogel to detect multiple diseases having miRNA biomarkers.</li>
+                  </ol>
+                  <p class="subSection"><b>Analysis </b></p>
+                  <p>Our aim was to make a <b>cheap</b>, <b>easy to use</b> and <b>real-time paper based test</b> for the detection of subclinical bovine mastitis as it is one of the most debilitating diseases for cattle in India and hence one of the major reasons for crippling the Indian economy. Literature study showed that detection of bovine mastitis is done by measuring the <b>somatic cell count</b> in a test called the California Mastitis Test<a class="referenceLinks" href="https://www.researchgate.net/publication/323635281_Diseases_of_the_Teats_and_Udder">[11]</a>. Some tests also monitored the levels of the enzyme <b>N-acetyl-b-D-glucosaminidase (NAGase)</b> in milk<a class="referenceLinks" href="https://pubmed.ncbi.nlm.nih.gov/23979748/">[12]</a>.</p>
+                  <p>
+                    However these biomarkers are very vague and can be present in milk in considerable quantities during lactation periods or during any other infection[3]. These tests are therefore imparted with a relatively larger amount of subjective character with the test results being misread by various cohorts as well as the tests not being a pinpoint indicator of Subclinical Bovine Mastitis. Therefore, we decided to narrow down the most specific biomarker of bovine mastitis - microRNA that is present in the milk. These microRNAs that we intend to target are upregulated significantly in mastitis positive milk and are zero/not present in normal or non-mastitic milk. After a lot of analysis we decided on using <b>SHERLOCK</b> or <b>CRISPR Cas13</b> to target these specific microRNA molecules. However the cleavage activity of Cas13 was enhanced by preamplification
+                    that involved recombinase polymerase amplification (RPA). We wanted to create a test kit <b>without the process of amplification of the sample</b> ( to reduce number and complication of steps of detection), hence we switched to <b>SHERLOCKv2</b><a class="referenceLinks" href="https://pubmed.ncbi.nlm.nih.gov/29449508/">[9]</a> involving the use of orthogonal CRISPR enzymes <b>Cas13a</b> and <b>Csm6</b>. Also we created an <b>RNA based hydrogel structure</b> that would allow us to have a visual <b>colorimetric detector of the disease</b>. This colorimetric indicator of the hydrogel is dependent on the activity of the enzymes of SHERLOCKv2 which allows us to create a rapid paper based detector of the subclinical bovine mastitis. Later we optimised the structure of the hydrogel, to detect any disease with an upregulation of a miRNA biomarker.
+                  </p>
+                  <p class="subSection"><b>SHERLOCKv2 </b></p>
+                  <p>
+                    SHERLOCKv2 is an advancement that was integrated into the old SHERLOCK<a class="referenceLinks" href="https://www.nature.com/articles/nature24049">[13]</a>(specific high-sensitivity enzymatic reporter unlocking) by the Zhang lab. <b>Orthogonal CRISPR enzymes Cas13a and Csm6</b> are multiplexed together to detect RNA molecules. Cas13a belongs to the type VI CRISPR-Cas system<a class="referenceLinks" href="https://pubmed.ncbi.nlm.nih.gov/29940185/">[14]</a> whereas Csm6 belongs to the type III CRISPR-Cas system[7]. Cas13a is specifically activated when it encounters an RNA sequence complementary to its guide RNA<a class="referenceLinks" href="https://www.nature.com/articles/nature24049">[13]</a>.Csm6 is mainly activated by hex-adenylate and sometimes by tetra-adenylate sequences<a
+                      class="referenceLinks"
+                      href="https://academic.oup.com/nar/article/48/16/9204/5884680"
+                      >[15]</a
+                    ><a class="referenceLinks" href="https://www.nature.com/articles/s41467-020-15334-5">[16]</a>. Both Cas13a and Csm6 carry out collateral cleavage of RNA<a class="referenceLinks" href="https://pubmed.ncbi.nlm.nih.gov/29449508/">[9]</a>, cleaving whatever RNA they can find in their surroundings, even when it is not complementary to their guide RNA sequence.
+                  </p>
+                  <p>SHERLOCKv2 acts by the method of initial activation of cas13a which then goes on to generate cleavage residues/overhangs of 2’-3’ cyclic phosphate hex adenylate by collateral cleavage of RNA in the sample. These overhangs activate Csm6 which also carries out collateral cleavage. According to literature, it was found that this can be used to detect as low as 2 attomolar input RNA, however this process involved preamplification of the sample using Recombinase Polymerase Amplification(RPA)<a class="referenceLinks" href="https://pubmed.ncbi.nlm.nih.gov/29449508/">[9]</a>.</p>
+                  <div class="figures">
+                    <figure style="width: 80%;">
+                      <img src="https://2021.igem.org/wiki/images/c/c1/T--IISER_Kolkata--image-Design-Pic1Detection.png" alt="Design-Pic1Detection.png" />
+                      <figcaption>Abstract depicting the working tandem of Cas13a and Csm6</figcaption>
+                    </figure>
+                  </div>
+                  <p class="subSection"><b>miRNA biomarkers </b></p>
+                  <p>Our method of detection for subclinical bovine mastitis relies on the stark upregulation of certain miRNA biomarkers when the disease is caused. The miRNAs targeted are <b>bta mir-184</b><a class="referenceLinks" href="http://www.mirbase.org/cgi-bin/mirna_entry.pl?acc=MI0009757">[17]</a> and <b>Bta-miR-222</b><a class="referenceLinks" href="http://www.mirbase.org/cgi-bin/mirna_entry.pl?acc=MI0004744">[18]</a>. The miRNA sequences are as follows:</p>
+                  <table>
+                    <tr>
+                      <th>miRNA</th>
+                      <th>Sequence</th>
+                    </tr>
+                    <tr>
+                      <td>bta-miR-184</td>
+                      <td>UGGACGGAGAACUGAUAAGGGU</td>
+                    </tr>
+                    <tr>
+                      <td>bta-miR-222</td>
+                      <td>AGCUACAUCUGGCUACUGGGU</td>
+                    </tr>
+                  </table>
+                  <p>Bta-miR-184 is seen to be zero in the non-mastitic milk sample. However this miRNA is expressed only in mastitis that is caused by Staphylococcus aureus<a class="referenceLinks" href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0177182">[19]</a>. Bta-miR-222 however is seen in very negligible amounts in a non-mastitic sample of milk. This miRNA is upregulated greatly in cases of mastitis that is caused by both Staphylococcus aureus and Streptococcus uberis with a p value <0.001. It was also seen that the latter miRNA had a sensitivity of 94% and a specificity of 94%<a class="referenceLinks" href="https://bmcgenomics.biomedcentral.com/articles/10.1186/s12864-019-6338-1">[20]</a>.</p>
+                  <p>
+                    The guide RNA sequences for CRISPR Cas13a are made complementary to these miRNA sequences. In a cow with subclinical bovine mastitis these miRNAs are present in the milk<a class="referenceLinks" href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0177182">[19]</a><a class="referenceLinks" href="https://bmcgenomics.biomedcentral.com/articles/10.1186/s12864-019-6338-1">[20]</a>. This activates Cas13a which in turn activates the Csm6. Both Cas13a and Csm6 together collaterally cleave whatever RNA they can find in the sample. For a non-mastitic cow these target miRNAs are not present(zero concentration)<a class="referenceLinks" href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0177182">[19]</a><a class="referenceLinks" href="https://bmcgenomics.biomedcentral.com/articles/10.1186/s12864-019-6338-1">[20]</a> in
+                    the milk and hence Cas13a and Csm6 do not get activated. Thus no cleavage of the RNA present in the milk sample occurs.
+                  </p>
+                  <p class="subSection"><b>RNA HYDROGEL </b></p>
+                  <p>In order to have a colorimetric readout without the RNA preamplification step, we have decided to create a <b>RNA based hydrogel.</b> The hydrogel has <b>linker structures</b> that are made of <b>single stranded RNA</b>. If the CRISPR enzymes are activated due to a mastitis positive milk sample, the linker RNAs holding the gel together are cut due to the collateral RNA cleavage activity of Cas13a and Csm6. If the linker RNAs holding the hydrogel together are cut, the gel loses its consistency and becomes watery.</p>
+                  <p>This allows the flow of a colorimetric buffer solution to denote a positive test result. On the contrary, a mastitic negative sample not containing the target miRNAs will not trigger the activation of the CRISPR enzymes and the linker RNAs are intact. They hold the gel together and due to the consistency of the gel, the buffer cannot pass through<a class="referenceLinks" href="https://pubmed.ncbi.nlm.nih.gov/31439791/">[21]</a>.</p>
+                  <p class="subSection"><b>Paper Based Test strip - μpad </b></p>
+                  <p>The <b>μPAD</b> or microfluidic test pad is made by Prof. James Collins’ lab at MIT[13]. The pad consists of a filter paper coated with hydrophobic wax in such a manner that four spots and one channel is left without wax. These areas are hydrophilic and allow water based coloured buffers to pass through. The strip is then folded in a manner to line the hydrophilic spots one above the other by folding. This creates a stack and a continuous flow channel that ends in the final flow channel<a class="referenceLinks" href="https://pubmed.ncbi.nlm.nih.gov/31439791/">[21]</a></p>
+                  <p>The buffer is loaded onto the first spot of the μPAD. The sample is added to the second spot. The gel goes into the third spot and the fourth spot contains coloured dyes. If the sample contains the target miRNAs, the CRISPR enzymes are activated. This cleaves the linker RNAs holding the gel together which makes the hydrogel lose its consistency. The buffer then flows through the gel and takes the coloured dyes with it. This gives a positive readout. On the other hand if the sample is negative and does not contain the target miRNA, the Cas enzymes are never activated. This leaves the linker RNA intact and holds the gel together. Hence the buffer cannot flow through and this gives a negative readout.</p>
+                  <p class="subSection"><b>Optimisation of the test: </b></p>
+                  <p>In order to make the test more inclusive, we decided to optimise it for all diseases that have miRNA biomarkers. In this case we decided to create two kinds of RNA based hydrogel - <b>PEG and polyacrylamide based.</b> They are used as follows:</p>
+                  <ol>
+                    <li>When the target miRNA biomarker for a disease is present in very preliminary amounts in normal samples but is upregulated multiple folds during the disease. In such cases, even normal samples will give a positive result as the cas enzymes will get activated. Hence in these cases we will use the PEG hydrogel synthesis method.</li>
+                    <li>When the target miRNA is zero in normal samples but is greatly upregulated in diseased samples. In that case, polyacrylamide RNA based hydrogel is used.</li>
+                  </ol>
+                  <p>As the initial concentration of the miRNAs that we have targeted for our detection process is zero, therefore for the testing of subclinical bovine mastitis, we have employed the polyacrylamide RNA based hydrogel. However we have also explained the working reactions and method of usage of the PEG hydrogel as well. Weplan to experimentally test our proposal in due time.</p>
+                  <p class="subSection">
+                    <b>Polyacrylamide based hydrogel <a class="referenceLinks" href="https://www.nature.com/articles/s41596-020-0367-8">[10]</a> </b>
+                  </p>
+                  <p>Polyacrylamide RNA based hydrogel is used when the initial concentration of the targeted miRNA in normal condition is zero. However these miRNAs are significantly upregulated during diseased conditions.</p>
+                  <p>It is made by polymerising acrylamide using APS/TEMED. Two such polyacrylamide backbones are made and each of these backbones are functionalized with a different RNA motif. These RNA motifs contain an initial methacryl group such that it can be incorporated into the polymerisation reaction during the formation of the polyacrylamide gel backbones. The reaction is as follows:</p>
+                  <div class="figures">
+                    <figure style="width: 75%;">
+                      <img src="https://2021.igem.org/wiki/images/b/be/T--IISER_Kolkata--image-Design-addedPic1Detection.png" alt="Design-addedPic1Detection.png" />
+                    </figure>
+                  </div>
+                  <p>The whole Polyacrylamide RNA based hydrogel synthesis process can be accessed <a class="referenceLinks" href="https://2021.igem.org/wiki/images/a/a1/T--IISER_Kolkata--pdf-Design-PolyacrylamideGelSynthesis.pdf">here</a>.</p>
+                  <p>The two single stranded RNA motifs are functionalized to the two polyacrylamide backbones denoted in yellow and green. Since RNA is unstable, the methacryl functionalized RNA motifs are very small,</p>
+                  <table>
+                    <tr>
+                      <td>RNA sequence</td>
+                      <td>Nucleotide sequence</td>
+                    </tr>
+                    <tr>
+                      <td>Green</td>
+                      <td>CCGCC</td>
+                    </tr>
+                    <tr>
+                      <td>Yellow</td>
+                      <td>UUAUU</td>
+                    </tr>
+                  </table>
+                  <p>A linker single stranded RNA is synthesised containing fifteen nucleotides. Five nucleotides from each end are complementary to the sequences that the RNA motifs polymerised to the backbone contain.</p>
+                  <div class="figure">
+                    <figure style="width: 75%;">
+                      <img src="https://2021.igem.org/wiki/images/c/c6/T--IISER_Kolkata--image-Design-addedPic2Detection.png" alt="Design-addedPic2Detection.png" />
+                    </figure>
+                  </div>
+                  <p class="subSection"><b>Usage </b></p>
+                  <p>The linker ssRNAs are incubated with the cas enzymes in an eppendorf tube and the separated backbones are plated on the μpad. This mixture is poured into the second spot of the μpad. If the target miRNA is not present in the sample, the Cas molecules are not activated and the ssRNA linkers are intact. The non degraded linker RNA holds the two backbones together due to complementarity. This gives consistency to the hydrogel and the colored buffer does not pass through giving a negative result.</p>
+                  <p>However if the target miRNA is present, the Cas proteins are activated which leads to collateral cleavage of the linker RNA residues. On adding this to the polyacrylamide spearted backbones, the linker RNA is no longer able to hold the two backbones together leading to the flow out of the coloured buffer and a positive result.</p>
+                  <div class="figures">
+                    <figure style="width: 80%;">
+                      <img style="border: none; border-radius: 0;" src="https://2021.igem.org/wiki/images/6/62/T--IISER_Kolkata--image-Design-Pic2Detection.png" alt="Design-Pic2Detection.png" />
+                      <figcaption>Diagram depicting the micropad additions in Polyacrylamide RNA based Hydrogel.</figcaption>
+                    </figure>
+                  </div>
+                  <p class="subSection">
+                    <b>Polyethylene glycol(PEG) Based hydrogel <a class="referenceLinks" href="https://www.nature.com/articles/s41596-020-0367-8">[10]</a> </b>
+                  </p>
+                  <p>Polyethylene glycol(PEG) RNA based hydrogel is used when the target miRNA biomarker for a disease is present in very preliminary amounts in normal samples but is upregulated multiple folds during the disease. In such cases, even normal samples will give a positive result as the cas enzymes will get activated. Hence in these cases we will use the PEG hydrogel synthesis method.</p>
+                  <p>The method of synthesis involves initial functionalization of single stranded RNA molecules to disulphide bonds which is then cleaved using (tris(2-carboxyethyl)phosphine) to form single stranded RNA attached to two thiol moieties.​​ This is then functionalized to a vinyl sulphone backbone to make a mesh like structure. This whole PEG hydrogel is then put on the third spot of the μpad.</p>
+                  <p>The synthesis reaction in short is as follows:</p>
+                  <div class="figures">
+                    <figure style="width: 75%;"><img src="https://2021.igem.org/wiki/images/7/7b/T--IISER_Kolkata--image-Design-adedPic2Detection.png" alt="Design-adedPic2Detection.png" /></figure>
+                  </div>
+                  <p>The full synthesis reaction can be found <a class="referenceLinks" href="https://2021.igem.org/wiki/images/2/27/T--IISER_Kolkata--pdf-Design-PEGgelSynthesisNew.pdf">here</a>.</p>
+                  <p class="subSection"><b>Usage </b></p>
+                  <p>The PEG gel is already synthesized with the ssRNA hybridised to the vinyl sulphone backbone. When this is plated on the μpad, the flow of the buffer will not only depend on the activity of Cas13a and Csm6 but also on the thickness of the gel and the time elapsed. Hence in presence of minor quantities of miRNA, only a few Cas13a molecules will become active, in turn activating fewer Csm6 molecules. This activity of the cas enzymes will not be enough to cleave the whole plated hydrogel and hence within a stipulated threshold time, the buffer will not flow through.</p>
+                  <p>This threshold time as well as the thickness of the gel plated needs to be in order to devise an effective interval where minor base level miRNA presence will not give a false positive result. However large upregulations of the same miRNA will activate many more Cas molecules leading to the cleavage of the whole plated hydrogel within the same threshold time leading to a positive result.</p>
+                  <div class="figures">
+                    <figure style="width: 75%;">
+                      <img style="border: none; border-radius: 0;" src="https://2021.igem.org/wiki/images/f/fa/T--IISER_Kolkata--image-Design-Pic3Detection.png" alt="Design-Pic3Detection.png" />
+                      <figcaption>Diagram depicting the micropad additions in polyethylene glycol(PEG) RNA based Hydrogel</figcaption>
+                    </figure>
+                  </div>
+                  <div class="figures">
+                    <figure style="width: 75%;">
+                      <video width="100%" controls autoplay loop>
+                        <source src="https://2021.igem.org/wiki/images/9/9c/T--IISER_Kolkata--video-Design-detection.mp4" type="video/mp4" />
+                      </video>
+                      <figcaption>Video depicting the working of the detection system.</figcaption>
+                    </figure>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <!-- 6. Conclusion -->
+            <section id="run6Section" class="scrollSection">
+              <div class="centerImage">
+                <div class="highlightYellow mediumText textShadow"><b>Conclusion</b></div>
+              </div>
+              <div class="contentSection">
+                <div class="boxContent">
+                  <p>To conclude, we expect that our chosen path of detection and treatment of a subclinical bovine mastitis spurs the much needed change and brings about a decrease in the quantity of antibiotics used. We also intend to bring our detection kit to experimental reality along with the chalked out optimisations so that detection of diseases can be done easily in a paper-based manner.</p>
                 </div>
               </div>
             </section>
@@ -191,6 +508,29 @@
         </div>
         <div class="indentContainer">
           <h3>References</h3>
+          <ol>
+            <li><a href="https://pubmed.ncbi.nlm.nih.gov/17965835/">Lubelski J, Rink R, Khusainov R, Moll GN, Kuipers OP. Biosynthesis, immunity, regulation, mode of action and engineering of the model lantibiotic nisin. Cell Mol Life Sci. 2008 Feb;65(3):455-76. doi: 10.1007/s00018-007-7171-2. PMID: 17965835.</a></li>
+            <li><a href="https://doi.org/10.1128/aac.01382-08">Sun, Z., Zhong, J., Liang, X., Liu, J., Chen, X., & Huan, L. (2009). Novel Mechanism for Nisin Resistance via Proteolytic Degradation of Nisin by the Nisin Resistance Protein NSR. Antimicrobial Agents and Chemotherapy, 53(5), 1964–1973. https://doi.org/10.1128/aac.01382-08</a></li>
+            <li><a href="https://doi.org/10.3390/microorganisms8050639">Simons, A., Alhanout, K., & Duval, R. E. (2020). Bacteriocins, Antimicrobial Peptides from Bacterial Origin: Overview of Their Biology and Their Impact against Multidrug-Resistant Bacteria. Microorganisms, 8(5), 639. https://doi.org/10.3390/microorganisms8050639</a></li>
+            <li><a href="https://pubmed.ncbi.nlm.nih.gov/23979748/">Okuda K, Zendo T, Sugimoto S, Iwase T, Tajima A, Yamada S, Sonomoto K, Mizunoe Y. Effects of bacteriocins on methicillin-resistant Staphylococcus aureus biofilm. Antimicrob Agents Chemother. 2013 Nov;57(11):5572-9. doi: 10.1128/AAC.00888-13. Epub 2013 Aug 26. PMID: 23979748; PMCID: PMC3811281.</a></li>
+            <li><a href="https://docs.google.com/document/d/1SYYXZayP-wKl8ixTw-nP_AyIXuVT6WUMtima0_yIKbY/edit#heading=h.209dqpnhs572"> Birhanu M, Leta S, Mamo G, Tesfaye S. Prevalence of bovine subclinical mastitis and isolation of its major causes in Bishoftu Town, Ethiopia. BMC Res Notes. 2017 Dec 21;10(1):767. doi: 10.1186/s13104-017-3100-0. PMID: 29268785; PMCID: PMC5740909. </a></li>
+            <li><a href="https://pubmed.ncbi.nlm.nih.gov/30537404/">Field D, Blake T, Mathur H, O' Connor PM, Cotter PD, Paul Ross R, Hill C. Bioengineering nisin to overcome the nisin resistance protein. Mol Microbiol. 2019 Mar;111(3):717-731. doi: 10.1111/mmi.14183. Epub 2019 Feb 12. PMID: 30537404.</a></li>
+            <li><a href="https://pubmed.ncbi.nlm.nih.gov/34105992/">Pérez-Ibarreche M, Field D, Ross RP, Hill C. A Bioengineered Nisin Derivative To Control Streptococcus uberis Biofilms. Appl Environ Microbiol. 2021 Jul 27;87(16):e0039121. doi: 10.1128/AEM.00391-21. Epub 2021 Jul 27. PMID: 34105992; PMCID: PMC8315181.</a></li>
+            <li><a href="https://doi.org/10.1016/j.bbrep.2016.03.012.(https://www.sciencedirect.com/science/article/pii/S2405580816300334)">Conformational features of the Staphylococcus aureus AgrA-promoter interactions rationalize quorum-sensing triggered gene expression Pages 124-134, ISSN 2405-5808,https://doi.org/10.1016/j.bbrep.2016.03.012.(https://www.sciencedirect.com/science/article/pii/S2405580816300334)</a></li>
+            <li><a href="https://pubmed.ncbi.nlm.nih.gov/29449508/">Gootenberg, Jonathan S., et al. “Multiplexed and Portable Nucleic Acid Detection Platform with Cas13, Cas12a, and Csm6.” Science, vol. 360, no. 6387, 2018, pp. 439–444., doi:10.1126/science.aaq0179.</a></li>
+            <li><a href="https://www.nature.com/articles/s41596-020-0367-8">Gayet, Raphael V., et al. “Creating CRISPR-Responsive Smart Materials for Diagnostics and Programmable Cargo Release.” Nature Protocols, vol. 15, no. 9, 2020, pp. 3030–3063., doi:10.1038/s41596-020-0367-8.</a></li>
+            <li><a href="https://www.researchgate.net/publication/323635281_Diseases_of_the_Teats_and_Udder">Moroni, Paolo, et al. “Diseases of the Teats and Udder.” Rebhun's Diseases of Dairy Cattle, 2018, pp. 389–465., doi:10.1016/b978-0-323-39055-2.00008-5.</a></li>
+            <li><a href="https://www.cambridge.org/core/journals/journal-of-dairy-research/article/abs/nacetyl-dglucosaminidase-activity-in-cow-milk-as-an-indicator-of-mastitis/3D912DB3154DB77D20689EE0F9F971A9">Hovinen, Mari et al. “N-acetyl -β-D-glucosaminidase activity in cow milk as an indicator of mastitis.” The Journal of dairy research vol. 83,2 (2016): 219-27. doi:10.1017/S0022029916000224</a></li>
+            <li><a href="https://www.nature.com/articles/nature24049">Abudayyeh, Omar O., et al. “RNA Targeting with CRISPR–Cas13.” Nature, vol. 550, no. 7675, 2017, pp. 280–284., doi:10.1038/nature24049.</a></li>
+            <li><a href="https://pubmed.ncbi.nlm.nih.gov/29940185/">O'connell, Mitchell R. “Molecular Mechanisms of RNA Targeting by Cas13-Containing Type VI CRISPR–Cas Systems.” Journal of Molecular Biology, vol. 431, no. 1, 2019, pp. 66–87., doi:10.1016/j.jmb.2018.06.029.</a></li>
+            <li><a href="https://academic.oup.com/nar/article/48/16/9204/5884680">Smalakyte, Dalia, et al. “Type III-A CRISPR-Associated Protein Csm6 Degrades Cyclic Hexa-Adenylate Activator Using Both CARF and HEPN Domains.” Nucleic Acids Research, vol. 48, no. 16, 2020, pp. 9204–9217., doi:10.1093/nar/gkaa634.</a></li>
+            <li><a href="https://www.nature.com/articles/s41467-020-15334-5">Garcia-Doval, Carmela, et al. “Activation and Self-Inactivation Mechanisms of the Cyclic Oligoadenylate-Dependent CRISPR Ribonuclease Csm6.” Nature Communications, vol. 11, no. 1, 2020, doi:10.1038/s41467-020-15334-5.</a></li>
+            <li>MiRBase, <a href="http://www.mirbase.org/cgi-bin/mirna_entry.pl?acc=MI0009757"> www.mirbase.org/cgi-bin/mirna_entry.pl?acc=MI0009757</a></li>
+            <li>MiRBase,<a href="http://www.mirbase.org/cgi-bin/mirna_entry.pl?acc=MI0004744"> www.mirbase.org/cgi-bin/mirna_entry.pl?acc=MI0004744.</a></li>
+            <li><a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0177182">Lai, Yu-Chang, et al. “Inflammation-Related MicroRNA Expression Level in the Bovine Milk Is Affected by Mastitis.” Plos One, vol. 12, no. 5, 2017, doi:10.1371/journal.pone.0177182.</a></li>
+            <li><a href="https://bmcgenomics.biomedcentral.com/articles/10.1186/s12864-019-6338-1">Ma, Shaoyang, et al. “Identification and Characterization of Differentially Expressed Exosomal MicroRNAs in Bovine Milk Infected with Staphylococcus Aureus.” BMC Genomics, vol. 20, no. 1, 2019, doi:10.1186/s12864-019-6338-1</a></li>
+            <li><a href="https://pubmed.ncbi.nlm.nih.gov/31439791/">English, Max A., et al. “Programmable CRISPR-Responsive Smart Materials.” Science, vol. 365, no. 6455, 2019, pp. 780–785., doi:10.1126/science.aaw5122.</a></li>
+          </ol>
         </div>
       </section>
       <!-- /reference -->
@@ -317,6 +657,7 @@
     <!-- JS -->
     <!-- <script src="https://2021.igem.org/Template:IISER_Kolkata/js"></script> -->
     <script src="app.js"></script>
+    <script src="https://2021.igem.org/common/MathJax-2.5-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <!-- /JS -->
   </body>
 </html>
