@@ -180,14 +180,22 @@
               <div class="contentSection">
                 <div class="boxContent">
                   <p class="subSection"><b>Choice of systems</b></p>
+                  <p>Considering that one of the key objectives of our modelling approach was to establish the efficacy of Nisin PV as compared to NIsin A, we went ahead with creating replicate systems with both antimicrobial peptides. The biological relevance of fi=or this choice of systems is outlined in our <a class="referenceLinks" href="https://2021.igem.org/Team:IISER_Kolkata/Design">design</a> page.</p>
                   <p class="subSection"><b>Model setup</b></p>
                   <p>All systems were prepared using CHARMM GUI and were simulated using the GROMACS molecular dynamics engine. The PDB structure 1WCO was used as the reference structure for all simulations. The lipid-II moiety was stripped off during system preparation. For NisinA, the native 1WCO structure was used and to generate NisinPV the following mutations were performed within CHARMM GUI itself.:</p>
                   <ul>
                     <li>Serine to Proline in 29th position</li>
                     <li>Isoleucine to Valine in 30th position</li>
                   </ul>
-                  <p>Considering that we have non-traditional (or engineered amino acid residues in our protein), we tried to gather previously reported topologies and parameters for some of the non-standard amino acids. Amino acids for which we could not find compatible topologies and parameters, we used AMBER LEaP and antechamber program to generate parameters. The topology and parameter files that were used in our systems are present in our <a class="referenceLinks" href="">GitHub repository</a>. For some non-traditional amino acids, we could not generate the topology and parameters using AMBER's LEaP program because of conflicting dihedral angle values. Thus, we had to resort to converting these amino-acts to their closes traditional amino acid counterparts while taking care to maintain the connectivity.</p>
-                  <p><a href="" class="referenceLinks">Link GitHub </a></p>
+                  <p>The below animation shows the system preparation of Nisin A and Nisin PV peptides in pymol by invoking the aforementioned mutations.</p>
+                  <div class="figures">
+                    <figure style="width: 90%;">
+                      <video width="100%" controls autoplay loop>
+                        <source src="https://2021.igem.org/wiki/images/7/73/T--IISER_Kolkata--video-DryLab-nisinPV_str.mp4" type="video/mp4" />
+                      </video>
+                    </figure>
+                  </div>
+                  <p>Considering that we have non-traditional (or engineered amino acid residues in our protein), we tried to gather previously reported topologies and parameters for some of the non-standard amino acids. Amino acids for which we could not find compatible topologies and parameters, we used AMBER LEaP and antechamber program to generate parameters. The topology and parameter files that were used in our systems are present in our <a class="referenceLinks" href="https://github.com/iGEM-IISERK/IISERK-2021-Math-Model">GitHub repository</a>. For some non-traditional amino acids, we could not generate the topology and parameters using AMBER's LEaP program because of conflicting dihedral angle values. Thus, we had to resort to converting these amino acids to their closest traditional amino acid counterparts while taking care to maintain the connectivity.</p>
                   <p>The systems were equilibrated as following equilibration scheme:</p>
                   <table width="90%">
                     <tr>
@@ -287,12 +295,31 @@
                     <figure style="width: 90%;"><img src="https://2021.igem.org/wiki/images/d/d3/T--IISER_Kolkata--image-MolecularDynamic-SolventAccssibleSurfaceFig.svg" alt="MolecularDynamic-SolventAccssibleSurfaceFig.svg" /></figure>
                   </div>
                   <p>It is interesting to note that major fluctuations in RMSD correspond to fluctuations in SASA. We further performed residue-wise SASA calculation to understand the dynamic of the system in greater detail. The residue-wise SASA was calculated using the VMD timeline analysis extension with the distance cutoff set as 0.14 nm.</p>
+                  <div class="figures">
+                    <figure>
+                      <img style="border: none; border-end-start-radius: 0;" src="https://2021.igem.org/wiki/images/1/12/T--IISER_Kolkata--image-MolecularDynamic-SASA_nisPV.svg" alt="MolecularDynamic-SASA_nisPV.svg" />
+                    </figure>
+                    <figure>
+                      <img style="border: none; border-end-start-radius: 0;" src="https://2021.igem.org/wiki/images/9/90/T--IISER_Kolkata--image-MolecularDynamic-nisA_sasa.svg" alt="MolecularDynamic-nisA_sasa.svg" />
+                    </figure>
+                    <figcaption>Residue-wise SASA for NIsinA (left) and Nisin PV (right)</figcaption>
+                  </div>
+                  <p>It is interesting to note that in both NisinA and NisinPV.</p>
                   <p class="subSection"><b>Connolly surfaces </b></p>
                   <p>The SASA is closely related to the concept of the solvent-excluded surface (also known as Connolly surface), which is imagined as a cavity in bulk solvent. The Connolly surfaces for both systems are as follows.</p>
                   <div class="figures">
                     <figure style="width: 90%;"><img src="https://2021.igem.org/wiki/images/f/f9/T--IISER_Kolkata--image-MolecularDynamic-ConnollySurfaces.svg" alt="MolecularDynamic-ConnollySurfaces.svg" /></figure>
                   </div>
                   <p class="subSection"><b>Secondary structure analysis </b></p>
+                  <div class="figures">
+                    <figure>
+                      <img style="border: none; border-end-start-radius: 0;" src="https://2021.igem.org/wiki/images/0/0e/T--IISER_Kolkata--image-MolecularDynamic-nisin_A_secstr.svg" alt="MolecularDynamic-nisin_A_secstr.svg" />
+                    </figure>
+                    <figure>
+                      <img style="border: none; border-end-start-radius: 0;" src="https://2021.igem.org/wiki/images/6/6a/T--IISER_Kolkata--image-MolecularDynamic-sec_str_nisPV.svg" alt="MolecularDynamic-sec_str_nisPV.svg" />
+                    </figure>
+                    <figcaption>Residue-wise secondary structure for NIsinA (left) and Nisin PV (right). The calculation was performed using DSSP and visualised in VMD</figcaption>
+                  </div>
                   <p class="subSection"><b>Free energy surfaces </b></p>
                   <p>Biomolecular processes can be described in terms of the molecule's free energy:</p>
                   $$ \Delta G (R) = - k_{B}T \left[\ln P(R) - \ln P_{max} \right] $$
@@ -400,7 +427,7 @@
                     <p>
                       Lipid membrane thickness is a standard parameter to check the stability of a membrane simulation. Additionally, if there is the generation of any membrane curvature, it should be indicated in the membrane thickness. We calculated the membrane thickness over time by defining a selection group consisting of the Phosphate head groups of the lipids in the bilayer. The local normal to the nearest phosphate neighbour would produce the local membrane thickness. This when averaged out over the entire membrane gives one value of membrane thickness as a function of time. FATSLiM is a nifty python-based tool that can be used to calculate membrane thickness for courage-gained simulation. However, since we performed atomistic simulation we had to play around with the distance cutoff for the local normal and leaflet identification in the FATSLiM source code.
                     </p>
-                    <img style="padding: 0 3rem;" src="https://2021.igem.org/wiki/images/8/8e/T--IISER_Kolkata--image-MolecularDynamic-MembraneBilayerThickness.png" alt="MolecularDynamic-MembraneBilayerThickness.png" />
+                    <img style="padding: 0 3rem; max-height: 300px; width: auto;" src="https://2021.igem.org/wiki/images/8/8e/T--IISER_Kolkata--image-MolecularDynamic-MembraneBilayerThickness.png" alt="MolecularDynamic-MembraneBilayerThickness.png" />
                   </div>
                   <div class="figures">
                     <figure style="width: 90%;"><img src="https://2021.igem.org/wiki/images/6/6b/T--IISER_Kolkata--image-MolecularDynamic-BilayerThickness.svg" alt="MolecularDynamic-BilayerThickness.svg" /></figure>
@@ -424,7 +451,13 @@
                     along the same lines as the interaction with Lipid-II given the charged nature of the groups involved. We wanted to perform Potentials of Mean Force (PMF) calculations to further explore this aspect, but due to a shortage of computational resources and cluster time, we could not perform any enhanced sampling simulations in this regard.
                   </p>
                   <p>Given here is an animation of the residues involved in the interaction of Nisin with Lipid-II. The animation has been made with the data published by Panina et al.</p>
-                  [Add animation here ]
+                  <div class="figures">
+                    <figure style="width: 90%;">
+                      <video width="100%" controls autoplay loop>
+                        <source src="https://2021.igem.org/wiki/images/2/2a/T--IISER_Kolkata--video-MolecularDynamic-nislip2.mp4" type="video/mp4" />
+                      </video>
+                    </figure>
+                  </div>
                   <p class="subSection"><b>Free energy surfaces </b></p>
                   <p>We calculated the free energy for NisinA and NisinPV in the membrane environment just the way we did in the section where we looked at the protein dynamics in water. We took two cases of reaction coordinates, the first being the Phi-Psi angles (Ramachandran plot) and the second being RMSD-RGyr.</p>
                   <div class="figures">
@@ -535,7 +568,7 @@
                 <div class="boxContent">
                   <ul>
                     <li>Considering the binding of Nisin(A/PV) to NSR, there is compelling evidence that NSR has a much more difficult time cleaving the bond at the 29th in the case of NisinPV.</li>
-                    <li>The total energy at the 29th residue is approximately 7 times larger for NisinPV as compared to NisA. This is consistent with the results for the biofilm assay (citation needed) where the minimum inhibitory concentration (MIC) for NisinA was measured to be approximately 7 times that of NisinPV. We shall use this information in our mathematical model for the degradation of biofilm where we would make the assumption that the rate of degradation of the biocide is higher for NisinPV as compared to NisinA. Add a link to the biofilm assay here.</li>
+                    <li>The total energy at the 29th residue is approximately 7 times larger for NisinPV as compared to NisA. This is consistent with the results for the biofilm assay where the minimum inhibitory concentration (MIC) for NisinA was measured to be approximately 7 times that of NisinPV. We shall use this information in our mathematical model for the degradation of biofilm where we would make the assumption that the rate of degradation of the biocide is higher for NisinPV as compared to NisinA. <a class="referenceLinks" href="https://2021.igem.org/Team:IISER_Kolkata/Biofilm_Degradation">biofilm assay here.</a></li>
                     <li>Both NisinA and PV majorly interact with the highly negatively charged lipids in the biological membrane. This would mean that NisinPV has at least equal membrane degradation potential (in the absence of any resistance proteins of course) to NisinA.</li>
                     <li>Our simulations show that NisinA interacts with lipids with a neutral charge (like POPE) more preferentially than NisinPV. It is yet to be determined whether this differential interaction with POPE would affect the membrane destabilisation and degradation.</li>
                     <li>Our simulations showed that MSD for Nisin PV is significantly higher than MSD of Nisin A, thereby the diffusion coefficient of NisinPV would also be higher likewise. This aspect of Nisin PV might confer it an advantage against the pathogen as it can theoretically diffuse faster in the system and therefore cause faster action against the pathogenic bacteria.</li>
@@ -566,6 +599,34 @@
         </div>
         <div class="indentContainer">
           <h3>References</h3>
+          <b>GROAMCS</b>
+          <ol>
+            <li>Berendsen, et al. (1995) Comp. Phys. Comm. 91: 43-56. (<a href="http://scholar.google.com/scholar?cites=6703762643559347673&hl=en">DOI, Citations of this paper</a>)</li>
+            <li>Lindahl, et al. (2001) J. Mol. Model. 7: 306-317. (<a href="http://scholar.google.com/scholar?cites=1777735270318718960&hl=en">DOI, Citations of this paper</a>)</li>
+            <li>van der Spoel, et al. (2005) J. Comput. Chem. 26: 1701-1718. (<a href="http://scholar.google.com/scholar?cites=8599454604037079587&hl=en">DOI, Citations of this paper</a>)</li>
+            <li>Hess, et al. (2008) J. Chem. Theory Comput. 4: 435-447. (<a href="http://scholar.google.com/scholar?cites=15361472353040457616&hl=en">DOI, Citations of this paper</a>)</li>
+            <li>Pronk, et al. (2013) Bioinformatics 29 845-854. (<a href="http://scholar.google.com/scholar?cites=11874627228907846850">DOI, Citations of this paper</a>)</li>
+            <li>Páll, et al. (2015) Proc. of EASC 2015 LNCS, 8759 3-27. (<a href="https://doi.org/10.1007/978-3-319-15976-8_1">DOI, arxiv, Citations</a>)</li>
+            <li>Abraham, et al. (2015) SoftwareX 1-2 19-25 (<a href="https://scholar.google.com/scholar?cites=13333458434321837156">DOI, Citations</a>)</li>
+          </ol>
+          <b>VMD - Visual Molecular Dynamics </b>
+          <p><a href="http://www.ks.uiuc.edu/Research/vmd/">http://www.ks.uiuc.edu/Research/vmd/</a></p>
+          <b>CHARMM- GUI </b> <br />
+          <p>S. Jo, T. Kim, V.G. Iyer, and W. Im (2008) CHARMM-GUI: A Web-based Graphical User Interface for CHARMM. J. Comput. Chem. 29:1859-1865</p>
+          <p>B.R. Brooks, C.L. Brooks III, A.D. MacKerell, Jr., L. Nilsson, R.J. Petrella, B. Roux, Y. Won, G. Archontis, C. Bartels, S. Boresch, A. Caflisch, L. Caves, Q. Cui, A.R. Dinner, M. Feig, S. Fischer, J. Gao, M. Hodoscek, W. Im, K. Kuczera, T. Lazaridis, J. Ma, V. Ovchinnikov, E. Paci, R.W. Pastor, C.B. Post, J.Z. Pu, M. Schaefer, B. Tidor, R. M. Venable, H. L. Woodcock, X. Wu, W. Yang, D.M. York, and M. Karplus (2009)</p>
+          <p>CHARMM: The Biomolecular Simulation Program. J. Comput. Chem. 30:1545-1614 J. Lee, X. Cheng, J.M. Swails, M.S. Yeom, P.K. Eastman, J.A. Lemkul, S. Wei, J. Buckner, J.C. Jeong, Y. Qi, S. Jo, V.S. Pande, D.A. Case, C.L. Brooks III, A.D. MacKerell Jr, J.B. Klauda, and W. Im (2016)</p>
+          <p>CHARMM-GUI Input Generator for NAMD, GROMACS, AMBER, OpenMM, and CHARMM/OpenMM Simulations using the CHARMM36 Additive Force Field. J. Chem. Theory Comput. 12:405-413</p>
+
+          <b>FATSLiM</b><a href="https://fatslim.github.io/">https://fatslim.github.io/</a> <br />
+          <b>Secondary structure using DSSP </b><a href="https://swift.cmbi.umcn.nl/gv/dssp/">https://swift.cmbi.umcn.nl/gv/dssp/</a> <br />
+          <b>Nisin-NSR interactions </b>
+          <p>Field, Des et al. “Bioengineering nisin to overcome the nisin resistance protein.” Molecular microbiology vol. 111,3 (2019): 717-731. doi:10.1111/mmi.14183</p>
+          <b>CHARMM Parameters and topologies for engineered aminoacids </b>
+          <p>Van de Ven, F J et al. “NMR studies of lantibiotics. The structure of nisin in aqueous solution.” European journal of biochemistry vol. 202,3 (1991): 1181-8. doi:10.1111/j.1432-1033.1991.tb16488.x</p>
+          <b>Nisin-LipidII interactions </b>
+          <p>Mulholland, Sam et al. “Docking and molecular dynamics simulations of the ternary complex nisin2:lipid II.” Scientific reports vol. 6 21185. 18 Feb. 2016, doi:10.1038/srep21185</p>
+          <b>AutoDock </b>
+          <p><a href="http://autodock.scripps.edu/resources/references">http://autodock.scripps.edu/resources/references</a> <br /><a href="http://autodock.scripps.edu/resources/references">http://autodock.scripps.edu/resources/references</a></p>
         </div>
       </section>
       <!-- /reference -->
@@ -658,34 +719,6 @@
       }
     </script>
     <!-- /hide on scroll -->
-
-    <!-- script for collapsibles -->
-    <script>
-      var collapsibles = document.querySelectorAll(".collapsible");
-
-      function removeCollapsibleExpanded(notRemove) {
-        collapsibles.forEach((collD) => {
-          if (collD != notRemove) {
-            collD.classList.remove("collapsible--expanded");
-            collD.querySelector(".collapsibleToggler").innerHTML = "+";
-          }
-        });
-      }
-
-      collapsibles.forEach((coll) =>
-        coll.querySelector(".collapsible-header").addEventListener("click", function () {
-          removeCollapsibleExpanded(coll);
-          coll.classList.toggle("collapsible--expanded");
-
-          if (coll.querySelector(".collapsibleToggler").innerHTML == "+") {
-            coll.querySelector(".collapsibleToggler").innerHTML = "-";
-          } else {
-            coll.querySelector(".collapsibleToggler").innerHTML = "+";
-          }
-        })
-      );
-    </script>
-    <!-- /script for collapsibles -->
 
     <!-- /IISER KOLKATA CONTAINER -->
 

@@ -233,10 +233,138 @@
               </div>
               <div class="contentSection">
                 <div class="boxContent">
-                  <p></p>
-                  \begin{array} \hline Symbol & Parameter & Value & Unit \\ \hline$T$ & Temperature & 296 & Kelvin \\ $\Gamma_{1}$ & Distortional energy & $8 \times 10^{6}$ & $\mathrm{~kg} \mathrm{~m} \mathrm{~s}^{-2}$ \\ $\Gamma_{2}$ & Strength of the bulk mixing energy & $3 \times 10^{17}$ & $\mathrm{~kg} \mathrm{~m} \mathrm{~s}^{-2}$ \\ $\chi$ & Flory-Huggins mixing parameter & $0.55$ & \multicolumn{1}{l}{ dimensionless } \\ $N$ & Generalized polymerization parameter & $1 \times 10^{3}$ & dimensionless \\ $\Lambda$ & Mobility parameter & $1 \times 10^{-9}$ & $\mathrm{~kg}^{-1} \mathrm{~m}^{3} \mathrm{~s}$ \\ $v_{b}$ & Viscosity of the bacteria & 5 & $\mathrm{~kg} \mathrm{~m}^{-1} \mathrm{~s}^{-1}$ \\ $v_{s}$ & Viscosity of the solvent & $1.002 \times 10^{-3}$ & $\mathrm{~kg} \mathrm{~m}^{-1} \mathrm{~s}^{-1}$ \\ $\rho_{b}$ & Biofilm density & $1 \times 10^{3}$ &
-                  $\mathrm{~kg} \mathrm{~m}^{-3}$ \\ $\rho_{s}$ & Solvent density & $1 \times 10^{3}$ & $\mathrm{~kg} \mathrm{~m}^{-3}$ \\ $D_{C}^{0}$ & Aqueous diffusion coefficient of chlorine & $1.9 \times 10^{-9}$ & $\mathrm{~m}^{2} \mathrm{~s}^{-1}$ \\ $D_{Q}^{0}$ & Aqueous diffusion coefficient of QAC & $0.427 \times 10^{-9}$ & $\mathrm{~m}^{2} \mathrm{~s}^{-1}$ \\ $D_{N}^{0}$ & Aqueous diffusion coefficient of Nisin & $0.19 \times 10^{-9}$ & $\mathrm{~m}^{2} \mathrm{~s}^{-1}$ \\ $K_{1}$ & Maximum biocide consumption rate for chlorine and QAC & $2 \times 10^{-4}$ & $\mathrm{~kg} \mathrm{~m}^{-3} \mathrm{~s}^{-1}$ \\ $K_{1}$ & Maximum biocide consumption rate for nisin & $2 \times 10^{-7}$ & $\mathrm{~kg} \mathrm{~m}^{-3} \mathrm{~s}^{-1}$ \\ $d_{0}$ & Biocide Monod half-saturation coefficient & $1 \times 10^{-3}$ & $\mathrm{~kg} \mathrm{~m}^{-3}$ \\ $K_{2}$ &
-                  Maximum decay rate of live bacteria (due to biocide action) & $2 \times 10^{-5}$ & $\mathrm{~s}^{-1}$ \\ $K_{d}$ & Live bacteria decay Monod half-saturation coefficient & $1 \times 10^{-5} & $\mathrm{~kg} \mathrm{~m}^{-3}$ \\ $\bar{d}$ & Reference biocide concentration for weakening biomaterial & $5 \times 10^{-3}$ & $\mathrm{~kg} \mathrm{~m}^{-3}$ \\ $\bar{T}$ & Reference time scale for weakening biomaterial & 120 & $\mathrm{~s}$ \\ $h_{0}$ & Characteristic length scale & $10^{-3}$ & $\mathrm{~m}$ \\ $t_{0}$ & Characteristic time scale & $5 \times 10^{-2}$ & $\mathrm{~s}$ \\ $\rho_{0}$ & Characteristic density scale & $1 \times 10^{3}$ & $\mathrm{~kg} \mathrm{~m}^{-3}$ \\ \hline \end{array}
+                  <table>
+                    <thead>
+                      <tr>
+                        <th><strong>Symbol</strong></th>
+                        <th><strong>Parameter</strong></th>
+                        <th><strong>Value</strong></th>
+                        <th>Unit</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>\(T\)</td>
+                        <td>Temperature</td>
+                        <td>296</td>
+                        <td>Kelvin</td>
+                      </tr>
+                      <tr>
+                        <td>\(\Gamma_{1}\)</td>
+                        <td>Distortional energy</td>
+                        <td>\(8 \times 10^{6}\)</td>
+                        <td>\(\mathrm{~kg} \mathrm{~m} \mathrm{~s}^{-2}\)</td>
+                      </tr>
+                      <tr>
+                        <td>\(\Gamma_{2}\)</td>
+                        <td>Strength of the bulk mixing energy</td>
+                        <td>\(3 \times 10^{17}\)</td>
+                        <td>\(\mathrm{~kg} \mathrm{~m} \mathrm{~s}^{-2}\)</td>
+                      </tr>
+                      <tr>
+                        <td>\(\chi\)</td>
+                        <td>Flory-Huggins mixing parameter</td>
+                        <td>\(0.55\)</td>
+                        <td>dimensionless</td>
+                      </tr>
+                      <tr>
+                        <td>\(N\)</td>
+                        <td>Generalized polymerization parameter</td>
+                        <td>\(1 \times 10^{3}\)</td>
+                        <td>dimensionless</td>
+                      </tr>
+                      <tr>
+                        <td>\(\Lambda\)</td>
+                        <td>Mobility parameter</td>
+                        <td>\(1 \times 10^{-9}\)</td>
+                        <td>\(\mathrm{~kg}^{-1} \mathrm{~m}^{3} \mathrm{~s}\)</td>
+                      </tr>
+                      <tr>
+                        <td>\(v_{b}\)</td>
+                        <td>Viscosity of the bacteria</td>
+                        <td>5</td>
+                        <td>\(\mathrm{~kg} \mathrm{~m}^{-1} \mathrm{~s}^{-1}\)</td>
+                      </tr>
+                      <tr>
+                        <td>\(v_{s}\)</td>
+                        <td>Viscosity of the solvent</td>
+                        <td>\(1.002 \times 10^{-3}\)</td>
+                        <td>\(\mathrm{~kg} \mathrm{~m}^{-1} \mathrm{~s}^{-1}\)</td>
+                      </tr>
+                      <tr>
+                        <td>\(\rho_{b}\)</td>
+                        <td>Biofilm density</td>
+                        <td>\(1 \times 10^{3}\)</td>
+                        <td>\(\mathrm{~kg} \mathrm{~m}^{-3}\)</td>
+                      </tr>
+                      <tr>
+                        <td>\(\rho_{s}\)</td>
+                        <td>Solvent density</td>
+                        <td>\(1 \times 10^{3}\)</td>
+                        <td>\(\mathrm{~kg} \mathrm{~m}^{-3}\)</td>
+                      </tr>
+                      <tr>
+                        <td>\(D_{N}^{0}\)</td>
+                        <td>Aqueous diffusion coefficient of Nisin</td>
+                        <td>\(0.19 \times 10^{-9}\)</td>
+                        <td>\(\mathrm{~m}^{2} \mathrm{~s}^{-1}\)</td>
+                      </tr>
+                      <tr>
+                        <td>\(K_{1}\)</td>
+                        <td>Maximum biocide consumption rate for nisin</td>
+                        <td>\(2 \times 10^{-7}\)</td>
+                        <td>\(\mathrm{~kg} \mathrm{~m}^{-3} \mathrm{~s}^{-1}\)</td>
+                      </tr>
+                      <tr>
+                        <td>\(d_{0}\)</td>
+                        <td>Biocide Monod half-saturation coefficient</td>
+                        <td>\(1 \times 10^{-3}\)</td>
+                        <td>\(\mathrm{~kg} \mathrm{~m}^{-3}\)</td>
+                      </tr>
+                      <tr>
+                        <td>\(K_{2}\)</td>
+                        <td>Maximum decay rate of live bacteria (due to biocide action)</td>
+                        <td>\(2 \times 10^{-5}\)</td>
+                        <td>\(\mathrm{~s}^{-1}\)</td>
+                      </tr>
+                      <tr>
+                        <td>\(K_{d}\)</td>
+                        <td>Live bacteria decay Monod half-saturation coefficient</td>
+                        <td>\(1 \times 10^{-5}\)</td>
+                        <td>\(\mathrm{~kg} \mathrm{~m}^{-3}\)</td>
+                      </tr>
+                      <tr>
+                        <td>\(\bar{d}\)</td>
+                        <td>Reference biocide concentration for weakening biomaterial</td>
+                        <td>\(5 \times 10^{-3}\)</td>
+                        <td>\(\mathrm{~kg} \mathrm{~m}^{-3}\)</td>
+                      </tr>
+                      <tr>
+                        <td>\(\bar{T}\)</td>
+                        <td>Reference time scale for weakening biomaterial</td>
+                        <td>120</td>
+                        <td>\(\mathrm{~s}\)</td>
+                      </tr>
+                      <tr>
+                        <td>\(h_{0}\)</td>
+                        <td>Characteristic length scale</td>
+                        <td>\(10^{-3}\)</td>
+                        <td>\(\mathrm{~m}\)</td>
+                      </tr>
+                      <tr>
+                        <td>\(t_{0}\)</td>
+                        <td>Characteristic time scale</td>
+                        <td>\(5 \times 10^{-2}\)</td>
+                        <td>\(\mathrm{~s}\)</td>
+                      </tr>
+                      <tr>
+                        <td>\(\rho_{0}\)</td>
+                        <td>Characteristic density scale</td>
+                        <td>\(1 \times 10^{3}\)</td>
+                        <td>\(\mathrm{~kg} \mathrm{~m}^{-3}\)</td>
+                      </tr>
+                    </tbody>
+                  </table>
                 </div>
               </div>
             </section>

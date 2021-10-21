@@ -766,6 +766,7 @@ a.referenceLinks {
 }
 
 .reference h3 {
+  font-size: 1.5rem !important;
   color: #23354e !important;
 }
 
@@ -774,6 +775,9 @@ a.referenceLinks {
 }
 
 .reference p {
+  font-size: 1rem !important;
+}
+.reference b {
   font-size: 1.2rem !important;
 }
 
