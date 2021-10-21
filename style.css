@@ -1775,13 +1775,31 @@ td {
 /* /Math */
 
 /* partnership tree */
-#FirstContent {
+#tree1,
+#tree2,
+#tree3,
+#tree4,
+#tree5 {
   cursor: var(--cursor-pointer);
   transform-origin: center;
   transform-box: fill-box;
 }
 
-#FirstContact::before {
-  content: "We met with UCSC iGEM Team on 19th July for the first time on google meet and presented each others projects and had a chat together. We found a similarity in our projects goals.";
+#T1,
+#T2,
+#T3 {
+  opacity: 0;
+  transition: all 0.3s;
+}
+
+#tree1:hover #T1,
+#tree2:hover #T2,
+#tree3:hover #T3 {
+  opacity: 1;
+}
+
+#tree4:hover,
+#tree5:hover {
+  transform: scale(1.05);
 }
 /* /partnership tree */
