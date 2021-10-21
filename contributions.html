@@ -163,8 +163,7 @@
               <ul>
                 <li><a id="run" class="scrollID" onclick="scrollToID('runSection')">New Information about existing part </a></li>
                 <li><a id="run1" class="scrollID" onclick="scrollToID('run1Section')">Document troubleshooting to help future teams </a></li>
-                <li><a id="run2" class="scrollID" onclick="scrollToID('run2Section')">MODELLING OF EXISTING PART</a></li>
-                <li><a id="run3" class="scrollID" onclick="scrollToID('run3Section')">New </a></li>
+                <li><a id="run2" class="scrollID" onclick="scrollToID('run2Section')">Modelling Of Existing Part</a></li>
               </ul>
             </div>
             <!-- /sideNav -->
@@ -242,10 +241,10 @@
                 </div>
               </div>
             </section>
-            <!-- 3. MODELLING OF EXISTING PART -->
+            <!-- 3. Modelling Of Existing Part  -->
             <section id="run2Section" class="scrollSection">
               <div class="centerImage">
-                <div class="highlightYellow mediumText textShadow"><b>MODELLING OF EXISTING PART </b></div>
+                <div class="highlightYellow mediumText textShadow"><b>Modelling Of Existing Part </b></div>
               </div>
               <div class="contentSection">
                 <div class="boxContent">
@@ -263,19 +262,39 @@
                   <div class="figures">
                     <figure>
                       <img src="http://parts.igem.org/wiki/images/5/52/T--IISER_Kolkata--affinity.jpg" alt="IISER_Kolkata--affinity.jpg" />
-                      <figcaption></figcaption>
+                      <figcaption><b>molecular docking of N-terminus region of Nisin A (cyan) and NisinPV (magenta) to NSR</b></figcaption>
                     </figure>
                   </div>
+                  <div class="figures">
+                    <figure style="width: 75%;">
+                      <img src="http://parts.igem.org/wiki/images/7/7a/T--IISER_Kolkata--nisinA.png" alt="IISER_Kolkata--nisinA.png" />
+                      <figcaption>NisinA docking</figcaption>
+                    </figure>
+                    <figure style="width: 75%;">
+                      <img src="http://parts.igem.org/wiki/images/4/4d/T--IISER_Kolkata--pvdock.png" alt="IISER_Kolkata--pvdock.png" />
+                      <figcaption>NisinPV docking</figcaption>
+                    </figure>
+                  </div>
+                  <p>The 1st position is the best docking position for both molecules. Subsequent docking positions were also found by this study. This shows both Nisin A and Nisin PV docks similarly to NSR protein, which indicates that binding is not the mechanism by which NSR cleaves Nisin A.</p>
+                  <p class="subSection"><b>RMSD Analysis</b></p>
+                  <div class="figures">
+                    <figure style="width: 75%;"><img src="http://parts.igem.org/wiki/images/2/28/T--IISER_Kolkata--rmsD1.jpg" alt="IISER_Kolkata--rmsD1.jpg" /></figure>
+                  </div>
+                  <p>Initially, both models quickly deviate from their reference structure by approximately 3 Å (this happens over the course of the first 0.3 ns during the heating, equilibration, and the start of the production phase of the simulation). From then on in the simulation, the nisin A model continues to deviate until it reaches approximately 5 angstroms. In contrast, the nisin PV model exhibits different behavior. Although it too initially deviates further to almost 5 angstroms early in the simulation it then returns to just under 4 angstroms deviation from its reference structure and remains virtually constant for the rest of the simulation.</p>
+                  <p>This evidence of greater structural change in the nisin A model that is less apparent in the nisin PV model supports the findings of the binding energy analyses for both bond and total energies. Indeed, it is clear that the nisin PV model is more durably bound to the NSR protein and is certainly more robust than the nisin A model.</p>
+                  <div class="figures">
+                    <figure style="width: 75%;"><img src="http://parts.igem.org/wiki/images/9/98/T--IISER_Kolkata--cleavage2.png" alt="IISER_Kolkata--cleavage2.png" /></figure>
+                  </div>
+                  <p class="subSection"><b>Hydrogen bond occupancy</b></p>
+                  <p>These simulations revealed the hydrogen bond occupancy (defined as whether a hydrogen bond is present or absent at every frame over the duration of simulation) for all nisin residues greater than 20%. It is evident that the nisin PV model exhibits higher occupancy values than the nisin-A model for residues corresponding to the region 27-29. In particular, there is a hydrogen bond with 47.65% occupancy between the sidechain oxygen of proline in the nisin-PV model and the hydrogen from the nitrogen sidechain on residue 265 (asparagine) in NSR that may play a role in the inhibition of proteolytic cleavage for nisin PV.</p>
+                  <p class="subSection"><b>Free energy per residue</b></p>
+                  <div class="figures">
+                    <figure style="width: 95%;"><img src="http://parts.igem.org/wiki/images/7/71/T--IISER_Kolkata--residues32.jpg" alt="IISER_Kolkata--residues32.jpg" /></figure>
+                  </div>
+                  <p>Analysis of the total binding energies for each residue in both nisin A and nisin PV models reveals that at the critical residue 29, the total energy for proline is seven times greater than serine (4.6292 kcal/mol for PRO and 0.8775 kcal/mol for SER).</p>
+                  <p class="subSection"><b>Key takeaways</b></p>
+                  <p>Considering the binding of Nisin(A/PV) to NSR, there is compelling evidence that NSR has a much more difficult time cleaving the bond at the 29th in the case of NisinPV.</p>
                 </div>
-              </div>
-            </section>
-            <!-- 4. New Information about existing part BBa_K2323004 -->
-            <section id="run3Section" class="scrollSection">
-              <div class="centerImage">
-                <div class="highlightYellow mediumText textShadow"><b>New Information about existing part</b></div>
-              </div>
-              <div class="contentSection">
-                <div class="boxContent"></div>
               </div>
             </section>
           </div>
@@ -290,6 +309,15 @@
         </div>
         <div class="indentContainer">
           <h3>References</h3>
+          <ol>
+            <li><a href="https://doi.org/10.1038/nature23467">Niewoehner, O., Garcia-Doval, C., Rostøl, J. et al. Type III CRISPR–Cas systems produce cyclic oligoadenylate second messengers. Nature 548, 543–548 (2017). https://doi.org/10.1038/nature23467</a></li>
+            <li><a href="https://www.science.org/doi/full/10.1126/science.aaq0179">Jonathan S. Gootenberg, Omar O. Abudayyeh, A Max J. Kellner, A Julia Joung, A James J. Collins, A Feng Zhang et al. T Multiplexed and portable nucleic acid detection platform with Cas13, Cas12a, and Csm6. 2018 Science P439-444 V 360 N 6387 doi:10.1126/science.aaq0179</a></li>
+            <li><a href="https://doi.org/10.1038/s41596-019-0210-2">Kellner, M.J., Koob, J.G., Gootenberg, J.S. et al. SHERLOCK: nucleic acid detection with CRISPR nucleases. Nat Protoc 14, 2986–3012 (2019). https://doi.org/10.1038/s41596-019-0210-2 </a></li>
+            <li><a href="http://2017.igem.org/Team:Munich">http://2017.igem.org/Team:Munich </a></li>
+            <li><a href="https://www.uniprot.org/uniprot/U2PSH1">https://www.uniprot.org/uniprot/U2PSH1 </a></li>
+            <li><a href="https://pubmed.ncbi.nlm.nih.gov/31239396/">Minich, Jeremiah & Sanders, Jon & Amir, Amnon & Humphrey, Greg & Gilbert, Jack & Knight, Rob. (2019). Quantifying and Understanding Well-to-Well Contamination in Microbiome Research. mSystems. 4. 10.1128/mSystems.00186-19.</a></li>
+            <li>D. Field et al., “Bioengineering nisin to overcome the nisin resistance protein,” Mol. Microbiol., vol. 111, no. 3, pp. 717–731, 2019, doi: 10.1111/mmi.14183.</li>
+          </ol>
         </div>
       </section>
       <!-- /reference -->
