@@ -162,18 +162,33 @@
             <div class="sideNav sticky">
               <!-- navigate in Page -->
               <ul>
-                <li><a id="run" class="scrollID" onclick="scrollToID('runSection')">Construction of the model</a></li>
-                <li><a id="run1" class="scrollID" onclick="scrollToID('run1Section')">Assumptions</a></li>
-                <li><a id="run2" class="scrollID" onclick="scrollToID('run2Section')">Governing Equations</a></li>
-                <li><a id="run3" class="scrollID" onclick="scrollToID('run3Section')">Parameter Set</a></li>
-                <li><a id="run4" class="scrollID" onclick="scrollToID('run4Section')">Initialisation of Parameters</a></li>
+                <li><a id="run" class="scrollID" onclick="scrollToID('runSection')">Introduction</a></li>
+                <li><a id="run1" class="scrollID" onclick="scrollToID('run1Section')">Construction of the model</a></li>
+                <li><a id="run2" class="scrollID" onclick="scrollToID('run2Section')">Assumptions</a></li>
+                <li><a id="run3" class="scrollID" onclick="scrollToID('run3Section')">Governing Equations</a></li>
+                <li><a id="run4" class="scrollID" onclick="scrollToID('run4Section')">Parameter Set</a></li>
+                <li><a id="run5" class="scrollID" onclick="scrollToID('run5Section')">Initialisation of Parameters</a></li>
+                <li><a id="run6" class="scrollID" onclick="scrollToID('run6Section')">Simulation and Inferences</a></li>
+                <li><a id="run7" class="scrollID" onclick="scrollToID('run7Section')">Inhibitory concentration </a></li>
               </ul>
             </div>
             <!-- /sideNav -->
           </div>
           <div>
-            <!-- Construction of the model -->
-            <section id="runSection" class="scrollSection">
+            <!-- Introduction -->
+            <section id="run1Section" class="scrollSection">
+              <div class="centerImage">
+                <div class="highlightYellow mediumText textShadow"><b>Introduction</b></div>
+              </div>
+              <div class="contentSection">
+                <div class="boxContent">
+                  <p>Bacteria form biofilms as part of their survival mechanisms, and biofilms are thus ubiquitous. The biofilms are clusters of bacteria that are attached to a surface and/or to one another and embedded in a self-produced matrix. The biofilm matrix consists of substances like proteins (e.g., fibrin), polysaccharides (e.g., alginate), as well as eDNA. In addition to the protection offered by the matrix, bacteria in biofilms can employ several survival strategies to evade the host defence systems.</p>
+                  <p>In this mathematical model, we try to understand how the biofilm formed by the pathogen in an infected cow reacts in the presence of the chosen biocide in our project, Nisin. We try to visualise how this biofilm dome-like structure ruptures and falls apart on treatment with Nisin in a 2-D capillary tube.</p>
+                </div>
+              </div>
+            </section>
+            <!-- 1. Construction of the model -->
+            <section id="run1Section" class="scrollSection">
               <div class="centerImage">
                 <div class="highlightYellow mediumText textShadow"><b>Construction of the model</b></div>
               </div>
@@ -183,8 +198,8 @@
                 </div>
               </div>
             </section>
-            <!-- 1. Assumptions -->
-            <section id="run1Section" class="scrollSection">
+            <!-- 2. Assumptions -->
+            <section id="run2Section" class="scrollSection">
               <div class="centerImage">
                 <div class="highlightYellow mediumText textShadow"><b>Assumptions</b></div>
               </div>
@@ -198,8 +213,8 @@
                 </div>
               </div>
             </section>
-            <!-- 2. Governing Equations -->
-            <section id="run2Section" class="scrollSection">
+            <!-- 3. Governing Equations -->
+            <section id="run3Section" class="scrollSection">
               <div class="centerImage">
                 <div class="highlightYellow mediumText textShadow"><b>Governing Equations</b></div>
               </div>
@@ -226,8 +241,8 @@
                 </div>
               </div>
             </section>
-            <!-- 3. Parameter Set -->
-            <section id="run3Section" class="scrollSection">
+            <!-- 4. Parameter Set -->
+            <section id="run4Section" class="scrollSection">
               <div class="centerImage">
                 <div class="highlightYellow mediumText textShadow"><b>Parameter Set</b></div>
               </div>
@@ -368,8 +383,8 @@
                 </div>
               </div>
             </section>
-            <!-- 4. Initialisation of Parameters -->
-            <section id="run4Section" class="scrollSection">
+            <!-- 5. Initialisation of Parameters -->
+            <section id="run5Section" class="scrollSection">
               <div class="centerImage">
                 <div class="highlightYellow mediumText textShadow"><b>Initialisation of Parameters</b></div>
               </div>
@@ -411,6 +426,82 @@
                 </div>
               </div>
             </section>
+            <!-- 6. Simulation and Inferences -->
+            <section id="run6Section" class="scrollSection">
+              <div class="centerImage">
+                <div class="highlightYellow mediumText textShadow"><b>Simulation and Inferences</b></div>
+              </div>
+              <div class="contentSection">
+                <div class="boxContent">
+                  <p>We first simulated the differential equations using the parameters reported in the literature (as given in the parameters table). This involved simulating the system in the presence of a biocide with known parameters so that we feel confident about the reproducibility of the model by extension, the validity of the results. We then simulated the systems using parameters obtained from molecular dynamics simulations.</p>
+                  <p class="subSection"><b>Spatial behaviour </b></p>
+                  <div class="figures">
+                    <figure style="width: 100%;"><img style="border: none; border-radius: 0;" src="https://2021.igem.org/wiki/images/6/6a/T--IISER_Kolkata--image-BiofilmDegradation-imageGrid.svg" alt="BiofilmDegradation-imageGrid.svg" /></figure>
+                  </div>
+                  <p>The above figure shows the progression of the volume fraction of dead and live bacteria with simulation time. The first row is the initial volume fraction of bacteria (at T=0). The second row is the volume fraction of live bacteria at each T. The third column represents the volume fraction of dead bacteria at each time T. The X and Y axes represent grid cells. We have divided a 1 sq. mm surface into 128x128 spatial unit cells.</p>
+                  <p>Here is an animation to better elucidate the behaviour of the biofilm that ultimately leads to the subsequent degradation of biofilm.</p>
+                  <div class="figures">
+                    <figure style="width: 90%;">
+                      <video width="100%" controls autoplay loop>
+                        <source src="https://2021.igem.org/wiki/images/8/8d/T--IISER_Kolkata--video-BiofilmDegradation-biofilm.mp4" type="video/mp4" />
+                      </video>
+                    </figure>
+                  </div>
+                  <p>It is clear from the animation that the biofilm degrades completely after a stipulated time. The degradation of the biofilm begins at the top of the biofilm dome and progresses down the Y-axis. This is natural considering that the outermost layer of biofilm is the first line of defence against biocide.</p>
+                  <p class="subSection">
+                    <b>Comparing the efficacy of NisinA and NisinPV </b>
+                  </p>
+                  <p>This is the part of the model that links the biofilm degradation model at the tissue level to the molecular level as well as the population-level model.</p>
+                  <p>From the molecular dynamics simulations, we got quantitative values for the diffusion coefficient of both NisinA and NisinPV. Additionally, from the free energy of binding to the NSR molecule, we were able to make an estimate of the kinetics of binding using the relationship between free energy and equilibrium constant:</p>
+                  $$\Delta G^{\circ}=-R T \ln K $$ $$K=e^{-\frac{\Delta G^{\circ}}{R T}}$$
+                  <p>Considering that the free energy of binding to NSR for NisinA is 0.8775 kcal/mol and for NisinPV is 4.6292 kcal/mol, at equilibrium, the rate of binding of Nisin PV will be 6.4 times lower than that of Nisin A (at 295K). The binding rate is proportional to the rate of degradation of nisin. Therefore, we were able to distinguish between the relative rate of degradation of Nisin A and Nisin PV. We simulated the differential equation set up in the biofilm degradation model with these values of the diffusion coefficient and degradation constants. We simulated the systems over an array of concentrations of each biocide and plotted the average bacterial volume fraction across the model space with time.</p>
+                  <p>The results of this simulation are outlined in the following animations.</p>
+                  <div class="figures">
+                    <figure>
+                      <video width="100%" controls autoplay loop>
+                        <source src="https://2021.igem.org/wiki/images/a/a7/T--IISER_Kolkata--video-BiofilmDegradation-concProfileNisPV.mp4" type="video/mp4" />
+                      </video>
+                    </figure>
+                    <figure>
+                      <video width="100%" controls autoplay loop>
+                        <source src="https://2021.igem.org/wiki/images/5/53/T--IISER_Kolkata--video-BiofilmDegradation-concProfileNisA.mp4" type="video/mp4" />
+                      </video>
+                    </figure>
+                  </div>
+                  <p>From these animations, it can be inferred that under the given conditions, the average bacterial dead bacterial volume fraction reaches a saturation point at a significantly lower concentration of biocide in the case of NisinPV as compared to NisinA (approximately two orders of magnitude difference).</p>
+                </div>
+              </div>
+            </section>
+            <!-- 7. Inhibitory concentration -->
+            <section id="run7Section" class="scrollSection">
+              <div class="centerImage">
+                <div class="highlightYellow mediumText textShadow"><b>Inhibitory concentration </b></div>
+              </div>
+              <div class="contentSection">
+                <div class="boxContent">
+                  <table>
+                    <tr>
+                      <th></th>
+                      <th>Biocide concentration (mM) at which saturation is observed</th>
+                      <th>Corresponding maximum dead bacteria volume fraction</th>
+                    </tr>
+                    <tr>
+                      <th>Nisin A</th>
+                      <td>~ 1.5 E(-4)</td>
+                      <td>~ 0.3.5</td>
+                    </tr>
+                    <tr>
+                      <th>Nisin PV</th>
+                      <td>~ 1.9 E(-6)</td>
+                      <td>~ 0.45</td>
+                    </tr>
+                  </table>
+                  <p>Given the complexity of the simulation and computational limitations, we could not simulate the system for longer than 1000 time units and therefore we could not explore the behaviour at larger timescales. Had we been able to simulate the system for longer, we would have quickly arrived at the concentration at which the average dead bacteria volume fraction would have approached 0.5. We could consider the concentration corresponding to the volume fraction of dead bacteria reaching 0.5 as a measure of the inhibitory concentration of the biocide. The IC-50 value of Nisin is reported in the literature in the nano-molar range. We can see that Nisin PV concentrations are already in the nanomolar range.</p>
+                  <p>Having an idea about the inhibitory concentration range of Nisin PV, we can implement the same in terms of population dynamics and consequently human practices.</p>
+                  <p>Assuming that the trend of bacterial volume fraction continues, it can be assumed that the IC-50 will be reached at around 10 nM. From the gene circuit model, we calculated the rate of production of Nisin to be in the order of 10^(-4) uM per bacteria. Therefore a typical inoculum size of a few million bacteria per mL should suffice to reach the IC-50 value within 20 hours. Also, we have DNAse-I in the system in our actual GMO, which would accelerate the biofilm degradation. Therefore, we are making conservative estimates.</p>
+                </div>
+              </div>
+            </section>
           </div>
         </div>
       </div>
@@ -423,6 +514,9 @@
         </div>
         <div class="indentContainer">
           <h3>References</h3>
+          <ul>
+            <li>Zhang T, "Modeling of biocide action against biofilm," Bulletin of Mathematical Biology, Montana State University.</li>
+          </ul>
         </div>
       </section>
       <!-- /reference -->
@@ -516,33 +610,7 @@
     </script>
     <!-- /hide on scroll -->
 
-    <!-- script for collapsibles -->
-    <script>
-      var collapsibles = document.querySelectorAll(".collapsible");
-
-      function removeCollapsibleExpanded(notRemove) {
-        collapsibles.forEach((collD) => {
-          if (collD != notRemove) {
-            collD.classList.remove("collapsible--expanded");
-            collD.querySelector(".collapsibleToggler").innerHTML = "+";
-          }
-        });
-      }
-
-      collapsibles.forEach((coll) =>
-        coll.querySelector(".collapsible-header").addEventListener("click", function () {
-          removeCollapsibleExpanded(coll);
-          coll.classList.toggle("collapsible--expanded");
-
-          if (coll.querySelector(".collapsibleToggler").innerHTML == "+") {
-            coll.querySelector(".collapsibleToggler").innerHTML = "-";
-          } else {
-            coll.querySelector(".collapsibleToggler").innerHTML = "+";
-          }
-        })
-      );
-    </script>
-    <!-- /script for collapsibles -->
+    
 
     <!-- /IISER KOLKATA CONTAINER -->
 

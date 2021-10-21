@@ -248,6 +248,11 @@
         </div>
         <div class="indentContainer">
           <h3>References</h3>
+          <ol>
+            <li>I. Z. Kiss, J. C. Miller, and P. Simon,(Book) Mathematics of epidemics on networks: from exact to approximate models. Springer, 2017.</li>
+            <li>S. Schafroth and R. R. Regoes, “Stochastic simulation of a simple epidemic.”</li>
+            <li>P. Down, M. Green, and C. Hudson, “Rate of transmission: A major determinant of the cost of clinical mastitis,”Journal of Dairy Science, vol. 96, no. 10, pp. 6301–6314, 2013</li>
+          </ol>
         </div>
       </section>
       <!-- /reference -->
@@ -340,34 +345,6 @@
       }
     </script>
     <!-- /hide on scroll -->
-
-    <!-- script for collapsibles -->
-    <script>
-      var collapsibles = document.querySelectorAll(".collapsible");
-
-      function removeCollapsibleExpanded(notRemove) {
-        collapsibles.forEach((collD) => {
-          if (collD != notRemove) {
-            collD.classList.remove("collapsible--expanded");
-            collD.querySelector(".collapsibleToggler").innerHTML = "+";
-          }
-        });
-      }
-
-      collapsibles.forEach((coll) =>
-        coll.querySelector(".collapsible-header").addEventListener("click", function () {
-          removeCollapsibleExpanded(coll);
-          coll.classList.toggle("collapsible--expanded");
-
-          if (coll.querySelector(".collapsibleToggler").innerHTML == "+") {
-            coll.querySelector(".collapsibleToggler").innerHTML = "-";
-          } else {
-            coll.querySelector(".collapsibleToggler").innerHTML = "+";
-          }
-        })
-      );
-    </script>
-    <!-- /script for collapsibles -->
 
     <!-- /IISER KOLKATA CONTAINER -->
 
