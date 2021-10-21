@@ -1126,6 +1126,11 @@ a.referenceLinks {
   font-weight: bold;
 }
 
+.subSection {
+  word-break: break-all;
+  word-wrap: break-word;
+}
+
 .subSection b {
   font-size: 1.8rem !important;
   color: var(--color-blue);

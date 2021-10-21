@@ -7,6 +7,7 @@
     <title>IISER Kolkata IGEM Team - Home</title>
     <link rel="stylesheet" href="style.css" />
   </head>
+
   <body onload="preload()" class="noScroll">
     <!-- preloader -->
     <div id="preloader" class="unSelectable" title="Loading...">
@@ -161,20 +162,690 @@
             <div class="sideNav sticky">
               <!-- navigate in Page -->
               <ul>
-                <li><a id="run" class="scrollID" onclick="scrollToID('runSection')">Overview</a></li>
+                <li><a id="run" class="scrollID" onclick="scrollToID('runSection')">Materials</a></li>
+                <li><a id="run1" class="scrollID" onclick="scrollToID('run1Section')">Competent Cells Preparation </a></li>
+                <li><a id="run2" class="scrollID" onclick="scrollToID('run2Section')">Cloning’s Method </a></li>
+                <li><a id="run3" class="scrollID" onclick="scrollToID('run3Section')">HiFi DNA Assembly </a></li>
+                <li><a id="run4" class="scrollID" onclick="scrollToID('run4Section')">Transformation Protocol </a></li>
+                <li><a id="run5" class="scrollID" onclick="scrollToID('run5Section')">Quantitative Assays </a></li>
               </ul>
             </div>
             <!-- /sideNav -->
           </div>
           <div>
-            <!-- Overview -->
+            <!-- 1. Materials -->
             <section id="runSection" class="scrollSection">
               <div class="centerImage">
-                <div class="highlightYellow mediumText textShadow"><b>overview</b></div>
+                <div class="highlightYellow mediumText textShadow"><b>Materials</b></div>
               </div>
               <div class="contentSection">
                 <div class="boxContent">
-                  <p>Lorem ipsum dolor sit.</p>
+                  <div class="collapsible">
+                    <header class="collapsible-header">
+                      <b>
+                        Plasmids
+                        <div class="collapsibleToggler">+</div>
+                      </b>
+                    </header>
+                    <div class="collapsible-content">
+                      <p class="subSection">
+                        <b>pUC19:</b> <br />
+                        This is a high copy number plasmid. The origin of replication of this plasmid is pMB1 (High Copy Mutant). This contains Ampicillin resistance gene. This plasmid was mainly used for determining the transformation efficiency of our competent cells. We got this plasmid from one of our sponsors
+                        <a class="referenceLinks" href="https://www.neb-online.fr/en/">NEB</a>.
+                      </p>
+                      <p class="subSection">
+                        <b>pSB1C3:</b> <br />
+                        pSB1C3 vector is a high copy number plasmid which carries Chloramphenicol resistance gene. The origin of replication is pUC19 derived pMB1. We got this plasmid from iGEM headquarters as this plasmid is a common vector for all the Biobricks present in iGEM-21 kit plates. We used this plasmid as a vector for all the cloning and assemblies.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="collapsible">
+                    <header class="collapsible-header">
+                      <b>
+                        List of DNA fragments ordered from Twist Bioscience
+                        <div class="collapsibleToggler">+</div>
+                      </b>
+                    </header>
+                    <div class="collapsible-content">
+                      <p class="subSection">
+                        <b>Eicsm6 Coding Region:</b> <br />
+                        GAATTCGCGGCCGCTTCTAGATGAAAATCCTGTTCTCTCCTATAGGAAATACGGACCCGTGGCGGAACGATCGAGACGGCGCAATGTTACATATTGTACGACATTATCAGCCCGATCGCGTTGTTTTGTTCTTCACTGAAAGCATATGGCAGGGCAACCAGCATTTCTCTGGGCAGCAGGCATTCGACTGGGTCAAGATTATACAATCAATCAATGAAAACTGCCAAATAGAGATCAAGTGCGACACGATAGAAGTCGAAAACGACTTTGACGCTTATAAGGACTTATTTCACCAATATCTCGTTGAAGAGAAGCGCAAGTACCCAAACGCCGAGATCTTTCTGAACGTAACCTCAGGTACCCCACAAATGGAGACGACACTGTGTCTCGAGTACGTAACCTATCCGGATAAGATGAGATGTATCCAAGTGAGTACTCCACTGAAAACCTCAAACGCGAAGACGAAGTATGCCCAGGCAGACTGTCAAGAGGTAGATTTGGAGATTGTAAACGAGGAAGAAAGCCAACAGCCGAGCCGGTGCCATAAAATTGCCATCCTCTCATTCAGAGAGGCCATTGTCAGAAACCAAATTAAGTCCCTGCTGGACAACTATGATTATGAGGCAGCTTTGCAGCTGGTCGCTAGTCAGAAGTCCTTTCGTAACGGTAAAGAGATCAGAAAGAAACTTAAGGAACTTATTGACGATATCAAAATGCACCGCGTTTTCAGTTATCTGATAAAGCAATACCCGCGTAATGAGAAACTTCAGAAGGCCCTTCTCCATACGATCCTGTTGGAGATGCGCCATCAGCGCGGCGATATAGCTGAGACATTAATTCGCGTTAAGTCAATCGCTGAGTACATTGTTGAGCAGTACATACAGAAGAATTACCCCTACCTCATTATTTACAAGGAAGATAAACCGTATTTTAATGTCTCGTATTCCCAGGAACTCACTGAATCGTACCTGGCGTTAATGGATTCCCGAAATAAGAAAACGAATAAGAAGATGACTGTAGATAGCCTCGACCGGATACTGGGATTCCCGGCCTATCGGGACTTTCTTCAGTTGCTCGAGGCGAGTAATGAAATGACAAATGAAATGAACAAGGTCAACGAGATCAACAATCTGCGGAACAAAGTGGCACACAATTTGGATAGCTTGAACCTCGACCGCGATAAGAACGGCCGTAAGATTACTAACGCAGTGACCGCTGTTCGTACTATGCTCCTTGCTGTGTTTCCTGAAGTGCAAGAGAATGATTTTCACTACCTCAAACAGTTCAACCAATCCATCAAGGAGCTGCTTTAATACTAGTAGCGGCCGCTGCAG
+                      </p>
+                      <p class="subSection">
+                        <b>Eicsm6 Composite part:</b><br />
+                        GAATTCGCGGCCGCTTCTAGAGCAATACGCAAACCGCCTCTCCCCGCGCGTTGGCCGATTCATTAATGCAGCTGGCACGACAGGTTTCCCGACTGGAAAGCGGGCAGTGAGCGCAACGCAATTAATGTGAGTTAGCTCACTCATTAGGCACCCCAGGCTTTACACTTTATGCTTCCGGCTCGTATGTTGTGTGGAATTGTGAGCGGATAACAATTTCACACATACTAGAGAAAGAGGAGAAAATGAAAATCCTGTTCAGTCCTATCGGTAATACTGACCCCTGGCGTAACGATCGTGACGGAGCAATGCTTCATATTGTCCGCCATTATCAGCCCGATCGGGTTGTTCTGTTCTTCACAGAATCTATATGGCAGGGTAACCAGCATTTTAGCGGGCAGCAGGCATTCGACTGGGTTAAGATTATACAATCTATAAATGAAAATTGCCAAATAGAGATAAAGTGCGACACGATCGAAGTCGAAAACGACTTTGACGCGTATAAGGACCTCTTTCACCAATATCTTGTTGAAGAGAAGCGCAAGTACCCAAACGCCGAGATATTTCTTAACGTAACCAGTGGTACCCCACAAATGGAGACGACGCTGTGTTTAGAGTACGTCACCTATCCAGATAAGATGCGGTGTATACAAGTGTCAACGCCACTCAAAACCTCGAACGCAAAGACGAAGTATGCACAGGCTGACTGTCAAGAGGTCGATTTGGAGATTGTGAACGAGGAAGAAAGCCAACAGCCGTCCCGTTGCCATAAAATTGCCATACTCTCCTTCCGAGAGGCGATTGTGCGCAACCAAATTAAGAGCCTCTTGGACAACTATGATTATGAGGCTGCATTGCAATTAGTGGCCTCTCAGAAATCCTTTCGGAACGGAAAAGAAATACGTAAGAAATTGAAGGAACTTATAGATGATATCAAAATGCACCGCGTCTTTTCCTATCTGATTAAGCAATACCCTCGGAATGAAAAGTTGCAGAAGGCGTTACTTCATACTATCCTGCTGGAGATGCGCCATCAGCGGGGCGATATAGCGGAGACCTTGATTCGCGTTAAATCCATAGCCGAGTACATTGTAGAGCAGTACATTCAGAAGAATTACCCGTACCTTATAATTTATAAAGAGGATAAACCATACTTCAATGTGTCGTATAGCCAGGAATTAACCGAGTCATACTTAGCCCTCATGGATTCGCGTAATAAGAAAACGAATAAGAAGATGACGGTCGATTCATTAGACCGCATTCTGGGTTTCCCTGCCTATCGTGACTTTCTGCAACTCCTGGAAGCAAGTAATGAAATGACGAATGAAATGAACAAGGTGAACGAGATAAACAATCTGCGGAACAAAGTAGCACATAACTTAGACAGTCTTAATTTAGATCGTGACAAGAATGGTCGCAAAATCACGAATGCGGTAACTGCGGTGCGCACCATGCTGTTGGCGGTCTTCCCAGAGGTTCAGGAAAACGACTTCCATTATTTAAAGCAATTTAATCAGAGCATTAAAGAACTTTTGCATCACCATCACCATCACTAACCAGGCATCAAATAAAACGAAAGGCTCAGTCGAAAGACTGGGCCTTTCGTTTTATCTGTTGTTTGTCGGTGAACGCTCTCTACTAGAGTCACACTGGCTCACCTTCGGGTGGGCCTTTCTGCGTTTATATACTAGTAGCGGCCGCTGCAG
+                      </p>
+                      <p class="subSection">
+                        <b>DNaseI basic:</b><br />
+                        GAATTCGCGGCCGCTTCTAGATGCGTGGAACAAGACTTATGGGATTACTCCTTGCGTTAGCAGGCCTTTTACAACTCGGGCTTAGTCTGAAAATTGCGGCATTTAATATTCGAACTTTCGGCGAAACGAAAATGTCAAACGCGACTTTAGCGTCCTATATAGTGCGAATAGTACGGCGCTATGATATTGTACTTATTCAAGAAGTACGTGATAGTCATTTGGTAGCCGTCGGCAAACTGCTTGATTACTTGAATCAAGACGATCCTAATACTTATCATTACGTTGTGAGCGAACCCTTAGGTCGTAATTCCTATAAGGAACGTTACCTTTTCTTGTTTCGTCCGAATAAAGTCTCGGTTTTGGATACGTATCAATATGATGATGGTTGTGAATCATGTGGTAATGATTCTTTTAGTCGCGAACCAGCCGTCGTGAAATTTTCTTCACATTCGACAAAAGTAAAAGAGTTCGCTATAGTGGCACTTCATTCTGCACCGTCCGATGCCGTCGCAGAAATCAACAGCCTGTATGACGTGTATCTCGACGTGCAACAAAAGTGGCATCTGAATGACGTTATGCTTATGGGAGACTTTAACGCCGATTGTTCCTATGTTACGTCAAGTCAATGGTCTAGTATACGTCTCCGGACCAGTAGCACATTTCAATGGTTAATCCCAGATTCCGCTGATACAACTGCGACCTCAACTAATTGTGCGTACGATCGCATTGTAGTTGCTGGAAGCCTTCTGCAATCTTCAGTAGTCCCAGGTTCAGCAGCCCCTTTCGACTTCCAAGCTGCATACGGACTGAGCAATGAGATGGCCCTGGCCATCAGTGACCATTACCCGGTGGAGGTGACGCTGACATAATACTAGTAGCGGCCGCTGCAG
+                      </p>
+                      <p class="subSection">
+                        <b>DNase1 composite:</b><br />
+                        GAATTCGCGGCCGCTTCTAGAGCAATACGCAAACCGCCTCTCCCCGCGCGTTGGCCGATTCATTAATGCAGCTGGCACGACAGGTTTCCCGACTGGAAAGCGGGCAGTGAGCGCAACGCAATTAATGTGAGTTAGCTCACTCATTAGGCACCCCAGGCTTTACACTTTATGCTTCCGGCTCGTATGTTGTGTGGAATTGTGAGCGGATAACAATTTCACACATACTAGAGAAAGAGGAGAAAATGCGGGGTACACGTTTGATGGGTTTACTCCTGGCTTTGGCCGGCTTGCTCCAATTGGGACTTAGTCTTAAAATTGCCGCGTTTAATATACGTACATTCGGCGAAACTAAAATGTCTAACGCCACATTGGCTTCTTATATCGTGCGTATTGTTAGACGATATGATATTGTGTTGATTCAAGAAGTTCGTGATAGTCATTTGGTTGCCGTCGGCAAACTTTTAGATTACCTTAATCAAGACGATCCGAATACATATCATTACGTTGTGTCCGAACCTTTGGGGAGAAATTCTTATAAAGAACGGTATCTTTTCCTGTTTCGACCGAATAAAGTTAGCGTACTCGATACTTATCAATATGATGATGGGTGTGAAAGCTGTGGCAATGATTCTTTTAGCCGTGAACCGGCAGTCGTAAAATTTAGTTCACATTCGACTAAAGTGAAAGAGTTCGCAATAGTCGCATTACATTCTGCACCGTCTGATGCTGTCGCGGAAATCAACTCGTTATATGACGTGTATTTAGACGTTCAACAGAAATGGCATTTAAATGACGTTATGCTGATGGGTGACTTTAACGCGGATTGTTCTTATGTCACGTCTTCTCAATGGTCTAGTATTAGACTTCGGACTTCAAGTACTTTTCAATGGTTAATCCCAGATAGCGCAGATACAACCGCCACCTCAACCAATTGTGCTTACGATCGGATAGTCGTTGCGGGTAGTCTCTTACAATCTAGCGTTGTCCCGGGATCAGCGGCCCCGTTCGATTTTCAGGCCGCTTATGGTTTGAGTAACGAAATGGCACTTGCAATTAGCGATCACTATCCCGTTGAAGTAACCTTGACCTAACCAGGCATCAAATAAAACGAAAGGCTCAGTCGAAAGACTGGGCCTTTCGTTTTATCTGTTGTTTGTCGGTGAACGCTCTCTACTAGAGTCACACTGGCTCACCTTCGGGTGGGCCTTTCTGCGTTTATATACTAGTAGCGGCCGCTGCAG
+                      </p>
+                      <p class="subSection">
+                        <b>NisinPV Coding Sequence:</b><br />
+                        GTGCAACCTTGGGTAGGCTTTACTTAGCTAAAGGCCTTAGGGGATGGAATTCGCGGCCGCTTCTAGATGTCGACCAAGGACTTCAATCTGGACCTTGTTAGCGTCAGTAAGAAGGACTCCGGAGCGTCTCCGCGGATAACGTCAATATCTCTTTGCACCCCTGGCTGCAAGACTGGCGCGCTCATGGGATGCAATATGAAGACTGCGACCTGCCACTGCCCGGTCCATGTCTCTAAGTAATACTAGTAGCGGCCGCTGCAGCATCGTTTACTTGACTGAAAAGGGGCCTTCTCAAATTGG
+                      </p>
+                      <p class="subSection">
+                        <b>P2 + GFP :</b><br />
+                        ATTAAATACAAATTACATTTAACAGTTAAGTATTTATTTCCTACAGTTAGGCAATATAATGATAAAAGATTGTACTAAATCGTATAATGACAGTGAAAAGAGGAGAAAATGCGCAAGGGCGAGGAGTTGTTTACAGGCGTGGTTCCGATCTTGGTCGAGCTTGACGGAGACGTAAACGGTCATAAGTTCAGCGTGTCCGGGGAAGGCGAGGGCGACGCTACCTATGGCAAGTTAACGCTGAAGTTCATCTGTACGACCGGTAAGCTTCCGGTCCCCTGGCCTACTTTGGTTACAACCTTTGGATACGGGGTGCAGTGTTTCGCACGATATCCGGACCACATGAAGCAACACGATTTCTTTAAATCAGCAATGCCAGAGGGATACGTTCAAGAGCGCACCATTTTCTTTAAGGACGATGGCAATTATAAAACGAGAGCAGAGGTAAAATTCGAGGGAGACACGTTAGTGAACCGAATTGAATTGAAGGGAATCGACTTCAAAGAGGACGGCAATATCCTCGGCCATAAGTTAGAGTATAATTACAATAGTCATAACGTGTACATAATGGCTGATAAGCAGAAGAACGGCATTAAGGTAAACTTTAAGATCCGTCATAACATCGAGGACGGCTCGGTACAGCTGGCTGATCACTACCAGCAGAACACGCCTATCGGAGACGGACCGGTTTTGCTTCCTGATAATCACTATCTTTCTACCCAGAGTGCATTGTCAAAGGACCCTAATGAGAAACGCGATCATATGGTATTGTTGGAGTTCGTCACCGCAGCGGGCATAACTCACGGTATGGACGAGCTGTATAAGTAATAACCAGGCATCAAATAAAACGAAAGGCTCAGTCGAAAGACTGGGCCTTTCGTTTTATCTGTTGTTTGTCGGTGAACGCTCTCTACTAGAGTCACACTGGCTCACCTTCGGGTGGGCCTTTCTGCGTTTATAGCTTTCGAAGGCTTAGGCGGGAG
+                      </p>
+                      <p class="subSection">
+                        <b>AgrA + terminator:</b><br />
+                        AAAGAGGAGAAATACTAGATGGAGATTGCCTTGGCGACTGACAACCCCTACGAAGTATTAGAGCAAGCGAAGAATATGAATGATATTGGTTGTTACTTCCTTGACATCCAATTATCCACAGATATAAATGGAATAAAGCTCGGAAGCGAGATACGCAAGCACGACCCAGTGGGCAATATCATCTTTGTCACGTCCCACTCCGAATTGACATACTTAACCTTTGTGTATAAAGTGGCCGCGATGGACTTTATATTCAAGGATGACCCTGCCGAATTGCGCACACGTATAATTGATTGCTTAGAGACAGCTCATACTCGGCTTCAGTTGCTTAGCAAGGACAATAGCGTTGAGACAATCGAGCTTAAGCGCGGGAGTAATTCGGTGTATGTGCAGTACGACGACATTATGTTCTTTGAGAGTTCTACAAAATCTCATCGCTTAATTGCACACCTTGACAACAGACAAATAGAATTTTACGGAAACCTTAAGGAATTATCACAACTGGACGACAGATTCTTTCGGTGCCACAATAGTTTTGTGGTGAACAGACATAATATTGAGAGCATTGATTCAAAGGAAAGAATAGTCTATTTTAAGAATAAAGAGCATTGCTACGCAAGCGTGCGGAACGTAAAGAAGATTTAATAATACTAGAGCCAGGCATCAAATAAAACGAAAGGCTCAGTCGAAAGACTGGGCCTTTCGTTTTATCTGTTGTTTGTCGGTGAACGCTCTCTACTAGAGTCACACTGGCTCACCTTCGGGTGGGCCTTTCTGCGTTTAT
+                      </p>
+                      <p class="subSection">
+                        <b>pBAD + AgrC:</b> <br />
+                        ACATTGATTATTTGCACGGCGTCACACTTTGCTATGCCATAGCAAGATAGTCCATAAGATTAGCGGATCCTACCTGACGCTTTTTATCGCAACTCTCTACTGTTTCTCCATACCGTTTTTTTGGGCTAGCAAAGAGGAGAAAATGATCCTTATGTTTACAATCCCTGCGATCATCTCAGGAATCAAATATTCAAAATTGGACTACTTCTTTATTATTGTTATAAGTACGTTATCATTATTCCTCTTTAAGATGTTTGACAGTGCTTCTTTGATAATTCTCACCAGCTTTATTATTATTATGTACTTTGTGAAGATCAAGTGGTACTCGATTCTCCTGATAATGACAAGCCAAATAATTTTGTATTGCGCAAATTATATGTACATAGTAATTTATGCATATATTACTAAGATTTCTGACTCAATATTTGTCATTTTCCCAAGCTTCTTCGTAGTATACGTAACTATATCGATCTTATTCAGTTACATCATTAACCGGGTATTGAAGAAAATTTCCACACCCTATTTAATCTTAAATAAGGGGTTCTTGATTGTTATTTCAACAATATTGCTCTTGACGTTTAGCCTTTTCTTCTTCTATTCCCAAATAAATTCGGACGAAGCGAAGGTGATTAGGCAATATTCTTTTATTTTCATCGGCATAACAATTTTCCTCTCAATCCTCACGTTTGTGATTAGCCAATTTCTTCTGAAGGAGATGAAATATAAACGGAATCAGGAAGAGATTGAAACATACTACGAATATACGTTGAAAATAGAGGCTATTAATAATGAGATGCGGAAGTTCCGCCATGATTATGTCAATATCCTTACGACGCTTTCAGAGTATATTCGCGAGGATGATATGCCGGGATTACGCGACTACTTTAATAAGAATATAGTACCTATGAAGGACAATCTTCAGATGAATGCCATCAAATTAAATGGCATTGAGAATCTTAAGGTTCGGGAAATTAAAGGCTTGATAACAGCAAAGATTTTGAGAGCCCAAGAGATGAATATTCCGATCTCAATTGAGATTCCGGATGAGGTGAGCTCGATCAATTTAAATATGATAGATTTAAGCAGATCAATTGGGATTATTTTGGATAATGCAATTGAGGCGAGCACAGAGATTGATGATCCTATCATCCGTGTAGCGTTCATTGAATCGGAAAATTCGGTCACATTCATTGTCATGAATAAGTGTGCCGATGACATTCCTCGAATCCATGAGCTCTTTCAAGAGTCCTTTTCCACAAAAGGCGAGGGCAGAGGGCTCGGGTTGAGTACATTGAAGGAAATTGCAGACAATGCTGATAATGTGCTCTTGGATACAATAATTGAGAATGGCTTCTTCATCCAAAAGGTTGAGATTATTAACAATTAATAA
+                      </p>
+                    </div>
+                  </div>
+                  <div class="collapsible">
+                    <header class="collapsible-header">
+                      <b>
+                        Primers
+                        <div class="collapsibleToggler">+</div>
+                      </b>
+                    </header>
+                    <div class="collapsible-content">
+                      <p class="subSection"><b>Primers for normal PCR: </b></p>
+                      <ul>
+                        <li>
+                          <p>Amplification of biobrick part</p>
+                          <table>
+                            <tr>
+                              <th>Primer type</th>
+                              <th>Sequence</th>
+                              <th>% GC</th>
+                              <th>Tm</th>
+                              <th>Length</th>
+                            </tr>
+                            <tr>
+                              <td>Forward</td>
+                              <td>5’-gatggaattcgcggccgcttcta-3’</td>
+                              <td>56.5</td>
+                              <td>61.7</td>
+                              <td>23</td>
+                            </tr>
+                            <tr>
+                              <td>Reverse</td>
+                              <td>5’-gatgctgcagcggccgctactagta-3’</td>
+                              <td>60</td>
+                              <td>64.4</td>
+                              <td>25</td>
+                            </tr>
+                          </table>
+                        </li>
+                        <li>
+                          <p>Linearized plasmid backbone synthesis</p>
+                          <table>
+                            <tr>
+                              <th>Primer type</th>
+                              <th>Sequence</th>
+                              <th>% GC</th>
+                              <th>Tm</th>
+                              <th>Length</th>
+                            </tr>
+                            <tr>
+                              <td>Forward</td>
+                              <td>5’- gtgctgcagtccggcaaaaaa-3’</td>
+                              <td>52.4</td>
+                              <td>59.3</td>
+                              <td>21</td>
+                            </tr>
+                            <tr>
+                              <td>Reverse</td>
+                              <td>5’-gtgaattccagaaatcatccttagcg-3’</td>
+                              <td>42</td>
+                              <td>66</td>
+                              <td>26</td>
+                            </tr>
+                          </table>
+                        </li>
+                        <li>
+                          <p>Sequencing primers</p>
+                          <table>
+                            <tr>
+                              <th>Primer type</th>
+                              <th>Sequence</th>
+                              <th>% GC</th>
+                              <th>Tm</th>
+                              <th>Length</th>
+                            </tr>
+                            <tr>
+                              <td>Forward(VF2)</td>
+                              <td>5’-tgccacctgacgtctaagaa-3’</td>
+                              <td>50</td>
+                              <td>60</td>
+                              <td>20</td>
+                            </tr>
+                            <tr>
+                              <td>Reverse(VR)</td>
+                              <td>5’-attaccgcctttgagtgagc-3’</td>
+                              <td>50</td>
+                              <td>60</td>
+                              <td>20</td>
+                            </tr>
+                          </table>
+                        </li>
+                      </ul>
+                      <p class="subSection"><b>Primers specific for Hi-Fi DNA assembly: </b></p>
+                      <ul>
+                        <li>
+                          <p>For Unidirectional Assembly</p>
+                          <table>
+                            <tr>
+                              <td>Pbad_RBS_AgrC_fwd_uni</td>
+                              <td>5’-tctggaattccaacattgattatttgcacgg-3’</td>
+                            </tr>
+                            <tr>
+                              <td>Pbad_RBS_AgrC_rev_uni</td>
+                              <td>5’-tttctcctctttttattaattgttaataatctcaaccttttg-3’</td>
+                            </tr>
+                            <tr>
+                              <td>RBS_AgrA_fwd_uni</td>
+                              <td>5’ taacaattaataaaaagaggagaaatactagatg 3</td>
+                            </tr>
+                            <tr>
+                              <td>RBS_AgrA_rev _uni</td>
+                              <td>5’ tttgtatttaattataaacgcagaaaggcc 3</td>
+                            </tr>
+                            <tr>
+                              <td>P2_GFP_fwd_uni</td>
+                              <td>5’ttctgcgtttataattaaatacaaattacatttaacagttaagtatttatttcctacagttag 3’</td>
+                            </tr>
+                            <tr>
+                              <td>P2_GFP_rev_uni</td>
+                              <td>5’ ggactgcagcacctcccgcctaagccttcg 3’</td>
+                            </tr>
+                            <tr>
+                              <td>PSB1C3_fwd_uni</td>
+                              <td>5’ gcttaggcgggaggtgctgcagtccggcaaaaaag 3’</td>
+                            </tr>
+                            <tr>
+                              <td>PSB1C3_rev_uni</td>
+                              <td>5’ aaataatcaatgttggaattccagaaatcatccttagcg 3’</td>
+                            </tr>
+                          </table>
+                        </li>
+                        <li>
+                          <p>For Bidirectional Assembly</p>
+                          <table>
+                            <tr>
+                              <td>Pbad_RBS_AgrC_fwd_bi</td>
+                              <td>5’- tttgtatttaatacattgattatttgcacgg-3’</td>
+                            </tr>
+                            <tr>
+                              <td>Pbad_RBS_AgrC_rev_bi</td>
+                              <td>5’-tttctcctctttttattaattgttaataatctcaaccttttg-3’</td>
+                            </tr>
+                            <tr>
+                              <td>RBS_AgrA_fwd_bi</td>
+                              <td>5’ taacaattaataaaaagaggagaaatactagatg 3</td>
+                            </tr>
+                            <tr>
+                              <td>RBS_AgrA_rev _bi</td>
+                              <td>5’ ggactgcagcactataaacgcagaaaggcc 3</td>
+                            </tr>
+                            <tr>
+                              <td>P2_GFP_fwd_bi</td>
+                              <td>5tctggaattccactcccgcctaagccttcg 3’</td>
+                            </tr>
+                            <tr>
+                              <td>P2_GFP_rev_bi</td>
+                              <td>5’aaataatcaatgtattaaatacaaattacatttaacagttaagtatttatttcctacagttag 3’</td>
+                            </tr>
+                            <tr>
+                              <td>PSB1C3_fwd_bi</td>
+                              <td>5’ ttctgcgtttatagtgctgcagtccggcaaaaaag3’</td>
+                            </tr>
+                            <tr>
+                              <td>PSB1C3_rev_uni</td>
+                              <td>5’ gcttaggcgggagtggaattccagaaatcatccttagcg 3’</td>
+                            </tr>
+                          </table>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="collapsible">
+                    <header class="collapsible-header">
+                      <b>
+                        Microbial strain
+                        <div class="collapsibleToggler">+</div>
+                      </b>
+                    </header>
+                    <div class="collapsible-content">
+                      <p class="subSection"><b>E. coli DH5α:</b> This strain is used for only cloning and assembly of different gene fragments.</p>
+                      <p class="subSection"><b>E. coli BL21:</b> This strain is used for study expressions.</p>
+                    </div>
+                  </div>
+                  <div class="collapsible">
+                    <header class="collapsible-header">
+                      <b>
+                        Media Preparation
+                        <div class="collapsibleToggler">+</div>
+                      </b>
+                    </header>
+                    <div class="collapsible-content">
+                      <p><a href="https://benchling.com/s/prt-dUYnUJLsuWZWQ1NQGeR8">https://benchling.com/s/prt-dUYnUJLsuWZWQ1NQGeR8</a></p>
+                    </div>
+                  </div>
+                  <div class="collapsible">
+                    <header class="collapsible-header">
+                      <b>
+                        Stock Solution Preparation
+                        <div class="collapsibleToggler">+</div>
+                      </b>
+                    </header>
+                    <div class="collapsible-content">
+                      <p class="subSection"><b>0.5 M EDTA stock solutions</b></p>
+                      <p>For preparation of 30ml stock solution</p>
+                      <ul>
+                        <li>Weigh out 5.583 grams of EDTA disodium salt.</li>
+                        <li>Dissolve in 25ml of milli Q water and adjust pH with solid NaOH to reach the pH of 8</li>
+                        <li>Add 5ml milli Q water to make the total volume to 30ml</li>
+                        <li>Autoclave for 15mins at 121 °C</li>
+                      </ul>
+                      <p class="subSection"><b>50X TAE Buffer</b></p>
+                      <p>For preparation of 250ml solution</p>
+                      <ul>
+                        <li>Weigh out 60.5g Tris base and dissolve approximately in 200ml milli Q water</li>
+                        <li>Carefully add 14.275ml of 100% glacial acetic acid</li>
+                        <li>Add 25ml of 0.5 M EDTA (pH 8)</li>
+                        <li>The pH of buffer should be around 8.5</li>
+                        <li>Store at room temperature</li>
+                      </ul>
+                      <p class="subSection"><b>10X TAE Buffer working solution</b></p>
+                      <p>Add 20ml of 50X TAE buffer to 1000ml of milliQ water.</p>
+                      <p class="subSection"><b>1M NaOH preparation for pH adjustments</b></p>
+                      <p>To prepare 20ml of 1M NaOH add 0.8g of NaOH pellets in 20ml of dH2O. Then store it in a falcon tube.</p>
+                      <p class="subSection"><b>Crystal Violet solution preparation</b></p>
+                      <p>For 1L solution</p>
+                      <ol>
+                        <li>Add 1g of crystal violet to 1000ml of dH2O and then do the magnetic stirring for solubilising.</li>
+                      </ol>
+                      <p class="subSection"><b>Antibiotics Stock and working solutions</b></p>
+                      <p>As per the requirement, the stock and working concentrations can be made by referring to the corresponding concentrations provided in the table below.</p>
+                      <p><a href="https://2021.igem.org/wiki/images/2/21/T--IISER_Kolkata--file-Experiment-AntibioticsConcentrations.csv">Download AntibioticsConcentrations.csv</a></p>
+                      <p class="subSection"><b>Stock for Primers</b></p>
+                      <ul>
+                        <li>Check the concentrations of each primer provided by the vendor</li>
+                        <li>
+                          Need to make the stock concentration of 100pm/μl
+                          <ul>
+                            <li>Centrifuge the empty vials at 30,000 rpm for 30 secs.</li>
+                            <li>Heat the NFW at 95°C for 10mins then at 55°C for 30 mins</li>
+                            <li>Pour the NFW to the mentioned volume to make the stock concentration (100pm/μl) in each tube of primer. Remember to perform this step inside the hood.</li>
+                          </ul>
+                        </li>
+                        <li>Leave the tubes in 4°C for 4-5 hrs.</li>
+                        <li>Take it out from 4°C and mix by soft pipetting or light vortex. Then store it at -20°C.</li>
+                        <li>For making a working concentration of 10pm/μl add 10μl of stock solution to 90 μl of NFW.</li>
+                      </ul>
+                      <p class="subSection"><b>Resuspension of biobricks from iGEM kit Plates</b></p>
+                      <ul>
+                        <li>Label the plates properly and carefully with a marker (for reference check the well contents from iGEM website)</li>
+                        <li>Take 10μl of NFW using a micropipette. Punch a hole in the aluminum foil for the well you want to resuspend with the tip of the micropipette tip.</li>
+                        <li>Slowly release the water into the well.</li>
+                        <li>Gently pipette inside the well for a few times. The solution will be red due to the presence of cresol dye.</li>
+                        <li>Keep the mixture there for 5 mins</li>
+                        <li>Now transfer it to a PCR tube and store it in -20°C. Label it properly before storing</li>
+                      </ul>
+                      <p class="subSection"><b>Resuspension of DNA fragments ordered from Twist Bioscience -</b></p>
+                      <ul>
+                        <li>Briefly centrifuge the tube and resuspend the DNA in NF-tris EDTA (TE Buffer), pH 8 or 10mM Tris HCl, pH 8 to the desired concentration.</li>
+                        <li>A concentration of 10ng/μl is recommended for a stock solution.</li>
+                        <li>Prepare aliquots of the stock and make working aliquots.</li>
+                        <li>For long-term storage, freeze DNA at -20°C or -80°C</li>
+                      </ul>
+                      <p class="subSection"><b>DNaseI stock preparation</b></p>
+                      <p>Lyophilized form of Bovine DNaseI was obtained from sigma aldrich (D2025-15KU). Resuspension and stock preparation was done as per the guidelines from the company:</p>
+                      <ol>
+                        <li>Lyophilized form which contains approximately 5 mg of DNaseI was resuspended in 0.15M NaCl solution making up to a concentration of 5mg/ml.</li>
+                        <li>Working concentrations were made by diluting it further in 0.15M NaCl or Media directly.</li>
+                        <li>Stock solution was stored in -20 ℃ to prevent degradation.</li>
+                      </ol>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <!-- 2. Competent Cells Preparation  -->
+            <section id="run1Section" class="scrollSection">
+              <div class="centerImage">
+                <div class="highlightYellow mediumText textShadow"><b>Competent Cells Preparation </b></div>
+              </div>
+              <div class="contentSection">
+                <div class="boxContent">
+                  <div class="collapsible">
+                    <header class="collapsible-header">
+                      <b>
+                        Introduction
+                        <div class="collapsibleToggler">+</div>
+                      </b>
+                    </header>
+                    <div class="collapsible-content">
+                      <p>Preparing competent cells of Ecoli KRX,BL21</p>
+                    </div>
+                  </div>
+                  <div class="collapsible">
+                    <header class="collapsible-header">
+                      <b>
+                        Materials
+                        <div class="collapsibleToggler">+</div>
+                      </b>
+                    </header>
+                    <div class="collapsible-content">
+                      <p class="subSection"><b>TFB-1(pH-5.1) for 30 ml</b></p>
+                      <blockquote>
+                        10 mM RbCl - 0.36 g <br />
+                        50 mM MnCl2 - 0.19 g <br />
+                        30 mM CH3COOH+ - 0.08 g <br />
+                        100 mM CaCl2 - 0.03 g <br />
+                        15 % glycerol - 4.5 ml <br />
+                      </blockquote>
+                      <p class="subSection"><b>TFB-2(pH-6.8) for 15 ml </b></p>
+                      <blockquote>
+                        10 mM MOPS -0.031 g <br />
+                        10 mM RbCl-0.012 g <br />
+                        15 mM CaCl2-0.124 g <br />
+                        15 % glycerol-2.25 ml <br />
+                      </blockquote>
+                    </div>
+                  </div>
+                  <div class="collapsible">
+                    <header class="collapsible-header">
+                      <b>
+                        Procedure
+                        <div class="collapsibleToggler">+</div>
+                      </b>
+                    </header>
+                    <div class="collapsible-content">
+                      <p class="subSection"><b>STEPS</b></p>
+                      <ol>
+                        <li>Pick a single colony of cell and inoculate in 10 ml of LB</li>
+                        <li>Grow it overnight at 37 ° C overnight by shaking</li>
+                        <li>Add 1 ml of overnight grown culture to 100 ml of pre warmed LB broth in 500 ml flask</li>
+                        <li>Shake on and grow at 37 ° C till the OD reached 0.5</li>
+                        <li>Cool the culture on ice for 5 min and then transfer culture to round bottom centrifuge tube(Falcon)</li>
+                        <li>Collect the cells by centrifugation(5 min,4000g) at 4° C</li>
+                        <li>Discard the supernatant and keep the cells on ice</li>
+                        <li>Resuspend the cells on a cold TFB-1 buffer(30 ml) and inoculate on ice for 90 min.</li>
+                        <li>Collect the cells by centrifugation(5 min,4000g, 4 ° C)</li>
+                        <li>Discard the supernatant and keep cells on ice.</li>
+                        <li>Resuspend the cells in 4 ml of ice cold TFB-2.</li>
+                        <li>Prepared 50 to 100 ml aliquots in 1.5 ml centrifuge tube</li>
+                        <li>keep all those tubes in -80°C.</li>
+                      </ol>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <!-- 3. Cloning’s Method  -->
+            <section id="run2Section" class="scrollSection">
+              <div class="centerImage">
+                <div class="highlightYellow mediumText textShadow"><b>Cloning’s Method </b></div>
+              </div>
+              <div class="contentSection">
+                <div class="boxContent">
+                  <div class="collapsible">
+                    <header class="collapsible-header">
+                      <b>
+                        Plasmid Miniprep
+                        <div class="collapsibleToggler">+</div>
+                      </b>
+                    </header>
+                    <div class="collapsible-content">
+                      <p><a href="https://benchling.com/s/prt-jXq3KGdv9zF9pV3Rdu5U">https://benchling.com/s/prt-jXq3KGdv9zF9pV3Rdu5U</a></p>
+                    </div>
+                  </div>
+                  <div class="collapsible">
+                    <header class="collapsible-header">
+                      <b>
+                        PCR Amplification
+                        <div class="collapsibleToggler">+</div>
+                      </b>
+                    </header>
+                    <div class="collapsible-content">
+                      <p><a href="https://benchling.com/s/prt-IYttDOXR7v1ti5zjxV7I">https://benchling.com/s/prt-IYttDOXR7v1ti5zjxV7I</a></p>
+                    </div>
+                  </div>
+                  <div class="collapsible">
+                    <header class="collapsible-header">
+                      <b>
+                        PCR Cleanup
+                        <div class="collapsibleToggler">+</div>
+                      </b>
+                    </header>
+                    <div class="collapsible-content">
+                      <p><a href="https://benchling.com/s/prt-HuCXRJMMWe891Ci1SltV">https://benchling.com/s/prt-HuCXRJMMWe891Ci1SltV</a></p>
+                    </div>
+                  </div>
+                  <div class="collapsible">
+                    <header class="collapsible-header">
+                      <b>
+                        Gel Extraction
+                        <div class="collapsibleToggler">+</div>
+                      </b>
+                    </header>
+                    <div class="collapsible-content">
+                      <p><a href="https://benchling.com/s/prt-aaec85DE3RcBg4iQxLHz">https://benchling.com/s/prt-aaec85DE3RcBg4iQxLHz</a></p>
+                    </div>
+                  </div>
+                  <div class="collapsible">
+                    <header class="collapsible-header">
+                      <b>
+                        Double Digestion
+                        <div class="collapsibleToggler">+</div>
+                      </b>
+                    </header>
+                    <div class="collapsible-content">
+                      <p><a href="https://benchling.com/s/prt-7zPmsYI7dKKEdr16lH3X">https://benchling.com/s/prt-7zPmsYI7dKKEdr16lH3X</a></p>
+                    </div>
+                  </div>
+                  <div class="collapsible">
+                    <header class="collapsible-header">
+                      <b>
+                        Gel electrophoresis
+                        <div class="collapsibleToggler">+</div>
+                      </b>
+                    </header>
+                    <div class="collapsible-content">
+                      <p><a href="https://benchling.com/s/prt-8N5qTzyZoyqNgIGCZs7a">https://benchling.com/s/prt-8N5qTzyZoyqNgIGCZs7a</a></p>
+                    </div>
+                  </div>
+                  <div class="collapsible">
+                    <header class="collapsible-header">
+                      <b>
+                        Ligation
+                        <div class="collapsibleToggler">+</div>
+                      </b>
+                    </header>
+                    <div class="collapsible-content">
+                      <ol>
+                        <li>
+                          <p>Set up the following reaction in a microcentrifuge tube on ice. (T4 DNA Ligase should be added last. The molar ratio of insert: plasmid is 3:1 in the below table .) We used <a class="referenceLinks" href="http://nebiocalculator.neb.com/#!/">NEBioCalculator</a> to calculate molar ratios.</p>
+                          <p>The table below is given for 20ul Reaction</p>
+                          <table>
+                            <tr>
+                              <th>Competent</th>
+                              <th></th>
+                            </tr>
+                            <tr>
+                              <td>T4 DNA Ligase Buffer (10X)(Should be thawed and resuspended in room temperature)</td>
+                              <td>2 μl</td>
+                            </tr>
+                            <tr>
+                              <td>Vector DNA (4 kb)</td>
+                              <td>50 ng (0.020 pmol)</td>
+                            </tr>
+                            <tr>
+                              <td>Insert DNA (1 kb)</td>
+                              <td>37.5 ng (0.060 pmol)</td>
+                            </tr>
+                            <tr>
+                              <td>Nuclease-free water</td>
+                              <td>to 20 μl</td>
+                            </tr>
+                            <tr>
+                              <td>T4 DNA Ligase</td>
+                              <td>1ul</td>
+                            </tr>
+                          </table>
+                        </li>
+                        <li>The reaction is gently mixed by pipetting up and down and microfuge briefly.</li>
+                        <li>For cohesive (sticky) ends, it is incubated at 16°C overnight.</li>
+                        <li>For blunt ends or single base overhangs, it is incubated at 16°C overnight.</li>
+                        <li>The mixture is heat-inactivated at 65°C for 10 minutes.</li>
+                        <li>The mixture is chilled on ice and transformed 1-5 μl of the reaction into 50 μl competent cells.</li>
+                      </ol>
+                    </div>
+                  </div>
+                  <div class="collapsible">
+                    <header class="collapsible-header">
+                      <b>
+                        Colony pcr
+                        <div class="collapsibleToggler">+</div>
+                      </b>
+                    </header>
+                    <div class="collapsible-content">
+                      <p><a href="https://benchling.com/s/prt-J42Df7DdnlCdRDWq6ofr">https://benchling.com/s/prt-J42Df7DdnlCdRDWq6ofr</a></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <!-- 4. HiFi DNA Assembly   -->
+            <section id="run3Section" class="scrollSection">
+              <div class="centerImage">
+                <div class="highlightYellow mediumText textShadow"><b>HiFi DNA Assembly </b></div>
+              </div>
+              <div class="contentSection">
+                <div class="boxContent">
+                  <p>We have assembled 4 fragments (including plasmid backbone) using NEB HiFi DNA Assembly kit. We have calculated the numbers of picomoles of each fragment using the <a class="referenceLinks" href="https://international.neb.com/external-links/nebiocalculator">NEBiocalculator</a>.</p>
+                  <p class="subSection"><b>Set Up the reaction mixture of 50 microliter</b></p>
+                  <table>
+                    <tr>
+                      <td>Recommended DNA Molar Ratio</td>
+                      <td>vector:insert = 1:1</td>
+                    </tr>
+                    <tr>
+                      <td>Total Amount of Fragments</td>
+                      <td>0.2–0.5 pmols** X μl</td>
+                    </tr>
+                    <tr>
+                      <td>NEBuilder HiFi DNA Assembly Master Mix</td>
+                      <td>10 μl</td>
+                    </tr>
+                    <tr>
+                      <td>Deionized H2O</td>
+                      <td>10-X μl</td>
+                    </tr>
+                    <tr>
+                      <th>Total Volume</th>
+                      <th>20 μl</th>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+            </section>
+            <!-- 5. Transformation Protocol   -->
+            <section id="run4Section" class="scrollSection">
+              <div class="centerImage">
+                <div class="highlightYellow mediumText textShadow"><b>Transformation Protocol </b></div>
+              </div>
+              <div class="contentSection">
+                <div class="boxContent">
+                  <p class="subSection"><b>Introduction</b></p>
+                  <p>Transfer of miniprep plasmids or Ligation mixture into Escherichia coli KRX or BL21</p>
+                  <p class="subSection"><b>Materials</b></p>
+                  <ul>
+                    <li>Ice</li>
+                    <li>Competent cells</li>
+                    <li>Ligation mixture or miniprep plasmids</li>
+                    <li>SOC media</li>
+                    <li>Hot water bath</li>
+                    <li>Incubator</li>
+                    <li>Timer</li>
+                    <li>Agar plates</li>
+                    <li>cell spreader</li>
+                    <li>Bunsen burner</li>
+                    <li>Laminar air flow hood</li>
+                  </ul>
+                  <p class="subSection"><b>Procedure</b></p>
+                  <p>The following steps are to be followed in order -</p>
+                  <ol>
+                    <li>Take out the competent cells (100μl/50μl) from -80°C storage and place in ice.</li>
+                    <li>Add ligation mixture (10μl) or miniprep Plasmids (1 or 2 μl) to the 100μl competent cells by pipetting. While pipetting make sure that the tip of the micropipette tips does not come in contact with the competent cells. Close the tube and mix them by gently tapping on the side of the tube.</li>
+                    <li>Keep the tube in ice from 30 mins.</li>
+                    <li>In the meantime switch on the hot water bath and set the temperature to 42°C and also keep the SOC media in the incubator at 37 °C.</li>
+                    <li>Place the tube in a floating rack and then heat shock it for 45 seconds at 42°C, use a timer for accurate measurements of time.</li>
+                    <li>Now put the tube immediately into ice and keep it for 5 mins.</li>
+                    <li>Then add SOC media to make up the volume to 1000μl and incubate it for 1.5 hours in shaking condition at 37°C.</li>
+                    <li>In the meantime keep the agar plates at room temperature.</li>
+                    <li>Post incubation takes 100 μl from the tube and then spreads it with a cell spreader. Then take the rest of the contents of the tube and centrifuge it at 10,000 x g for 3 mins, pour out the maximum supernatant and then mix the cell pellets with the leftover supernatant with a pipette and again spread it on another agar plate. Store the plate in an incubator at 37°C for 12-16 hours.</li>
+                  </ol>
+                </div>
+              </div>
+            </section>
+            <!-- 6. Quantitative Assays    -->
+            <section id="run5Section" class="scrollSection">
+              <div class="centerImage">
+                <div class="highlightYellow mediumText textShadow"><b>Quantitative Assays </b></div>
+              </div>
+              <div class="contentSection">
+                <div class="boxContent">
+                  <div class="collapsible">
+                    <header class="collapsible-header">
+                      <b>
+                        Plasmid Miniprep
+                        <div class="collapsibleToggler">+</div>
+                      </b>
+                    </header>
+                    <div class="collapsible-content">
+                      <p>Initially method of biofilm formation in 96 well plate was standardised by using different choices of media ,incubation conditions ,dilutions and incubation times.The following is the optimised protocol for maximum yield of biofilm:</p>
+                      <p><a href="https://benchling.com/s/prt-YNCdyxyfi1AgPzUeXA98">https://benchling.com/s/prt-YNCdyxyfi1AgPzUeXA98</a></p>
+                    </div>
+                  </div>
+                  <div class="collapsible">
+                    <header class="collapsible-header">
+                      <b>
+                        DNase1 Assay
+                        <div class="collapsibleToggler">+</div>
+                      </b>
+                    </header>
+                    <div class="collapsible-content">
+                      <p>The effect of DNaseI on biofilm of Pseudomonas aeruginosa is studied using 96 well microtiter experiments. To optimize the concentration of DNaseI required for treatment, the effect of a gradient of DNase I in the range of 0–50 µg/mL was studied. As a negative control for the experiment, uninoculated wells containing media and diluent were treated similarly and readings obtained were subtracted from the test readings. Positive control wells containing inoculated media without DNaseI were considered as “Control A595 nm”.The biofilm percentage reduction is then calculated as:</p>
+                      $$ BPR = \left( \frac{Control \ A595 nm - test \ A595 nm}{Control \ A595 nm} \right) \times 100 $$
+                      <p>Inorder to determine the optimum concentration and time for DNase I treatment,we did assay at two levels:</p>
+                      <ol>
+                        <li>
+                          <p class="subSection"><b>Pretreatment</b></p>
+                          <p>It was done to determine the optimum concentration of DNaseI which gives maximum degradation.</p>
+                          <ul>
+                            <li>A serial dilution of DNaseI (0-25 µg/ml) was prepared in NB media.</li>
+                            <li>Primary cultures were directly diluted to this media and added to 96 well plates as per the procedure mentioned in above protocol.</li>
+                            <li>
+                              The layout used is as follows:
+                              <div class="figures">
+                                <figure>
+                                  <img src="https://2021.igem.org/wiki/images/f/ff/T--IISER_Kolkata--image-Experiments-BioFilmlayout.png" alt="" />
+                                </figure>
+                              </div>
+                            </li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                          </ul>
+                        </li>
+                        <li></li>
+                      </ol>
+                    </div>
+                  </div>
                 </div>
               </div>
             </section>
@@ -316,6 +987,7 @@
     <!-- JS -->
     <!-- <script src="https://2021.igem.org/Template:IISER_Kolkata/js"></script> -->
     <script src="app.js"></script>
+    <script src="https://2021.igem.org/common/MathJax-2.5-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <!-- /JS -->
   </body>
 </html>
