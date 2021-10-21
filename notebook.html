@@ -162,6 +162,9 @@
               <!-- navigate in Page -->
               <ul>
                 <li><a id="run" class="scrollID" onclick="scrollToID('runSection')">Overview</a></li>
+                <li><a id="run1" class="scrollID" onclick="scrollToID('run1Section')">Wet Lab Notebook</a></li>
+                <li><a id="run2" class="scrollID" onclick="scrollToID('run2Section')">Human Practices Notebook</a></li>
+                <li><a id="run3" class="scrollID" onclick="scrollToID('run3Section')">Dry Lab Notebook</a></li>
               </ul>
             </div>
             <!-- /sideNav -->
@@ -174,7 +177,49 @@
               </div>
               <div class="contentSection">
                 <div class="boxContent">
-                  <p>Lorem ipsum dolor sit.</p>
+                  <p>All the notebooks were maintained in Benchling throughout the project.</p>
+                </div>
+              </div>
+            </section>
+            <!-- 1. Wet Lab Notebook -->
+            <section id="run1Section" class="scrollSection">
+              <div class="centerImage">
+                <div class="highlightYellow mediumText textShadow"><b>Wet Lab Notebook</b></div>
+              </div>
+              <div class="contentSection">
+                <div class="boxContent">
+                  <div>
+                    <iframe src="https://2021.igem.org/wiki/images/1/13/T--IISER_Kolkata--pdf-Notebook-WetLabWorkflowBenchling.pdf" class="pdf"> </iframe>
+                    <p class="pdfLink">If you can not view above PDF: <a class="referenceLinks" href="https://2021.igem.org/wiki/images/1/13/T--IISER_Kolkata--pdf-Notebook-WetLabWorkflowBenchling.pdf">DOWNLOAD PDF</a></p>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <!-- 2. Human Practice Notebook  -->
+            <section id="run2Section" class="scrollSection">
+              <div class="centerImage">
+                <div class="highlightYellow mediumText textShadow"><b>Human Practices Notebook</b></div>
+              </div>
+              <div class="contentSection">
+                <div class="boxContent">
+                  <div>
+                    <iframe src="https://2021.igem.org/wiki/images/b/b8/T--IISER_Kolkata--pdf-Notebook-HumanPracticeWorkflowBenchling.pdf" class="pdf"> </iframe>
+                    <p class="pdfLink">If you can not view above PDF: <a class="referenceLinks" href="https://2021.igem.org/wiki/images/b/b8/T--IISER_Kolkata--pdf-Notebook-HumanPracticeWorkflowBenchling.pdf">DOWNLOAD PDF</a></p>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <!-- 3. Dry Lab Notebook  -->
+            <section id="run3Section" class="scrollSection">
+              <div class="centerImage">
+                <div class="highlightYellow mediumText textShadow"><b>Dry Lab Notebook</b></div>
+              </div>
+              <div class="contentSection">
+                <div class="boxContent">
+                  <div>
+                    <iframe src="https://2021.igem.org/wiki/images/4/47/T--IISER_Kolkata--pdf-Notebook-DryLabWorkflowBenchling.pdf" class="pdf"> </iframe>
+                    <p class="pdfLink">If you can not view above PDF: <a class="referenceLinks" href="https://2021.igem.org/wiki/images/4/47/T--IISER_Kolkata--pdf-Notebook-DryLabWorkflowBenchling.pdf">DOWNLOAD PDF</a></p>
+                  </div>
                 </div>
               </div>
             </section>
@@ -182,17 +227,6 @@
         </div>
       </div>
       <!-- /content -->
-
-      <!-- reference -->
-      <section class="reference">
-        <div class="wave topWave">
-          <!-- Top Wave  -->
-        </div>
-        <div class="indentContainer">
-          <h3>References</h3>
-        </div>
-      </section>
-      <!-- /reference -->
 
       <!-- footer -->
       <footer>
@@ -282,34 +316,6 @@
       }
     </script>
     <!-- /hide on scroll -->
-
-    <!-- script for collapsibles -->
-    <script>
-      var collapsibles = document.querySelectorAll(".collapsible");
-
-      function removeCollapsibleExpanded(notRemove) {
-        collapsibles.forEach((collD) => {
-          if (collD != notRemove) {
-            collD.classList.remove("collapsible--expanded");
-            collD.querySelector(".collapsibleToggler").innerHTML = "+";
-          }
-        });
-      }
-
-      collapsibles.forEach((coll) =>
-        coll.querySelector(".collapsible-header").addEventListener("click", function () {
-          removeCollapsibleExpanded(coll);
-          coll.classList.toggle("collapsible--expanded");
-
-          if (coll.querySelector(".collapsibleToggler").innerHTML == "+") {
-            coll.querySelector(".collapsibleToggler").innerHTML = "-";
-          } else {
-            coll.querySelector(".collapsibleToggler").innerHTML = "+";
-          }
-        })
-      );
-    </script>
-    <!-- /script for collapsibles -->
 
     <!-- /IISER KOLKATA CONTAINER -->
 
