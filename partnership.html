@@ -161,20 +161,66 @@
             <div class="sideNav sticky">
               <!-- navigate in Page -->
               <ul>
-                <li><a id="run" class="scrollID" onclick="scrollToID('runSection')">Overview</a></li>
+                <li><a id="run" class="scrollID" onclick="scrollToID('runSection')">UCSC Drylab </a></li>
+                <li><a id="run1" class="scrollID" onclick="scrollToID('run1Section')">Tuebingen</a></li>
               </ul>
             </div>
             <!-- /sideNav -->
           </div>
           <div>
-            <!-- Overview -->
+            <!-- 1. UCSC Drylab -->
             <section id="runSection" class="scrollSection">
               <div class="centerImage">
-                <div class="highlightYellow mediumText textShadow"><b>overview</b></div>
+                <div class="highlightYellow mediumText textShadow"><b>UCSC Drylab </b></div>
               </div>
               <div class="contentSection">
                 <div class="boxContent">
-                  <p>Lorem ipsum dolor sit.</p>
+                  <div class="figures">
+                    <figure style="width: 80%;"><img src="https://2021.igem.org/wiki/images/a/a8/T--IISER_Kolkata--image-Partnership-UCSC.png" alt="Partnership-UCSC.png" /></figure>
+                  </div>
+                  <p class="subSection"><b>About Team UCSC’s project </b></p>
+                  <p></p>
+
+                  <p class="subSection"><b>The Beginnings </b></p>
+                  <p>We got in touch with team UCSC over Instagram and the motivation of approaching each other the similarities of our project based on their respective links to antimicrobial resistance. Despite the staggering 12 hours of time difference, we were able to have several meetings over the course of our iGEM endeavour and furthered ur partnership.</p>
+                  <p>The initial goal of the dry-lab component of the partnership was to help iGEM Team UCSC make a population dynamics model delineate the following aspects of their probiotic before they could arrive at the trials phase.</p>
+                  <ul>
+                    <li>Timescales of action of probiotic</li>
+                    <li>Delineating the spread of the probiotic population in the presence of other competing factors</li>
+                    <li>Optimisation of parameters relevant to the population dynamics</li>
+                  </ul>
+                  <p>The Initial model proposed by the UCSC team was a fork of the standard susceptible-exposed-infectious-recovered (SEIR) model.</p>
+
+                  <p class="subSection"><b>Initial modelling efforts </b></p>
+                  <p>When the team walked us through the model goals, we suggested a few modifications to the model that would make the model more akin to a real-world scenario involving stochastic fluctuations and competition between participating elements. In order to add stochasticity to the model, we suggested team UCSC incorporate aspects of the Lotka-Volterra model in the components under direct competition. We also tried to simulate using kinetic Monte Carlo (KMC) in Simulink to further this idea.</p>
+                  <p>We commented that the phase population should have a degradation coefficient for long time scale dynamics. We also pointed out that the probability of individuals that acquired plasmid through bacterial conjugation, moving from the susceptible to the infected group, would be very low and marginal compared to other coefficients in the system.</p>
+                  <p>Taking cues from these pointers, we established a carrying capacity for the system and incorporated a death coefficient to the phage population. Using the KMC simulation, we were very able to visualise a simplistic system with and without stochasticity introduced due to the Lotka-Volterra implementation. However, we ultimately decided to do away with stochasticity in the model and went ahead with a deterministic system.</p>
+                  <p>The parameter set for simulating or model was extensive, and the range of values was exceedingly wide. For example, the conjugation rates were spanning over 11 orders of magnitude, creating a sensitivity issue for any stochastic model when it came to scaling for different systems. In light of the same decided to model Progenie using a series of deterministic ordinary differential equations and not have stochastic interactions.</p>
+                  <div class="figures">
+                    <figure style="width: 95%;">
+                      <img src="https://2021.igem.org/wiki/images/6/6d/T--IISER_Kolkata--image-Partnership-UCSCpopulationDynamic.png" alt="Partnership-UCSCpopulationDynamic.png" />
+                      <figcaption>UCSC population dynamics model: Before (left) and after (right) initial modifications</figcaption>
+                    </figure>
+                  </div>
+
+                  <p class="subSection"><b>Drawing inferences </b></p>
+                  <p>Once we had a model established, we were able to simulate it in python. We suggested team UCSC iterate the model over an array of conjugation rates to perform a kind of sensitivity analysis. This is especially important as the conjugation rates for the system has close to 11 orders of magnitude difference between the lowest and highest rates. The results of this sensitivity analysis were rather exciting and helped us determine optimised parameters.</p>
+                  <p>We are extremely thankful to team Tuebingen for their incessant support and insights into our project and also for the friendships that evolved from this.</p>
+                </div>
+              </div>
+            </section>
+            <!-- 2. Tuebingen -->
+            <section id="run1Section" class="scrollSection">
+              <div class="centerImage">
+                <div class="highlightYellow mediumText textShadow"><b>Tuebingen</b></div>
+              </div>
+              <div class="contentSection">
+                <div class="boxContent">
+                  <p>We got in touch with the iGEM Tuebingen team over Instagram and we were excited to explore their project as it was based on anti-microbial cyclotides and since we were also working on antimicrobial peptides. Throughout several meetings we got to learn about each other’s projects, and by that, how we could help each other out. Throughout several meetings for planning and designing of the models and simulations, it became obvious that what in the beginning was planned as a short collaboration developed into a partnership with mutual contributions of expertise and time from both teams.</p>
+                  <p>Team Tuebingen had set out to use molecular dynamics simulations to explore the efficacy of their cyclotide molecules as antimicrobial agents. They had already selected prospective cyclotide candidates through bioinformatics exploration of sequence databases. The IISER Kolkata team was also looking into performing molecular dynamics simulations to explore the dynamics of our antimicrobial peptide (Nisins). However, we were lacking adequate computational resources to carry out simulations of large systems. Team Tubinge offered to help out with providing computational resources via the Binac supercomputing cluster.</p>
+                  <p>We helped team Tuebingen set up their membrane protein assemblies for molecular dynamics simulations. TeamIISER Kolkata had initially not planned to perform simulations of Nisin with membrane systems, however, Team Tuebingen suggested that it would be rather interesting to see how our antimicrobial peptides interacted. We are glad that we heeded this and went ahead with simulating Nisgs with model bacterial membranes as we gained spectacular insights from this exercise (as mentioned in the Membrane Protein Interaction section of our Molecular model.</p>
+                  <p>In the end, we also discussed methods to analyse the simulation trajectories and derive relevant information from the same.</p>
+                  <p>We are extremely thankful to team Tuebingen for their incessant support and insights into our project and also for the friendships that evolved from this.</p>
                 </div>
               </div>
             </section>
@@ -182,17 +228,6 @@
         </div>
       </div>
       <!-- /content -->
-
-      <!-- reference -->
-      <section class="reference">
-        <div class="wave topWave">
-          <!-- Top Wave  -->
-        </div>
-        <div class="indentContainer">
-          <h3>References</h3>
-        </div>
-      </section>
-      <!-- /reference -->
 
       <!-- footer -->
       <footer>
