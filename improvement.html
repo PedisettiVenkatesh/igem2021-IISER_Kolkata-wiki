@@ -161,7 +161,10 @@
             <div class="sideNav sticky">
               <!-- navigate in Page -->
               <ul>
-                <li><a id="run" class="scrollID" onclick="scrollToID('runSection')">Overview</a></li>
+                <li><a id="run" class="scrollID" onclick="scrollToID('runSection')">Bidirectional AIP-1 sensor </a></li>
+                <li><a id="run1" class="scrollID" onclick="scrollToID('run1Section')">Usage and Biology </a></li>
+                <li><a id="run2" class="scrollID" onclick="scrollToID('run2Section')"> Design </a></li>
+                <li><a id="run3" class="scrollID" onclick="scrollToID('run3Section')"> Characterization </a></li>
               </ul>
             </div>
             <!-- /sideNav -->
@@ -170,11 +173,100 @@
             <!-- Overview -->
             <section id="runSection" class="scrollSection">
               <div class="centerImage">
-                <div class="highlightYellow mediumText textShadow"><b>overview</b></div>
+                <div class="highlightYellow mediumText textShadow"><b>Bidirectional AIP-1 sensor </b></div>
               </div>
               <div class="contentSection">
                 <div class="boxContent">
-                  <p>Lorem ipsum dolor sit.</p>
+                  <p>This is an improvement of the existing part <a class="referenceLinks" href="http://parts.igem.org/Part:BBa_K1022100">BBa_K1022100</a> , by flipping the direction of p2 promoter to the opposite direction of pBAD promoter.</p>
+                </div>
+              </div>
+            </section>
+            <!-- Overview -->
+            <section id="run1Section" class="scrollSection">
+              <div class="centerImage">
+                <div class="highlightYellow mediumText textShadow"><b>Usage and Biology </b></div>
+              </div>
+              <div class="contentSection">
+                <div class="boxContent">
+                  <p>This is a high throughput sensing module that can sense the presence of AIP-I molecules. This part consists of a pBAD promoter, an AIP sensor infrastructure (BBa_I746101), an AIP inducible promoter P2 and a GFP reporter.</p>
+                  <p>In the natural system, the signalling Auto-inducing peptide (termed AIP) is made from AgrD, while AgrB, a transmembrane protein that is responsible for the cyclization. AgrC and AgrA, form the two-component system responsible for AIP detection and response relay, respectively. Upon binding to AIP, AgrC, a transmembrane histidine kinase receptor, facilitates the phosphorylation of the transcriptional activator AgrA. The phosphorylated AgrA, in turn, activates gene expression regulated by P2 and P3 promoters. There are four known variants of AIP (AIP I-IV) with different molecular structures and cross-inhibitory activity.</p>
+                  <p>This part has been improved from <a class="referenceLinks" href="http://parts.igem.org/Part:BBa_K1022100">BBa_K1022100</a> by flipping the direction of p2 promoter to the opposite direction of pBAD promoter.</p>
+                  <p>In the existing part (<b>Unidirectional circuit</b>), we observed a significant increase in GFP expression in samples with zero AIP concentration. Based on this observation, we inferred that this could be due to the leaky gene expression of GFP. We have improved the existing part in such a way that the leaky gene expression reduced significantly.</p>
+                </div>
+              </div>
+            </section>
+            <!-- Overview -->
+            <section id="run2Section" class="scrollSection">
+              <div class="centerImage">
+                <div class="highlightYellow mediumText textShadow"><b>Design </b></div>
+              </div>
+              <div class="contentSection">
+                <div class="boxContent">
+                  <p>To solve the leaky gene expression we designed a <b>bidirectional circuit</b>. We Used a Hi-Fi DNA assembly kit to make this bidirectional circuit. First, we divided the existing part (BBa_K1022100) into three segments and ordered those from Twist Bioscience. These three fragments were assembled in two different ways to produce the existing part as well as our designed improved part. For these assemblies, we designed two different sets of primers (a total of eight primers) using the NEBuilder tool. We extended our three gene fragments with appropriate primers to produce overlap sequences at both ends of each fragment.</p>
+                  <p>To make the improved part, we designed the overlap sequences in such a way that the p2 promoter along with the GFP reporter is flipped. This will make the direction of pBAD promoter and P2 promoter opposite to each other, which will significantly decrease the leaky gene expression of the GFP reporter.</p>
+                </div>
+              </div>
+            </section>
+            <!-- Overview -->
+            <section id="run3Section" class="scrollSection">
+              <div class="centerImage">
+                <div class="highlightYellow mediumText textShadow"><b>Characterization </b></div>
+              </div>
+              <div class="contentSection">
+                <div class="boxContent">
+                  <p>First, we PCR extended the three segments (pBAD-agrC, P2-GFP,agrA,) of the unidirectional circuit with specific primers. We did an Agarose Gel Electrophoresis to confirm if the PCR extension was successful or not. As we can see from the below picture, we got the correct amplified bands for all three segments. (Extended pBAD-agrC ~ 1.4 Kb, Extended P2-GFP ~ 1Kb, Extended agrA ~ 800bp and extended backbone~2kb.</p>
+                  <div class="figures">
+                    <figure>
+                      <img src="http://parts.igem.org/wiki/images/4/45/T--IISER_Kolkata--uni_colony_pcr.jpg" alt="" />
+                      <figcaption>PCR extension of pBAD-agrC,P2-GFP,agrA for unidirectional assembly</figcaption>
+                    </figure>
+                    <figure>
+                      <img src="http://parts.igem.org/wiki/images/6/6d/T--IISER_Kolkata--psb1c3.jpeg" alt="" />
+                      <figcaption>PCR extension of psb1C3 for unidirectional assembly</figcaption>
+                    </figure>
+                  </div>
+                  <p>Next, We extend the same three segments (pBAD-agrC, P2-GFP, agrA, and psb1C3 plasmid backbone) with different sets of specific primers. This extended overlap helps flip the P2-GFP fragments. We can see the gel electrophoresis image below. We can observe similar band sizes as above because the difference in length of the extension is very low.</p>
+                  <div class="figures">
+                    <figure>
+                      <img src="http://parts.igem.org/wiki/images/4/44/T--IISER_Kolkata--bidi_extension.jpg" alt="" />
+                      <figcaption>PCR extension of pBAD-agrC,P2-GFP,agrA for bidirectional assembly</figcaption>
+                    </figure>
+                    <figure>
+                      <img src="http://parts.igem.org/wiki/images/9/9a/T--IISER_Kolkata--AgrA_extension.jpg" alt="" />
+                      <figcaption>PCR extention of agrA segment</figcaption>
+                    </figure>
+                  </div>
+                  <p>After the successful extension of the segments, we assembled those extended fragments using Hi-Fi DNA assembly master mix. Then we directly transformed that mix. After that, we performed colony PCR of both the unidirectional and bidirectional circuit using VF2 and VR to check whether we perfectly assemble the gene fragments.</p>
+                  <p>From the colony PCR result, We can observe that we got positive inserts for both unidirectional and bidirectional assemblies.</p>
+                  <div class="figures">
+                    <figure>
+                      <img src="http://parts.igem.org/wiki/images/0/0e/T--IISER_Kolkata--uni_pcr_colony.jpg" alt="" />
+                      <figcaption>Colony PCR result of unidirectional assembly with VF2 and VR</figcaption>
+                    </figure>
+                    <figure>
+                      <img src="http://parts.igem.org/wiki/images/0/09/T--IISER_Kolkata--bidicolonypcr.jpg" alt="" />
+                      <figcaption>Colony PCR result of bidirectional assembly with VF2 and VR</figcaption>
+                    </figure>
+                  </div>
+                  <p>After the successful assembling of both the fragments, we planned to see the expression level of GFP in both bidirectional and unidirectional circuits. For that, we first expressed the AIP-1 generator (BBa_K3799006) in 40ml of bacterial culture to obtain AIP-1 molecules. After expressing for 8-10 hours, We centrifuged the culture and filter sterilized the supernatant. To concentrate AIP-1 molecules, We further lyophilized the supernatant. After full lyophilization, we resuspended it in 3 ml of NFW to make a stock solution of AIP1.</p>
+                  <p>We diluted our stock solution of AIP-1 molecules to make solutions of different concentrations, from 0% to 100%, where 0% is the negative control and 100% is the one-third dilution of our stock solution.</p>
+                  <p>We incubated the two types of cells(one with unidirectional plasmid and the other with bidirectional plasmid) at 30℃ for 8 hours without AIP-1.</p>
+                  <p>We measured the fluorescence intensity of those two types of cells in absence of AIP-1 molecules at different time points and we observed that there is a higher fluorescence intensity in cells with unidirectional circuits as compared to the cells with bidirectional circuits. This infers that the bidirectional circuit has less leaky gene expression than that of the unidirectional circuit.</p>
+                  <div class="figures">
+                    <figure>
+                      <img src="http://parts.igem.org/wiki/images/0/07/IISER_Kolkata--Bi-Intensity_vs_time.jpeg" alt="" />
+                      <figcaption>Fluorescence assay of bidirectional and unidirectional circuits without AIP-1 vs Time</figcaption>
+                    </figure>
+                  </div>
+                  <p>We also wanted to check whether this difference in leaky gene expression is consistent with different concentrations of AIP-1.</p>
+                  <p>To check this, we induced our two types of cells (one with unidirectional plasmid and the other with bidirectional plasmid) with different concentrations of the AIP-1 solution that we mentioned above. From our data, we infer that this leaky gene expression of the unidirectional circuit is consistent in different concentrations of AIP-1 molecules. Also, we can observe a slight decrease in the gap of expression of GFP as the concentration of AIP-1 increases. This may be because of the fact that the ratio of leaky gene expression and the AIP-1 induced expression decreases as the AIP-1 concentration increases.</p>
+                  <div class="figures">
+                    <figure>
+                      <img src="http://parts.igem.org/wiki/images/9/93/IISER_Kolkata--Bi-Intensity_vs_conc.jpeg" alt="" />
+                      <figcaption>Fluorescence assay of bidirectional and unidirectional circuits at different concentrations of AIP-1 at 5hrs</figcaption>
+                    </figure>
+                  </div>
+                  <p><b>Final Comments:</b>Thus we can conclude that our new part <a class="referenceLinks" href="http://parts.igem.org/Part:BBa_K3799057">BBa_K3799057</a> is indeed an improvement of the existing part <a class="referenceLinks" href="http://parts.igem.org/Part:BBa_K1022100">BBa_K1022100</a> in significantly decreasing the leaky gene expression under the P2 promoter</p>
                 </div>
               </div>
             </section>
@@ -182,17 +274,6 @@
         </div>
       </div>
       <!-- /content -->
-
-      <!-- reference -->
-      <section class="reference">
-        <div class="wave topWave">
-          <!-- Top Wave  -->
-        </div>
-        <div class="indentContainer">
-          <h3>References</h3>
-        </div>
-      </section>
-      <!-- /reference -->
 
       <!-- footer -->
       <footer>
@@ -282,34 +363,6 @@
       }
     </script>
     <!-- /hide on scroll -->
-
-    <!-- script for collapsibles -->
-    <script>
-      var collapsibles = document.querySelectorAll(".collapsible");
-
-      function removeCollapsibleExpanded(notRemove) {
-        collapsibles.forEach((collD) => {
-          if (collD != notRemove) {
-            collD.classList.remove("collapsible--expanded");
-            collD.querySelector(".collapsibleToggler").innerHTML = "+";
-          }
-        });
-      }
-
-      collapsibles.forEach((coll) =>
-        coll.querySelector(".collapsible-header").addEventListener("click", function () {
-          removeCollapsibleExpanded(coll);
-          coll.classList.toggle("collapsible--expanded");
-
-          if (coll.querySelector(".collapsibleToggler").innerHTML == "+") {
-            coll.querySelector(".collapsibleToggler").innerHTML = "-";
-          } else {
-            coll.querySelector(".collapsibleToggler").innerHTML = "+";
-          }
-        })
-      );
-    </script>
-    <!-- /script for collapsibles -->
 
     <!-- /IISER KOLKATA CONTAINER -->
 

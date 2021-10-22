@@ -162,6 +162,10 @@
               <!-- navigate in Page -->
               <ul>
                 <li><a id="run" class="scrollID" onclick="scrollToID('runSection')">Overview</a></li>
+                <li><a id="run1" class="scrollID" onclick="scrollToID('run1Section')">DNaseI biofilm assay</a></li>
+                <li><a id="run2" class="scrollID" onclick="scrollToID('run2Section')">The AIP producer</a></li>
+                <li><a id="run3" class="scrollID" onclick="scrollToID('run3Section')">The improved AIP sensor</a></li>
+                <li><a id="run4" class="scrollID" onclick="scrollToID('run4Section')">Characterization of LwaCas13a</a></li>
               </ul>
             </div>
             <!-- /sideNav -->
@@ -174,7 +178,238 @@
               </div>
               <div class="contentSection">
                 <div class="boxContent">
-                  <p>Lorem ipsum dolor sit.</p>
+                  <p>Due to unexpected changes in plan during COVID-19,our team arrived in campus to access lab facilities only by August.It took another one month for us to procure all requirements.So,we as a team focussed primarily on the treatment part of our project as it was the best option to yield successful results within the limited amount of time that we got for lab work .</p>
+                  <p>Developing an antibiotic-free system for curing bovine mastitis was accomplished by incorporating a combination of Nisin PV and DNaseI under the regulation of AIP-I regulated quorum-sensing unit consisting of AgrC-AgrA signaling components.Inorder to develop of therapeutic system to its final form,we have to estimate and characterize each component in the genetic circuit.</p>
+                  <p>With proper planning and hardwork,,we successfully cloned and characterized the following proteins involved in our antibiotic-free treatment method within a time span of one month.All these results were accompanied with a series of trial and error and troubleshooting as well.</p>
+                </div>
+              </div>
+            </section>
+            <!-- 1. DNaseI biofilm assay -->
+            <section id="run1Section" class="scrollSection">
+              <div class="centerImage">
+                <div class="highlightYellow mediumText textShadow"><b>DNaseI biofilm assay</b></div>
+              </div>
+              <div class="contentSection">
+                <div class="boxContent">
+                  <p>Our aim is to genetically modify E Coli to produce bovine pancreatic DNaseI.The use of DNaseI as a molecule to degrade bacterial biofilm and hence favor the activity of antimicrobial peptides is well established in the literature.It particularly targets the extracellular matrix DNA in biofilm hence destabilizing it and exposing the bacteria to external factors.Here we intended to capture this role of DNaseI by showing its biofilm degrading activity.</p>
+                  <p class="subSection"><b>Cloning and expression</b></p>
+                  <p>Initially, gene fragment of DNaseI coding sequence with biobrick prefix and suffix which was synthetically obtained from Twistbioscience was amplified using Routine PCR using biobrick specific primers. This was then ligated into linearized plasmid backbone of PSB1C3 after restriction digestion by EcoRI and PstI following normal biobrick assembly.E Coli DH5ɑ was transformed and further verified using colony PCR using sequencing primers.The size of gene fragment after amplifying with sequencing primer was simulated as 1161 bp using Snapgene insilico PCR simulator.</p>
+                  <div class="figures">
+                    <figure style="width: 85%;">
+                      <img src="http://parts.igem.org/wiki/images/5/5f/BBa_K3799002--cPCR.jpeg" alt="BBa_K3799002--cPCR.jpeg" />
+                      <figcaption>Colony PCR result of DnaseI coding sequence.A size of 1161 bp was calculated using Snapgene insilico PCR</figcaption>
+                    </figure>
+                  </div>
+                  <p>For expressing the protein in Ecoli BL21, we cloned a composite part of DNaseI which consists of IPTG inducible Plac promoter(R0010) along with strong RBS(B0034) and double terminator(B0015). This part was obtained synthetically from Twistbioscience. Gene fragment was amplified by Routine PCR using biobrick specific primers and then ligated to linearized plasmid backbone of PSB1C3 following normal biobrick assembly. Double digestion by EcoRI and PstI was done using optimized protocols for double digestion. Ecoli DH5ɑ was initially transformed and transformants were screened and verified using colony PCR using sequencing primers. Snapgene in silicon PCR simulator was used to determine the size of gene fragments after colony PCR.</p>
+                  <div class="figures">
+                    <figure style="width: 30%;">
+                      <img src="http://parts.igem.org/wiki/images/f/f0/IISER_Kolkata--composite.jpeg" alt="IISER_Kolkata--composite.jpeg" />
+                    </figure>
+                    <figure style="width: 70%;">
+                      <img src="http://parts.igem.org/wiki/images/d/d7/IISER_Kolkata--cPCR-DNASE_COMP.jpeg" alt="IISER_Kolkata--cPCR-DNASE_COMP.jpeg" />
+                    </figure>
+                    <figcaption>Colony PCR result of DnaseI composite part gave succesful result.A size of 1512 bp was calculated using Snapgene insilico PCR</figcaption>
+                  </div>
+                  <p>Further,we extracted the plasmid from transformed colonies and transformed Ecoli BL21 for expressing protein.However due to COVID-19 restrictions,we did not get enough time to achieve our complete goaluptoprotein purification.So for further characterization,we used industrially prepared bovine pancreatic DNaseI(D2025).</p>
+                  <p class="subSection"><b>Characterization </b></p>
+                  <ol>
+                    <li>
+                      <p>
+                        <b>Standardisation of biofilm assay</b><br />
+                        Characterization of DNaseI was carried out by performing the standard Biofilm assay in 96 well plate as per previously established protocols.As Pseudomonas aeruginosa was easily available in our laboratory and protocols for developing their biofilm was previously well established,we choose to use them for growing biofilm.We had to standardize the protocol by varying experimental conditions at determine the conditions for maximum yield of biofilm before starting DNaseI treatment.We varied media type,dilution and days of incubation in our experiments.
+                      </p>
+                      <p>From a literature survey,we found a number of media that suits for biofilm growth which includes Luria broth(LB),Nutrient broth(NB) and Tryptone soytone broth(TSB).We initially grew bacterial biofilm without DNase in different media for different days of incubations(24 hrs and 72 hrs) to determine the incubation time for maximum growth of biofilm in 96 well plates at 37 ℃.It was observed that biofilm yield after 24 hrs of incubation is 84.3% lesser in LB,89.2% lesser in NB and 87.6 % lesser in TSB media.Also biofilm yieldin NB media was maximum showing a variation of 44.4% higher than LB and and 59.5% higher than TSB.</p>
+                      <div class="figures">
+                        <figure style="width: 70%;">
+                          <img src="http://parts.igem.org/wiki/images/b/be/IISER_Kolkata--day.jpeg" alt="IISER_Kolkata--day.jpeg" />
+                          <figcaption>Biofilm quantification for varying media and incubation time</figcaption>
+                        </figure>
+                      </div>
+                      <p>We also studied the variation in biofilm yield for two different dilutions of secondary culture provided in 96 well plate.Optical density of primary culture was diluted to 0.1 and 0.05 OD in fresh medium before adding to 96 well plate.This was then incubated for optimum incubation time of 72 hours as per previous experiment.Varying media was used here to serif there is any combined effect of media choice and dilution on biofilm yield.It was observed that at 0.05 OD,biofilm yield was about 45 % lesser in LB media,50.4% lesser in NB media and 50.1% lesser in TSB media.Also,NB media gave about 38.3% and 59.3 % higher yield of biofilm compared to LB and TSB media respectively.</p>
+                      <div class="figires">
+                        <figure style="width: 75%;">
+                          <img src="http://parts.igem.org/wiki/images/9/92/IISER_Kolkata--dilution.jpeg" alt="IISER_Kolkata--dilution.jpeg" />
+                          <figcaption>Biofilm quantification for varying media and dilution</figcaption>
+                        </figure>
+                      </div>
+                      <p>To sum up,we standardised the biofilm assay in 96 well plate by choosing NB media for bacterial growth,dilution of 0.1 and 72 hr incubation for maximum yield of biofilm.</p>
+                    </li>
+                    <li>
+                      <p>
+                        <b>DNaseI -Biofilm assay </b>
+                        Next,we used the standardardised protocol for developing pseudomonas biofilm and checking the effect of DNase I on it.DNaseI activity was assessed in two stages to determine the optimum incubation time and concentration of DNaseI required to attain maximum degradation of bacterial biofilm.Degradation rate was estimated by comparing it in terms of Biofilm percentage reduction(BPR) which is given by:
+                      </p>
+                      $$ BPR = \left( \frac{Control \ A595 nm - test \ A595 nm}{Control \ A595 nm} \right) \times 100 $$
+                      <ul>
+                        <li>
+                          <p>
+                            <b>Pre treatment of bacterial biofilm with DNaseI </b><br />
+                            Here,we pre incubated developing bacterial biofilm with different concentrations of DNaseI for 72 hrs.Absorbance of biofilm solution was calculated following crystal violet treatment and BPR calculated.It was observed that a concentration of 10 µg/ml gave maximum degradation.BPR did not further increase with increasing concentration.
+                          </p>
+                          <div class="figures">
+                            <figure style="width: 75%;">
+                              <img src="http://parts.igem.org/wiki/images/f/f0/BBa_K3799003--pre.jpeg" alt="BBa_K3799003--pre.jpeg" />
+                              <figcaption>Biofilm percentage reduction under varying concentration of DNaseI</figcaption>
+                            </figure>
+                          </div>
+                        </li>
+                        <li>
+                          <p>
+                            <b>Post treatment of predeveloped biofilm with DNaseI </b><br />
+                            Bacterial Biofilm was allowed to to develop for 72 hrs in 96 well plate.Bacterial colonies were removed and then further treated with media containing 10 µg/ml of DNaseI.It was incubated for different time points and Biofilm percentage reduction was determined after measuring absorbance.After 40 min of incubation,BPR was recorded to be maximum.
+                          </p>
+                          <div class="figures">
+                            <figure style="width: 75%;">
+                              <img src="http://parts.igem.org/wiki/images/4/4c/BBa_K3799003--post.jpeg" alt="BBa_K3799003--post.jpeg" />
+                              <figcaption>Biofilm percentage reduction by DNaseI for different incubation time</figcaption>
+                            </figure>
+                          </div>
+                        </li>
+                      </ul>
+                    </li>
+                  </ol>
+                  <p class="subSection"><b>Discussion</b></p>
+                  <p>DNaseI can effectively eradicate bacterial biofilm and hence increase susceptibility of bacteria to external agents.</p>
+                </div>
+              </div>
+            </section>
+            <!-- 2. The AIP producer -->
+            <section id="run2Section" class="scrollSection">
+              <div class="centerImage">
+                <div class="highlightYellow mediumText textShadow"><b>The AIP producer</b></div>
+              </div>
+              <div class="contentSection">
+                <div class="boxContent">
+                  <p>The quorum sensing molecule of S aureus ,AIP-1 regulates the activity of P2 and P3 promoter.We wanted to produce AIP-1 to characterize and study the activity of the improved AIP sensor that we created.</p>
+                  <p class="subSection"><b>Cloning and characterization </b></p>
+                  <p>For this we cloned the AIP-1 producer( I746001) with IPTG inducible pLac promoter(R0010).The plasmids for each of the genes were obtained from iGEM kit and amplified separately in DH5α cells.It was further digested following normal biobrick assembly.</p>
+                  <div class="figures">
+                    <figure>
+                      <img src="http://parts.igem.org/wiki/images/b/ba/IISER_Kolkata--digestedplac.jpg" alt="IISER_Kolkata--digestedplac.jpg" />
+                      <figcaption>Double Digested Plac + plasmid backbone, and double digested agrBD</figcaption>
+                    </figure>
+                  </div>
+                  <p>The digested DNA fragments were purified , ligated and transformed into E.Coli DH5α Colony PCR was performed to identify the colony containing our desired gene circuit.</p>
+                  <div class="figures">
+                    <figure style="width: 85%;">
+                      <img src="http://parts.igem.org/wiki/images/b/ba/IISER_Kolkata--plac_agrbd_colonypcr02.jpg" alt="IISER_Kolkata--plac_agrbd_colonypcr02.jpg" />
+                      <figcaption>Colony PCR of insert(plac+agrBD)</figcaption>
+                    </figure>
+                  </div>
+                  <p>Plasmid from desired colonies were further isolated and transformed to BL21 cells for expressing.Transformed BL21 was cultured in LB media at 37℃ till 0.6 OD (600 nm) was reached. Protein expression was induced with IPTG. Protein expression was allowed for 10 hours at 30℃. The bacterial cells were pellet down and the supernatant containing AIP molecule was filter-sterilised. The supernatant was lyophilised to increase the concentration of the protein content.</p>
+                  <p class="subSection"><b>Characterization </b></p>
+                  <p>The presence of AIP-I in transformants were verified by checking GFP intensity produced by P2 promoter in the AIP inducible GFP reporter gene circuit. P2 promoter is initially activated by AgrA which requires phosphorylation from AgrC.AgrC is activated in the presence of AIP-I.</p>
+                  <p class="subSection"><b>Verifying presence of protein </b></p>
+                  <p>Initially,E.Coli BL21 expression vector containing plasmid having AIP receiver- agrA and agrC system downstream to the pBAD promoter, and GFP under the AIP inducible P2 promoter was obtained. These bacterial cells were cultured in 2 different conical flasks containing LB media with Chloramphenicol. The culture was incubated at 37 ℃ till the OD 0.6 (600 nm). The AIP molecules were resuspended by adding nuclease-free water. AIP-I was given in one flask, while the AIP-I molecule was not added in the second flask. The GFP expression was quantified by measuring the fluorescence of the GFP using a fluorometer at time zero. Further, the samples were incubated at 30℃ for another 5 hours. Then the fluorescence of the sample was checked for every hour from hour 05 to 10 hours.</p>
+                  <div class="figures">
+                    <figure style="width: 75%;">
+                      <img src="http://parts.igem.org/wiki/images/d/dd/IISER_Kolkata--Agrca-Intensity_vs_time.jpg" alt="IISER_Kolkata--Agrca-Intensity_vs_time.jpg" />
+                      <figcaption>GFP intensity in the presence and absence of AIP-I</figcaption>
+                    </figure>
+                  </div>
+                  <p>The graphical representation of the data makes it clear that there is a significant difference in the fluorescence intensity observed in the AIP inducible sample as compared to the sample without AIP. It shows that our Protein genetic circuit has successfully expressed the AIP protein and the expressed protein is active.</p>
+                  <p class="subSection"><b>Concentration-dependent activity </b></p>
+                  <p>Further ,we also validated the change in expression of GFP reporter construct in response to varying AIP-I concentration.</p>
+                  <p>Here,Ecoli BL21 cells expressing AIP sensor with reporter construct were incubated with AIP molecules which were resuspended by adding nuclease-free water. Different volumes of the resuspended AIP molecules were added to different conical flasks to induce protein expression. The flasks were incubated at 30℃ for 5 hours. The GFP expression was quantified by measuring the fluorescence of the GFP using a fluorometer. The obtained data were analysed to obtain the AIP concentration-dependent GFP expression.</p>
+                  <div class="figures">
+                    <figure style="width: 75%;">
+                      <img src="http://parts.igem.org/wiki/images/7/77/IISER_Kolkata--Agrca-Intensity_vs_conc.jpg" alt="IISER_Kolkata--Agrca-Intensity_vs_conc.jpg" />
+                      <figcaption>GFP intensity with varying concentration of AIP-I</figcaption>
+                    </figure>
+                  </div>
+                  <p>The analysis of the fluorescence data shows that the expression of GFP has increased with the addition of a higher volume of resuspended AIP molecules. That is, the GFP expression has increased with an increase in the AIP-I concentration in the media. This further proves that our cloned genetic circuit was able to successfully express the AIP-I molecule and release it in media in its active form.</p>
+                  <p>The fluorescence intensity has dropped in presence of a very high concentration of AIP. This can be due to toxicity caused due to the high concentration of AIP.</p>
+                </div>
+              </div>
+            </section>
+            <!-- 3. The improved AIP sensor -->
+            <section id="run3Section" class="scrollSection">
+              <div class="centerImage">
+                <div class="highlightYellow mediumText textShadow"><b>The improved AIP sensor</b></div>
+              </div>
+              <div class="contentSection">
+                <div class="boxContent">
+                  <p>Finally,we improved the AIP-1 sensor from S.aureus by accommodating the problem of leaky gene expression.The orientation of promoters are placed opposite which will prevent possible leaky gene expression.</p>
+                  <p class="subSection"><b>Cloning and expression </b></p>
+                  <p>Cloning of this gene circuit was done using NEB HI-FI DNA assembly.First, all the three gene fragments (pBAD-agrC, P2-GFP,agrA,) were extended by routine PCR using specific primers designed accordingly to give unidirectional circuit in which P2 and pBAD are oriented in same direction.PCR extension was verified by Gel electrophoresis and all inserts were correctly amplified(fig- Extended pBAD-agrC ~ 1.4 Kb, Extended P2-GFP ~ 1Kb, Extended agrA ~ 800bp and extended backbone~2kb).</p>
+                  <div class="figures">
+                    <figure style="width: 80%;">
+                      <img src="http://parts.igem.org/wiki/images/4/45/T--IISER_Kolkata--uni_colony_pcr.jpg" alt="IISER_Kolkata--uni_colony_pcr.jpg" />
+                      <figcaption>PCR extension of pBAD-agrC,P2-GFP,agrA for unidirectional assembly</figcaption>
+                    </figure>
+                  </div>
+                  <p>A linearized plasmid backbone of PSB1C3 was also extended using specific primers</p>
+                  <div class="figures">
+                    <figure style="width: 80%;">
+                      <img src="http://parts.igem.org/wiki/images/6/6d/T--IISER_Kolkata--psb1c3.jpeg" alt="IISER_Kolkata--psb1c3.jpeg" />
+                      <figcaption>PCR extension of psb1C3 for unidirectional assembly</figcaption>
+                    </figure>
+                  </div>
+                  <p>The same three fragments were extended using different set of primers which favours the generation of overlap that flips the P2-GFP fragment opposite to pBAD.We can see the gel electrophoresis image below. we can observe similar band sizes as above because the difference in length of the extension is very low.</p>
+                  <div class="figures">
+                    <figure style="padding: 1rem 0.5rem;">
+                      <img src="http://parts.igem.org/wiki/images/4/44/T--IISER_Kolkata--bidi_extension.jpg" alt="IISER_Kolkata--bidi_extension.jpg" />
+                      <figcaption>PCR extension of pBAD-agrC,P2-GFP,agrA for bidirectional assembly</figcaption>
+                    </figure>
+                    <figure style="padding: 1rem 0.5rem;">
+                      <img src="http://parts.igem.org/wiki/images/9/9a/T--IISER_Kolkata--AgrA_extension.jpg" alt="IISER_Kolkata--AgrA_extension.jpg" />
+                      <figcaption>PCR extention of agrA segment</figcaption>
+                    </figure>
+                  </div>
+                  <p>After the successful extension of the segments, we assembled all extended fragments using Hi-Fi DNA assembly master mix and transformed the mix directly of Ecoli DH5ɑ.. After that, we perform colony PCR of both the unidirectional and bidirectional circuit using VF2 and VR to check whether we perfectly assemble the gene fragments.</p>
+                  <div class="figures">
+                    <figure style="padding: 1rem 0.5rem;">
+                      <img src="http://parts.igem.org/wiki/images/0/0e/T--IISER_Kolkata--uni_pcr_colony.jpg" alt="IISER_Kolkata--uni_pcr_colony.jpg" />
+                      <figcaption>Colony PCR result of unidirectional assembly with VF2 and VR</figcaption>
+                    </figure>
+                    <figure style="padding: 1rem 0.5rem;">
+                      <img src="http://parts.igem.org/wiki/images/0/09/T--IISER_Kolkata--bidicolonypcr.jpg" alt="IISER_Kolkata--bidicolonypcr.jpg" />
+                      <figcaption>Colony PCR result of bidirectional assembly with VF2 and VR</figcaption>
+                    </figure>
+                  </div>
+                  <p>Colony PCR yielded successful inserts for both Unidirectional and bidirectional assemblies.The plasmid was further transformed in Ecoli BL21 to express the protein in cell surface.</p>
+                  <p class="subSection"><b>Characterization </b></p>
+                  <p>Expression of each part was checked by validating its expression in presence of AIP-1. For that, we first expressed and purified the AIP-1 (BBa_K3799006) as described above. We diluted our stock solution of AIP-1 molecules to make solutions of different concentrations, from 0% to 100%, where 0% is the negative control and 100% is the one-third dilution of our stock solution.</p>
+                  <p>We incubated the two types of cells(one with unidirectional plasmid and the other with bidirectional plasmid) at 30 degrees centigrade for 8 hours without AIP-1 and measured the fluorescence intensity of those two cells in absence of an AIP-1 molecule at different time points to estimate leaky gene expression. We observed that there is a higher fluorescence intensity in cells with unidirectional circuits than the cells with bidirectional circuits implying leaky gene expression in unidirectional circuit.</p>
+                  <div class="figures">
+                    <figure style="width: 75%;">
+                      <img src="http://parts.igem.org/wiki/images/0/07/IISER_Kolkata--Bi-Intensity_vs_time.jpeg" alt="IISER_Kolkata--Bi-Intensity_vs_time.jpeg" />
+                      <figcaption>Fluorescence assay of bidirectional and unidirectional circuits without AIP-1 vs Time</figcaption>
+                    </figure>
+                  </div>
+                  <p>We also verified whether this difference in leaky gene expression is consistent with different concentrations of AIP-1.</p>
+                  <p>For this, we induced our two types of cells (one with unidirectional plasmid and the other with bidirectional plasmid) with different concentrations of the AIP-1 solution that we mentioned above.It was observed that leaky gene expression was higher in Unidirectional circuit consistently. However, we can observe a slight decrease in the gap of expression of gfp as the concentration of AIP-1 increases. This may be because of the fact that the ratio of leaky gene expression and the AIP-1 induced expression decreases as the AIP-1 concentration increases.</p>
+                  <div class="figures">
+                    <figure style="width: 75%;">
+                      <img src="http://parts.igem.org/wiki/images/9/93/IISER_Kolkata--Bi-Intensity_vs_conc.jpeg" alt="IISER_Kolkata--Bi-Intensity_vs_conc.jpeg" />
+                      <figcaption>Fluorescence assay of bidirectional and unidirectional circuits at different concentrations of AIP-1 at 5hrs</figcaption>
+                    </figure>
+                  </div>
+                  <p class="subSection"><b>Discussion </b></p>
+                  <p>Our improved part part <a class="referenceLinks" href="http://parts.igem.org/Part:BBa_K3799057">BBa_K3799057</a> indeed prevents leaky gene expression present in <a class="referenceLinks" href="http://parts.igem.org/Part:BBa_K1022100">BBa_K1022100</a>.</p>
+                </div>
+              </div>
+            </section>
+            <!-- 4. Characterization of LwaCas13a -->
+            <section id="run4Section" class="scrollSection">
+              <div class="centerImage">
+                <div class="highlightYellow mediumText textShadow"><b>Characterization of LwaCas13a</b></div>
+              </div>
+              <div class="contentSection">
+                <div class="boxContent">
+                  <p>In addition to what we achieved through our lab,we also made excellent collaborations with fellow teams to achieve our goals. For standardizing our detection part,we collaborated with iGEM Go_Paris-Saclay for characterizing LwaCas13a protein with our miRNA. Cas13a protein is coupled with its crRNA and tested for its cleavage efficiency by activating it with bta-miR-7863 along with a ssRNA reporter to give a fluorometric output . The miRNA hybridizes with the crRNA and then activates the Cas13a RNAse activity allowing it to cleave the reporter, emits fluorescence. Thus, it is possible to follow the detection of the miRNA in a quantitative way by measuring the fluorescence level.</p>
+                  <div class="figures">
+                    <figure style="padding: 1rem 0.5rem;">
+                      <img src="http://parts.igem.org/wiki/images/4/40/IGEMGOPSCas13graph2.jpeg" alt="" />
+                      <figcaption>FIGURE 1 : Cas13a (cr/miR-7863) only activity with different concentrations of crRNAs and times of pre-incubation but constant miRNA concentrations 10 min of incubation (A), 30 min (B), 60 min (C), 120 min (D)</figcaption>
+                    </figure>
+                    <figure style="padding: 1rem 0.5rem;">
+                      <img src="http://parts.igem.org/wiki/images/c/cc/IGEMGOPSCas13graph2iv.jpeg" alt="" />
+                      <figcaption>FIGURE 2 : Initiale velocities corresponding to the results presented on the Figure 7C Initial velocities (x = a.u./min)</figcaption>
+                    </figure>
+                  </div>
+                  <p class="subSection"><b>Discussion</b></p>
+                  <p>Based on the graphs, the optimal conditions for miR-7863 detection with Cas13a appear to be a crRNA concentration of 5nM and a 60-minute pre-incubation . Indeed, although a high fluorescent signal is observed with a 120-minutes pre-incubation, the corresponding profile at the other concentrations suggests that this is a result due to measurement or handling error. On the other hand, we can see that a pre-incubation of 10 minutes over 30 minutes seems to result in a low level of fluorescence, even for the most optimal crRNA concentrations</p>
                 </div>
               </div>
             </section>
@@ -182,17 +417,6 @@
         </div>
       </div>
       <!-- /content -->
-
-      <!-- reference -->
-      <section class="reference">
-        <div class="wave topWave">
-          <!-- Top Wave  -->
-        </div>
-        <div class="indentContainer">
-          <h3>References</h3>
-        </div>
-      </section>
-      <!-- /reference -->
 
       <!-- footer -->
       <footer>
@@ -283,39 +507,12 @@
     </script>
     <!-- /hide on scroll -->
 
-    <!-- script for collapsibles -->
-    <script>
-      var collapsibles = document.querySelectorAll(".collapsible");
-
-      function removeCollapsibleExpanded(notRemove) {
-        collapsibles.forEach((collD) => {
-          if (collD != notRemove) {
-            collD.classList.remove("collapsible--expanded");
-            collD.querySelector(".collapsibleToggler").innerHTML = "+";
-          }
-        });
-      }
-
-      collapsibles.forEach((coll) =>
-        coll.querySelector(".collapsible-header").addEventListener("click", function () {
-          removeCollapsibleExpanded(coll);
-          coll.classList.toggle("collapsible--expanded");
-
-          if (coll.querySelector(".collapsibleToggler").innerHTML == "+") {
-            coll.querySelector(".collapsibleToggler").innerHTML = "-";
-          } else {
-            coll.querySelector(".collapsibleToggler").innerHTML = "+";
-          }
-        })
-      );
-    </script>
-    <!-- /script for collapsibles -->
-
     <!-- /IISER KOLKATA CONTAINER -->
 
     <!-- JS -->
     <!-- <script src="https://2021.igem.org/Template:IISER_Kolkata/js"></script> -->
     <script src="app.js"></script>
+    <script src="https://2021.igem.org/common/MathJax-2.5-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <!-- /JS -->
   </body>
 </html>
