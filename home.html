@@ -1,231 +1,184 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>IISER Kolkata IGEM Team - Home</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body onload="preload()" class="noScroll">
-    <!-- preloader -->
-    <div id="preloader">
-      <img src="https://2021.igem.org/wiki/images/d/d6/T--IISER_Kolkata--image-preloader.gif" alt="[preloader image]" />
-      <!-- <img src="images/preloader.gif" alt="" /> -->
-      Loading . . .
-    </div>
-    <!-- /preloader -->
-    <!-- progressBar -->
-    <div id="scrollPath">
-      <div id="progressBar"></div>
-      <div id="progressBtn"></div>
-    </div>
-    <!-- /progressBar -->
-    <!-- toTop -->
-    <div id="toTop">
-      <a href="javascript:window.scrollTo(0, 0);">
-        <img src="https://2021.igem.org/wiki/images/d/d8/T--IISER_Kolkata--image-toTop-2x.png" alt="toTop" />
-        <!-- <img src="images/offline/new/toTop-2x.png" alt="toTop" /> -->
-      </a>
-    </div>
-    <!-- /toTop -->
-    <!-- navToggler -->
-    <div id="navToggler">
-      <img src="https://2021.igem.org/wiki/images/6/67/T--IISER_Kolkata--image-toggleBtn-2x.png" alt="#NAV#" />
-      <!-- <img src="./images/offline/new/toggleBtn-2x.png" alt="#NAV#" /> -->
-    </div>
-    <!-- /navToggler -->
-    <!-- navigation -->
-    <nav class="navigation-container">
-      <div class="navigation">
-        <img src="https://2021.igem.org/wiki/images/0/0e/T--IISER_Kolkata--image-navBG-2x.png" alt="" />
-        <!-- <img src="images/offline/navBG-2x.png" alt="" /> -->
-        <div class="navList">
-          <ol>
-            <li class="navDrop"><a href="https://2021.igem.org/Team:IISER_Kolkata"> Home </a></li>
-            <li class="navDrop">
-              <a href="javascript:void();">
-                Team
-                <div class="navDropList">
-                  <ul>
-                    <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Team">Team Members</a></li>
-                    <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Attributions">Attributions</a></li>
-                    <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Collaborations">Collaborations</a></li>
-                    <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Partnership">Partnership</a></li>
-                  </ul>
-                </div>
-              </a>
-            </li>
-            <li class="navDrop">
-              <a href="javascript:void();">
-                Project
-                <div class="navDropList">
-                  <ul>
-                    <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Description">Description</a></li>
-                    <!-- <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Design">Design</a></li> -->
-                    <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Contribution">Contribution</a></li>
-                    <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Engineering">Engineering</a></li>
-                    <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Improve">Improvement</a></li>
-                  </ul>
-                </div>
-              </a>
-            </li>
-            <li class="navDrop">
-              <a href="javascript:void();">
-                Wet Lab
-                <div class="navDropList">
-                  <ul>
-                    <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Experiments">Experiments</a></li>
-                    <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Notebook">Notebook</a></li>
-                    <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Parts">Parts</a></li>
-                    <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Safety">Safety</a></li>
-                    <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Results">Results</a></li>
-                  </ul>
-                </div>
-              </a>
-            </li>
-            <li class="navDrop">
-              <a href="javascript:void();">
-                Dry Lab
-                <div class="navDropList">
-                  <ul>
-                    <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Model">Mathematical Modeling</a></li>
-                  </ul>
-                </div>
-              </a>
-            </li>
-            <li class="navDrop">
-              <a href="javascript:void();">
-                Human Practices
-                <div class="navDropList">
-                  <ul>
-                    <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Human_Practices">Integrated Human Practices</a></li>
-                    <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Implementation">Proposed Implementation</a></li>
-                    <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Communication">Communication</a></li>
-                  </ul>
-                </div>
-              </a>
-            </li>
-            <li class="navDrop">
-              <a href="javascript:void();">
-                Awards
-                <div class="navDropList">
-                  <ul>
-                    <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Education">Education</a></li>
-                    <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Inclusivity">Inclusivity</a></li>
-                    <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Entrepreneurship">Supporting Entrepreneurship</a></li>
-                    <li><a href="https://2021.igem.org/Team:IISER_Kolkata/Measurement">Measurement</a></li>
-                  </ul>
-                </div>
-              </a>
-            </li>
+<html>
+  <body>
+    <style>
+      * {
+        z-index: 2;
+      }
+      /* Bottle Style*/
+      .bottle-path {
+        position: absolute;
+        display: block;
+        left: 50%;
+        height: 300vw;
+        overflow: visible;
+        transform: translate(-50%);
+        z-index: -2;
+      }
 
-            <!-- <li class="navDrop">
-              <a href="javascript:void();">
-                Judging
-                <div class="navDropList">
-                  <ul>
-                    <li><a href="">Medals</a></li>
-                    <li><a href="">Judging Form</a></li>
-                  </ul>
-                </div>
-              </a>
-            </li> -->
-          </ol>
-        </div>
-      </div>
-    </nav>
-    <!-- /navigation -->
+      @font-face {
+        font-family: bottleFont;
+        src: url("https://2021.igem.org/wiki/images/8/82/T--IISER_Kolkata--bottleFont.ttf");
+      }
+
+      .bottle-txt {
+        font-family: bottleFont;
+        font-size: 4vw;
+        fill: #86abdfe0;
+      }
+      body {
+        max-width: 100vw;
+        overflow-x: hidden;
+      }
+      .fadeInObs {
+        opacity: 0;
+        transition: all 1s ease-in;
+        transition-delay: 0.25s;
+      }
+      .leftSlideObs {
+        opacity: 0;
+        transform: translateX(-20%);
+        transition: all 0.75s ease-in;
+      }
+      .rightSlideObs {
+        opacity: 0;
+        transform: translateX(+20%);
+        transition: all 0.75s ease-in;
+      }
+      .topSlideObs {
+        opacity: 0;
+        transform: translateY(-20%);
+        transition: all 0.75s ease-in;
+      }
+      .bottomSlideObs {
+        opacity: 0;
+        transform: translateY(+20%);
+        transition: all 0.75s ease-in;
+      }
+      .animateObs {
+        opacity: 1;
+        transform: translateX(0%) translateY(0%);
+      }
+      .delay1 {
+        transition-delay: 0.125s;
+      }
+      .delay15 {
+        transition-delay: 0.25s;
+      }
+      .delay2 {
+        transition-delay: 0.5s;
+      }
+      .delay3 {
+        transition-delay: 0.75s;
+      }
+      .delay4 {
+        transition-delay: 1s;
+      }
+    </style>
+
     <!-- IISER KOLKATA CONTAINER -->
-    <div class="iiserKolkata">
-      <!-- hero -->
-      <div id="hero" class="unSelectable">
-        <img src="https://2021.igem.org/wiki/images/2/29/T--IISER_Kolkata--image-HomeHero.png" alt="Home_Hero" />
-        <!-- <img src="images/offline/HomeHero-3x.png" alt="" /> -->
-        <div class="homeBtn" title="Go To Home">
-          <a href="https://2021.igem.org/Team:IISER_Kolkata">
-            <img src="https://2021.igem.org/wiki/images/c/cd/T--IISER_Kolkata--image-igemIISERK_home.png" alt="IGEM-IISERKolkata" />
-          </a>
-          <a href="https://2021.igem.org/Team:IISER_Kolkata">
-            <img src="https://2021.igem.org/wiki/images/c/c5/T--IISER_Kolkata--images-namoosteTransparent.jpg" alt="Namooste" />
-          </a>
-        </div>
+
+    <!-- hero -->
+    <div id="hero" class="unSelectable">
+      <img src="https://2021.igem.org/wiki/images/2/29/T--IISER_Kolkata--image-HomeHero.png" alt="Home_Hero" />
+      <!-- <img src="images/offline/HomeHero-3x.png" alt="" /> -->
+      <div class="homeBtn" title="Go To Home">
+        <a href="https://2021.igem.org/Team:IISER_Kolkata">
+          <img src="https://2021.igem.org/wiki/images/c/cd/T--IISER_Kolkata--image-igemIISERK_home.png" alt="IGEM-IISERKolkata" />
+        </a>
+        <a href="https://2021.igem.org/Team:IISER_Kolkata">
+          <img src="https://2021.igem.org/wiki/images/c/c5/T--IISER_Kolkata--images-namoosteTransparent.jpg" alt="Namooste" />
+        </a>
       </div>
-      <!-- /hero -->
+    </div>
+    <!-- /hero -->
+    <div class="iiserKolkata">
+      <div class="indentContainer centerImage fadeInObs" id="twoCow">
+        <img src="https://2021.igem.org/wiki/images/7/7e/T--IISER_Kolkata--image-twoCows-1x.png" alt="image_twoCows" />
+      </div>
+
       <!-- bottle -->
-      <img class="milkBottle unSelectable" src="/images/offline/milkBottel2.png" alt="" />
-      <div class="triggerBottle unSelectable"></div>
+      <svg viewBox="0 0 541.56 5691.15" class="bottle-path" id="bottle-path-container">
+        <path
+          d="M503.75 53.46A153.51 153.51 0 0 1 502.6 96c-10.68 63.08-55.67 83.14-74.4 169-2.94 13.44-4.2 25.47-6.74 49.53-8.66 82.19.64 108.58-4.41 145.82-10 73.84-60 69-88.48 146.23-36.93 100.08 37 135.52 5.16 241.24-25.43 84.42-81.22 90.54-93.77 179.85-8.08 57.49 14 62.6 12.37 122.15-3 113.47-84 127.19-130.12 272.48-29.82 93.86-.4 101.87-38.4 211.78-25.06 72.5-47.07 95.67-37.17 137.7 12.91 54.84 60.07 56.34 107.16 127.59 42.73 64.64 17.43 83.86 53 149.87 61.15 113.31 157.86 97.73 178 179.13 16.73 67.76-47.14 91.32-43.1 198.73 2.57 68.05 28.73 72.36 40.53 142.22 22.19 131.41-63.11 159.1-56 291.39 6.53 120.48 79.78 143.36 65.2 253-10.34 77.8-56 132-75.11 154.2-108.22 125.39-235.29 86.14-290.11 191-27.29 52.2-29.52 126.42.42 179 54 94.78 178.79 60.08 235.22 162 29.22 52.75 2.42 74.09 40.52 145.93 41.1 77.49 81.58 70.17 97.66 124 21.14 70.78-43.8 100.36-59.46 225-11.4 90.73 21 91.07 10 181.12-15.45 126.77-81.72 142.85-71.43 228.58 9.52 79.27 68.09 81.43 84.33 176.85 12.75 75-19.88 94.33-12.31 164.45 10.58 98.13 83.24 141.26 129.34 207.71 48 69.15 83.15 186.57 27.73 398.93"
+          id="path"
+          stroke-dasharray="30 20"
+          fill="none"
+          stroke="#86abdf"
+          stroke-linecap="round"
+          stroke-miterlimit="10"
+          stroke-width="3"
+        />
+        <text class="bottle-txt">
+          <textpath id="bottle" href="#path" startoffset="0" alignment-baseline="middle" text-anchor="end">
+            &#xe900;
+          </textpath>
+        </text>
+      </svg>
+
       <!-- /bottle -->
 
-      <div class="indentContainer centerImage">
-        <img src="https://2021.igem.org/wiki/images/7/7e/T--IISER_Kolkata--image-twoCows-1x.png" alt="image_twoCows" />
-        <!-- <img src="images/offline/elements-2x/twoCows-2x.png" alt="" /> -->
-      </div>
       <div class="indentContainer">
         <section class="impText">
-          <div class="leftAlign">
+          <div class="leftAlign leftSlideObs delay1">
             <p>Do you know a <b class="highlightBlue">secret formula</b> to boost infinite energy?</p>
           </div>
         </section>
-        <p class="centerAlign">it's <b class="largeText highlightYellow milkText">MILK</b></p>
+        <p class="centerAlign fadeInObs delay2"><b class="impText">it's </b><b class="largeText highlightYellow milkText">MILK</b></p>
         <section class="rightSection">
           <div>
-            <div class="rightSectionImage">
+            <div class="rightSectionImage leftSlideObs delay1">
               <img src="https://2021.igem.org/wiki/images/5/5f/T--IISER_Kolkata--image-milkProducts-1x.png" alt="image_milkProducts" />
-              <!-- <img src="images/offline/new/milkProduct-2x.png" alt="" /> -->
             </div>
           </div>
           <div>
             <div class="rightSectionText rightAlign">
-              <p>Milk and its derivatives are one of the primary sources of nutrition. Globally, <b>more than 6 billion people consume milk and its products.</b></p>
-              <p><b>480,256,000</b> tonnes of milk has been produced globally and <b>198,400,000</b> tonnes of milk has been produced in India, in 2020.</p>
+              <p class="rightSlideObs delay1">Milk and its derivatives are one of the primary sources of nutrition. Globally, <b>more than 6 billion people consume milk and its products.</b></p>
+              <p class="rightSlideObs delay15"><b>480,256,000</b> tonnes of milk has been produced globally and <b>198,400,000</b> tonnes of milk has been produced in India, in 2020.</p>
             </div>
           </div>
         </section>
         <section class="leftSection">
           <div>
             <div class="leftSectionText leftAlign">
-              <p>Milk is the leading agricultural produce in India with the Dairy industry contributing <b>5.3%</b> to India’s agricultural <b>GDP.</b></p>
+              <p class="leftSlideObs delay15">Milk is the leading agricultural produce in India with the Dairy industry contributing <b>5.3%</b> to India’s agricultural <b>GDP.</b></p>
             </div>
           </div>
           <div>
-            <div class="leftSectionImage">
+            <div class="leftSectionImage topSlideObs delay1">
               <img src="https://2021.igem.org/wiki/images/a/a1/T--IISER_Kolkata--image-graphIndia-1x.png" alt="image_graphIndia" />
-              <!-- <img src="images/offline/new/graphIndia-2x.png" alt="" /> -->
             </div>
           </div>
         </section>
       </div>
       <div class="indentContainer">
         <section class="impText">
-          <div class="rightAlign">
+          <div class="rightAlign topSlideObs delay1">
             <p>However, there is a <b class="highlightPeru">silent-killer</b> affecting our dairy industry...</p>
           </div>
         </section>
         <section class="rightSection">
           <div>
-            <div class="rightSectionImage">
+            <div class="rightSectionImage leftSlideObs delay15">
               <img src="https://2021.igem.org/wiki/images/8/88/T--IISER_Kolkata--image-cow70loss-1x.png" alt="image_cow70loss" />
-              <!-- <img src="images/offline/new/cow70-2x.png" alt="" /> -->
             </div>
           </div>
           <div>
             <div class="rightSectionText rightAlign">
-              <p>Due to a silent killer disease called <b>Bovine Mastitis</b> disease, Out of the loss incurred in milk production, <b>70% </b>of it accounts to sub-clinical mastitis in India. As per <b>NDRI</b>, the estimated economic loss due to mastitis is <b>INR 7165.51 crore per annum.</b></p>
-              <p>Absence of visible symptoms in the sub-clinical stage of the disease makes it difficult to detect the disease using available detection techniques.</p>
-              <p>The disease in chronic stage can lead to <b>fatality</b> of bovines.</p>
+              <p class="rightSlideObs delay2">Due to a silent killer disease called <b>Bovine Mastitis</b> disease, Out of the loss incurred in milk production, <b>70% </b>of it accounts to sub-clinical mastitis in India. As per <b>NDRI</b>, the estimated economic loss due to mastitis is <b>INR 7165.51 crore per annum.</b></p>
+              <p class="rightSlideObs delay3">Absence of visible symptoms in the sub-clinical stage of the disease makes it difficult to detect the disease using available detection techniques.</p>
+              <p class="rightSlideObs delay4">The disease in chronic stage can lead to <b>fatality</b> of bovines.</p>
             </div>
           </div>
         </section>
         <section class="leftSection">
           <div>
             <div class="leftSectionText leftAlign">
-              <p>Available treatment methods use broad-spectrum antibiotics.</p>
-              <p><b>2730 tonnes</b> of antibiotics are fed into the dairy sector.</p>
+              <p class="topSlideObs delay1">Available treatment methods use broad-spectrum antibiotics.</p>
+              <p class="bottomSlideObs delay1"><b>2730 tonnes</b> of antibiotics are fed into the dairy sector.</p>
             </div>
           </div>
           <div>
-            <div class="leftSectionImage">
+            <div class="leftSectionImage fadeInObs delay15">
               <img src="https://2021.igem.org/wiki/images/2/2f/T--IISER_Kolkata--image-medicine-2x.png" alt="image_medicine" />
               <!-- <img src="https://2021.igem.org/wiki/images/3/38/T--IISER_Kolkata--image-antibactirial-1x.png" alt="image_antibact" /> -->
               <!-- <img src="images/offline/new/medicine-2x.png" alt="" /> -->
@@ -235,44 +188,46 @@
         <section class="leftSection">
           <div>
             <div class="leftSectionText leftAlign">
-              <p>This leads to a steady development of <b>antimicrobial resistance</b> in mastitis-causing pathogenic bacteria.</p>
-              <p>These antibiotics can also contaminate milk that we consume, creating <b class="highlightBlue">severe health problems in humans.</b></p>
+              <p class="topSlideObs delay1">This leads to a steady development of <b>antimicrobial resistance</b> in mastitis-causing pathogenic bacteria.</p>
+              <p class="leftSlideObs delay15">These antibiotics can also contaminate milk that we consume, creating <b class="highlightBlue">severe health problems in humans.</b></p>
               <p>
-                <b> <p>So the Need of the Hour is to...</p></b>
+                <b> <p class="bottomSlideObs delay2">So the Need of the Hour is to...</p></b>
               </p>
             </div>
           </div>
           <div>
-            <div class="leftSectionImage">
+            <div class="leftSectionImage rightSlideObs delay15">
               <img src="https://2021.igem.org/wiki/images/7/7e/T--IISER_Kolkata--image-graphIncrease-1x.png" alt="image_graphIncrease" />
-              <!-- <img src="images/offline/new/graphGrowth-2x.png" alt="" /> -->
             </div>
           </div>
         </section>
       </div>
       <div class="indentContainer">
         <section class="impText">
-          <div class="rightAlign">
-            <p>Develop an <b>accurate, easy-to-use, point of care, portable, cheap detection kit.</b> Along with An <b>Antibiotic-free treatment system.</b></p>
+          <div class="rightAlign rightSlideObs delay15">
+            <p>
+              Develop an <b>accurate, easy-to-use, point of care, portable, cheap detection kit.</b><br />
+              Along with An <b>Antibiotic-free treatment system.</b>
+            </p>
           </div>
         </section>
-        <p class="centerAlign">Hence <b class="highlightYellow mediumText">We Propose</b></p>
+        <p class="centerAlign fadeInObs delay2"><b class="impText">Hence</b> <b class="highlightYellow mediumText">We Propose</b></p>
         <section class="impText">
-          <div class="rightAlign">
+          <div class="rightAlign bottomSlideObs delay3">
             <p>A <b class="highlightBlue">3-way breakthrough</b> to tackle subclinical bovine mastitis</p>
           </div>
         </section>
         <section class="leftSection">
           <div>
-            <div class="leftSectionText leftAlign">
+            <div class="leftSectionText leftAlign topSlideObs delay1">
               <h3>"Prevention is better than cure"</h3>
-              <p>
+              <p class="leftSlideObs delay15">
                 Maintaining proper hygienic methods while milking can stop the spread of this disease. Our <a href="https://2021.igem.org/Team:IISER_Kolkata/Human_Practices"><b>Human Practices</b></a> team has in-person spread awareness on the methods of hygienic milking among the stakeholders.
               </p>
             </div>
           </div>
           <div>
-            <div class="leftSectionImage">
+            <div class="leftSectionImage bottomSlideObs delay1">
               <img src="https://2021.igem.org/wiki/images/d/d6/T--IISER_Kolkata--image-prevention-2x.png" alt="image_prevention" />
               <!-- <img src="images/offline/new/prevention-2x.png" alt="" /> -->
             </div>
@@ -280,13 +235,13 @@
         </section>
         <section class="rightSection">
           <div>
-            <div class="rightSectionImage">
+            <div class="rightSectionImage leftSlideObs delay1">
               <img src="https://2021.igem.org/wiki/images/f/fb/T--IISER_Kolkata--image-detection-2x.png" alt="image_detection" />
               <!-- <img src="images/offline/new/detection-2x.png" alt="" /> -->
             </div>
           </div>
           <div>
-            <div class="rightSectionText rightAlign">
+            <div class="rightSectionText rightAlign topSlideObs delay15">
               <h3>Detection</h3>
               <p>The present detection methods are expensive, not easily available, and are not precise. We propose <b>a cheap, fast, point-of-care, portable, easy-to-use colorimetric detection kit</b> to specifically detect the Bovine Mastitis disease in the subclinical stage and prevent the disease from progressing to chronic stages.</p>
             </div>
@@ -294,7 +249,7 @@
         </section>
         <section class="leftSection">
           <div>
-            <div class="leftSectionText leftAlign">
+            <div class="leftSectionText leftAlign leftSlideObs delay15">
               <h3>Treatment</h3>
               <p>
                 We propose an antibiotics-free cure for sub-clinical bovine mastitis using narrow-spectrum bacteriocins. When our GMO will be injected via intra-mammary injection into the tissues of the udder, it will specifically sense the presence of subclinical bovine mastitis causing pathogens and kill them, thus curing the cow.
@@ -302,7 +257,7 @@
             </div>
           </div>
           <div>
-            <div class="leftSectionImage">
+            <div class="leftSectionImage rightSlideObs delay1">
               <img src="https://2021.igem.org/wiki/images/1/16/T--IISER_Kolkata--image-cowTreatment-2x.png" alt="image_cowTreatment" />
               <!-- <img src="images/offline/new/cowTreatment-2x.png" alt="" /> -->
             </div>
@@ -310,10 +265,10 @@
         </section>
       </div>
       <div class="indentContainer">
-        <section class="knowMore">
+        <section class="knowMore fadeInObs delay2">
           <h3>Know More at...</h3>
           <div class="knowMoreList">
-            <a href="javascript:void();">
+            <a href="https://2021.igem.org/Team:IISER_Kolkata/Description">
               <img src="https://2021.igem.org/wiki/images/2/2d/T--IISER_Kolkata--image-project-2x.png" alt="Project" />
               <!-- <img src="images/offline/new/project-2x.png" alt="" /> -->
             </a>
@@ -333,7 +288,7 @@
         </section>
       </div>
       <section class="reference">
-        <div class="wave topWave">
+        <div class="wave topWave" id="topWave">
           <!-- wave border  -->
         </div>
         <div class="indentContainer">
@@ -387,18 +342,82 @@
     </div>
     <!-- /IISER KOLKATA CONTAINER -->
 
-    <!-- JS -->
-    <script src="/scrollJS/scrollMagicMin.js"></script>
-    <script src="/scrollJS/debugIndicatorMin.js"></script>
-    <script src="/scrollJS/gsapMIn.js"></script>
-    <!--  -->
-    <script src="/scrollJS/tweenLiteMin.js"></script>
-    <script src="/scrollJS/timelineLiteMin.js"></script>
-    <script src="/scrollJS/cssPluginMin.js"></script>
-    <script src="/scrollJS/BezierPluginMin.js"></script>
-    <!--  -->
-    <script src="scroll.js"></script>
-    <script src="app.js"></script>
-    <!-- /JS -->
+    <script>
+      var textContainer = document.querySelector("#bottle-path-container");
+      const topElement = document.getElementById("twoCow");
+      const bottomElement = document.getElementById("topWave");
+
+      function setPathHeight() {
+        var pathTopY = topElement.getBoundingClientRect().bottom;
+        var pathBottomY = bottomElement.getBoundingClientRect().top;
+
+        textContainer.style["height"] = `${pathBottomY - pathTopY}px`;
+        console.log(pathBottomY - pathTopY);
+      }
+
+      setPathHeight();
+
+      var textPath = document.getElementById("bottle");
+
+      var path = document.querySelector(textPath.getAttribute("href"));
+
+      var pathLength = path.getTotalLength();
+
+      function updateTextPathOffset(offset) {
+        textPath.setAttribute("startOffset", offset);
+      }
+
+      updateTextPathOffset(0);
+
+      function bottleScroll() {
+        requestAnimationFrame(function () {
+          var rect = textContainer.getBoundingClientRect();
+
+          var scrollOffset = window.innerHeight / 2 - rect.y;
+          if (scrollOffset >= 0) {
+            var scrollPercent = scrollOffset / rect.height;
+            updateTextPathOffset(pathLength * scrollPercent);
+          }
+        });
+      }
+
+      window.addEventListener("load", setPathHeight);
+      window.addEventListener("resize", setPathHeight);
+      window.addEventListener("scroll", bottleScroll);
+
+      //animations
+      const fadeInObs = document.querySelectorAll(".fadeInObs");
+      const leftSlideObs = document.querySelectorAll(".leftSlideObs");
+      const rightSlideObs = document.querySelectorAll(".rightSlideObs");
+      const topSlideObs = document.querySelectorAll(".topSlideObs");
+      const bottomSlideObs = document.querySelectorAll(".bottomSlideObs");
+
+      const FIobserver = new IntersectionObserver(
+        (entries, FIobserver) => {
+          entries.forEach((entry) => {
+            console.log(entry.target);
+            if (!entry.isIntersecting) return;
+            entry.target.classList.add("animateObs");
+          });
+        },
+        { root: null, threshold: 0, rootMargin: "0px 0px -150px 0px" }
+      );
+
+      fadeInObs.forEach((obj) => {
+        FIobserver.observe(obj);
+      });
+      leftSlideObs.forEach((obj) => {
+        FIobserver.observe(obj);
+      });
+      rightSlideObs.forEach((obj) => {
+        FIobserver.observe(obj);
+      });
+      bottomSlideObs.forEach((obj) => {
+        FIobserver.observe(obj);
+      });
+      topSlideObs.forEach((obj) => {
+        FIobserver.observe(obj);
+      });
+    </script>
   </body>
 </html>
